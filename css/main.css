@@ -1807,10 +1807,7 @@ pre .javascript .function {
   max-width: 120px;
   height: auto;
   border: 1px solid #eee;
-  opacity: 1;
-}
-.site-author-image {
-  border-radius: 100%;
+  opacity: 0.5;
 }
 .site-author-image {
   -webkit-transition: -webkit-transform 1s ease-out;
@@ -1910,7 +1907,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #e8ff04;
+  background: #dee5ff;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2279,6 +2276,14 @@ pre .javascript .function {
   -o-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   color: #ccc;
+}
+.gt-header a,
+.gt-comments a,
+.gt-popup a {
+  border-bottom: none;
+}
+.gt-container .gt-popup .gt-action.is--active:before {
+  top: 0.7em;
 }
 .page-archive .archive-page-counter {
   position: relative;
