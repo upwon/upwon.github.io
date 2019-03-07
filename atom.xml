@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-03-07T01:32:24.256Z</updated>
+  <updated>2019-03-07T02:00:06.538Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://yoursite.com/2019/03/06/%E5%8D%9A%E5%AE%A2%E5%90%8D%20-%20%E5%89%AF%E6%9C%AC%20(2)/"/>
     <id>http://yoursite.com/2019/03/06/博客名 - 副本 (2)/</id>
     <published>2019-03-06T09:12:55.000Z</published>
-    <updated>2019-03-07T01:32:24.256Z</updated>
+    <updated>2019-03-07T02:00:06.538Z</updated>
     
     <summary type="html">
     
@@ -30,6 +30,8 @@
 &lt;p&gt;假如目标路径不存在，程序会自动创建，并把最终处理后的所有图片都存储于目标路径下&lt;br&gt;
     
     </summary>
+    
+      <category term="测试" scheme="http://yoursite.com/categories/%E6%B5%8B%E8%AF%95/"/>
     
     
       <category term="测试" scheme="http://yoursite.com/tags/%E6%B5%8B%E8%AF%95/"/>
