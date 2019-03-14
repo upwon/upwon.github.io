@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[DeepLearning]]></title>
+    <url>%2F2019%2F03%2F14%2FDeepLearning%2F</url>
+    <content type="text"><![CDATA[乱码乱码怎么回事]]></content>
+      <categories>
+        <category>Deep Learning</category>
+      </categories>
+      <tags>
+        <tag>Deep Learning</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[测试使用3]]></title>
     <url>%2F2019%2F03%2F06%2F%E5%8D%9A%E5%AE%A2%E5%90%8D%20-%20%E5%89%AF%E6%9C%AC%20(2)%2F</url>
     <content type="text"><![CDATA[使用说明image_resize.py使用说明使用方法：python image_resize.py source folder name destination folder name 比如：输入python image_resize.py D:\image D:\image\dst 假如目标路径不存在，程序会自动创建，并把最终处理后的所有图片都存储于目标路径下 image_resize.py的主要作用有:1.将所有图片尺寸进行resize处理2.将所有图片二值化 并进行去噪处理（去除孤立点） svm_features.py使用说明使用方法：python svm_features.py 注意：使用前请更改代码中的路径，并自行创建好文件夹‘’’ img_folder = &quot;D:\\pic_test\\svm_classfiy\\8&quot; test_file = open(&apos;D:\\pic_test\\svm_classfiy\\8\\特征文件\\last_test_pix_xy_8.txt&apos;,&apos;w&apos;) ‘’’上面的img_folder为存放处理好后的图片文件夹路径 test_file为要创建的txt，其中txt文件您不必手动创建，但是 D:\\pic_test\\svm_classfiy\\8\\特征文件\\您必须创建，否则程序将会出错]]></content>
