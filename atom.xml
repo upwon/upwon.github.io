@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-06-10T01:31:52.235Z</updated>
+  <updated>2019-07-12T11:16:02.389Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>OFDM原理总结及其仿真</title>
+    <link href="http://yoursite.com/2019/07/12/OFDM-Simulation/"/>
+    <id>http://yoursite.com/2019/07/12/OFDM-Simulation/</id>
+    <published>2019-07-12T03:04:50.000Z</published>
+    <updated>2019-07-12T11:16:02.389Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id=&quot;OFDM原理总结及其仿真&quot;&gt;&lt;a href=&quot;#OFDM原理总结及其仿真&quot; class=&quot;headerlink&quot; title=&quot;OFDM原理总结及其仿真&quot;&gt;&lt;/a&gt;OFDM原理总结及其仿真&lt;/h1&gt;&lt;p&gt;&lt;img src=&quot;https://user-images.githubusercontent.com/31719953/61107930-9bb5e080-a4b3-11e9-85e4-f3ab97ab288d.png&quot; alt=&quot;OFDM_看图王&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;摘要&quot;&gt;&lt;a href=&quot;#摘要&quot; class=&quot;headerlink&quot; title=&quot;摘要&quot;&gt;&lt;/a&gt;摘要&lt;/h2&gt;&lt;p&gt;​        对OFDM的基本原理、优缺点进行介绍，总结了其关键技术。最后通过MATLB进行仿真，模拟一个完整的OFDM系统的收发过程。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="通信" scheme="http://yoursite.com/categories/%E9%80%9A%E4%BF%A1/"/>
+    
+    
+      <category term="通信,OFDM" scheme="http://yoursite.com/tags/%E9%80%9A%E4%BF%A1-OFDM/"/>
+    
+  </entry>
   
   <entry>
     <title>卷积神经网络</title>
