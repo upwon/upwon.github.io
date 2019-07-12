@@ -112,6 +112,7 @@
 <meta property="og:description" content="OFDM原理总结及其仿真 摘要​        对OFDM的基本原理、优缺点进行介绍，总结了其关键技术。最后通过MATLB进行仿真，模拟一个完整的OFDM系统的收发过程。">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://user-images.githubusercontent.com/31719953/61107930-9bb5e080-a4b3-11e9-85e4-f3ab97ab288d.png">
+<meta property="og:image" content="https://user-images.githubusercontent.com/31719953/61117335-d9713400-a4c8-11e9-9222-7a22ecf3ddb3.jpg">
 <meta property="og:image" content="https://user-images.githubusercontent.com/31719953/61111722-c8bac100-a4bc-11e9-9bbf-d9757892a66d.jpg">
 <meta property="og:image" content="https://user-images.githubusercontent.com/31719953/61111815-07507b80-a4bd-11e9-884f-e689ccaeae13.jpg">
 <meta property="og:image" content="https://user-images.githubusercontent.com/31719953/61111847-16cfc480-a4bd-11e9-8c6d-8152230899df.jpg">
@@ -122,7 +123,7 @@
 <meta property="og:image" content="https://user-images.githubusercontent.com/31719953/61111962-5eeee700-a4bd-11e9-9e23-bc0fe703411e.jpg">
 <meta property="og:image" content="https://user-images.githubusercontent.com/31719953/61111988-6ca46c80-a4bd-11e9-9c24-a518bf03b689.jpg">
 <meta property="og:image" content="https://user-images.githubusercontent.com/31719953/61112008-7a59f200-a4bd-11e9-9abb-827410843439.jpg">
-<meta property="og:updated_time" content="2019-07-12T08:02:25.468Z">
+<meta property="og:updated_time" content="2019-07-12T09:36:42.611Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="OFDM Simulation">
 <meta name="twitter:description" content="OFDM原理总结及其仿真 摘要​        对OFDM的基本原理、优缺点进行介绍，总结了其关键技术。最后通过MATLB进行仿真，模拟一个完整的OFDM系统的收发过程。">
@@ -440,7 +441,7 @@
                 
               
 
-              <time title="创建时间：2019-07-12 11:04:50 / 修改时间：16:02:25" itemprop="dateCreated datePublished" datetime="2019-07-12T11:04:50+08:00">2019-07-12</time>
+              <time title="创建时间：2019-07-12 11:04:50 / 修改时间：17:36:42" itemprop="dateCreated datePublished" datetime="2019-07-12T11:04:50+08:00">2019-07-12</time>
             
 
             
@@ -502,6 +503,11 @@
 <h2 id="摘要"><a href="#摘要" class="headerlink" title="摘要"></a>摘要</h2><p>​        对OFDM的基本原理、优缺点进行介绍，总结了其关键技术。最后通过MATLB进行仿真，模拟一个完整的OFDM系统的收发过程。</p>
 <a id="more"></a>
 <h2 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h2><p>​        <strong>正交频分复用(OFDM)</strong>是一种高速的数据传输方式。它基本思想是在频域内将所给信道分成许多子信道，各个子信道之间保持正交。高速的数据流被分配到多个正交的子信道上进行传输，从而使子信道上的符号速率大幅度降低，单个数据符号的持续时间大大加长，因而具备了较强的抗时延扩展能力，降低了由于高速传输容易引起的符号间干扰(ISI)的影响。通常在OFDM 符号送入信道前加保护间隔，只要保护间隔大于信道的最大时延扩展，那么理论上就可以完全消除 ISI 的影响，而通常的做法是加入<strong>循环前缀(CP)</strong>，在有的系统中还加入循环后缀(CS)，这是 OFDM 系统比较有特色的处理技术，在正交频分复用（OFDM）是多载波调制（MCM）技术的一种。多载波调制的基本思想是把数据流串并变换为N路速率较低的子数据流，用这些子数据流分别去调制N路子载波以后，再并行传输。由于子数据流的速率是原来速率的1/N，也就是说，符号周期扩大为原来的N倍，远大于信道的最大延迟扩展，这样，多载波调制就把一个宽带频率选择性信道划分成了N个窄带平坦衰落信道，这样均衡比较简单，从而具有很强的抗多径衰落以及抗脉冲干扰的能力，这样特别适合于高速无线数据传输。OFDM是一种子载波相互混叠的多载波调制，因此它除了具有上述多载波调制的优势外，还具有更高的频谱利用率。OFDM选择时域相互正交的子载波，它们虽然在频域互相混叠，却仍能在接收端被分离出来。</p>
+<p><img src="https://user-images.githubusercontent.com/31719953/61117335-d9713400-a4c8-11e9-9222-7a22ecf3ddb3.jpg" alt="ofdm框图"></p>
+<p>导频符号用于接收端做信号估计</p>
+<h2 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h2><p>OFDM 系统较单载波系统和其他多载波系统突出了下述优势：</p>
+<p>（1）频谱利用率高：为了将子信道分离，通常的做法是增加一些保护频带，但是这样会导致频谱利用率降低，而 OFDM 采用将信号调制到相互正交的子载波上的方式，其频谱部分重叠的正交子载波可以作为子信道，在很大程度上优化了系统性能。<br>（2）具有良好的抵抗多径效应的能力：利用保护间隔处理多径效应的 OFDM系统，使其具有很大的优势。<br>（3）很强的抗衰落能力：由于多个正交的子载波信号传输信息，比单载波信号的传输时间消耗更长，这使得在信道衰落和脉冲噪声的环境下 OFDM 可以更好地对抗衰落。由于 OFDM 在发送端用多个正交子载波实现信号发射，并且不同的子载波相互正交，拥有不一样的衰落概率。实现了频率分级，强化了系统抗频率选择性衰落的能力。</p>
+<p>当然 OFDM 也存在以下不可忽视的缺点：<br>（1）OFDM 的子载波数目比较多，导致它的峰均值比很大，通常高于 12dB，这降低了射频信号放大器的功率效率，要求发射机射频放大器具有良好的线性范围。相比而言，单载波系统的峰均值比较小，通常低于 8dB。<br>（2）OFDM 系统对定时误差和频偏误差比较敏感，这是因为子载波之间存在频谱的重叠并且要求是严格的正交关系，很小的频偏就会破坏这种正交关系，导致系统性能降低。</p>
 <h2 id="关键技术"><a href="#关键技术" class="headerlink" title="关键技术"></a>关键技术</h2><p>​        在具体实际应用中，OFDM 系统需要解决的关键问题，主要包括时频同步技术、信道估计技术、降低峰均比技术、信道编解码技术和自适应技术这五个关键技术点。</p>
 <p>（1）时频同步<br>        OFDM 系统对载波频率偏移特别敏感，由失真和多普勒频移造成的频率偏移会对 OFDM 系统子载波间的正交性造成破坏，因此 OFDM 系统的收发两端必须满足严格同步，即对同步精度的要求极高。OFDM 系统中的同步技术包括载波同步、样值同步、符号帧定时同步，载波同步旨在同步 OFDM 系统收发端的载波频率，样值同步旨在同步收发端的取样时刻，符号帧定时同步旨在判决接收信号中每个 OFDM 符号块的起始位置。</p>
 <p>（2）信道估计<br>        信道估计对相干检测至关重要，其准确程度直接影响到 OFDM 系统性能，因此对 OFDM 系统当前信道的特性进行估计并校正信道频偏非常有必要。信道估计是基于物理信道对输入信号造成的频偏影响进行的定性研究过程，将信道对输入信号的影响（在幅度和相位上产生的畸变）计算出数学表达式，预先获知信道时域或频域的传输特性，根据其影响数值特性对信道进行还原校正，进而达到正确解调的目的。信道估计算法一般包含有时域信道估计算法、频域信道估计算法、基于参数化的信道估计算法和信道估计同步联合算法，在无线通信中，一般采取基于导频的估计算法。</p>
@@ -521,16 +527,61 @@
 <figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="params">[demodu_bit_symble]</span>=<span class="title">demoduqam16</span><span class="params">(Rx_serial_complex_symbols)</span></span></span><br><span class="line"><span class="comment">%将得到的串行16QAM数据解调成二进制比特流</span></span><br><span class="line">complex_symbols=<span class="built_in">reshape</span>(Rx_serial_complex_symbols,<span class="built_in">length</span>(Rx_serial_complex_symbols),<span class="number">1</span>);</span><br><span class="line">d=<span class="number">1</span>;</span><br><span class="line">mapping=[<span class="number">-3</span>*d <span class="number">3</span>*d;</span><br><span class="line">	   -d  <span class="number">3</span>*d;</span><br><span class="line">        d  <span class="number">3</span>*d;</span><br><span class="line">	  <span class="number">3</span>*d  <span class="number">3</span>*d;</span><br><span class="line">	 <span class="number">-3</span>*d  d;</span><br><span class="line">	   -d  d;</span><br><span class="line">	    d  d;</span><br><span class="line">	  <span class="number">3</span>*d  d;</span><br><span class="line"> 	 <span class="number">-3</span>*d  -d; </span><br><span class="line">	   -d  -d; </span><br><span class="line">	    d  -d;</span><br><span class="line">      <span class="number">3</span>*d  -d;</span><br><span class="line">	 <span class="number">-3</span>*d  <span class="number">-3</span>*d;</span><br><span class="line">	   -d  <span class="number">-3</span>*d;</span><br><span class="line">	    d  <span class="number">-3</span>*d;</span><br><span class="line">	  <span class="number">3</span>*d  <span class="number">-3</span>*d];</span><br><span class="line">  complex_mapping=<span class="built_in">complex</span>(mapping(:,<span class="number">1</span>),mapping(:,<span class="number">2</span>));</span><br><span class="line">  <span class="keyword">for</span> <span class="built_in">i</span>=<span class="number">1</span>:<span class="built_in">length</span>(Rx_serial_complex_symbols)</span><br><span class="line">      <span class="keyword">for</span> <span class="built_in">j</span>=<span class="number">1</span>:<span class="number">16</span></span><br><span class="line">          metrics(<span class="built_in">j</span>)=<span class="built_in">abs</span>(complex_symbols(<span class="built_in">i</span>,<span class="number">1</span>)-complex_mapping(<span class="built_in">j</span>,<span class="number">1</span>));</span><br><span class="line">      <span class="keyword">end</span></span><br><span class="line">      [min_metric  decode_symble(<span class="built_in">i</span>)]= <span class="built_in">min</span>(metrics) ;  <span class="comment">%将离某星座点最近的值赋给decode_symble(i)</span></span><br><span class="line">  <span class="keyword">end</span></span><br><span class="line">  </span><br><span class="line">  decode_bit_symble=de2bi((decode_symble<span class="number">-1</span>)',<span class="string">'left-msb'</span>);</span><br><span class="line">   demodu_bit_symble=<span class="built_in">reshape</span>(decode_bit_symble',<span class="number">1</span>,<span class="built_in">length</span>(Rx_serial_complex_symbols)*<span class="number">4</span>);</span><br></pre></td></tr></table></figure>
 <p>多图预警😂</p>
 <p><img src="https://user-images.githubusercontent.com/31719953/61111815-07507b80-a4bd-11e9-884f-e689ccaeae13.jpg" alt="figure1"></p>
-<p>图1 星座图</p>
+<center>图1 星座图</center>
+
+
+
+
+
 <p><img src="https://user-images.githubusercontent.com/31719953/61111847-16cfc480-a4bd-11e9-8c6d-8152230899df.jpg" alt="figure2"></p>
+<center>图2 第一个OFDM符号的频谱</center>
+
+
+
 <p><img src="https://user-images.githubusercontent.com/31719953/61111871-23ecb380-a4bd-11e9-81d7-e6ebf18ac6b4.jpg" alt="figure3"></p>
+<center>图3 第一个OFDM符号的相位</center>
+
+
+
 <p><img src="https://user-images.githubusercontent.com/31719953/61111890-2fd87580-a4bd-11e9-9ee2-9a2508398b49.jpg" alt="figure4"></p>
+<center>图4 第一个符号的波形</center>
+
+
+
+
+
 <p><img src="https://user-images.githubusercontent.com/31719953/61111907-3bc43780-a4bd-11e9-846a-d76e02e1754a.jpg" alt="figure5"></p>
+<center>图5 保护间隔</center>
+
+<p>​        虽然 OFDM 把高速率的信源数据流通过串并转换，变化成低速率的 N 路并行数据流，将符号周期扩展 N 倍，能够有效减少由多径信道带来的符号间干扰。但是仅仅通过串并转换并不能完全消除由多径信道带来的 ISI。为了保证 OFDM 系统的性能，人们引入了保护间隔，将其插在两个连续的 OFDM 符号之间。最开始通过补零的方式插入保护间隔，这种方式虽然能将两个连续的 OFDM 符号分开，但是也破坏了 OFDM 子载波间的正交性，会引入子载波间干扰。于是在 1980 年PELED 提出采用循环前缀作为保护间隔。循环前缀即是把 OFDM 符号后段的采样复制到最前端解决了 OFDM 插入补零间隔引起的子载波正交性被破坏的问题。加入的 CP 可以将信号与信道间的线性卷积转换为循环卷积 [48] ，只要循环前缀长度大于信道最大多径时延，便可以消除由多径信道带来的 ISI 和 ICI 问题。虽然插入循环前缀会降低系统传输比特的效率，但是其在抗多径方面的效果非常显著。</p>
 <p><img src="https://user-images.githubusercontent.com/31719953/61111937-53032500-a4bd-11e9-80d0-0611379767c7.jpg" alt="figure6"></p>
+<center>图6 加窗</center>
+
+<p>​        FFT变换只能对有限长度的时域数据进行变换，因此，需要对时域信号进行信号截断。即使是周期信号，如果截断的时间长度不是周期的整数倍（周期截断），那么，截取后的信号将会存在泄漏。为了将这个泄漏误差减少到最小程度（注意我说是的减少，而不是消除），我们需要使用<strong>加权函数</strong>，也叫<strong>窗函数</strong>。<strong>加窗主要是为了使时域信号似乎更好地满足FFT处理的周期性要求，减少泄漏。</strong></p>
 <p><img src="https://user-images.githubusercontent.com/31719953/61111962-5eeee700-a4bd-11e9-9e23-bc0fe703411e.jpg" alt="figure7"></p>
+<center>图7 接收端-极坐标星座图</center>
+
+
+
+
+
 <p><img src="https://user-images.githubusercontent.com/31719953/61111988-6ca46c80-a4bd-11e9-9c24-a518bf03b689.jpg" alt="figure8"></p>
+<center>图8 接收端-直角坐标系星座图</center>
+
+<p>​    坐标轴的度量单位是角度。</p>
+<p>1.星座图中，点到原点的距离代表的物理含义是：这个点对应信号的能量，离原点越远，意味着此信号能量越大。<br>2.相邻两个点的距离称为欧氏距离，表示的是这种调制所具有的的抗噪声性能，欧氏距离越大，抗噪声性能越好。<br>星座图里的点表示的是一种调制里可以判决的各种情况。比如一个简单的PSK来说，就2种判决，相位相差180度，两个点可以一个在正半轴，一个在负半轴。如果在星座图中，各个点离得越远，就是说明误判的可能性会变小。</p>
+<p>从图8中可以看到有一些点处于边界区域，那么这些点就极有可能出现误判了。</p>
 <p><img src="https://user-images.githubusercontent.com/31719953/61112008-7a59f200-a4bd-11e9-9abb-827410843439.jpg" alt="figure9"></p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2>
+<center>图9 发送端bit与接收端的对比</center>
+
+<p>图9画出了200的bit，观察收发情况。仿真中共发送9600bit,出现错误的有16bit,误比特率为  <strong>0.17%</strong> 。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><p>[1]朱付强.OFDM系统中快速频谱检测关键技术研究[D].四川:电子科技大学,2018.</p>
+<p>[2]向娟.车联网系统中OFDM同步与信道估计技术研究[D].四川:电子科技大学,2018.</p>
+<p>[3]胡天晓.64QAM-OFDM系统的星座整形及实现[D].湖北:华中科技大学,2018.</p>
+<p>[4] 李晓辉，付卫红，黑永强.LTE移动通信系统[M].西安.西安电子科技大学出版社. 2013.</p>
+<p>[5]<a href="https://www.zhihu.com/question/23107539/answer/24882310" target="_blank" rel="noopener">https://www.zhihu.com/question/23107539/answer/24882310</a></p>
+<p>[6] <a href="https://zhuanlan.zhihu.com/p/24318554" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/24318554</a> </p>
+
       
     </div>
 
@@ -819,7 +870,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#OFDM原理总结及其仿真"><span class="nav-number">1.</span> <span class="nav-text">OFDM原理总结及其仿真</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#摘要"><span class="nav-number">1.1.</span> <span class="nav-text">摘要</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#原理"><span class="nav-number">1.2.</span> <span class="nav-text">原理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#关键技术"><span class="nav-number">1.3.</span> <span class="nav-text">关键技术</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#仿真"><span class="nav-number">1.4.</span> <span class="nav-text">仿真</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">1.5.</span> <span class="nav-text">总结</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#OFDM原理总结及其仿真"><span class="nav-number">1.</span> <span class="nav-text">OFDM原理总结及其仿真</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#摘要"><span class="nav-number">1.1.</span> <span class="nav-text">摘要</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#原理"><span class="nav-number">1.2.</span> <span class="nav-text">原理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#特点"><span class="nav-number">1.3.</span> <span class="nav-text">特点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#关键技术"><span class="nav-number">1.4.</span> <span class="nav-text">关键技术</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#仿真"><span class="nav-number">1.5.</span> <span class="nav-text">仿真</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">1.6.</span> <span class="nav-text">总结</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考文献"><span class="nav-number">1.7.</span> <span class="nav-text">参考文献</span></a></li></ol></li></ol></div>
             
 
           </div>
