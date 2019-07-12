@@ -104,9 +104,9 @@
 
 
   <meta name="description" content="OFDM原理总结及其仿真 摘要​        对OFDM的基本原理、优缺点进行介绍，总结了其关键技术。最后通过MATLB进行仿真，模拟一个完整的OFDM系统的收发过程。">
-<meta name="keywords" content="通信 OFDM">
+<meta name="keywords" content="通信，OFDM">
 <meta property="og:type" content="article">
-<meta property="og:title" content="OFDM Simulation">
+<meta property="og:title" content="OFDM原理总结及其仿真">
 <meta property="og:url" content="http://yoursite.com/2019/07/12/OFDM-Simulation/index.html">
 <meta property="og:site_name" content="热夏的博客">
 <meta property="og:description" content="OFDM原理总结及其仿真 摘要​        对OFDM的基本原理、优缺点进行介绍，总结了其关键技术。最后通过MATLB进行仿真，模拟一个完整的OFDM系统的收发过程。">
@@ -123,9 +123,9 @@
 <meta property="og:image" content="https://user-images.githubusercontent.com/31719953/61111962-5eeee700-a4bd-11e9-9e23-bc0fe703411e.jpg">
 <meta property="og:image" content="https://user-images.githubusercontent.com/31719953/61111988-6ca46c80-a4bd-11e9-9c24-a518bf03b689.jpg">
 <meta property="og:image" content="https://user-images.githubusercontent.com/31719953/61112008-7a59f200-a4bd-11e9-9abb-827410843439.jpg">
-<meta property="og:updated_time" content="2019-07-12T09:36:42.611Z">
+<meta property="og:updated_time" content="2019-07-12T09:56:27.432Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="OFDM Simulation">
+<meta name="twitter:title" content="OFDM原理总结及其仿真">
 <meta name="twitter:description" content="OFDM原理总结及其仿真 摘要​        对OFDM的基本原理、优缺点进行介绍，总结了其关键技术。最后通过MATLB进行仿真，模拟一个完整的OFDM系统的收发过程。">
 <meta name="twitter:image" content="https://user-images.githubusercontent.com/31719953/61107930-9bb5e080-a4b3-11e9-85e4-f3ab97ab288d.png">
 
@@ -146,7 +146,7 @@
   };
 </script>
 
-  <title>OFDM Simulation | 热夏的博客</title>
+  <title>OFDM原理总结及其仿真 | 热夏的博客</title>
   
 
 
@@ -408,7 +408,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">OFDM Simulation
+          <h1 class="post-title" itemprop="name headline">OFDM原理总结及其仿真
 
               
             
@@ -441,7 +441,7 @@
                 
               
 
-              <time title="创建时间：2019-07-12 11:04:50 / 修改时间：17:36:42" itemprop="dateCreated datePublished" datetime="2019-07-12T11:04:50+08:00">2019-07-12</time>
+              <time title="创建时间：2019-07-12 11:04:50 / 修改时间：17:56:27" itemprop="dateCreated datePublished" datetime="2019-07-12T11:04:50+08:00">2019-07-12</time>
             
 
             
@@ -532,15 +532,12 @@
 
 
 
-
 <p><img src="https://user-images.githubusercontent.com/31719953/61111847-16cfc480-a4bd-11e9-8c6d-8152230899df.jpg" alt="figure2"></p>
 <center>图2 第一个OFDM符号的频谱</center>
 
 
-
 <p><img src="https://user-images.githubusercontent.com/31719953/61111871-23ecb380-a4bd-11e9-81d7-e6ebf18ac6b4.jpg" alt="figure3"></p>
 <center>图3 第一个OFDM符号的相位</center>
-
 
 
 <p><img src="https://user-images.githubusercontent.com/31719953/61111890-2fd87580-a4bd-11e9-9ee2-9a2508398b49.jpg" alt="figure4"></p>
@@ -549,32 +546,18 @@
 
 
 
-
 <p><img src="https://user-images.githubusercontent.com/31719953/61111907-3bc43780-a4bd-11e9-846a-d76e02e1754a.jpg" alt="figure5"></p>
-<center>图5 保护间隔</center>
-
-<p>​        虽然 OFDM 把高速率的信源数据流通过串并转换，变化成低速率的 N 路并行数据流，将符号周期扩展 N 倍，能够有效减少由多径信道带来的符号间干扰。但是仅仅通过串并转换并不能完全消除由多径信道带来的 ISI。为了保证 OFDM 系统的性能，人们引入了保护间隔，将其插在两个连续的 OFDM 符号之间。最开始通过补零的方式插入保护间隔，这种方式虽然能将两个连续的 OFDM 符号分开，但是也破坏了 OFDM 子载波间的正交性，会引入子载波间干扰。于是在 1980 年PELED 提出采用循环前缀作为保护间隔。循环前缀即是把 OFDM 符号后段的采样复制到最前端解决了 OFDM 插入补零间隔引起的子载波正交性被破坏的问题。加入的 CP 可以将信号与信道间的线性卷积转换为循环卷积 [48] ，只要循环前缀长度大于信道最大多径时延，便可以消除由多径信道带来的 ISI 和 ICI 问题。虽然插入循环前缀会降低系统传输比特的效率，但是其在抗多径方面的效果非常显著。</p>
-<p><img src="https://user-images.githubusercontent.com/31719953/61111937-53032500-a4bd-11e9-80d0-0611379767c7.jpg" alt="figure6"></p>
-<center>图6 加窗</center>
-
-<p>​        FFT变换只能对有限长度的时域数据进行变换，因此，需要对时域信号进行信号截断。即使是周期信号，如果截断的时间长度不是周期的整数倍（周期截断），那么，截取后的信号将会存在泄漏。为了将这个泄漏误差减少到最小程度（注意我说是的减少，而不是消除），我们需要使用<strong>加权函数</strong>，也叫<strong>窗函数</strong>。<strong>加窗主要是为了使时域信号似乎更好地满足FFT处理的周期性要求，减少泄漏。</strong></p>
-<p><img src="https://user-images.githubusercontent.com/31719953/61111962-5eeee700-a4bd-11e9-9e23-bc0fe703411e.jpg" alt="figure7"></p>
-<center>图7 接收端-极坐标星座图</center>
-
+<center>图5 保护间隔</center><br>​        虽然 OFDM 把高速率的信源数据流通过串并转换，变化成低速率的 N 路并行数据流，将符号周期扩展 N 倍，能够有效减少由多径信道带来的符号间干扰。但是仅仅通过串并转换并不能完全消除由多径信道带来的 ISI。为了保证 OFDM 系统的性能，人们引入了保护间隔，将其插在两个连续的 OFDM 符号之间。最开始通过补零的方式插入保护间隔，这种方式虽然能将两个连续的 OFDM 符号分开，但是也破坏了 OFDM 子载波间的正交性，会引入子载波间干扰。于是在 1980 年PELED 提出采用循环前缀作为保护间隔。循环前缀即是把 OFDM 符号后段的采样复制到最前端解决了 OFDM 插入补零间隔引起的子载波正交性被破坏的问题。加入的 CP 可以将信号与信道间的线性卷积转换为循环卷积 [48] ，只要循环前缀长度大于信道最大多径时延，便可以消除由多径信道带来的 ISI 和 ICI 问题。虽然插入循环前缀会降低系统传输比特的效率，但是其在抗多径方面的效果非常显著。<br><br><img src="https://user-images.githubusercontent.com/31719953/61111937-53032500-a4bd-11e9-80d0-0611379767c7.jpg" alt="figure6"><br><br><center>图6 加窗</center><br>​        FFT变换只能对有限长度的时域数据进行变换，因此，需要对时域信号进行信号截断。即使是周期信号，如果截断的时间长度不是周期的整数倍（周期截断），那么，截取后的信号将会存在泄漏。为了将这个泄漏误差减少到最小程度（注意我说是的减少，而不是消除），我们需要使用<strong>加权函数</strong>，也叫<strong>窗函数</strong>。<strong>加窗主要是为了使时域信号似乎更好地满足FFT处理的周期性要求，减少泄漏。</strong><br><br><br><br><img src="https://user-images.githubusercontent.com/31719953/61111962-5eeee700-a4bd-11e9-9e23-bc0fe703411e.jpg" alt="figure7"><br><br><center>图7 接收端-极坐标星座图</center>
 
 
 
 
 <p><img src="https://user-images.githubusercontent.com/31719953/61111988-6ca46c80-a4bd-11e9-9c24-a518bf03b689.jpg" alt="figure8"></p>
-<center>图8 接收端-直角坐标系星座图</center>
-
-<p>​    坐标轴的度量单位是角度。</p>
+<p><center>图8 接收端-直角坐标系星座图</center><br>​    坐标轴的度量单位是角度。</p>
 <p>1.星座图中，点到原点的距离代表的物理含义是：这个点对应信号的能量，离原点越远，意味着此信号能量越大。<br>2.相邻两个点的距离称为欧氏距离，表示的是这种调制所具有的的抗噪声性能，欧氏距离越大，抗噪声性能越好。<br>星座图里的点表示的是一种调制里可以判决的各种情况。比如一个简单的PSK来说，就2种判决，相位相差180度，两个点可以一个在正半轴，一个在负半轴。如果在星座图中，各个点离得越远，就是说明误判的可能性会变小。</p>
 <p>从图8中可以看到有一些点处于边界区域，那么这些点就极有可能出现误判了。</p>
 <p><img src="https://user-images.githubusercontent.com/31719953/61112008-7a59f200-a4bd-11e9-9abb-827410843439.jpg" alt="figure9"></p>
-<center>图9 发送端bit与接收端的对比</center>
-
-<p>图9画出了200的bit，观察收发情况。仿真中共发送9600bit,出现错误的有16bit,误比特率为  <strong>0.17%</strong> 。</p>
+<p><center>图9 发送端bit与接收端的对比</center><br>图9画出了200的bit，观察收发情况。仿真中共发送9600bit,出现错误的有16bit,误比特率为  <strong>0.17%</strong> 。</p>
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><p>[1]朱付强.OFDM系统中快速频谱检测关键技术研究[D].四川:电子科技大学,2018.</p>
 <p>[2]向娟.车联网系统中OFDM同步与信道估计技术研究[D].四川:电子科技大学,2018.</p>
 <p>[3]胡天晓.64QAM-OFDM系统的星座整形及实现[D].湖北:华中科技大学,2018.</p>
@@ -601,7 +584,7 @@
   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <p><span>文章作者:</span><a href="/" title="访问 王先文 的个人博客">王先文</a></p>
   <p><span>发布时间:</span>2019年07月12日 - 11:04</p>
-  <p><span>原始链接:</span><a href="/2019/07/12/OFDM-Simulation/" title="OFDM Simulation">http://yoursite.com/2019/07/12/OFDM-Simulation/</a>
+  <p><span>原始链接:</span><a href="/2019/07/12/OFDM-Simulation/" title="OFDM原理总结及其仿真">http://yoursite.com/2019/07/12/OFDM-Simulation/</a>
     <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://yoursite.com/2019/07/12/OFDM-Simulation/" aria-label="复制成功！"></i></span>
   </p>
   <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
@@ -645,7 +628,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/通信-OFDM/" rel="tag"><i class="fa fa-tag"></i> 通信 OFDM</a>
+            <a href="/tags/通信，OFDM/" rel="tag"><i class="fa fa-tag"></i> 通信，OFDM</a>
           
         </div>
       
