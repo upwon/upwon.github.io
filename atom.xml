@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-07-12T11:16:02.389Z</updated>
+  <updated>2019-07-12T11:47:08.446Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://yoursite.com/2019/07/12/OFDM-Simulation/"/>
     <id>http://yoursite.com/2019/07/12/OFDM-Simulation/</id>
     <published>2019-07-12T03:04:50.000Z</published>
-    <updated>2019-07-12T11:16:02.389Z</updated>
+    <updated>2019-07-12T11:47:08.446Z</updated>
     
     <summary type="html">
     
@@ -33,7 +33,9 @@
       <category term="通信" scheme="http://yoursite.com/categories/%E9%80%9A%E4%BF%A1/"/>
     
     
-      <category term="通信,OFDM" scheme="http://yoursite.com/tags/%E9%80%9A%E4%BF%A1-OFDM/"/>
+      <category term="通信" scheme="http://yoursite.com/tags/%E9%80%9A%E4%BF%A1/"/>
+    
+      <category term="OFDM" scheme="http://yoursite.com/tags/OFDM/"/>
     
   </entry>
   
