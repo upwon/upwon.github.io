@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-08-25T13:36:20.246Z</updated>
+  <updated>2019-08-25T13:41:29.087Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://yoursite.com/2019/08/25/C_plus_plus_Core_Programming/"/>
     <id>http://yoursite.com/2019/08/25/C_plus_plus_Core_Programming/</id>
     <published>2019-08-25T09:02:18.000Z</published>
-    <updated>2019-08-25T13:36:20.246Z</updated>
+    <updated>2019-08-25T13:41:29.087Z</updated>
     
     <summary type="html">
     
@@ -29,8 +29,7 @@
 &lt;p&gt;对应视频地址为：&lt;a href=&quot;https://www.bilibili.com/video/av41559729/?p=1&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;黑马程序员匠心之作|C++教程从0到1入门编程,学习编程不再难&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id&gt;&lt;a href=&quot;#&quot; class=&quot;headerlink&quot; title=&quot; &quot;&gt;&lt;/a&gt; &lt;/h2&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt;
 \sin(x)2&lt;/script&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt;
-f_n=f_{n-1}+f_{n-2}&lt;/script&gt;&lt;p&gt;$ &lt;code&gt;f_n=f_{n-1}+f_{n-2}&lt;/code&gt;$&lt;/p&gt;
-&lt;p&gt;本阶段主要针对C++&lt;code&gt;&amp;lt;mark&amp;gt;面向对象&amp;lt;/mark&amp;gt;&lt;/code&gt;编程技术做详细讲解，探讨C++中的核心和精髓。&lt;/p&gt;
+f_n=f_{n-1}+f_{n-2}&lt;/script&gt;&lt;script type=&quot;math/tex; mode=display&quot;&gt;f_n=f_{n-1}+f_{n-2}&lt;/script&gt;&lt;p&gt;本阶段主要针对C++&lt;code&gt;&amp;lt;mark&amp;gt;面向对象&amp;lt;/mark&amp;gt;&lt;/code&gt;编程技术做详细讲解，探讨C++中的核心和精髓。&lt;/p&gt;
     
     </summary>
     
