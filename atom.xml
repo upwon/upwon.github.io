@@ -94,23 +94,6 @@
   </entry>
   
   <entry>
-    <title>卷积神经网络</title>
-    <link href="http://yoursite.com/2019/06/09/%E5%8D%B7%E7%A7%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/"/>
-    <id>http://yoursite.com/2019/06/09/卷积神经网络/</id>
-    <published>2019-06-09T13:54:51.000Z</published>
-    <updated>2019-06-10T01:31:52.235Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;卷积神经网络&quot;&gt;&lt;a href=&quot;#卷积神经网络&quot; class=&quot;headerlink&quot; title=&quot;卷积神经网络&quot;&gt;&lt;/a&gt;卷积神经网络&lt;/h1&gt;&lt;h2 id=&quot;卷积层&quot;&gt;&lt;a href=&quot;#卷积层&quot; class=&quot;headerlink&quot; title=&quot;卷积层&quot;&gt;&lt;/a&gt;卷积层&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;作用：&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;卷积层的作用是提取一个局部区域的特征，不同的卷积核相当于不同的特征提取器。&lt;/p&gt;
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
     <title>Object_Detection_in_motion_Scene</title>
     <link href="http://yoursite.com/2019/06/05/Object-Detection-in-motion-Scene/"/>
     <id>http://yoursite.com/2019/06/05/Object-Detection-in-motion-Scene/</id>
