@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-08-26T01:40:15.415Z</updated>
+  <updated>2019-09-15T13:10:44.116Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Windows右键菜单添加以VS Code打开🍻</title>
+    <link href="http://yoursite.com/2019/09/15/Window_right_click_menu_add_open_with_VSCode/"/>
+    <id>http://yoursite.com/2019/09/15/Window_right_click_menu_add_open_with_VSCode/</id>
+    <published>2019-09-15T15:25:30.000Z</published>
+    <updated>2019-09-15T13:10:44.116Z</updated>
+    
+    <summary type="html">
+    
+      &lt;h1 id&gt;&lt;a href=&quot;#&quot; class=&quot;headerlink&quot; title=&quot; &quot;&gt;&lt;/a&gt; &lt;/h1&gt;&lt;p&gt;目的：&lt;/p&gt;
+&lt;p&gt;右键单击文件夹，可以使用以vscode打开&lt;/p&gt;
+&lt;p&gt;右键单文件或者空白处，可以使用vscode打开&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/upwon/MyPicture/master/img/20190915210944.jpg&quot; alt&gt;&lt;/p&gt;
+&lt;p&gt;实现方法为&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Windows" scheme="http://yoursite.com/categories/Windows/"/>
+    
+    
+      <category term="APP" scheme="http://yoursite.com/tags/APP/"/>
+    
+  </entry>
   
   <entry>
     <title>3-C++核心编程</title>
@@ -110,28 +134,6 @@
     
       <category term="Deep Learning" scheme="http://yoursite.com/categories/Deep-Learning/"/>
     
-    
-  </entry>
-  
-  <entry>
-    <title>Windows右键菜单添加以VS Code打开🍻</title>
-    <link href="http://yoursite.com/2019/06/05/Window_right_click_menu_add_open_with_VSCode/"/>
-    <id>http://yoursite.com/2019/06/05/Window_right_click_menu_add_open_with_VSCode/</id>
-    <published>2019-06-05T15:25:30.000Z</published>
-    <updated>2019-09-15T13:05:12.660Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;Windows右键菜单添加以VS-Code打开🍻&quot;&gt;&lt;a href=&quot;#Windows右键菜单添加以VS-Code打开🍻&quot; class=&quot;headerlink&quot; title=&quot;Windows右键菜单添加以VS Code打开🍻&quot;&gt;&lt;/a&gt;Windows右键菜单添加以VS Code打开🍻&lt;/h1&gt;&lt;p&gt;目的：&lt;/p&gt;
-&lt;p&gt;右键单击文件夹，可以使用以vscode打开&lt;/p&gt;
-&lt;p&gt;右键单文件或者空白处，可以使用vscode打开&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Windows" scheme="http://yoursite.com/categories/Windows/"/>
-    
-    
-      <category term="APP" scheme="http://yoursite.com/tags/APP/"/>
     
   </entry>
   
