@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-09-15T13:59:47.996Z</updated>
+  <updated>2019-09-26T08:14:30.882Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,14 +21,14 @@
     <link href="http://yoursite.com/2019/09/15/Window_right_click_menu_add_open_with_VSCode/"/>
     <id>http://yoursite.com/2019/09/15/Window_right_click_menu_add_open_with_VSCode/</id>
     <published>2019-09-15T15:25:00.000Z</published>
-    <updated>2019-09-15T13:59:47.996Z</updated>
+    <updated>2019-09-26T08:14:30.882Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;目的：&lt;/p&gt;
+      &lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/upwon/MyPicture/master/img/20190915210944.jpg&quot; alt&gt;&lt;/p&gt;
+&lt;p&gt;目的：&lt;/p&gt;
 &lt;p&gt;右键单击文件夹，可以使用以vscode打开&lt;/p&gt;
 &lt;p&gt;右键单文件或者空白处，可以使用vscode打开&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/upwon/MyPicture/master/img/20190915210944.jpg&quot; alt&gt;&lt;/p&gt;
     
     </summary>
     
