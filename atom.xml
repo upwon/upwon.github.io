@@ -166,63 +166,6 @@
   </entry>
   
   <entry>
-    <title>卷积神经网络</title>
-    <link href="http://yoursite.com/2019/06/09/%E5%8D%B7%E7%A7%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/"/>
-    <id>http://yoursite.com/2019/06/09/卷积神经网络/</id>
-    <published>2019-06-09T13:54:51.000Z</published>
-    <updated>2019-09-15T14:01:02.405Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;卷积神经网络&quot;&gt;&lt;a href=&quot;#卷积神经网络&quot; class=&quot;headerlink&quot; title=&quot;卷积神经网络&quot;&gt;&lt;/a&gt;卷积神经网络&lt;/h1&gt;&lt;h2 id=&quot;卷积层&quot;&gt;&lt;a href=&quot;#卷积层&quot; class=&quot;headerlink&quot; title=&quot;卷积层&quot;&gt;&lt;/a&gt;卷积层&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;作用：&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;卷积层的作用是提取一个局部区域的特征，不同的卷积核相当于不同的特征提取器。&lt;/p&gt;
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Object_Detection_in_motion_Scene</title>
-    <link href="http://yoursite.com/2019/06/05/Object-Detection-in-motion-Scene/"/>
-    <id>http://yoursite.com/2019/06/05/Object-Detection-in-motion-Scene/</id>
-    <published>2019-06-05T15:25:30.000Z</published>
-    <updated>2019-07-12T07:49:47.257Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;毕业设计视频演示&quot;&gt;&lt;a href=&quot;#毕业设计视频演示&quot; class=&quot;headerlink&quot; title=&quot;毕业设计视频演示&quot;&gt;&lt;/a&gt;毕业设计视频演示&lt;/h1&gt;&lt;p&gt;汇报人：通信工程 王先文&lt;/p&gt;
-&lt;p&gt;视频&lt;/p&gt;
-&lt;iframe width=&quot;800&quot; height=&quot;720&quot; src=&quot;//player.bilibili.com/player.html?aid=54655521&amp;page=1&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
-    
-    </summary>
-    
-      <category term="Deep Learning" scheme="http://yoursite.com/categories/Deep-Learning/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>测试使用2</title>
-    <link href="http://yoursite.com/2019/03/06/%E5%8D%9A%E5%AE%A2%E5%90%8D%20-%20%E5%89%AF%E6%9C%AC%20-%20%E5%89%AF%E6%9C%AC%20(8)/"/>
-    <id>http://yoursite.com/2019/03/06/博客名 - 副本 - 副本 (8)/</id>
-    <published>2019-03-06T08:12:55.000Z</published>
-    <updated>2019-03-10T04:22:26.668Z</updated>
-    
-    <summary type="html">
-    
-      &lt;h1 id=&quot;使用说明&quot;&gt;&lt;a href=&quot;#使用说明&quot; class=&quot;headerlink&quot; title=&quot;使用说明&quot;&gt;&lt;/a&gt;使用说明&lt;/h1&gt;&lt;h2 id=&quot;image-resize-py使用说明&quot;&gt;&lt;a href=&quot;#image-resize-py使用说明&quot; class=&quot;headerlink&quot; title=&quot;image_resize.py使用说明&quot;&gt;&lt;/a&gt;image_resize.py使用说明&lt;/h2&gt;&lt;p&gt;使用方法：python image_resize.py  source folder name destination folder name&lt;/p&gt;
-&lt;p&gt;比如：输入&lt;code&gt;python image_resize.py D:\image D:\image\dst&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;假如目标路径不存在，程序会自动创建，并把最终处理后的所有图片都存储于目标路径下&lt;br&gt;
-    
-    </summary>
-    
-    
-      <category term="测试" scheme="http://yoursite.com/tags/%E6%B5%8B%E8%AF%95/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Hello World</title>
     <link href="http://yoursite.com/2019/03/01/hello-world/"/>
     <id>http://yoursite.com/2019/03/01/hello-world/</id>
