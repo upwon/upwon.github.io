@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-11-15T10:22:50.113Z</updated>
+  <updated>2019-11-17T03:29:36.516Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,15 +17,36 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Visual Studio 2019激活码/序列号</title>
+    <link href="http://yoursite.com/2019/11/17/visual_studio_2019_2017_Activation_serial_number/"/>
+    <id>http://yoursite.com/2019/11/17/visual_studio_2019_2017_Activation_serial_number/</id>
+    <published>2019-11-17T02:25:00.000Z</published>
+    <updated>2019-11-17T03:29:36.516Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://gitee.com/wang_wx/image_bed/raw/master/2011911/1401_compressed.jpg&quot; alt=&quot; &quot;&gt;&lt;/p&gt;
+&lt;p&gt;宇宙第一IDE Visual Studio 2019 /2017 专业版/企业版激活码&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="数学" scheme="http://yoursite.com/categories/%E6%95%B0%E5%AD%A6/"/>
+    
+    
+      <category term="教程" scheme="http://yoursite.com/tags/%E6%95%99%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
     <title>git clone使用代理加速</title>
     <link href="http://yoursite.com/2019/11/14/git_clone_using_proxy_acceleration/"/>
     <id>http://yoursite.com/2019/11/14/git_clone_using_proxy_acceleration/</id>
     <published>2019-11-14T03:34:18.000Z</published>
-    <updated>2019-11-15T10:22:50.113Z</updated>
+    <updated>2019-11-17T03:16:45.256Z</updated>
     
     <summary type="html">
     
-      &lt;h1 id&gt;&lt;a href=&quot;#&quot; class=&quot;headerlink&quot; title=&quot; &quot;&gt;&lt;/a&gt; &lt;/h1&gt;&lt;p&gt;&lt;img src=&quot;https://gitee.com/wang_wx/image_bed/raw/master/2011911/mt-fuji-sea-of-clouds-sunrise-46253.jpeg&quot; alt&gt;&lt;/p&gt;
+      &lt;p&gt;&lt;img src=&quot;https://gitee.com/wang_wx/image_bed/blob/master/2011911/mtsunrise46253.jpeg&quot; alt=&quot;233&quot;&gt;&lt;/p&gt;
 &lt;p&gt;国内访问GitHub速度较慢，克隆代码时的速度就更慢了，常常断开。因此，我们需要让我们的git走代理来加速克隆。&lt;/p&gt;
     
     </summary>
