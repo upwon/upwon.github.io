@@ -42,11 +42,12 @@
     <link href="http://yoursite.com/2019/11/14/git_clone_using_proxy_acceleration/"/>
     <id>http://yoursite.com/2019/11/14/git_clone_using_proxy_acceleration/</id>
     <published>2019-11-14T03:34:18.000Z</published>
-    <updated>2019-11-17T04:10:15.782Z</updated>
+    <updated>2019-11-17T04:19:12.692Z</updated>
     
     <summary type="html">
     
       &lt;p&gt;&lt;img src=&quot;https://gitee.com/wang_wx/image_bed/raw/master/2011911/mt-fuji-sea-of-clouds-sunrise-46253_compressed.jpg&quot; alt&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/upwon/MyPicture/master/img/mt-fuji-sea-of-clouds-sunrise-46253_compressed.jpg&quot; alt&gt;&lt;/p&gt;
 &lt;p&gt;国内访问GitHub速度较慢，克隆代码时的速度就更慢了，常常断开。因此，我们需要让我们的git走代理来加速克隆。&lt;/p&gt;
     
     </summary>
