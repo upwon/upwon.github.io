@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://upwon.github.io/"/>
-  <updated>2020-01-07T15:33:27.345Z</updated>
+  <updated>2020-01-07T15:43:29.099Z</updated>
   <id>https://upwon.github.io/</id>
   
   <author>
@@ -21,11 +21,11 @@
     <link href="https://upwon.github.io/2020/01/07/Vivado2018/"/>
     <id>https://upwon.github.io/2020/01/07/Vivado2018/</id>
     <published>2020-01-07T02:25:00.000Z</published>
-    <updated>2020-01-07T15:33:27.345Z</updated>
+    <updated>2020-01-07T15:43:29.099Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;&lt;img src=&quot;https://gitee.com/wang_wx/image_bed/raw/master/202001/20200107(14&quot; alt&gt;.png)&lt;/p&gt;
+      &lt;p&gt;&lt;img src=&quot;https://gitee.com/wang_wx/image_bed/raw/master/202001/20200107_14.png&quot; alt&gt;&lt;/p&gt;
 &lt;p&gt;本文介绍了如何安装Vivado2018💻&lt;/p&gt;
     
     </summary>
@@ -131,9 +131,9 @@
       <category term="Windows" scheme="https://upwon.github.io/categories/Windows/"/>
     
     
-      <category term="APP" scheme="https://upwon.github.io/tags/APP/"/>
-    
       <category term="教程" scheme="https://upwon.github.io/tags/%E6%95%99%E7%A8%8B/"/>
+    
+      <category term="APP" scheme="https://upwon.github.io/tags/APP/"/>
     
   </entry>
   
