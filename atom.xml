@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://upwon.github.io/"/>
-  <updated>2020-01-14T11:42:35.781Z</updated>
+  <updated>2020-01-14T11:50:05.637Z</updated>
   <id>https://upwon.github.io/</id>
   
   <author>
@@ -21,17 +21,11 @@
     <link href="https://upwon.github.io/2020/01/14/Kiwix/"/>
     <id>https://upwon.github.io/2020/01/14/Kiwix/</id>
     <published>2020-01-14T11:24:18.000Z</published>
-    <updated>2020-01-14T11:42:35.781Z</updated>
+    <updated>2020-01-14T11:50:05.637Z</updated>
     
     <summary type="html">
     
-      
-      
-        
-        
-          &lt;h1 id&gt;&lt;a href=&quot;#&quot; class=&quot;headerlink&quot; title&gt;&lt;/a&gt;&lt;img
-        
-      
+      &lt;h1 id&gt;&lt;a href=&quot;#&quot; class=&quot;headerlink&quot; title&gt;&lt;/a&gt;&lt;img src=&quot;https://gitee.com/wang_wx/image_bed/raw/master/picgo/wikipedia_mini_globe_handheld.jpg&quot; alt&gt;&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;Kiwix&lt;/strong&gt;让您能够随身携带完整的维基百科！无论您搭乘船只，还是身处偏僻的地区，抑或身陷囹圄，Kiwix都使您能够接触到全人类的知识。您不需要连接因特网，因为所有的资料都储存在您的电脑硬盘、U盘或者手机中！&lt;/p&gt;
     
     </summary>
     
@@ -40,9 +34,9 @@
       <category term="教程" scheme="https://upwon.github.io/categories/Windows/%E6%95%99%E7%A8%8B/"/>
     
     
-      <category term="教程" scheme="https://upwon.github.io/tags/%E6%95%99%E7%A8%8B/"/>
-    
       <category term="善用佳软" scheme="https://upwon.github.io/tags/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
+    
+      <category term="教程" scheme="https://upwon.github.io/tags/%E6%95%99%E7%A8%8B/"/>
     
   </entry>
   
@@ -161,9 +155,9 @@
       <category term="Windows" scheme="https://upwon.github.io/categories/Windows/"/>
     
     
-      <category term="APP" scheme="https://upwon.github.io/tags/APP/"/>
-    
       <category term="教程" scheme="https://upwon.github.io/tags/%E6%95%99%E7%A8%8B/"/>
+    
+      <category term="APP" scheme="https://upwon.github.io/tags/APP/"/>
     
   </entry>
   
