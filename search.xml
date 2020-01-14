@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[离线维基百科Kiwix😎]]></title>
+    <url>%2F2020%2F01%2F14%2FKiwix%2F</url>
+    <content type="text"><![CDATA[Kiwix让您能够随身携带完整的维基百科！无论您搭乘船只，还是身处偏僻的地区，抑或身陷囹圄，Kiwix都使您能够接触到全人类的知识。您不需要连接因特网，因为所有的资料都储存在您的电脑，优盘或者DVD中！ 什么是KiwixKiwix是一款离线网页浏览器。它是为维基百科离线化而设计的，但是也潜在地适合所有HTML类型的内容。Kiwix支持ZIM 格式，它是一种高度压缩、附加元数据的开放文档格式。 Kiwix是一款自由软件，这意味着您可以不受限制地复制、修改和分发它。 Kiwix大多数安装在没有能力使用宽带上网的（中、小）学校、大学以及图书馆。它要比使用因特网快很多，同时也可以为很多机构节省网络的带宽和阅读者的时间。 特点Kiwix非常容易使用。它有很多便于使用的特性： 全文搜索引擎 书签和笔记 HTTP服务器 导出PDF和HTML文档 100多种语言的界面 标签页导航 集成的内容管理与下载 更多特性… 下载及使用要想在本地成功使用上Kiwix ，需要下载适合您本地平台的阅读软件以及离线的维基百科离线数据包。 下载阅读软件关于阅读软件，Windows、mac OS 、Linux 、Android、iOS、Windows phone、Firefox扩展、Chrome扩展等各平台都有，均可在Kiwix的 网站 中下载， 并且这些软件也是开放源代码的，源代码地址为 https://github.com/kiwix 。 以Windows平台为例，在 http://www.kiwix.org/downloads/ 下载后，得到一个名称为 kiwix-desktop_windows_x64_2.0-rc4.zip的压缩包， 解压后运行kiwix-desktop.exe即可。 阅读软件界面如下图，由于没有打开任何离线数据包，因此还什么 也看不到。接下来需要下载离线数据包然后导入其中。 下载离线维基百科数据包在 https://wiki.kiwix.org/wiki/Content_in_all_languages/zh-cn 中，您可以下载各种语言的离线维基百科数据，包含各种类型的数据：历史、数学、计算机等等。您可以更新自己的需求下载不同语言、类别的离线数据包。在下载链接一栏中，一份数据包含两个链接，上方的链接您可以复制到通用的下载器中下载，推荐使用IDM、FDM等多线程下载工具。下方的链接为磁力链接，您可以在迅雷、Xdown等支持BitTorrent协议的下载器中进行下载。 下载完成后您可以得到一个后缀为zim的文件，ZIM 格式是一种高度压缩、附加元数据的开放文档格式。然后将该文件移动至英文路径下，在Kiwix的阅读软件中打开即可开始您的阅读之旅。 Kiwix 允许你在没有互联网连接的条件下，去享受很多种不同的离线文档，这是一个桌面应用程序。另外也有 一个叫做 kiwix-serve 的 HTTP 版本。若您感兴趣，可以去Kiwix的网站中了解。 End💻]]></content>
+      <categories>
+        <category>Windows</category>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>教程</tag>
+        <tag>善用佳软</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Vivado2018安装教程]]></title>
     <url>%2F2020%2F01%2F07%2FVivado2018%2F</url>
     <content type="text"><![CDATA[本文介绍了如何安装Vivado2018💻 软件下载：登录其官方网站,找到需要下载的文件； 官网链接如下： https://china.xilinx.com/support/download/index.html/content/xilinx/zh/downloadNav/vivado-design-tools.html 或者直接百度找网盘里面的资源；（也可以只用来下载License）; 下载下来就选择安装; 常见的百度网盘资源搜索网站如下，自己动手丰衣足食 云盘精灵 去转盘 咕咕云搜索 盘搜搜 闪电云 盘多多 小白盘 小不点搜索 史莱姆 百度网盘资源搜索引擎聚合 安装过程点击“xsetup”进行安装； 开始界面； 不更新，点击“Continue”； 点击“Next”； 勾选“I Agree”,点击“Next”； 勾选“Vivado HL System Edition ”,点击“Next”； Vivado HL Design Edition与 Vivado HL System Edition 对比： Vivado HL Design Edition includes the full complement of Vivado Design Suite tools for design, including C-based design with Vivado High-Level Synthesis, implementation, verification and device programming. Complete device support, cable drivers and Documentation Navigator are included. Users can optionally add Model Composer to this installation. 译文：Vivado HL Design Edition包括用于设计的Vivado Design Suite工具的完整补充，包括具有Vivado高级综合，实现，验证和设备编程的基于C的设计。 包括完整的设备支持，电缆驱动程序和Documentation Navigator。 用户可以选择将Model Composer添加到此安装中。 Vivado HL System Edition is a superset of Vivado HL Design Edition with the addition of System Generator for DSP. Complete device support, cable drivers and Documentation Navigator are included. Users can optionally add Model Composer to this installation. 译文：Vivado HL System Edition是Vivado HL Design Edition的超集，其中增加了System Generator for DSP。 包括完整的设备支持，电缆驱动程序和Documentation Navigator。 用户可以选择将Model Composer添加到此安装中。 选择默认设置；分别为安装工具，支持的芯片系列，安装选项； 选择安装路径； 创建安装目录；点击“Yes” 查看安装信息；点击“Install” 开始安装； 安装过程； 加载License，继续安装： 文件安装完成；这一步之后会弹出其他的窗口 安装成功； 中间安装过程中弹出其他窗口：一、安装WinPcap弹出安装WinPcap的窗口： 如果之前已经安装过WinPcap，会出现已经安装过的提示； 二、加载Licence点击“Load Licence”,文件名为“vivado.lic”； Licence安装成功； 二、为系统选择匹配的Matlab版本安装，点击OK； 此时整个安装过程结束； 可以寻找一些Demo来实践啦！ 本文来自实验室同学 @WanTwoWan ，在此表示感谢👏]]></content>
@@ -56,8 +69,8 @@
         <category>Windows</category>
       </categories>
       <tags>
-        <tag>教程</tag>
         <tag>APP</tag>
+        <tag>教程</tag>
       </tags>
   </entry>
   <entry>
