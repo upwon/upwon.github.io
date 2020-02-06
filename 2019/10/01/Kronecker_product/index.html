@@ -433,6 +433,7 @@ A \otimes B=P(B \otimes A) Q</script><p>如果<em>A</em>和<em>B</em>是方块�
 
           </div>
           
+    <div class="comments" id="gitalk-container"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -633,6 +634,26 @@ A \otimes B=P(B \otimes A) Q</script><p>如果<em>A</em>和<em>B</em>是方块�
   
 
   
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+<script>
+NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID: '7e047047ecee7317452b',
+      clientSecret: 'c60fbdf0eb19e7264e33ab780319e4d420a58fee',
+      repo: 'upwon.github.io',
+      owner: 'upwon',
+      admin: ['upwon'],
+      id: 'd425cee6ae728ae866418c313294eec4',
+        language: '',
+      distractionFreeMode: true
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+});
+</script>
 
 </body>
 </html>
