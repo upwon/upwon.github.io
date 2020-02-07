@@ -237,6 +237,15 @@
             </div>
             <div class="tag-cloud-tags">
               <a href="/tags/APP/" style="font-size: 12px; color: #ccc">APP</a> <a href="/tags/C/" style="font-size: 24px; color: #4f4f4f">C++</a> <a href="/tags/tips/" style="font-size: 12px; color: #ccc">tips</a> <a href="/tags/分享/" style="font-size: 18px; color: #8e8e8e">分享</a> <a href="/tags/善用佳软/" style="font-size: 12px; color: #ccc">善用佳软</a> <a href="/tags/教程/" style="font-size: 30px; color: #111">教程</a> <a href="/tags/数学/" style="font-size: 12px; color: #ccc">数学</a> <a href="/tags/笔记/" style="font-size: 12px; color: #ccc">笔记</a>
+
+           <script type="text/javascript">
+              var list = document.querySelectorAll('.tag-cloud-tags a');
+              Array.prototype.forEach.call(list, (item, index) => {
+              item.style.fontSize = Math.floor(Math.random() * 29 + 12) + 'px';//12 ~ 40
+             item.style.color = 'rgb(' + Math.floor(Math.random() * 201) + ', ' + Math.floor(Math.random() * 201) + ', ' + Math.floor(Math.random() * 201) + ')';// 0,0,0 -> 200,200,200
+            });
+          </script>
+
             </div>
           </div>
         
@@ -289,6 +298,8 @@
   </div>
 
   <aside class="sidebar">
+
+
     <div class="sidebar-inner">
 
       <ul class="sidebar-nav motion-element">
@@ -300,8 +311,13 @@
         </li>
       </ul>
 
+
+
+
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+
+
       </div>
       <!--/noindex-->
 
@@ -357,8 +373,10 @@
       </div>
 
     </div>
-  </aside>
-  <div id="sidebar-dimmer"></div>
+
+   <div id="sidebar-dimmer"></div>
+
+
 
 
       </div>
