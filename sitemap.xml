@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://upwon.github.io/2019/10/01/Kronecker_product/</loc>
+    
+    <lastmod>2020-02-07T06:34:34.051Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://upwon.github.io/2020/01/14/Kiwix/</loc>
     
     <lastmod>2020-02-07T04:43:58.671Z</lastmod>
@@ -33,13 +40,6 @@
     <loc>https://upwon.github.io/2019/03/01/hello-world/</loc>
     
     <lastmod>2019-11-17T07:01:08.741Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://upwon.github.io/2019/10/01/Kronecker_product/</loc>
-    
-    <lastmod>2019-11-17T07:00:35.179Z</lastmod>
     
   </url>
   
