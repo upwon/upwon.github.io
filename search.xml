@@ -9,8 +9,8 @@
         <category>教程</category>
       </categories>
       <tags>
-        <tag>教程</tag>
         <tag>善用佳软</tag>
+        <tag>教程</tag>
       </tags>
   </entry>
   <entry>
@@ -36,6 +36,17 @@
       <tags>
         <tag>教程</tag>
         <tag>分享</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[git clone使用代理加速🐌]]></title>
+    <url>%2F2019%2F11%2F14%2Fgit_clone_using_proxy_acceleration%20copy%2F</url>
+    <content type="text"><![CDATA[国内访问GitHub速度较慢，克隆代码时的速度就更慢了，常常断开。因此，我们需要让我们的git走代理来加速克隆。 主题自带样式写作说明生成引号的文本居中引用语法: —JunYuan主题自带样式note标签语法: 内容名称为：default/primary等下面名称 default（灰色） 灰色样式 primary(紫色)紫色样式 success（绿色）绿色样式 info(蓝色)蓝色样式 warning(橙色样式)橙色样式 danger（红色样式）红色样式 在主题配置文件_config.yml下可以修改note标签的风格，和开关其中的图标显示。修改后需要重新hexo s才会显示 note: Note tag style values:- simple bs-callout old alert style. Default.- modern bs-callout new (v2-v3) alert style.- flat flat callout style with background, like on Mozilla or StackOverflow.- disabled disable all CSS styles import of note tag. style: flat //选择你的样式simple/modern/flat icons: false //是否开启note图标显示。 border_radius: 3 Offset lighter of background in % for modern and flat styles (modern: -12 | 12; flat: -18 | 6).Offset also applied to label tag variables. This option can work with disabled note tag. light_bg_offset: 0图标显示: 不显示： note样式自行选择不再演示。 主题自带样式lable标签主题配置文件 中需要配置下，没有自行添加: Label tag.label: true语法: 主题自带样式的按钮语法: 内容 例如 百度点我下载 百度 点我下载 图标名称来自Font Awesome 主题自带样式的更多内容https://hexo.io/docs/tag-plugins.html 文中添加图标语法： 例如： 我想使用下载图标:&lt;/i&gt;,使用心性图标。我想使用下载图标:,使用心性图标。 自定义数字显示打开\themes\next\source\css_custom中的custom.styl文件添加代码: // 自定义的数字块span#inline-toc { display: inline-block; border-radius: 80% 100% 90% 20%; background-color: rgb(227, 242, 253); color: #555; padding: 0.05em 0.4em; margin: 2px 5px 2px 0px; line-height: 1.5;}语法:你的数字 样例： 测试：1558888测试：1558888 123456789#只对github.comgit config --global http.https://github.com.proxy socks5://127.0.0.1:1080#取消代理git config --global --unset http.https://github.com.proxy socks5://127.0.0.1:1080#全局-推荐只代理github即可，毕竟国内的gitee还是很快的git config --global http.https://github.com.proxy socks5://127.0.0.1:1080git config --global https.https://github.com.proxy socks5://127.0.0.1:1080 我使用的是socks5 协议，本地端口1080，因此有以上配置。 若协议、端口不同相应的更改配置命令即可。比如如果是http或https协议，本地端口是6666，则： 1234#全局git config --global http.proxy http://127.0.0.1:6666git config --global https.proxy https://127.0.0.1:6666 下载下载速度就快了很多很多，以前常常是几KB/s，真实受够了。 如果你没有使用自己的代理，那么你可以在浏览器中安装暴力猴或者油猴，然后安装GitHub 镜像加速下载脚本，就可以在网页中看见国内的加速链接了，复制下来去git clone就好啦。 参考 https://stackoverflow.com/questions/15227130/using-a-socks-proxy-with-git-for-the-http-transport https://gist.github.com/laispace/666dd7b27e9116faece6]]></content>
+      <categories>
+        <category>tips</category>
+      </categories>
+      <tags>
+        <tag>tips</tag>
       </tags>
   </entry>
   <entry>

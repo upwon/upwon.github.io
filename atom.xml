@@ -34,9 +34,9 @@
       <category term="教程" scheme="https://upwon.github.io/categories/Windows/%E6%95%99%E7%A8%8B/"/>
     
     
-      <category term="教程" scheme="https://upwon.github.io/tags/%E6%95%99%E7%A8%8B/"/>
-    
       <category term="善用佳软" scheme="https://upwon.github.io/tags/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
+    
+      <category term="教程" scheme="https://upwon.github.io/tags/%E6%95%99%E7%A8%8B/"/>
     
   </entry>
   
@@ -85,6 +85,32 @@
       <category term="教程" scheme="https://upwon.github.io/tags/%E6%95%99%E7%A8%8B/"/>
     
       <category term="分享" scheme="https://upwon.github.io/tags/%E5%88%86%E4%BA%AB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>git clone使用代理加速🐌</title>
+    <link href="https://upwon.github.io/2019/11/14/git_clone_using_proxy_acceleration%20copy/"/>
+    <id>https://upwon.github.io/2019/11/14/git_clone_using_proxy_acceleration copy/</id>
+    <published>2019-11-14T03:34:18.000Z</published>
+    <updated>2020-02-08T09:09:01.063Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;&lt;img src=&quot;https://gitee.com/wang_wx/image_bed/raw/master/2011911/mt-fuji-sea-of-clouds-sunrise-2345.jpg&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="tips" scheme="https://upwon.github.io/categories/tips/"/>
+    
+    
+      <category term="tips" scheme="https://upwon.github.io/tags/tips/"/>
     
   </entry>
   
