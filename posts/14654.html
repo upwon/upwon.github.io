@@ -51,13 +51,13 @@
   };
 </script>
 
-  <meta name="description" content="Rclone (rsync for cloud storage) 是一个命令行程序,用于同步文件和目录，常见的 Amazon Drive 、Google Drive 、OneDrive 、Dropbox 等等云存储都支持。本文将演示在 Windows 下将 OneDrive 挂载本地硬盘，并使用一款跨平台的 Rclone GUI 连接到云盘。">
+  <meta name="description" content="Rclone (rsync for cloud storage) 是一个命令行程序,用于同步文件和目录，支持常见的 Amazon Drive 、Google Drive 、OneDrive 、Dropbox 等云存储。本文将演示在 Windows 平台下将 OneDrive 挂载为本地硬盘，并使用跨平台的 Rclone GUI 连接到云盘。">
 <meta name="keywords" content="善用佳软,Windows,tips">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Windows平台下使用 Rclone 挂载 OneDrive 为本地硬盘">
 <meta property="og:url" content="https://upwon.github.io/posts/14654.html">
 <meta property="og:site_name" content="热夏的博客">
-<meta property="og:description" content="Rclone (rsync for cloud storage) 是一个命令行程序,用于同步文件和目录，常见的 Amazon Drive 、Google Drive 、OneDrive 、Dropbox 等等云存储都支持。本文将演示在 Windows 下将 OneDrive 挂载本地硬盘，并使用一款跨平台的 Rclone GUI 连接到云盘。">
+<meta property="og:description" content="Rclone (rsync for cloud storage) 是一个命令行程序,用于同步文件和目录，支持常见的 Amazon Drive 、Google Drive 、OneDrive 、Dropbox 等云存储。本文将演示在 Windows 平台下将 OneDrive 挂载为本地硬盘，并使用跨平台的 Rclone GUI 连接到云盘。">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://gitee.com/wang_wx/image_bed/raw/master/202002/68747470733a2f2f72636c6f6e652e6f72672f696d672f6c6f676f5f6f6e5f6c696768745f5f686f72697a6f6e74616c5f636f6c6f722e737667.svg">
 <meta property="og:image" content="https://gitee.com/wang_wx/image_bed/raw/master/202002/20200210092619.png">
@@ -79,10 +79,10 @@
 <meta property="og:image" content="https://gitee.com/wang_wx/image_bed/raw/master/202002/20200211123950.png">
 <meta property="og:image" content="https://gitee.com/wang_wx/image_bed/raw/master/202002/20200211144441.png">
 <meta property="og:image" content="https://gitee.com/wang_wx/image_bed/raw/master/202002/20200210135030.png">
-<meta property="og:updated_time" content="2020-02-11T11:12:54.482Z">
+<meta property="og:updated_time" content="2020-02-11T13:37:29.336Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Windows平台下使用 Rclone 挂载 OneDrive 为本地硬盘">
-<meta name="twitter:description" content="Rclone (rsync for cloud storage) 是一个命令行程序,用于同步文件和目录，常见的 Amazon Drive 、Google Drive 、OneDrive 、Dropbox 等等云存储都支持。本文将演示在 Windows 下将 OneDrive 挂载本地硬盘，并使用一款跨平台的 Rclone GUI 连接到云盘。">
+<meta name="twitter:description" content="Rclone (rsync for cloud storage) 是一个命令行程序,用于同步文件和目录，支持常见的 Amazon Drive 、Google Drive 、OneDrive 、Dropbox 等云存储。本文将演示在 Windows 平台下将 OneDrive 挂载为本地硬盘，并使用跨平台的 Rclone GUI 连接到云盘。">
 <meta name="twitter:image" content="https://gitee.com/wang_wx/image_bed/raw/master/202002/68747470733a2f2f72636c6f6e652e6f72672f696d672f6c6f676f5f6f6e5f6c696768745f5f686f72697a6f6e74616c5f636f6c6f722e737667.svg">
 
 <link rel="canonical" href="https://upwon.github.io/posts/14654.html">
@@ -264,7 +264,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2020-02-11 11:34:18 / 修改时间：19:12:54" itemprop="dateCreated datePublished" datetime="2020-02-11T11:34:18+08:00">2020-02-11</time>
+              <time title="创建时间：2020-02-11 11:34:18 / 修改时间：21:37:29" itemprop="dateCreated datePublished" datetime="2020-02-11T11:34:18+08:00">2020-02-11</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -317,7 +317,7 @@
 
       
         <p><img src="https://gitee.com/wang_wx/image_bed/raw/master/202002/68747470733a2f2f72636c6f6e652e6f72672f696d672f6c6f676f5f6f6e5f6c696768745f5f686f72697a6f6e74616c5f636f6c6f722e737667.svg" alt></p>
-<p>Rclone (rsync for cloud storage) 是一个命令行程序,用于同步文件和目录，常见的 Amazon Drive 、Google Drive 、OneDrive 、Dropbox 等等云存储都支持。本文将演示在 Windows 下将 OneDrive 挂载本地硬盘，并使用一款跨平台的 Rclone GUI 连接到云盘。</p>
+<p>Rclone (rsync for cloud storage) 是一个命令行程序,用于同步文件和目录，支持常见的 Amazon Drive 、Google Drive 、OneDrive 、Dropbox 等云存储。本文将演示在 Windows 平台下将 OneDrive 挂载为本地硬盘，并使用跨平台的 Rclone GUI 连接到云盘。</p>
 <a id="more"></a>
 <h3 id="1、rclone下载地址"><a href="#1、rclone下载地址" class="headerlink" title="1、rclone下载地址"></a><strong>1、rclone下载地址</strong></h3><p>首先下载适用于 Windows 的 rclone 👇</p>
 <p>官网下载：<a href="https://rclone.org/downloads/" target="_blank" rel="noopener">https://rclone.org/downloads/</a><br>        GitHub下载：<a href="https://github.com/ncw/rclone" target="_blank" rel="noopener">https://github.com/ncw/rclone</a>  </p>
