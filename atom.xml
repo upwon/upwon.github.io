@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://upwon.github.io/"/>
-  <updated>2020-02-11T07:29:25.471Z</updated>
+  <updated>2020-03-15T01:47:55.951Z</updated>
   <id>https://upwon.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>解决 tunneling socket could not be established, cause=getaddrinfo ENOTFOUND 8000 问题</title>
+    <link href="https://upwon.github.io/posts/1004.html"/>
+    <id>https://upwon.github.io/posts/1004.html</id>
+    <published>2020-03-15T01:30:17.000Z</published>
+    <updated>2020-03-15T01:47:55.951Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://gitee.com/wang_wx/image_bed/raw/master/2020/20200315093901.jpg&quot; alt&gt;&lt;/p&gt;
+&lt;p&gt;解决 RequestError: Error: tunneling socket could not be established, cause=getaddrinfo ENOTFOUND 8000 问题。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="技术" scheme="https://upwon.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+      <category term="教程" scheme="https://upwon.github.io/categories/%E6%8A%80%E6%9C%AF/%E6%95%99%E7%A8%8B/"/>
+    
+    
+      <category term="教程" scheme="https://upwon.github.io/tags/%E6%95%99%E7%A8%8B/"/>
+    
+      <category term="问题" scheme="https://upwon.github.io/tags/%E9%97%AE%E9%A2%98/"/>
+    
+  </entry>
   
   <entry>
     <title>Hello World</title>
@@ -60,9 +85,9 @@
     
       <category term="善用佳软" scheme="https://upwon.github.io/tags/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
     
-      <category term="tips" scheme="https://upwon.github.io/tags/tips/"/>
-    
       <category term="Windows" scheme="https://upwon.github.io/tags/Windows/"/>
+    
+      <category term="tips" scheme="https://upwon.github.io/tags/tips/"/>
     
   </entry>
   
