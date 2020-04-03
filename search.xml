@@ -5,7 +5,7 @@
     <url>%2Fposts%2F57547.html</url>
     <content type="text"><![CDATA[MathType 是一款功能很强大的数学公式编辑器,但是因为不明原因,有时在 word 中复制粘贴时会出现找不到MathPage.wll 文件的错误窗口提示，导致粘贴失效。 确保路径被office信任依次打开word-&gt;文件-&gt;选项-&gt;信任中心-&gt;信任中心设置-&gt;添加新位置 C:\Program Files\Microsoft Office\root\Office16\STARTUP 复制 MathPage.wll在 C:\Program Files (x86)\MathType\MathPage\64\MathPage.wll 路径下找到 MathPage.wll ，复制到 C:\Program Files\Microsoft Office\root\Office16 文件夹中 复制 MathType Commands 2016.dotm在 C:\Program Files (x86)\MathType\Office Support\64 路径下复制 MathType Commands 2016.dotm 文件到 C:\Program Files\Microsoft Office\root\Office16\STARTUP 打开word ，一切恢复正常。😁 一定要爱着点什么，恰似草木对光阴的钟情。 ——《人间失格》]]></content>
       <categories>
-        <category>-[教程]</category>
+        <category>教程</category>
       </categories>
       <tags>
         <tag>教程</tag>
@@ -110,8 +110,8 @@
       </categories>
       <tags>
         <tag>教程</tag>
-        <tag>分享</tag>
         <tag>Windows</tag>
+        <tag>分享</tag>
         <tag>Visual Studio</tag>
         <tag>激活码</tag>
       </tags>
