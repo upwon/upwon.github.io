@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://upwon.github.io/"/>
-  <updated>2020-04-03T02:29:55.108Z</updated>
+  <updated>2020-04-18T15:18:38.188Z</updated>
   <id>https://upwon.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>为博客添加樱花飘落的效果</title>
+    <link href="https://upwon.github.io/posts/64617.html"/>
+    <id>https://upwon.github.io/posts/64617.html</id>
+    <published>2020-04-18T15:10:17.000Z</published>
+    <updated>2020-04-18T15:18:38.188Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://gitee.com/wang_wx/image_bed/raw/master/2020/20200418225603.gif&quot; alt&gt;&lt;/p&gt;
+&lt;p&gt;偶然看见别人博客中樱花飘落的效果，感觉很棒，于是我也添加给博客加上了樱花 &lt;img src=&quot;https://gitee.com/wang_wx/image_bed/raw/master/2020/20200418224427.png&quot; alt&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="教程" scheme="https://upwon.github.io/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    
+      <category term="教程" scheme="https://upwon.github.io/tags/%E6%95%99%E7%A8%8B/"/>
+    
+      <category term="博客" scheme="https://upwon.github.io/tags/%E5%8D%9A%E5%AE%A2/"/>
+    
+  </entry>
   
   <entry>
     <title>解决 word 中粘贴出现找不到 MathPage.wll 文件的错误</title>
@@ -101,9 +124,9 @@
     
     </summary>
     
-      <category term="技术" scheme="https://upwon.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
-    
       <category term="教程" scheme="https://upwon.github.io/categories/%E6%95%99%E7%A8%8B/"/>
+    
+      <category term="技术" scheme="https://upwon.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
       <category term="教程" scheme="https://upwon.github.io/tags/%E6%95%99%E7%A8%8B/"/>
@@ -126,9 +149,9 @@
     
     </summary>
     
-      <category term="技术" scheme="https://upwon.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
-    
       <category term="教程" scheme="https://upwon.github.io/categories/%E6%95%99%E7%A8%8B/"/>
+    
+      <category term="技术" scheme="https://upwon.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
       <category term="善用佳软" scheme="https://upwon.github.io/tags/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
@@ -279,9 +302,9 @@
     
     </summary>
     
-      <category term="技术" scheme="https://upwon.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
-    
       <category term="教程" scheme="https://upwon.github.io/categories/%E6%95%99%E7%A8%8B/"/>
+    
+      <category term="技术" scheme="https://upwon.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
       <category term="善用佳软" scheme="https://upwon.github.io/tags/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
