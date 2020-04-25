@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://upwon.github.io/"/>
-  <updated>2020-04-22T00:39:28.605Z</updated>
+  <updated>2020-04-25T01:58:13.098Z</updated>
   <id>https://upwon.github.io/</id>
   
   <author>
@@ -17,11 +17,38 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>CLion的安装、激活、汉化及编译器配置</title>
+    <link href="https://upwon.github.io/posts/59155.html"/>
+    <id>https://upwon.github.io/posts/59155.html</id>
+    <published>2020-04-24T13:46:34.000Z</published>
+    <updated>2020-04-25T01:58:13.098Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://gitee.com/wang_wx/image_bed/raw/master/2020/20200424220252.png&quot; alt&gt;&lt;/p&gt;
+&lt;p&gt;CLion 是 JetBrains 推出的全新的C/C++ 跨平台集成开发环境。本文记录关于 CLion 的安装、激活、汉化、编译器配置等操作。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="教程" scheme="https://upwon.github.io/categories/%E6%95%99%E7%A8%8B/"/>
+    
+      <category term="善用佳软" scheme="https://upwon.github.io/categories/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
+    
+    
+      <category term="Windows" scheme="https://upwon.github.io/tags/Windows/"/>
+    
+      <category term="教程" scheme="https://upwon.github.io/tags/%E6%95%99%E7%A8%8B/"/>
+    
+      <category term="善用佳软" scheme="https://upwon.github.io/tags/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
+    
+  </entry>
+  
+  <entry>
     <title>为博客添加樱花飘落的效果</title>
     <link href="https://upwon.github.io/posts/64617.html"/>
     <id>https://upwon.github.io/posts/64617.html</id>
     <published>2020-04-18T15:10:17.000Z</published>
-    <updated>2020-04-22T00:39:28.605Z</updated>
+    <updated>2020-04-24T13:51:55.730Z</updated>
     
     <summary type="html">
     
@@ -46,7 +73,7 @@
     <link href="https://upwon.github.io/posts/57547.html"/>
     <id>https://upwon.github.io/posts/57547.html</id>
     <published>2020-04-03T01:26:37.000Z</published>
-    <updated>2020-04-19T10:39:55.860Z</updated>
+    <updated>2020-04-25T01:35:10.652Z</updated>
     
     <summary type="html">
     
@@ -81,9 +108,9 @@
       <category term="教程" scheme="https://upwon.github.io/categories/%E6%95%99%E7%A8%8B/"/>
     
     
-      <category term="教程" scheme="https://upwon.github.io/tags/%E6%95%99%E7%A8%8B/"/>
-    
       <category term="Windows" scheme="https://upwon.github.io/tags/Windows/"/>
+    
+      <category term="教程" scheme="https://upwon.github.io/tags/%E6%95%99%E7%A8%8B/"/>
     
   </entry>
   
@@ -104,11 +131,11 @@
       <category term="教程" scheme="https://upwon.github.io/categories/%E6%95%99%E7%A8%8B/"/>
     
     
-      <category term="善用佳软" scheme="https://upwon.github.io/tags/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
+      <category term="Windows" scheme="https://upwon.github.io/tags/Windows/"/>
     
       <category term="教程" scheme="https://upwon.github.io/tags/%E6%95%99%E7%A8%8B/"/>
     
-      <category term="Windows" scheme="https://upwon.github.io/tags/Windows/"/>
+      <category term="善用佳软" scheme="https://upwon.github.io/tags/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
     
   </entry>
   
@@ -156,9 +183,9 @@
       <category term="技术" scheme="https://upwon.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
-      <category term="善用佳软" scheme="https://upwon.github.io/tags/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
-    
       <category term="Windows" scheme="https://upwon.github.io/tags/Windows/"/>
+    
+      <category term="善用佳软" scheme="https://upwon.github.io/tags/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
     
       <category term="tips" scheme="https://upwon.github.io/tags/tips/"/>
     
@@ -177,14 +204,14 @@
     
     </summary>
     
-      <category term="善用佳软" scheme="https://upwon.github.io/categories/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
-    
       <category term="教程" scheme="https://upwon.github.io/categories/%E6%95%99%E7%A8%8B/"/>
     
+      <category term="善用佳软" scheme="https://upwon.github.io/categories/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
     
-      <category term="善用佳软" scheme="https://upwon.github.io/tags/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
     
       <category term="教程" scheme="https://upwon.github.io/tags/%E6%95%99%E7%A8%8B/"/>
+    
+      <category term="善用佳软" scheme="https://upwon.github.io/tags/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
     
   </entry>
   
@@ -230,11 +257,11 @@
       <category term="技术" scheme="https://upwon.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
+      <category term="Windows" scheme="https://upwon.github.io/tags/Windows/"/>
+    
       <category term="教程" scheme="https://upwon.github.io/tags/%E6%95%99%E7%A8%8B/"/>
     
       <category term="分享" scheme="https://upwon.github.io/tags/%E5%88%86%E4%BA%AB/"/>
-    
-      <category term="Windows" scheme="https://upwon.github.io/tags/Windows/"/>
     
       <category term="Visual Studio" scheme="https://upwon.github.io/tags/Visual-Studio/"/>
     
@@ -309,11 +336,11 @@
       <category term="技术" scheme="https://upwon.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
-      <category term="善用佳软" scheme="https://upwon.github.io/tags/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
+      <category term="Windows" scheme="https://upwon.github.io/tags/Windows/"/>
     
       <category term="教程" scheme="https://upwon.github.io/tags/%E6%95%99%E7%A8%8B/"/>
     
-      <category term="Windows" scheme="https://upwon.github.io/tags/Windows/"/>
+      <category term="善用佳软" scheme="https://upwon.github.io/tags/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
     
   </entry>
   
