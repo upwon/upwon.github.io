@@ -57,11 +57,11 @@
     
     </summary>
     
+      <category term="编程" scheme="https://upwon.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
+    
       <category term="教程" scheme="https://upwon.github.io/categories/%E6%95%99%E7%A8%8B/"/>
     
       <category term="善用佳软" scheme="https://upwon.github.io/categories/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
-    
-      <category term="编程" scheme="https://upwon.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
     
     
       <category term="Windows" scheme="https://upwon.github.io/tags/Windows/"/>
@@ -198,11 +198,11 @@
     <link href="https://upwon.github.io/posts/14654.html"/>
     <id>https://upwon.github.io/posts/14654.html</id>
     <published>2020-02-11T03:34:18.000Z</published>
-    <updated>2020-05-02T14:26:59.790Z</updated>
+    <updated>2020-05-02T15:06:10.975Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;&lt;img src=&quot;https://gitee.com/wang_wx/image_bed/raw/master/202002/2.png&quot; alt&gt;&lt;/p&gt;
+      &lt;p&gt;&lt;img src=&quot;https://gitee.com/wang_wx/image_bed/raw/master/2020/20200502230457.png&quot; alt&gt;&lt;/p&gt;
 &lt;p&gt;Rclone (rsync for cloud storage) 是一个命令行程序,用于同步文件和目录，支持常见的 Amazon Drive 、Google Drive 、OneDrive 、Dropbox 等云存储。本文将演示在 Windows 平台下将 OneDrive 挂载为本地硬盘，并使用跨平台的 Rclone GUI 连接到云盘。&lt;/p&gt;
     
     </summary>
