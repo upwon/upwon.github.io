@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://upwon.github.io/"/>
-  <updated>2020-05-04T06:51:18.817Z</updated>
+  <updated>2020-05-06T08:09:56.629Z</updated>
   <id>https://upwon.github.io/</id>
   
   <author>
@@ -15,6 +15,43 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>hexo博客Next主题写作</title>
+    <link href="https://upwon.github.io/posts/35048.html"/>
+    <id>https://upwon.github.io/posts/35048.html</id>
+    <published>2020-05-04T10:09:03.000Z</published>
+    <updated>2020-05-06T08:09:56.629Z</updated>
+    
+    <summary type="html">
+    
+      &lt;div class=&quot;note [modern]&quot;&gt;
+            &lt;p&gt;20200506新增&lt;/p&gt;
+          &lt;/div&gt;
+&lt;p&gt;摘要&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="教程" scheme="https://upwon.github.io/categories/%E6%95%99%E7%A8%8B/"/>
+    
+      <category term="善用佳软" scheme="https://upwon.github.io/categories/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
+    
+      <category term="数学" scheme="https://upwon.github.io/categories/%E6%95%B0%E5%AD%A6/"/>
+    
+      <category term="技术" scheme="https://upwon.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+      <category term="生活" scheme="https://upwon.github.io/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    
+      <category term="Windows" scheme="https://upwon.github.io/tags/Windows/"/>
+    
+      <category term="教程" scheme="https://upwon.github.io/tags/%E6%95%99%E7%A8%8B/"/>
+    
+      <category term="善用佳软" scheme="https://upwon.github.io/tags/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
+    
+      <category term="数学" scheme="https://upwon.github.io/tags/%E6%95%B0%E5%AD%A6/"/>
+    
+  </entry>
   
   <entry>
     <title>&lt;span style=&quot;color:#5bdaed; &quot;&gt;使用SciHub下载论文&lt;/span&gt;</title>
@@ -53,7 +90,7 @@
     <link href="https://upwon.github.io/posts/20469.html"/>
     <id>https://upwon.github.io/posts/20469.html</id>
     <published>2020-04-29T14:03:21.000Z</published>
-    <updated>2020-04-30T01:05:22.936Z</updated>
+    <updated>2020-05-06T08:03:09.393Z</updated>
     
     <summary type="html">
     
@@ -89,9 +126,9 @@
     
     </summary>
     
-      <category term="教程" scheme="https://upwon.github.io/categories/%E6%95%99%E7%A8%8B/"/>
-    
       <category term="编程" scheme="https://upwon.github.io/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+      <category term="教程" scheme="https://upwon.github.io/categories/%E6%95%99%E7%A8%8B/"/>
     
       <category term="善用佳软" scheme="https://upwon.github.io/categories/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
     
