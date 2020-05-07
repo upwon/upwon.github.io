@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://lifeee.xyz/"/>
-  <updated>2020-05-07T02:41:21.233Z</updated>
+  <updated>2020-05-07T02:59:49.389Z</updated>
   <id>https://lifeee.xyz/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://lifeee.xyz/posts/49394.html"/>
     <id>https://lifeee.xyz/posts/49394.html</id>
     <published>2020-05-07T02:23:11.000Z</published>
-    <updated>2020-05-07T02:41:21.233Z</updated>
+    <updated>2020-05-07T02:59:49.389Z</updated>
     
     <summary type="html">
     
@@ -29,6 +29,7 @@
 &lt;p&gt;以下域名均跳转至 &lt;a href=&quot;https://lifeee.xyz/&quot;&gt;https://lifeee.xyz/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://summerblog.netlify.app/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;summerblog.netlify.app&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://upwon.github.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://upwon.github.io/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/wang_wx/image_bed/raw/master/2020/5 - 7c9377a88226cffcf55584d4b0014a90f703eab5.jpg&quot; alt&gt;&lt;/p&gt;
     
     </summary>
     
@@ -173,9 +174,9 @@
     
     </summary>
     
-      <category term="教程" scheme="https://lifeee.xyz/categories/%E6%95%99%E7%A8%8B/"/>
-    
       <category term="编程" scheme="https://lifeee.xyz/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+      <category term="教程" scheme="https://lifeee.xyz/categories/%E6%95%99%E7%A8%8B/"/>
     
       <category term="善用佳软" scheme="https://lifeee.xyz/categories/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
     
