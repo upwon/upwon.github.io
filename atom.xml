@@ -5,9 +5,9 @@
   
   <link href="/atom.xml" rel="self"/>
   
-  <link href="https://lifeee.xyz/"/>
+  <link href="https://www.lifeee.top/"/>
   <updated>2020-05-07T05:59:13.945Z</updated>
-  <id>https://lifeee.xyz/</id>
+  <id>https://www.lifeee.top/</id>
   
   <author>
     <name>热夏</name>
@@ -18,15 +18,15 @@
   
   <entry>
     <title>博客更改域名</title>
-    <link href="https://lifeee.xyz/posts/49394.html"/>
-    <id>https://lifeee.xyz/posts/49394.html</id>
+    <link href="https://www.lifeee.top/posts/49394.html"/>
+    <id>https://www.lifeee.top/posts/49394.html</id>
     <published>2020-05-07T02:23:11.000Z</published>
     <updated>2020-05-07T05:59:13.945Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;本博客今日起更改域名为 &lt;a href=&quot;https://www.lifeee.top/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;www.lifeee.top&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;以下域名均跳转至 &lt;a href=&quot;https://www.lifeee.top/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;www.lifeee.top&lt;/a&gt;&lt;/p&gt;
+      &lt;p&gt;本博客今日起更改域名为 &lt;a href=&quot;https://www.lifeee.top/&quot;&gt;www.lifeee.top&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;以下域名均跳转至 &lt;a href=&quot;https://www.lifeee.top/&quot;&gt;www.lifeee.top&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://upwon.github.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://upwon.github.io/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://summerblog.netlify.app/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;summerblog.netlify.app&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;只是更新域名后网站的访问人数清零。&lt;/p&gt;
@@ -34,31 +34,31 @@
     
     </summary>
     
-      <category term="教程" scheme="https://lifeee.xyz/categories/%E6%95%99%E7%A8%8B/"/>
+      <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
     
-      <category term="数学" scheme="https://lifeee.xyz/categories/%E6%95%B0%E5%AD%A6/"/>
+      <category term="善用佳软" scheme="https://www.lifeee.top/categories/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
     
-      <category term="善用佳软" scheme="https://lifeee.xyz/categories/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
+      <category term="数学" scheme="https://www.lifeee.top/categories/%E6%95%B0%E5%AD%A6/"/>
     
-      <category term="技术" scheme="https://lifeee.xyz/categories/%E6%8A%80%E6%9C%AF/"/>
+      <category term="技术" scheme="https://www.lifeee.top/categories/%E6%8A%80%E6%9C%AF/"/>
     
-      <category term="生活" scheme="https://lifeee.xyz/categories/%E7%94%9F%E6%B4%BB/"/>
+      <category term="生活" scheme="https://www.lifeee.top/categories/%E7%94%9F%E6%B4%BB/"/>
     
     
-      <category term="Windows" scheme="https://lifeee.xyz/tags/Windows/"/>
+      <category term="Windows" scheme="https://www.lifeee.top/tags/Windows/"/>
     
-      <category term="教程" scheme="https://lifeee.xyz/tags/%E6%95%99%E7%A8%8B/"/>
+      <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
     
-      <category term="善用佳软" scheme="https://lifeee.xyz/tags/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
+      <category term="善用佳软" scheme="https://www.lifeee.top/tags/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
     
-      <category term="数学" scheme="https://lifeee.xyz/tags/%E6%95%B0%E5%AD%A6/"/>
+      <category term="数学" scheme="https://www.lifeee.top/tags/%E6%95%B0%E5%AD%A6/"/>
     
   </entry>
   
   <entry>
     <title>npm install 报错node-sass@4.13.0 postinstall:`node scripts/build.js` Failed at the node-sass@4.13.0</title>
-    <link href="https://lifeee.xyz/posts/17155.html"/>
-    <id>https://lifeee.xyz/posts/17155.html</id>
+    <link href="https://www.lifeee.top/posts/17155.html"/>
+    <id>https://www.lifeee.top/posts/17155.html</id>
     <published>2020-05-06T14:17:04.000Z</published>
     <updated>2020-05-06T15:21:37.701Z</updated>
     
@@ -68,19 +68,19 @@
     
     </summary>
     
-      <category term="教程" scheme="https://lifeee.xyz/categories/%E6%95%99%E7%A8%8B/"/>
+      <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
     
-      <category term="技术" scheme="https://lifeee.xyz/categories/%E6%8A%80%E6%9C%AF/"/>
+      <category term="技术" scheme="https://www.lifeee.top/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
-      <category term="问题" scheme="https://lifeee.xyz/tags/%E9%97%AE%E9%A2%98/"/>
+      <category term="问题" scheme="https://www.lifeee.top/tags/%E9%97%AE%E9%A2%98/"/>
     
   </entry>
   
   <entry>
     <title>Hexo博客Markdown写作</title>
-    <link href="https://lifeee.xyz/posts/35048.html"/>
-    <id>https://lifeee.xyz/posts/35048.html</id>
+    <link href="https://www.lifeee.top/posts/35048.html"/>
+    <id>https://www.lifeee.top/posts/35048.html</id>
     <published>2020-05-04T10:09:03.000Z</published>
     <updated>2020-05-07T01:26:52.939Z</updated>
     
@@ -91,21 +91,21 @@
     
     </summary>
     
-      <category term="教程" scheme="https://lifeee.xyz/categories/%E6%95%99%E7%A8%8B/"/>
+      <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
     
-      <category term="善用佳软" scheme="https://lifeee.xyz/categories/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
+      <category term="善用佳软" scheme="https://www.lifeee.top/categories/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
     
     
-      <category term="教程" scheme="https://lifeee.xyz/tags/%E6%95%99%E7%A8%8B/"/>
+      <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
     
-      <category term="技巧" scheme="https://lifeee.xyz/tags/%E6%8A%80%E5%B7%A7/"/>
+      <category term="技巧" scheme="https://www.lifeee.top/tags/%E6%8A%80%E5%B7%A7/"/>
     
   </entry>
   
   <entry>
     <title>&lt;span style=&quot;color:#5bdaed; &quot;&gt;使用SciHub下载论文&lt;/span&gt;</title>
-    <link href="https://lifeee.xyz/posts/30773.html"/>
-    <id>https://lifeee.xyz/posts/30773.html</id>
+    <link href="https://www.lifeee.top/posts/30773.html"/>
+    <id>https://www.lifeee.top/posts/30773.html</id>
     <published>2020-05-04T01:57:35.000Z</published>
     <updated>2020-05-06T10:55:01.491Z</updated>
     
@@ -123,21 +123,21 @@
     
     </summary>
     
-      <category term="教程" scheme="https://lifeee.xyz/categories/%E6%95%99%E7%A8%8B/"/>
+      <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
     
-      <category term="善用佳软" scheme="https://lifeee.xyz/categories/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
+      <category term="善用佳软" scheme="https://www.lifeee.top/categories/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
     
     
-      <category term="教程" scheme="https://lifeee.xyz/tags/%E6%95%99%E7%A8%8B/"/>
+      <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
     
-      <category term="善用佳软" scheme="https://lifeee.xyz/tags/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
+      <category term="善用佳软" scheme="https://www.lifeee.top/tags/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
     
   </entry>
   
   <entry>
     <title>那些年我订阅的Telegram频道</title>
-    <link href="https://lifeee.xyz/posts/20469.html"/>
-    <id>https://lifeee.xyz/posts/20469.html</id>
+    <link href="https://www.lifeee.top/posts/20469.html"/>
+    <id>https://www.lifeee.top/posts/20469.html</id>
     <published>2020-04-29T14:03:21.000Z</published>
     <updated>2020-05-06T08:03:09.393Z</updated>
     
@@ -148,23 +148,23 @@
     
     </summary>
     
-      <category term="教程" scheme="https://lifeee.xyz/categories/%E6%95%99%E7%A8%8B/"/>
+      <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
     
-      <category term="善用佳软" scheme="https://lifeee.xyz/categories/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
+      <category term="善用佳软" scheme="https://www.lifeee.top/categories/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
     
     
-      <category term="善用佳软" scheme="https://lifeee.xyz/tags/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
+      <category term="善用佳软" scheme="https://www.lifeee.top/tags/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
     
-      <category term="推荐" scheme="https://lifeee.xyz/tags/%E6%8E%A8%E8%8D%90/"/>
+      <category term="推荐" scheme="https://www.lifeee.top/tags/%E6%8E%A8%E8%8D%90/"/>
     
-      <category term="那些年系列" scheme="https://lifeee.xyz/tags/%E9%82%A3%E4%BA%9B%E5%B9%B4%E7%B3%BB%E5%88%97/"/>
+      <category term="那些年系列" scheme="https://www.lifeee.top/tags/%E9%82%A3%E4%BA%9B%E5%B9%B4%E7%B3%BB%E5%88%97/"/>
     
   </entry>
   
   <entry>
     <title>CLion的安装、激活、汉化及编译器配置</title>
-    <link href="https://lifeee.xyz/posts/59155.html"/>
-    <id>https://lifeee.xyz/posts/59155.html</id>
+    <link href="https://www.lifeee.top/posts/59155.html"/>
+    <id>https://www.lifeee.top/posts/59155.html</id>
     <published>2020-04-24T13:46:34.000Z</published>
     <updated>2020-04-25T02:07:07.556Z</updated>
     
@@ -175,25 +175,25 @@
     
     </summary>
     
-      <category term="编程" scheme="https://lifeee.xyz/categories/%E7%BC%96%E7%A8%8B/"/>
+      <category term="编程" scheme="https://www.lifeee.top/categories/%E7%BC%96%E7%A8%8B/"/>
     
-      <category term="教程" scheme="https://lifeee.xyz/categories/%E6%95%99%E7%A8%8B/"/>
+      <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
     
-      <category term="善用佳软" scheme="https://lifeee.xyz/categories/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
+      <category term="善用佳软" scheme="https://www.lifeee.top/categories/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
     
     
-      <category term="Windows" scheme="https://lifeee.xyz/tags/Windows/"/>
+      <category term="Windows" scheme="https://www.lifeee.top/tags/Windows/"/>
     
-      <category term="教程" scheme="https://lifeee.xyz/tags/%E6%95%99%E7%A8%8B/"/>
+      <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
     
-      <category term="善用佳软" scheme="https://lifeee.xyz/tags/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
+      <category term="善用佳软" scheme="https://www.lifeee.top/tags/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
     
   </entry>
   
   <entry>
     <title>为博客添加樱花飘落的效果</title>
-    <link href="https://lifeee.xyz/posts/64617.html"/>
-    <id>https://lifeee.xyz/posts/64617.html</id>
+    <link href="https://www.lifeee.top/posts/64617.html"/>
+    <id>https://www.lifeee.top/posts/64617.html</id>
     <published>2020-04-18T15:10:17.000Z</published>
     <updated>2020-05-04T02:12:56.228Z</updated>
     
@@ -206,19 +206,19 @@
     
     </summary>
     
-      <category term="教程" scheme="https://lifeee.xyz/categories/%E6%95%99%E7%A8%8B/"/>
+      <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
     
     
-      <category term="教程" scheme="https://lifeee.xyz/tags/%E6%95%99%E7%A8%8B/"/>
+      <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
     
-      <category term="博客" scheme="https://lifeee.xyz/tags/%E5%8D%9A%E5%AE%A2/"/>
+      <category term="博客" scheme="https://www.lifeee.top/tags/%E5%8D%9A%E5%AE%A2/"/>
     
   </entry>
   
   <entry>
     <title>解决 word 中粘贴出现找不到 MathPage.wll 文件的错误</title>
-    <link href="https://lifeee.xyz/posts/57547.html"/>
-    <id>https://lifeee.xyz/posts/57547.html</id>
+    <link href="https://www.lifeee.top/posts/57547.html"/>
+    <id>https://www.lifeee.top/posts/57547.html</id>
     <published>2020-04-03T01:26:37.000Z</published>
     <updated>2020-04-25T01:35:10.652Z</updated>
     
@@ -229,19 +229,19 @@
     
     </summary>
     
-      <category term="教程" scheme="https://lifeee.xyz/categories/%E6%95%99%E7%A8%8B/"/>
+      <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
     
     
-      <category term="教程" scheme="https://lifeee.xyz/tags/%E6%95%99%E7%A8%8B/"/>
+      <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
     
-      <category term="问题" scheme="https://lifeee.xyz/tags/%E9%97%AE%E9%A2%98/"/>
+      <category term="问题" scheme="https://www.lifeee.top/tags/%E9%97%AE%E9%A2%98/"/>
     
   </entry>
   
   <entry>
     <title>Windows快捷键不完全指南</title>
-    <link href="https://lifeee.xyz/posts/56966.html"/>
-    <id>https://lifeee.xyz/posts/56966.html</id>
+    <link href="https://www.lifeee.top/posts/56966.html"/>
+    <id>https://www.lifeee.top/posts/56966.html</id>
     <published>2020-04-02T02:10:20.000Z</published>
     <updated>2020-04-19T10:39:15.212Z</updated>
     
@@ -252,19 +252,19 @@
     
     </summary>
     
-      <category term="教程" scheme="https://lifeee.xyz/categories/%E6%95%99%E7%A8%8B/"/>
+      <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
     
     
-      <category term="Windows" scheme="https://lifeee.xyz/tags/Windows/"/>
+      <category term="Windows" scheme="https://www.lifeee.top/tags/Windows/"/>
     
-      <category term="教程" scheme="https://lifeee.xyz/tags/%E6%95%99%E7%A8%8B/"/>
+      <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
     
   </entry>
   
   <entry>
     <title>Visual Studio 2019配置qt开发环境</title>
-    <link href="https://lifeee.xyz/posts/20536.html"/>
-    <id>https://lifeee.xyz/posts/20536.html</id>
+    <link href="https://www.lifeee.top/posts/20536.html"/>
+    <id>https://www.lifeee.top/posts/20536.html</id>
     <published>2020-03-17T15:14:18.000Z</published>
     <updated>2020-04-19T10:39:35.444Z</updated>
     
@@ -275,21 +275,21 @@
     
     </summary>
     
-      <category term="教程" scheme="https://lifeee.xyz/categories/%E6%95%99%E7%A8%8B/"/>
+      <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
     
     
-      <category term="Windows" scheme="https://lifeee.xyz/tags/Windows/"/>
+      <category term="Windows" scheme="https://www.lifeee.top/tags/Windows/"/>
     
-      <category term="教程" scheme="https://lifeee.xyz/tags/%E6%95%99%E7%A8%8B/"/>
+      <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
     
-      <category term="善用佳软" scheme="https://lifeee.xyz/tags/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
+      <category term="善用佳软" scheme="https://www.lifeee.top/tags/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
     
   </entry>
   
   <entry>
     <title>解决 tunneling socket could not be established, cause=getaddrinfo ENOTFOUND 8000 问题</title>
-    <link href="https://lifeee.xyz/posts/1004.html"/>
-    <id>https://lifeee.xyz/posts/1004.html</id>
+    <link href="https://www.lifeee.top/posts/1004.html"/>
+    <id>https://www.lifeee.top/posts/1004.html</id>
     <published>2020-03-15T01:30:17.000Z</published>
     <updated>2020-04-19T10:28:24.182Z</updated>
     
@@ -300,21 +300,21 @@
     
     </summary>
     
-      <category term="教程" scheme="https://lifeee.xyz/categories/%E6%95%99%E7%A8%8B/"/>
+      <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
     
-      <category term="技术" scheme="https://lifeee.xyz/categories/%E6%8A%80%E6%9C%AF/"/>
+      <category term="技术" scheme="https://www.lifeee.top/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
-      <category term="教程" scheme="https://lifeee.xyz/tags/%E6%95%99%E7%A8%8B/"/>
+      <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
     
-      <category term="问题" scheme="https://lifeee.xyz/tags/%E9%97%AE%E9%A2%98/"/>
+      <category term="问题" scheme="https://www.lifeee.top/tags/%E9%97%AE%E9%A2%98/"/>
     
   </entry>
   
   <entry>
     <title>Windows平台下使用 Rclone 挂载 OneDrive 为本地硬盘</title>
-    <link href="https://lifeee.xyz/posts/14654.html"/>
-    <id>https://lifeee.xyz/posts/14654.html</id>
+    <link href="https://www.lifeee.top/posts/14654.html"/>
+    <id>https://www.lifeee.top/posts/14654.html</id>
     <published>2020-02-11T03:34:18.000Z</published>
     <updated>2020-05-02T15:06:10.975Z</updated>
     
@@ -325,23 +325,23 @@
     
     </summary>
     
-      <category term="教程" scheme="https://lifeee.xyz/categories/%E6%95%99%E7%A8%8B/"/>
+      <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
     
-      <category term="技术" scheme="https://lifeee.xyz/categories/%E6%8A%80%E6%9C%AF/"/>
+      <category term="技术" scheme="https://www.lifeee.top/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
-      <category term="Windows" scheme="https://lifeee.xyz/tags/Windows/"/>
+      <category term="Windows" scheme="https://www.lifeee.top/tags/Windows/"/>
     
-      <category term="善用佳软" scheme="https://lifeee.xyz/tags/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
+      <category term="善用佳软" scheme="https://www.lifeee.top/tags/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
     
-      <category term="tips" scheme="https://lifeee.xyz/tags/tips/"/>
+      <category term="tips" scheme="https://www.lifeee.top/tags/tips/"/>
     
   </entry>
   
   <entry>
     <title>离线维基百科Kiwix😎</title>
-    <link href="https://lifeee.xyz/posts/93e477bd.html"/>
-    <id>https://lifeee.xyz/posts/93e477bd.html</id>
+    <link href="https://www.lifeee.top/posts/93e477bd.html"/>
+    <id>https://www.lifeee.top/posts/93e477bd.html</id>
     <published>2020-01-14T11:24:18.000Z</published>
     <updated>2020-02-11T10:08:02.623Z</updated>
     
@@ -351,21 +351,21 @@
     
     </summary>
     
-      <category term="教程" scheme="https://lifeee.xyz/categories/%E6%95%99%E7%A8%8B/"/>
+      <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
     
-      <category term="善用佳软" scheme="https://lifeee.xyz/categories/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
+      <category term="善用佳软" scheme="https://www.lifeee.top/categories/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
     
     
-      <category term="教程" scheme="https://lifeee.xyz/tags/%E6%95%99%E7%A8%8B/"/>
+      <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
     
-      <category term="善用佳软" scheme="https://lifeee.xyz/tags/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
+      <category term="善用佳软" scheme="https://www.lifeee.top/tags/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
     
   </entry>
   
   <entry>
     <title>Vivado2018安装教程</title>
-    <link href="https://lifeee.xyz/posts/a0d208fb.html"/>
-    <id>https://lifeee.xyz/posts/a0d208fb.html</id>
+    <link href="https://www.lifeee.top/posts/a0d208fb.html"/>
+    <id>https://www.lifeee.top/posts/a0d208fb.html</id>
     <published>2020-01-07T02:25:00.000Z</published>
     <updated>2020-02-11T09:02:49.247Z</updated>
     
@@ -376,19 +376,19 @@
     
     </summary>
     
-      <category term="教程" scheme="https://lifeee.xyz/categories/%E6%95%99%E7%A8%8B/"/>
+      <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
     
     
-      <category term="教程" scheme="https://lifeee.xyz/tags/%E6%95%99%E7%A8%8B/"/>
+      <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
     
-      <category term="分享" scheme="https://lifeee.xyz/tags/%E5%88%86%E4%BA%AB/"/>
+      <category term="分享" scheme="https://www.lifeee.top/tags/%E5%88%86%E4%BA%AB/"/>
     
   </entry>
   
   <entry>
     <title>Visual Studio 2019激活码/序列号🎰</title>
-    <link href="https://lifeee.xyz/posts/d0ed2dd.html"/>
-    <id>https://lifeee.xyz/posts/d0ed2dd.html</id>
+    <link href="https://www.lifeee.top/posts/d0ed2dd.html"/>
+    <id>https://www.lifeee.top/posts/d0ed2dd.html</id>
     <published>2019-11-17T02:25:00.000Z</published>
     <updated>2020-02-11T09:40:25.744Z</updated>
     
@@ -399,27 +399,27 @@
     
     </summary>
     
-      <category term="编程" scheme="https://lifeee.xyz/categories/%E7%BC%96%E7%A8%8B/"/>
+      <category term="编程" scheme="https://www.lifeee.top/categories/%E7%BC%96%E7%A8%8B/"/>
     
-      <category term="技术" scheme="https://lifeee.xyz/categories/%E6%8A%80%E6%9C%AF/"/>
+      <category term="技术" scheme="https://www.lifeee.top/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
-      <category term="Windows" scheme="https://lifeee.xyz/tags/Windows/"/>
+      <category term="Windows" scheme="https://www.lifeee.top/tags/Windows/"/>
     
-      <category term="教程" scheme="https://lifeee.xyz/tags/%E6%95%99%E7%A8%8B/"/>
+      <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
     
-      <category term="分享" scheme="https://lifeee.xyz/tags/%E5%88%86%E4%BA%AB/"/>
+      <category term="分享" scheme="https://www.lifeee.top/tags/%E5%88%86%E4%BA%AB/"/>
     
-      <category term="Visual Studio" scheme="https://lifeee.xyz/tags/Visual-Studio/"/>
+      <category term="Visual Studio" scheme="https://www.lifeee.top/tags/Visual-Studio/"/>
     
-      <category term="激活码" scheme="https://lifeee.xyz/tags/%E6%BF%80%E6%B4%BB%E7%A0%81/"/>
+      <category term="激活码" scheme="https://www.lifeee.top/tags/%E6%BF%80%E6%B4%BB%E7%A0%81/"/>
     
   </entry>
   
   <entry>
     <title>git clone使用代理加速🐌</title>
-    <link href="https://lifeee.xyz/posts/54130e76.html"/>
-    <id>https://lifeee.xyz/posts/54130e76.html</id>
+    <link href="https://www.lifeee.top/posts/54130e76.html"/>
+    <id>https://www.lifeee.top/posts/54130e76.html</id>
     <published>2019-11-14T03:34:18.000Z</published>
     <updated>2020-02-11T08:55:27.813Z</updated>
     
@@ -430,19 +430,19 @@
     
     </summary>
     
-      <category term="教程" scheme="https://lifeee.xyz/categories/%E6%95%99%E7%A8%8B/"/>
+      <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
     
     
-      <category term="tips" scheme="https://lifeee.xyz/tags/tips/"/>
+      <category term="tips" scheme="https://www.lifeee.top/tags/tips/"/>
     
-      <category term="代理" scheme="https://lifeee.xyz/tags/%E4%BB%A3%E7%90%86/"/>
+      <category term="代理" scheme="https://www.lifeee.top/tags/%E4%BB%A3%E7%90%86/"/>
     
   </entry>
   
   <entry>
     <title>克罗内克积 🍉</title>
-    <link href="https://lifeee.xyz/posts/c267974a.html"/>
-    <id>https://lifeee.xyz/posts/c267974a.html</id>
+    <link href="https://www.lifeee.top/posts/c267974a.html"/>
+    <id>https://www.lifeee.top/posts/c267974a.html</id>
     <published>2019-10-01T15:25:00.000Z</published>
     <updated>2020-04-30T01:38:40.075Z</updated>
     
@@ -455,19 +455,19 @@
     
     </summary>
     
-      <category term="数学" scheme="https://lifeee.xyz/categories/%E6%95%B0%E5%AD%A6/"/>
+      <category term="数学" scheme="https://www.lifeee.top/categories/%E6%95%B0%E5%AD%A6/"/>
     
     
-      <category term="数学" scheme="https://lifeee.xyz/tags/%E6%95%B0%E5%AD%A6/"/>
+      <category term="数学" scheme="https://www.lifeee.top/tags/%E6%95%B0%E5%AD%A6/"/>
     
-      <category term="笔记" scheme="https://lifeee.xyz/tags/%E7%AC%94%E8%AE%B0/"/>
+      <category term="笔记" scheme="https://www.lifeee.top/tags/%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
   <entry>
     <title>Windows右键菜单添加以VS Code打开🍻</title>
-    <link href="https://lifeee.xyz/posts/84152447.html"/>
-    <id>https://lifeee.xyz/posts/84152447.html</id>
+    <link href="https://www.lifeee.top/posts/84152447.html"/>
+    <id>https://www.lifeee.top/posts/84152447.html</id>
     <published>2019-09-15T15:25:00.000Z</published>
     <updated>2020-02-11T09:40:43.642Z</updated>
     
@@ -480,23 +480,23 @@
     
     </summary>
     
-      <category term="教程" scheme="https://lifeee.xyz/categories/%E6%95%99%E7%A8%8B/"/>
+      <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
     
-      <category term="技术" scheme="https://lifeee.xyz/categories/%E6%8A%80%E6%9C%AF/"/>
+      <category term="技术" scheme="https://www.lifeee.top/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
-      <category term="Windows" scheme="https://lifeee.xyz/tags/Windows/"/>
+      <category term="Windows" scheme="https://www.lifeee.top/tags/Windows/"/>
     
-      <category term="教程" scheme="https://lifeee.xyz/tags/%E6%95%99%E7%A8%8B/"/>
+      <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
     
-      <category term="善用佳软" scheme="https://lifeee.xyz/tags/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
+      <category term="善用佳软" scheme="https://www.lifeee.top/tags/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
     
   </entry>
   
   <entry>
     <title>3-C++核心编程</title>
-    <link href="https://lifeee.xyz/posts/4ba6638b.html"/>
-    <id>https://lifeee.xyz/posts/4ba6638b.html</id>
+    <link href="https://www.lifeee.top/posts/4ba6638b.html"/>
+    <id>https://www.lifeee.top/posts/4ba6638b.html</id>
     <published>2019-08-25T09:02:18.000Z</published>
     <updated>2020-02-11T09:32:51.102Z</updated>
     
@@ -509,21 +509,21 @@
     
     </summary>
     
-      <category term="编程" scheme="https://lifeee.xyz/categories/%E7%BC%96%E7%A8%8B/"/>
+      <category term="编程" scheme="https://www.lifeee.top/categories/%E7%BC%96%E7%A8%8B/"/>
     
     
-      <category term="C++" scheme="https://lifeee.xyz/tags/C/"/>
+      <category term="C++" scheme="https://www.lifeee.top/tags/C/"/>
     
-      <category term="转载" scheme="https://lifeee.xyz/tags/%E8%BD%AC%E8%BD%BD/"/>
+      <category term="转载" scheme="https://www.lifeee.top/tags/%E8%BD%AC%E8%BD%BD/"/>
     
-      <category term="编程" scheme="https://lifeee.xyz/tags/%E7%BC%96%E7%A8%8B/"/>
+      <category term="编程" scheme="https://www.lifeee.top/tags/%E7%BC%96%E7%A8%8B/"/>
     
   </entry>
   
   <entry>
     <title>2-通讯录管理系统</title>
-    <link href="https://lifeee.xyz/posts/6bf45bcb.html"/>
-    <id>https://lifeee.xyz/posts/6bf45bcb.html</id>
+    <link href="https://www.lifeee.top/posts/6bf45bcb.html"/>
+    <id>https://www.lifeee.top/posts/6bf45bcb.html</id>
     <published>2019-08-25T08:05:04.000Z</published>
     <updated>2020-03-23T07:36:09.546Z</updated>
     
@@ -540,14 +540,14 @@
     
     </summary>
     
-      <category term="编程" scheme="https://lifeee.xyz/categories/%E7%BC%96%E7%A8%8B/"/>
+      <category term="编程" scheme="https://www.lifeee.top/categories/%E7%BC%96%E7%A8%8B/"/>
     
     
-      <category term="C++" scheme="https://lifeee.xyz/tags/C/"/>
+      <category term="C++" scheme="https://www.lifeee.top/tags/C/"/>
     
-      <category term="转载" scheme="https://lifeee.xyz/tags/%E8%BD%AC%E8%BD%BD/"/>
+      <category term="转载" scheme="https://www.lifeee.top/tags/%E8%BD%AC%E8%BD%BD/"/>
     
-      <category term="编程" scheme="https://lifeee.xyz/tags/%E7%BC%96%E7%A8%8B/"/>
+      <category term="编程" scheme="https://www.lifeee.top/tags/%E7%BC%96%E7%A8%8B/"/>
     
   </entry>
   
