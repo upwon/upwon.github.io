@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[Netlify设置重定向实现域名跳转]]></title>
     <url>%2Fposts%2F61927.html</url>
-    <content type="text"><![CDATA[将 Netlify 设置重定向实现域名跳转，将Netlify 给的 默认域名 跳转到自己 现在的域名 。 Thank you Pixabay for sharing this awesome photo on @pexels for free! 🎁 https://www.pexels.com/zh-cn/photo/163452/ Netlify 提供重定向充能，因此可以将 Netlify 给的默认域名跳转到自己现在的域名，若一些博文的链接结构发生了变化也可以实现重定向。操作方法如下： 在博客根目录中的 souce 文件件下新建 netlify.toml 文件 在文件里面填写以下内容可实现域名跳转 1234[[redirects]] from = "https://summerblog.netlify.app/*" to = "https://www.lifeee.top/:splat" force = true Netlify 重定向配置文件的语法 如果在Netlify 配置文件中指定重定向规则，则可以使用具有附加功能 如签名代理重定向的更结构化的配置格式。在文件中，我们使用TOML 的表数组来指定每个单独的重定向规则。提供以下关键字：netlify.toml from：要重定向的路径。 to：要重定向到的 URL 或路径。 status：要在重定向中使用HTTP 状态代码; 默认情况下。301 force：是否覆盖路径中的任何现有内容; 默认情况下。false query：查询字符串参数需要匹配重定向。有关详细信息，请访问查询参数说明。 conditions：匹配重定向的条件，如国家/地区和角色条件。 headers：其他请求标头以代理重定向发送。 signed：签名代理重定向的环境变量的名称。 更多用法可以在 Netlify 的用户文档中查看。 人生乃是一面镜子， 从镜子里认识自己， 我要称之为头等大事， 也只是我们追求的目的！]]></content>
+    <content type="text"><![CDATA[将 Netlify 设置重定向实现域名跳转，将Netlify 给的 默认域名 跳转到自己 现在的域名 。 Thank you Pixabay for sharing this awesome photo on @pexels for free! 🎁 https://www.pexels.com/zh-cn/photo/163452/ Netlify 提供重定向充能，因此可以将 Netlify 给的默认域名跳转到自己现在的域名，若一些博文的链接结构发生了变化也可以实现重定向。操作方法如下： 在博客根目录中的 souce 文件件下新建 netlify.toml 文件 在文件里面填写以下内容可实现域名跳转 1234[[redirects]] from = "https://summerblog.netlify.app/*" to = "https://www.lifeee.top/:splat" force = true Netlify 重定向配置文件的语法 如果在Netlify 配置文件中指定重定向规则，则可以使用具有附加功能 如签名代理重定向的更结构化的配置格式。在文件中，我们使用TOML 的表数组来指定每个单独的重定向规则。提供以下关键字：netlify.toml from：要重定向的路径。 to：要重定向到的 URL 或路径。 status：要在重定向中使用HTTP 状态代码; 默认情况下。301 force：是否覆盖路径中的任何现有内容; 默认情况下。false query：查询字符串参数需要匹配重定向。有关详细信息，请访问查询参数说明。 conditions：匹配重定向的条件，如国家/地区和角色条件。 headers：其他请求标头以代理重定向发送。 signed：签名代理重定向的环境变量的名称。 更多用法可以在 Netlify 的用户文档中查看。 😄 莫听穿林打叶声，何妨吟啸且徐行。竹杖芒鞋轻胜马，谁怕？一蓑烟雨任平生。 料峭春风吹酒醒，微冷，山头斜照却相迎。回首向来萧瑟处，归去，也无风雨也无晴。 —— 苏轼《定风波》]]></content>
       <categories>
         <category>教程</category>
         <category>技术</category>
@@ -19,8 +19,8 @@
     <content type="text"><![CDATA[本博客今日起更改域名为 www.lifeee.top 以下域名均跳转至 www.lifeee.top https://upwon.github.io/ summerblog.netlify.app https://lifeee.top 只是更新域名后网站的访问人数清零了。]]></content>
       <categories>
         <category>教程</category>
-        <category>善用佳软</category>
         <category>技术</category>
+        <category>善用佳软</category>
         <category>数学</category>
         <category>生活</category>
       </categories>
@@ -88,8 +88,8 @@
     <url>%2Fposts%2F59155.html</url>
     <content type="text"><![CDATA[CLion 是 JetBrains 推出的全新的C/C++ 跨平台集成开发环境。本文记录关于 CLion 的安装、激活、汉化、编译器配置等操作。 下载 Clion下载地址 https://www.jetbrains.com/clion/ 安装双击安装包，选好安装路径，然后下一步，若你的计算机是 64 位，在这里可以勾选以下这一个选项。 一路 next 即可，接着启动 CLion 。 主题选择，看个人喜好，然后下一步。 配置第一次打开是没有编译器的，如下图所示。 因此需要去安装并配置能够进行代码编译的工具，点击下面的 MinGW。 点击 Download ，跳转到 Mingw-builds 的页面，接着再点击 Sourceforge 。 然后在 Sourceforge 中的下载链接，建议下载解压版，.7z那个 ，若你下载不便，可在蓝奏云中下载我上传的。 然后解压下载的文件，放到一个你喜欢的路径下面（英文路径）。 接着为 CLion 配置编译器，选择刚刚解压的路径即可，其他那些都会自动检测出的。 若你的没有检测出，请根据上图的手动配置相应的 gcc 、g++ 等编译器的路径。 另外，若看到出现对话框中有一个黄色感叹号 ，关于 cmake 错误，请参https://zhuanlan.zhihu.com/p/43680621。 配置好后我们可以打开 CLion 试试了。 创建一个新项目： 然后 Run 一下 ，熟悉的 HelloWorld ，你好世界！ 调试 激活激活请参看： Jetbrains系列产品2020.1最新激活方法[持续更新] 通过edu教育邮箱免费获取 JetBrains 全系产品正版 License 比如我的是这样激活的： 若你没有教育邮箱，那可以尝试使用破解的方式，在蓝奏云下载这个破解文件。根据里面的说明破解即可，如果你有能力推荐支持正版。 123456789101112131415161718使用方法:0. 先下载压缩包解压后得到jetbrains-agent.jar。 下载页面：https://zhile.io/2018/08/17/jetbrains-license-server-crack.html1. 启动你的IDE，如果上来就需要注册，选择：试用（Evaluate for free）进入IDE。2. 将 jetbrains-agent.jar 拖进IDE窗口，点 "Restart" 按钮重启IDE。 （事实上你拖 jetbrains-agent-latest.zip 进去IDE窗口也没问题）3. 在弹出的JetbrainsAgent Helper对话框中，选择激活方式，点击安装按钮。 如果你是无外网环境，在对话框中勾选：我无法访问外网 选项（如银行、公安内网）。4. 重启IDE，搞定。x. 支持两种注册方式：License server 和 Activation code: 1). 选择License server方式，地址填入：http://fls.jetbrains-agent.com （网络不佳的用第2种方式） 2). 选择Activation code方式离线激活，请使用：ACTIVATION_CODE.txt 内的注册码激活 如果激活窗口一直弹出（error 1653219），请去hosts文件里“移除”jetbrains相关的项目 License key is in legacy format == Key invalid，表示agent配置未生效。 如果你需要自定义License name，请访问：https://zhile.io/custom-license.html 3). 现在你可以使用jetbrains-agent + license server激活jetbrains平台的付费插件了！ 除了："IEDIS 2" 和 "MINBATIS"，这两个请使用 IEDIS_MINBATIS_CODE.txt 来激活。 现在有这些付费插件：https://plugins.jetbrains.com/search?isPaid=true 汉化安装后打开 CLion ，找到 Setting 。 找到setting 接在在左侧找到 Plugins , 然后搜索 Chinese ，安装第一个即可，最后点击 OK ，重启 IDE就是中文了。当然有些地方汉化不完整，如果想换回英文只需去禁用刚刚安装那个插件即可。 安装汉化插件 汉化后 解决 CLion 中 For MinGW make to work correctly sh.exe must NOT be in your path. 的错误CLion 中报错 For MinGW make to work correctly sh.exe must NOT be in your path. 在 stackoverflow 查到了解决方法： 原因：MinGW 与 GIT 中的 sh.exe 冲突，所以在环境变量中不应该有sh.exe（装了git的命令行工具就会有） 解决：在File -&gt; Settings -&gt; Build, Execution, Deployment -&gt; CMake 中为cmake设置参数-DCMAKE_SH=&quot;CMAKE_SH-NOTFOUND&quot; 错误图示 cmake设置参数 -DCMAKE_SH="CMAKE_SH-NOTFOUND" 接着重启即可。 参考： stackoverflow：MinGW sh.exe must NOT be in your path Clion 搭建C++环境常见问题 旅途中的夜晚，景色越是优美，越是会让人感到一种莫名的忧伤。我仰望着夜空，确认将要消失在黑暗里的自己的所在，在表示夏天的星座底下缓缓地走着。 —吉本芭娜娜 《哀愁的预感》]]></content>
       <categories>
-        <category>教程</category>
         <category>编程</category>
+        <category>教程</category>
         <category>善用佳软</category>
       </categories>
       <tags>
