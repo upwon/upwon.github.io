@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.lifeee.top/"/>
-  <updated>2020-05-07T15:18:22.126Z</updated>
+  <updated>2020-05-08T10:37:52.469Z</updated>
   <id>https://www.lifeee.top/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>如何获取 Google 安全码？</title>
+    <link href="https://www.lifeee.top/posts/13004.html"/>
+    <id>https://www.lifeee.top/posts/13004.html</id>
+    <published>2020-05-08T07:51:14.000Z</published>
+    <updated>2020-05-08T10:37:52.469Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;使用 Google 安全码 登录验证 Google 帐号 ，获取安全码的步骤如下。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
+    
+      <category term="技术" scheme="https://www.lifeee.top/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
+    
+      <category term="问题" scheme="https://www.lifeee.top/tags/%E9%97%AE%E9%A2%98/"/>
+    
+      <category term="Android" scheme="https://www.lifeee.top/tags/Android/"/>
+    
+  </entry>
   
   <entry>
     <title>pip更换国内源</title>
@@ -89,11 +115,11 @@
     
       <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
     
-      <category term="善用佳软" scheme="https://www.lifeee.top/categories/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
-    
       <category term="技术" scheme="https://www.lifeee.top/categories/%E6%8A%80%E6%9C%AF/"/>
     
       <category term="数学" scheme="https://www.lifeee.top/categories/%E6%95%B0%E5%AD%A6/"/>
+    
+      <category term="善用佳软" scheme="https://www.lifeee.top/categories/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
     
       <category term="生活" scheme="https://www.lifeee.top/categories/%E7%94%9F%E6%B4%BB/"/>
     
@@ -514,35 +540,6 @@
       <category term="数学" scheme="https://www.lifeee.top/tags/%E6%95%B0%E5%AD%A6/"/>
     
       <category term="笔记" scheme="https://www.lifeee.top/tags/%E7%AC%94%E8%AE%B0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Windows右键菜单添加以VS Code打开🍻</title>
-    <link href="https://www.lifeee.top/posts/84152447.html"/>
-    <id>https://www.lifeee.top/posts/84152447.html</id>
-    <published>2019-09-15T15:25:00.000Z</published>
-    <updated>2020-02-11T09:40:43.642Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;https://gitee.com/wang_wx/image_bed/raw/master/201910/87ba7e99b2b1a4aea40278f8338822c7.jpg&quot;&gt;&lt;/p&gt;
-&lt;p&gt;目的：&lt;/p&gt;
-&lt;p&gt;右键单击文件夹，可以使用以vscode打开&lt;/p&gt;
-&lt;p&gt;右键单文件或者空白处，可以使用vscode打开&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
-    
-      <category term="技术" scheme="https://www.lifeee.top/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="Windows" scheme="https://www.lifeee.top/tags/Windows/"/>
-    
-      <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
-    
-      <category term="善用佳软" scheme="https://www.lifeee.top/tags/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
     
   </entry>
   

@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[如何获取 Google 安全码？]]></title>
+    <url>%2Fposts%2F13004.html</url>
+    <content type="text"><![CDATA[使用 Google 安全码 登录验证 Google 帐号 ，获取安全码的步骤如下。 有些时候在一些新设备或者存在安全隐患的场景下登录 Google 账号，会让你确认您的身份。有时候就需要使用安全码来验证，那么如何获取安全码呢 ? 官方给出的方法是这样的，但是可能对我们国内的手机有些差异。 我的手机是 小米 的，使用如下方法 获取 Google 安全码。 在 Google Pay 中下载名为 Google 的应用 2.进入应用后，点击更多。 3.点击邮箱旁边的下三角 🔻，会出现账号管理，然后再点击账号管理。 4.点击安全性，再点击下方的安全码，然后安全码就会出现。出现的安全码十五分钟更新一次。若有多个账号根据自己登录的账号切换即可。 5.将安全码填写到需要登录的应用中。 题外话 现在 Android 端的邮箱应用 网易的邮箱大师比 QQ 邮箱好用 世界微尘里，吾宁爱与憎。 ——李商隐《北青萝》]]></content>
+      <categories>
+        <category>教程</category>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>教程</tag>
+        <tag>问题</tag>
+        <tag>Android</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[pip更换国内源]]></title>
     <url>%2Fposts%2F23493.html</url>
     <content type="text"><![CDATA[python 中使用 pip 安装一些包的时候十分慢，因为仓库都在国外。国内一些大厂或者高校弄了一些镜像，因此我们可以将其安装源设置为国内的仓库，从而达到加速的效果。 国内的一些镜像有： 123456789101112131415阿里云 http://mirrors.aliyun.com/pypi/simple/ 清华：https://pypi.tuna.tsinghua.edu.cn/simple网易： https://mirrors.163.com/pypi/simple/豆瓣：http://pypi.douban.com/simple/北京外国语大学： https://mirrors.bfsu.edu.cn/中国科技大学 https://pypi.mirrors.ustc.edu.cn/simple/华中理工大学：http://pypi.hustunique.com/山东理工大学：http://pypi.sdutlinux.org/ 修改源方法：临时使用：可以在使用pip的时候加参数-i http://mirrors.aliyun.com/pypi/simple/ 123例如：pip install scrapy -i http://mirrors.aliyun.com/pypi/simple/ #这样就会从清华的镜像安装scrapy库 注意，simple 不能少, 另外注意各个仓库是 https 还是是 http 设为默认升级 pip 到最新的版本 (&gt;=10.0.0) 后进行配置： 12pip install pip -Upip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple 如果您到 pip 默认源的网络连接较差，可临时使用镜像站来升级 pip： 1pip install -i https://pypi.tuna.tsinghua.edu.cn/simple pip -U 另外说句题外话，在清华的 Tuna 下载一些开源的操作系统和应用软件都是很快的。 https://mirrors.tuna.tsinghua.edu.cn/# 参考： https://mirrors.163.com/.help/pypi.html https://mirrors.tuna.tsinghua.edu.cn/help/pypi/ 不要问我心里有没有你，我余光中都是你。 ​ ——余光中]]></content>
@@ -32,9 +46,9 @@
     <content type="text"><![CDATA[本博客今日起更改域名为 www.lifeee.top 以下域名均跳转至 www.lifeee.top https://upwon.github.io/ summerblog.netlify.app https://lifeee.top 只是更新域名后网站的访问人数清零了。]]></content>
       <categories>
         <category>教程</category>
-        <category>善用佳软</category>
         <category>技术</category>
         <category>数学</category>
+        <category>善用佳软</category>
         <category>生活</category>
       </categories>
       <tags>
