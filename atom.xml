@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.lifeee.top/"/>
-  <updated>2020-05-09T00:35:46.792Z</updated>
+  <updated>2020-05-09T02:46:59.005Z</updated>
   <id>https://www.lifeee.top/</id>
   
   <author>
@@ -21,13 +21,14 @@
     <link href="https://www.lifeee.top/posts/13004.html"/>
     <id>https://www.lifeee.top/posts/13004.html</id>
     <published>2020-05-08T07:51:14.000Z</published>
-    <updated>2020-05-09T00:35:46.792Z</updated>
+    <updated>2020-05-09T02:46:59.005Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;有些时候在一些新设备或者存在安全隐患的场景下登录 Google 账号，会让你确认您的身份。有时候就需要使用安全码来验证，那么如何获取安全码呢 ?&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/wang_wx/image_bed/raw/master/2020/20200508190508.jpg&quot; alt&gt;&lt;/p&gt;
+      &lt;p&gt;&lt;img src=&quot;https://gitee.com/wang_wx/image_bed/raw/master/2020/20200508190508.jpg&quot; alt&gt;&lt;/p&gt;
 &lt;center&gt;&lt;font size=&quot;1.5&quot;&gt;2020-05-01 云南·瑞丽 &lt;/font&gt;&lt;/center&gt;
+
+&lt;p&gt;有些时候在一些新设备或者存在安全隐患的场景下登录 Google 账号，会让你确认您的身份。有时候就需要使用安全码来验证，那么如何获取安全码呢 ?&lt;/p&gt;
     
     </summary>
     
@@ -49,12 +50,12 @@
     <link href="https://www.lifeee.top/posts/23493.html"/>
     <id>https://www.lifeee.top/posts/23493.html</id>
     <published>2020-05-07T14:16:16.000Z</published>
-    <updated>2020-05-07T15:18:22.126Z</updated>
+    <updated>2020-05-09T02:47:41.912Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;python 中使用 pip 安装一些包的时候十分慢，因为仓库都在国外。国内一些大厂或者高校弄了一些镜像，因此我们可以将其安装源设置为国内的仓库，从而达到加速的效果。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/wang_wx/image_bed/raw/master/2020/20200507231100.jpg&quot; alt&gt;&lt;/p&gt;
+      &lt;p&gt;&lt;img src=&quot;https://gitee.com/wang_wx/image_bed/raw/master/2020/20200507231100.jpg&quot; alt&gt;&lt;/p&gt;
+&lt;p&gt;python 中使用 pip 安装一些包的时候十分慢，因为仓库都在国外。国内一些大厂或者高校弄了一些镜像，因此我们可以将其安装源设置为国内的仓库，从而达到加速的效果。&lt;/p&gt;
     
     </summary>
     
@@ -74,13 +75,14 @@
     <link href="https://www.lifeee.top/posts/61927.html"/>
     <id>https://www.lifeee.top/posts/61927.html</id>
     <published>2020-05-07T09:52:48.000Z</published>
-    <updated>2020-05-08T11:05:29.294Z</updated>
+    <updated>2020-05-09T02:47:22.911Z</updated>
     
     <summary type="html">
     
-      &lt;p&gt;将 Netlify 设置重定向实现域名跳转，将Netlify 给的 &lt;a href=&quot;https://summerblog.netlify.app/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;默认域名&lt;/a&gt; 跳转到自己 &lt;a href=&quot;https://www.lifeee.top/&quot;&gt;现在的域名&lt;/a&gt; 。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/wang_wx/image_bed/raw/master/2020/20200507182237.jpg&quot; alt&gt;&lt;/p&gt;
-&lt;center&gt;&lt;font size=&quot;1.5&quot;&gt;Thank you Pixabay for sharing this awesome photo on @pexels for free! 🎁 https://www.pexels.com/zh-cn/photo/163452/ &lt;/font&gt;&lt;/center&gt;
+      &lt;p&gt;&lt;img src=&quot;https://gitee.com/wang_wx/image_bed/raw/master/2020/20200507182237.jpg&quot; alt&gt;&lt;/p&gt;
+&lt;center&gt;&lt;font size=&quot;1&quot;&gt;Thank you Pixabay for sharing this awesome photo on @pexels for free! 🎁 https://www.pexels.com/zh-cn/photo/163452/ &lt;/font&gt;&lt;/center&gt;
+
+&lt;p&gt;将 Netlify 设置重定向实现域名跳转，将Netlify 给的 &lt;a href=&quot;https://summerblog.netlify.app/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;默认域名&lt;/a&gt; 跳转到自己 &lt;a href=&quot;https://www.lifeee.top/&quot;&gt;现在的域名&lt;/a&gt; 。&lt;/p&gt;
     
     </summary>
     
@@ -100,7 +102,7 @@
     <link href="https://www.lifeee.top/posts/49394.html"/>
     <id>https://www.lifeee.top/posts/49394.html</id>
     <published>2020-05-07T02:23:11.000Z</published>
-    <updated>2020-05-09T02:41:28.114Z</updated>
+    <updated>2020-05-09T02:48:04.420Z</updated>
     
     <summary type="html">
     
@@ -256,9 +258,9 @@
     
     </summary>
     
-      <category term="编程" scheme="https://www.lifeee.top/categories/%E7%BC%96%E7%A8%8B/"/>
-    
       <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
+    
+      <category term="编程" scheme="https://www.lifeee.top/categories/%E7%BC%96%E7%A8%8B/"/>
     
       <category term="善用佳软" scheme="https://www.lifeee.top/categories/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
     
@@ -397,7 +399,7 @@
     <link href="https://www.lifeee.top/posts/14654.html"/>
     <id>https://www.lifeee.top/posts/14654.html</id>
     <published>2020-02-11T03:34:18.000Z</published>
-    <updated>2020-05-02T15:06:10.975Z</updated>
+    <updated>2020-05-09T02:50:35.489Z</updated>
     
     <summary type="html">
     
