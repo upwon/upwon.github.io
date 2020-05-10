@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.lifeee.top/"/>
-  <updated>2020-05-09T03:10:21.896Z</updated>
+  <updated>2020-05-10T09:49:42.637Z</updated>
   <id>https://www.lifeee.top/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>挂载GoogleDrive后不显示共享文件夹/与我共享</title>
+    <link href="https://www.lifeee.top/posts/39158.html"/>
+    <id>https://www.lifeee.top/posts/39158.html</id>
+    <published>2020-05-10T09:32:42.000Z</published>
+    <updated>2020-05-10T09:49:42.637Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/upwon/MyPicture@master/img20200510173146.png&quot; alt&gt;&lt;/p&gt;
+&lt;p&gt;解决挂载 Google Drive 后不显示共享文件夹。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
+    
+      <category term="善用佳软" scheme="https://www.lifeee.top/categories/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
+    
+      <category term="技术" scheme="https://www.lifeee.top/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="问题" scheme="https://www.lifeee.top/tags/%E9%97%AE%E9%A2%98/"/>
+    
+      <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
+    
+      <category term="云盘" scheme="https://www.lifeee.top/tags/%E4%BA%91%E7%9B%98/"/>
+    
+  </entry>
   
   <entry>
     <title>Gitalk重定向错误</title>
@@ -62,9 +91,9 @@
       <category term="技术" scheme="https://www.lifeee.top/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
-      <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
-    
       <category term="问题" scheme="https://www.lifeee.top/tags/%E9%97%AE%E9%A2%98/"/>
+    
+      <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
     
       <category term="Android" scheme="https://www.lifeee.top/tags/Android/"/>
     
@@ -144,11 +173,11 @@
     
       <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
     
-      <category term="技术" scheme="https://www.lifeee.top/categories/%E6%8A%80%E6%9C%AF/"/>
-    
       <category term="善用佳软" scheme="https://www.lifeee.top/categories/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
     
       <category term="数学" scheme="https://www.lifeee.top/categories/%E6%95%B0%E5%AD%A6/"/>
+    
+      <category term="技术" scheme="https://www.lifeee.top/categories/%E6%8A%80%E6%9C%AF/"/>
     
       <category term="生活" scheme="https://www.lifeee.top/categories/%E7%94%9F%E6%B4%BB/"/>
     
@@ -283,9 +312,9 @@
     
     </summary>
     
-      <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
-    
       <category term="编程" scheme="https://www.lifeee.top/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+      <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
     
       <category term="善用佳软" scheme="https://www.lifeee.top/categories/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
     
@@ -340,9 +369,9 @@
       <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
     
     
-      <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
-    
       <category term="问题" scheme="https://www.lifeee.top/tags/%E9%97%AE%E9%A2%98/"/>
+    
+      <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
     
   </entry>
   
@@ -413,9 +442,9 @@
       <category term="技术" scheme="https://www.lifeee.top/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
-      <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
-    
       <category term="问题" scheme="https://www.lifeee.top/tags/%E9%97%AE%E9%A2%98/"/>
+    
+      <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
     
   </entry>
   
@@ -521,29 +550,6 @@
       <category term="Visual Studio" scheme="https://www.lifeee.top/tags/Visual-Studio/"/>
     
       <category term="激活码" scheme="https://www.lifeee.top/tags/%E6%BF%80%E6%B4%BB%E7%A0%81/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>git clone使用代理加速🐌</title>
-    <link href="https://www.lifeee.top/posts/54130e76.html"/>
-    <id>https://www.lifeee.top/posts/54130e76.html</id>
-    <published>2019-11-14T03:34:18.000Z</published>
-    <updated>2020-02-11T08:55:27.813Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;https://gitee.com/wang_wx/image_bed/raw/master/2011911/mt-fuji-sea-of-clouds-sunrise-2345.jpg&quot; alt&gt;&lt;/p&gt;
-&lt;p&gt;国内访问GitHub速度较慢，克隆代码时的速度就更慢了，常常断开。因此，我们需要让我们的git走代理来加速克隆。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
-    
-    
-      <category term="tips" scheme="https://www.lifeee.top/tags/tips/"/>
-    
-      <category term="代理" scheme="https://www.lifeee.top/tags/%E4%BB%A3%E7%90%86/"/>
     
   </entry>
   
