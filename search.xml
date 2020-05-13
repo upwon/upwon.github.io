@@ -1,17 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[PDF-XChange Editor配置适合阅读的背景色]]></title>
+    <url>%2Fposts%2F24242.html</url>
+    <content type="text"><![CDATA[from pixabay 配置 PDF Xchange Editor 的阅读背景以及窗体颜色。文末附破解版 PDF Xchange Editor 的下载。 PDF Xchange EditorPDF-XChange Editor 是一款能够比拟 Adobe Acrobat DC 的 PDF 编辑器。与其它的 PDF 阅读器、查看器和编辑器相比，其体积更小但功能更加丰富。PDF-XChange Editor 的免费版是 PDF-XChange Viewer 。 版本区别 pdf xchange viewer：主要用来进行PDF电子文档的阅读。具有多标签页显示、强大的图像导出功能、批量搜索、高级搜索、放大与导航功能，还有批注功能让人眼前一亮。支持谷歌金山词霸和灵格斯词霸的取词。 pdf xchange editor：相当于 pdf xchange viewer 的加强版。专注于PDF电子文档的编辑功能，小编试用后发现它体积小巧，速度飞快，界面友好，具备丰富的配置和功能选项，而且非常简单易用！可帮助你快速地制作和编写PDF电子文档。 平时使用 PDF-XChange Editor 的主要原因是我有注释的需求，有时候需要在 PDF 上面写写画画。经过这个假期的体验，使用数位板进行注释时选择 PDF-XChange Editor 的体验是最佳的。其它的 Adobe Acrobat DC 、福昕等等使用起来都并不是很方便。另外 PDF-XChange Editor 可以自定义很多东西，根据自己的习惯去配置以方便阅读及注释。 配置背景色-展示配置前，窗体以及阅读区都是大块白色。长时间阅读容易引起眼睛不适。让我来稍微调节一下吧。 我的配置中阅读区是偏纸张的颜色，窗口的上方的颜色偏灰白，左侧的目录区偏水色。 效果展示如下： 颜色主要是参考 中国传统色 ，建议选取 花白、老银、水色、苍色等颜色来搭配，这样的颜色饱和度低看起来很舒适，适合长时间阅读。 配色网站： https://color.uisdc.com/ http://zhongguose.com/ https://colors.ichuantong.cn/ https://coolfishstudio.github.io/cfs-color/ 配置背景色-配置在 PDF-XChange Editor ： 帮助 -&gt; 自定义主题 -&gt; 自定义UI ，可以调整窗口的颜色。我的前景色的 RGB 为 117, 135, 138 ，窗口的 RGB 为 187, 205, 197 ，可以当作参考。 然后切换至 访问 ，勾选忽略文档颜色，调整页面背景色的 RGB 为 210, 198, 178 。这样就和纸张的颜色差不多了，若你喜欢浅绿色护眼，可以尝试更改 RGB 为 200, 237, 204 。 PDF Xchange Editor 与 PDF Xchange viewer 稍有不同，但是大同小异。若你使用的是 PDF Xchange viewer 配置与之类似。 下载官网下载链接： https://www.tracker-software.com/product/downloads/enduser/pdf-xchange-editor 可以在以下云盘下载我使用的破解版 : 天翼云：https://cloud.189.cn/t/RFzMv2ziuiUf (访问码:8u5n) OneDrive 曲奇云盘 Google Drive 腹有诗书气自华，读书万卷始通神。 ——苏轼]]></content>
+      <categories>
+        <category>教程</category>
+        <category>善用佳软</category>
+      </categories>
+      <tags>
+        <tag>Windows</tag>
+        <tag>教程</tag>
+        <tag>善用佳软</tag>
+        <tag>阅读</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[挂载GoogleDrive后不显示共享文件夹/与我共享]]></title>
     <url>%2Fposts%2F39158.html</url>
     <content type="text"><![CDATA[解决挂载 Google Drive 后不显示共享文件夹。 挂载 Google Drive 和 OneDrive 差不多，只是需要注意一下“网络环境” 。 说明: 挂载前可以在终端输入以下命令为终端开启代理环境，不然后面验证的时候可能出错，哪怕你已经 PAC 或者 全局代理。 12set http_proxy=http://127.0.0.1:7890set https_proxy=http://127.0.0.1:7890 键入以上命令后，请开始你的表演开始配置 Google Drive ，相信你会很顺利的。 可参考上篇文章配置，Windows平台下使用 Rclone 挂载 OneDrive 为本地硬盘 。第四步输入要配置的网盘类型时选择Google Drive 。 显示共享文件夹 Share with me当你在浏览器打开过别人共享的链接后，会在与我共享（Share with me）中显示别人共享的文件夹。 但是 若你按照我上一篇文章 Windows平台下使用 Rclone 挂载 OneDrive 为本地硬盘 操作的话，会发现别人共享的文件夹是没有显示出来的。应该是在配置的过程中忘记开启 Share with me 了。又懒又机智的我打开了 rclone.conf 文件加入了一行代码，然后就显示 Share with me 的文件了。 rclone.conf 的路径为：C:\Users\你的用户名\.config\rclone 加入的代码为： 1shared_with_me = true 结果挂载前文件很少： 挂载后文件超级多，一页 Rclone Browser 都显示不下了。 家人闲坐，灯火可亲。 ——汪曾祺 《冬天》]]></content>
       <categories>
         <category>教程</category>
-        <category>善用佳软</category>
         <category>技术</category>
+        <category>善用佳软</category>
       </categories>
       <tags>
-        <tag>问题</tag>
         <tag>教程</tag>
+        <tag>问题</tag>
         <tag>云盘</tag>
       </tags>
   </entry>
@@ -37,8 +52,8 @@
         <category>技术</category>
       </categories>
       <tags>
-        <tag>问题</tag>
         <tag>教程</tag>
+        <tag>问题</tag>
         <tag>Android</tag>
       </tags>
   </entry>
@@ -138,8 +153,8 @@
     <url>%2Fposts%2F59155.html</url>
     <content type="text"><![CDATA[CLion 是 JetBrains 推出的全新的C/C++ 跨平台集成开发环境。本文记录关于 CLion 的安装、激活、汉化、编译器配置等操作。 下载 Clion下载地址 https://www.jetbrains.com/clion/ 安装双击安装包，选好安装路径，然后下一步，若你的计算机是 64 位，在这里可以勾选以下这一个选项。 一路 next 即可，接着启动 CLion 。 主题选择，看个人喜好，然后下一步。 配置第一次打开是没有编译器的，如下图所示。 因此需要去安装并配置能够进行代码编译的工具，点击下面的 MinGW。 点击 Download ，跳转到 Mingw-builds 的页面，接着再点击 Sourceforge 。 然后在 Sourceforge 中的下载链接，建议下载解压版，.7z那个 ，若你下载不便，可在蓝奏云中下载我上传的。 然后解压下载的文件，放到一个你喜欢的路径下面（英文路径）。 接着为 CLion 配置编译器，选择刚刚解压的路径即可，其他那些都会自动检测出的。 若你的没有检测出，请根据上图的手动配置相应的 gcc 、g++ 等编译器的路径。 另外，若看到出现对话框中有一个黄色感叹号 ，关于 cmake 错误，请参https://zhuanlan.zhihu.com/p/43680621。 配置好后我们可以打开 CLion 试试了。 创建一个新项目： 然后 Run 一下 ，熟悉的 HelloWorld ，你好世界！ 调试 激活激活请参看： Jetbrains系列产品2020.1最新激活方法[持续更新] 通过edu教育邮箱免费获取 JetBrains 全系产品正版 License 比如我的是这样激活的： 若你没有教育邮箱，那可以尝试使用破解的方式，在蓝奏云下载这个破解文件。根据里面的说明破解即可，如果你有能力推荐支持正版。 123456789101112131415161718使用方法:0. 先下载压缩包解压后得到jetbrains-agent.jar。 下载页面：https://zhile.io/2018/08/17/jetbrains-license-server-crack.html1. 启动你的IDE，如果上来就需要注册，选择：试用（Evaluate for free）进入IDE。2. 将 jetbrains-agent.jar 拖进IDE窗口，点 "Restart" 按钮重启IDE。 （事实上你拖 jetbrains-agent-latest.zip 进去IDE窗口也没问题）3. 在弹出的JetbrainsAgent Helper对话框中，选择激活方式，点击安装按钮。 如果你是无外网环境，在对话框中勾选：我无法访问外网 选项（如银行、公安内网）。4. 重启IDE，搞定。x. 支持两种注册方式：License server 和 Activation code: 1). 选择License server方式，地址填入：http://fls.jetbrains-agent.com （网络不佳的用第2种方式） 2). 选择Activation code方式离线激活，请使用：ACTIVATION_CODE.txt 内的注册码激活 如果激活窗口一直弹出（error 1653219），请去hosts文件里“移除”jetbrains相关的项目 License key is in legacy format == Key invalid，表示agent配置未生效。 如果你需要自定义License name，请访问：https://zhile.io/custom-license.html 3). 现在你可以使用jetbrains-agent + license server激活jetbrains平台的付费插件了！ 除了："IEDIS 2" 和 "MINBATIS"，这两个请使用 IEDIS_MINBATIS_CODE.txt 来激活。 现在有这些付费插件：https://plugins.jetbrains.com/search?isPaid=true 汉化安装后打开 CLion ，找到 Setting 。 找到setting 接在在左侧找到 Plugins , 然后搜索 Chinese ，安装第一个即可，最后点击 OK ，重启 IDE就是中文了。当然有些地方汉化不完整，如果想换回英文只需去禁用刚刚安装那个插件即可。 安装汉化插件 汉化后 解决 CLion 中 For MinGW make to work correctly sh.exe must NOT be in your path. 的错误CLion 中报错 For MinGW make to work correctly sh.exe must NOT be in your path. 在 stackoverflow 查到了解决方法： 原因：MinGW 与 GIT 中的 sh.exe 冲突，所以在环境变量中不应该有sh.exe（装了git的命令行工具就会有） 解决：在File -&gt; Settings -&gt; Build, Execution, Deployment -&gt; CMake 中为cmake设置参数-DCMAKE_SH=&quot;CMAKE_SH-NOTFOUND&quot; 错误图示 cmake设置参数 -DCMAKE_SH="CMAKE_SH-NOTFOUND" 接着重启即可。 参考： stackoverflow：MinGW sh.exe must NOT be in your path Clion 搭建C++环境常见问题 旅途中的夜晚，景色越是优美，越是会让人感到一种莫名的忧伤。我仰望着夜空，确认将要消失在黑暗里的自己的所在，在表示夏天的星座底下缓缓地走着。 —吉本芭娜娜 《哀愁的预感》]]></content>
       <categories>
-        <category>教程</category>
         <category>编程</category>
+        <category>教程</category>
         <category>善用佳软</category>
       </categories>
       <tags>
@@ -168,8 +183,8 @@
         <category>教程</category>
       </categories>
       <tags>
-        <tag>问题</tag>
         <tag>教程</tag>
+        <tag>问题</tag>
       </tags>
   </entry>
   <entry>
@@ -206,8 +221,8 @@
         <category>技术</category>
       </categories>
       <tags>
-        <tag>问题</tag>
         <tag>教程</tag>
+        <tag>问题</tag>
       </tags>
   </entry>
   <entry>

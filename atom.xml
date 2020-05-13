@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.lifeee.top/"/>
-  <updated>2020-05-10T09:54:58.311Z</updated>
+  <updated>2020-05-13T08:49:29.023Z</updated>
   <id>https://www.lifeee.top/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>PDF-XChange Editor配置适合阅读的背景色</title>
+    <link href="https://www.lifeee.top/posts/24242.html"/>
+    <id>https://www.lifeee.top/posts/24242.html</id>
+    <published>2020-05-13T07:26:33.000Z</published>
+    <updated>2020-05-13T08:49:29.023Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://gitee.com/wang_wx/image_bed/raw/master/2020/20200513161628.jpg&quot; alt&gt;&lt;/p&gt;
+&lt;center&gt;&lt;font size=&quot;1&quot;&gt;from pixabay &lt;/font&gt;&lt;/center&gt;
+
+&lt;p&gt;配置 PDF Xchange Editor 的阅读背景以及窗体颜色。文末附破解版 PDF Xchange Editor 的下载。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
+    
+      <category term="善用佳软" scheme="https://www.lifeee.top/categories/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
+    
+    
+      <category term="Windows" scheme="https://www.lifeee.top/tags/Windows/"/>
+    
+      <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
+    
+      <category term="善用佳软" scheme="https://www.lifeee.top/tags/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
+    
+      <category term="阅读" scheme="https://www.lifeee.top/tags/%E9%98%85%E8%AF%BB/"/>
+    
+  </entry>
   
   <entry>
     <title>挂载GoogleDrive后不显示共享文件夹/与我共享</title>
@@ -32,14 +63,14 @@
     
       <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
     
-      <category term="善用佳软" scheme="https://www.lifeee.top/categories/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
-    
       <category term="技术" scheme="https://www.lifeee.top/categories/%E6%8A%80%E6%9C%AF/"/>
     
+      <category term="善用佳软" scheme="https://www.lifeee.top/categories/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
     
-      <category term="问题" scheme="https://www.lifeee.top/tags/%E9%97%AE%E9%A2%98/"/>
     
       <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
+    
+      <category term="问题" scheme="https://www.lifeee.top/tags/%E9%97%AE%E9%A2%98/"/>
     
       <category term="云盘" scheme="https://www.lifeee.top/tags/%E4%BA%91%E7%9B%98/"/>
     
@@ -91,9 +122,9 @@
       <category term="技术" scheme="https://www.lifeee.top/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
-      <category term="问题" scheme="https://www.lifeee.top/tags/%E9%97%AE%E9%A2%98/"/>
-    
       <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
+    
+      <category term="问题" scheme="https://www.lifeee.top/tags/%E9%97%AE%E9%A2%98/"/>
     
       <category term="Android" scheme="https://www.lifeee.top/tags/Android/"/>
     
@@ -129,7 +160,7 @@
     <link href="https://www.lifeee.top/posts/61927.html"/>
     <id>https://www.lifeee.top/posts/61927.html</id>
     <published>2020-05-07T09:52:48.000Z</published>
-    <updated>2020-05-09T02:47:22.911Z</updated>
+    <updated>2020-05-13T08:46:41.779Z</updated>
     
     <summary type="html">
     
@@ -302,9 +333,9 @@
     
     </summary>
     
-      <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
-    
       <category term="编程" scheme="https://www.lifeee.top/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+      <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
     
       <category term="善用佳软" scheme="https://www.lifeee.top/categories/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
     
@@ -359,9 +390,9 @@
       <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
     
     
-      <category term="问题" scheme="https://www.lifeee.top/tags/%E9%97%AE%E9%A2%98/"/>
-    
       <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
+    
+      <category term="问题" scheme="https://www.lifeee.top/tags/%E9%97%AE%E9%A2%98/"/>
     
   </entry>
   
@@ -432,9 +463,9 @@
       <category term="技术" scheme="https://www.lifeee.top/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
-      <category term="问题" scheme="https://www.lifeee.top/tags/%E9%97%AE%E9%A2%98/"/>
-    
       <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
+    
+      <category term="问题" scheme="https://www.lifeee.top/tags/%E9%97%AE%E9%A2%98/"/>
     
   </entry>
   
@@ -509,37 +540,6 @@
       <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
     
       <category term="分享" scheme="https://www.lifeee.top/tags/%E5%88%86%E4%BA%AB/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Visual Studio 2019激活码/序列号🎰</title>
-    <link href="https://www.lifeee.top/posts/d0ed2dd.html"/>
-    <id>https://www.lifeee.top/posts/d0ed2dd.html</id>
-    <published>2019-11-17T02:25:00.000Z</published>
-    <updated>2020-02-11T09:40:25.744Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;https://gitee.com/wang_wx/image_bed/raw/master/2011911/1401_compressed.jpg&quot; alt=&quot; &quot;&gt;&lt;/p&gt;
-&lt;p&gt;宇宙第一IDE Visual Studio 2019 /2017 专业版/企业版激活码&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="编程" scheme="https://www.lifeee.top/categories/%E7%BC%96%E7%A8%8B/"/>
-    
-      <category term="技术" scheme="https://www.lifeee.top/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-      <category term="Windows" scheme="https://www.lifeee.top/tags/Windows/"/>
-    
-      <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
-    
-      <category term="分享" scheme="https://www.lifeee.top/tags/%E5%88%86%E4%BA%AB/"/>
-    
-      <category term="Visual Studio" scheme="https://www.lifeee.top/tags/Visual-Studio/"/>
-    
-      <category term="激活码" scheme="https://www.lifeee.top/tags/%E6%BF%80%E6%B4%BB%E7%A0%81/"/>
     
   </entry>
   
