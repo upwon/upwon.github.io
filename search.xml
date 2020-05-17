@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Filename too long in Git for Windows]]></title>
+    <url>%2Fposts%2F18897.html</url>
+    <content type="text"><![CDATA[解决 Filename too long 错误。 问题描述在 Windows 平台下使用 git ，有时候会遇上 Filename too long 的错误。其实 Git 的文件名是限制为4096个字符。而在 Windows API 中 ，路径的最大长度为260个字符。所以Git的Windows客户端默认是禁用长名称支持的。 解决方法在终端中运行： 1git config --global core.longpaths true 其中 -–global 为该参数的使用范围，表示全局的。若只想对本版本库设置该参数，可去掉 -–global 参考： docs.microsoft.com stackoverflow]]></content>
+      <categories>
+        <category>教程</category>
+        <category>技术</category>
+      </categories>
+      <tags>
+        <tag>问题</tag>
+        <tag>Windows</tag>
+        <tag>教程</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[PDF-XChange Editor配置适合阅读的背景色]]></title>
     <url>%2Fposts%2F24242.html</url>
     <content type="text"><![CDATA[from pixabay 配置 PDF Xchange Editor 的阅读背景以及窗体颜色。文末附破解版 PDF Xchange Editor 的下载。 PDF Xchange EditorPDF-XChange Editor 是一款能够比拟 Adobe Acrobat DC 的 PDF 编辑器。与其它的 PDF 阅读器、查看器和编辑器相比，其体积更小但功能更加丰富。PDF-XChange Editor 的免费版是 PDF-XChange Viewer 。 版本区别 pdf xchange viewer：主要用来进行PDF电子文档的阅读。具有多标签页显示、强大的图像导出功能、批量搜索、高级搜索、放大与导航功能，还有批注功能让人眼前一亮。支持谷歌金山词霸和灵格斯词霸的取词。 pdf xchange editor：相当于 pdf xchange viewer 的加强版。专注于PDF电子文档的编辑功能，小编试用后发现它体积小巧，速度飞快，界面友好，具备丰富的配置和功能选项，而且非常简单易用！可帮助你快速地制作和编写PDF电子文档。 平时使用 PDF-XChange Editor 的主要原因是我有注释的需求，有时候需要在 PDF 上面写写画画。经过这个假期的体验，使用数位板进行注释时选择 PDF-XChange Editor 的体验是最佳的。其它的 Adobe Acrobat DC 、福昕等等使用起来都并不是很方便。另外 PDF-XChange Editor 可以自定义很多东西，根据自己的习惯去配置以方便阅读及注释。 配置背景色-展示配置前，窗体以及阅读区都是大块白色。长时间阅读容易引起眼睛不适。让我来稍微调节一下吧。 我的配置中阅读区是偏纸张的颜色，窗口的上方的颜色偏灰白，左侧的目录区偏水色。 效果展示如下： 颜色主要是参考 中国传统色 ，建议选取 花白、老银、水色、苍色等颜色来搭配，这样的颜色饱和度低看起来很舒适，适合长时间阅读。 配色网站： https://color.uisdc.com/ http://zhongguose.com/ https://colors.ichuantong.cn/ https://coolfishstudio.github.io/cfs-color/ 配置背景色-配置在 PDF-XChange Editor ： 帮助 -&gt; 自定义主题 -&gt; 自定义UI ，可以调整窗口的颜色。我的前景色的 RGB 为 117, 135, 138 ，窗口的 RGB 为 187, 205, 197 ，可以当作参考。 然后切换至 访问 ，勾选忽略文档颜色，调整页面背景色的 RGB 为 210, 198, 178 。这样就和纸张的颜色差不多了，若你喜欢浅绿色护眼，可以尝试更改 RGB 为 200, 237, 204 。 PDF Xchange Editor 与 PDF Xchange viewer 稍有不同，但是大同小异。若你使用的是 PDF Xchange viewer 配置与之类似。 下载官网下载链接： https://www.tracker-software.com/product/downloads/enduser/pdf-xchange-editor 可以在以下云盘下载我使用的破解版 : 天翼云：https://cloud.189.cn/t/RFzMv2ziuiUf (访问码:8u5n) OneDrive 曲奇云盘 Google Drive 腹有诗书气自华，读书万卷始通神。 ——苏轼]]></content>
@@ -25,8 +39,8 @@
         <category>善用佳软</category>
       </categories>
       <tags>
-        <tag>教程</tag>
         <tag>问题</tag>
+        <tag>教程</tag>
         <tag>云盘</tag>
       </tags>
   </entry>
@@ -52,8 +66,8 @@
         <category>技术</category>
       </categories>
       <tags>
-        <tag>教程</tag>
         <tag>问题</tag>
+        <tag>教程</tag>
         <tag>Android</tag>
       </tags>
   </entry>
@@ -183,8 +197,8 @@
         <category>教程</category>
       </categories>
       <tags>
-        <tag>教程</tag>
         <tag>问题</tag>
+        <tag>教程</tag>
       </tags>
   </entry>
   <entry>
@@ -221,8 +235,8 @@
         <category>技术</category>
       </categories>
       <tags>
-        <tag>教程</tag>
         <tag>问题</tag>
+        <tag>教程</tag>
       </tags>
   </entry>
   <entry>
