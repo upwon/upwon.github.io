@@ -65,7 +65,8 @@
 <meta property="og:image" content="https://gitee.com/wang_wx/image_bed/raw/master/2020/ShareX_20200506_171250_1066_619_firefox.png">
 <meta property="og:image" content="https://gitee.com/wang_wx/image_bed/raw/master/2020/ShareX_20200506_172051_1075_627_firefox.png">
 <meta property="og:image" content="https://gitee.com/wang_wx/image_bed/raw/master/2020/20200422083632.jpg">
-<meta property="og:updated_time" content="2020-05-10T11:10:03.596Z">
+<meta property="og:image" content="https://gitee.com/wang_wx/image_bed/raw/master/2020/20200422083632.jpg">
+<meta property="og:updated_time" content="2020-05-29T06:21:45.902Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo博客Markdown写作">
 <meta name="twitter:description" content="Markdown写作的基本语法，及一些Hexo特有的语法。">
@@ -256,7 +257,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-05-10 19:10:03" itemprop="dateModified" datetime="2020-05-10T19:10:03+08:00">2020-05-10</time>
+                <time title="修改时间：2020-05-29 14:21:45" itemprop="dateModified" datetime="2020-05-29T14:21:45+08:00">2020-05-29</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -289,7 +290,7 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>8.3k</span>
+              <span>8.5k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -355,6 +356,12 @@
 <figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">&lt;br/&gt;</span> </span><br><span class="line"><span class="section">&lt;br/&gt;</span> </span><br><span class="line"><span class="section">&lt;br/&gt;</span></span><br></pre></td></tr></table></figure>
 <h3 id="行内代码"><a href="#行内代码" class="headerlink" title="行内代码"></a>行内代码</h3><p>如：<code>AppCompatActivity</code>类,markdown对行内代码的语法是前后用：`,其中 ` 为键盘<kbd>Tab</kbd>箭上面上角那个<kbd>`</kbd></p>
 <figure class="highlight arcade"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">`AppCompatActivity`</span></span><br></pre></td></tr></table></figure>
+<h3 id="HTML-标签-键盘按键"><a href="#HTML-标签-键盘按键" class="headerlink" title="HTML  标签 键盘按键"></a>HTML <kbd> 标签 键盘按键</kbd></h3><p>markdown中可以插入html标签来实现更加丰富的显示效果。例如<code>&lt;kbd&gt;</code>标签来插入键盘按键 <kbd>Ctrl+S</kbd></p>
+<p><strong>定义和用法</strong><br><code>&lt;kbd&gt;</code>标签定义键盘文本。<br>说到技术概念上的特殊样式时，就要提到 <code>&lt;kbd&gt;</code>标签。<br>正如你已经猜到的，它用来表示文本是从键盘上键入的。<br>浏览器通常用等宽字体来显示该标签中包含的文本。<code>&lt;kbd&gt;</code>标签经常用在于计算机相关的文档和手册中。例如：<br>键入<code>&lt;kbd&gt;quit&lt;/kbd&gt;</code>来退出程序，或者键入<code>&lt;kbd&gt;menu&lt;/kbd&gt;</code>来返回主菜单。</p>
+<p>比如：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">kbd</span>&gt;</span>Ctrl<span class="tag">&lt;/<span class="name">kbd</span>&gt;</span>+<span class="tag">&lt;<span class="name">kbd</span>&gt;</span>F<span class="tag">&lt;/<span class="name">kbd</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>显示为：</p>
+<p><kbd>Ctrl</kbd>+<kbd>F</kbd></p>
 <h3 id="代码块显示效果"><a href="#代码块显示效果" class="headerlink" title="代码块显示效果"></a>代码块显示效果</h3><p>注：markdown对代码块的语法是开始和结束行都要添加：<figure class="highlight plain"><figcaption><span>\` 为windows键盘左上角那个，如下：</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">```yaml</span><br><span class="line">kind: RoleBinding</span><br><span class="line">apiVersion: rbac.authorization.k8s.io/v1</span><br><span class="line">metadata:</span><br><span class="line">  name: haimaxy-sa-rolebinding</span><br><span class="line">  namespace: kube-system</span><br><span class="line">subjects:</span><br><span class="line">- kind: ServiceAccount</span><br><span class="line">  name: haimaxy-sa</span><br><span class="line">  namespace: kube-system</span><br><span class="line">roleRef:</span><br><span class="line">  kind: Role</span><br><span class="line">  name: haimaxy-sa-role</span><br><span class="line">  apiGroup: rbac.authorization.k8s.io</span><br></pre></td></tr></table></figure></p>
 <p>要精确指定语言，</p>
 <p>如：<code>java,cpp,css,xml,javascript,python,php,go,kotlin,lua,objectivec</code>等等时，在头部直接指定，如：```javascript，如下：</p>
@@ -592,19 +599,17 @@
           </div>
 <p>   <br></p>
 <p><img src="https://gitee.com/wang_wx/image_bed/raw/master/2020/20200422083632.jpg" class="full-image"></p>
-<figure class="highlight cs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;img src=<span class="string">"https://gitee.com/wang_wx/image_bed/raw/master/2020/20200422083632.jpg"</span> <span class="keyword">class</span>=<span class="string">"full-image"</span> /&gt;</span><br></pre></td></tr></table></figure>
-<p> <br></p>
-<p> <br></p>
-<p><strong>注意</strong></p>
-<p>1）文章内标题请从二级标题（<code>##</code>）开始！<br>2）英语单词、数字左右看情况加上空格！<br>3）Markdwon 文档写完一段回车后务必再回车一次空一行！</p>
-<p> <strong>Reference：</strong></p>
+<p>```<br><img src="https://gitee.com/wang_wx/image_bed/raw/master/2020/20200422083632.jpg" class="full-image"></p>
+<p>   <br></p>
+<p>   <br></p>
+<p>   <strong>Reference：</strong></p>
 <blockquote>
 <p><a href="http://md.aclickall.com/" target="_blank" rel="noopener">Md2All</a></p>
 <p><a href="https://theme-next.iissnan.com/tag-plugins.html" target="_blank" rel="noopener">内置标签</a></p>
 <p><a href="https://theme-next.iissnan.com/tag-plugins.html" target="_blank" rel="noopener">在hexo-NexT中插入note提示块</a></p>
 <p><a href="https://io-oi.me/tech/hexo-next-optimization/" target="_blank" rel="noopener">打造个性超赞博客 Hexo + NexT + GitHub Pages 的超深度优化</a></p>
 <p><a href="http://yearito.cn/posts/hexo-writing-skills.html" target="_blank" rel="noopener">Hexo 搭建个人博客系列：写作技巧篇</a> </p>
-<p><a href="https://blog.lihj.me/post/next-tag-plugin-instruction.html" target="_blank" rel="noopener">NexT 主题内置标签</a><br>```</p>
+<p><a href="https://blog.lihj.me/post/next-tag-plugin-instruction.html" target="_blank" rel="noopener">NexT 主题内置标签</a><br><a href="https://www.w3school.com.cn/tags/tag_kbd.asp" target="_blank" rel="noopener">W3school HTML <kbd> 标签</kbd></a></p>
 </blockquote>
 
     </div>
@@ -730,7 +735,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Markdown基本语法"><span class="nav-text">Markdown基本语法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#标题"><span class="nav-text">标题</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#H5"><span class="nav-text">H5</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#H6"><span class="nav-text">H6</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#强调"><span class="nav-text">强调</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#斜体"><span class="nav-text">斜体</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#强调的斜体"><span class="nav-text">强调的斜体</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#删除"><span class="nav-text">删除</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#外链的超链接"><span class="nav-text">外链的超链接</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#页内的超链接"><span class="nav-text">页内的超链接</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#有序列表"><span class="nav-text">有序列表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#无序列表"><span class="nav-text">无序列表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#引用块"><span class="nav-text">引用块</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#分隔线"><span class="nav-text">分隔线</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#换行"><span class="nav-text">换行</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#行内代码"><span class="nav-text">行内代码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码块显示效果"><span class="nav-text">代码块显示效果</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Markdown扩展语法"><span class="nav-text">Markdown扩展语法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#表格"><span class="nav-text">表格</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HTML"><span class="nav-text">HTML</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Hexo-博客-Next主题特有的一些语法"><span class="nav-text">Hexo 博客 Next主题特有的一些语法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#文本居中的引用"><span class="nav-text">文本居中的引用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Note"><span class="nav-text">Note</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#选项卡"><span class="nav-text">选项卡</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#图标"><span class="nav-text">图标</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Button-标签"><span class="nav-text">Button 标签</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码添加改动标记"><span class="nav-text">代码添加改动标记</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#标签效果"><span class="nav-text">标签效果</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#突破容器宽度限制的图片"><span class="nav-text">突破容器宽度限制的图片</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Markdown基本语法"><span class="nav-text">Markdown基本语法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#标题"><span class="nav-text">标题</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#H5"><span class="nav-text">H5</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#H6"><span class="nav-text">H6</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#强调"><span class="nav-text">强调</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#斜体"><span class="nav-text">斜体</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#强调的斜体"><span class="nav-text">强调的斜体</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#删除"><span class="nav-text">删除</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#外链的超链接"><span class="nav-text">外链的超链接</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#页内的超链接"><span class="nav-text">页内的超链接</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#有序列表"><span class="nav-text">有序列表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#无序列表"><span class="nav-text">无序列表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#引用块"><span class="nav-text">引用块</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#分隔线"><span class="nav-text">分隔线</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#换行"><span class="nav-text">换行</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#行内代码"><span class="nav-text">行内代码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HTML-标签-键盘按键"><span class="nav-text">HTML  标签 键盘按键</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码块显示效果"><span class="nav-text">代码块显示效果</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Markdown扩展语法"><span class="nav-text">Markdown扩展语法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#表格"><span class="nav-text">表格</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HTML"><span class="nav-text">HTML</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Hexo-博客-Next主题特有的一些语法"><span class="nav-text">Hexo 博客 Next主题特有的一些语法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#文本居中的引用"><span class="nav-text">文本居中的引用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Note"><span class="nav-text">Note</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#选项卡"><span class="nav-text">选项卡</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#图标"><span class="nav-text">图标</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Button-标签"><span class="nav-text">Button 标签</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码添加改动标记"><span class="nav-text">代码添加改动标记</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#标签效果"><span class="nav-text">标签效果</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#突破容器宽度限制的图片"><span class="nav-text">突破容器宽度限制的图片</span></a></li></ol></div>
 
 
       </div>
@@ -748,20 +753,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">29</span>
+          <span class="site-state-item-count">34</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">7</span>
+        <span class="site-state-item-count">8</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">24</span>
+        <span class="site-state-item-count">25</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -818,13 +823,13 @@
       <i class="fa fa-area-chart"></i>
     </span>
       <span class="post-meta-item-text">站点总字数：</span>
-    <span title="站点总字数">210k</span>
+    <span title="站点总字数">365k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">3:11</span>
+    <span title="站点阅读时长">5:32</span>
 </div>
 
         
