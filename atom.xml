@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.lifeee.top/"/>
-  <updated>2020-05-29T15:00:45.193Z</updated>
+  <updated>2020-05-30T01:09:17.882Z</updated>
   <id>https://www.lifeee.top/</id>
   
   <author>
@@ -21,12 +21,12 @@
     <link href="https://www.lifeee.top/posts/61877.html"/>
     <id>https://www.lifeee.top/posts/61877.html</id>
     <published>2020-05-29T10:44:32.000Z</published>
-    <updated>2020-05-29T15:00:45.193Z</updated>
+    <updated>2020-05-30T01:09:17.882Z</updated>
     
     <summary type="html">
     
       &lt;p&gt;&lt;img src=&quot;https://gitee.com/wang_wx/image_bed/raw/master/2020/20200529230039.jpeg&quot; alt&gt;&lt;/p&gt;
-&lt;p&gt;本文介绍了如何从 3GPP 36.331 或者 38.331 中提取出 RRC 中的 ASN。1 描述。&lt;/p&gt;
+&lt;p&gt;本文介绍了如何从 3GPP 36.331 或者 38.331 中提取出 RRC 中的 ASN.1 部分抽象描述内容。&lt;/p&gt;
     
     </summary>
     
@@ -37,13 +37,13 @@
       <category term="通信" scheme="https://www.lifeee.top/categories/%E9%80%9A%E4%BF%A1/"/>
     
     
+      <category term="通信" scheme="https://www.lifeee.top/tags/%E9%80%9A%E4%BF%A1/"/>
+    
       <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
     
       <category term="善用佳软" scheme="https://www.lifeee.top/tags/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
     
       <category term="分享" scheme="https://www.lifeee.top/tags/%E5%88%86%E4%BA%AB/"/>
-    
-      <category term="通信" scheme="https://www.lifeee.top/tags/%E9%80%9A%E4%BF%A1/"/>
     
   </entry>
   
@@ -61,9 +61,9 @@
     
     </summary>
     
-      <category term="编程" scheme="https://www.lifeee.top/categories/%E7%BC%96%E7%A8%8B/"/>
-    
       <category term="技术" scheme="https://www.lifeee.top/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+      <category term="编程" scheme="https://www.lifeee.top/categories/%E7%BC%96%E7%A8%8B/"/>
     
     
       <category term="C++" scheme="https://www.lifeee.top/tags/C/"/>
@@ -85,9 +85,9 @@
     
     </summary>
     
-      <category term="编程" scheme="https://www.lifeee.top/categories/%E7%BC%96%E7%A8%8B/"/>
-    
       <category term="技术" scheme="https://www.lifeee.top/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+      <category term="编程" scheme="https://www.lifeee.top/categories/%E7%BC%96%E7%A8%8B/"/>
     
     
       <category term="C++" scheme="https://www.lifeee.top/tags/C/"/>
@@ -112,9 +112,9 @@
     
     </summary>
     
-      <category term="编程" scheme="https://www.lifeee.top/categories/%E7%BC%96%E7%A8%8B/"/>
-    
       <category term="技术" scheme="https://www.lifeee.top/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+      <category term="编程" scheme="https://www.lifeee.top/categories/%E7%BC%96%E7%A8%8B/"/>
     
     
       <category term="C++" scheme="https://www.lifeee.top/tags/C/"/>
@@ -141,16 +141,16 @@
     
     </summary>
     
-      <category term="编程" scheme="https://www.lifeee.top/categories/%E7%BC%96%E7%A8%8B/"/>
-    
       <category term="技术" scheme="https://www.lifeee.top/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+      <category term="编程" scheme="https://www.lifeee.top/categories/%E7%BC%96%E7%A8%8B/"/>
     
       <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
     
     
-      <category term="C++" scheme="https://www.lifeee.top/tags/C/"/>
-    
       <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
+    
+      <category term="C++" scheme="https://www.lifeee.top/tags/C/"/>
     
   </entry>
   
@@ -173,9 +173,9 @@
       <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
     
     
-      <category term="Windows" scheme="https://www.lifeee.top/tags/Windows/"/>
-    
       <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
+    
+      <category term="Windows" scheme="https://www.lifeee.top/tags/Windows/"/>
     
       <category term="问题" scheme="https://www.lifeee.top/tags/%E9%97%AE%E9%A2%98/"/>
     
@@ -202,11 +202,11 @@
       <category term="善用佳软" scheme="https://www.lifeee.top/categories/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
     
     
-      <category term="Windows" scheme="https://www.lifeee.top/tags/Windows/"/>
-    
       <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
     
       <category term="善用佳软" scheme="https://www.lifeee.top/tags/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
+    
+      <category term="Windows" scheme="https://www.lifeee.top/tags/Windows/"/>
     
       <category term="阅读" scheme="https://www.lifeee.top/tags/%E9%98%85%E8%AF%BB/"/>
     
@@ -505,11 +505,11 @@
       <category term="善用佳软" scheme="https://www.lifeee.top/categories/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
     
     
-      <category term="Windows" scheme="https://www.lifeee.top/tags/Windows/"/>
-    
       <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
     
       <category term="善用佳软" scheme="https://www.lifeee.top/tags/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
+    
+      <category term="Windows" scheme="https://www.lifeee.top/tags/Windows/"/>
     
   </entry>
   
