@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.lifeee.top/"/>
-  <updated>2020-05-30T07:31:53.085Z</updated>
+  <updated>2020-06-04T11:55:21.918Z</updated>
   <id>https://www.lifeee.top/</id>
   
   <author>
@@ -15,6 +15,60 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>网易云音乐生成外链播放器</title>
+    <link href="https://www.lifeee.top/posts/20372.html"/>
+    <id>https://www.lifeee.top/posts/20372.html</id>
+    <published>2020-06-04T09:40:47.000Z</published>
+    <updated>2020-06-04T11:55:21.918Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://gitee.com/wang_wx/image_bed/raw/master/2020/river-between-trees-in-aerial-photography-1916736s.jpg&quot; alt&gt;&lt;/p&gt;
+&lt;center&gt;&lt;font size=&quot;1&quot;&gt;pexels &lt;/font&gt;&lt;/center&gt;
+
+&lt;p&gt;网易云音乐生成外链，嵌入到网页当中。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
+    
+      <category term="善用佳软" scheme="https://www.lifeee.top/categories/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
+    
+    
+      <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
+    
+      <category term="善用佳软" scheme="https://www.lifeee.top/tags/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>5G NR 常用术语</title>
+    <link href="https://www.lifeee.top/posts/55098.html"/>
+    <id>https://www.lifeee.top/posts/55098.html</id>
+    <published>2020-06-03T13:53:25.000Z</published>
+    <updated>2020-06-04T09:04:41.693Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/upwon/MyPicture@master/img20200604165231.jpeg&quot; alt&gt;&lt;/p&gt;
+&lt;center&gt;&lt;font size=&quot;1&quot;&gt;图片来自酷安 &lt;/font&gt;&lt;/center&gt;
+
+&lt;p&gt;DFT-s-OFDM到底是什么呢？mMTC又为何？您能运用SS-RSRQ于句子中吗？5G术语和缩写的数量，无止境地不断增加。阅读本文，带您了解 5G NR 中常用的术语 🌞&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="技术" scheme="https://www.lifeee.top/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+      <category term="通信" scheme="https://www.lifeee.top/categories/%E9%80%9A%E4%BF%A1/"/>
+    
+    
+      <category term="5G" scheme="https://www.lifeee.top/tags/5G/"/>
+    
+      <category term="通信" scheme="https://www.lifeee.top/tags/%E9%80%9A%E4%BF%A1/"/>
+    
+  </entry>
   
   <entry>
     <title>提取3GPP LTE/5GNR中RRC的ASN.1</title>
@@ -143,14 +197,14 @@
     
       <category term="技术" scheme="https://www.lifeee.top/categories/%E6%8A%80%E6%9C%AF/"/>
     
-      <category term="编程" scheme="https://www.lifeee.top/categories/%E7%BC%96%E7%A8%8B/"/>
-    
       <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
     
+      <category term="编程" scheme="https://www.lifeee.top/categories/%E7%BC%96%E7%A8%8B/"/>
     
-      <category term="C++" scheme="https://www.lifeee.top/tags/C/"/>
     
       <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
+    
+      <category term="C++" scheme="https://www.lifeee.top/tags/C/"/>
     
   </entry>
   
@@ -175,9 +229,9 @@
     
       <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
     
-      <category term="Windows" scheme="https://www.lifeee.top/tags/Windows/"/>
-    
       <category term="问题" scheme="https://www.lifeee.top/tags/%E9%97%AE%E9%A2%98/"/>
+    
+      <category term="Windows" scheme="https://www.lifeee.top/tags/Windows/"/>
     
   </entry>
   
@@ -271,7 +325,7 @@
     <link href="https://www.lifeee.top/posts/13004.html"/>
     <id>https://www.lifeee.top/posts/13004.html</id>
     <published>2020-05-08T07:51:14.000Z</published>
-    <updated>2020-05-09T02:46:59.005Z</updated>
+    <updated>2020-06-04T08:53:30.235Z</updated>
     
     <summary type="html">
     
@@ -430,7 +484,7 @@
     <link href="https://www.lifeee.top/posts/30773.html"/>
     <id>https://www.lifeee.top/posts/30773.html</id>
     <published>2020-05-04T01:57:35.000Z</published>
-    <updated>2020-05-06T10:55:01.491Z</updated>
+    <updated>2020-06-04T08:48:39.423Z</updated>
     
     <summary type="html">
     
@@ -498,9 +552,9 @@
     
     </summary>
     
-      <category term="编程" scheme="https://www.lifeee.top/categories/%E7%BC%96%E7%A8%8B/"/>
-    
       <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
+    
+      <category term="编程" scheme="https://www.lifeee.top/categories/%E7%BC%96%E7%A8%8B/"/>
     
       <category term="善用佳软" scheme="https://www.lifeee.top/categories/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
     
@@ -510,54 +564,6 @@
       <category term="善用佳软" scheme="https://www.lifeee.top/tags/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
     
       <category term="Windows" scheme="https://www.lifeee.top/tags/Windows/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>为博客添加樱花飘落的效果</title>
-    <link href="https://www.lifeee.top/posts/64617.html"/>
-    <id>https://www.lifeee.top/posts/64617.html</id>
-    <published>2020-04-18T15:10:17.000Z</published>
-    <updated>2020-05-10T08:39:52.702Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;https://gitee.com/wang_wx/image_bed/raw/master/2020/20200422083632.jpg&quot; alt&gt;&lt;/p&gt;
-&lt;center&gt;&lt;font size=&quot;1.5&quot;&gt;Thank you Susanne Jutzeler for sharing this awesome photo on @pexels for free! https://www.pexels.com/zh-cn/photo/2099737/ &lt;/font&gt;&lt;/center&gt;
-
-&lt;p&gt;偶然看见别人博客中樱花飘落的效果，感觉很棒，于是我也给博客加上了樱花 &lt;img src=&quot;https://gitee.com/wang_wx/image_bed/raw/master/2020/20200418224427.png&quot; alt&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
-    
-    
-      <category term="博客" scheme="https://www.lifeee.top/tags/%E5%8D%9A%E5%AE%A2/"/>
-    
-      <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>解决 word 中粘贴出现找不到 MathPage.wll 文件的错误</title>
-    <link href="https://www.lifeee.top/posts/57547.html"/>
-    <id>https://www.lifeee.top/posts/57547.html</id>
-    <published>2020-04-03T01:26:37.000Z</published>
-    <updated>2020-04-25T01:35:10.652Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;https://gitee.com/wang_wx/image_bed/raw/master/2020/20200403100620.png&quot; alt&gt;&lt;/p&gt;
-&lt;p&gt;MathType 是一款功能很强大的数学公式编辑器,但是因为不明原因,有时在 word 中复制粘贴时会出现找不到MathPage.wll 文件的错误窗口提示，导致粘贴失效。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
-    
-    
-      <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
-    
-      <category term="问题" scheme="https://www.lifeee.top/tags/%E9%97%AE%E9%A2%98/"/>
     
   </entry>
   
