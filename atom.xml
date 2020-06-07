@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.lifeee.top/"/>
-  <updated>2020-06-04T13:26:40.643Z</updated>
+  <updated>2020-06-07T06:58:21.307Z</updated>
   <id>https://www.lifeee.top/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>C# VS Code launch:program … does not exist 不存在</title>
+    <link href="https://www.lifeee.top/posts/59557.html"/>
+    <id>https://www.lifeee.top/posts/59557.html</id>
+    <published>2020-06-07T06:34:46.000Z</published>
+    <updated>2020-06-07T06:58:21.307Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://gitee.com/wang_wx/image_bed/raw/master/2020/20200607145346.jpg&quot; alt=&quot;🍃&quot;&gt;&lt;/p&gt;
+&lt;p&gt;解决 VS Code 中调试C# 出现 C# VS Code launch:program … does not exist 不存在的问题。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
+    
+      <category term="编程" scheme="https://www.lifeee.top/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+      <category term="善用佳软" scheme="https://www.lifeee.top/categories/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
+    
+    
+      <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
+    
+      <category term="善用佳软" scheme="https://www.lifeee.top/tags/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
+    
+      <category term="问题" scheme="https://www.lifeee.top/tags/%E9%97%AE%E9%A2%98/"/>
+    
+      <category term="Windows" scheme="https://www.lifeee.top/tags/Windows/"/>
+    
+  </entry>
   
   <entry>
     <title>更改hosts加速访问Github</title>
@@ -30,9 +61,9 @@
     
     </summary>
     
-      <category term="问题" scheme="https://www.lifeee.top/categories/%E9%97%AE%E9%A2%98/"/>
-    
       <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
+    
+      <category term="问题" scheme="https://www.lifeee.top/categories/%E9%97%AE%E9%A2%98/"/>
     
     
       <category term="github" scheme="https://www.lifeee.top/tags/github/"/>
@@ -109,18 +140,18 @@
     
     </summary>
     
-      <category term="技术" scheme="https://www.lifeee.top/categories/%E6%8A%80%E6%9C%AF/"/>
-    
       <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
+    
+      <category term="技术" scheme="https://www.lifeee.top/categories/%E6%8A%80%E6%9C%AF/"/>
     
       <category term="通信" scheme="https://www.lifeee.top/categories/%E9%80%9A%E4%BF%A1/"/>
     
     
-      <category term="通信" scheme="https://www.lifeee.top/tags/%E9%80%9A%E4%BF%A1/"/>
-    
       <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
     
       <category term="善用佳软" scheme="https://www.lifeee.top/tags/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
+    
+      <category term="通信" scheme="https://www.lifeee.top/tags/%E9%80%9A%E4%BF%A1/"/>
     
       <category term="分享" scheme="https://www.lifeee.top/tags/%E5%88%86%E4%BA%AB/"/>
     
@@ -220,16 +251,16 @@
     
     </summary>
     
+      <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
+    
       <category term="编程" scheme="https://www.lifeee.top/categories/%E7%BC%96%E7%A8%8B/"/>
     
       <category term="技术" scheme="https://www.lifeee.top/categories/%E6%8A%80%E6%9C%AF/"/>
     
-      <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
-    
-    
-      <category term="C++" scheme="https://www.lifeee.top/tags/C/"/>
     
       <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
+    
+      <category term="C++" scheme="https://www.lifeee.top/tags/C/"/>
     
   </entry>
   
@@ -247,9 +278,9 @@
     
     </summary>
     
-      <category term="技术" scheme="https://www.lifeee.top/categories/%E6%8A%80%E6%9C%AF/"/>
-    
       <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
+    
+      <category term="技术" scheme="https://www.lifeee.top/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
       <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
@@ -305,9 +336,9 @@
     
     </summary>
     
-      <category term="技术" scheme="https://www.lifeee.top/categories/%E6%8A%80%E6%9C%AF/"/>
-    
       <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
+    
+      <category term="技术" scheme="https://www.lifeee.top/categories/%E6%8A%80%E6%9C%AF/"/>
     
       <category term="善用佳软" scheme="https://www.lifeee.top/categories/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
     
@@ -334,9 +365,9 @@
     
     </summary>
     
-      <category term="问题" scheme="https://www.lifeee.top/categories/%E9%97%AE%E9%A2%98/"/>
-    
       <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
+    
+      <category term="问题" scheme="https://www.lifeee.top/categories/%E9%97%AE%E9%A2%98/"/>
     
     
       <category term="问题" scheme="https://www.lifeee.top/tags/%E9%97%AE%E9%A2%98/"/>
@@ -361,9 +392,9 @@
     
     </summary>
     
-      <category term="技术" scheme="https://www.lifeee.top/categories/%E6%8A%80%E6%9C%AF/"/>
-    
       <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
+    
+      <category term="技术" scheme="https://www.lifeee.top/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
       <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
@@ -388,9 +419,9 @@
     
     </summary>
     
-      <category term="技术" scheme="https://www.lifeee.top/categories/%E6%8A%80%E6%9C%AF/"/>
-    
       <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
+    
+      <category term="技术" scheme="https://www.lifeee.top/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
       <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
@@ -415,14 +446,14 @@
     
     </summary>
     
-      <category term="技术" scheme="https://www.lifeee.top/categories/%E6%8A%80%E6%9C%AF/"/>
-    
       <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
     
+      <category term="技术" scheme="https://www.lifeee.top/categories/%E6%8A%80%E6%9C%AF/"/>
     
-      <category term="博客" scheme="https://www.lifeee.top/tags/%E5%8D%9A%E5%AE%A2/"/>
     
       <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
+    
+      <category term="博客" scheme="https://www.lifeee.top/tags/%E5%8D%9A%E5%AE%A2/"/>
     
   </entry>
   
@@ -470,9 +501,9 @@
     
     </summary>
     
-      <category term="技术" scheme="https://www.lifeee.top/categories/%E6%8A%80%E6%9C%AF/"/>
-    
       <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
+    
+      <category term="技术" scheme="https://www.lifeee.top/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
       <category term="问题" scheme="https://www.lifeee.top/tags/%E9%97%AE%E9%A2%98/"/>
@@ -533,33 +564,6 @@
       <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
     
       <category term="善用佳软" scheme="https://www.lifeee.top/tags/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>那些年我订阅的Telegram频道</title>
-    <link href="https://www.lifeee.top/posts/20469.html"/>
-    <id>https://www.lifeee.top/posts/20469.html</id>
-    <published>2020-04-29T14:03:21.000Z</published>
-    <updated>2020-05-06T08:03:09.393Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;https://gitee.com/wang_wx/image_bed/raw/master/2020/20200429224148.png&quot; alt&gt;&lt;/p&gt;
-&lt;p&gt;分享一些我订阅的 Telegram 频道 ，本文持续更新&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
-    
-      <category term="善用佳软" scheme="https://www.lifeee.top/categories/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
-    
-    
-      <category term="善用佳软" scheme="https://www.lifeee.top/tags/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
-    
-      <category term="推荐" scheme="https://www.lifeee.top/tags/%E6%8E%A8%E8%8D%90/"/>
-    
-      <category term="那些年系列" scheme="https://www.lifeee.top/tags/%E9%82%A3%E4%BA%9B%E5%B9%B4%E7%B3%BB%E5%88%97/"/>
     
   </entry>
   
