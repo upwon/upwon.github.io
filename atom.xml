@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.lifeee.top/"/>
-  <updated>2020-06-10T12:30:26.725Z</updated>
+  <updated>2020-06-10T12:33:54.152Z</updated>
   <id>https://www.lifeee.top/</id>
   
   <author>
@@ -21,14 +21,14 @@
     <link href="https://www.lifeee.top/posts/1128.html"/>
     <id>https://www.lifeee.top/posts/1128.html</id>
     <published>2020-06-10T11:23:01.000Z</published>
-    <updated>2020-06-10T12:30:26.725Z</updated>
+    <updated>2020-06-10T12:33:54.152Z</updated>
     
     <summary type="html">
     
       &lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/upwon/MyPicture@master/imgimage-20200610193140774.png&quot; alt=&quot;火绒安全日志&quot;&gt;&lt;/p&gt;
 &lt;p&gt; 临近6.18电商促销日，火绒在官方微博、微信等平台收到不少用户反馈，称电脑不断出现托盘闪烁弹窗，点击后即为淘宝天猫的6.18促销网页。火绒工程师溯源调查后发现，该弹窗均来自于常用软件“搜狗输入法”，该广告配置通过云控下发，无法通过设置关闭。进一步分析发现，该软件除了疯狂弹窗，还存在统计用户浏览器浏览历史数据等越位行为，符合广告程序的定义。目前，火绒已对该软件中广告模块进行拦截查杀。&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;病毒名称：Adware/Sogou.a| 病毒ID：DFFE5437C89E3403&lt;/p&gt;
+&lt;p&gt;病毒名称：Adware/Sogou.a   病毒ID：DFFE5437C89E3403&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;本文转载自 &lt;a href=&quot;http://bbs.huorong.cn/thread-72058-1-1.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;火绒安全论坛&lt;/a&gt; &lt;a href=&quot;http://bbs.huorong.cn/thread-72058-1-1.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;http://bbs.huorong.cn/thread-72058-1-1.html&lt;/a&gt;&lt;/p&gt;
     
@@ -39,9 +39,9 @@
       <category term="转载" scheme="https://www.lifeee.top/categories/%E8%BD%AC%E8%BD%BD/"/>
     
     
-      <category term="数学" scheme="https://www.lifeee.top/tags/%E6%95%B0%E5%AD%A6/"/>
-    
       <category term="网络安全" scheme="https://www.lifeee.top/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/"/>
+    
+      <category term="数学" scheme="https://www.lifeee.top/tags/%E6%95%B0%E5%AD%A6/"/>
     
   </entry>
   
@@ -200,9 +200,9 @@
     
     </summary>
     
-      <category term="技术" scheme="https://www.lifeee.top/categories/%E6%8A%80%E6%9C%AF/"/>
-    
       <category term="编程" scheme="https://www.lifeee.top/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+      <category term="技术" scheme="https://www.lifeee.top/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
       <category term="C++" scheme="https://www.lifeee.top/tags/C/"/>
@@ -224,9 +224,9 @@
     
     </summary>
     
-      <category term="技术" scheme="https://www.lifeee.top/categories/%E6%8A%80%E6%9C%AF/"/>
-    
       <category term="编程" scheme="https://www.lifeee.top/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+      <category term="技术" scheme="https://www.lifeee.top/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
       <category term="C++" scheme="https://www.lifeee.top/tags/C/"/>
@@ -251,9 +251,9 @@
     
     </summary>
     
-      <category term="技术" scheme="https://www.lifeee.top/categories/%E6%8A%80%E6%9C%AF/"/>
-    
       <category term="编程" scheme="https://www.lifeee.top/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+      <category term="技术" scheme="https://www.lifeee.top/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
       <category term="C++" scheme="https://www.lifeee.top/tags/C/"/>
@@ -280,9 +280,9 @@
     
     </summary>
     
-      <category term="技术" scheme="https://www.lifeee.top/categories/%E6%8A%80%E6%9C%AF/"/>
-    
       <category term="编程" scheme="https://www.lifeee.top/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+      <category term="技术" scheme="https://www.lifeee.top/categories/%E6%8A%80%E6%9C%AF/"/>
     
       <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
     
