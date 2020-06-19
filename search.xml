@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[迁移搜狗输入法词库至微软拼音/手心输入法]]></title>
+    <url>%2Fposts%2F1380.html</url>
+    <content type="text"><![CDATA[鉴于搜狗输入法的越权行为，严重侵害用户的利益与隐私。因此我卸载了搜狗输入法，并迁移词库至微软拼音与手心输入法。 😾 卸载搜狗输入法前，需要导出词库。然后转换词库，最后导入其它输入法。详细步骤请继续往下看。🌞 导出词库在使用搜狗输入法打字时，在其界面上右击，选择属性设置。 选择词库，然后在基础词库一栏中选择导出/备份，见下图。 导出后的词库如下图所示，后缀为bin 导出后就可以卸载该输入法了，然后将搜狗词库转换为其它输入法的词库，导入即可。导入方法见本文后面的内容。 卸载搜狗，才能提升用户体验 词库文件转换由于各个输入的词库文件格式不尽相同，一直没有标准化。因此需要通过工具来转换文件以导入其它输入法。 首先，下载 深蓝词库转换工具。这是一款开源免费的输入法词库转换程序 。可在 Github 下载 或 蓝奏云 下载，提取码 summer。 解压后运行 深蓝词库转换.exe ，开始进行词库转换。 打开刚刚搜狗导出的词库文件。 在界面中选择导出的输入法类型，这里以微软拼音与手心为例。 微软拼音微软拼音自学习词库对词库的支持是2W个词条，所以如果源词库太大，则无法导入，所以本转换工具也做了限制，只支持2W条内的词库转换，如果源词库太大，可以通过高级设置中的词条长度、词频等过滤条件，将词库控制在2W内。 点击高级设置的“词条过滤设置”，设置一个合理的词频或者其他过滤，让最终文件词条小于2W。 然后点击转换即可。 然后切换按住 Shift + Ctrl 切换至微软拼音输入法，在右下角语言右击选择设置，然后选择词库和自学习。 打开微软拼音的自学习词库导入页面，选择刚才生成的dat文件，进行导入，几秒后提示导入成功。 手心同样选择手心输入法，然后选择高级设置，词条过滤设置 点击转换，预览一下词库，觉得差不多的话点击是，导出至硬盘。若感觉有偏差，可重新设置词库过滤。 安装手心输入法后，切换至手心输入法，右击语言栏，选择设置属性，选择词库导入转换后的词库即可。 当然可以将词库导入到其它输入法，比如： QQ拼音 、谷歌拼音、极点五笔等等。看个人喜好迁移词库，清爽上网。（逃） 🍻 向浅洲远渚，亭亭清绝。 — 张炎《疏影·咏荷叶》]]></content>
+      <categories>
+        <category>教程</category>
+        <category>善用佳软</category>
+      </categories>
+      <tags>
+        <tag>教程</tag>
+        <tag>善用佳软</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[向下就是天空]]></title>
     <url>%2Fposts%2F45421.html</url>
     <content type="text"><![CDATA[那是去年的景象，我们奔跑在雨季 入夜，在世界里漫游 分享 奇怪的日子 · 《向下就是天空》🎵 奇怪的日子 · 《向下就是天空》 那是去年的景象，我们奔跑在雨季入夜，在世界里漫游你问我的小说《落日青春》写得怎样了我笑说这城市的改造让我迷路了入夜，在梦中醒来，车灯在窗前一闪而过你不会说漂亮的情话，但你是个固执的女人死亡占据了整个童年你也并不害怕确认和期待什么说说你，说说你的爱情，你的过去，你常这样问我天空像蓝色的孩子，田野上的小路有动物的足迹叶子的故乡受到土地和阳光的恩宠，笑声传遍山谷我们为了寻找幻想之光在城市的最高处却看到了一片汪洋 你的快乐来自夏天的每一阵雨虽然有时候会独自哭泣我说喜欢看你坐在门前的石头上一支烟的功夫，黄昏就来了你问我小说里是不是有旧时的风物我说那只是消失的记忆真的那么崭新和伟大吗？没有，只是时间流过，连痕迹也没有留下我们生活在失信最猛的时代新生的儿童都被称作了天才在拥挤混乱的空间里，小丑们高歌说，我们来了！路边的小铁门上写着“彼此相爱”四个字，夕阳照在上面特别美忽然你说想要喝酒，还要阳光和不孤独我们整夜地念诗，在宿醉的夜晚寻找向下的方式也许音乐会从左边响起无节奏的声音在城市上空弥漫寻欢作乐的人们以为时代复兴了，用干瘪的腔调说来一段我想要的！我说，嘿，朋友，别忘了我们是行走在这荒凉之城的大街上我们从夜里醒来，相互给予了温暖的信号我的文字里有故乡的记忆这也是我们讨论多次的话题现在我还生活一个承诺在结伴而行的日子里道路虽被淹没，但向下就是天空……]]></content>
@@ -76,8 +89,8 @@
         <category>通信</category>
       </categories>
       <tags>
-        <tag>通信</tag>
         <tag>5G</tag>
+        <tag>通信</tag>
       </tags>
   </entry>
   <entry>
@@ -86,8 +99,8 @@
     <content type="text"><![CDATA[本文介绍了如何从 3GPP 36.331 或者 38.331 中提取出 RRC 中的 ASN.1 部分抽象描述内容。 ASN.1 标准简介在电信和计算机网络领域，ASN.1（Abstract Syntax Notation One) 是一套标准，是描述数据、编码、传输、解码的灵活的抽象语义记法。它提供了一套正式、无歧义和精确的规则以描述独立于特定计算机硬件的对象结构。 ASN.1 标准下载描述ASN.1记法的标准： ITU-T Rec. X.680 | ISO/IEC 8824-1 ITU-T Rec. X.681 | ISO/IEC 8824-2 ITU-T Rec. X.682 | ISO/IEC 8824-3 ITU-T Rec. X.683 | ISO/IEC 8824-4 从ITU-T网站免费下载 描述ASN.1编码规则的标准 ITU-T Rec. X.690 | ISO/IEC 8825-1 (BER, CER and DER) ITU-T Rec. X.691 | ISO/IEC 8825-2 (PER) ITU-T Rec. X.692 | ISO/IEC 8825-3 (ECN) ITU-T Rec. X.693 | ISO/IEC 8825-4 (XER) ASN.1标准列表 关于 ASN.1的标准，可以在 ISO/ITU-T 中找到关于本部分标准的链接，打开 http://www.itu.int/ITU-T/recommendations/index.aspx 在 search 栏输入 x.680~x.683 或 x.690 可以查看到 ASN.1 的具体标准及编解码的方法，或者从 http://www.itu.int/ITU-T/studygroups/com17/languages/ 获得相关文档 范例FooProtocol 结构的定义系使用 ASN.1 表示法: 12345678910111213FooProtocol DEFINITIONS ::= BEGIN FooQuestion ::= SEQUENCE &#123; trackingNumber INTEGER, question IA5String &#125; FooAnswer ::= SEQUENCE &#123; questionNumber INTEGER, answer BOOLEAN &#125;END ASN.1没有定义的谈话流动。 这是协议的文本描述。 假设消息，符合与foo的协议将被发送到接收方。这种特定的消息（PDU）: 1234myQuestion FooQuestion ::= &#123; trackingNumber 5, question "Anybody there?"&#125; 要通过网络发送上述消息，需要编码成位元字串（string of bits）。ASN.1定义了不同的算法来完成这项任务，被称为编码规则。有很多，最简单的一个是DER. Foo协议规范应明确名称一套编码规则的使用，Foo的协议，使用者 知道他们应该使用哪一个。 下载3GPP协议打开https://www.3gpp.org/ftp/Specs/archive 比如下载 38.331 5G NR 的无线资源控制(RRC)协议是 38.331LTE 的无线资源控制(RRC)协议是 36.331 协议中的 ASN.1 描述长这个样子 😎 当然你可以手动复制粘贴出来，但是这样效率低下，浪费时间。因此推荐使用工具或者自己用代码来提取。具体方法请继续往下看哦 🌱 转换工具下载在 https://github.com/Dybinx/txt2asn1 中下载 txt2asn1 开始转换为 ASN.1下载好 38.331或者36.331，在 word 中打开协议，选择另存为，将其保存为 TXT 格式。 在 txt2asn1 所在的路径下打开终端，输入： 1txt2asn1.exe 待转换txt文件路径 就能转换得到 ASN1文件了。 比如我输入: 1txt2asn1.exe 36331-g00.txt 就能获得 36331-g00.asn1 文件了。 在 VS Code 打开生成的文件看一看 ，效果美滋滋 🍦 推荐在 VS Code 中安装 ASN.1 VS Code Extension ，格式化后的 ASN.1 即美观又方便查看。 阅读过程中，可以按住 Ctrl 然后点击鼠标左键，就能实现在一些配置信息之间跳转。 转换ASN.1-方式二新建一个 C++ 项目 ，在 main.cpp 中粘贴如下的代码。注意把 input_file 的路径改一下。代码来自 peng_yw 。 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899100101102103104105106107108109110111112113114115116117118119120121122123124125126127128129130131132133134135136137138139140141142143144145146147148#include &lt;iostream&gt;#include &lt;fstream&gt;#include &lt;string&gt;#include &lt;vector&gt;using namespace std;int main()&#123; std::string output_file; std::string input_file = "D:/Project_codeing/VisualStudio/Cplusplus/3GPP-ASN.1/Get-3GPP-ASN.1/Files/36331-g00.txt"; std::cout &lt;&lt; input_file.c_str() &lt;&lt; std::endl; int pos = input_file.find('.'); if (pos == std::string::npos) &#123; output_file = input_file + ".asn1"; &#125; else &#123; output_file = input_file + "_.asn1"; // output_file = input_file.substr(0, pos) + ".asn1"; &#125; std::fstream input; input.open(input_file.c_str(), std::fstream::in); if (input.fail() == true) &#123; std::cout &lt;&lt; "Please check input file is correct !" &lt;&lt; std::endl; return 1; &#125; std::fstream output; output.open(output_file.c_str(), std::fstream::out); if (output.fail() == true) &#123; std::cout &lt;&lt; "The output file can not be created here !" &lt;&lt; std::endl; return 1; &#125; std::string input_line; std::vector&lt;std::string &gt; vec_asn; std::vector&lt;std::string &gt;::iterator itr; const unsigned long cul_asn_idle = 0x0; const unsigned long cul_asn_start = 0x1; unsigned long asn_state = cul_asn_idle; while (std::getline(input, input_line)) &#123; if (cul_asn_idle == asn_state) &#123; if (input_line.find("-- ASN1START") != std::string::npos) &#123; asn_state |= cul_asn_start; &#125; continue; &#125; if (0 != (cul_asn_start &amp; asn_state)) &#123; if (input_line.find("-- ASN1STOP") != std::string::npos) &#123; asn_state = cul_asn_idle; &#125; else &#123; vec_asn.push_back(input_line); &#125; &#125; &#125; for (itr = vec_asn.begin(); itr != vec_asn.end(); ++itr) &#123; output &lt;&lt; *itr &lt;&lt; std::endl; &#125; input.close(); output.close(); return 0;&#125; 当然可以把输入参数那里不要固定死，弄成一个输入参数的程序，这样在命令行中使用的话也会很方便的。 编译项目后运行，然后就会在 input_file 的路径下产生一个后缀为 .asn1的文件。 利用开源ASN1C库实现asn.1的编解码，生成C代码在 http://lionet.info/asn1c/download.html 中下载 Windows installer ，然后安装。 关于详细的使用方式可以在项目地址中查看到：https://github.com/vlm/asn1c 。关于这个编译器的详细的文档在 doc / asn1c-usage.pdf 中。 快速使用在安装编译器(请参阅 INSTALL.md)之后，您可以使用 asn1c 命令编译 ASN. 1规范: 1asn1c &lt;module.asn1&gt; # Compile module 如果多个规范包含相互依赖关系，则必须同时指定所有规范: 1asn1c &lt;module1.asn1&gt; &lt;module2.asn1&gt; ... # Compile interdependent modules 实际测试在 samples 文件夹下有 ASN.1 示例文件，就让我来测试一下吧。 输入以下命令行 1asn1c -P ./samples/rfc3280-*.asn1 在本例中，-P选项用于在标准输出上打印编译后的文本。 默认行为是asn1c编译器为在指定ASN.1模块中找到的每个ASN.1类型创建多个.c和.h文件。 这样就打印出来了： 在使用说明 asn1c-usage.pdf 中有其他使用的示例。 比如输入： 1asn1c ./samples/rfc3280-*.asn1 编译成功，可以看到已经产生了很多的 .c 、 .h 文件。 《小池》 杨万里 泉眼无声惜细流，树阴照水爱晴柔。小荷才露尖尖角，早有蜻蜓立上头。 🍉]]></content>
       <categories>
         <category>技术</category>
-        <category>通信</category>
         <category>教程</category>
+        <category>通信</category>
       </categories>
       <tags>
         <tag>通信</tag>
@@ -145,8 +158,8 @@
         <category>教程</category>
       </categories>
       <tags>
-        <tag>教程</tag>
         <tag>C++</tag>
+        <tag>教程</tag>
       </tags>
   </entry>
   <entry>

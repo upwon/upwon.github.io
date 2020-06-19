@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.lifeee.top/"/>
-  <updated>2020-06-19T14:07:04.296Z</updated>
+  <updated>2020-06-19T15:08:42.146Z</updated>
   <id>https://www.lifeee.top/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>迁移搜狗输入法词库至微软拼音/手心输入法</title>
+    <link href="https://www.lifeee.top/posts/1380.html"/>
+    <id>https://www.lifeee.top/posts/1380.html</id>
+    <published>2020-06-19T14:53:33.000Z</published>
+    <updated>2020-06-19T15:08:42.146Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://gitee.com/wang_wx/image_bed/raw/master/2020/close-up-photography-of-person-holding-crystal-ball-1071249.jpg&quot; alt&gt;&lt;/p&gt;
+&lt;p&gt;鉴于搜狗输入法的&lt;strong&gt;越权行为&lt;/strong&gt;，严重侵害用户的利益与隐私。因此我卸载了搜狗输入法，并迁移词库至微软拼音与手心输入法。 😾&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
+    
+      <category term="善用佳软" scheme="https://www.lifeee.top/categories/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
+    
+    
+      <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
+    
+      <category term="善用佳软" scheme="https://www.lifeee.top/tags/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
+    
+  </entry>
   
   <entry>
     <title>向下就是天空</title>
@@ -173,9 +198,9 @@
       <category term="通信" scheme="https://www.lifeee.top/categories/%E9%80%9A%E4%BF%A1/"/>
     
     
-      <category term="通信" scheme="https://www.lifeee.top/tags/%E9%80%9A%E4%BF%A1/"/>
-    
       <category term="5G" scheme="https://www.lifeee.top/tags/5G/"/>
+    
+      <category term="通信" scheme="https://www.lifeee.top/tags/%E9%80%9A%E4%BF%A1/"/>
     
   </entry>
   
@@ -195,9 +220,9 @@
     
       <category term="技术" scheme="https://www.lifeee.top/categories/%E6%8A%80%E6%9C%AF/"/>
     
-      <category term="通信" scheme="https://www.lifeee.top/categories/%E9%80%9A%E4%BF%A1/"/>
-    
       <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
+    
+      <category term="通信" scheme="https://www.lifeee.top/categories/%E9%80%9A%E4%BF%A1/"/>
     
     
       <category term="通信" scheme="https://www.lifeee.top/tags/%E9%80%9A%E4%BF%A1/"/>
@@ -311,9 +336,9 @@
       <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
     
     
-      <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
-    
       <category term="C++" scheme="https://www.lifeee.top/tags/C/"/>
+    
+      <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
     
   </entry>
   
@@ -538,28 +563,6 @@
       <category term="生活" scheme="https://www.lifeee.top/tags/%E7%94%9F%E6%B4%BB/"/>
     
       <category term="博客" scheme="https://www.lifeee.top/tags/%E5%8D%9A%E5%AE%A2/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>npm install 报错node-sass@4.13.0 postinstall:`node scripts/build.js` Failed at the node-sass@4.13.0</title>
-    <link href="https://www.lifeee.top/posts/17155.html"/>
-    <id>https://www.lifeee.top/posts/17155.html</id>
-    <published>2020-05-06T14:17:04.000Z</published>
-    <updated>2020-05-07T09:49:58.303Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;今天在安装谷歌开源的 &lt;a href=&quot;https://github.com/GoogleChromeLabs/squoosh&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;squoosh&lt;/a&gt;  ，npm install 报错node-sass@4.13.0 postinstall: node scripts/build.js Failed at the node-sass@4.13.0 。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="技术" scheme="https://www.lifeee.top/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-      <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
-    
-    
-      <category term="问题" scheme="https://www.lifeee.top/tags/%E9%97%AE%E9%A2%98/"/>
     
   </entry>
   
