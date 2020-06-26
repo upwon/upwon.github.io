@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.lifeee.top/"/>
-  <updated>2020-06-26T10:25:35.885Z</updated>
+  <updated>2020-06-26T10:27:40.994Z</updated>
   <id>https://www.lifeee.top/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://www.lifeee.top/posts/23515.html"/>
     <id>https://www.lifeee.top/posts/23515.html</id>
     <published>2020-06-26T09:39:32.000Z</published>
-    <updated>2020-06-26T10:25:35.885Z</updated>
+    <updated>2020-06-26T10:27:40.994Z</updated>
     
     <summary type="html">
     
@@ -81,9 +81,9 @@
     
     </summary>
     
-      <category term="转载" scheme="https://www.lifeee.top/categories/%E8%BD%AC%E8%BD%BD/"/>
-    
       <category term="生活" scheme="https://www.lifeee.top/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+      <category term="转载" scheme="https://www.lifeee.top/categories/%E8%BD%AC%E8%BD%BD/"/>
     
     
       <category term="诗歌" scheme="https://www.lifeee.top/tags/%E8%AF%97%E6%AD%8C/"/>
@@ -245,9 +245,9 @@
     
       <category term="技术" scheme="https://www.lifeee.top/categories/%E6%8A%80%E6%9C%AF/"/>
     
-      <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
-    
       <category term="通信" scheme="https://www.lifeee.top/categories/%E9%80%9A%E4%BF%A1/"/>
+    
+      <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
     
     
       <category term="通信" scheme="https://www.lifeee.top/tags/%E9%80%9A%E4%BF%A1/"/>
