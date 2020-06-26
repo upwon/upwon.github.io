@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 3.9.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/myapple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/myfavicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/myfavicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/myapple-touch-icon-next.png" color="#222">
+  <meta name="google-site-verification" content="google2fc64c2b92961282.html">
+  <meta name="baidu-site-verification" content="s6BwSjIZYB">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.loli.net/css?family=EB Garamond:300,300italic,400,400italic,700,700italic|Ma Shan Zheng:300,300italic,400,400italic,700,700italic|Source Code Pro:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-loading-bar.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    hostname: new URL('https://www.lifeee.top').hostname,
+    root: '/',
+    scheme: 'Gemini',
+    version: '7.7.1',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},
+    copycode: {"enable":true,"show_result":true,"style":"mac"},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":true},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: true,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    comments: {"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: 'search.xml',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}
+  };
+</script>
+
+  <meta name="description" content="写程序的过程中，有时候难免要从网上直接寻找一些代码来修改。但经常会碰到代码格式不规范的情况，所以如果能够自动将代码格式规范化，或者对齐代码来符合自身的编程习惯，就很方便后续的修改等工作。此次就来在 VS Code上实现这一功能。🥤">
+<meta name="keywords" content="教程,善用佳软,IDE">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Vivado与VS Code:强强联手3-自动对齐代码">
+<meta property="og:url" content="https://www.lifeee.top/posts/5546.html">
+<meta property="og:site_name" content="热夏的博客">
+<meta property="og:description" content="写程序的过程中，有时候难免要从网上直接寻找一些代码来修改。但经常会碰到代码格式不规范的情况，所以如果能够自动将代码格式规范化，或者对齐代码来符合自身的编程习惯，就很方便后续的修改等工作。此次就来在 VS Code上实现这一功能。🥤">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://gitee.com/wang_wx/image_bed/raw/master/2020/20200626212130.jpg">
+<meta property="og:image" content="https://wx2.sinaimg.cn/large/006fZGhNly1gg5lw8qq5hj30d7031mx1.jpg">
+<meta property="og:image" content="https://wx4.sinaimg.cn/large/006fZGhNly1gg5lwd87mcj30j5097wf9.jpg">
+<meta property="og:image" content="https://wx4.sinaimg.cn/large/006fZGhNly1gg5lwaegzzj30sj0gimz0.jpg">
+<meta property="og:image" content="https://wx1.sinaimg.cn/large/006fZGhNly1gg5lwf23v2j30sd0ab0u6.jpg">
+<meta property="og:image" content="https://wx1.sinaimg.cn/large/006fZGhNly1gg5lwhfsjej30r20gldhb.jpg">
+<meta property="og:image" content="https://wx3.sinaimg.cn/large/006fZGhNly1gg5lwiy3jzj30f104at8u.jpg">
+<meta property="og:image" content="https://wx3.sinaimg.cn/large/006fZGhNly1gg5lwl5b0jj30se0cst9v.jpg">
+<meta property="og:image" content="https://wx2.sinaimg.cn/large/006fZGhNly1gg5lwo4xjxj30ku09vaab.jpg">
+<meta property="og:image" content="https://wx2.sinaimg.cn/large/006fZGhNly1gg5lwpxh6nj30ji0alt9f.jpg">
+<meta property="og:image" content="https://wx3.sinaimg.cn/large/006fZGhNly1gg5lwrikuyj30ji0al74g.jpg">
+<meta property="og:image" content="https://wx2.sinaimg.cn/large/006fZGhNly1gg5lwtkc0nj30ji0alglr.jpg">
+<meta property="og:image" content="https://wx1.sinaimg.cn/large/006fZGhNly1gg5lwv2lzuj30ji0alq3w.jpg">
+<meta property="og:image" content="https://wx3.sinaimg.cn/large/006fZGhNly1gg5lwx2idoj30ji0alaa8.jpg">
+<meta property="og:image" content="https://wx4.sinaimg.cn/large/006fZGhNly1gg5lwyup0sj30h60ib3z8.jpg">
+<meta property="og:image" content="https://wx3.sinaimg.cn/large/006fZGhNly1gg5lx0snomj30h80ibgm6.jpg">
+<meta property="og:image" content="https://wx2.sinaimg.cn/large/006fZGhNly1gg5lx2udkjj30r70e83yf.jpg">
+<meta property="og:image" content="https://wx3.sinaimg.cn/large/006fZGhNly1gg5lx4jgu2j30r70e8wez.jpg">
+<meta property="og:image" content="https://wx3.sinaimg.cn/large/006fZGhNly1gg5lx5n7btj30r70e874s.jpg">
+<meta property="og:image" content="https://wx2.sinaimg.cn/large/006fZGhNly1gg5lx8tvarj30r70e8mxn.jpg">
+<meta property="og:image" content="https://wx1.sinaimg.cn/large/006fZGhNly1gg5lxa71gfj30bz0av74i.jpg">
+<meta property="og:image" content="https://wx3.sinaimg.cn/large/006fZGhNly1gg5lxbryqlj30bz0avdfy.jpg">
+<meta property="og:updated_time" content="2020-06-26T13:25:42.209Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Vivado与VS Code:强强联手3-自动对齐代码">
+<meta name="twitter:description" content="写程序的过程中，有时候难免要从网上直接寻找一些代码来修改。但经常会碰到代码格式不规范的情况，所以如果能够自动将代码格式规范化，或者对齐代码来符合自身的编程习惯，就很方便后续的修改等工作。此次就来在 VS Code上实现这一功能。🥤">
+<meta name="twitter:image" content="https://gitee.com/wang_wx/image_bed/raw/master/2020/20200626212130.jpg">
+
+<link rel="canonical" href="https://www.lifeee.top/posts/5546.html">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true
+  };
+</script>
+<link href="https://fonts.loli.net/css?family=Noto+Serif+SC:400,500,700&display=swap&subset=chinese-simplified" rel="stylesheet">
+  <title>Vivado与VS Code:强强联手3-自动对齐代码 | 热夏的博客</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">热夏的博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-fw fa-user"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+
+</nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+           placeholder="搜索..." spellcheck="false"
+           type="text" id="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
+
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="https://www.lifeee.top/posts/5546.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/head.jpg">
+      <meta itemprop="name" content="热夏">
+      <meta itemprop="description" content="空山新雨后，天气晚来秋。">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="热夏的博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Vivado与VS Code:强强联手3-自动对齐代码
+        </h1>
+
+        <div class="post-meta">
+
+
+      
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-06-26 20:49:58 / 修改时间：21:25:42" itemprop="dateCreated datePublished" datetime="2020-06-26T20:49:58+08:00">2020-06-26</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/" itemprop="url" rel="index">
+                    <span itemprop="name">技术</span>
+                  </a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/教程/" itemprop="url" rel="index">
+                    <span itemprop="name">教程</span>
+                  </a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/善用佳软/" itemprop="url" rel="index">
+                    <span itemprop="name">善用佳软</span>
+                  </a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span><br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>1.1k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>1 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p><img src="https://gitee.com/wang_wx/image_bed/raw/master/2020/20200626212130.jpg" alt></p>
+<p>写程序的过程中，有时候难免要从网上直接寻找一些代码来修改。但经常会碰到代码格式不规范的情况，所以如果能够自动将代码格式规范化，或者对齐代码来符合自身的编程习惯，就很方便后续的修改等工作。此次就来在 VS Code上实现这一功能。🥤</p>
+<a id="more"></a>
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>​        写程序的过程中，有时候难免要从网上直接寻找一些代码来修改。但经常会碰到代码格式不规范的情况，所以如果能够自动将代码格式规范化，或者对齐代码来符合自身的编程习惯，就很方便后续的修改等工作。此次就来在 VS Code上实现这一功能。</p>
+<h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><p>自动对其代码的大致步骤如下：</p>
+<p>（1）在VS Code中安装插件  <strong>Verilog Format</strong> ；</p>
+<p>（2）在插件  Verilog Format 中打开链接下载 压缩包：<strong>verilog-format-WIN.zip</strong>；</p>
+<p>（3）<strong>Java</strong>环境配置 ； </p>
+<p>（4）添加到系统变量及验证；</p>
+<p>（5）效果展示。</p>
+<h3 id="（1）在VS-Code中安装插件-Verilog-Format"><a href="#（1）在VS-Code中安装插件-Verilog-Format" class="headerlink" title="（1）在VS Code中安装插件  Verilog Format"></a>（1）在VS Code中安装插件  Verilog Format</h3><p>具体的使用方法为：快捷键 Alt+Shift+F </p>
+<p>全选代码，并按 <strong>Alt+Shift+F</strong> 对齐代码时，弹出提示安装插件，点击install安装；</p>
+<p><img src="https://wx2.sinaimg.cn/large/006fZGhNly1gg5lw8qq5hj30d7031mx1.jpg" alt></p>
+<p>可以直接点击该提示，或者在 VS Code的应用商店搜索并安装插件  Verilog Format ；</p>
+<p><img src="https://wx4.sinaimg.cn/large/006fZGhNly1gg5lwd87mcj30j5097wf9.jpg" alt></p>
+<p><img src="https://wx4.sinaimg.cn/large/006fZGhNly1gg5lwaegzzj30sj0gimz0.jpg" alt></p>
+<h3 id="（2）在插件-Verilog-Format中打开链接下载-压缩包：verilog-format-WIN-zip"><a href="#（2）在插件-Verilog-Format中打开链接下载-压缩包：verilog-format-WIN-zip" class="headerlink" title="（2）在插件 Verilog Format中打开链接下载 压缩包：verilog-format-WIN.zip"></a>（2）在插件 Verilog Format中打开链接下载 压缩包：verilog-format-WIN.zip</h3><p>按如下的图示进行操作：</p>
+<p><img src="https://wx1.sinaimg.cn/large/006fZGhNly1gg5lwf23v2j30sd0ab0u6.jpg" alt></p>
+<p>找到如下所示的 Install verilog-format ，点击进入</p>
+<p><img src="https://wx1.sinaimg.cn/large/006fZGhNly1gg5lwhfsjej30r20gldhb.jpg" alt></p>
+<p>找到如下所示的压缩包文件，点击链接进入：</p>
+<p><img src="https://wx3.sinaimg.cn/large/006fZGhNly1gg5lwiy3jzj30f104at8u.jpg" alt></p>
+<p>下载：</p>
+<p><img src="https://wx3.sinaimg.cn/large/006fZGhNly1gg5lwl5b0jj30se0cst9v.jpg" alt></p>
+<p>下载之后解压到自己设定的路径下，后续的设置会用到该路径。</p>
+<p>在VS Code中，进入插件 <strong>verilog-format</strong> 的设置下，这里的路径填写压缩包的解压路径。</p>
+<p><img src="https://wx2.sinaimg.cn/large/006fZGhNly1gg5lwo4xjxj30ku09vaab.jpg" alt></p>
+<h3 id="（3）-Java环境配置"><a href="#（3）-Java环境配置" class="headerlink" title="（3） Java环境配置"></a>（3） Java环境配置</h3><p>缺少Java环境时，使用快捷键 <strong>Alt+Shift+F</strong> 对齐代码时，会自动跳转到 Java 的下载界面，该地址下载的是在线安装包。<br>换个地址，下载离线包来安装，</p>
+<p>下载地址：<a href="https://www.java.com/zh_CN/download/windows_offline.jsp" target="_blank" rel="noopener">https://www.java.com/zh_CN/download/windows_offline.jsp</a></p>
+<p>进行 Java 的安装，安装过程如下，如果已安装，则跳过该安装过程。</p>
+<p><img src="https://wx2.sinaimg.cn/large/006fZGhNly1gg5lwpxh6nj30ji0alt9f.jpg" alt></p>
+<p><img src="https://wx3.sinaimg.cn/large/006fZGhNly1gg5lwrikuyj30ji0al74g.jpg" alt></p>
+<p>默认安装系统盘，建议安装非系统盘；</p>
+<p><img src="https://wx2.sinaimg.cn/large/006fZGhNly1gg5lwtkc0nj30ji0alglr.jpg" alt></p>
+<p><img src="https://wx1.sinaimg.cn/large/006fZGhNly1gg5lwv2lzuj30ji0alq3w.jpg" alt></p>
+<p><img src="https://wx3.sinaimg.cn/large/006fZGhNly1gg5lwx2idoj30ji0alaa8.jpg" alt></p>
+<h3 id="（4）添加到系统变量及验证"><a href="#（4）添加到系统变量及验证" class="headerlink" title="（4）添加到系统变量及验证"></a>（4）添加到系统变量及验证</h3><p>安装 Java 会自动添加一个环境变量；</p>
+<p><img src="https://wx4.sinaimg.cn/large/006fZGhNly1gg5lwyup0sj30h60ib3z8.jpg" alt></p>
+<p>然后根据安装地址将 Java 添加到系统变量下：</p>
+<p>变量名不变，变量值根据路径来确定。</p>
+<p><img src="https://wx3.sinaimg.cn/large/006fZGhNly1gg5lx0snomj30h80ibgm6.jpg" alt></p>
+<p>在运行窗口下，输入 <strong>cmd</strong> ，打开终端命令窗口，进行验证！</p>
+<p>cmd下依次运行:<br><strong>java</strong><br><strong>java -version</strong></p>
+<p><img src="https://wx2.sinaimg.cn/large/006fZGhNly1gg5lx2udkjj30r70e83yf.jpg" alt></p>
+<p><img src="https://wx3.sinaimg.cn/large/006fZGhNly1gg5lx4jgu2j30r70e8wez.jpg" alt></p>
+<p><img src="https://wx3.sinaimg.cn/large/006fZGhNly1gg5lx5n7btj30r70e874s.jpg" alt></p>
+<p><img src="https://wx2.sinaimg.cn/large/006fZGhNly1gg5lx8tvarj30r70e8mxn.jpg" alt></p>
+<p>出现该信息则为成功；</p>
+<h3 id="（5）效果展示"><a href="#（5）效果展示" class="headerlink" title="（5）效果展示"></a>（5）效果展示</h3><p>没有对齐效果时：</p>
+<p><img src="https://wx1.sinaimg.cn/large/006fZGhNly1gg5lxa71gfj30bz0av74i.jpg" alt></p>
+<p>在快捷键 <strong>Alt+Shift+F</strong> 下，对齐代码时效果如下：</p>
+<p><img src="https://wx3.sinaimg.cn/large/006fZGhNly1gg5lxbryqlj30bz0avdfy.jpg" alt></p>
+<p><br></p>
+<p><br></p>
+<blockquote>
+<p>本文来自实验室同学 <a href="https://weibo.com/u/5733142591" target="_blank" rel="noopener">@WanTwoWan</a> 投稿，在此表示感谢 ，若您有更多问题可以联系他哦 </p>
+</blockquote>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+
+    </div>
+
+    
+    
+    
+        <div class="reward-container">
+  <div>觉得文章对您有帮助请我喝冰可乐吧 😉</div>
+  <button onclick="var qr = document.getElementById('qr'); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    打赏
+  </button>
+  <div id="qr" style="display: none;">
+      
+      <div style="display: inline-block;">
+        <img src="/images/wechatpay.png" alt="热夏 微信支付">
+        <p>微信支付</p>
+      </div>
+
+  </div>
+</div>
+
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>热夏
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://www.lifeee.top/posts/5546.html" title="Vivado与VS Code:强强联手3-自动对齐代码">https://www.lifeee.top/posts/5546.html</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-Hans" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/tags/教程/" rel="tag"><i class="fa fa-tag"></i> 教程</a>
+              <a href="/tags/善用佳软/" rel="tag"><i class="fa fa-tag"></i> 善用佳软</a>
+              <a href="/tags/IDE/" rel="tag"><i class="fa fa-tag"></i> IDE</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/posts/54635.html" rel="prev" title="Vivado与VS Code:强强联手2-自动生成 Testbench">
+      <i class="fa fa-chevron-left"></i> Vivado与VS Code:强强联手2-自动生成 Testbench
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+    <div class="comments" id="gitalk-container"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let activeClass = CONFIG.comments.activeClass;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+
+
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+
+
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#步骤"><span class="nav-text">步骤</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#（1）在VS-Code中安装插件-Verilog-Format"><span class="nav-text">（1）在VS Code中安装插件  Verilog Format</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#（2）在插件-Verilog-Format中打开链接下载-压缩包：verilog-format-WIN-zip"><span class="nav-text">（2）在插件 Verilog Format中打开链接下载 压缩包：verilog-format-WIN.zip</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#（3）-Java环境配置"><span class="nav-text">（3） Java环境配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#（4）添加到系统变量及验证"><span class="nav-text">（4）添加到系统变量及验证</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#（5）效果展示"><span class="nav-text">（5）效果展示</span></a></li></ol></li></ol></div>
+
+
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="热夏"
+      src="/images/head.jpg">
+  <p class="site-author-name" itemprop="name">热夏</p>
+  <div class="site-description" itemprop="description">空山新雨后，天气晚来秋。</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">45</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">31</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/upwon" title="GitHub → https://github.com/upwon" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:w1244753906@gmail.com" title="E-Mail → mailto:w1244753906@gmail.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://weibo.com/3311053605" title="Weibo → https://weibo.com/3311053605" rel="noopener" target="_blank"><i class="fa fa-fw fa-weibo"></i>Weibo</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.instagram.com/midsummer_wen/" title="Instagram → https://www.instagram.com/midsummer_wen/" rel="noopener" target="_blank"><i class="fa fa-fw fa-instagram"></i>Instagram</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.lifeee.top///atom.xml" title="RSS → https://www.lifeee.top///atom.xml"><i class="fa fa-fw fa-rss"></i>RSS</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+
+   <div id="sidebar-dimmer"></div>
+
+
+
+
+
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright">
+  
+  &copy; 2018 – 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">热夏</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+      <span class="post-meta-item-text">站点总字数：</span>
+    <span title="站点总字数">394k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">5:58</span>
+</div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
+<script src="/js/schemes/pisces.js"></script>
+<script src="/js/next-boot.js"></script>
+
+
+
+  
+  <script>
+    (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      bp.src = (curProtocol === 'https') ? 'https://zz.bdstatic.com/linksubmit/push.js' : 'http://push.zhanzhang.baidu.com/push.js';
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+
+
+  <script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+<script>
+NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID: '7e047047ecee7317452b',
+      clientSecret: 'c60fbdf0eb19e7264e33ab780319e4d420a58fee',
+      repo: 'upwon.github.io',
+      owner: 'upwon',
+      admin: ['upwon'],
+      id: '4e0a7c08b2edb46fc136beba5608c5a5',
+        language: '',
+      distractionFreeMode: true
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+});
+</script>
+
+
+</body>
+</html>
+
+<!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/clicklove.js"></script>
+
+
+<!-- 樱花 -->
+<script type="text/javascript" src="/js/sakura.js"></script>
+

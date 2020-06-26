@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.lifeee.top/"/>
-  <updated>2020-06-26T10:27:40.994Z</updated>
+  <updated>2020-06-26T13:25:42.209Z</updated>
   <id>https://www.lifeee.top/</id>
   
   <author>
@@ -15,6 +15,91 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Vivado与VS Code:强强联手3-自动对齐代码</title>
+    <link href="https://www.lifeee.top/posts/5546.html"/>
+    <id>https://www.lifeee.top/posts/5546.html</id>
+    <published>2020-06-26T12:49:58.000Z</published>
+    <updated>2020-06-26T13:25:42.209Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://gitee.com/wang_wx/image_bed/raw/master/2020/20200626212130.jpg&quot; alt&gt;&lt;/p&gt;
+&lt;p&gt;写程序的过程中，有时候难免要从网上直接寻找一些代码来修改。但经常会碰到代码格式不规范的情况，所以如果能够自动将代码格式规范化，或者对齐代码来符合自身的编程习惯，就很方便后续的修改等工作。此次就来在 VS Code上实现这一功能。🥤&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="技术" scheme="https://www.lifeee.top/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+      <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
+    
+      <category term="善用佳软" scheme="https://www.lifeee.top/categories/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
+    
+    
+      <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
+    
+      <category term="善用佳软" scheme="https://www.lifeee.top/tags/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
+    
+      <category term="IDE" scheme="https://www.lifeee.top/tags/IDE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Vivado与VS Code:强强联手2-自动生成 Testbench</title>
+    <link href="https://www.lifeee.top/posts/54635.html"/>
+    <id>https://www.lifeee.top/posts/54635.html</id>
+    <published>2020-06-26T12:49:52.000Z</published>
+    <updated>2020-06-26T13:24:53.039Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://gitee.com/wang_wx/image_bed/raw/master/2020/20200626211322.jpg&quot; alt&gt;&lt;/p&gt;
+&lt;p&gt;  在对 Verilog 代码进行 行为级仿真 时，测试文件是必不可少的。可以自己写测试文件，但也会花费一些时间。利用 VS Code 可以自动生成测试文件，快速例化对应的模块，仅需要我们自己初始化时钟复位等信号，添加测试文件的运行时间等。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="技术" scheme="https://www.lifeee.top/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+      <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
+    
+      <category term="善用佳软" scheme="https://www.lifeee.top/categories/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
+    
+    
+      <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
+    
+      <category term="善用佳软" scheme="https://www.lifeee.top/tags/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
+    
+      <category term="IDE" scheme="https://www.lifeee.top/tags/IDE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Vivado与VS Code:强强联手1</title>
+    <link href="https://www.lifeee.top/posts/54594.html"/>
+    <id>https://www.lifeee.top/posts/54594.html</id>
+    <published>2020-06-26T12:49:42.000Z</published>
+    <updated>2020-06-26T13:23:34.199Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://gitee.com/wang_wx/image_bed/raw/master/2020/20200626210532.jpg&quot; alt&gt;&lt;/p&gt;
+&lt;p&gt;  Vivado带有自己的文本编辑器，可以编写代码；但是若说用起来效果较好的，还是要提到VS Code；接下来从Vivado自带的文本编辑器改用VS Code聊起，接着谈些对VS Code的简单设置，以便更好的进行程序编写。🍻&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
+    
+      <category term="善用佳软" scheme="https://www.lifeee.top/categories/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
+    
+    
+      <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
+    
+      <category term="善用佳软" scheme="https://www.lifeee.top/tags/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
+    
+      <category term="IDE" scheme="https://www.lifeee.top/tags/IDE/"/>
+    
+  </entry>
   
   <entry>
     <title>周志华教授谈如何做研究与写论文</title>
@@ -33,9 +118,9 @@
       <category term="转载" scheme="https://www.lifeee.top/categories/%E8%BD%AC%E8%BD%BD/"/>
     
     
-      <category term="分享" scheme="https://www.lifeee.top/tags/%E5%88%86%E4%BA%AB/"/>
-    
       <category term="转载" scheme="https://www.lifeee.top/tags/%E8%BD%AC%E8%BD%BD/"/>
+    
+      <category term="分享" scheme="https://www.lifeee.top/tags/%E5%88%86%E4%BA%AB/"/>
     
       <category term="学习" scheme="https://www.lifeee.top/tags/%E5%AD%A6%E4%B9%A0/"/>
     
@@ -81,9 +166,9 @@
     
     </summary>
     
-      <category term="生活" scheme="https://www.lifeee.top/categories/%E7%94%9F%E6%B4%BB/"/>
-    
       <category term="转载" scheme="https://www.lifeee.top/categories/%E8%BD%AC%E8%BD%BD/"/>
+    
+      <category term="生活" scheme="https://www.lifeee.top/categories/%E7%94%9F%E6%B4%BB/"/>
     
     
       <category term="诗歌" scheme="https://www.lifeee.top/tags/%E8%AF%97%E6%AD%8C/"/>
@@ -113,9 +198,9 @@
       <category term="转载" scheme="https://www.lifeee.top/categories/%E8%BD%AC%E8%BD%BD/"/>
     
     
-      <category term="网络安全" scheme="https://www.lifeee.top/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/"/>
-    
       <category term="数学" scheme="https://www.lifeee.top/tags/%E6%95%B0%E5%AD%A6/"/>
+    
+      <category term="网络安全" scheme="https://www.lifeee.top/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/"/>
     
   </entry>
   
@@ -140,13 +225,13 @@
       <category term="善用佳软" scheme="https://www.lifeee.top/categories/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
     
     
-      <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
-    
-      <category term="善用佳软" scheme="https://www.lifeee.top/tags/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
-    
       <category term="问题" scheme="https://www.lifeee.top/tags/%E9%97%AE%E9%A2%98/"/>
     
       <category term="Windows" scheme="https://www.lifeee.top/tags/Windows/"/>
+    
+      <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
+    
+      <category term="善用佳软" scheme="https://www.lifeee.top/tags/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
     
   </entry>
   
@@ -245,16 +330,16 @@
     
       <category term="技术" scheme="https://www.lifeee.top/categories/%E6%8A%80%E6%9C%AF/"/>
     
-      <category term="通信" scheme="https://www.lifeee.top/categories/%E9%80%9A%E4%BF%A1/"/>
-    
       <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
     
+      <category term="通信" scheme="https://www.lifeee.top/categories/%E9%80%9A%E4%BF%A1/"/>
     
-      <category term="通信" scheme="https://www.lifeee.top/tags/%E9%80%9A%E4%BF%A1/"/>
     
       <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
     
       <category term="善用佳软" scheme="https://www.lifeee.top/tags/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
+    
+      <category term="通信" scheme="https://www.lifeee.top/tags/%E9%80%9A%E4%BF%A1/"/>
     
       <category term="分享" scheme="https://www.lifeee.top/tags/%E5%88%86%E4%BA%AB/"/>
     
@@ -274,9 +359,9 @@
     
     </summary>
     
-      <category term="技术" scheme="https://www.lifeee.top/categories/%E6%8A%80%E6%9C%AF/"/>
-    
       <category term="编程" scheme="https://www.lifeee.top/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+      <category term="技术" scheme="https://www.lifeee.top/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
       <category term="C++" scheme="https://www.lifeee.top/tags/C/"/>
@@ -298,9 +383,9 @@
     
     </summary>
     
-      <category term="技术" scheme="https://www.lifeee.top/categories/%E6%8A%80%E6%9C%AF/"/>
-    
       <category term="编程" scheme="https://www.lifeee.top/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+      <category term="技术" scheme="https://www.lifeee.top/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
       <category term="C++" scheme="https://www.lifeee.top/tags/C/"/>
@@ -325,9 +410,9 @@
     
     </summary>
     
-      <category term="技术" scheme="https://www.lifeee.top/categories/%E6%8A%80%E6%9C%AF/"/>
-    
       <category term="编程" scheme="https://www.lifeee.top/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+      <category term="技术" scheme="https://www.lifeee.top/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
       <category term="C++" scheme="https://www.lifeee.top/tags/C/"/>
@@ -354,16 +439,16 @@
     
     </summary>
     
-      <category term="技术" scheme="https://www.lifeee.top/categories/%E6%8A%80%E6%9C%AF/"/>
-    
       <category term="编程" scheme="https://www.lifeee.top/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+      <category term="技术" scheme="https://www.lifeee.top/categories/%E6%8A%80%E6%9C%AF/"/>
     
       <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
     
     
-      <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
-    
       <category term="C++" scheme="https://www.lifeee.top/tags/C/"/>
+    
+      <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
     
   </entry>
   
@@ -386,11 +471,11 @@
       <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
     
     
-      <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
-    
       <category term="问题" scheme="https://www.lifeee.top/tags/%E9%97%AE%E9%A2%98/"/>
     
       <category term="Windows" scheme="https://www.lifeee.top/tags/Windows/"/>
+    
+      <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
     
   </entry>
   
@@ -415,11 +500,11 @@
       <category term="善用佳软" scheme="https://www.lifeee.top/categories/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
     
     
+      <category term="Windows" scheme="https://www.lifeee.top/tags/Windows/"/>
+    
       <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
     
       <category term="善用佳软" scheme="https://www.lifeee.top/tags/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
-    
-      <category term="Windows" scheme="https://www.lifeee.top/tags/Windows/"/>
     
       <category term="阅读" scheme="https://www.lifeee.top/tags/%E9%98%85%E8%AF%BB/"/>
     
@@ -446,9 +531,9 @@
       <category term="善用佳软" scheme="https://www.lifeee.top/categories/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
     
     
-      <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
-    
       <category term="问题" scheme="https://www.lifeee.top/tags/%E9%97%AE%E9%A2%98/"/>
+    
+      <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
     
       <category term="云盘" scheme="https://www.lifeee.top/tags/%E4%BA%91%E7%9B%98/"/>
     
@@ -476,87 +561,6 @@
       <category term="问题" scheme="https://www.lifeee.top/tags/%E9%97%AE%E9%A2%98/"/>
     
       <category term="错误" scheme="https://www.lifeee.top/tags/%E9%94%99%E8%AF%AF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>如何获取 Google 安全码？</title>
-    <link href="https://www.lifeee.top/posts/13004.html"/>
-    <id>https://www.lifeee.top/posts/13004.html</id>
-    <published>2020-05-08T07:51:14.000Z</published>
-    <updated>2020-06-04T08:53:30.235Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;https://gitee.com/wang_wx/image_bed/raw/master/2020/20200508190508.jpg&quot; alt&gt;&lt;/p&gt;
-&lt;center&gt;&lt;font size=&quot;1.5&quot;&gt;2020-05-01 云南·瑞丽 &lt;/font&gt;&lt;/center&gt;
-
-&lt;p&gt;有些时候在一些新设备或者存在安全隐患的场景下登录 Google 账号，会让你确认您的身份。有时候就需要使用安全码来验证，那么如何获取安全码呢 ?&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="技术" scheme="https://www.lifeee.top/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-      <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
-    
-    
-      <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
-    
-      <category term="问题" scheme="https://www.lifeee.top/tags/%E9%97%AE%E9%A2%98/"/>
-    
-      <category term="Android" scheme="https://www.lifeee.top/tags/Android/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>pip更换国内源</title>
-    <link href="https://www.lifeee.top/posts/23493.html"/>
-    <id>https://www.lifeee.top/posts/23493.html</id>
-    <published>2020-05-07T14:16:16.000Z</published>
-    <updated>2020-05-09T02:47:41.912Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;https://gitee.com/wang_wx/image_bed/raw/master/2020/20200507231100.jpg&quot; alt&gt;&lt;/p&gt;
-&lt;p&gt;python 中使用 pip 安装一些包的时候十分慢，因为仓库都在国外。国内一些大厂或者高校弄了一些镜像，因此我们可以将其安装源设置为国内的仓库，从而达到加速的效果。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="技术" scheme="https://www.lifeee.top/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-      <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
-    
-    
-      <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
-    
-      <category term="善用佳软" scheme="https://www.lifeee.top/tags/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Netlify设置重定向实现域名跳转</title>
-    <link href="https://www.lifeee.top/posts/61927.html"/>
-    <id>https://www.lifeee.top/posts/61927.html</id>
-    <published>2020-05-07T09:52:48.000Z</published>
-    <updated>2020-05-29T12:35:00.253Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;https://gitee.com/wang_wx/image_bed/raw/master/2020/20200507182237.jpg&quot; alt&gt;&lt;/p&gt;
-&lt;center&gt;&lt;font size=&quot;1&quot;&gt;Thank you Pixabay for sharing this awesome photo on @pexels for free! 🎁 https://www.pexels.com/zh-cn/photo/163452/ &lt;/font&gt;&lt;/center&gt;
-
-&lt;p&gt;将 Netlify 设置重定向实现域名跳转，将Netlify 给的 &lt;a href=&quot;https://summerblog.netlify.app/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;默认域名&lt;/a&gt; 跳转到自己 &lt;a href=&quot;https://www.lifeee.top/&quot;&gt;现在的域名&lt;/a&gt; 。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="技术" scheme="https://www.lifeee.top/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-      <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
-    
-    
-      <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
-    
-      <category term="博客" scheme="https://www.lifeee.top/tags/%E5%8D%9A%E5%AE%A2/"/>
     
   </entry>
   
