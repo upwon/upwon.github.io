@@ -115,8 +115,8 @@
     <url>%2Fposts%2F45421.html</url>
     <content type="text"><![CDATA[那是去年的景象，我们奔跑在雨季 入夜，在世界里漫游 分享 奇怪的日子 · 《向下就是天空》🎵 奇怪的日子 · 《向下就是天空》 那是去年的景象，我们奔跑在雨季入夜，在世界里漫游你问我的小说《落日青春》写得怎样了我笑说这城市的改造让我迷路了入夜，在梦中醒来，车灯在窗前一闪而过你不会说漂亮的情话，但你是个固执的女人死亡占据了整个童年你也并不害怕确认和期待什么说说你，说说你的爱情，你的过去，你常这样问我天空像蓝色的孩子，田野上的小路有动物的足迹叶子的故乡受到土地和阳光的恩宠，笑声传遍山谷我们为了寻找幻想之光在城市的最高处却看到了一片汪洋 你的快乐来自夏天的每一阵雨虽然有时候会独自哭泣我说喜欢看你坐在门前的石头上一支烟的功夫，黄昏就来了你问我小说里是不是有旧时的风物我说那只是消失的记忆真的那么崭新和伟大吗？没有，只是时间流过，连痕迹也没有留下我们生活在失信最猛的时代新生的儿童都被称作了天才在拥挤混乱的空间里，小丑们高歌说，我们来了！路边的小铁门上写着“彼此相爱”四个字，夕阳照在上面特别美忽然你说想要喝酒，还要阳光和不孤独我们整夜地念诗，在宿醉的夜晚寻找向下的方式也许音乐会从左边响起无节奏的声音在城市上空弥漫寻欢作乐的人们以为时代复兴了，用干瘪的腔调说来一段我想要的！我说，嘿，朋友，别忘了我们是行走在这荒凉之城的大街上我们从夜里醒来，相互给予了温暖的信号我的文字里有故乡的记忆这也是我们讨论多次的话题现在我还生活一个承诺在结伴而行的日子里道路虽被淹没，但向下就是天空……]]></content>
       <categories>
-        <category>转载</category>
         <category>生活</category>
+        <category>转载</category>
       </categories>
       <tags>
         <tag>诗歌</tag>
@@ -145,9 +145,9 @@
         <category>善用佳软</category>
       </categories>
       <tags>
-        <tag>问题</tag>
         <tag>教程</tag>
         <tag>善用佳软</tag>
+        <tag>问题</tag>
         <tag>Windows</tag>
       </tags>
   </entry>
@@ -170,8 +170,8 @@
     <url>%2Fposts%2F32023.html</url>
     <content type="text"><![CDATA[更改 hosts 加速访问Github 更改hostshosts文件所在路径为 C:\Windows\System32\drivers\etc 利用火绒或者 SwitchHosts 可以很方便的更改hosts 。 在 hosts 中增加如下内容： 12345678910111213141516140.82.112.3 github.com140.82.114.4 gist.github.com185.199.108.153 assets-cdn.github.com199.232.68.133 raw.githubusercontent.com199.232.68.133 gist.githubusercontent.com199.232.68.133 cloud.githubusercontent.com199.232.68.133 camo.githubusercontent.com199.232.68.133 avatars0.githubusercontent.com199.232.68.133 avatars1.githubusercontent.com199.232.68.133 avatars2.githubusercontent.com199.232.68.133 avatars3.githubusercontent.com199.232.68.133 avatars4.githubusercontent.com199.232.68.133 avatars5.githubusercontent.com199.232.68.133 avatars6.githubusercontent.com199.232.68.133 avatars7.githubusercontent.com199.232.68.133 avatars8.githubusercontent.com 可以通过以下网站获取 Github 域名所对应的 IP 地址 https://github.com.ipaddress.com 问题若你使用火绒或者 SwitchHosts 以管理员打开还是提示 hosts 更改错误。那么是因为 hosts 文件为只读属性，解决方案是手动去除 hosts 文件的只读属性。 梅子留酸软齿牙，芭蕉分绿与窗纱。日长睡起无情思，闲看儿童捉柳花。 —杨万里《闲居初夏午睡起》]]></content>
       <categories>
-        <category>问题</category>
         <category>教程</category>
+        <category>问题</category>
       </categories>
       <tags>
         <tag>github</tag>
@@ -200,8 +200,8 @@
         <category>通信</category>
       </categories>
       <tags>
-        <tag>5G</tag>
         <tag>通信</tag>
+        <tag>5G</tag>
       </tags>
   </entry>
   <entry>
@@ -214,9 +214,9 @@
         <category>通信</category>
       </categories>
       <tags>
+        <tag>通信</tag>
         <tag>教程</tag>
         <tag>善用佳软</tag>
-        <tag>通信</tag>
         <tag>分享</tag>
       </tags>
   </entry>
@@ -282,8 +282,8 @@
         <category>教程</category>
       </categories>
       <tags>
-        <tag>问题</tag>
         <tag>教程</tag>
+        <tag>问题</tag>
         <tag>Windows</tag>
       </tags>
   </entry>
@@ -312,8 +312,8 @@
         <category>善用佳软</category>
       </categories>
       <tags>
-        <tag>问题</tag>
         <tag>教程</tag>
+        <tag>问题</tag>
         <tag>云盘</tag>
       </tags>
   </entry>
@@ -322,8 +322,8 @@
     <url>%2Fposts%2F26908.html</url>
     <content type="text"><![CDATA[Gitalk重定向错误 ：error=redirect_uri_mismatch 。 在博文下面点击登录 github 进行评论的时候，出现重定向错误 error=redirect_uri_mismatch 。 比如我的就重定向至 1https://www.lifeee.top/?error=redirect_uri_mismatch&amp;error_description=The+redirect_uri+MUST+match+the+registered+callback+URL+for+this+application.&amp;error_uri=https%3A%2F%2Fdeveloper.github.com%2Fapps%2Fmanaging-oauth-apps%2Ftroubleshooting-authorization-request-errors%2F%23redirect-uri-mismatch 解决方法有： 确保 OAuth App 里填的 Homepage URL 和 Callback URL 正确 Homepage URL 和 Callback URL 后有 / 文章的链接不要带中文和空格 突然想到在修改博客域名后，未修改Homepage URL和Authorization callback URL 。因此我需要这样做，在 https://github.com/settings/developers 中找到对应的 OAuth Apps ，然后去更改里面的 Homepage URL和Authorization callback URL 即可。 然后就恢复正常啦 更多错误参见 Gitalk 的 issue 登录报错/?error=redirect_uri_mismatch&amp; #162 浅水是喧哗的，深水是沉默的。 —-雪莱]]></content>
       <categories>
-        <category>问题</category>
         <category>教程</category>
+        <category>问题</category>
       </categories>
       <tags>
         <tag>问题</tag>
@@ -339,8 +339,8 @@
         <category>教程</category>
       </categories>
       <tags>
-        <tag>问题</tag>
         <tag>教程</tag>
+        <tag>问题</tag>
         <tag>Android</tag>
       </tags>
   </entry>
@@ -470,8 +470,8 @@
         <category>教程</category>
       </categories>
       <tags>
-        <tag>问题</tag>
         <tag>教程</tag>
+        <tag>问题</tag>
       </tags>
   </entry>
   <entry>
@@ -508,8 +508,8 @@
         <category>教程</category>
       </categories>
       <tags>
-        <tag>问题</tag>
         <tag>教程</tag>
+        <tag>问题</tag>
       </tags>
   </entry>
   <entry>
@@ -561,8 +561,8 @@
       </categories>
       <tags>
         <tag>教程</tag>
-        <tag>Windows</tag>
         <tag>分享</tag>
+        <tag>Windows</tag>
         <tag>Visual Studio</tag>
         <tag>激活码</tag>
       </tags>
