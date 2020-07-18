@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[5G NR Synchronization Signal/PBCH block (SSB)]]></title>
+    <url>%2Fposts%2F18457.html</url>
+    <content type="text"><![CDATA[本文主要对 5G NR 中的同步信号块 SSB 的结构以及时频位置进行了描述。 小区搜索是 UE 获取小区的时间和频率同步以及检测小区的物理层小区 ID (PCI)的过程。 系统消息设计是无线通信系统中重要概念之一，小区级系统消息主要为了配置小区驻留、提供用户接入、互操作等一系列重要参数配置。5G NR对于系统消息进行了一定程度的简化，相比4G不仅在同步信号以及系统消息设计方面都进行了完全不同的设计。 有别于4G将小区下行同步信号以及物理广播信道分离设计，5G中将小区主辅同步信号（SS，Synchronization Signal）与物理广播信道（PBCH，Physical Broadcast Channel）进行了某种程度上的耦合，以SS/PBCH资源块的形式出现，简称为SSB。 注：本文描述中 SSB=SS/PBCH=Synchronization Signal/PBCH block 在NR 定义了两类同步信号：Primary Synchronization Signal 主同步信号 (PSS) 以及 Secondary Synchronization Signal 辅同步信号 (SSS). Synchronization Signal/PBCH block (SSB) 由PSS、SSS和 PBCH组成。即：$SSB=PSS+SSS+PBCH$ 。其中 PBCH 中又存放着 DMRS 。 下图显示了 PSS，SSS，PBCH 和 PBCH DMR 在 SSB 区块的位置 SSB时频结构SSB的时频结构如下图所示 PSS、SSS 和 PBCH 始终以连续的 OFDM 符号组合在一起。 每个 SSB 在时域中占据 4 个 OFDM 符号，并分布在频域中的 240 个子载波 （20 RB）。 PSS 占据第一个 OFDM 符号，跨越 127 个子载波。 SSS 位于第三个 OFDM 符号中，跨越 127 个子载波。SSS 下方有 8 个未使用的子载波，SSS 上方有 9 个未使用的子载波。 PBCH 占据两个完整 OFDM 符号（第二和第四个），跨越 240 个子载波。在第三个 OFDM 符号中，占据SSS上方和下方的 48 个子载波。这导致 PBCH 在三个 OFDM 符号（$240+48+48+240 = 576 $） 中占用 576 个子载波。 PBCH DM-RS占用144 个 RE，占总RE的四分之一，剩余用于PBCH有效载荷(576-144=432 RE)。 SS/PBCH 子载波间隔配置支持 $μ∈｛0,1,3,4｝$ 即 15 KHz 、30 KHz 、120 KHz 、240 KHz 。 补充 注意：5G的一个资源块（RB）包含频域上的12个子载波。注意这一点和4G不同，4G的RB是由频域上12个子载波和时域上的0.5毫秒（7个OFDM符号）组成的二维结构，而5G的RB只有频域这一个维度。 5G的最小资源单位：资源单元（RE）由频域的一个子载波和时域的一个OFDM符号组成，是无线资源的最小单位（如上图中的小方格所示）。这一点是和4G一样的。 主同步信号的全称为：Primary Synchroniztion Singnal，简称PSS。PSS在SSB的第一个OFDM符号上发送，频域占用了127个子载波，其余子载波为空。 辅同步信号的全称为：Secondary Synchroniztion Singnal，简称SSS。SSS在SSB的第三个OFDM符号上发送，频域占用了127个子载波，其余子载波用于PBCH及隔离带。 PSS携带了3个小区号，SSS携带了336个小区组号，这两者共同决定了5G系统中的1008个物理小区号（Physical Cell Identity，简称PCI）。一旦手机成功搜索到了PSS和SSS，也就知道了这个5G载波的物理小区号。 物理广播信道的全称为：Physical Broadcast Channel，简称PBCH。PBCH在第二个和第四个OFDM符号上在SSB内全带宽发送，另外也使用SSS两端的48个子载波来发送。 SSB频域位置概述在频域中，一个 SS/PBCH 块由240个相邻的子载波组成，子载波在 SS/PBCH 块中按从0到239的顺序排列。下表给出了 PBCH 的 PSS、 SSS、 PBCH 和 DMRS 的位置。PBCH、 PBCH DMRS、 PSS 和 SSS 的位置参见38.211的表7.4.3.1-1 。下表中表示为“ Set to 0”的资源元素对应的复值符号被设置为零。 从下表中可以看到，PBCH DM-RS 的位置取决于PCI ($v = N_{ID}^{cell } mod 4$) （小区ID PCI 由 UE 使用 PSS/SSS 确定） SSB时域位置概述 每个 SSB 跨越时域中的 4 个 OFDM 符号。 SSB 的周期性定期传输为 5ms、10ms、20ms、40ms、80ms 或 160ms。 虽然较长的 SSB 周期可提高网络性能，但较短的周期有助于更快进行小区搜索。 在初始小区搜索或空闲模式移动期间，UE 可以假定默认周期为20ms。 SSB是周期性发送的，其周期可以从5毫秒到160毫秒之间变化。手机在进行小区搜索时，不能在某一个频点上等待过长时间，因此默认按照20毫秒来进行。 如果手机在某个频点上等待了20毫秒的时间，一直未发现SSB，则认为这个频点上不存在5G载波，然后转到同步栅格里面的下一个频点再次尝试。 同步栅格 由于5G的系统带宽动辄100MHz，高频甚至能达到400MHz，远大于4G的系统带宽（最大20MHz），如果像4G一样把同步信号放在载波中心，手机按照100KHz的粒度来搜索的话，所需要的时间非常长，而且非常耗电，完全让人无法接受。 因此，5G不再把SSB放在载波中心，而是放在每个频段内一组有限的可能位置，称作“同步栅格（Synchronization Raster）”。手机只需在这些稀疏的同步栅格上搜索SSB即可，速度更快。 SS Burst Set为了使PSS / SSS和PBCH能够进行波束扫描，定义了同步广播块集合(SS Burst Set)。 SS Burst Set由一个或多个SSB组成，每个SSB可能在不同的波束上传输。 一个波束扫描内所有SSB成的set被称作SS burst setSS Burst Set 有翻译为同步信号集、 同步广播块集合 也有 信号突发集本文翻译 为同步广播块集合 来自书籍 5G无线系统设计与国际标准 同步广播块集合由一个或多个SSB组成。 同步广播块集合中的SSB以时分复用的方式传输。 同步广播块集合始终限制在5ms窗口内，位于10ms无线帧的前半部分或后半部分。 网络通过RRC参数ssb-PeriodicityServingCell设置SSB周期性，其取值范围为{5ms，10ms，20ms，40ms，80ms，160ms}。 同步广播块集合内的候选SSB的最大数量（Lmax）取决于载波频率/频段，如下表所示。 Carrier Frequency Max. No. of Candidate SSBs **within SS Burst Set ($L_{max}$) fc ≤ 3 GHz* 4 3 GHz* &lt; fc ≤ 6 GHz 8 fc &gt; 6 GHz 64 注: SCS = 30 kHz情况：对于成对频谱，为3 GHz，对于非成对频谱，为2.4 GHz 在5ms半帧内，SS 突发设置内候选 SSB 的起始 OFDM 符号索引取决于子载波间距 （SCS） 和载波频率/频段（下表中汇总）。有关详细信息，请参阅 38.213 的第 4.1 节。 大括号内的条目表示候选 SSB 的 OFDM 起始符号。🌟 SCS OFDM starting symbols of the candidate SSBs fc ≤ 3 GHz Lmax = 4 3 GHz&lt; fc≤ 6 GHz Lmax = 8 fc &gt; 6 GHz Lmax = 4 CaseA: 15 kHz {2,8} + 14n n = 0,1 {2,8,16,22} n = 0, 1, 2, 3 {2,8,16,22,30,36,44,50} NA CaseB: 30 kHz {4,8,16,20} + 28n n = 0 {4,8,16,20} n = 0, 1 {4,8,16,20,32,36,44,48} NA CaseC: 30 kHz {2,8} + 14n n = 0, 1 {2,8,16,22} n = 0, 1, 2, 3 {2,8,16,22,30,36,44,50} NA CaseD: 120 kHz {4,8,16,20} + 28n NA NA n=0,1,2,3,5,6,7,8,10,11,12,13,15,16,17,18{4,8,16,20 … 508,512,520,524} CaseE: 240 kHz {8,12,16,20,32,36,40,44} + 56n NA NA n=0,1,2,3,5,6,7,8{8,12,16,20 … 480,484,488,492} * SCS = 30 kHz情况：对于成对频谱，为3 GHz，对于非成对频谱，为2.4 GHz 注意，当网络不使用波束成形时，它可能只发送一个SSB，因此只能有一个SSB起始位置。 针对不同子载波间隔，每传输半帧SSB的候选位置如下定义： A：子载波间隔15kHz，针对FR1频带内不大于3GHz的NR载波频率，SSB的候选传输时刻可配置在0，1时隙的{2， 8}OFDM位置，这样共4个候选时刻；而FR1 频带内大于3 GHz的NR载波频率，SSB的候选传输时刻配置在0，1，2，3时隙的{2，8}OFDM位置，共8个候选时刻； B：子载波间隔30kHz，针对FR1频带内不大于3GHz的NR载波频率，SSB的候选传输时刻可配置在以0时隙起始计算的{4，8，16，20}OFDM位置，这样共4个候选时刻；而FR1 频带内大于3GHz的NR载波频率，SSB的候选传输时刻配置在0，2时隙分别为起始计算的{4，8，16，20}OFDM位置，共8个候选时刻； C：子载波间隔30kHz，5G FDD频谱模式下，针对FR1频带内不大于3GHz的NR载波频率，SSB的候选传输时刻可配置在0，1时隙的{2，8}OFDM位置，这样共4个候选时刻；而FR1频带内大于3GHz的NR载波频率，SSB的候选传输时刻配置在0，1，2，3时隙内的{2，8}OFDM位置，共8个候选时刻；5GTDD频谱模式下，针对FR1频带内不大于2.4GHz的NR载波频率，SSB的候选传输时刻可配置在0，1时隙的{2，8}OFDM位置，这样共4个候选时刻；而FR1频带内大于2.4GHz的NR载波频率，SSB的候选传输时刻刻配置在0，1，2，3时隙内的{2，8}OFDM位置，共8个候选时刻； D：子载波间隔120kHz，对于FR2频带内NR载波频率，SSB的候选传输时刻配置在0，2，4，6，10，12，14，16，20，22，24，26，30，32，35，36时隙分别为起始计算的{4，8，16，20}OFDM位置，共64个候选时刻。 E：子载波间隔240kHz，对于FR频带内NR载波频率，SSB的候选传输时刻配置在0，4，8，12，20，24，28，32时隙分别为起始计算的{8，12，16，20，32，36，40，44}OFDM位置，共64个候选时刻。 5G NR在系统架构中遵循一个重要设计理念就是系统参数设置相当灵活，在SSB中体现在子载波间隔（SCS，subcarrier spacing）可以与其他物理传输信道独立设置，但是否需要不同配置有待于实际组网环境下进一步验证。终端在开机搜网同步时，根据NR的工作频段可以确定SSB的子载波间隔以及SSB候选传输位置式样(A/B/C/D/E)，如果异频载波SSB的子载波间隔通过高层信令进行传递明确为30kHz时，SSB候选传输位置式样B可扩展适用于SCS定义为仅15kHz的FR1中NR工作频带。另外，当终端被配置为FR2频带内的载波聚合或者FR1频带内连续频率的载波聚合机制时，如果网络侧提供了载波聚合任何一个小区的SSB的子载波间隔信息，终端认为这一系列载波聚合小区的SSB子载波间隔一致。 针对在半帧内传输的SSB候选位置式样ABCDE，终端可以通过解码PBCH载荷比特来确定当前传输SSB的具体索引位置，对于半帧包含4个SSB候选传输位置，通过2个低比特位（LSB）确定索引，而半帧包含8个SSB候选传输位置，则通过3个低比特位（LSB）确定索引，这两种情况下PBCH索引恰恰与SSB中DMRS的高德伪随机序列初始序列索引呈一一对应的关系，终端在确定2个低比特位或者3个低比特位时并不是直接通过解码PBCH传输比特获知，而是间接通过解码DMRS进行逻辑映射。半帧包含64个SSB候选传输位置，传输SSB中DMRS的索引按照3个低比特位循环映射（8个SSB循环），终端结合3个低比特位（LSB）与PBCH载荷的3个额外高比特位（MSB）共同确定SSB的传输索引。PBCH有效载荷共32比特，包含承载RRC内容23比特，这23比特中有6比特作为计算无线帧的高位6比特，除了这23比特之外，物理层额外与传输时刻相关4比特作为计算无线帧的的地位4比特， 1比特作为无线帧中的半帧标识，3比特作为确定SSB索引的高位3比特，剩余1比特协议没做规定，MAC层实体为了与传输字节对齐进行填补。 作为示例，在SCS=15 kHz且载波频率在3 GHz和6 GHz之间的情况下，SS突发集合内的候选SSB的时序在下图中示出。 LTE同步信号和5G同步信号之间的区别：生成方法不同：LTE中的PSS是长度为62的 Zadoff-Chu 序列，NR中的PSS是长度为127的m序列。LTE中的SSS是长度为62的m序列，而NR中的SSS是长度为127的GOLD序列。 PCI的数量不同：LTE中定义了504 PCI，分为168组，对应168个SSS；每组包含3个小区，对应3个PSS。NR定义1008个PCI，分为336组，对应336个SSS；每组包含3个小区，对应3个PSS。 同步信号的时域和频域位置不同：LTE PSS、SSS和PBCH的频域和时域位置在系统中是固定的，总是占据系统带宽的中心频率部分。PSS与SSS和PBCH没有严格的结合关系。然而，在5G中，PSS、SSS和PBCH绑定在一起，称为SSB。不同LTE子载波间隔固定为15k，而NR中的PBCH子载波间隔根据频带而变化。 同步过程不同 : 正是由于NR和LTE的同步信号不同，其同步过程也不同于LTE。在NR中通常使用波束成形，并且同步信号SSB在不同的波束上传输。因此，同步过程的一个目标是找到最佳波束。此过程通过确定 SSB 的索引 ( the SSB’s index)来完成。在5ms周期内，SSB的索引与波束一一对应。通过确定最佳SSB的索引，可以找到最佳的波束方向。 通过确定SSB的频域位置，它可以基于其他参数（$k_ssb$，$N_{CRB} ^ {SSB}$等）。 获取 pointA 的位置，实现对BWP的管理。 SSB 波束赋形5G相对于4G最大的优势在于引入了波束赋形。实际使用中，可以把一个周期内的不同SSB分配到不同的波束上发送，每个SSB的发送时间不同，大家轮流依次发送，因此这种方式叫做SSB波束扫描，这些参与波束扫描的SSB集合就叫做同步信号突发集（SS Burst Set）。由于每个波束的能量更为集中，这样就有效增强了5G的覆盖。 由于每周期不同频段所支持的SSB发送次数不同，它们的波束赋形能力也各不相同。总体上来说，频段越高，波束赋形能力越强。 由于同步信号SSB是在不同的beam上发送的。因此，同步过程的一个目的就是要找到最优的beam。这个过程是通过确定SSB的index来完成的。5ms周期中SSB的index与波束是一一对应的关系，通过确定最优SSB的index就可以找到最优的波束方向。 对于3GHz以下的频段，一个SS突发集里最多包含4个SSB，因此最多可扫描4个波束； 对于3GHz~6GHz的频段，一个SS突发集里最多包含8个SSB，因此最多可扫描8个波束； 对于高于6GHz的毫米波mmWave频段，一个SS突发集里最多包含64个SSB，因此最多可扫描64个波束。 总结当UE开机后想要接入小区时，会进行小区搜索的操作。在NR中，小区搜索主要基于对下行同步信道及信号的检测来完成。终端通过小区搜索过程获得小区ID、频率同步（载波频率）、下行时间同步（包括无线帧定时、半帧定时，时隙定时及符号定时）。具体来看，整个小区搜索过程又包括主同步信号搜索、 辅同步信号检测及物理广播信道检测三部分。本文主要对同步信号块 SSB 的结构以及时频位置进行了描述。 参考文献 封面图：壹零腾_-_原创作品_-_站酷_(ZCOOL) 5 g/nr-SS Block Lin X, Li J, Baldemair R, et al. 5G new radio: Unveiling the essentials of the next generation wireless access technology[J]. IEEE Communications Standards Magazine, 2019, 3(3): 30-37. Omri A, Shaqfeh M, Ali A, et al. Synchronization procedure in 5G NR systems[J]. IEEE Access, 2019, 7: 41286-41295. Synchronization Signal Block LTE：小区搜索过程（cell search procedure） 5G NR Cell Search and Synchronization 5G NR: Synchronization Signal/PBCH block (SSB) Understanding NR5G Synchronisation Signal Block (SSB) 1) 3GPP TS 38.211 2) 3GPP TS 38.212 3) 3GPP TS 38.213 4) 3GPP TS 38.331, 38.300 溪云初起日沉阁，山雨欲来风满楼。 — 志南 《绝句·古木阴中系短篷》]]></content>
+      <categories>
+        <category>通信</category>
+      </categories>
+      <tags>
+        <tag>通信</tag>
+        <tag>5G NR</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Qt控件自适应窗口大小布局]]></title>
     <url>%2Fposts%2F52368.html</url>
     <content type="text"><![CDATA[Qt Creator 中为 UI 界面的窗体控件设置自适应窗口大小布局 一般的应用软件除了最大化最小化外都会让窗体中的控件能够自适应的改变大小。C#、Android以及Qt 中都有自己的一套布局方案。而在Qt中我却扰了弯路，确切的说应该是忘记了以前怎样布局的。网上很多人都是去用代码布局的，我觉得既然有了界面布局那就得用起来，所见即所得，改需求也会方便不少。 布局概述Qt 布局系统提供了一种简单而强大的方法，可以在一个 widget 中自动排列子 widget ，以确保它们充分利用可用空间。 Qt 包括一组布局管理类，用于描述 widget 如何在应用程序的界面中布局。当可用空间变化时，这些布局可以自动定位和调整窗口 widget 的大小，确保它们的布局一致。 所有 QWidget 子类都可以使用布局来管理它们的子类。QWidget::setLayout()函数的作用是: 将布局应用于小部件。当一个布局以这种方式设置在一个小部件上时，它将负责以下任务: Positioning of child widgets 子窗口widget 的位置 Sensible default sizes for windows 合理的默认窗口大小 Sensible minimum sizes for windows 合理的窗户最小尺寸 Resize handling 调整尺寸 Automatic updates when contents change 内容更改时自动更新: Font size, text or other contents of child widgets 字体大小，文本或其他内容的子部件 Hiding or showing a child widget 隐藏或显示子窗口小部件 Removal of child widgets 删除子窗口部件 常用布局方式常用的布局方式有 Horizontal 水平, Vertical 垂直, Grid 网格, 和 Form Layouts 窗体布局 。善于结合多种布局方式不能界面美观大方，而且也能够使维护或修改布局变得十分惬意。 为 widgets 提供良好布局的最简单方法是使用内置布局管理器：QHBoxLayout、QVBoxLayout、QGridLayout和QFormLayout。这些类继承自QLayout，而QLayout又派生自QObject(而不是QWidget)。要创建更复杂的布局，可以将布局管理器嵌套在彼此内部。为了将界面上的各个组件的分布设计得更加美观，经常使用一些容器类，如 QgoupBox、QtabWidget、QFrame 等。 布局组件 功能 Vertical Layout 垂直方向布局，组件自动在垂直方向上分布 Horizontal Layout 水平方向布局，组件自动在水平方向上分布 Grid Layout 网格状布局，网状布局大小改变时，每个网格的大小都改变 Form Layout 窗体布局，与网格状布局类似，但是只有最右侧的一列网格会改变大小 Horizontal Spacer 一个用于水平分隔的空格 Vertical Spacer 一个用于垂直分隔的空格 布局示例新建一个项目后，拖进去两个QTextEdit ，如下图所示。 然后运行起来，发现更改窗体大小时这两个控件不会自适应更改大小，因为我们并没有做布局设计。 那么怎么办呢？ 其实很简单只需做个简单的布局即可。在空白处右击，然后选择布局，然后选择栅格布局。重新编译运行一下，就会发现可以动态调整大小啦。😁 这次是一个简单的演示，当你的控件很多的时候，你应该进行水平布局、垂直布局、网格布局等操作。 看我瞎拖几个控件，随便布局一下的效果吧。 另外，若只需要改变便某方向的缩放与否 以及 缩放比例，可以选中界面中的控件，然后在有下角这里就能进行设置。 控件的sizePolicy说明控件在布局管理中的缩放方式。Qt提供的控件都有一个合理的缺省sizePolicy，但是这个缺省值有时不能适合所有的布局，开发人员经常需要改变窗体上的某些控件的sizePolicy。一个QSizePolicy的所有变量对水平方向和垂直方向都适用。下面列举了一些最长用的值： A. Fixed：控件不能放大或者缩小，控件的大小就是它的sizeHint。 B. Minimum：控件的sizeHint为控件的最小尺寸。控件不能小于这个sizeHint，但是可以 放大。 C. Maximum：控件的sizeHint为控件的最大尺寸，控件不能放大，但是可以缩小到它的最小 的允许尺寸。 D. Preferred：控件的sizeHint是它的sizeHint，但是可以放大或者缩小 E. Expandint：控件可以自行增大或者缩小 注：sizeHint（布局管理中的控件默认尺寸，如果控件不在布局管理中就为无效的值） 总结第一要设置顶级布局，即前面说的右击后设置栅格布局。 第二设置好控件的SizePolicy属性，以达到预期希望。]]></content>
@@ -103,8 +115,8 @@
     <url>%2Fposts%2F45421.html</url>
     <content type="text"><![CDATA[那是去年的景象，我们奔跑在雨季 入夜，在世界里漫游 分享 奇怪的日子 · 《向下就是天空》🎵 奇怪的日子 · 《向下就是天空》 那是去年的景象，我们奔跑在雨季入夜，在世界里漫游你问我的小说《落日青春》写得怎样了我笑说这城市的改造让我迷路了入夜，在梦中醒来，车灯在窗前一闪而过你不会说漂亮的情话，但你是个固执的女人死亡占据了整个童年你也并不害怕确认和期待什么说说你，说说你的爱情，你的过去，你常这样问我天空像蓝色的孩子，田野上的小路有动物的足迹叶子的故乡受到土地和阳光的恩宠，笑声传遍山谷我们为了寻找幻想之光在城市的最高处却看到了一片汪洋 你的快乐来自夏天的每一阵雨虽然有时候会独自哭泣我说喜欢看你坐在门前的石头上一支烟的功夫，黄昏就来了你问我小说里是不是有旧时的风物我说那只是消失的记忆真的那么崭新和伟大吗？没有，只是时间流过，连痕迹也没有留下我们生活在失信最猛的时代新生的儿童都被称作了天才在拥挤混乱的空间里，小丑们高歌说，我们来了！路边的小铁门上写着“彼此相爱”四个字，夕阳照在上面特别美忽然你说想要喝酒，还要阳光和不孤独我们整夜地念诗，在宿醉的夜晚寻找向下的方式也许音乐会从左边响起无节奏的声音在城市上空弥漫寻欢作乐的人们以为时代复兴了，用干瘪的腔调说来一段我想要的！我说，嘿，朋友，别忘了我们是行走在这荒凉之城的大街上我们从夜里醒来，相互给予了温暖的信号我的文字里有故乡的记忆这也是我们讨论多次的话题现在我还生活一个承诺在结伴而行的日子里道路虽被淹没，但向下就是天空……]]></content>
       <categories>
-        <category>生活</category>
         <category>转载</category>
+        <category>生活</category>
       </categories>
       <tags>
         <tag>诗歌</tag>
@@ -133,10 +145,10 @@
         <category>善用佳软</category>
       </categories>
       <tags>
+        <tag>问题</tag>
         <tag>教程</tag>
         <tag>善用佳软</tag>
         <tag>Windows</tag>
-        <tag>问题</tag>
       </tags>
   </entry>
   <entry>
@@ -158,12 +170,12 @@
     <url>%2Fposts%2F32023.html</url>
     <content type="text"><![CDATA[更改 hosts 加速访问Github 更改hostshosts文件所在路径为 C:\Windows\System32\drivers\etc 利用火绒或者 SwitchHosts 可以很方便的更改hosts 。 在 hosts 中增加如下内容： 12345678910111213141516140.82.112.3 github.com140.82.114.4 gist.github.com185.199.108.153 assets-cdn.github.com199.232.68.133 raw.githubusercontent.com199.232.68.133 gist.githubusercontent.com199.232.68.133 cloud.githubusercontent.com199.232.68.133 camo.githubusercontent.com199.232.68.133 avatars0.githubusercontent.com199.232.68.133 avatars1.githubusercontent.com199.232.68.133 avatars2.githubusercontent.com199.232.68.133 avatars3.githubusercontent.com199.232.68.133 avatars4.githubusercontent.com199.232.68.133 avatars5.githubusercontent.com199.232.68.133 avatars6.githubusercontent.com199.232.68.133 avatars7.githubusercontent.com199.232.68.133 avatars8.githubusercontent.com 可以通过以下网站获取 Github 域名所对应的 IP 地址 https://github.com.ipaddress.com 问题若你使用火绒或者 SwitchHosts 以管理员打开还是提示 hosts 更改错误。那么是因为 hosts 文件为只读属性，解决方案是手动去除 hosts 文件的只读属性。 梅子留酸软齿牙，芭蕉分绿与窗纱。日长睡起无情思，闲看儿童捉柳花。 —杨万里《闲居初夏午睡起》]]></content>
       <categories>
-        <category>教程</category>
         <category>问题</category>
+        <category>教程</category>
       </categories>
       <tags>
-        <tag>问题</tag>
         <tag>github</tag>
+        <tag>问题</tag>
       </tags>
   </entry>
   <entry>
@@ -202,9 +214,9 @@
         <category>通信</category>
       </categories>
       <tags>
-        <tag>通信</tag>
         <tag>教程</tag>
         <tag>善用佳软</tag>
+        <tag>通信</tag>
         <tag>分享</tag>
       </tags>
   </entry>
@@ -270,9 +282,9 @@
         <category>教程</category>
       </categories>
       <tags>
+        <tag>问题</tag>
         <tag>教程</tag>
         <tag>Windows</tag>
-        <tag>问题</tag>
       </tags>
   </entry>
   <entry>
@@ -300,8 +312,8 @@
         <category>善用佳软</category>
       </categories>
       <tags>
-        <tag>教程</tag>
         <tag>问题</tag>
+        <tag>教程</tag>
         <tag>云盘</tag>
       </tags>
   </entry>
@@ -310,8 +322,8 @@
     <url>%2Fposts%2F26908.html</url>
     <content type="text"><![CDATA[Gitalk重定向错误 ：error=redirect_uri_mismatch 。 在博文下面点击登录 github 进行评论的时候，出现重定向错误 error=redirect_uri_mismatch 。 比如我的就重定向至 1https://www.lifeee.top/?error=redirect_uri_mismatch&amp;error_description=The+redirect_uri+MUST+match+the+registered+callback+URL+for+this+application.&amp;error_uri=https%3A%2F%2Fdeveloper.github.com%2Fapps%2Fmanaging-oauth-apps%2Ftroubleshooting-authorization-request-errors%2F%23redirect-uri-mismatch 解决方法有： 确保 OAuth App 里填的 Homepage URL 和 Callback URL 正确 Homepage URL 和 Callback URL 后有 / 文章的链接不要带中文和空格 突然想到在修改博客域名后，未修改Homepage URL和Authorization callback URL 。因此我需要这样做，在 https://github.com/settings/developers 中找到对应的 OAuth Apps ，然后去更改里面的 Homepage URL和Authorization callback URL 即可。 然后就恢复正常啦 更多错误参见 Gitalk 的 issue 登录报错/?error=redirect_uri_mismatch&amp; #162 浅水是喧哗的，深水是沉默的。 —-雪莱]]></content>
       <categories>
-        <category>教程</category>
         <category>问题</category>
+        <category>教程</category>
       </categories>
       <tags>
         <tag>问题</tag>
@@ -327,8 +339,8 @@
         <category>教程</category>
       </categories>
       <tags>
-        <tag>教程</tag>
         <tag>问题</tag>
+        <tag>教程</tag>
         <tag>Android</tag>
       </tags>
   </entry>
@@ -458,8 +470,8 @@
         <category>教程</category>
       </categories>
       <tags>
-        <tag>教程</tag>
         <tag>问题</tag>
+        <tag>教程</tag>
       </tags>
   </entry>
   <entry>
@@ -496,8 +508,8 @@
         <category>教程</category>
       </categories>
       <tags>
-        <tag>教程</tag>
         <tag>问题</tag>
+        <tag>教程</tag>
       </tags>
   </entry>
   <entry>
@@ -549,8 +561,8 @@
       </categories>
       <tags>
         <tag>教程</tag>
-        <tag>分享</tag>
         <tag>Windows</tag>
+        <tag>分享</tag>
         <tag>Visual Studio</tag>
         <tag>激活码</tag>
       </tags>
