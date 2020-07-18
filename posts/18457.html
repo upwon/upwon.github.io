@@ -67,7 +67,7 @@
 <meta property="og:image" content="https://gitee.com/wang_wx/image_bed/raw/master/2020/20200718114146.jpg">
 <meta property="og:image" content="https://gitee.com/wang_wx/image_bed/raw/master/2020/20200718103811.png">
 <meta property="og:image" content="https://gitee.com/wang_wx/image_bed/raw/master/2020/20200718114523.png">
-<meta property="og:updated_time" content="2020-07-18T09:37:46.156Z">
+<meta property="og:updated_time" content="2020-07-18T09:50:51.743Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="5G NR Synchronization Signal&#x2F;PBCH block (SSB)">
 <meta name="twitter:description" content="本文主要对 5G NR 中的同步信号块 SSB 的结构以及时频位置进行了描述。">
@@ -257,7 +257,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2020-07-18 15:31:52 / 修改时间：17:37:46" itemprop="dateCreated datePublished" datetime="2020-07-18T15:31:52+08:00">2020-07-18</time>
+              <time title="创建时间：2020-07-18 15:31:52 / 修改时间：17:50:51" itemprop="dateCreated datePublished" datetime="2020-07-18T15:31:52+08:00">2020-07-18</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -338,8 +338,10 @@
 <p>PSS携带了3个小区号，SSS携带了336个小区组号，这两者共同决定了5G系统中的1008个物理小区号（Physical Cell Identity，简称PCI）。一旦手机成功搜索到了PSS和SSS，也就知道了这个5G载波的物理小区号。</p>
 <p><strong>物理广播信道</strong>的全称为：Physical Broadcast Channel，简称PBCH。PBCH在第二个和第四个OFDM符号上在SSB内全带宽发送，另外也使用SSS两端的48个子载波来发送。</p>
 </blockquote>
+<p><br></p>
 <h2 id="SSB频域位置概述"><a href="#SSB频域位置概述" class="headerlink" title="SSB频域位置概述"></a>SSB频域位置概述</h2><p>在频域中，一个 SS/PBCH 块由240个相邻的子载波组成，子载波在 SS/PBCH 块中按从0到239的顺序排列。下表给出了 PBCH 的 PSS、 SSS、 PBCH 和 DMRS 的位置。PBCH、 PBCH DMRS、 PSS 和 SSS 的位置参见38.211的表7.4.3.1-1 。下表中表示为“ Set to 0”的资源元素对应的复值符号被设置为零。 从下表中可以看到，PBCH DM-RS 的位置取决于PCI ($v = N_{ID}^{cell } mod 4$) （小区ID PCI 由 UE 使用 PSS/SSS 确定）</p>
 <p><img src="https://gitee.com/wang_wx/image_bed/raw/master/2020/20200718101458.png" alt></p>
+<p>  <br></p>
 <p>  <br></p>
 <h2 id="SSB时域位置概述"><a href="#SSB时域位置概述" class="headerlink" title="SSB时域位置概述"></a>SSB时域位置概述</h2><ul>
 <li>每个 SSB 跨越时域中的 4 个 OFDM 符号。</li>
@@ -467,12 +469,14 @@
 <p>　　针对在半帧内传输的SSB候选位置式样ABCDE，终端可以通过解码PBCH载荷比特来确定当前传输SSB的具体索引位置，对于半帧包含4个SSB候选传输位置，通过2个低比特位（LSB）确定索引，而半帧包含8个SSB候选传输位置，则通过3个低比特位（LSB）确定索引，这两种情况下PBCH索引恰恰与SSB中DMRS的高德伪随机序列初始序列索引呈一一对应的关系，终端在确定2个低比特位或者3个低比特位时并不是直接通过解码PBCH传输比特获知，而是间接通过解码DMRS进行逻辑映射。半帧包含64个SSB候选传输位置，传输SSB中DMRS的索引按照3个低比特位循环映射（8个SSB循环），终端结合3个低比特位（LSB）与PBCH载荷的3个额外高比特位（MSB）共同确定SSB的传输索引。PBCH有效载荷共32比特，包含承载RRC内容23比特，这23比特中有6比特作为计算无线帧的高位6比特，除了这23比特之外，物理层额外与传输时刻相关4比特作为计算无线帧的的地位4比特， 1比特作为无线帧中的半帧标识，3比特作为确定SSB索引的高位3比特，剩余1比特协议没做规定，MAC层实体为了与传输字节对齐进行填补。</p>
 <p>　　作为示例，在SCS=15 kHz且载波频率在3 GHz和6 GHz之间的情况下，SS突发集合内的候选SSB的时序在下图中示出。</p>
 <p><img src="https://gitee.com/wang_wx/image_bed/raw/master/2020/20200718103811.png" alt></p>
+<p><br></p>
 <p>  <br></p>
 <h2 id="LTE同步信号和5G同步信号之间的区别："><a href="#LTE同步信号和5G同步信号之间的区别：" class="headerlink" title="LTE同步信号和5G同步信号之间的区别："></a>LTE同步信号和5G同步信号之间的区别：</h2><h3 id="生成方法不同："><a href="#生成方法不同：" class="headerlink" title="生成方法不同："></a>生成方法不同：</h3><p>LTE中的PSS是长度为62的 Zadoff-Chu 序列，NR中的PSS是长度为127的m序列。LTE中的SSS是长度为62的m序列，而NR中的SSS是长度为127的GOLD序列。</p>
 <h3 id="PCI的数量不同："><a href="#PCI的数量不同：" class="headerlink" title="PCI的数量不同："></a>PCI的数量不同：</h3><p>LTE中定义了504 PCI，分为168组，对应168个SSS；每组包含3个小区，对应3个PSS。NR定义1008个PCI，分为336组，对应336个SSS；每组包含3个小区，对应3个PSS。</p>
 <h3 id="同步信号的时域和频域位置不同："><a href="#同步信号的时域和频域位置不同：" class="headerlink" title="同步信号的时域和频域位置不同："></a>同步信号的时域和频域位置不同：</h3><p>LTE PSS、SSS和PBCH的频域和时域位置在系统中是固定的，总是占据系统带宽的中心频率部分。PSS与SSS和PBCH没有严格的结合关系。然而，在5G中，PSS、SSS和PBCH绑定在一起，称为SSB。不同LTE子载波间隔固定为15k，而NR中的PBCH子载波间隔根据频带而变化。</p>
 <h3 id="同步过程不同"><a href="#同步过程不同" class="headerlink" title="同步过程不同 :"></a>同步过程不同 :</h3><p>  正是由于NR和LTE的同步信号不同，其同步过程也不同于LTE。在NR中通常使用波束成形，并且同步信号SSB在不同的波束上传输。因此，同步过程的一个目标是找到最佳波束。此过程通过确定 SSB 的索引 ( the SSB’s index)来完成。在5ms周期内，SSB的索引与波束一一对应。通过确定最佳SSB的索引，可以找到最佳的波束方向。</p>
 <p>通过确定SSB的频域位置，它可以基于其他参数（$k_ssb$，$N_{CRB} ^ {SSB}$等）。 获取 pointA 的位置，实现对BWP的管理。</p>
+<p><br></p>
 <h2 id="SSB-波束赋形"><a href="#SSB-波束赋形" class="headerlink" title="SSB 波束赋形"></a>SSB 波束赋形</h2><p>5G相对于4G最大的优势在于引入了波束赋形。实际使用中，可以把一个周期内的不同SSB分配到不同的波束上发送，每个SSB的发送时间不同，大家轮流依次发送，因此这种方式叫做SSB波束扫描，这些参与波束扫描的SSB集合就叫做同步信号突发集（SS Burst Set）。由于每个波束的能量更为集中，这样就有效增强了5G的覆盖。</p>
 <p>由于每周期不同频段所支持的SSB发送次数不同，它们的波束赋形能力也各不相同。总体上来说，频段越高，波束赋形能力越强。</p>
 <p>由于同步信号SSB是在不同的beam上发送的。因此，同步过程的一个目的就是要找到最优的beam。这个过程是通过确定SSB的index来完成的。<br>5ms周期中SSB的index与波束是一一对应的关系，通过确定最优SSB的index就可以找到最优的波束方向。</p>
