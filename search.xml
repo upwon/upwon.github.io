@@ -20,9 +20,9 @@
         <category>编程</category>
       </categories>
       <tags>
-        <tag>教程</tag>
         <tag>C++</tag>
         <tag>编程</tag>
+        <tag>教程</tag>
         <tag>qt</tag>
       </tags>
   </entry>
@@ -133,8 +133,8 @@
         <category>转载</category>
       </categories>
       <tags>
-        <tag>分享</tag>
         <tag>转载</tag>
+        <tag>分享</tag>
         <tag>学习</tag>
       </tags>
   </entry>
@@ -156,8 +156,8 @@
     <url>%2Fposts%2F45421.html</url>
     <content type="text"><![CDATA[那是去年的景象，我们奔跑在雨季 入夜，在世界里漫游 分享 奇怪的日子 · 《向下就是天空》🎵 奇怪的日子 · 《向下就是天空》 那是去年的景象，我们奔跑在雨季入夜，在世界里漫游你问我的小说《落日青春》写得怎样了我笑说这城市的改造让我迷路了入夜，在梦中醒来，车灯在窗前一闪而过你不会说漂亮的情话，但你是个固执的女人死亡占据了整个童年你也并不害怕确认和期待什么说说你，说说你的爱情，你的过去，你常这样问我天空像蓝色的孩子，田野上的小路有动物的足迹叶子的故乡受到土地和阳光的恩宠，笑声传遍山谷我们为了寻找幻想之光在城市的最高处却看到了一片汪洋 你的快乐来自夏天的每一阵雨虽然有时候会独自哭泣我说喜欢看你坐在门前的石头上一支烟的功夫，黄昏就来了你问我小说里是不是有旧时的风物我说那只是消失的记忆真的那么崭新和伟大吗？没有，只是时间流过，连痕迹也没有留下我们生活在失信最猛的时代新生的儿童都被称作了天才在拥挤混乱的空间里，小丑们高歌说，我们来了！路边的小铁门上写着“彼此相爱”四个字，夕阳照在上面特别美忽然你说想要喝酒，还要阳光和不孤独我们整夜地念诗，在宿醉的夜晚寻找向下的方式也许音乐会从左边响起无节奏的声音在城市上空弥漫寻欢作乐的人们以为时代复兴了，用干瘪的腔调说来一段我想要的！我说，嘿，朋友，别忘了我们是行走在这荒凉之城的大街上我们从夜里醒来，相互给予了温暖的信号我的文字里有故乡的记忆这也是我们讨论多次的话题现在我还生活一个承诺在结伴而行的日子里道路虽被淹没，但向下就是天空……]]></content>
       <categories>
-        <category>转载</category>
         <category>生活</category>
+        <category>转载</category>
       </categories>
       <tags>
         <tag>诗歌</tag>
@@ -211,8 +211,8 @@
     <url>%2Fposts%2F32023.html</url>
     <content type="text"><![CDATA[更改 hosts 加速访问Github 更改hostshosts文件所在路径为 C:\Windows\System32\drivers\etc 利用火绒或者 SwitchHosts 可以很方便的更改hosts 。 在 hosts 中增加如下内容： 12345678910111213141516140.82.112.3 github.com140.82.114.4 gist.github.com185.199.108.153 assets-cdn.github.com199.232.68.133 raw.githubusercontent.com199.232.68.133 gist.githubusercontent.com199.232.68.133 cloud.githubusercontent.com199.232.68.133 camo.githubusercontent.com199.232.68.133 avatars0.githubusercontent.com199.232.68.133 avatars1.githubusercontent.com199.232.68.133 avatars2.githubusercontent.com199.232.68.133 avatars3.githubusercontent.com199.232.68.133 avatars4.githubusercontent.com199.232.68.133 avatars5.githubusercontent.com199.232.68.133 avatars6.githubusercontent.com199.232.68.133 avatars7.githubusercontent.com199.232.68.133 avatars8.githubusercontent.com 可以通过以下网站获取 Github 域名所对应的 IP 地址 https://github.com.ipaddress.com 问题若你使用火绒或者 SwitchHosts 以管理员打开还是提示 hosts 更改错误。那么是因为 hosts 文件为只读属性，解决方案是手动去除 hosts 文件的只读属性。 梅子留酸软齿牙，芭蕉分绿与窗纱。日长睡起无情思，闲看儿童捉柳花。 —杨万里《闲居初夏午睡起》]]></content>
       <categories>
-        <category>问题</category>
         <category>教程</category>
+        <category>问题</category>
       </categories>
       <tags>
         <tag>github</tag>
@@ -251,8 +251,8 @@
     <content type="text"><![CDATA[本文介绍了如何从 3GPP 36.331 或者 38.331 中提取出 RRC 中的 ASN.1 部分抽象描述内容。 ASN.1 标准简介在电信和计算机网络领域，ASN.1（Abstract Syntax Notation One) 是一套标准，是描述数据、编码、传输、解码的灵活的抽象语义记法。它提供了一套正式、无歧义和精确的规则以描述独立于特定计算机硬件的对象结构。 ASN.1 标准下载描述ASN.1记法的标准： ITU-T Rec. X.680 | ISO/IEC 8824-1 ITU-T Rec. X.681 | ISO/IEC 8824-2 ITU-T Rec. X.682 | ISO/IEC 8824-3 ITU-T Rec. X.683 | ISO/IEC 8824-4 从ITU-T网站免费下载 描述ASN.1编码规则的标准 ITU-T Rec. X.690 | ISO/IEC 8825-1 (BER, CER and DER) ITU-T Rec. X.691 | ISO/IEC 8825-2 (PER) ITU-T Rec. X.692 | ISO/IEC 8825-3 (ECN) ITU-T Rec. X.693 | ISO/IEC 8825-4 (XER) ASN.1标准列表 关于 ASN.1的标准，可以在 ISO/ITU-T 中找到关于本部分标准的链接，打开 http://www.itu.int/ITU-T/recommendations/index.aspx 在 search 栏输入 x.680~x.683 或 x.690 可以查看到 ASN.1 的具体标准及编解码的方法，或者从 http://www.itu.int/ITU-T/studygroups/com17/languages/ 获得相关文档 范例FooProtocol 结构的定义系使用 ASN.1 表示法: 12345678910111213FooProtocol DEFINITIONS ::= BEGIN FooQuestion ::= SEQUENCE &#123; trackingNumber INTEGER, question IA5String &#125; FooAnswer ::= SEQUENCE &#123; questionNumber INTEGER, answer BOOLEAN &#125;END ASN.1没有定义的谈话流动。 这是协议的文本描述。 假设消息，符合与foo的协议将被发送到接收方。这种特定的消息（PDU）: 1234myQuestion FooQuestion ::= &#123; trackingNumber 5, question "Anybody there?"&#125; 要通过网络发送上述消息，需要编码成位元字串（string of bits）。ASN.1定义了不同的算法来完成这项任务，被称为编码规则。有很多，最简单的一个是DER. Foo协议规范应明确名称一套编码规则的使用，Foo的协议，使用者 知道他们应该使用哪一个。 下载3GPP协议打开https://www.3gpp.org/ftp/Specs/archive 比如下载 38.331 5G NR 的无线资源控制(RRC)协议是 38.331LTE 的无线资源控制(RRC)协议是 36.331 协议中的 ASN.1 描述长这个样子 😎 当然你可以手动复制粘贴出来，但是这样效率低下，浪费时间。因此推荐使用工具或者自己用代码来提取。具体方法请继续往下看哦 🌱 转换工具下载在 https://github.com/Dybinx/txt2asn1 中下载 txt2asn1 开始转换为 ASN.1下载好 38.331或者36.331，在 word 中打开协议，选择另存为，将其保存为 TXT 格式。 在 txt2asn1 所在的路径下打开终端，输入： 1txt2asn1.exe 待转换txt文件路径 就能转换得到 ASN1文件了。 比如我输入: 1txt2asn1.exe 36331-g00.txt 就能获得 36331-g00.asn1 文件了。 在 VS Code 打开生成的文件看一看 ，效果美滋滋 🍦 推荐在 VS Code 中安装 ASN.1 VS Code Extension ，格式化后的 ASN.1 即美观又方便查看。 阅读过程中，可以按住 Ctrl 然后点击鼠标左键，就能实现在一些配置信息之间跳转。 转换ASN.1-方式二新建一个 C++ 项目 ，在 main.cpp 中粘贴如下的代码。注意把 input_file 的路径改一下。代码来自 peng_yw 。 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899100101102103104105106107108109110111112113114115116117118119120121122123124125126127128129130131132133134135136137138139140141142143144145146147148#include &lt;iostream&gt;#include &lt;fstream&gt;#include &lt;string&gt;#include &lt;vector&gt;using namespace std;int main()&#123; std::string output_file; std::string input_file = "D:/Project_codeing/VisualStudio/Cplusplus/3GPP-ASN.1/Get-3GPP-ASN.1/Files/36331-g00.txt"; std::cout &lt;&lt; input_file.c_str() &lt;&lt; std::endl; int pos = input_file.find('.'); if (pos == std::string::npos) &#123; output_file = input_file + ".asn1"; &#125; else &#123; output_file = input_file + "_.asn1"; // output_file = input_file.substr(0, pos) + ".asn1"; &#125; std::fstream input; input.open(input_file.c_str(), std::fstream::in); if (input.fail() == true) &#123; std::cout &lt;&lt; "Please check input file is correct !" &lt;&lt; std::endl; return 1; &#125; std::fstream output; output.open(output_file.c_str(), std::fstream::out); if (output.fail() == true) &#123; std::cout &lt;&lt; "The output file can not be created here !" &lt;&lt; std::endl; return 1; &#125; std::string input_line; std::vector&lt;std::string &gt; vec_asn; std::vector&lt;std::string &gt;::iterator itr; const unsigned long cul_asn_idle = 0x0; const unsigned long cul_asn_start = 0x1; unsigned long asn_state = cul_asn_idle; while (std::getline(input, input_line)) &#123; if (cul_asn_idle == asn_state) &#123; if (input_line.find("-- ASN1START") != std::string::npos) &#123; asn_state |= cul_asn_start; &#125; continue; &#125; if (0 != (cul_asn_start &amp; asn_state)) &#123; if (input_line.find("-- ASN1STOP") != std::string::npos) &#123; asn_state = cul_asn_idle; &#125; else &#123; vec_asn.push_back(input_line); &#125; &#125; &#125; for (itr = vec_asn.begin(); itr != vec_asn.end(); ++itr) &#123; output &lt;&lt; *itr &lt;&lt; std::endl; &#125; input.close(); output.close(); return 0;&#125; 当然可以把输入参数那里不要固定死，弄成一个输入参数的程序，这样在命令行中使用的话也会很方便的。 编译项目后运行，然后就会在 input_file 的路径下产生一个后缀为 .asn1的文件。 利用开源ASN1C库实现asn.1的编解码，生成C代码在 http://lionet.info/asn1c/download.html 中下载 Windows installer ，然后安装。 关于详细的使用方式可以在项目地址中查看到：https://github.com/vlm/asn1c 。关于这个编译器的详细的文档在 doc / asn1c-usage.pdf 中。 快速使用在安装编译器(请参阅 INSTALL.md)之后，您可以使用 asn1c 命令编译 ASN. 1规范: 1asn1c &lt;module.asn1&gt; # Compile module 如果多个规范包含相互依赖关系，则必须同时指定所有规范: 1asn1c &lt;module1.asn1&gt; &lt;module2.asn1&gt; ... # Compile interdependent modules 实际测试在 samples 文件夹下有 ASN.1 示例文件，就让我来测试一下吧。 输入以下命令行 1asn1c -P ./samples/rfc3280-*.asn1 在本例中，-P选项用于在标准输出上打印编译后的文本。 默认行为是asn1c编译器为在指定ASN.1模块中找到的每个ASN.1类型创建多个.c和.h文件。 这样就打印出来了： 在使用说明 asn1c-usage.pdf 中有其他使用的示例。 比如输入： 1asn1c ./samples/rfc3280-*.asn1 编译成功，可以看到已经产生了很多的 .c 、 .h 文件。 《小池》 杨万里 泉眼无声惜细流，树阴照水爱晴柔。小荷才露尖尖角，早有蜻蜓立上头。 🍉]]></content>
       <categories>
         <category>技术</category>
-        <category>通信</category>
         <category>教程</category>
+        <category>通信</category>
       </categories>
       <tags>
         <tag>通信</tag>
@@ -310,8 +310,8 @@
         <category>教程</category>
       </categories>
       <tags>
-        <tag>教程</tag>
         <tag>C++</tag>
+        <tag>教程</tag>
       </tags>
   </entry>
   <entry>
@@ -363,8 +363,8 @@
     <url>%2Fposts%2F26908.html</url>
     <content type="text"><![CDATA[Gitalk重定向错误 ：error=redirect_uri_mismatch 。 在博文下面点击登录 github 进行评论的时候，出现重定向错误 error=redirect_uri_mismatch 。 比如我的就重定向至 1https://www.lifeee.top/?error=redirect_uri_mismatch&amp;error_description=The+redirect_uri+MUST+match+the+registered+callback+URL+for+this+application.&amp;error_uri=https%3A%2F%2Fdeveloper.github.com%2Fapps%2Fmanaging-oauth-apps%2Ftroubleshooting-authorization-request-errors%2F%23redirect-uri-mismatch 解决方法有： 确保 OAuth App 里填的 Homepage URL 和 Callback URL 正确 Homepage URL 和 Callback URL 后有 / 文章的链接不要带中文和空格 突然想到在修改博客域名后，未修改Homepage URL和Authorization callback URL 。因此我需要这样做，在 https://github.com/settings/developers 中找到对应的 OAuth Apps ，然后去更改里面的 Homepage URL和Authorization callback URL 即可。 然后就恢复正常啦 更多错误参见 Gitalk 的 issue 登录报错/?error=redirect_uri_mismatch&amp; #162 浅水是喧哗的，深水是沉默的。 —-雪莱]]></content>
       <categories>
-        <category>问题</category>
         <category>教程</category>
+        <category>问题</category>
       </categories>
       <tags>
         <tag>问题</tag>
@@ -407,8 +407,8 @@
         <category>教程</category>
       </categories>
       <tags>
-        <tag>教程</tag>
         <tag>博客</tag>
+        <tag>教程</tag>
       </tags>
   </entry>
   <entry>
@@ -499,8 +499,8 @@
         <category>教程</category>
       </categories>
       <tags>
-        <tag>教程</tag>
         <tag>博客</tag>
+        <tag>教程</tag>
       </tags>
   </entry>
   <entry>
