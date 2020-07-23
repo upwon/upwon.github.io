@@ -486,23 +486,15 @@
 </blockquote><br> <br></p>
 <p> <br></p>
 <figure class="highlight django"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"></span><span class="template-tag">&#123;% <span class="name">centerquote</span> %&#125;</span><span class="xml"></span></span><br><span class="line"><span class="xml">标签方式</span></span><br><span class="line"><span class="xml">晓看天色暮看云，行也思君，坐也思君。</span></span><br><span class="line"><span class="xml">--唐寅《一剪梅·雨打梨花深闭门》</span></span><br><span class="line"><span class="xml"></span></span><br><span class="line"><span class="xml"></span><span class="template-tag">&#123;% <span class="name">endcenterquote</span> %&#125;</span><span class="xml"></span></span><br></pre></td></tr></table></figure>
-<blockquote class="blockquote-center">
-            <i class="fa fa-quote-left"></i>
-            <p>标签方式<br>晓看天色暮看云，行也思君，坐也思君。<br>—唐寅《一剪梅·雨打梨花深闭门》</p>
-
-            <i class="fa fa-quote-right"></i>
-          </blockquote>
+<blockquote class="blockquote-center"><p>标签方式<br>晓看天色暮看云，行也思君，坐也思君。<br>—唐寅《一剪梅·雨打梨花深闭门》</p>
+</blockquote>
 <p> <br></p>
 <p> <br></p>
 <figure class="highlight django"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"></span><span class="template-tag">&#123;% <span class="name">cq</span> %&#125;</span><span class="xml"></span></span><br><span class="line"><span class="xml"></span></span><br><span class="line"><span class="xml">空山新雨后，天气晚来秋。</span></span><br><span class="line"><span class="xml"></span></span><br><span class="line"><span class="xml">明月松间照，清泉石上流。</span></span><br><span class="line"><span class="xml"></span></span><br><span class="line"><span class="xml">——《山居秋暝》王维</span></span><br><span class="line"><span class="xml"></span></span><br><span class="line"><span class="xml"></span><span class="template-tag">&#123;% <span class="name">endcq</span> %&#125;</span><span class="xml"></span></span><br></pre></td></tr></table></figure>
-<blockquote class="blockquote-center">
-            <i class="fa fa-quote-left"></i>
-            <p>空山新雨后，天气晚来秋。</p>
+<blockquote class="blockquote-center"><p>空山新雨后，天气晚来秋。</p>
 <p>明月松间照，清泉石上流。</p>
 <p>——《山居秋暝》王维</p>
-
-            <i class="fa fa-quote-right"></i>
-          </blockquote>
+</blockquote>
 <p> <br></p>
 <p> <br></p>
 <p> <br></p>
@@ -557,23 +549,15 @@
 <h3 id="Button-标签"><a href="#Button-标签" class="headerlink" title="Button 标签"></a>Button 标签</h3><p><strong>使用方式</strong></p>
 <figure class="highlight django"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"><span class="comment">&lt;!-- 标签 方式 --&gt;</span></span></span><br><span class="line"><span class="xml"></span><span class="template-tag">&#123;% <span class="name">button</span> /path/to/url/, text, icon [class], title %&#125;</span><span class="xml"></span></span><br><span class="line"><span class="xml"><span class="comment">&lt;!-- 标签别名 --&gt;</span></span></span><br><span class="line"><span class="xml"></span><span class="template-tag">&#123;% <span class="name">btn</span> /path/to/url/, text, icon [class], title %&#125;</span><span class="xml"></span></span><br><span class="line"><span class="xml"><span class="comment">&lt;!-- HTML标签 --&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">button</span> <span class="attr">type</span>=<span class="string">"button"</span>&gt;</span>这是标签名Click Me!<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
 <p><strong>示例：</strong></p>
-<a class="btn" href="#">
-            <i class="fa fa-"></i>Text
-          </a><a class="btn" href="#" title="Title">
-            <i class="fa fa-home"></i>Text & Title
-          </a>
+<a class="btn" href="#">Text</a><a class="btn" href="#" title="Title"><i class="fa fa-home"></i>Text & Title</a>
 <figure class="highlight django"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"></span><span class="template-tag">&#123;% <span class="name">btn</span> #, Text %&#125;</span><span class="xml"></span><span class="template-tag">&#123;% <span class="name">btn</span> #, Text &amp; Title, home, Title %&#125;</span><span class="xml"></span></span><br></pre></td></tr></table></figure>
 <p> <br></p>
 <figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% btn url, text, <span class="attribute">icon</span> <span class="selector-attr">[class]</span>, <span class="selector-attr">[title]</span> %&#125;</span><br></pre></td></tr></table></figure>
 <figure class="highlight django"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"></span><span class="template-tag">&#123;% <span class="name">btn</span> https://upwon.github.io ,首页,home fa-2x,这是YouForever的首页%&#125;</span><span class="xml"></span></span><br></pre></td></tr></table></figure>
-<div><a class="btn" href="https://upwon.github.io " title="这是YouForever的首页" target="_blank" rel="noopener">
-            <i class="fa fa-home fa-2x"></i>首页
-          </a></div>
+<div><a class="btn" href="https://upwon.github.io " title="这是YouForever的首页" target="_blank" rel="noopener"><i class="fa fa-home fa-2x"></i>首页</a></div>
 
 <p> <br></p>
-<a class="btn" href="https://www.google.com" target="_blank" rel="noopener">
-            <i class="fa fa-google fa-fw"></i>google一下
-          </a>
+<a class="btn" href="https://www.google.com" target="_blank" rel="noopener"><i class="fa fa-google fa-fw"></i>google一下</a>
 <figure class="highlight django"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="xml"></span><span class="template-tag">&#123;% <span class="name">btn</span> https://www.google.com, google一下,  google fa-fw %&#125;</span><span class="xml"></span></span><br></pre></td></tr></table></figure>
 <p> <br></p>
 <p>HTML示例</p>
