@@ -1212,7 +1212,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #733dac;
+  background: #913d2f;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2794,6 +2794,9 @@ body {
   background: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
   background: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);
   opacity: 1;
+}
+.site-title {
+  font-size: 2em;
 }
 .post-body p a {
   color: #0593d3;
