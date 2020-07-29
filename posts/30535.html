@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 3.9.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/myapple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/myfavicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/myfavicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/myapple-touch-icon-next.png" color="#222">
+  <meta name="google-site-verification" content="google2fc64c2b92961282.html">
+  <meta name="baidu-site-verification" content="s6BwSjIZYB">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.loli.net/css?family=EB Garamond:300,300italic,400,400italic,700,700italic|Ma Shan Zheng:300,300italic,400,400italic,700,700italic|Source Code Pro:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-loading-bar.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    hostname: new URL('https://www.lifeee.top').hostname,
+    root: '/',
+    scheme: 'Gemini',
+    version: '7.7.1',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},
+    copycode: {"enable":true,"show_result":true,"style":"mac"},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":true},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: true,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    comments: {"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: 'search.xml',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}
+  };
+</script>
+
+  <meta name="description" content="Qt 开发时 QtCreator 是不得不接触的 IDE，提供了代码编写与可视化设计 GUI 的环境，但有时候使用却有点稍显逊色 。CLion 是 JetBrains 出品的 C++ IDE ，使用 CLion 来编写 C++ 会大大提高效率，因此 CLion 写代码，Qt Designer设计界面的方式是个不错的选择。😛">
+<meta name="keywords" content="C++,善用佳软,qt">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CLion配置Qt的开发环境">
+<meta property="og:url" content="https://www.lifeee.top/posts/30535.html">
+<meta property="og:site_name" content="热夏的博客">
+<meta property="og:description" content="Qt 开发时 QtCreator 是不得不接触的 IDE，提供了代码编写与可视化设计 GUI 的环境，但有时候使用却有点稍显逊色 。CLion 是 JetBrains 出品的 C++ IDE ，使用 CLion 来编写 C++ 会大大提高效率，因此 CLion 写代码，Qt Designer设计界面的方式是个不错的选择。😛">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://tvax1.sinaimg.cn/large/c55aab25ly1gh889n55kxj23s02iowz1.jpg">
+<meta property="og:image" content="https://tvax4.sinaimg.cn/large/c55aab25ly1gh71kywfkmj20m10j4dhf.jpg">
+<meta property="og:image" content="https://tva2.sinaimg.cn/large/c55aab25ly1gh71uot0gnj21370p277f.jpg">
+<meta property="og:image" content="https://tva2.sinaimg.cn/large/c55aab25ly1gh71whdmtgj21370p2diq.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/c55aab25ly1gh72293qlwj21370p2tc2.jpg">
+<meta property="og:image" content="https://tvax4.sinaimg.cn/large/c55aab25ly1gh726cjkonj21370p2whs.jpg">
+<meta property="og:image" content="https://tvax4.sinaimg.cn/large/c55aab25ly1gh72anaj9oj20ar0aqt9a.jpg">
+<meta property="og:image" content="https://tva3.sinaimg.cn/large/c55aab25ly1gh72a9cziaj213r0y144w.jpg">
+<meta property="og:image" content="https://tvax4.sinaimg.cn/large/c55aab25ly1gh72b8dv27j21i00tmwjz.jpg">
+<meta property="og:image" content="https://gitee.com/wang_wx/image_bed/raw/master/2020/20200424231024.png">
+<meta property="og:image" content="https://gitee.com/wang_wx/image_bed/raw/master/2020/20200424231211.png">
+<meta property="og:image" content="https://tva4.sinaimg.cn/large/c55aab25ly1gh72j3a0otj210g0p9jvt.jpg">
+<meta property="og:image" content="https://tvax4.sinaimg.cn/large/c55aab25ly1gh72anaj9oj20ar0aqt9a.jpg">
+<meta property="og:image" content="https://tva3.sinaimg.cn/large/c55aab25ly1gh72a9cziaj213r0y144w.jpg">
+<meta property="og:image" content="https://tvax4.sinaimg.cn/large/c55aab25ly1gh72b8dv27j21i00tmwjz.jpg">
+<meta property="og:image" content="https://tvax4.sinaimg.cn/large/c55aab25ly1gh6xxze79mj213r0ptgoz.jpg">
+<meta property="og:image" content="https://tvax2.sinaimg.cn/large/c55aab25ly1gh6xrgwxqlj213r0y1aek.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/c55aab25ly1gh6xtbpmicj21270r8ju9.jpg">
+<meta property="og:image" content="https://tvax4.sinaimg.cn/large/c55aab25ly1gh6xxze79mj213r0ptgoz.jpg">
+<meta property="og:image" content="https://tva3.sinaimg.cn/large/c55aab25ly1gh6soqz39hj21hm0oztby.jpg">
+<meta property="og:image" content="https://tvax3.sinaimg.cn/large/c55aab25ly1gh6sretl4gj21hm0oz77b.jpg">
+<meta property="og:image" content="https://tvax1.sinaimg.cn/large/c55aab25ly1gh70bh50g0j21370p2mzt.jpg">
+<meta property="og:image" content="https://tvax1.sinaimg.cn/large/c55aab25ly1gh70bvcmkij21370p2419.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/c55aab25ly1gh70eix1pfj213r0nsq6f.jpg">
+<meta property="og:updated_time" content="2020-07-29T15:11:46.911Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="CLion配置Qt的开发环境">
+<meta name="twitter:description" content="Qt 开发时 QtCreator 是不得不接触的 IDE，提供了代码编写与可视化设计 GUI 的环境，但有时候使用却有点稍显逊色 。CLion 是 JetBrains 出品的 C++ IDE ，使用 CLion 来编写 C++ 会大大提高效率，因此 CLion 写代码，Qt Designer设计界面的方式是个不错的选择。😛">
+<meta name="twitter:image" content="https://tvax1.sinaimg.cn/large/c55aab25ly1gh889n55kxj23s02iowz1.jpg">
+
+<link rel="canonical" href="https://www.lifeee.top/posts/30535.html">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true
+  };
+</script>
+<link href="https://fonts.loli.net/css?family=Noto+Serif+SC:400,500,700&display=swap&subset=chinese-simplified" rel="stylesheet">
+  <title>CLion配置Qt的开发环境 | 热夏的博客</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">热夏的博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-fw fa-heart"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+
+</nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+           placeholder="搜索..." spellcheck="false"
+           type="text" id="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
+
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="https://www.lifeee.top/posts/30535.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/head.jpg">
+      <meta itemprop="name" content="热夏">
+      <meta itemprop="description" content="空山新雨后，天气晚来秋。">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="热夏的博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          CLion配置Qt的开发环境
+        </h1>
+
+        <div class="post-meta">
+
+
+      
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-07-29 20:56:40 / 修改时间：23:11:46" itemprop="dateCreated datePublished" datetime="2020-07-29T20:56:40+08:00">2020-07-29</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/编程/" itemprop="url" rel="index">
+                    <span itemprop="name">编程</span>
+                  </a>
+                </span>
+                  ，
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/教程/" itemprop="url" rel="index">
+                    <span itemprop="name">教程</span>
+                  </a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span><br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>7.6k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>7 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p><img src="https://tvax1.sinaimg.cn/large/c55aab25ly1gh889n55kxj23s02iowz1.jpg" alt></p>
+<p>　　Qt 开发时 QtCreator 是不得不接触的 IDE，提供了代码编写与可视化设计 GUI 的环境，但有时候使用却有点稍显逊色 。CLion 是 JetBrains 出品的 C++ IDE ，使用 CLion 来编写 C++ 会大大提高效率，因此 CLion 写代码，Qt Designer设计界面的方式是个不错的选择。😛</p>
+<a id="more"></a>
+<h2 id="我的的配置环境"><a href="#我的的配置环境" class="headerlink" title="我的的配置环境"></a>我的的配置环境</h2><blockquote>
+<p>Windows 10</p>
+<p>Qt 5.14..0</p>
+<p>Mingw 64 bit</p>
+<p>CLion 2020.1</p>
+</blockquote>
+<p><br></p>
+<h2 id="安装-CLion-与-Qt"><a href="#安装-CLion-与-Qt" class="headerlink" title="安装 CLion 与 Qt"></a>安装 CLion 与 Qt</h2><p> 　　首先安装好CLion ，可参考前面的这篇文章：  <a href="https://www.lifeee.top/posts/59155.html">CLion的安装、激活、汉化及编译器配置</a></p>
+<p>并安装Qt ，可参见 <a href="https://www.lifeee.top/posts/20536.html">Visual Studio 2019配置qt开发环境</a> 一文中 <a href="https://www.lifeee.top/posts/20536.html#Qt%E5%AE%89%E8%A3%85">Qt安装</a> 小节 安装好 Qt 。安装时可根据自身需求选择 mingw 或者 MSVC 编译器。</p>
+<blockquote>
+<p>Basically, MinGW is a port of Linux (GNU, actually) tools for Windows, which happen to include a port of GCC (the actual compiler). MSVC, on the other hand, is a Windows native tool chain and runtime for building C/C++ executables.  — <a href="https://www.quora.com/What-is-the-difference-between-MinGW-and-MSVC-compilers" target="_blank" rel="noopener">Quora</a></p>
+<p>MinGW 是 Minimalist GNU on Windows 的缩写。它是一个可自由使用和自由发布的 Windows 特定头文件和使用 GNU 工具集导入库的集合，允许你在 GNU/Linux 和 Windows 平台生成本地的 Windows 程序而不需要第三方 C 运行时库。</p>
+<p>msvc 版允许和微软的 Visual Studio 进行集成迅速开发复杂的企业级应用。 </p>
+<p>如果考虑到扩展和跨平台，应该优先考虑 MinGW。</p>
+</blockquote>
+<p><br></p>
+<h2 id="配置环境变量"><a href="#配置环境变量" class="headerlink" title="配置环境变量"></a>配置环境变量</h2><p>  右键“我的电脑”-》“高级系统设置”-》“环境变量”-》“系统变量”-》Path，添加如下四个新的系统变量：</p>
+<blockquote>
+<p>D:\20200213\ForDevelopment\Qt\Qt5.14.1\Tools\mingw730_64\bin</p>
+<p>D:\20200213\ForDevelopment\Qt\Qt5.14.1\Tools\mingw730_64\lib</p>
+<p>D:\20200213\ForDevelopment\Qt\Qt5.14.1\5.14.1\mingw73_64\bin</p>
+<p>D:\20200213\ForDevelopment\Qt\Qt5.14.1\5.14.1\mingw73_64\lib</p>
+</blockquote>
+<p><img src="https://tvax4.sinaimg.cn/large/c55aab25ly1gh71kywfkmj20m10j4dhf.jpg" alt></p>
+<p>根据自己的安装路径配置如上四个系统变量。</p>
+<p><br></p>
+<h2 id="CLion-中的配置"><a href="#CLion-中的配置" class="headerlink" title="CLion 中的配置"></a>CLion 中的配置</h2><h3 id="CLion-中工具链配置"><a href="#CLion-中工具链配置" class="headerlink" title="CLion 中工具链配置"></a>CLion 中工具链配置</h3><p>启动Clion后，左上角是点击“File”-》“settings”-》“Build，Excution，Deployment”-》“Toolchains”,然后将Environment改为“MinGW”，然后，选择Qt安装路径下的MinGw路径。具体如下图：</p>
+<p><img src="https://tva2.sinaimg.cn/large/c55aab25ly1gh71uot0gnj21370p277f.jpg" alt></p>
+<p>若你的没有检测出，请根据上图的手动配置相应的 gcc 、g++ 等编译器的路径。注意我的是 64位 MinGW下的路径。</p>
+<p>另外，若看到出现对话框中有一个黄色感叹号 ，关于 cmake 错误，请参<a href="https://zhuanlan.zhihu.com/p/43680621" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/43680621</a>。</p>
+<p><br></p>
+<h3 id="CLion中CMake设置"><a href="#CLion中CMake设置" class="headerlink" title="CLion中CMake设置"></a>CLion中CMake设置</h3><p>注意：工具链要选择上一步中配置好的。</p>
+<p><img src="https://tva2.sinaimg.cn/large/c55aab25ly1gh71whdmtgj21370p2diq.jpg" alt></p>
+<p>CMake Options 是用来指定Qt的安装位置，默认会检测到，若没有的话需要手动设置。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">CMake Options：</span><br><span class="line">-DCMAKE_PREFIX_PATH=D:/20200213/ForDevelopment/Qt/Qt5.14.1/5.14.1/mingw73_64</span><br></pre></td></tr></table></figure>
+<p><br></p>
+<h3 id="配置Qt-Designer和UIC-用于打开-Qt-设计师"><a href="#配置Qt-Designer和UIC-用于打开-Qt-设计师" class="headerlink" title="配置Qt Designer和UIC 用于打开 Qt 设计师"></a>配置Qt Designer和UIC 用于打开 Qt 设计师</h3><p><strong>Qt Designer 配置</strong></p>
+<p>　　在CLion中，进入菜单File-&gt;Settings-&gt;Tools-&gt;External Tools，点击 + 新建工具。</p>
+<p>名称写为 Qt Designer ，描述随便写，desginer.exe 的路径根据自己的安装情况更改。在参数与工作目录中分别写入$FileName$ 和 $FileDir$，见下图配置。</p>
+<p><img src="https://tva1.sinaimg.cn/large/c55aab25ly1gh72293qlwj21370p2tc2.jpg" alt></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Name: Qt Designer</span><br><span class="line">Program: D:\20200213\ForDevelopment\Qt\Qt5.14.1\5.14.1\mingw73_64\bin\designer.exe   (改为自己Qt Designer的路径)</span><br><span class="line">Arguments: <span class="variable">$FileName</span>$</span><br><span class="line">Working directory: <span class="variable">$FileDir</span>$</span><br></pre></td></tr></table></figure>
+<p><br></p>
+<p><strong>UIC配置</strong></p>
+<p>　　与 Qt Designer  配置相似 ，名称、描述、程序路径、参数与工作目录。其中参数与工作目录分别写入  $FileName$ -o ui_$FileNameWithoutExtension$.h 和 $FileDir$ 。</p>
+<p><img src="https://tvax4.sinaimg.cn/large/c55aab25ly1gh726cjkonj21370p2whs.jpg" alt="image"></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Name: UIC</span><br><span class="line">Program: D:\20200213\ForDevelopment\Qt\Qt5.14.1\5.14.1\mingw73_64\bin\uic.exe   (改为自己uic的路径)</span><br><span class="line">Arguments: <span class="variable">$FileName</span>$ -o ui_<span class="variable">$FileNameWithoutExtension</span>$.h</span><br><span class="line">Working directory: <span class="variable">$FileDir</span>$</span><br></pre></td></tr></table></figure>
+<p>　　这样以后就可以打开外部的 Qt 设计师编辑我们软件的界面啦。</p>
+<p>具体打开方式为： 右键点击ui文件或者qrc文件，然后点击External Tools -&gt; QtDesigner，如能将选中的文件通过Qt Creator打开，则为成功。</p>
+<p><img src="https://tvax4.sinaimg.cn/large/c55aab25ly1gh72anaj9oj20ar0aqt9a.jpg" alt></p>
+<p><img src="https://tva3.sinaimg.cn/large/c55aab25ly1gh72a9cziaj213r0y144w.jpg" alt></p>
+<p><img src="https://tvax4.sinaimg.cn/large/c55aab25ly1gh72b8dv27j21i00tmwjz.jpg" alt="image" style="zoom:80%;"></p>
+<p><br></p>
+<h2 id="建立项目进行测试"><a href="#建立项目进行测试" class="headerlink" title="建立项目进行测试"></a>建立项目进行测试</h2><h3 id="建立项目"><a href="#建立项目" class="headerlink" title="建立项目"></a>建立项目</h3><p>配置好后我们可以打开 CLion 试试了。</p>
+<p>创建一个新项目：</p>
+<p><img src="https://gitee.com/wang_wx/image_bed/raw/master/2020/20200424231024.png" alt></p>
+<p>然后 Run 一下 ，熟悉的 HelloWorld ，你好世界！</p>
+<p><img src="https://gitee.com/wang_wx/image_bed/raw/master/2020/20200424231211.png" alt></p>
+<p>说明 C++ 的是能够运行起来啦，接下来我们加入属于 Qt 的东西 。</p>
+<p>在工程上右键-》“new”-》“C++ class”，新建 <code>`mainwindow.cpp</code>，如下：</p>
+<p><img src="https://tva4.sinaimg.cn/large/c55aab25ly1gh72j3a0otj210g0p9jvt.jpg" alt></p>
+<p>接着继续在工程上右键-》“new”-》“file”,新建mainwindow.ui文件</p>
+<p>在 main.cpp 中写入以下内容</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"mainwindow.h"</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;QApplication&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> *argv[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="function">QApplication <span class="title">a</span><span class="params">(argc, argv)</span></span>;</span><br><span class="line">    MainWindow w;</span><br><span class="line">    w.show();</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> a.exec();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>mainwindow.cpp</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">* File Name: mainwindow.cpp</span></span><br><span class="line"><span class="comment">* Description: 用于详细说明此程序文件完成的主要功能，与其他模块或函数的接口，输出值、取值范围、含义及参数间的控制、顺序、独立或依赖等关系</span></span><br><span class="line"><span class="comment">*</span></span><br><span class="line"><span class="comment">* Author: </span></span><br><span class="line"><span class="comment">* Version: v1.0</span></span><br><span class="line"><span class="comment">* Date: 2020/7/28 17:57</span></span><br><span class="line"><span class="comment">* LastEditTime: 2020/7/28 17:57</span></span><br><span class="line"><span class="comment">* Copyright: </span></span><br><span class="line"><span class="comment">* Project Name: CLionQtTest</span></span><br><span class="line"><span class="comment">* IDE: CLion</span></span><br><span class="line"><span class="comment">* Reference:</span></span><br><span class="line"><span class="comment">* History: 修改历史记录列表， 每条修改记录应包括修改日期、修改者及修改内容简述</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;mainwindow.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"ui_mainwindow.h"</span></span></span><br><span class="line"></span><br><span class="line">MainWindow::MainWindow(QWidget *parent) :</span><br><span class="line">        QMainWindow(parent),</span><br><span class="line">        ui(<span class="keyword">new</span> Ui::MainWindow)</span><br><span class="line">&#123;</span><br><span class="line">    ui-&gt;setupUi(<span class="keyword">this</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">MainWindow::~MainWindow()</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">delete</span> ui;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>mainwindow.h</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">ifndef</span> MAINWINDOW_H</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> MAINWINDOW_H</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;QMainWindow&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">namespace</span> Ui &#123;</span><br><span class="line">    <span class="class"><span class="keyword">class</span> <span class="title">MainWindow</span>;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MainWindow</span> :</span> <span class="keyword">public</span> QMainWindow</span><br><span class="line">&#123;</span><br><span class="line">    Q_OBJECT</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">explicit</span> <span class="title">MainWindow</span><span class="params">(QWidget *parent = <span class="number">0</span>)</span></span>;</span><br><span class="line">    ~MainWindow();</span><br><span class="line"></span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    Ui::MainWindow *ui;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></span><br></pre></td></tr></table></figure>
+<p>mainwindow.ui 可以右键-外部工具-选择UI designer 打开 ，随便加点控件</p>
+<p>具体打开方式为： 右键点击ui文件或者qrc文件，然后点击External Tools -&gt; QtDesigner，如能将选中的文件通过Qt Creator打开，则为成功。</p>
+<p><img src="https://tvax4.sinaimg.cn/large/c55aab25ly1gh72anaj9oj20ar0aqt9a.jpg" alt></p>
+<p><img src="https://tva3.sinaimg.cn/large/c55aab25ly1gh72a9cziaj213r0y144w.jpg" alt></p>
+<p><img src="https://tvax4.sinaimg.cn/large/c55aab25ly1gh72b8dv27j21i00tmwjz.jpg" alt="image" style="zoom:80%;"></p>
+<p>mainwindow.ui 中的内容为</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">ui</span> <span class="attr">version</span>=<span class="string">"4.0"</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">class</span>&gt;</span>MainWindow<span class="tag">&lt;/<span class="name">class</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">widget</span> <span class="attr">class</span>=<span class="string">"QMainWindow"</span> <span class="attr">name</span>=<span class="string">"MainWindow"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"geometry"</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">rect</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">x</span>&gt;</span>0<span class="tag">&lt;/<span class="name">x</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">y</span>&gt;</span>0<span class="tag">&lt;/<span class="name">y</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">width</span>&gt;</span>800<span class="tag">&lt;/<span class="name">width</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">height</span>&gt;</span>600<span class="tag">&lt;/<span class="name">height</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;/<span class="name">rect</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"windowTitle"</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">string</span>&gt;</span>MainWindow<span class="tag">&lt;/<span class="name">string</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">widget</span> <span class="attr">class</span>=<span class="string">"QWidget"</span> <span class="attr">name</span>=<span class="string">"centralwidget"</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">widget</span> <span class="attr">class</span>=<span class="string">"QLabel"</span> <span class="attr">name</span>=<span class="string">"label"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"geometry"</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">rect</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">x</span>&gt;</span>230<span class="tag">&lt;/<span class="name">x</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">y</span>&gt;</span>100<span class="tag">&lt;/<span class="name">y</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">width</span>&gt;</span>351<span class="tag">&lt;/<span class="name">width</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">height</span>&gt;</span>171<span class="tag">&lt;/<span class="name">height</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;/<span class="name">rect</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"font"</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">font</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">family</span>&gt;</span>方正宋刻本秀楷简体<span class="tag">&lt;/<span class="name">family</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">pointsize</span>&gt;</span>16<span class="tag">&lt;/<span class="name">pointsize</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;/<span class="name">font</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"text"</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">string</span>&gt;</span>你好世界，Qt + CLion <span class="tag">&lt;/<span class="name">string</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;/<span class="name">widget</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">widget</span> <span class="attr">class</span>=<span class="string">"QPushButton"</span> <span class="attr">name</span>=<span class="string">"pushButton"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"geometry"</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">rect</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">x</span>&gt;</span>200<span class="tag">&lt;/<span class="name">x</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">y</span>&gt;</span>360<span class="tag">&lt;/<span class="name">y</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">width</span>&gt;</span>281<span class="tag">&lt;/<span class="name">width</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">height</span>&gt;</span>101<span class="tag">&lt;/<span class="name">height</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;/<span class="name">rect</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"font"</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">font</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">family</span>&gt;</span>思源黑体 CN Light<span class="tag">&lt;/<span class="name">family</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">pointsize</span>&gt;</span>12<span class="tag">&lt;/<span class="name">pointsize</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">weight</span>&gt;</span>50<span class="tag">&lt;/<span class="name">weight</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">bold</span>&gt;</span>false<span class="tag">&lt;/<span class="name">bold</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;/<span class="name">font</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"text"</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">string</span>&gt;</span>热夏的博客</span><br><span class="line">www.lifeee.top<span class="tag">&lt;/<span class="name">string</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;/<span class="name">widget</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">widget</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">widget</span> <span class="attr">class</span>=<span class="string">"QMenuBar"</span> <span class="attr">name</span>=<span class="string">"menubar"</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"geometry"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">rect</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">x</span>&gt;</span>0<span class="tag">&lt;/<span class="name">x</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">y</span>&gt;</span>0<span class="tag">&lt;/<span class="name">y</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">width</span>&gt;</span>800<span class="tag">&lt;/<span class="name">width</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">height</span>&gt;</span>26<span class="tag">&lt;/<span class="name">height</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">rect</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">widget</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">widget</span> <span class="attr">class</span>=<span class="string">"QStatusBar"</span> <span class="attr">name</span>=<span class="string">"statusbar"</span>/&gt;</span></span><br><span class="line"> <span class="tag">&lt;/<span class="name">widget</span>&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">resources</span>/&gt;</span></span><br><span class="line"> <span class="tag">&lt;<span class="name">connections</span>/&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ui</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><br></p>
+<h3 id="编写CMakeLists-txt"><a href="#编写CMakeLists-txt" class="headerlink" title="编写CMakeLists.txt"></a>编写CMakeLists.txt</h3><p>　　CLion是根据CMakeLists.txt文件来组织和设置项目的，所以如果我们需要添加诸如Qt这样的第三方库或是改变编译行为，都只要修改CMakeLists.txt即可。</p>
+<p>　　在完成上面的工作后，我们需要编写 CMakeLists.txt ，注意将 CLionQtTest 改成自己的项目名称。。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">cmake_minimum_required(VERSION 3.16)</span><br><span class="line">project(CLionQtTest)</span><br><span class="line"></span><br><span class="line"><span class="built_in">set</span>(CMAKE_CXX_STANDARD 11)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="built_in">set</span>(CMAKE_INCLUDE_CURRENT_DIR ON)</span><br><span class="line"></span><br><span class="line"><span class="built_in">set</span>(CMAKE_AUTOMOC ON)</span><br><span class="line"><span class="built_in">set</span>(CMAKE_AUTOUIC ON)</span><br><span class="line"><span class="built_in">set</span>(CMAKE_AUTORCC ON)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">find_package(Qt5Widgets)</span><br><span class="line">find_package( Qt5Core)</span><br><span class="line">find_package( Qt5Gui)</span><br><span class="line"></span><br><span class="line"><span class="built_in">set</span>(UI_FILES)</span><br><span class="line"></span><br><span class="line"><span class="built_in">set</span>(RC_FILES)</span><br><span class="line"></span><br><span class="line"><span class="built_in">set</span>(QRC_FILES)</span><br><span class="line"></span><br><span class="line">add_executable(CLionQtTest</span><br><span class="line">        main.cpp</span><br><span class="line">        mainwindow.cpp</span><br><span class="line">        mainwindow.h</span><br><span class="line">        mainwindow.ui</span><br><span class="line"></span><br><span class="line">        )</span><br><span class="line"></span><br><span class="line">target_link_libraries(CLionQtTest Qt5::Widgets)</span><br></pre></td></tr></table></figure>
+<p>注意将 CLionQtTest 改成自己的项目名称。</p>
+<blockquote>
+<p> #表示该项目至少要求cmake的版本为3.16</p>
+<p>cmake_minimum_required(VERSION 3.16)</p>
+<p>#指定c++标准的版本</p>
+<p>set(CMAKE_CXX_STANDARD 11)  </p>
+<p>#自动调用moc，uic，rcc处理qt的扩展部分</p>
+<p>set(CMAKE_AUTOMOC ON)<br>set(CMAKE_AUTOUIC ON)<br>set(CMAKE_AUTORCC ON)</p>
+<p>#项目名称</p>
+<p>project(CLionQtTest)</p>
+<p>#找到对应的qt模块，名字为qmake中QT += <name>中的name首字母大写后加上Qt5前缀</name></p>
+<p>例如core为QtCore，也可以去${CMAKE_PREFIX_PATH}的目录中找到正确的模块名</p>
+<p>find_package(Qt5Widgets)<br>find_package( Qt5Core)<br>find_package( Qt5Gui)</p>
+<p>#向项目中添加需要的文件，当然你也可以对ui文件、cpp文件、h文件、qrc文件单独使用SET指令管理，然后添加到add_executable指令中</p>
+<p>add_executable(CLionQtTest<br>  main.cpp<br>  mainwindow.cpp<br>  mainwindow.h<br>  mainwindow.ui</p>
+<p>)</p>
+<p># 或者 将当前目录的所有源文件添加进变量<br>aux_source_directory(. DIRS_SRCS)</p>
+<p>#将项目中需要添加的Qt Modules中的库文件与项目进行链接（添加的模块即Qt”*.pro”文件中的Qt+=Module）</p>
+<p>target_link_libraries(CLionQtTest Qt5::Widgets)</p>
+</blockquote>
+<p><br></p>
+<h3 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h3><p>然后运行即可，报错的话可以看下面的一些常见错误。</p>
+<p><img src="https://tvax4.sinaimg.cn/large/c55aab25ly1gh6xxze79mj213r0ptgoz.jpg" alt="正常运行"></p>
+<p><br></p>
+<h2 id="报错"><a href="#报错" class="headerlink" title="报错"></a>报错</h2><p>Process finished with exit code -1073741511 (0xC0000139)</p>
+<p><img src="https://tvax2.sinaimg.cn/large/c55aab25ly1gh6xrgwxqlj213r0y1aek.jpg" alt></p>
+<blockquote>
+<p>方案一：</p>
+<p>在Clion中，进入菜单-&gt;Run-&gt;Edit Configurations，选择自己的Application，填写Working directory为Qt的bin目录，如我的安装目录是：D:\Qt\Qt5.10.0\5.10.0\mingw53_32\bin</p>
+<p>然后保存退出即可。</p>
+<p>方案二：把Dll拷贝到exe目录</p>
+</blockquote>
+<p><img src="https://tva1.sinaimg.cn/large/c55aab25ly1gh6xtbpmicj21270r8ju9.jpg" alt="方案一"></p>
+<p>然后重新运行就正常啦</p>
+<p><img src="https://tvax4.sinaimg.cn/large/c55aab25ly1gh6xxze79mj213r0ptgoz.jpg" alt="正常运行"></p>
+<p>配置工具链 MinGW 路径时报错：</p>
+<p>For MinGW make to work correctly sh.exe must NOT be in your path.</p>
+<p><img src="https://tva3.sinaimg.cn/large/c55aab25ly1gh6soqz39hj21hm0oztby.jpg" alt></p>
+<p>解决方法：cmake设置参数 -DCMAKE_SH=”CMAKE_SH-NOTFOUND”</p>
+<p><img src="https://tvax3.sinaimg.cn/large/c55aab25ly1gh6sretl4gj21hm0oz77b.jpg" alt></p>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">-DCMAKE_SH</span>=<span class="string">"CMAKE_SH-NOTFOUND"</span></span><br></pre></td></tr></table></figure>
+<p><br></p>
+<h2 id="Clion-如何切换Debug与Release版本"><a href="#Clion-如何切换Debug与Release版本" class="headerlink" title="Clion-如何切换Debug与Release版本"></a>Clion-如何切换Debug与Release版本</h2><p>　　在设置中找到 Build，Execution，Deployment 中的 CMake 。点击左侧的框，“+”，添加新的模式，系统一般会自动给你产生release版本。</p>
+<p><img src="https://tvax1.sinaimg.cn/large/c55aab25ly1gh70bh50g0j21370p2mzt.jpg" alt></p>
+<p><img src="https://tvax1.sinaimg.cn/large/c55aab25ly1gh70bvcmkij21370p2419.jpg" alt></p>
+<p>然后进行切换，运行即可。</p>
+<p><img src="https://tva1.sinaimg.cn/large/c55aab25ly1gh70eix1pfj213r0nsq6f.jpg" alt="image"></p>
+<p><br></p>
+<p><br></p>
+<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><p><a href="http://doc.qt.io/qt-5/cmake-manual.html" target="_blank" rel="noopener">CMake manuel in Qt’s documentation.</a></p>
+<p><a href="https://www.cnblogs.com/apocelipes/p/10353698.html" target="_blank" rel="noopener">配置CLion作为Qt5开发环境</a></p>
+<p><a href="https://www.jianshu.com/p/3bfcb78af171" target="_blank" rel="noopener">Clion 搭建C++环境常见问题</a></p>
+<p><a href="https://my.oschina.net/StupidZhe/blog/3079593/print" target="_blank" rel="noopener">Clion + CMake快速配置Qt开发环境终极版</a></p>
+<p><a href="https://blog.csdn.net/iamjingong/article/details/80876040" target="_blank" rel="noopener">Win10+Clion+QT5详细配置教程，实测有效！</a></p>
+<p><a href="https://www.quora.com/What-is-the-difference-between-MinGW-and-MSVC-compilers" target="_blank" rel="noopener">What is the difference between MinGW and MSVC compilers?</a> </p>
+<p><a href="https://www.cnblogs.com/linuxAndMcu/p/12052238.html" target="_blank" rel="noopener">MinGW 与 MSVC 编译的区别</a></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<h2 id><a href="#" class="headerlink" title=" "></a> </h2><blockquote class="blockquote-center"><p>要把所有的夜归还给星河，把所有的春光归还给疏疏篱落，把所有的慵慵沉迷与不前，归还给过去的我。明日之我，胸中有丘壑，立马振山河。</p>
+<p>——《德卡先生的信箱》</p>
+</blockquote>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+
+    </div>
+
+    
+    
+    
+        <div class="reward-container">
+  <div>觉得文章对您有帮助请我喝冰可乐吧 😉</div>
+  <button onclick="var qr = document.getElementById('qr'); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    打赏
+  </button>
+  <div id="qr" style="display: none;">
+      
+      <div style="display: inline-block;">
+        <img src="/images/wechatpay.png" alt="热夏 微信支付">
+        <p>微信支付</p>
+      </div>
+
+  </div>
+</div>
+
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>热夏
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://www.lifeee.top/posts/30535.html" title="CLion配置Qt的开发环境">https://www.lifeee.top/posts/30535.html</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-Hans" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/tags/C/" rel="tag"><i class="fa fa-tag"></i> C++</a>
+              <a href="/tags/善用佳软/" rel="tag"><i class="fa fa-tag"></i> 善用佳软</a>
+              <a href="/tags/qt/" rel="tag"><i class="fa fa-tag"></i> qt</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/posts/56322.html" rel="prev" title="Qt 调用 OpenCV 打开摄像头">
+      <i class="fa fa-chevron-left"></i> Qt 调用 OpenCV 打开摄像头
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+    <div class="comments" id="gitalk-container"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let activeClass = CONFIG.comments.activeClass;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+
+
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+
+
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#我的的配置环境"><span class="nav-text">我的的配置环境</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装-CLion-与-Qt"><span class="nav-text">安装 CLion 与 Qt</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置环境变量"><span class="nav-text">配置环境变量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CLion-中的配置"><span class="nav-text">CLion 中的配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#CLion-中工具链配置"><span class="nav-text">CLion 中工具链配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CLion中CMake设置"><span class="nav-text">CLion中CMake设置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#配置Qt-Designer和UIC-用于打开-Qt-设计师"><span class="nav-text">配置Qt Designer和UIC 用于打开 Qt 设计师</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#建立项目进行测试"><span class="nav-text">建立项目进行测试</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#建立项目"><span class="nav-text">建立项目</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#编写CMakeLists-txt"><span class="nav-text">编写CMakeLists.txt</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#运行"><span class="nav-text">运行</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#报错"><span class="nav-text">报错</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Clion-如何切换Debug与Release版本"><span class="nav-text">Clion-如何切换Debug与Release版本</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考文献"><span class="nav-text">参考文献</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#null"><span class="nav-text"> </span></a></li></ol></div>
+
+
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="热夏"
+      src="/images/head.jpg">
+  <p class="site-author-name" itemprop="name">热夏</p>
+  <div class="site-description" itemprop="description">空山新雨后，天气晚来秋。</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">53</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">37</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/upwon" title="GitHub → https://github.com/upwon" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:w1244753906@gmail.com" title="E-Mail → mailto:w1244753906@gmail.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://weibo.com/3311053605" title="Weibo → https://weibo.com/3311053605" rel="noopener" target="_blank"><i class="fa fa-fw fa-weibo"></i>Weibo</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.instagram.com/midsummer_wen/" title="Instagram → https://www.instagram.com/midsummer_wen/" rel="noopener" target="_blank"><i class="fa fa-fw fa-instagram"></i>Instagram</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.lifeee.top///atom.xml" title="RSS → https://www.lifeee.top///atom.xml"><i class="fa fa-fw fa-rss"></i>RSS</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+
+   <div id="sidebar-dimmer"></div>
+
+
+
+
+
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright">
+  
+  &copy; 2018 – 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">热夏</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+      <span class="post-meta-item-text">站点总字数：</span>
+    <span title="站点总字数">513k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">7:46</span>
+</div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
+<script src="/js/schemes/pisces.js"></script>
+<script src="/js/next-boot.js"></script>
+
+
+
+  
+  <script>
+    (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      bp.src = (curProtocol === 'https') ? 'https://zz.bdstatic.com/linksubmit/push.js' : 'http://push.zhanzhang.baidu.com/push.js';
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+
+
+  <script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+<script>
+NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID: '7e047047ecee7317452b',
+      clientSecret: 'c60fbdf0eb19e7264e33ab780319e4d420a58fee',
+      repo: 'upwon.github.io',
+      owner: 'upwon',
+      admin: ['upwon'],
+      id: 'f212c201bfa9b89125752a3a3666f83d',
+        language: '',
+      distractionFreeMode: true
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+});
+</script>
+
+
+</body>
+</html>
+
+<!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/clicklove.js"></script>
+
+
+<!-- 樱花 -->
+<script type="text/javascript" src="/js/sakura.js"></script>
+

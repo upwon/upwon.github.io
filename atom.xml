@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.lifeee.top/"/>
-  <updated>2020-07-23T14:20:38.357Z</updated>
+  <updated>2020-07-29T15:11:46.911Z</updated>
   <id>https://www.lifeee.top/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CLion配置Qt的开发环境</title>
+    <link href="https://www.lifeee.top/posts/30535.html"/>
+    <id>https://www.lifeee.top/posts/30535.html</id>
+    <published>2020-07-29T12:56:40.000Z</published>
+    <updated>2020-07-29T15:11:46.911Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://tvax1.sinaimg.cn/large/c55aab25ly1gh889n55kxj23s02iowz1.jpg&quot; alt&gt;&lt;/p&gt;
+&lt;p&gt;　　Qt 开发时 QtCreator 是不得不接触的 IDE，提供了代码编写与可视化设计 GUI 的环境，但有时候使用却有点稍显逊色 。CLion 是 JetBrains 出品的 C++ IDE ，使用 CLion 来编写 C++ 会大大提高效率，因此 CLion 写代码，Qt Designer设计界面的方式是个不错的选择。😛&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="编程" scheme="https://www.lifeee.top/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+      <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    
+      <category term="C++" scheme="https://www.lifeee.top/tags/C/"/>
+    
+      <category term="善用佳软" scheme="https://www.lifeee.top/tags/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
+    
+      <category term="qt" scheme="https://www.lifeee.top/tags/qt/"/>
+    
+  </entry>
   
   <entry>
     <title>Qt 调用 OpenCV 打开摄像头</title>
@@ -81,9 +108,9 @@
     
     </summary>
     
-      <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
-    
       <category term="生活" scheme="https://www.lifeee.top/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+      <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
     
       <category term="善用佳软" scheme="https://www.lifeee.top/categories/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
     
@@ -433,9 +460,9 @@
     
     </summary>
     
-      <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
-    
       <category term="问题" scheme="https://www.lifeee.top/categories/%E9%97%AE%E9%A2%98/"/>
+    
+      <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
     
     
       <category term="github" scheme="https://www.lifeee.top/tags/github/"/>
@@ -519,38 +546,13 @@
       <category term="通信" scheme="https://www.lifeee.top/categories/%E9%80%9A%E4%BF%A1/"/>
     
     
+      <category term="通信" scheme="https://www.lifeee.top/tags/%E9%80%9A%E4%BF%A1/"/>
+    
       <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
     
       <category term="善用佳软" scheme="https://www.lifeee.top/tags/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
     
-      <category term="通信" scheme="https://www.lifeee.top/tags/%E9%80%9A%E4%BF%A1/"/>
-    
       <category term="分享" scheme="https://www.lifeee.top/tags/%E5%88%86%E4%BA%AB/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>7-C++实战项目-机房预约系统</title>
-    <link href="https://www.lifeee.top/posts/30779.html"/>
-    <id>https://www.lifeee.top/posts/30779.html</id>
-    <published>2020-05-29T10:10:33.000Z</published>
-    <updated>2020-05-29T14:06:09.510Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;https://gitee.com/wang_wx/image_bed/raw/master/2020/20200529220150.jpg&quot; alt&gt;&lt;/p&gt;
-&lt;p&gt;C++ 机房预约系统实例。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="技术" scheme="https://www.lifeee.top/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-      <category term="编程" scheme="https://www.lifeee.top/categories/%E7%BC%96%E7%A8%8B/"/>
-    
-    
-      <category term="C++" scheme="https://www.lifeee.top/tags/C/"/>
-    
-      <category term="编程" scheme="https://www.lifeee.top/tags/%E7%BC%96%E7%A8%8B/"/>
     
   </entry>
   
