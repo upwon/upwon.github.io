@@ -61,7 +61,8 @@
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/upwon/MyPicture@master/img20200604165231.jpeg">
 <meta property="og:image" content="https://tva2.sinaimg.cn/large/c55aab25ly1gffhhfr6wnj217a0itdi1.jpg">
-<meta property="og:updated_time" content="2020-07-23T14:25:01.223Z">
+<meta property="og:image" content="https://gitee.com/wang_wx/image_bed/raw/master/2020/440px-Beamforming.jpg">
+<meta property="og:updated_time" content="2020-08-08T14:35:40.466Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="5G NR 常用术语">
 <meta name="twitter:description" content="图片来自酷安   DFT-s-OFDM到底是什么呢？mMTC又为何？您能运用SS-RSRQ于句子中吗？5G术语和缩写的数量，无止境地不断增加。阅读本文，带您了解 5G NR 中常用的术语 🌞">
@@ -252,7 +253,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-07-23 22:25:01" itemprop="dateModified" datetime="2020-07-23T22:25:01+08:00">2020-07-23</time>
+                <time title="修改时间：2020-08-08 22:35:40" itemprop="dateModified" datetime="2020-08-08T22:35:40+08:00">2020-08-08</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -285,14 +286,14 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>11k</span>
+              <span>12k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="fa fa-clock-o"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>10 分钟</span>
+              <span>11 分钟</span>
             </span>
 
         </div>
@@ -464,10 +465,40 @@
 </blockquote>
 <p><br></p>
 <h4 id="Beam-acquisition"><a href="#Beam-acquisition" class="headerlink" title="Beam acquisition"></a>Beam acquisition</h4><p>波束捕获</p>
+<p>发现UE并与UE连接的过程。随着高方向性天线阵列和波束成形技术的部署，这一过程在5G中正在发生实质性变化。</p>
 <blockquote>
 <p>The process of discovering and connecting with UEs. This process is substantially changing in 5G with the deployment of  highly directional antenna arrays and beamforming techniques. </p>
 </blockquote>
 <p><br></p>
+<p>20200808更新以下内容</p>
+<h4 id="Beamforming"><a href="#Beamforming" class="headerlink" title="Beamforming"></a>Beamforming</h4><p>波束赋形</p>
+<p>　　<strong>波束赋形</strong>（Beamforming）又叫<strong>波束成型</strong>、<strong>空域滤波</strong>，是一种使用传感器阵列定向发送和接收信号的<a href="https://www.wikiwand.com/zh-hans/信号处理" target="_blank" rel="noopener">信号处理</a>技术。 波束赋形技术通过调整相位阵列的基本单元的参数，使得某些角度的信号获得相长干涉，而另一些角度的信号获得相消干涉。波束赋形既可以用于信号发射端，又可以用于信号接收端。</p>
+<p>　　在发射端，波束赋形器控制每一个发射装置的相位和信号幅度，从而在发射出的信号波阵中获得需要相长和相消干涉模式。在接收端，不同接收器接收到的信号被以一种恰当的方式组合起来，从而获得期盼中的信号辐射模式。</p>
+<p>　　以水下声纳发射为例，我们希望向远处的船只发送一束集中尖锐的声纳信号。如果声纳发射装置的每个声纳发生器同时向一艘船发声纳信号，由于远方船只的方位角度，有的声纳发射器的信号先到达船只，有的声纳发射器的信号后到达船只，无法做到让所有声纳信号发生器的信号同时到达这条船只。有了波束赋形技术，就可以调整不同声纳发生器的信号发射时间（离船远的先发信号，离船近的后发信号），这样，所有的声纳信号就能同时击中船只，获得一个强大的声纳脉冲信号击中船只的效果。</p>
+<p>　　在被动式声纳系统或者主动式声纳的接收端，波束赋形技术为不同的水下听音器收集到的信号加上不同的时延（离开目标最近的水下听音器加上最长的时延），这样就能同时听到所有水下听音器的声音，就像声音是来自同一个水下听音器，从而获得最佳的效果。</p>
+<p><img src="https://gitee.com/wang_wx/image_bed/raw/master/2020/440px-Beamforming.jpg" alt="波束赋形"></p>
+<p>－－　<a href="https://www.wikiwand.com/zh-hans/%E6%B3%A2%E6%9D%9F%E8%B5%8B%E5%BD%A2" target="_blank" rel="noopener">维基百科</a></p>
+<blockquote>
+<p>The method of applying relative phase and amplitude shifts to each antenna element to shape and provide discrete control  of the direction of a transmitted beam. Beamforming requires communication channel feedback to implement real-time control of the beam. </p>
+</blockquote>
+<p>＜br/＞</p>
+<h4 id="Beam-steering"><a href="#Beam-steering" class="headerlink" title="Beam steering"></a>Beam steering</h4><p>波束控制</p>
+<p>用于聚焦辐射图案的方向和形状的一组技术。在无线通信中，波束控制通常通过操纵通过多个天线单元阵列的信号的相对相位和幅度移位来改变信号的方向并缩小发射信号的宽度。</p>
+<blockquote>
+<p>A set of techniques used to focus the direction and shape of a  radiation pattern. In wireless communications, beam steering  changes the direction of the signal and narrows the width of the transmitted signal, typically by manipulating relative phase<br>and amplitude shifts of the signal through an array of multiple antenna elements. </p>
+</blockquote>
+<p><br></p>
+<h4 id="Carrier-aggregation"><a href="#Carrier-aggregation" class="headerlink" title="Carrier aggregation"></a>Carrier aggregation</h4><p>载波聚合</p>
+<p>LTE-Advanced引入的一项主要功能，使移动网络运营商能够将分段频段中的多个载波组合在一起，以提高峰值用户数据速率和网络的整体容量。</p>
+<blockquote>
+<p>A major feature introduced with LTE-Advanced, enabling  mobile network operators to combine multiple carriers in fragmented spectrum bands to increase peak user data rates and overall capacity of the network. </p>
+</blockquote>
+<p><br></p>
+<h4 id="CATR-–-Compact-antenna-test-range"><a href="#CATR-–-Compact-antenna-test-range" class="headerlink" title="CATR – Compact antenna test range"></a>CATR – Compact antenna test range</h4><p>CATR-紧凑型天线测试范围</p>
+<p>在难以获得远场间距时测试频率上的天线的设备。CATR使用3GPP认可的间接远场(IFF)测试方法来克服与5G蜂窝通信相关的路径损耗和过大的远场距离问题。</p>
+<blockquote>
+<p>Equipment for testing of antennas at frequencies when difficult to obtain far-field spacing. The CATR uses the 3GPP-approved indirect far-field (IFF) test method to overcome the path loss and excessive far-field distance issues associated with 5G<br>cellular communications. </p>
+</blockquote>
 <p>其他内容正在整理…</p>
 <p>（逃 ）</p>
 <p><br></p>
@@ -595,7 +626,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#2G"><span class="nav-text">2G</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3G"><span class="nav-text">3G</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3GPP-–-3rd-Generation-Partnership-Project"><span class="nav-text">3GPP – 3rd Generation Partnership Project</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4G"><span class="nav-text">4G</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5G"><span class="nav-text">5G</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#AAT-–-Antenna-array-tool"><span class="nav-text">AAT – Antenna array tool</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ACP-–-Adjacent-channel-power"><span class="nav-text">ACP – Adjacent channel power</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ACPR-–-Adjacent-channel-power-ratio"><span class="nav-text">ACPR – Adjacent channel power ratio</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ACLR-–-Adjacent-channel-leakage-ratio"><span class="nav-text">ACLR – Adjacent channel leakage ratio</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#AM-distortion"><span class="nav-text">AM distortion</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#AMF-–-Access-and-mobility-management-function"><span class="nav-text">AMF – Access and mobility management function</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#AM-PM-distortion"><span class="nav-text">AM/PM distortion</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Antenna-reciprocity"><span class="nav-text">Antenna reciprocity</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#AWG-–-Arbitrary-waveform-generator"><span class="nav-text">AWG – Arbitrary waveform generator</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Backhaul"><span class="nav-text">Backhaul</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Base-station-network-emulator"><span class="nav-text">Base station network emulator</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#BBU-–-Baseband-unit"><span class="nav-text">BBU – Baseband unit</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Beam-acquisition"><span class="nav-text">Beam acquisition</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#2G"><span class="nav-text">2G</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3G"><span class="nav-text">3G</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3GPP-–-3rd-Generation-Partnership-Project"><span class="nav-text">3GPP – 3rd Generation Partnership Project</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4G"><span class="nav-text">4G</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5G"><span class="nav-text">5G</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#AAT-–-Antenna-array-tool"><span class="nav-text">AAT – Antenna array tool</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ACP-–-Adjacent-channel-power"><span class="nav-text">ACP – Adjacent channel power</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ACPR-–-Adjacent-channel-power-ratio"><span class="nav-text">ACPR – Adjacent channel power ratio</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ACLR-–-Adjacent-channel-leakage-ratio"><span class="nav-text">ACLR – Adjacent channel leakage ratio</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#AM-distortion"><span class="nav-text">AM distortion</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#AMF-–-Access-and-mobility-management-function"><span class="nav-text">AMF – Access and mobility management function</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#AM-PM-distortion"><span class="nav-text">AM/PM distortion</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Antenna-reciprocity"><span class="nav-text">Antenna reciprocity</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#AWG-–-Arbitrary-waveform-generator"><span class="nav-text">AWG – Arbitrary waveform generator</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Backhaul"><span class="nav-text">Backhaul</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Base-station-network-emulator"><span class="nav-text">Base station network emulator</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#BBU-–-Baseband-unit"><span class="nav-text">BBU – Baseband unit</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Beam-acquisition"><span class="nav-text">Beam acquisition</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Beamforming"><span class="nav-text">Beamforming</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Beam-steering"><span class="nav-text">Beam steering</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Carrier-aggregation"><span class="nav-text">Carrier aggregation</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#CATR-–-Compact-antenna-test-range"><span class="nav-text">CATR – Compact antenna test range</span></a></li></ol></div>
 
 
       </div>
@@ -613,7 +644,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">53</span>
+          <span class="site-state-item-count">55</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -626,7 +657,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">37</span>
+        <span class="site-state-item-count">39</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -683,13 +714,13 @@
       <i class="fa fa-area-chart"></i>
     </span>
       <span class="post-meta-item-text">站点总字数：</span>
-    <span title="站点总字数">513k</span>
+    <span title="站点总字数">521k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">7:46</span>
+    <span title="站点阅读时长">7:54</span>
 </div>
 
         

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.lifeee.top/"/>
-  <updated>2020-07-29T15:11:46.911Z</updated>
+  <updated>2020-09-16T07:13:32.665Z</updated>
   <id>https://www.lifeee.top/</id>
   
   <author>
@@ -15,6 +15,56 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>使用PQDT查找国外硕博学位论文</title>
+    <link href="https://www.lifeee.top/posts/11890.html"/>
+    <id>https://www.lifeee.top/posts/11890.html</id>
+    <published>2020-09-16T06:54:51.000Z</published>
+    <updated>2020-09-16T07:13:32.665Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://gitee.com/wang_wx/image_bed/raw/master/2020/检索硕博论文1_compressed.jpg&quot; alt&gt;&lt;/p&gt;
+&lt;p&gt;　　查找国内的硕博学位论文可以上万方、知网，那么要查找国外的呢？答案是 PQDT 。😉&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    
+      <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
+    
+      <category term="网站" scheme="https://www.lifeee.top/tags/%E7%BD%91%E7%AB%99/"/>
+    
+      <category term="信息检索" scheme="https://www.lifeee.top/tags/%E4%BF%A1%E6%81%AF%E6%A3%80%E7%B4%A2/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>数字笔记之OneNote</title>
+    <link href="https://www.lifeee.top/posts/63757.html"/>
+    <id>https://www.lifeee.top/posts/63757.html</id>
+    <published>2020-07-30T14:48:09.000Z</published>
+    <updated>2020-09-16T07:11:39.383Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://gitee.com/wang_wx/image_bed/raw/master/2020/2-1___OneNote_Alternative.png&quot; alt&gt;&lt;/p&gt;
+&lt;p&gt;　　近些年来 数字化生活方式 已经出现在我们生活中的方方面面，笔记同样如此。曾经我们都习惯于纸质笔记，无论是日记亦或是上课的笔记都会选择记录在纸质的笔记本里。随着时间的推移，可能字迹褪去了原本的颜色，甚至根本不知道丢哪里去了，珍贵的笔记丢失总是像流逝的时光一般让人忧郁惆怅。一种解决方式是使用扫描软件扫描我们的纸质笔记本进行存储。而另一种思路是 我们为什么不直接使用数字笔记呢 ？ 因此，近些年来数字笔记兴起了。OneNote、Evernote、有道云笔记、Notion 等等笔记进入了我们的生活。今天介绍的是微软出品的 OneNote ，它熟悉的界面和高度的Microsoft  Office 集成可能会让你信服。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="善用佳软" scheme="https://www.lifeee.top/categories/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
+    
+    
+      <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
+    
+      <category term="善用佳软" scheme="https://www.lifeee.top/tags/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
+    
+      <category term="笔记" scheme="https://www.lifeee.top/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+  </entry>
   
   <entry>
     <title>CLion配置Qt的开发环境</title>
@@ -108,9 +158,9 @@
     
     </summary>
     
-      <category term="生活" scheme="https://www.lifeee.top/categories/%E7%94%9F%E6%B4%BB/"/>
-    
       <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
+    
+      <category term="生活" scheme="https://www.lifeee.top/categories/%E7%94%9F%E6%B4%BB/"/>
     
       <category term="善用佳软" scheme="https://www.lifeee.top/categories/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
     
@@ -433,9 +483,9 @@
     
     </summary>
     
-      <category term="技术" scheme="https://www.lifeee.top/categories/%E6%8A%80%E6%9C%AF/"/>
-    
       <category term="编程" scheme="https://www.lifeee.top/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+      <category term="技术" scheme="https://www.lifeee.top/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
       <category term="转载" scheme="https://www.lifeee.top/tags/%E8%BD%AC%E8%BD%BD/"/>
@@ -495,64 +545,6 @@
       <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
     
       <category term="善用佳软" scheme="https://www.lifeee.top/tags/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>5G NR 常用术语</title>
-    <link href="https://www.lifeee.top/posts/55098.html"/>
-    <id>https://www.lifeee.top/posts/55098.html</id>
-    <published>2020-06-03T13:53:25.000Z</published>
-    <updated>2020-07-23T14:25:01.223Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/upwon/MyPicture@master/img20200604165231.jpeg&quot; alt&gt;&lt;/p&gt;
-&lt;center&gt;&lt;font size=&quot;1&quot;&gt;图片来自酷安 &lt;/font&gt;&lt;/center&gt;
-
-&lt;p&gt;DFT-s-OFDM到底是什么呢？mMTC又为何？您能运用SS-RSRQ于句子中吗？5G术语和缩写的数量，无止境地不断增加。阅读本文，带您了解 5G NR 中常用的术语 🌞&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="技术" scheme="https://www.lifeee.top/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-      <category term="通信" scheme="https://www.lifeee.top/categories/%E9%80%9A%E4%BF%A1/"/>
-    
-    
-      <category term="通信" scheme="https://www.lifeee.top/tags/%E9%80%9A%E4%BF%A1/"/>
-    
-      <category term="5G NR" scheme="https://www.lifeee.top/tags/5G-NR/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>提取3GPP LTE/5GNR中RRC的ASN.1</title>
-    <link href="https://www.lifeee.top/posts/61877.html"/>
-    <id>https://www.lifeee.top/posts/61877.html</id>
-    <published>2020-05-29T10:44:32.000Z</published>
-    <updated>2020-05-30T07:31:53.085Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;https://gitee.com/wang_wx/image_bed/raw/master/2020/20200529230039.jpeg&quot; alt&gt;&lt;/p&gt;
-&lt;p&gt;本文介绍了如何从 3GPP 36.331 或者 38.331 中提取出 RRC 中的 ASN.1 部分抽象描述内容。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="技术" scheme="https://www.lifeee.top/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-      <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
-    
-      <category term="通信" scheme="https://www.lifeee.top/categories/%E9%80%9A%E4%BF%A1/"/>
-    
-    
-      <category term="通信" scheme="https://www.lifeee.top/tags/%E9%80%9A%E4%BF%A1/"/>
-    
-      <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
-    
-      <category term="善用佳软" scheme="https://www.lifeee.top/tags/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
-    
-      <category term="分享" scheme="https://www.lifeee.top/tags/%E5%88%86%E4%BA%AB/"/>
     
   </entry>
   
