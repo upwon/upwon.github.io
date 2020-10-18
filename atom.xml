@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.lifeee.top/"/>
-  <updated>2020-09-16T10:32:19.947Z</updated>
+  <updated>2020-10-18T12:06:40.326Z</updated>
   <id>https://www.lifeee.top/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>文档/文件关键词内容搜索</title>
+    <link href="https://www.lifeee.top/posts/36171.html"/>
+    <id>https://www.lifeee.top/posts/36171.html</id>
+    <published>2020-10-18T11:49:32.000Z</published>
+    <updated>2020-10-18T12:06:40.326Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://gitee.com/wang_wx/image_bed/raw/master/2020/pexels-cottonbro-4855385_compressed.jpg&quot; alt&gt;&lt;/p&gt;
+&lt;p&gt;大家都知道要想快速的搜索文件可以使用 &lt;a href=&quot;https://www.voidtools.com/zh-cn/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Everything&lt;/a&gt; ，然而要想搜索文档文件中的内容  Everything 却做不到，那么搜索文档内容该怎么办呢？AnyTXT Searcher 和  BBdoc  是两款搜索文档内容的软件。🔍&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
+    
+      <category term="善用佳软" scheme="https://www.lifeee.top/categories/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
+    
+    
+      <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
+    
+      <category term="善用佳软" scheme="https://www.lifeee.top/tags/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
+    
+  </entry>
   
   <entry>
     <title>OneNote快捷键</title>
@@ -268,9 +293,9 @@
       <category term="通信" scheme="https://www.lifeee.top/categories/%E9%80%9A%E4%BF%A1/"/>
     
     
-      <category term="5G NR" scheme="https://www.lifeee.top/tags/5G-NR/"/>
-    
       <category term="通信" scheme="https://www.lifeee.top/tags/%E9%80%9A%E4%BF%A1/"/>
+    
+      <category term="5G NR" scheme="https://www.lifeee.top/tags/5G-NR/"/>
     
   </entry>
   
@@ -478,9 +503,9 @@
     
     </summary>
     
-      <category term="转载" scheme="https://www.lifeee.top/categories/%E8%BD%AC%E8%BD%BD/"/>
-    
       <category term="生活" scheme="https://www.lifeee.top/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+      <category term="转载" scheme="https://www.lifeee.top/categories/%E8%BD%AC%E8%BD%BD/"/>
     
     
       <category term="诗歌" scheme="https://www.lifeee.top/tags/%E8%AF%97%E6%AD%8C/"/>
@@ -513,37 +538,6 @@
       <category term="网络安全" scheme="https://www.lifeee.top/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/"/>
     
       <category term="数学" scheme="https://www.lifeee.top/tags/%E6%95%B0%E5%AD%A6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>C# VS Code launch:program … does not exist 不存在</title>
-    <link href="https://www.lifeee.top/posts/59557.html"/>
-    <id>https://www.lifeee.top/posts/59557.html</id>
-    <published>2020-06-07T06:34:46.000Z</published>
-    <updated>2020-06-07T06:58:21.307Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;https://gitee.com/wang_wx/image_bed/raw/master/2020/20200607145346.jpg&quot; alt=&quot;🍃&quot;&gt;&lt;/p&gt;
-&lt;p&gt;解决 VS Code 中调试C# 出现 C# VS Code launch:program … does not exist 不存在的问题。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="编程" scheme="https://www.lifeee.top/categories/%E7%BC%96%E7%A8%8B/"/>
-    
-      <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
-    
-      <category term="善用佳软" scheme="https://www.lifeee.top/categories/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
-    
-    
-      <category term="问题" scheme="https://www.lifeee.top/tags/%E9%97%AE%E9%A2%98/"/>
-    
-      <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
-    
-      <category term="善用佳软" scheme="https://www.lifeee.top/tags/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
-    
-      <category term="Windows" scheme="https://www.lifeee.top/tags/Windows/"/>
     
   </entry>
   
