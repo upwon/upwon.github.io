@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 3.9.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/myapple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/myfavicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/myfavicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/myapple-touch-icon-next.png" color="#222">
+  <meta name="google-site-verification" content="google2fc64c2b92961282.html">
+  <meta name="baidu-site-verification" content="s6BwSjIZYB">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.loli.net/css?family=EB Garamond:300,300italic,400,400italic,700,700italic|Ma Shan Zheng:300,300italic,400,400italic,700,700italic|Source Code Pro:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-loading-bar.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    hostname: new URL('https://www.lifeee.top').hostname,
+    root: '/',
+    scheme: 'Gemini',
+    version: '7.7.1',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},
+    copycode: {"enable":true,"show_result":true,"style":"mac"},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":true},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: true,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    comments: {"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: 'search.xml',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}
+  };
+</script>
+
+  <meta name="description" content="在阅读英文网页或者中文网页时，有时候因为文字排版太密集了，难以一眼找到自己需要关注的一些关键字；在 IEEE 在线阅读时，一下子找不到关注的重点；需要高亮一段文字又要怎么办；高亮了需要保存网页为一个单文件又该怎么办？其实通过下面几个浏览器拓展就可以轻松解决这些问题，感兴趣的话继续看下去吧。😛">
+<meta name="keywords" content="教程,善用佳软,浏览器拓展">
+<meta property="og:type" content="article">
+<meta property="og:title" content="网页关键字自动高亮，网页高亮批注，保存网页--浏览器拓展推荐">
+<meta property="og:url" content="https://www.lifeee.top/posts/33359.html">
+<meta property="og:site_name" content="热夏的博客">
+<meta property="og:description" content="在阅读英文网页或者中文网页时，有时候因为文字排版太密集了，难以一眼找到自己需要关注的一些关键字；在 IEEE 在线阅读时，一下子找不到关注的重点；需要高亮一段文字又要怎么办；高亮了需要保存网页为一个单文件又该怎么办？其实通过下面几个浏览器拓展就可以轻松解决这些问题，感兴趣的话继续看下去吧。😛">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://tvax2.sinaimg.cn/large/c55aab25ly1glb1ucpm60j21040o2wos.jpg">
+<meta property="og:image" content="https://tva4.sinaimg.cn/large/c55aab25ly1glaxpkee9zj217f0ofq8i.jpg">
+<meta property="og:image" content="https://tvax2.sinaimg.cn/large/c55aab25ly1glapy2earrj21bm0q3wp2.jpg">
+<meta property="og:image" content="https://tvax4.sinaimg.cn/large/c55aab25ly1glayhm84l0j216z0r3gqj.jpg">
+<meta property="og:image" content="https://tva2.sinaimg.cn/large/c55aab25ly1glayjk2ot7j20gp08g3ze.jpg">
+<meta property="og:image" content="https://gitee.com/wang_wx/image_bed/raw/master/2020/image-20201203205512275.png">
+<meta property="og:image" content="https://gitee.com/wang_wx/image_bed/raw/master/2020/image-20201203153326496.png">
+<meta property="og:image" content="https://tva3.sinaimg.cn/large/c55aab25ly1glaynzxc9xj215b0nrgqk.jpg">
+<meta property="og:image" content="https://tvax4.sinaimg.cn/large/c55aab25ly1glayrkr29dj215x0o8dl6.jpg">
+<meta property="og:image" content="https://tvax2.sinaimg.cn/large/c55aab25ly1glayy5dg7cj21f20q3tf0.jpg">
+<meta property="og:image" content="https://tva2.sinaimg.cn/large/c55aab25ly1glapaj4mppj210j0ltteh.jpg">
+<meta property="og:image" content="https://tvax2.sinaimg.cn/large/c55aab25ly1glaze935c8j21cc0q3449.jpg">
+<meta property="og:image" content="https://tvax4.sinaimg.cn/large/c55aab25ly1glaznuxz4rj20il0bigmt.jpg">
+<meta property="og:image" content="https://tva4.sinaimg.cn/large/c55aab25ly1glazs2iwqjj21h40rih72.jpg">
+<meta property="og:image" content="https://tva2.sinaimg.cn/large/c55aab25ly1glaqn0li53j20xp1ciaui.jpg">
+<meta property="og:image" content="https://gitee.com/wang_wx/image_bed/raw/master/2020/image-20201203213935855.png">
+<meta property="og:image" content="https://tvax3.sinaimg.cn/large/c55aab25ly1glb04jms99j21df0pf17f.jpg">
+<meta property="og:image" content="https://tva3.sinaimg.cn/large/c55aab25ly1glb0brknvuj20hv0bf754.jpg">
+<meta property="og:image" content="https://tvax1.sinaimg.cn/large/c55aab25ly1glb0gjwsnhj219z0qvtmk.jpg">
+<meta property="og:image" content="https://tvax1.sinaimg.cn/large/c55aab25ly1glb0k17h6nj20rt0db0xm.jpg">
+<meta property="og:image" content="https://tva2.sinaimg.cn/large/c55aab25ly1glb0n85q0nj21b90nrduh.jpg">
+<meta property="og:image" content="https://tvax2.sinaimg.cn/large/c55aab25ly1glb0s6lzzrj21i00q3dm6.jpg">
+<meta property="og:image" content="https://tva2.sinaimg.cn/large/c55aab25ly1glb0x4zgnuj21i00q3dli.jpg">
+<meta property="og:image" content="https://tvax3.sinaimg.cn/large/c55aab25ly1glb0yuvviaj21i00se0zv.jpg">
+<meta property="og:image" content="https://tva1.sinaimg.cn/large/c55aab25ly1glb12i8zs6j21480p3tt6.jpg">
+<meta property="og:updated_time" content="2020-12-03T15:12:14.561Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="网页关键字自动高亮，网页高亮批注，保存网页--浏览器拓展推荐">
+<meta name="twitter:description" content="在阅读英文网页或者中文网页时，有时候因为文字排版太密集了，难以一眼找到自己需要关注的一些关键字；在 IEEE 在线阅读时，一下子找不到关注的重点；需要高亮一段文字又要怎么办；高亮了需要保存网页为一个单文件又该怎么办？其实通过下面几个浏览器拓展就可以轻松解决这些问题，感兴趣的话继续看下去吧。😛">
+<meta name="twitter:image" content="https://tvax2.sinaimg.cn/large/c55aab25ly1glb1ucpm60j21040o2wos.jpg">
+
+<link rel="canonical" href="https://www.lifeee.top/posts/33359.html">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true
+  };
+</script>
+<link href="https://fonts.loli.net/css?family=Noto+Serif+SC:400,500,700&display=swap&subset=chinese-simplified" rel="stylesheet">
+  <title>网页关键字自动高亮，网页高亮批注，保存网页--浏览器拓展推荐 | 热夏的博客</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">热夏的博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-fw fa-heart"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+
+</nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+           placeholder="搜索..." spellcheck="false"
+           type="text" id="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
+
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="https://www.lifeee.top/posts/33359.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/head.jpg">
+      <meta itemprop="name" content="热夏">
+      <meta itemprop="description" content="空山新雨后，天气晚来秋。">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="热夏的博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          网页关键字自动高亮，网页高亮批注，保存网页--浏览器拓展推荐
+        </h1>
+
+        <div class="post-meta">
+
+
+      
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-12-03 20:02:21 / 修改时间：23:12:14" itemprop="dateCreated datePublished" datetime="2020-12-03T20:02:21+08:00">2020-12-03</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/教程/" itemprop="url" rel="index">
+                    <span itemprop="name">教程</span>
+                  </a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span><br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>3k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>3 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p><img src="https://tvax2.sinaimg.cn/large/c55aab25ly1glb1ucpm60j21040o2wos.jpg" alt></p>
+<p>　　在阅读英文网页或者中文网页时，有时候因为文字排版太密集了，难以一眼找到自己需要关注的一些关键字；在 IEEE 在线阅读时，一下子找不到关注的重点；需要高亮一段文字又要怎么办；高亮了需要保存网页为一个单文件又该怎么办？其实通过下面几个浏览器拓展就可以轻松解决这些问题，感兴趣的话继续看下去吧。😛</p>
+<a id="more"></a>
+<h2 id="关键字自动高亮解决方案"><a href="#关键字自动高亮解决方案" class="headerlink" title="关键字自动高亮解决方案"></a>关键字自动高亮解决方案</h2><h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>　　关键字自动高亮指的是对于一些我们设定好的关键字能够在打开网页后就自动高亮，以不同颜色进行区分，让人一目了然，毕竟人眼对颜色是很敏感的。主要应用在科研工作者们进行文献调研时，提高阅读效率。比如下面这样🔎</p>
+<p><img src="https://tva4.sinaimg.cn/large/c55aab25ly1glaxpkee9zj217f0ofq8i.jpg" alt="搜索时"></p>
+<p><img src="https://tvax2.sinaimg.cn/large/c55aab25ly1glapy2earrj21bm0q3wp2.jpg" alt="阅读时"></p>
+<h3 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h3><h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4><p>　　要实现上面的效果我们需要用到一款名为 Multi-highlight 的浏览器拓展，在新版的 Edge 以及 Chrome 浏览器都可使用，当然我更建议使用 Edge ，因为真的很好用。🎁</p>
+<p>其下载地址为：</p>
+<p>可在<a href="https://chrome.google.com/webstore/detail/multi-highlight/pfgfgjlejbbpfmcfjhdmikihihddeeji" target="_blank" rel="noopener">Multi-highlight - Chrome 网上应用店 (google.com)</a> 直接安装，网络通畅的话。</p>
+<p>本来是推荐在<a href="https://microsoftedge.microsoft.com/addons/Microsoft-Edge-Extensions-Home?hl=zh-CN" target="_blank" rel="noopener">Microsoft Edge 拓展商店</a> 下载，但是这款拓展似乎还没上架，其它拓展可以推荐在Edge拓展商店下载。</p>
+<p>若网络不可达的同学也可在国内的 <a href="https://www.extfans.com/" target="_blank" rel="noopener">扩展迷</a> 下载。</p>
+<p>当然也可以在云盘直接下载因为我已经下载并上传好了，贴心的我😅</p>
+<p>下载地址： <a href="https://yours.lanzous.com/b064k5u3e" target="_blank" rel="noopener">https://yours.lanzous.com/b064k5u3e</a> 提取码：wang</p>
+<p>下载好后其中后缀为<code>crx</code>的文件就是接下来需要用到的安装文件 。</p>
+<p>安装方法为：</p>
+<p>Edge 浏览器打开 <a href="edge://extensions/" target="_blank" rel="noopener">edge://extensions/</a></p>
+<p>Chrome浏览器打开 <a href="Chrome://extensions/" target="_blank" rel="noopener">Chrome://extensions/</a></p>
+<p>然后打开开发者模式</p>
+<p><img src="https://tvax4.sinaimg.cn/large/c55aab25ly1glayhm84l0j216z0r3gqj.jpg" alt="打开开发模式"></p>
+<p>将 <code>multi-highlight.crx</code> 拖拽到上面这个页面即可安装好。</p>
+<p><br></p>
+<h4 id="关键词设置"><a href="#关键词设置" class="headerlink" title="关键词设置"></a>关键词设置</h4><p>　　拖拽后就安装好了，右上角有一个黄色的 <strong>M</strong> 标志，这个就是 Multi-highlight 。起初安装后如下图所示，是什么关键字也没设置的。</p>
+<p><img src="https://tva2.sinaimg.cn/large/c55aab25ly1glayjk2ot7j20gp08g3ze.jpg" alt="安装后"></p>
+<p>　　然后设置想要自动高亮的关键字，比如设置</p>
+<figure class="highlight qml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">估计 检测 频率偏移 定时 OFDM 信道 channel pilot 信号 <span class="keyword">signal</span><span class="string"></span></span><br></pre></td></tr></table></figure>
+<p>　　中间用空格分开，用回车也可😍，<strong>中英文</strong>关键字都支持哦。</p>
+<p><img src="https://gitee.com/wang_wx/image_bed/raw/master/2020/image-20201203205512275.png" alt="设置关键字"></p>
+<p>　　要是想暂停高亮的话，点一下开关就好了。</p>
+<p><img src="https://gitee.com/wang_wx/image_bed/raw/master/2020/image-20201203153326496.png" alt="我关闭啦"></p>
+<p><br></p>
+<h4 id="使用示例"><a href="#使用示例" class="headerlink" title="使用示例"></a>使用示例</h4><p>然后就是去享受就好啦。😋😋😋</p>
+<p>没有设置关键字之前是这样的。</p>
+<p><img src="https://tva3.sinaimg.cn/large/c55aab25ly1glaynzxc9xj215b0nrgqk.jpg" alt="未设置"></p>
+<p>　　<br></p>
+<p>　　设置后是下面这样的。很明显能够一下子捕获自己关注的点。尤其是在阅读很长的文章的时候，能让我们顿时神清气爽，废寝忘食，一生只爱学习。🤤</p>
+<p><img src="https://tvax4.sinaimg.cn/large/c55aab25ly1glayrkr29dj215x0o8dl6.jpg" alt="已设置关键字"></p>
+<p>　　<br></p>
+<p><img src="https://tvax2.sinaimg.cn/large/c55aab25ly1glayy5dg7cj21f20q3tf0.jpg" alt="使用示例"></p>
+<p>　　<br></p>
+<p><img src="https://tva2.sinaimg.cn/large/c55aab25ly1glapaj4mppj210j0ltteh.jpg" alt="在线阅读文献时"></p>
+<p><br></p>
+<p>　　<br></p>
+<h2 id="高亮批注解决方案"><a href="#高亮批注解决方案" class="headerlink" title="高亮批注解决方案"></a>高亮批注解决方案</h2><h3 id="问题描述-1"><a href="#问题描述-1" class="headerlink" title="问题描述"></a>问题描述</h3><p>　　高亮批注指的是能够以一些高亮的颜色批注网页或者PDF。主要是对一些重要的句子进行标注，方便日后查阅能够一眼就能看到。💡</p>
+<p><img src="https://tvax2.sinaimg.cn/large/c55aab25ly1glaze935c8j21cc0q3449.jpg" alt="示例"></p>
+<p>　　<br></p>
+<h3 id="解决方案-1"><a href="#解决方案-1" class="headerlink" title="解决方案"></a>解决方案</h3><h4 id="安装-1"><a href="#安装-1" class="headerlink" title="安装"></a>安装</h4><p>　　要实现上面的效果我们需要用到一款名为<a href="https://chrome.google.com/webstore/detail/weava-highlighter-pdf-web/cbnaodkpfinfiipjblikofhlhlcickei" target="_blank" rel="noopener">Weava Highlighter - PDF &amp; Web )</a>的浏览器拓展，在新版的Egde以及Chrome浏览器都可使用。这款拓展除了能不但能高亮句子，而且还能将高亮的句子帮你储存起来。其还能高亮PDF ，当然我很建议使用专业的PDF阅读软件进行标注。题外话PDF软件很推荐PDF-XChange Editor。</p>
+<p>其官方的宣传视频可在 YOuTube上查看，地址为 <a href="https://youtu.be/K4THlgVyNJc" target="_blank" rel="noopener">https://youtu.be/K4THlgVyNJc</a></p>
+<iframe width="640" height="400" src="https://www.youtube.com/embed/K4THlgVyNJc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+
+<p>官方介绍为（机翻）</p>
+<blockquote>
+<p>网站和PDF的最佳突出显示工具。免费易用。</p>
+<p>使用Weava Online Web&amp;PDF荧光笔突出显示和组织您的研究。</p>
+<p>简化您的研究过程。把重点放在生产力上。不要将时间浪费在跟踪来源、复制和粘贴或引用上。平均而言，我们的用户报告Weava帮助他们每周节省3.8小时以上。相反，你可以花很多时间在对你真正重要的事情上。</p>
+<p>借助WEAVA，您可以：</p>
+<p>➤使用多种颜色突出显示网站和PDF，并添加批注。只需单击一下即可重新访问它们。</p>
+<p>➤将您的亮点组织到文件夹和子文件夹中。</p>
+<p>➤自动为您的亮点创建引文。</p>
+<p>➤随时随地访问您的亮点。您的高光和笔记将保存在云中。</p>
+</blockquote>
+<p>其下载地址为：</p>
+<p>可在<a href="https://chrome.google.com/webstore/detail/weava-highlighter-pdf-web/cbnaodkpfinfiipjblikofhlhlcickei" target="_blank" rel="noopener">Weava Highlighter - PDF &amp; Web - Chrome 网上应用店 (google.com)</a>直接安装，网络通畅的话。</p>
+<p>当然也可以在云盘直接下载因为我已经下载并上传好了。</p>
+<p>下载地址： <a href="https://yours.lanzous.com/b064k5u3e" target="_blank" rel="noopener">https://yours.lanzous.com/b064k5u3e</a> 提取码：wang</p>
+<p>安装方法如本文前半部分所述。</p>
+<p>　　<br></p>
+<h4 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h4><p>安装好浏览器多了这么一个图标👇</p>
+<p><img src="https://tvax4.sinaimg.cn/large/c55aab25ly1glaznuxz4rj20il0bigmt.jpg" alt="image"></p>
+<p>然后点击一下，会提示你进行登录或者注册。</p>
+<p>由于我的已经登录过了，因此出现的是一些我曾经高亮过的句子。</p>
+<p><img src="https://tva4.sinaimg.cn/large/c55aab25ly1glazs2iwqjj21h40rih72.jpg" alt="image"></p>
+<p>　　使用很简单，用下面一张图就能说清楚了，选中想要高亮的句子，然后就会出现不同颜色了，选择一种即可实现高亮。若想要更改其它颜色似乎要让开会员，好吧，够用就行了，没有必要花这个钱了，除非你是重度用户。</p>
+<p><img src="https://tva2.sinaimg.cn/large/c55aab25ly1glaqn0li53j20xp1ciaui.jpg" alt="使用示例"></p>
+<p>　　　　<br></p>
+<p>　　以后只要在浏览器点  Weava Highlighter的图标就能看见近期勾画过的重点了，也可在其网站<a href="https://www.weavatools.com/app/dashboard" target="_blank" rel="noopener">Weava: Organize your Research (weavatools.com)</a> 进行查看。</p>
+<p><img src="https://gitee.com/wang_wx/image_bed/raw/master/2020/image-20201203213935855.png" alt="曾经爱过，不，曾经高亮过"></p>
+<p>　　其实高亮可以配合下面一款拓展使用体验更好，下面就介绍一款我很中意的拓展，能够将网页原封不动的保存下来。</p>
+<p>　　<br></p>
+<p>　　<br></p>
+<h2 id="网页另存为单文件"><a href="#网页另存为单文件" class="headerlink" title="网页另存为单文件"></a>网页另存为单文件</h2><h3 id="问题描述-2"><a href="#问题描述-2" class="headerlink" title="问题描述"></a>问题描述</h3><p>　　小伙伴们都知道在网页中按下 <code>Ctrl+S</code> 就能保存当前的网页了，然后其存储方式是html和资源文件分离的。存储、移动或者分享给其他人都不是很方便。网页另存为单文件是指存储为一个单文件，资源文件嵌在html当中。🌻</p>
+<p><img src="https://tvax3.sinaimg.cn/large/c55aab25ly1glb04jms99j21df0pf17f.jpg" alt="拓展主页"></p>
+<p>　　<br></p>
+<h3 id="解决方案-2"><a href="#解决方案-2" class="headerlink" title="解决方案"></a>解决方案</h3><h4 id="安装-2"><a href="#安装-2" class="headerlink" title="安装"></a>安装</h4><p>　　要实现上面的效果我们需要用到一款名为<a href="https://microsoftedge.microsoft.com/addons/detail/singlefile/efnbkdcfmcmnhlkaijjjmhjjgladedno" target="_blank" rel="noopener">SingleFile </a>的浏览器拓展，在新版的Egde、Firefox 、Chrome浏览器都可使用。这款拓展不但能将网页另存为单文件，而且还支持先批注再存储哦。</p>
+<p>其下载地址为：</p>
+<p>可在<a href="https://microsoftedge.microsoft.com/addons/detail/singlefile/efnbkdcfmcmnhlkaijjjmhjjgladedno" target="_blank" rel="noopener">SingleFile - Microsoft Edge Addons </a> 或者 <a href="https://chrome.google.com/webstore/detail/singlefile/mpiodijhokgodhhofbcjdecpffjipkle" target="_blank" rel="noopener">SingleFile - Chrome 网上应用店</a>  直接安装。建议直接在Edge安装就好啦。</p>
+<p>当然也可以在云盘直接下载因为我已经下载并上传好了。</p>
+<p>下载地址： <a href="https://yours.lanzous.com/b064k5u3e" target="_blank" rel="noopener">https://yours.lanzous.com/b064k5u3e</a> 提取码：wang</p>
+<p>安装方法如本文前半部分所述。</p>
+<p>安装好后如下图所示。</p>
+<p><img src="https://tva3.sinaimg.cn/large/c55aab25ly1glb0brknvuj20hv0bf754.jpg" alt="安装好啦"></p>
+<p>　　<br></p>
+<h4 id="使用-1"><a href="#使用-1" class="headerlink" title="使用"></a>使用</h4><p>　　使用分为直接保存以及批注后保存，首先介绍直接保存。要想直接保存当前网页为单文件的话，直接点击一下  SingleFile 的图标就好啦，或者在网页中右击然后找到 SingleFile 点击使用 SingleFile 保存页面，然后会过几秒钟就下载成功了。</p>
+<p><img src="https://tvax1.sinaimg.cn/large/c55aab25ly1glb0gjwsnhj219z0qvtmk.jpg" alt="image"></p>
+<p><img src="https://tvax1.sinaimg.cn/large/c55aab25ly1glb0k17h6nj20rt0db0xm.jpg" alt="保存好的网页"></p>
+<p>　　默认会使用网页的标题命名，若需要自己手动命名，可在设置中打开保存前自动命名，我就不演示了。</p>
+<p>演示一下先批注后保存</p>
+<p><strong>右击一下</strong> SingleFile ，然后选择标注并保存该页面。</p>
+<p><img src="https://tva2.sinaimg.cn/large/c55aab25ly1glb0n85q0nj21b90nrduh.jpg" alt="标注并保存该页面"></p>
+<p>　　几秒钟后出现了一个新的页面，在这个页面进行一下标注然后保存即可。标注的话支持几种常见的颜色进行高亮以及便利贴进行标注，并且标注后的离线文件中同样可以看见标注的内容哦。</p>
+<p>下面是一个使用示例，标注后点击下图中的①即可保存到本地。</p>
+<p><img src="https://tvax2.sinaimg.cn/large/c55aab25ly1glb0s6lzzrj21i00q3dm6.jpg" alt="标注后保存"></p>
+<p>　　还记得本文介绍的第二个拓展 Weava Highlighter 吗？ 我们用 Weava Highlighter 高亮了一些句子后使用 SingleFile 进行保存的话，那些高亮的句子也能保存哦。举个栗子🥜</p>
+<p>使用 Weava Highlighter 高亮后的网页：</p>
+<p><img src="https://tva2.sinaimg.cn/large/c55aab25ly1glb0x4zgnuj21i00q3dli.jpg" alt="在线网页"></p>
+<p>使用 SingleFile 保存到本地的网页：</p>
+<p><img src="https://tvax3.sinaimg.cn/large/c55aab25ly1glb0yuvviaj21i00se0zv.jpg" alt="本地网页"></p>
+<p>　　两个页面没差别吧，哈哈。😎</p>
+<p>　　高亮后的保存的本地的网页再拖入到 Zotero 这岂不是美滋滋，这才是正确的文献管理，哈哈，以后可以很方便的关联与某篇文献相关的内容啦。</p>
+<p><img src="https://tva1.sinaimg.cn/large/c55aab25ly1glb12i8zs6j21480p3tt6.jpg" alt="Zotero"></p>
+<p>　　<br></p>
+<p>　　<br></p>
+<p>　　本文到此就结束啦，有建议或者疑问可在下方登录 Github 账号进行留言. </p>
+<center><font size="4.5">😋 Peace </font></center>
+
+
+
+<p>　　<br></p>
+<p>　　<br></p>
+<p>　　<br></p>
+<blockquote class="blockquote-center"><p>晚来天欲雪，能饮一杯无？</p>
+<p>— 白居易</p>
+</blockquote>
+<p>　　<br>　　<br>　　<br></p>
+
+    </div>
+
+    
+    
+    
+        <div class="reward-container">
+  <div>觉得文章对您有帮助请我喝冰可乐吧 😉</div>
+  <button onclick="var qr = document.getElementById('qr'); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    打赏
+  </button>
+  <div id="qr" style="display: none;">
+      
+      <div style="display: inline-block;">
+        <img src="/images/wechatpay.png" alt="热夏 微信支付">
+        <p>微信支付</p>
+      </div>
+
+  </div>
+</div>
+
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>热夏
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://www.lifeee.top/posts/33359.html" title="网页关键字自动高亮，网页高亮批注，保存网页--浏览器拓展推荐">https://www.lifeee.top/posts/33359.html</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-Hans" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/tags/教程/" rel="tag"><i class="fa fa-tag"></i> 教程</a>
+              <a href="/tags/善用佳软/" rel="tag"><i class="fa fa-tag"></i> 善用佳软</a>
+              <a href="/tags/浏览器拓展/" rel="tag"><i class="fa fa-tag"></i> 浏览器拓展</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/posts/36171.html" rel="prev" title="文档/文件关键词内容搜索">
+      <i class="fa fa-chevron-left"></i> 文档/文件关键词内容搜索
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+    <div class="comments" id="gitalk-container"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let activeClass = CONFIG.comments.activeClass;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+
+
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+
+
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#关键字自动高亮解决方案"><span class="nav-text">关键字自动高亮解决方案</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#问题描述"><span class="nav-text">问题描述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解决方案"><span class="nav-text">解决方案</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装"><span class="nav-text">安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#关键词设置"><span class="nav-text">关键词设置</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#使用示例"><span class="nav-text">使用示例</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#高亮批注解决方案"><span class="nav-text">高亮批注解决方案</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#问题描述-1"><span class="nav-text">问题描述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解决方案-1"><span class="nav-text">解决方案</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装-1"><span class="nav-text">安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#使用"><span class="nav-text">使用</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#网页另存为单文件"><span class="nav-text">网页另存为单文件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#问题描述-2"><span class="nav-text">问题描述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解决方案-2"><span class="nav-text">解决方案</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#安装-2"><span class="nav-text">安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#使用-1"><span class="nav-text">使用</span></a></li></ol></li></ol></li></ol></div>
+
+
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="热夏"
+      src="/images/head.jpg">
+  <p class="site-author-name" itemprop="name">热夏</p>
+  <div class="site-description" itemprop="description">空山新雨后，天气晚来秋。</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">60</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">40</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/upwon" title="GitHub → https://github.com/upwon" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:w1244753906@gmail.com" title="E-Mail → mailto:w1244753906@gmail.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://weibo.com/3311053605" title="Weibo → https://weibo.com/3311053605" rel="noopener" target="_blank"><i class="fa fa-fw fa-weibo"></i>Weibo</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.instagram.com/midsummer_wen/" title="Instagram → https://www.instagram.com/midsummer_wen/" rel="noopener" target="_blank"><i class="fa fa-fw fa-instagram"></i>Instagram</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.lifeee.top///atom.xml" title="RSS → https://www.lifeee.top///atom.xml"><i class="fa fa-fw fa-rss"></i>RSS</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+
+   <div id="sidebar-dimmer"></div>
+
+
+
+
+
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright">
+  
+  &copy; 2018 – 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">热夏</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+      <span class="post-meta-item-text">站点总字数：</span>
+    <span title="站点总字数">534k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">8:06</span>
+</div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
+<script src="/js/schemes/pisces.js"></script>
+<script src="/js/next-boot.js"></script>
+
+
+
+  
+  <script>
+    (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      bp.src = (curProtocol === 'https') ? 'https://zz.bdstatic.com/linksubmit/push.js' : 'http://push.zhanzhang.baidu.com/push.js';
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+
+
+  <script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+<script>
+NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID: '7e047047ecee7317452b',
+      clientSecret: 'c60fbdf0eb19e7264e33ab780319e4d420a58fee',
+      repo: 'upwon.github.io',
+      owner: 'upwon',
+      admin: ['upwon'],
+      id: '2ff7dedc27d5d084ac0cbae411aa7308',
+        language: '',
+      distractionFreeMode: true
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+});
+</script>
+
+
+</body>
+</html>
+
+<!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/clicklove.js"></script>
+
+
+<!-- 樱花 -->
+<script type="text/javascript" src="/js/sakura.js"></script>
+

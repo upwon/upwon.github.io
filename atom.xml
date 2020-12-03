@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.lifeee.top/"/>
-  <updated>2020-11-07T01:47:05.924Z</updated>
+  <updated>2020-12-03T15:12:14.561Z</updated>
   <id>https://www.lifeee.top/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>网页关键字自动高亮，网页高亮批注，保存网页--浏览器拓展推荐</title>
+    <link href="https://www.lifeee.top/posts/33359.html"/>
+    <id>https://www.lifeee.top/posts/33359.html</id>
+    <published>2020-12-03T12:02:21.000Z</published>
+    <updated>2020-12-03T15:12:14.561Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://tvax2.sinaimg.cn/large/c55aab25ly1glb1ucpm60j21040o2wos.jpg&quot; alt&gt;&lt;/p&gt;
+&lt;p&gt;　　在阅读英文网页或者中文网页时，有时候因为文字排版太密集了，难以一眼找到自己需要关注的一些关键字；在 IEEE 在线阅读时，一下子找不到关注的重点；需要高亮一段文字又要怎么办；高亮了需要保存网页为一个单文件又该怎么办？其实通过下面几个浏览器拓展就可以轻松解决这些问题，感兴趣的话继续看下去吧。😛&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    
+      <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
+    
+      <category term="善用佳软" scheme="https://www.lifeee.top/tags/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
+    
+      <category term="浏览器拓展" scheme="https://www.lifeee.top/tags/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%8B%93%E5%B1%95/"/>
+    
+  </entry>
   
   <entry>
     <title>文档/文件关键词内容搜索</title>
@@ -261,9 +286,9 @@
     
     </summary>
     
-      <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
-    
       <category term="生活" scheme="https://www.lifeee.top/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+      <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
     
       <category term="善用佳软" scheme="https://www.lifeee.top/categories/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
     
@@ -293,9 +318,9 @@
       <category term="通信" scheme="https://www.lifeee.top/categories/%E9%80%9A%E4%BF%A1/"/>
     
     
-      <category term="通信" scheme="https://www.lifeee.top/tags/%E9%80%9A%E4%BF%A1/"/>
-    
       <category term="5G NR" scheme="https://www.lifeee.top/tags/5G-NR/"/>
+    
+      <category term="通信" scheme="https://www.lifeee.top/tags/%E9%80%9A%E4%BF%A1/"/>
     
   </entry>
   
@@ -509,35 +534,6 @@
     
     
       <category term="诗歌" scheme="https://www.lifeee.top/tags/%E8%AF%97%E6%AD%8C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>【转载】搜狗输入法强制推广“618红包广告” 用户不堪其扰</title>
-    <link href="https://www.lifeee.top/posts/1128.html"/>
-    <id>https://www.lifeee.top/posts/1128.html</id>
-    <published>2020-06-10T11:23:01.000Z</published>
-    <updated>2020-06-10T12:33:54.152Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/upwon/MyPicture@master/imgimage-20200610193140774.png&quot; alt=&quot;火绒安全日志&quot;&gt;&lt;/p&gt;
-&lt;p&gt; 临近6.18电商促销日，火绒在官方微博、微信等平台收到不少用户反馈，称电脑不断出现托盘闪烁弹窗，点击后即为淘宝天猫的6.18促销网页。火绒工程师溯源调查后发现，该弹窗均来自于常用软件“搜狗输入法”，该广告配置通过云控下发，无法通过设置关闭。进一步分析发现，该软件除了疯狂弹窗，还存在统计用户浏览器浏览历史数据等越位行为，符合广告程序的定义。目前，火绒已对该软件中广告模块进行拦截查杀。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;病毒名称：Adware/Sogou.a   病毒ID：DFFE5437C89E3403&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;本文转载自 &lt;a href=&quot;http://bbs.huorong.cn/thread-72058-1-1.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;火绒安全论坛&lt;/a&gt; &lt;a href=&quot;http://bbs.huorong.cn/thread-72058-1-1.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;http://bbs.huorong.cn/thread-72058-1-1.html&lt;/a&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="技术" scheme="https://www.lifeee.top/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-      <category term="转载" scheme="https://www.lifeee.top/categories/%E8%BD%AC%E8%BD%BD/"/>
-    
-    
-      <category term="网络安全" scheme="https://www.lifeee.top/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/"/>
-    
-      <category term="数学" scheme="https://www.lifeee.top/tags/%E6%95%B0%E5%AD%A6/"/>
     
   </entry>
   
