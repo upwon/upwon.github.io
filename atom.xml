@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.lifeee.top/"/>
-  <updated>2020-12-03T15:14:38.622Z</updated>
+  <updated>2021-02-10T10:54:03.101Z</updated>
   <id>https://www.lifeee.top/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>5G高频段信道测量与建模进展</title>
+    <link href="https://www.lifeee.top/posts/25652.html"/>
+    <id>https://www.lifeee.top/posts/25652.html</id>
+    <published>2021-02-10T03:58:27.000Z</published>
+    <updated>2021-02-10T10:54:03.101Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/upwon/MyPicture@master/img20210210181608.jpg&quot; alt&gt;&lt;/p&gt;
+&lt;p&gt;高频段拥有丰富空闲频谱资源，可有效满足未来 5G 对更高容量和速率的需求，用于传输高达 10Gbps 甚至更高的用户数据速率业务。高频段同时具有较大的传播损耗、散射损耗和准光学特性。 因此，有必要对高频段信道进行建模研究及测量。本文为高频段信道的调研报告。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="通信" scheme="https://www.lifeee.top/categories/%E9%80%9A%E4%BF%A1/"/>
+    
+    
+      <category term="通信" scheme="https://www.lifeee.top/tags/%E9%80%9A%E4%BF%A1/"/>
+    
+      <category term="5G NR" scheme="https://www.lifeee.top/tags/5G-NR/"/>
+    
+      <category term="调研" scheme="https://www.lifeee.top/tags/%E8%B0%83%E7%A0%94/"/>
+    
+  </entry>
   
   <entry>
     <title>网页关键字自动高亮，网页高亮批注，保存网页为单文件--浏览器拓展推荐</title>
@@ -213,9 +238,9 @@
       <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
     
     
-      <category term="善用佳软" scheme="https://www.lifeee.top/tags/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
-    
       <category term="C++" scheme="https://www.lifeee.top/tags/C/"/>
+    
+      <category term="善用佳软" scheme="https://www.lifeee.top/tags/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
     
       <category term="qt" scheme="https://www.lifeee.top/tags/qt/"/>
     
@@ -262,11 +287,11 @@
       <category term="编程" scheme="https://www.lifeee.top/categories/%E7%BC%96%E7%A8%8B/"/>
     
     
-      <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
-    
       <category term="C++" scheme="https://www.lifeee.top/tags/C/"/>
     
       <category term="编程" scheme="https://www.lifeee.top/tags/%E7%BC%96%E7%A8%8B/"/>
+    
+      <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
     
       <category term="qt" scheme="https://www.lifeee.top/tags/qt/"/>
     
@@ -480,9 +505,9 @@
       <category term="转载" scheme="https://www.lifeee.top/categories/%E8%BD%AC%E8%BD%BD/"/>
     
     
-      <category term="分享" scheme="https://www.lifeee.top/tags/%E5%88%86%E4%BA%AB/"/>
-    
       <category term="转载" scheme="https://www.lifeee.top/tags/%E8%BD%AC%E8%BD%BD/"/>
+    
+      <category term="分享" scheme="https://www.lifeee.top/tags/%E5%88%86%E4%BA%AB/"/>
     
       <category term="学习" scheme="https://www.lifeee.top/tags/%E5%AD%A6%E4%B9%A0/"/>
     
@@ -510,30 +535,6 @@
       <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
     
       <category term="善用佳软" scheme="https://www.lifeee.top/tags/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>向下就是天空</title>
-    <link href="https://www.lifeee.top/posts/45421.html"/>
-    <id>https://www.lifeee.top/posts/45421.html</id>
-    <published>2020-06-19T13:34:15.000Z</published>
-    <updated>2020-06-19T14:07:04.296Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;https://gitee.com/wang_wx/image_bed/raw/master/2020/mountains-with-crepuscular-ray-1403550.jpg&quot; alt&gt;&lt;/p&gt;
-&lt;center&gt; 那是去年的景象，我们奔跑在雨季  
-&lt;center&gt;入夜，在世界里漫游&lt;/center&gt;
-    
-    </summary>
-    
-      <category term="生活" scheme="https://www.lifeee.top/categories/%E7%94%9F%E6%B4%BB/"/>
-    
-      <category term="转载" scheme="https://www.lifeee.top/categories/%E8%BD%AC%E8%BD%BD/"/>
-    
-    
-      <category term="诗歌" scheme="https://www.lifeee.top/tags/%E8%AF%97%E6%AD%8C/"/>
     
   </entry>
   
