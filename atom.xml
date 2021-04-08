@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.lifeee.top/"/>
-  <updated>2021-02-10T10:54:03.101Z</updated>
+  <updated>2021-04-08T13:30:00.385Z</updated>
   <id>https://www.lifeee.top/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>优先队列</title>
+    <link href="https://www.lifeee.top/posts/40836.html"/>
+    <id>https://www.lifeee.top/posts/40836.html</id>
+    <published>2021-04-08T13:13:27.000Z</published>
+    <updated>2021-04-08T13:30:00.385Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/upwon/MyPicture@master/imgkazuya-tachibana-arseniy-chebynkin-kitchen.jpg&quot; alt&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;优先队列&lt;/strong&gt;是计算机科学中的一类抽象数据类型。优先队列中的每个元素都有各自的优先级，优先级最高的元素最先得到服务；优先级相同的元素按照其在优先队列中的顺序得到服务，【不是普通队列的先进先出(FIFO)】。优先队列往往用&lt;strong&gt;&lt;a href=&quot;https://www.wikiwand.com/zh-cn/堆_(数据结构&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;堆&lt;/a&gt;)&lt;/strong&gt;来实现。🌴&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="技术" scheme="https://www.lifeee.top/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="C++" scheme="https://www.lifeee.top/tags/C/"/>
+    
+  </entry>
   
   <entry>
     <title>5G高频段信道测量与建模进展</title>
@@ -33,9 +54,9 @@
       <category term="通信" scheme="https://www.lifeee.top/categories/%E9%80%9A%E4%BF%A1/"/>
     
     
-      <category term="通信" scheme="https://www.lifeee.top/tags/%E9%80%9A%E4%BF%A1/"/>
-    
       <category term="5G NR" scheme="https://www.lifeee.top/tags/5G-NR/"/>
+    
+      <category term="通信" scheme="https://www.lifeee.top/tags/%E9%80%9A%E4%BF%A1/"/>
     
       <category term="调研" scheme="https://www.lifeee.top/tags/%E8%B0%83%E7%A0%94/"/>
     
@@ -220,11 +241,11 @@
   </entry>
   
   <entry>
-    <title>CLion配置Qt的开发环境</title>
+    <title>CLion配置QT的开发环境</title>
     <link href="https://www.lifeee.top/posts/30535.html"/>
     <id>https://www.lifeee.top/posts/30535.html</id>
     <published>2020-07-29T12:56:40.000Z</published>
-    <updated>2020-07-29T15:11:46.911Z</updated>
+    <updated>2021-04-08T13:27:22.028Z</updated>
     
     <summary type="html">
     
@@ -242,16 +263,16 @@
     
       <category term="善用佳软" scheme="https://www.lifeee.top/tags/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
     
-      <category term="qt" scheme="https://www.lifeee.top/tags/qt/"/>
+      <category term="QT" scheme="https://www.lifeee.top/tags/QT/"/>
     
   </entry>
   
   <entry>
-    <title>Qt 调用 OpenCV 打开摄像头</title>
+    <title>QT 调用 OpenCV 打开摄像头</title>
     <link href="https://www.lifeee.top/posts/56322.html"/>
     <id>https://www.lifeee.top/posts/56322.html</id>
     <published>2020-07-21T13:37:03.000Z</published>
-    <updated>2020-07-23T14:20:38.357Z</updated>
+    <updated>2021-04-08T13:27:14.069Z</updated>
     
     <summary type="html">
     
@@ -265,7 +286,7 @@
     
       <category term="C++" scheme="https://www.lifeee.top/tags/C/"/>
     
-      <category term="qt" scheme="https://www.lifeee.top/tags/qt/"/>
+      <category term="QT" scheme="https://www.lifeee.top/tags/QT/"/>
     
   </entry>
   
@@ -274,7 +295,7 @@
     <link href="https://www.lifeee.top/posts/50934.html"/>
     <id>https://www.lifeee.top/posts/50934.html</id>
     <published>2020-07-21T13:36:32.000Z</published>
-    <updated>2020-07-23T14:20:06.830Z</updated>
+    <updated>2021-04-08T13:26:52.632Z</updated>
     
     <summary type="html">
     
@@ -293,7 +314,7 @@
     
       <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
     
-      <category term="qt" scheme="https://www.lifeee.top/tags/qt/"/>
+      <category term="QT" scheme="https://www.lifeee.top/tags/QT/"/>
     
   </entry>
   
@@ -311,9 +332,9 @@
     
     </summary>
     
-      <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
-    
       <category term="生活" scheme="https://www.lifeee.top/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+      <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
     
       <category term="善用佳软" scheme="https://www.lifeee.top/categories/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
     
@@ -343,18 +364,18 @@
       <category term="通信" scheme="https://www.lifeee.top/categories/%E9%80%9A%E4%BF%A1/"/>
     
     
-      <category term="通信" scheme="https://www.lifeee.top/tags/%E9%80%9A%E4%BF%A1/"/>
-    
       <category term="5G NR" scheme="https://www.lifeee.top/tags/5G-NR/"/>
+    
+      <category term="通信" scheme="https://www.lifeee.top/tags/%E9%80%9A%E4%BF%A1/"/>
     
   </entry>
   
   <entry>
-    <title>Qt控件自适应窗口大小布局</title>
+    <title>QT 控件自适应窗口大小布局</title>
     <link href="https://www.lifeee.top/posts/52368.html"/>
     <id>https://www.lifeee.top/posts/52368.html</id>
     <published>2020-07-14T14:12:17.000Z</published>
-    <updated>2020-07-14T15:03:03.667Z</updated>
+    <updated>2021-04-08T13:25:56.004Z</updated>
     
     <summary type="html">
     
@@ -368,11 +389,11 @@
       <category term="问题" scheme="https://www.lifeee.top/categories/%E9%97%AE%E9%A2%98/"/>
     
     
+      <category term="C++" scheme="https://www.lifeee.top/tags/C/"/>
+    
       <category term="问题" scheme="https://www.lifeee.top/tags/%E9%97%AE%E9%A2%98/"/>
     
-      <category term="qt" scheme="https://www.lifeee.top/tags/qt/"/>
-    
-      <category term="c++" scheme="https://www.lifeee.top/tags/c/"/>
+      <category term="QT" scheme="https://www.lifeee.top/tags/QT/"/>
     
   </entry>
   
@@ -510,31 +531,6 @@
       <category term="分享" scheme="https://www.lifeee.top/tags/%E5%88%86%E4%BA%AB/"/>
     
       <category term="学习" scheme="https://www.lifeee.top/tags/%E5%AD%A6%E4%B9%A0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>迁移搜狗输入法词库至微软拼音/手心输入法</title>
-    <link href="https://www.lifeee.top/posts/1380.html"/>
-    <id>https://www.lifeee.top/posts/1380.html</id>
-    <published>2020-06-19T14:53:33.000Z</published>
-    <updated>2020-06-20T00:52:58.183Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;https://gitee.com/wang_wx/image_bed/raw/master/2020/close-up-photography-of-person-holding-crystal-ball-1071249.jpg&quot; alt&gt;&lt;/p&gt;
-&lt;p&gt;鉴于搜狗输入法的&lt;a href=&quot;https://www.lifeee.top/posts/1128.html&quot;&gt;&lt;strong&gt;越权行为&lt;/strong&gt;&lt;/a&gt;，严重侵害用户的利益与隐私。因此我卸载了搜狗输入法，并迁移词库至微软拼音与手心输入法。 😾&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
-    
-      <category term="善用佳软" scheme="https://www.lifeee.top/categories/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
-    
-    
-      <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
-    
-      <category term="善用佳软" scheme="https://www.lifeee.top/tags/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
     
   </entry>
   

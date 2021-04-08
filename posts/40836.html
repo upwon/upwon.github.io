@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 3.9.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/myapple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/myfavicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/myfavicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/myapple-touch-icon-next.png" color="#222">
+  <meta name="google-site-verification" content="google2fc64c2b92961282.html">
+  <meta name="baidu-site-verification" content="s6BwSjIZYB">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.loli.net/css?family=EB Garamond:300,300italic,400,400italic,700,700italic|Ma Shan Zheng:300,300italic,400,400italic,700,700italic|Source Code Pro:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-loading-bar.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    hostname: new URL('https://www.lifeee.top').hostname,
+    root: '/',
+    scheme: 'Gemini',
+    version: '7.7.1',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},
+    copycode: {"enable":true,"show_result":true,"style":"mac"},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":true},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: true,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    comments: {"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: 'search.xml',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}
+  };
+</script>
+
+  <meta name="description" content="优先队列是计算机科学中的一类抽象数据类型。优先队列中的每个元素都有各自的优先级，优先级最高的元素最先得到服务；优先级相同的元素按照其在优先队列中的顺序得到服务，【不是普通队列的先进先出(FIFO)】。优先队列往往用堆)来实现。🌴">
+<meta name="keywords" content="C++">
+<meta property="og:type" content="article">
+<meta property="og:title" content="优先队列">
+<meta property="og:url" content="https://www.lifeee.top/posts/40836.html">
+<meta property="og:site_name" content="热夏的博客">
+<meta property="og:description" content="优先队列是计算机科学中的一类抽象数据类型。优先队列中的每个元素都有各自的优先级，优先级最高的元素最先得到服务；优先级相同的元素按照其在优先队列中的顺序得到服务，【不是普通队列的先进先出(FIFO)】。优先队列往往用堆)来实现。🌴">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/upwon/MyPicture@master/imgkazuya-tachibana-arseniy-chebynkin-kitchen.jpg">
+<meta property="og:updated_time" content="2021-04-08T13:30:00.385Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="优先队列">
+<meta name="twitter:description" content="优先队列是计算机科学中的一类抽象数据类型。优先队列中的每个元素都有各自的优先级，优先级最高的元素最先得到服务；优先级相同的元素按照其在优先队列中的顺序得到服务，【不是普通队列的先进先出(FIFO)】。优先队列往往用堆)来实现。🌴">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/upwon/MyPicture@master/imgkazuya-tachibana-arseniy-chebynkin-kitchen.jpg">
+
+<link rel="canonical" href="https://www.lifeee.top/posts/40836.html">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true
+  };
+</script>
+<link href="https://fonts.loli.net/css?family=Noto+Serif+SC:400,500,700&display=swap&subset=chinese-simplified" rel="stylesheet">
+  <title>优先队列 | 热夏的博客</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">热夏的博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-fw fa-heart"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+
+</nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+           placeholder="搜索..." spellcheck="false"
+           type="text" id="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
+
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-Hans">
+    <link itemprop="mainEntityOfPage" href="https://www.lifeee.top/posts/40836.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/head.jpg">
+      <meta itemprop="name" content="热夏">
+      <meta itemprop="description" content="空山新雨后，天气晚来秋。">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="热夏的博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          优先队列
+        </h1>
+
+        <div class="post-meta">
+
+
+      
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-04-08 21:13:27 / 修改时间：21:30:00" itemprop="dateCreated datePublished" datetime="2021-04-08T21:13:27+08:00">2021-04-08</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/" itemprop="url" rel="index">
+                    <span itemprop="name">技术</span>
+                  </a>
+                </span>
+            </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span><br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+                <span class="post-meta-item-text">本文字数：</span>
+              <span>5.6k</span>
+            </span>
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+              <span>5 分钟</span>
+            </span>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p><img src="https://cdn.jsdelivr.net/gh/upwon/MyPicture@master/imgkazuya-tachibana-arseniy-chebynkin-kitchen.jpg" alt></p>
+<p><strong>优先队列</strong>是计算机科学中的一类抽象数据类型。优先队列中的每个元素都有各自的优先级，优先级最高的元素最先得到服务；优先级相同的元素按照其在优先队列中的顺序得到服务，【不是普通队列的先进先出(FIFO)】。优先队列往往用<strong><a href="https://www.wikiwand.com/zh-cn/堆_(数据结构" target="_blank" rel="noopener">堆</a>)</strong>来实现。🌴</p>
+<a id="more"></a>
+<p><br></p>
+<h2 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h2><p>优先队列至少需要支持下述操作：</p>
+<ul>
+<li>插入带优先级的元素（insert_with_priority）</li>
+<li>取出具有最高优先级的元素（pull_highest_priority_element）</li>
+<li>查看最高优先级的元素（peek）：O(1) 时间复杂度</li>
+</ul>
+<p>其它可选的操作：</p>
+<ul>
+<li>检查优先级高的一批元素</li>
+<li>清空优先队列</li>
+<li>批插入一批元素</li>
+<li>合并多个优先队列</li>
+<li>调整一个元素的优先级</li>
+<li></li>
+</ul>
+<h2 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h2><h3 id="初级实现"><a href="#初级实现" class="headerlink" title="初级实现"></a>初级实现</h3><p>有许多简单低效的实现。如用一个有序的数组；或使用无序数组，在每次取出时搜索全集合，这种方法插入的效率为O(1)，但取出时效率为O(n)。</p>
+<h3 id="典型实现"><a href="#典型实现" class="headerlink" title="典型实现"></a>典型实现</h3><p>出于性能考虑，优先队列用堆来实现，具有O(log n)时间复杂度的插入元素性能，O(n)的初始化构造的时间复杂度。如果使用自平衡二叉查找树，插入与删除的时间复杂度为O(log n)，构造二叉树的时间复杂度为O(n log n)。</p>
+<p>从计算复杂度的角度，优先级队列等价于排序算法。</p>
+<p>有一些特殊的堆为优先队列的实现提供了额外的性能：二叉堆的插入与提取操作的时间复杂度为O(log n)，并可以常量时间复杂度的peek操作。二项堆提供了几种额外操作。斐波那契堆的插入、提取、修改元素优先级等操作具有分摊常量时间复杂度，[1]，但删除操作的时间复杂度为O(log n)。Brodal queue（英语：Brodal queue）具有最糟糕情况下的常量复杂度但算法相当复杂因而不具有实用性。</p>
+<p>对于整型、浮点型等具有有限值域的元素的数据类型，优先队列有更快的实现。 </p>
+<h3 id="库实现"><a href="#库实现" class="headerlink" title="库实现"></a>库实现</h3><p>优先队列是计算机科学中的一类”容器数据类型”。</p>
+<p>标准模板库（STL）以及1998年的C++标准确定优先队列是标准模板库的容器适配器模板。其实现了一个需要三个参数的最大优先队列：比较函数（缺省情况是小于函数less<t>）、存储数据所用的容器类型（缺省情况是向量vector<t>）以及指向序列开始和结束位置的两个迭代器。和标准模板库中其他的真实容器不同，优先队列不允许使用其元素类型的迭代器，而必须使用优先队列抽象数据类型的迭代器。标准模板库还实现了支持随机访问数据容器的优先队列—二叉最大堆。<a href="https://www.wikiwand.com/zh-cn/Boost_C%2B%2B_Libraries" target="_blank" rel="noopener">Boost C++库</a>也在其中实现了堆结构。</t></t></p>
+<h2 id="STL-priority-queue-优先级队列-用法"><a href="#STL-priority-queue-优先级队列-用法" class="headerlink" title="STL priority_queue 优先级队列 用法"></a>STL priority_queue 优先级队列 用法</h2><p>优先级队列是一个容器适配器，它提供对最大（默认）元素的恒定时间查找，但以对数插入和提取为代价。可以提供用户提供的比较来更改顺序，例如 使用std :: greater <t>会使最小的元素显示为top（）。使用priority_queue类似于在某些随机访问容器中管理堆，其好处是不会意外使堆无效。</t></p>
+<h2 id="priority-queue-操作"><a href="#priority-queue-操作" class="headerlink" title="priority_queue 操作"></a>priority_queue 操作</h2><p>对 priority_queue 进行操作有一些限制：</p>
+<ul>
+<li>push(const T&amp; obj)：将obj的副本放到容器的适当位置，这通常会包含一个排序操作。</li>
+<li>push(T&amp;&amp; obj)：将obj放到容器的适当位置，这通常会包含一个排序操作。</li>
+<li>emplace(T constructor a rgs…)：通过调用传入参数的构造函数，在序列的适当位置构造一个T对象。为了维持优先顺序，通常需要一个排序操作。</li>
+<li>top()：返回优先级队列中第一个元素的引用。</li>
+<li>pop()：移除第一个元素。</li>
+<li>size()：返回队列中元素的个数。</li>
+<li>empty()：如果队列为空的话，返回true。</li>
+<li>swap(priority_queue<t>&amp; other)：和参数的元素进行交换，所包含对象的类型必须相同。</t></li>
+</ul>
+<p><strong>语法</strong></p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">template</span> &lt;<span class="class"><span class="keyword">class</span> <span class="title">Type</span>, <span class="title">class</span> <span class="title">Container</span>= <span class="title">vector</span> &lt;Type&gt;, <span class="title">class</span> <span class="title">Compare</span>= <span class="title">less</span> &lt;typename Container ::value_type&gt;&gt;</span></span><br><span class="line"><span class="class"><span class="title">class</span> <span class="title">priority_queue</span></span></span><br></pre></td></tr></table></figure>
+<p><em>Type</em><br> 要存储在 priority_queue 中的元素数据类型。</p>
+<p><em>Container </em>容器*<br> 用来实现 priority_queue 的基础容器的类型，比如vector,deque等，默认是vector .</p>
+<p><em>Functional</em><br> 一种提供函数对象的类型，该函数对象将两个元素值作为排序键进行比较，以确定其在 priority_queue 中的相对顺序。 此参数为可选自变量，默认值是二元谓词 <code>less&lt;typename Container::value_type&gt;</code>。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//升序队列，小顶堆</span></span><br><span class="line">priority_queue &lt;<span class="keyword">int</span>,<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;,greater&lt;<span class="keyword">int</span>&gt; &gt; q;</span><br><span class="line"><span class="comment">//降序队列，大顶堆</span></span><br><span class="line">priority_queue &lt;<span class="keyword">int</span>,<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;,less&lt;<span class="keyword">int</span>&gt; &gt;q;</span><br><span class="line"></span><br><span class="line"><span class="comment">//greater和less是std实现的两个仿函数（就是使一个类的使用看上去像一个函数。其实现就是类中实现一个operator()，这个类就有了类似函数的行为，就是一个仿函数类了）</span></span><br></pre></td></tr></table></figure>
+<p><strong>基本类型优先队列的例子：</strong></p>
+<p> 示例来自 <a href="https://www.cnblogs.com/huashanqingzhu/p/11040390.html" target="_blank" rel="noopener">c++优先队列(priority_queue)用法详解 - 华山青竹 - 博客园 (cnblogs.com) </a> ，在此表示感谢。🍻🍻</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;queue&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="comment">//对于基础类型 默认是大顶堆</span></span><br><span class="line">    priority_queue&lt;<span class="keyword">int</span>&gt; a;</span><br><span class="line">    <span class="comment">//等同于 priority_queue&lt;int, vector&lt;int&gt;, less&lt;int&gt; &gt; a;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">//      这里一定要有空格，不然成了右移运算符↓↓</span></span><br><span class="line">    priority_queue&lt;<span class="keyword">int</span>, <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;, greater&lt;<span class="keyword">int</span>&gt; &gt; c;  <span class="comment">//这样就是小顶堆</span></span><br><span class="line">    priority_queue&lt;<span class="built_in">string</span>&gt; b;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">5</span>; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        a.push(i);</span><br><span class="line">        c.push(i);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">while</span> (!a.empty())</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; a.top() &lt;&lt; <span class="string">' '</span>;</span><br><span class="line">        a.pop();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> (!c.empty())</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; c.top() &lt;&lt; <span class="string">' '</span>;</span><br><span class="line">        c.pop();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line"></span><br><span class="line">    b.push(<span class="string">"abc"</span>);</span><br><span class="line">    b.push(<span class="string">"abcd"</span>);</span><br><span class="line">    b.push(<span class="string">"cbd"</span>);</span><br><span class="line">    <span class="keyword">while</span> (!b.empty())</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; b.top() &lt;&lt; <span class="string">' '</span>;</span><br><span class="line">        b.pop();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>运行结果：</p>
+<figure class="highlight angelscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">4</span> <span class="number">3</span> <span class="number">2</span> <span class="number">1</span> <span class="number">0</span></span><br><span class="line"><span class="number">0</span> <span class="number">1</span> <span class="number">2</span> <span class="number">3</span> <span class="number">4</span></span><br><span class="line">cbd abcd abc</span><br></pre></td></tr></table></figure>
+<p><strong>用pair做优先队列元素的例子：</strong></p>
+<p>规则：pair的比较，先比较第一个元素，第一个相等比较第二个。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;queue&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    priority_queue&lt;pair&lt;<span class="keyword">int</span>, <span class="keyword">int</span>&gt; &gt; a;</span><br><span class="line">    pair&lt;<span class="keyword">int</span>, <span class="keyword">int</span>&gt; b(<span class="number">1</span>, <span class="number">2</span>);</span><br><span class="line">    pair&lt;<span class="keyword">int</span>, <span class="keyword">int</span>&gt; c(<span class="number">1</span>, <span class="number">3</span>);</span><br><span class="line">    pair&lt;<span class="keyword">int</span>, <span class="keyword">int</span>&gt; d(<span class="number">2</span>, <span class="number">5</span>);</span><br><span class="line">    a.push(d);</span><br><span class="line">    a.push(c);</span><br><span class="line">    a.push(b);</span><br><span class="line">    <span class="keyword">while</span> (!a.empty())</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; a.top().first &lt;&lt; <span class="string">' '</span> &lt;&lt; a.top().second &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">        a.pop();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>运行结果：</p>
+<figure class="highlight basic"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">2 </span><span class="number">5</span></span><br><span class="line"><span class="symbol">1 </span><span class="number">3</span></span><br><span class="line"><span class="symbol">1 </span><span class="number">2</span></span><br></pre></td></tr></table></figure>
+<p><strong>用自定义类型做优先队列元素的例子</strong></p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;queue&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//方法1</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">tmp1</span> //运算符重载&lt;</span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line"><span class="class">    int x;</span></span><br><span class="line"><span class="class">    tmp1(int a) &#123;x = a;&#125;</span></span><br><span class="line"><span class="class">    bool operator&lt;(const tmp1&amp; a) const</span></span><br><span class="line"><span class="class">    &#123;</span></span><br><span class="line"><span class="class">        return x &lt; a.x; //大顶堆</span></span><br><span class="line"><span class="class">    &#125;</span></span><br><span class="line"><span class="class">&#125;;</span></span><br><span class="line"><span class="class"></span></span><br><span class="line"><span class="class">//方法2</span></span><br><span class="line"><span class="class">struct tmp2 //重写仿函数</span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line"><span class="class">    bool operator() (tmp1 a, tmp1 b)</span></span><br><span class="line"><span class="class">    &#123;</span></span><br><span class="line"><span class="class">        return a.x &lt; b.x; //大顶堆</span></span><br><span class="line"><span class="class">    &#125;</span></span><br><span class="line"><span class="class">&#125;;</span></span><br><span class="line"><span class="class"></span></span><br><span class="line"><span class="class">int main()</span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line"><span class="class">    tmp1 a(1);</span></span><br><span class="line"><span class="class">    tmp1 b(2);</span></span><br><span class="line"><span class="class">    tmp1 c(3);</span></span><br><span class="line"><span class="class">    priority_queue&lt;tmp1&gt; d;</span></span><br><span class="line"><span class="class">    d.push(b);</span></span><br><span class="line"><span class="class">    d.push(c);</span></span><br><span class="line"><span class="class">    d.push(a);</span></span><br><span class="line"><span class="class">    while (!d.empty())</span></span><br><span class="line"><span class="class">    &#123;</span></span><br><span class="line"><span class="class">        cout &lt;&lt; d.top().x &lt;&lt; '\n';</span></span><br><span class="line"><span class="class">        d.pop();</span></span><br><span class="line"><span class="class">    &#125;</span></span><br><span class="line"><span class="class">    cout &lt;&lt; endl;</span></span><br><span class="line"><span class="class"></span></span><br><span class="line"><span class="class">    priority_queue&lt;tmp1, vector&lt;tmp1&gt;, tmp2&gt; f;</span></span><br><span class="line"><span class="class">    f.push(b);</span></span><br><span class="line"><span class="class">    f.push(c);</span></span><br><span class="line"><span class="class">    f.push(a);</span></span><br><span class="line"><span class="class">    while (!f.empty())</span></span><br><span class="line"><span class="class">    &#123;</span></span><br><span class="line"><span class="class">        cout &lt;&lt; f.top().x &lt;&lt; '\n';</span></span><br><span class="line"><span class="class">        f.pop();</span></span><br><span class="line"><span class="class">    &#125;</span></span><br><span class="line"><span class="class">&#125;</span></span><br></pre></td></tr></table></figure>
+<p>示例，来自 <strong><a href="https://en.cppreference.com/w/cpp/container/priority_queue" target="_blank" rel="noopener">https://en.cppreference.com/w/cpp/container/priority_queue</a></strong></p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;functional&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;queue&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">template</span>&lt;<span class="keyword">typename</span> T&gt;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">print_queue</span><span class="params">(T q)</span> </span>&#123; <span class="comment">// NB: pass by value so the print uses a copy</span></span><br><span class="line">    <span class="keyword">while</span>(!q.empty()) &#123;</span><br><span class="line">        <span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; q.top() &lt;&lt; <span class="string">' '</span>;</span><br><span class="line">        q.pop();</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">'\n'</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//默认大顶堆  队头元素最大</span></span><br><span class="line">    <span class="built_in">std</span>::priority_queue&lt;<span class="keyword">int</span>&gt; q;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">const</span> <span class="keyword">auto</span> data = &#123;<span class="number">1</span>,<span class="number">8</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">0</span>,<span class="number">9</span>,<span class="number">7</span>,<span class="number">2</span>&#125;;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> n : data)</span><br><span class="line">        q.push(n);</span><br><span class="line"></span><br><span class="line">    print_queue(q);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 优先输出小的元素</span></span><br><span class="line">    <span class="built_in">std</span>::priority_queue&lt;<span class="keyword">int</span>, <span class="built_in">std</span>::<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;, <span class="built_in">std</span>::greater&lt;<span class="keyword">int</span>&gt;&gt;</span><br><span class="line">            q2(data.begin(), data.end());</span><br><span class="line">    print_queue(q2);</span><br><span class="line"></span><br><span class="line">    priority_queue&lt;<span class="keyword">int</span>,<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;,greater&lt;<span class="keyword">int</span>&gt; &gt;q22;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> n:data)</span><br><span class="line">        q22.push(n);</span><br><span class="line">    print_queue(q22);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Using lambda to compare elements.</span></span><br><span class="line">    <span class="keyword">auto</span> cmp = [](<span class="keyword">int</span> left, <span class="keyword">int</span> right) &#123; <span class="keyword">return</span> (left ^ <span class="number">1</span>) &lt; (right ^ <span class="number">1</span>); &#125;;</span><br><span class="line">    <span class="built_in">std</span>::priority_queue&lt;<span class="keyword">int</span>, <span class="built_in">std</span>::<span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt;, <span class="keyword">decltype</span>(cmp)&gt; q3(cmp);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> n : data)</span><br><span class="line">        q3.push(n);</span><br><span class="line"></span><br><span class="line">    print_queue(q3);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="keyword">auto</span> cmp2=[](<span class="keyword">int</span> left, <span class="keyword">int</span> right)&#123;<span class="keyword">return</span>()&#125;;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>输出</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">9</span> <span class="number">8</span> <span class="number">7</span> <span class="number">6</span> <span class="number">5</span> <span class="number">4</span> <span class="number">3</span> <span class="number">2</span> <span class="number">1</span> <span class="number">0</span> </span><br><span class="line"><span class="number">0</span> <span class="number">1</span> <span class="number">2</span> <span class="number">3</span> <span class="number">4</span> <span class="number">5</span> <span class="number">6</span> <span class="number">7</span> <span class="number">8</span> <span class="number">9</span> </span><br><span class="line"><span class="number">0</span> <span class="number">1</span> <span class="number">2</span> <span class="number">3</span> <span class="number">4</span> <span class="number">5</span> <span class="number">6</span> <span class="number">7</span> <span class="number">8</span> <span class="number">9</span> </span><br><span class="line"><span class="number">8</span> <span class="number">9</span> <span class="number">6</span> <span class="number">7</span> <span class="number">4</span> <span class="number">5</span> <span class="number">2</span> <span class="number">3</span> <span class="number">0</span> <span class="number">1</span></span><br></pre></td></tr></table></figure>
+<p><strong>补充</strong></p>
+<p><a href="https://leetcode-cn.com/problems/zui-xiao-de-kge-shu-lcof/submissions/" target="_blank" rel="noopener">剑指 Offer 40. 最小的k个数 - 力扣（LeetCode） (leetcode-cn.com)</a> 这一题可使用优先队列的大顶推</p>
+<h2 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h2><p>优先队列常用于操作系统的<a href="https://www.wikiwand.com/zh-cn/调度_(计算机" target="_blank" rel="noopener">任务调度</a>)，也是<a href="https://www.wikiwand.com/zh-cn/贪心算法" target="_blank" rel="noopener">贪心算法</a>的重要组成部分。</p>
+<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><p><a href="https://www.wikiwand.com/zh-cn/優先佇列" target="_blank" rel="noopener">优先队列 - Wikiwand</a></p>
+<p><a href="https://en.cppreference.com/w/cpp/container/priority_queue" target="_blank" rel="noopener">std::priority_queue - cppreference.com</a></p>
+<p><a href="https://docs.microsoft.com/zh-cn/cpp/standard-library/priority-queue-class?view=msvc-160" target="_blank" rel="noopener">priority_queue 类 | Microsoft Docs</a></p>
+<p><a href="https://www.cnblogs.com/huashanqingzhu/p/11040390.html" target="_blank" rel="noopener">c++优先队列(priority_queue)用法详解 - 华山青竹 - 博客园 (cnblogs.com)</a></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+<p><br></p>
+
+    </div>
+
+    
+    
+    
+        <div class="reward-container">
+  <div>觉得文章对您有帮助请我喝冰可乐吧 😉</div>
+  <button onclick="var qr = document.getElementById('qr'); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    打赏
+  </button>
+  <div id="qr" style="display: none;">
+      
+      <div style="display: inline-block;">
+        <img src="/images/wechatpay.png" alt="热夏 微信支付">
+        <p>微信支付</p>
+      </div>
+
+  </div>
+</div>
+
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>热夏
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://www.lifeee.top/posts/40836.html" title="优先队列">https://www.lifeee.top/posts/40836.html</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-Hans" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/tags/C/" rel="tag"><i class="fa fa-tag"></i> C++</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/posts/25652.html" rel="prev" title="5G高频段信道测量与建模进展">
+      <i class="fa fa-chevron-left"></i> 5G高频段信道测量与建模进展
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+    <div class="comments" id="gitalk-container"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let activeClass = CONFIG.comments.activeClass;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+
+
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+
+
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#操作"><span class="nav-text">操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实现"><span class="nav-text">实现</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#初级实现"><span class="nav-text">初级实现</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#典型实现"><span class="nav-text">典型实现</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#库实现"><span class="nav-text">库实现</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#STL-priority-queue-优先级队列-用法"><span class="nav-text">STL priority_queue 优先级队列 用法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#priority-queue-操作"><span class="nav-text">priority_queue 操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#应用"><span class="nav-text">应用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考文献"><span class="nav-text">参考文献</span></a></li></ol></div>
+
+
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="热夏"
+      src="/images/head.jpg">
+  <p class="site-author-name" itemprop="name">热夏</p>
+  <div class="site-description" itemprop="description">空山新雨后，天气晚来秋。</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">62</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">40</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/upwon" title="GitHub → https://github.com/upwon" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:w1244753906@gmail.com" title="E-Mail → mailto:w1244753906@gmail.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://weibo.com/3311053605" title="Weibo → https://weibo.com/3311053605" rel="noopener" target="_blank"><i class="fa fa-fw fa-weibo"></i>Weibo</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.instagram.com/midsummer_wen/" title="Instagram → https://www.instagram.com/midsummer_wen/" rel="noopener" target="_blank"><i class="fa fa-fw fa-instagram"></i>Instagram</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.lifeee.top///atom.xml" title="RSS → https://www.lifeee.top///atom.xml"><i class="fa fa-fw fa-rss"></i>RSS</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+
+   <div id="sidebar-dimmer"></div>
+
+
+
+
+
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright">
+  
+  &copy; 2018 – 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">热夏</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+      <span class="post-meta-item-text">站点总字数：</span>
+    <span title="站点总字数">546k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">8:17</span>
+</div>
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
+<script src="/js/schemes/pisces.js"></script>
+<script src="/js/next-boot.js"></script>
+
+
+
+  
+  <script>
+    (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      bp.src = (curProtocol === 'https') ? 'https://zz.bdstatic.com/linksubmit/push.js' : 'http://push.zhanzhang.baidu.com/push.js';
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+
+
+  <script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+<script>
+NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID: '7e047047ecee7317452b',
+      clientSecret: 'c60fbdf0eb19e7264e33ab780319e4d420a58fee',
+      repo: 'upwon.github.io',
+      owner: 'upwon',
+      admin: ['upwon'],
+      id: 'ab306a7ceb0b6bf942133cdd1c154d37',
+        language: '',
+      distractionFreeMode: true
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+});
+</script>
+
+
+</body>
+</html>
+
+<!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/clicklove.js"></script>
+
+
+<!-- 樱花 -->
+<script type="text/javascript" src="/js/sakura.js"></script>
+
