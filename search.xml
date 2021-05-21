@@ -2247,8 +2247,8 @@ F_{t, s, \varphi}\left(\boldsymbol{\Omega}_{t, n, m}\right)
         <category>教程</category>
       </categories>
       <tags>
-        <tag>善用佳软</tag>
         <tag>C++</tag>
+        <tag>善用佳软</tag>
         <tag>QT</tag>
       </tags>
   </entry>
@@ -2614,9 +2614,9 @@ vgg_generated_48.i
         <category>编程</category>
       </categories>
       <tags>
-        <tag>教程</tag>
         <tag>C++</tag>
         <tag>编程</tag>
+        <tag>教程</tag>
         <tag>QT</tag>
       </tags>
   </entry>
@@ -2692,8 +2692,8 @@ vgg_generated_48.i
 <p><br></p>
 ]]></content>
       <categories>
-        <category>生活</category>
         <category>教程</category>
+        <category>生活</category>
         <category>善用佳软</category>
       </categories>
       <tags>
@@ -3484,8 +3484,8 @@ vgg_generated_48.i
         <category>转载</category>
       </categories>
       <tags>
-        <tag>分享</tag>
         <tag>转载</tag>
+        <tag>分享</tag>
         <tag>学习</tag>
       </tags>
   </entry>
@@ -4981,8 +4981,8 @@ vgg_generated_48.i
 </blockquote>
 ]]></content>
       <categories>
-        <category>技术</category>
         <category>编程</category>
+        <category>技术</category>
       </categories>
       <tags>
         <tag>转载</tag>
@@ -5015,8 +5015,8 @@ vgg_generated_48.i
 <p><br></p>
 ]]></content>
       <categories>
-        <category>问题</category>
         <category>教程</category>
+        <category>问题</category>
       </categories>
       <tags>
         <tag>Github</tag>
@@ -5951,8 +5951,8 @@ vgg_generated_48.i
 <p><br></p>
 ]]></content>
       <categories>
-        <category>技术</category>
         <category>编程</category>
+        <category>技术</category>
       </categories>
       <tags>
         <tag>C++</tag>
@@ -6288,8 +6288,8 @@ vgg_generated_48.i
 <p><br></p>
 ]]></content>
       <categories>
-        <category>技术</category>
         <category>编程</category>
+        <category>技术</category>
       </categories>
       <tags>
         <tag>C++</tag>
@@ -8035,8 +8035,8 @@ vgg_generated_48.i
 <p><br></p>
 ]]></content>
       <categories>
-        <category>技术</category>
         <category>编程</category>
+        <category>技术</category>
       </categories>
       <tags>
         <tag>C++</tag>
@@ -8343,13 +8343,13 @@ vgg_generated_48.i
 </blockquote>
 ]]></content>
       <categories>
-        <category>技术</category>
         <category>编程</category>
+        <category>技术</category>
         <category>教程</category>
       </categories>
       <tags>
-        <tag>教程</tag>
         <tag>C++</tag>
+        <tag>教程</tag>
       </tags>
   </entry>
   <entry>
@@ -8541,8 +8541,8 @@ vgg_generated_48.i
 <p><br></p>
 ]]></content>
       <categories>
-        <category>问题</category>
         <category>教程</category>
+        <category>问题</category>
       </categories>
       <tags>
         <tag>问题</tag>
@@ -8559,22 +8559,22 @@ vgg_generated_48.i
 <a id="more"></a>
 <p>有些时候在一些新设备或者存在安全隐患的场景下登录 Google 账号，会让你确认您的身份。有时候就需要使用安全码来验证，那么如何获取安全码呢 ?</p>
 <p>官方给出的方法是这样的，但是可能对我们国内的手机有些差异。</p>
-<p><img src="https://gitee.com/wang_wx/image_bed/raw/master/2020/20200508154332.png" alt></p>
+<p><img src="https://cdn.jsdelivr.net/gh/upwon/MyPicture@master/img20200508154332.png" alt></p>
 <p>我的手机是 小米 的，使用如下方法 获取 Google 安全码。</p>
 <ol>
 <li>在 Google Pay 中下载名为 Google 的应用</li>
 </ol>
-<p><img src="https://gitee.com/wang_wx/image_bed/raw/master/2020/20200508172438.png" style="zoom: 33%;"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/upwon/MyPicture@master/img20200508172438.png" style="zoom: 33%;"></p>
 <p>2.进入应用后，点击更多。</p>
-<p><img src="https://gitee.com/wang_wx/image_bed/raw/master/2020/20200508175640.png" style="zoom:33%;"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/upwon/MyPicture@master/img20210521211928.png" style="zoom:33%;"></p>
 <p>3.点击邮箱旁边的下三角 🔻，会出现<strong>账号管理</strong>，然后再点击<strong>账号管理</strong>。</p>
-<p><img src="https://gitee.com/wang_wx/image_bed/raw/master/2020/20200508180011.png" style="zoom:33%;"></p>
-<p><img src="https://gitee.com/wang_wx/image_bed/raw/master/2020/20200508180653.png" style="zoom:33%;"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/upwon/MyPicture@master/img20210521212358.png" style="zoom:33%;"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/upwon/MyPicture@master/img20210521212444.png" style="zoom:33%;"></p>
 <p>4.点击安全性，再点击下方的安全码，然后安全码就会出现。出现的安全码十五分钟更新一次。若有多个账号根据自己登录的账号切换即可。</p>
-<p><img src="https://gitee.com/wang_wx/image_bed/raw/master/2020/20200508180752.png" style="zoom:33%;"></p>
-<p><img src="https://gitee.com/wang_wx/image_bed/raw/master/2020/20200508174340.png" style="zoom: 33%;"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/upwon/MyPicture@master/img20210521212524.png" style="zoom:33%;"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/upwon/MyPicture@master/img20200508174340.png" style="zoom: 33%;"></p>
 <p>5.将安全码填写到需要登录的应用中。</p>
-<p><img src="https://gitee.com/wang_wx/image_bed/raw/master/2020/20200508181211.png" style="zoom:33%;"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/upwon/MyPicture@master/img20200508181211.png" style="zoom:33%;"></p>
 <p><br></p>
 <div class="note info">
             <p>题外话 现在 Android 端的邮箱应用 网易的邮箱大师比 QQ 邮箱好用</p>
@@ -12198,8 +12198,8 @@ vgg_generated_48.i
 </blockquote>
 ]]></content>
       <categories>
-        <category>技术</category>
         <category>编程</category>
+        <category>技术</category>
       </categories>
       <tags>
         <tag>教程</tag>
