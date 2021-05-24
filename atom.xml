@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://www.lifeee.top/"/>
-  <updated>2021-04-13T14:19:52.968Z</updated>
+  <updated>2021-05-24T07:28:52.467Z</updated>
   <id>https://www.lifeee.top/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title> C++ stringstream 简介</title>
+    <link href="https://www.lifeee.top/posts/23490.html"/>
+    <id>https://www.lifeee.top/posts/23490.html</id>
+    <published>2021-05-24T06:46:15.000Z</published>
+    <updated>2021-05-24T07:28:52.467Z</updated>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/upwon/MyPicture@master/imgpexels-valiphotos-589802yas2.jpg&quot; alt&gt;&lt;/p&gt;
+&lt;p&gt;C++ stringstream 能够实现字符串流的输入输出操作，将字符串对象与流关联起来，允许像读取流一样读取字符串(如 cin)。能够很方便的从字符串中提取出以空格分割的子串、计算单词的频率，并且能够很方便地实现内置类型数据数据之间的转换(如 string 转 int)。🍦&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="技术" scheme="https://www.lifeee.top/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="C++" scheme="https://www.lifeee.top/tags/C/"/>
+    
+      <category term="编程" scheme="https://www.lifeee.top/tags/%E7%BC%96%E7%A8%8B/"/>
+    
+  </entry>
   
   <entry>
     <title>.gitignore / Git 忽略文件无效解决方案</title>
@@ -284,9 +307,9 @@
       <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
     
     
-      <category term="C++" scheme="https://www.lifeee.top/tags/C/"/>
-    
       <category term="善用佳软" scheme="https://www.lifeee.top/tags/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
+    
+      <category term="C++" scheme="https://www.lifeee.top/tags/C/"/>
     
       <category term="QT" scheme="https://www.lifeee.top/tags/QT/"/>
     
@@ -333,11 +356,11 @@
       <category term="编程" scheme="https://www.lifeee.top/categories/%E7%BC%96%E7%A8%8B/"/>
     
     
+      <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
+    
       <category term="C++" scheme="https://www.lifeee.top/tags/C/"/>
     
       <category term="编程" scheme="https://www.lifeee.top/tags/%E7%BC%96%E7%A8%8B/"/>
-    
-      <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
     
       <category term="QT" scheme="https://www.lifeee.top/tags/QT/"/>
     
@@ -357,9 +380,9 @@
     
     </summary>
     
-      <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
-    
       <category term="生活" scheme="https://www.lifeee.top/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+      <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
     
       <category term="善用佳软" scheme="https://www.lifeee.top/categories/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
     
@@ -493,33 +516,6 @@
     </summary>
     
       <category term="技术" scheme="https://www.lifeee.top/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-      <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
-    
-      <category term="善用佳软" scheme="https://www.lifeee.top/categories/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
-    
-    
-      <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
-    
-      <category term="善用佳软" scheme="https://www.lifeee.top/tags/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
-    
-      <category term="IDE" scheme="https://www.lifeee.top/tags/IDE/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Vivado与VS Code:强强联手1</title>
-    <link href="https://www.lifeee.top/posts/54594.html"/>
-    <id>https://www.lifeee.top/posts/54594.html</id>
-    <published>2020-06-26T12:49:42.000Z</published>
-    <updated>2020-06-26T13:23:34.199Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;https://gitee.com/wang_wx/image_bed/raw/master/2020/20200626210532.jpg&quot; alt&gt;&lt;/p&gt;
-&lt;p&gt;  Vivado带有自己的文本编辑器，可以编写代码；但是若说用起来效果较好的，还是要提到VS Code；接下来从Vivado自带的文本编辑器改用VS Code聊起，接着谈些对VS Code的简单设置，以便更好的进行程序编写。🍻&lt;/p&gt;
-    
-    </summary>
     
       <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
     
