@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 3.9.0">
+<meta name="generator" content="Hexo 5.4.0">
   <link rel="apple-touch-icon" sizes="180x180" href="/images/myapple-touch-icon-next.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/myfavicon-32x32-next.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/myfavicon-16x16-next.png">
@@ -52,13 +52,12 @@
 </script>
 
   <meta name="description" content="目的： 右键单击文件夹，可以使用以vscode打开 右键单文件或者空白处，可以使用vscode打开">
-<meta name="keywords" content="教程,善用佳软,Windows">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Windows右键菜单添加以VS Code打开🍻">
 <meta property="og:url" content="https://www.lifeee.top/posts/84152447.html">
 <meta property="og:site_name" content="热夏的博客">
 <meta property="og:description" content="目的： 右键单击文件夹，可以使用以vscode打开 右键单文件或者空白处，可以使用vscode打开">
-<meta property="og:locale" content="zh-Hans">
+<meta property="og:locale">
 <meta property="og:image" content="https://gitee.com/wang_wx/image_bed/raw/master/201910/87ba7e99b2b1a4aea40278f8338822c7.jpg">
 <meta property="og:image" content="https://raw.githubusercontent.com/upwon/MyPicture/master/img/%E8%BD%AF%E5%AA%92%E8%AE%BE%E7%BD%AE.jpg">
 <meta property="og:image" content="https://raw.githubusercontent.com/upwon/MyPicture/master/img/RightClickEnhancerProfessional2019-09-14_21-33-44.jpg">
@@ -68,10 +67,13 @@
 <meta property="og:image" content="https://raw.githubusercontent.com/upwon/MyPicture/master/img/openwithvscode3.gif">
 <meta property="og:image" content="https://raw.githubusercontent.com/upwon/MyPicture/master/img/1568470870224.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/upwon/MyPicture/master/img/OpenFIle.gif">
-<meta property="og:updated_time" content="2020-02-11T09:40:43.642Z">
+<meta property="article:published_time" content="2019-09-15T15:25:00.000Z">
+<meta property="article:modified_time" content="2020-02-11T09:40:43.642Z">
+<meta property="article:author" content="热夏">
+<meta property="article:tag" content="教程">
+<meta property="article:tag" content="善用佳软">
+<meta property="article:tag" content="Windows">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Windows右键菜单添加以VS Code打开🍻">
-<meta name="twitter:description" content="目的： 右键单击文件夹，可以使用以vscode打开 右键单文件或者空白处，可以使用vscode打开">
 <meta name="twitter:image" content="https://gitee.com/wang_wx/image_bed/raw/master/201910/87ba7e99b2b1a4aea40278f8338822c7.jpg">
 
 <link rel="canonical" href="https://www.lifeee.top/posts/84152447.html">
@@ -117,6 +119,7 @@
   </style>
 </noscript>
 
+<link rel="alternate" href="/atom.xml" title="热夏的博客" type="application/atom+xml">
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
@@ -267,13 +270,13 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/技术/" itemprop="url" rel="index">
+                  <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index">
                     <span itemprop="name">技术</span>
                   </a>
                 </span>
                   ，
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/教程/" itemprop="url" rel="index">
+                  <a href="/categories/%E6%95%99%E7%A8%8B/" itemprop="url" rel="index">
                     <span itemprop="name">教程</span>
                   </a>
                 </span>
@@ -292,7 +295,7 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>777</span>
+              <span>817</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -311,32 +314,32 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p><img src="https://gitee.com/wang_wx/image_bed/raw/master/201910/87ba7e99b2b1a4aea40278f8338822c7.jpg"></p>
+        <p><img src="https://gitee.com/wang_wx/image_bed/raw/master/201910/87ba7e99b2b1a4aea40278f8338822c7.jpg"  /></p>
 <p>目的：</p>
 <p>右键单击文件夹，可以使用以vscode打开</p>
 <p>右键单文件或者空白处，可以使用vscode打开</p>
-<a id="more"></a>
+<span id="more"></span>
 <p>更改右键菜单的本质都是去更改注册表，网络上可以搜索到很多更改注册表的方法，当然也有拥有图形化界面的小工具能够实现其功能。比如 软媒魔方中的软媒设置大师👇</p>
-<p><img src="https://raw.githubusercontent.com/upwon/MyPicture/master/img/%E8%BD%AF%E5%AA%92%E8%AE%BE%E7%BD%AE.jpg" style="zoom:80%;"></p>
-<p>或者右键菜单管理工具<a href="http://www.carrotchou.blog/13535.html" target="_blank" rel="noopener"> Right Click Enhancer Professional v4.5.5 </a>👇</p>
-<p> <img src="https://raw.githubusercontent.com/upwon/MyPicture/master/img/RightClickEnhancerProfessional2019-09-14_21-33-44.jpg" style="zoom:80%;"></p>
+<p><img src="https://raw.githubusercontent.com/upwon/MyPicture/master/img/%E8%BD%AF%E5%AA%92%E8%AE%BE%E7%BD%AE.jpg" style="zoom:80%;" /></p>
+<p>或者右键菜单管理工具<a target="_blank" rel="noopener" href="http://www.carrotchou.blog/13535.html"> Right Click Enhancer Professional v4.5.5 </a>👇</p>
+<p> <img src="https://raw.githubusercontent.com/upwon/MyPicture/master/img/RightClickEnhancerProfessional2019-09-14_21-33-44.jpg" style="zoom:80%;" /></p>
 <p>还有RightMenuMgr 一款强大的右键菜单管理工具 👇</p>
-<p><img src="https://raw.githubusercontent.com/upwon/MyPicture/master/img/RightMenuMgr_2019-09-14_21-40.jpg" alt></p>
-<p>其提供“文件”、“文件夹”、“磁盘”等几乎所有地方的右键菜单管理， <strong>RightMenuMgr</strong> 附加提供了 IE 右键菜单管理。并且 <strong>RightMenuMgr</strong> 还允许你自己添加自定义右键菜单，十分之方便！感觉它的条目比较清晰，文件、文件夹等都分类了，所以今天我选择使用它来更改我的右键菜单。下载地址在：<a href="https://d.appinn.com/rightmenumgr/" target="_blank" rel="noopener"><strong>小众软件</strong></a></p>
+<p><img src="https://raw.githubusercontent.com/upwon/MyPicture/master/img/RightMenuMgr_2019-09-14_21-40.jpg" alt=""></p>
+<p>其提供“文件”、“文件夹”、“磁盘”等几乎所有地方的右键菜单管理， <strong>RightMenuMgr</strong> 附加提供了 IE 右键菜单管理。并且 <strong>RightMenuMgr</strong> 还允许你自己添加自定义右键菜单，十分之方便！感觉它的条目比较清晰，文件、文件夹等都分类了，所以今天我选择使用它来更改我的右键菜单。下载地址在：<a target="_blank" rel="noopener" href="https://d.appinn.com/rightmenumgr/"><strong>小众软件</strong></a></p>
 <p>​    首先，选择左边的文件夹，然后右边就出现了很多已有的快捷菜单条目了，此时在右边的空白出右击，选择增加扩展项，然后在其中菜单名称与执行的命令即可。</p>
-<p><img src="https://raw.githubusercontent.com/upwon/MyPicture/master/img/20190915211805.png" alt></p>
+<p><img src="https://raw.githubusercontent.com/upwon/MyPicture/master/img/20190915211805.png" alt=""></p>
 <p>在VS Code打开文件夹时显示的名称，执行的命令为</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"D:\20190113\AboutStudy\\Microsoft VS Code\\Code.exe"</span> <span class="string">"%V"</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;D:\20190113\AboutStudy\\Microsoft VS Code\\Code.exe&quot;</span> <span class="string">&quot;%V&quot;</span></span><br></pre></td></tr></table></figure>
 <p>其中第一个参数是我软件的安装路径，选择你自己的替换即可，第二个参数<code>&quot;%V&quot;</code>实现的效果其实就是把此文件夹的路径传入VS Code中，不用改。</p>
 <p>然后，在任意一个文件夹上右击就会出现在VS Code中打开的快捷菜单了</p>
-<p><img src="https://raw.githubusercontent.com/upwon/MyPicture/master/img/15684706701800.png" alt></p>
-<p><img src="https://raw.githubusercontent.com/upwon/MyPicture/master/img/openwithvscode3.gif" alt></p>
+<p><img src="https://raw.githubusercontent.com/upwon/MyPicture/master/img/15684706701800.png" alt=""></p>
+<p><img src="https://raw.githubusercontent.com/upwon/MyPicture/master/img/openwithvscode3.gif" alt=""></p>
 <hr>
 <p>同理，要打开文件的话就在软件的左边选择所以文件，然后同样增加一个扩展项就行了，只不过将命令行改为</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"D:\20190113\AboutStudy\Microsoft VS Code\Code.exe"</span> <span class="string">"%1"</span></span><br></pre></td></tr></table></figure>
-<p><img src="https://raw.githubusercontent.com/upwon/MyPicture/master/img/1568470870224.png" alt></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;D:\20190113\AboutStudy\Microsoft VS Code\Code.exe&quot;</span> <span class="string">&quot;%1&quot;</span></span><br></pre></td></tr></table></figure>
+<p><img src="https://raw.githubusercontent.com/upwon/MyPicture/master/img/1568470870224.png" alt=""></p>
 <p>这样就能将选中的文件在VS Code中打开了</p>
-<p><img src="https://raw.githubusercontent.com/upwon/MyPicture/master/img/OpenFIle.gif" alt></p>
+<p><img src="https://raw.githubusercontent.com/upwon/MyPicture/master/img/OpenFIle.gif" alt=""></p>
 <p>如果你需要将其他软件的快捷方式添加到右键菜单中，使用上述方法，更改软件路径即可 😁</p>
 
     </div>
@@ -380,8 +383,8 @@
       <footer class="post-footer">
           
           <div class="post-tags">
-              <a href="/tags/教程/" rel="tag"><i class="fa fa-tag"></i> 教程</a>
-              <a href="/tags/善用佳软/" rel="tag"><i class="fa fa-tag"></i> 善用佳软</a>
+              <a href="/tags/%E6%95%99%E7%A8%8B/" rel="tag"><i class="fa fa-tag"></i> 教程</a>
+              <a href="/tags/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/" rel="tag"><i class="fa fa-tag"></i> 善用佳软</a>
               <a href="/tags/Windows/" rel="tag"><i class="fa fa-tag"></i> Windows</a>
           </div>
 
@@ -480,7 +483,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">64</span>
+          <span class="site-state-item-count">65</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -493,20 +496,20 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">40</span>
+        <span class="site-state-item-count">41</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
 </div>
   <div class="links-of-author motion-element">
       <span class="links-of-author-item">
-        <a href="https://github.com/upwon" title="GitHub → https://github.com/upwon" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+        <a href="https://github.com/upwon" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;upwon" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
       </span>
       <span class="links-of-author-item">
         <a href="mailto:w1244753906@gmail.com" title="E-Mail → mailto:w1244753906@gmail.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
       </span>
       <span class="links-of-author-item">
-        <a href="https://www.lifeee.top///atom.xml" title="RSS → https://www.lifeee.top///atom.xml"><i class="fa fa-fw fa-rss"></i>RSS</a>
+        <a href="https://www.lifeee.top///atom.xml" title="RSS → https:&#x2F;&#x2F;www.lifeee.top&#x2F;&#x2F;&#x2F;atom.xml"><i class="fa fa-fw fa-rss"></i>RSS</a>
       </span>
   </div>
 
@@ -544,13 +547,13 @@
       <i class="fa fa-area-chart"></i>
     </span>
       <span class="post-meta-item-text">站点总字数：</span>
-    <span title="站点总字数">554k</span>
+    <span title="站点总字数">579k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">8:24</span>
+    <span title="站点阅读时长">8:46</span>
 </div>
 
         
@@ -583,9 +586,17 @@
   <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
   <script src="/lib/velocity/velocity.min.js"></script>
   <script src="/lib/velocity/velocity.ui.min.js"></script>
-<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
 <script src="/js/schemes/pisces.js"></script>
+
+
 <script src="/js/next-boot.js"></script>
+
 
 
 
@@ -603,7 +614,9 @@
 
 
 
-  <script src="/js/local-search.js"></script>
+  
+<script src="/js/local-search.js"></script>
+
 
 
 

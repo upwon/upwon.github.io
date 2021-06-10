@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 3.9.0">
+<meta name="generator" content="Hexo 5.4.0">
   <link rel="apple-touch-icon" sizes="180x180" href="/images/myapple-touch-icon-next.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/myfavicon-32x32-next.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/myfavicon-16x16-next.png">
@@ -51,14 +51,13 @@
   };
 </script>
 
-  <meta name="description" content="解决 RequestError: Error: tunneling socket could not be established, cause=getaddrinfo ENOTFOUND 8000 问题。">
-<meta name="keywords" content="教程,问题">
+  <meta name="description" content="解决 RequestError: Error: tunneling socket could not be established, cause&#x3D;getaddrinfo ENOTFOUND 8000 问题。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="解决 tunneling socket could not be established, cause=getaddrinfo ENOTFOUND 8000 问题">
+<meta property="og:title" content="解决 tunneling socket could not be established, cause&#x3D;getaddrinfo ENOTFOUND 8000 问题">
 <meta property="og:url" content="https://www.lifeee.top/posts/1004.html">
 <meta property="og:site_name" content="热夏的博客">
-<meta property="og:description" content="解决 RequestError: Error: tunneling socket could not be established, cause=getaddrinfo ENOTFOUND 8000 问题。">
-<meta property="og:locale" content="zh-Hans">
+<meta property="og:description" content="解决 RequestError: Error: tunneling socket could not be established, cause&#x3D;getaddrinfo ENOTFOUND 8000 问题。">
+<meta property="og:locale">
 <meta property="og:image" content="https://gitee.com/wang_wx/image_bed/raw/master/2020/20200315093901.jpg">
 <meta property="og:image" content="https://gitee.com/wang_wx/image_bed/raw/master/2020/20200314152313.png">
 <meta property="og:image" content="https://gitee.com/wang_wx/image_bed/raw/master/2020/20200314151642.png">
@@ -68,10 +67,12 @@
 <meta property="og:image" content="https://i.loli.net/2020/02/26/HbgqjYC5c9Kl1kO.png">
 <meta property="og:image" content="https://gitee.com/wang_wx/image_bed/raw/master/2020/20200314153045.png">
 <meta property="og:image" content="https://gitee.com/wang_wx/image_bed/raw/master/2020/20200419182318.png">
-<meta property="og:updated_time" content="2020-04-19T10:28:24.182Z">
+<meta property="article:published_time" content="2020-03-15T01:30:17.000Z">
+<meta property="article:modified_time" content="2020-04-19T10:28:24.182Z">
+<meta property="article:author" content="热夏">
+<meta property="article:tag" content="教程">
+<meta property="article:tag" content="问题">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="解决 tunneling socket could not be established, cause=getaddrinfo ENOTFOUND 8000 问题">
-<meta name="twitter:description" content="解决 RequestError: Error: tunneling socket could not be established, cause=getaddrinfo ENOTFOUND 8000 问题。">
 <meta name="twitter:image" content="https://gitee.com/wang_wx/image_bed/raw/master/2020/20200315093901.jpg">
 
 <link rel="canonical" href="https://www.lifeee.top/posts/1004.html">
@@ -117,6 +118,7 @@
   </style>
 </noscript>
 
+<link rel="alternate" href="/atom.xml" title="热夏的博客" type="application/atom+xml">
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
@@ -267,13 +269,13 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/技术/" itemprop="url" rel="index">
+                  <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index">
                     <span itemprop="name">技术</span>
                   </a>
                 </span>
                   ，
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/教程/" itemprop="url" rel="index">
+                  <a href="/categories/%E6%95%99%E7%A8%8B/" itemprop="url" rel="index">
                     <span itemprop="name">教程</span>
                   </a>
                 </span>
@@ -292,7 +294,7 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>3.3k</span>
+              <span>3.7k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -311,12 +313,12 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p><img src="https://gitee.com/wang_wx/image_bed/raw/master/2020/20200315093901.jpg" alt></p>
+        <p><img src="https://gitee.com/wang_wx/image_bed/raw/master/2020/20200315093901.jpg" alt=""></p>
 <p>解决 RequestError: Error: tunneling socket could not be established, cause=getaddrinfo ENOTFOUND 8000 问题。</p>
-<a id="more"></a>
+<span id="more"></span>
 <h2 id="错误"><a href="#错误" class="headerlink" title="错误"></a>错误</h2><p>在使用 Picgo 以及在 Typora 中使用 Picgo-core 的时候，我正确配置所有参数。但是还是会报错     <code>RequestError: Error: tunneling socket could not be established, cause=getaddrinfo ENOTFOUND 8000</code> 。</p>
 <p>更详细的报错日志为:</p>
-<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">------Error Stack Begin------</span><br><span class="line">RequestError: Error: tunneling socket could not be established, cause=getaddrinfo ENOTFOUND 8000</span><br><span class="line">    at new RequestError (D:<span class="tag">\</span>20200213<span class="tag">\<span class="name">Reading</span></span>_writing<span class="tag">\<span class="name">PicGo</span></span><span class="tag">\<span class="name">resources</span></span><span class="tag">\<span class="name">app</span></span>.asar<span class="tag">\<span class="name">node</span></span>_modules<span class="tag">\<span class="name">request</span></span>-promise-core<span class="tag">\<span class="name">lib</span></span><span class="tag">\<span class="name">errors</span></span>.js:14:15)</span><br><span class="line">    at Request.plumbing.callback (D:<span class="tag">\</span>20200213<span class="tag">\<span class="name">Reading</span></span>_writing<span class="tag">\<span class="name">PicGo</span></span><span class="tag">\<span class="name">resources</span></span><span class="tag">\<span class="name">app</span></span>.asar<span class="tag">\<span class="name">node</span></span>_modules<span class="tag">\<span class="name">request</span></span>-promise-core<span class="tag">\<span class="name">lib</span></span><span class="tag">\<span class="name">plumbing</span></span>.js:87:29)</span><br><span class="line">    at Request.RP<span class="formula">$callback [as _callback] (D:<span class="tag">\</span>20200213<span class="tag">\<span class="name">Reading</span></span>_writing<span class="tag">\<span class="name">PicGo</span></span><span class="tag">\<span class="name">resources</span></span><span class="tag">\<span class="name">app</span></span>.asar<span class="tag">\<span class="name">node</span></span>_modules<span class="tag">\<span class="name">request</span></span>-promise-core<span class="tag">\<span class="name">lib</span></span><span class="tag">\<span class="name">plumbing</span></span>.js:46:31)</span></span><br><span class="line"><span class="formula">    at self.callback (D:<span class="tag">\</span>20200213<span class="tag">\<span class="name">Reading</span></span>_writing<span class="tag">\<span class="name">PicGo</span></span><span class="tag">\<span class="name">resources</span></span><span class="tag">\<span class="name">app</span></span>.asar<span class="tag">\<span class="name">node</span></span>_modules<span class="tag">\<span class="name">request</span></span><span class="tag">\<span class="name">request</span></span>.js:185:22)</span></span><br><span class="line"><span class="formula">    at Request.emit (events.js:200:13)</span></span><br><span class="line"><span class="formula">    at Request.onRequestError (D:<span class="tag">\</span>20200213<span class="tag">\<span class="name">Reading</span></span>_writing<span class="tag">\<span class="name">PicGo</span></span><span class="tag">\<span class="name">resources</span></span><span class="tag">\<span class="name">app</span></span>.asar<span class="tag">\<span class="name">node</span></span>_modules<span class="tag">\<span class="name">request</span></span><span class="tag">\<span class="name">request</span></span>.js:881:8)</span></span><br><span class="line"><span class="formula">    at ClientRequest.emit (events.js:200:13)</span></span><br><span class="line"><span class="formula">    at ClientRequest.onError (D:<span class="tag">\</span>20200213<span class="tag">\<span class="name">Reading</span></span>_writing<span class="tag">\<span class="name">PicGo</span></span><span class="tag">\<span class="name">resources</span></span><span class="tag">\<span class="name">app</span></span>.asar<span class="tag">\<span class="name">node</span></span>_modules<span class="tag">\<span class="name">tunnel</span></span>-agent<span class="tag">\<span class="name">index</span></span>.js:179:21)</span></span><br><span class="line"><span class="formula">    at Object.onceWrapper (events.js:288:20)</span></span><br><span class="line"><span class="formula">    at ClientRequest.emit (events.js:200:13)</span></span><br><span class="line"><span class="formula">-------Error Stack End-------</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">------Error Stack Begin------</span><br><span class="line">RequestError: Error: tunneling socket could not be established, cause=getaddrinfo ENOTFOUND 8000</span><br><span class="line">    at new RequestError (D:<span class="keyword">\2</span>0200213<span class="keyword">\Reading</span><span class="built_in">_</span>writing<span class="keyword">\PicGo</span><span class="keyword">\resources</span><span class="keyword">\app</span>.asar<span class="keyword">\node</span><span class="built_in">_</span>modules<span class="keyword">\request</span>-promise-core<span class="keyword">\lib</span><span class="keyword">\errors</span>.js:14:15)</span><br><span class="line">    at Request.plumbing.callback (D:<span class="keyword">\2</span>0200213<span class="keyword">\Reading</span><span class="built_in">_</span>writing<span class="keyword">\PicGo</span><span class="keyword">\resources</span><span class="keyword">\app</span>.asar<span class="keyword">\node</span><span class="built_in">_</span>modules<span class="keyword">\request</span>-promise-core<span class="keyword">\lib</span><span class="keyword">\plumbing</span>.js:87:29)</span><br><span class="line">    at Request.RP<span class="built_in">$</span>callback [as <span class="built_in">_</span>callback] (D:<span class="keyword">\2</span>0200213<span class="keyword">\Reading</span><span class="built_in">_</span>writing<span class="keyword">\PicGo</span><span class="keyword">\resources</span><span class="keyword">\app</span>.asar<span class="keyword">\node</span><span class="built_in">_</span>modules<span class="keyword">\request</span>-promise-core<span class="keyword">\lib</span><span class="keyword">\plumbing</span>.js:46:31)</span><br><span class="line">    at self.callback (D:<span class="keyword">\2</span>0200213<span class="keyword">\Reading</span><span class="built_in">_</span>writing<span class="keyword">\PicGo</span><span class="keyword">\resources</span><span class="keyword">\app</span>.asar<span class="keyword">\node</span><span class="built_in">_</span>modules<span class="keyword">\request</span><span class="keyword">\request</span>.js:185:22)</span><br><span class="line">    at Request.emit (events.js:200:13)</span><br><span class="line">    at Request.onRequestError (D:<span class="keyword">\2</span>0200213<span class="keyword">\Reading</span><span class="built_in">_</span>writing<span class="keyword">\PicGo</span><span class="keyword">\resources</span><span class="keyword">\app</span>.asar<span class="keyword">\node</span><span class="built_in">_</span>modules<span class="keyword">\request</span><span class="keyword">\request</span>.js:881:8)</span><br><span class="line">    at ClientRequest.emit (events.js:200:13)</span><br><span class="line">    at ClientRequest.onError (D:<span class="keyword">\2</span>0200213<span class="keyword">\Reading</span><span class="built_in">_</span>writing<span class="keyword">\PicGo</span><span class="keyword">\resources</span><span class="keyword">\app</span>.asar<span class="keyword">\node</span><span class="built_in">_</span>modules<span class="keyword">\tunnel</span>-agent<span class="keyword">\index</span>.js:179:21)</span><br><span class="line">    at Object.onceWrapper (events.js:288:20)</span><br><span class="line">    at ClientRequest.emit (events.js:200:13)</span><br><span class="line">-------Error Stack End-------</span><br></pre></td></tr></table></figure>
 <h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><p>在网上一番搜索，有以下解决方案</p>
 <p><strong>方案一</strong></p>
 <p>系统关闭代理，不要使用代理上网。</p>
@@ -326,41 +328,41 @@
 <p>在终端输入以下命令行尝试取消 npm 的代理</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm config delete proxy</span><br><span class="line">npm config delete https-proxy</span><br></pre></td></tr></table></figure>
 <p>我有一次这样做后正常了一会，但是过一会又继续报错。</p>
-<p>直到我 Google 到了国外小哥的<a href="https://support.qlik.com/articles/000049076" target="_blank" rel="noopener">一篇博文</a>，拯救了我，请看方案三。</p>
+<p>直到我 Google 到了国外小哥的<a target="_blank" rel="noopener" href="https://support.qlik.com/articles/000049076">一篇博文</a>，拯救了我，请看方案三。</p>
 <p><strong>方案三</strong></p>
-<p>国外小哥的<a href="https://support.qlik.com/articles/000049076" target="_blank" rel="noopener">博文</a>这样写道</p>
-<p><img src="https://gitee.com/wang_wx/image_bed/raw/master/2020/20200314152313.png" alt></p>
+<p>国外小哥的<a target="_blank" rel="noopener" href="https://support.qlik.com/articles/000049076">博文</a>这样写道</p>
+<p><img src="https://gitee.com/wang_wx/image_bed/raw/master/2020/20200314152313.png" alt=""></p>
 <p>最终的原因是我以前在环境变量中设置过代理，我的环境变量中有以下两项。</p>
-<p><img src="https://gitee.com/wang_wx/image_bed/raw/master/2020/20200314151642.png" alt></p>
-<p><img src="https://gitee.com/wang_wx/image_bed/raw/master/2020/Snipaste_2020-03-14_11-30-59.png" alt></p>
+<p><img src="https://gitee.com/wang_wx/image_bed/raw/master/2020/20200314151642.png" alt=""></p>
+<p><img src="https://gitee.com/wang_wx/image_bed/raw/master/2020/Snipaste_2020-03-14_11-30-59.png" alt=""></p>
 <p>在环境变量里面把 <code>http_proxy</code> 和 <code>https_proxy</code> 两项删除即可。在 Typora 中测试图片上传也就正常了。</p>
-<p><img src="https://gitee.com/wang_wx/image_bed/raw/master/2020/20200314151922.png" alt></p>
+<p><img src="https://gitee.com/wang_wx/image_bed/raw/master/2020/20200314151922.png" alt=""></p>
 <p>美滋滋，终于一切正常~ 😁</p>
 <h2 id="临时给-cmd-设置代理"><a href="#临时给-cmd-设置代理" class="headerlink" title="临时给 cmd 设置代理"></a>临时给 cmd 设置代理</h2><p>以后如果需要临时给 cmd 设置代理可以使用以下 命令行，这种环境变量只会持续到cmd窗口关闭，不是系统环境变量。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">set</span> http_proxy=http://127.0.0.1:1080</span><br><span class="line"><span class="built_in">set</span> https_proxy=http://127.0.0.1:1080</span><br></pre></td></tr></table></figure>
-<h2 id="Typora-PicGo-Core-SM-MS"><a href="#Typora-PicGo-Core-SM-MS" class="headerlink" title="Typora + PicGo-Core + SM.MS"></a>Typora + PicGo-Core + SM.MS</h2><p>关于 <a href="https://www.lzskyline.com/archives/87/" target="_blank" rel="noopener">Typora + PicGo-Core + SM.MS</a> 图床 的使用转载自博客 <a href="https://www.lzskyline.com/" target="_blank" rel="noopener">LzSkyline’s Blog</a></p>
+<h2 id="Typora-PicGo-Core-SM-MS"><a href="#Typora-PicGo-Core-SM-MS" class="headerlink" title="Typora + PicGo-Core + SM.MS"></a>Typora + PicGo-Core + SM.MS</h2><p>关于 <a target="_blank" rel="noopener" href="https://www.lzskyline.com/archives/87/">Typora + PicGo-Core + SM.MS</a> 图床 的使用转载自博客 <a target="_blank" rel="noopener" href="https://www.lzskyline.com/">LzSkyline’s Blog</a></p>
 <h3 id="1-安装PicGo-Core"><a href="#1-安装PicGo-Core" class="headerlink" title="1. 安装PicGo-Core"></a>1. 安装PicGo-Core</h3><p>因为Typora已经原生支持PicGo-Core, 所以只需要在软件内下载一下就可以了(PS: 下面这张图就是用的自动上传, 很方便)</p>
-<p><a href="https://i.loli.net/2020/02/26/tjwK2zclRCE6JUy.png" target="_blank" rel="noopener"><img src="https://i.loli.net/2020/02/26/tjwK2zclRCE6JUy.png" alt="image-20200226192555818"></a></p>
+<p><a target="_blank" rel="noopener" href="https://i.loli.net/2020/02/26/tjwK2zclRCE6JUy.png"><img src="https://i.loli.net/2020/02/26/tjwK2zclRCE6JUy.png" alt="image-20200226192555818"></a></p>
 <p>首先点击上面红色1的位置, 选择PicGo-Core, 再点3(不要问我2去哪儿了….就当他不存在), 并等待下载完成.</p>
 <h3 id="2-安装-smms-v2-API-插件"><a href="#2-安装-smms-v2-API-插件" class="headerlink" title="2. 安装 smms v2 API 插件"></a>2. 安装 smms v2 API 插件</h3><p>这里是个大坑.</p>
 <p>因为 PicGo-Core 默认的 smms 使用的是 v1 的 api, 而目前 smms 已经停用了该版本 API, 所以导致 PicGo-Core 在默认配置下,  smms 图床完全不可用</p>
 <p>翻了一下 PicGo-Core 的 Github 发现作者目前还没有把内置的 smms api 升级到 v2, 但是有其他开发者通过第三方插件的方式解决了这个问题, 所以我们需要安装这个 v2 版本的 smms-user 插件. </p>
 <p>直接点击红色5的位置, 根据文本内容找到 PicGo-Core 的程序目录</p>
-<p><a href="https://i.loli.net/2020/02/26/HbgqjYC5c9Kl1kO.png" target="_blank" rel="noopener"><img src="https://i.loli.net/2020/02/26/HbgqjYC5c9Kl1kO.png" alt="image-20200226193128224"></a></p>
+<p><a target="_blank" rel="noopener" href="https://i.loli.net/2020/02/26/HbgqjYC5c9Kl1kO.png"><img src="https://i.loli.net/2020/02/26/HbgqjYC5c9Kl1kO.png" alt="image-20200226193128224"></a></p>
 <p><strong>注意, 因为默认的 smms api 已经不可用, 这里肯定会上传失败, 不用管</strong></p>
 <p>找到目录后我们<strong>在 picgo 的目录下启动命令行</strong>, 执行如下命令, 并等待安装成功</p>
-<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.\picgo.exe install smms-user</span><br></pre></td></tr></table></figure>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.\picgo.exe install smms<span class="literal">-user</span></span><br></pre></td></tr></table></figure>
 <h3 id="3-配置-PicGo-Core"><a href="#3-配置-PicGo-Core" class="headerlink" title="3. 配置 PicGo-Core"></a>3. 配置 PicGo-Core</h3><p>安装完成之后点击红色4的位置(红标顺序不代表点击顺序), 打开 PicGo-Core 的配置文件, 按照下面的格式无脑全选替换就行</p>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"picBed"</span>: &#123;</span><br><span class="line">    <span class="attr">"current"</span>: <span class="string">"smms-user"</span>,</span><br><span class="line">    <span class="attr">"uploader"</span>: <span class="string">"smms-user"</span>,</span><br><span class="line">    <span class="attr">"smms-user"</span>: &#123;</span><br><span class="line">      <span class="attr">"Authorization"</span>: <span class="string">"这里替换成你自己的"</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">"transformer"</span>: <span class="string">"path"</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">"picgoPlugins"</span>: &#123;</span><br><span class="line">    <span class="attr">"picgo-plugin-smms-user"</span>: <span class="literal">true</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>没有Authorization的自己去这里申请一个: <a href="https://sm.ms/home/apitoken" target="_blank" rel="noopener">https://sm.ms/home/apitoken</a></p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">&quot;picBed&quot;</span>: &#123;</span><br><span class="line">    <span class="attr">&quot;current&quot;</span>: <span class="string">&quot;smms-user&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;uploader&quot;</span>: <span class="string">&quot;smms-user&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;smms-user&quot;</span>: &#123;</span><br><span class="line">      <span class="attr">&quot;Authorization&quot;</span>: <span class="string">&quot;这里替换成你自己的&quot;</span></span><br><span class="line">    &#125;,</span><br><span class="line">    <span class="attr">&quot;transformer&quot;</span>: <span class="string">&quot;path&quot;</span></span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">&quot;picgoPlugins&quot;</span>: &#123;</span><br><span class="line">    <span class="attr">&quot;picgo-plugin-smms-user&quot;</span>: <span class="literal">true</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>没有Authorization的自己去这里申请一个: <a target="_blank" rel="noopener" href="https://sm.ms/home/apitoken">https://sm.ms/home/apitoken</a></p>
 <p>申请前需要注册一个账号, 这个没啥难度, 就不细说了.</p>
 <h3 id="4-体验效果"><a href="#4-体验效果" class="headerlink" title="4. 体验效果"></a>4. 体验效果</h3><p>保存配置之后再点红标5的位置应该就可以正常上传图片了, 我们直接在Typora内粘贴一张图片, 就会有相应的提示。也可以在图片中右击上传。</p>
-<p><img src="https://gitee.com/wang_wx/image_bed/raw/master/2020/20200314153045.png" alt></p>
+<p><img src="https://gitee.com/wang_wx/image_bed/raw/master/2020/20200314153045.png" alt=""></p>
 <h2 id="Typora-PicGo-Core-gitee"><a href="#Typora-PicGo-Core-gitee" class="headerlink" title="Typora + PicGo-Core + gitee"></a>Typora + PicGo-Core + gitee</h2><p>更改上面的配置文件为下面的形式，记得更改成你自己的图片想要存放的文件夹名，以及你的用户名、仓库名、token 。</p>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&#123;</span><br><span class="line">  <span class="attr">"picBed"</span>: &#123;</span><br><span class="line">    <span class="attr">"current"</span>: <span class="string">"gitee"</span>,</span><br><span class="line">    <span class="attr">"list"</span>: [</span><br><span class="line">      &#123;</span><br><span class="line">        <span class="attr">"name"</span>: <span class="string">"gitee"</span>,</span><br><span class="line">        <span class="attr">"type"</span>: <span class="string">"gitee"</span>,</span><br><span class="line">        <span class="attr">"visible"</span>: <span class="literal">false</span></span><br><span class="line">      &#125;</span><br><span class="line">    ],</span><br><span class="line">    <span class="attr">"gitee"</span>: &#123;</span><br><span class="line">      <span class="attr">"branch"</span>: <span class="string">"master"</span>,</span><br><span class="line">      <span class="attr">"customPath"</span>: <span class="string">""</span>,</span><br><span class="line">      <span class="attr">"customUrl"</span>: <span class="string">""</span>,</span><br><span class="line">      <span class="attr">"path"</span>: <span class="string">"文件夹名称"</span>,</span><br><span class="line">      <span class="attr">"repo"</span>: <span class="string">"用户名/仓库名"</span>,</span><br><span class="line">      <span class="attr">"token"</span>: <span class="string">"这里是你的token"</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">"picgoPlugins"</span>: &#123;</span><br><span class="line">    <span class="attr">"picgo-plugin-gitee-uploader"</span>: <span class="literal">true</span></span><br><span class="line"></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&#123;</span><br><span class="line">  <span class="attr">&quot;picBed&quot;</span>: &#123;</span><br><span class="line">    <span class="attr">&quot;current&quot;</span>: <span class="string">&quot;gitee&quot;</span>,</span><br><span class="line">    <span class="attr">&quot;list&quot;</span>: [</span><br><span class="line">      &#123;</span><br><span class="line">        <span class="attr">&quot;name&quot;</span>: <span class="string">&quot;gitee&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;type&quot;</span>: <span class="string">&quot;gitee&quot;</span>,</span><br><span class="line">        <span class="attr">&quot;visible&quot;</span>: <span class="literal">false</span></span><br><span class="line">      &#125;</span><br><span class="line">    ],</span><br><span class="line">    <span class="attr">&quot;gitee&quot;</span>: &#123;</span><br><span class="line">      <span class="attr">&quot;branch&quot;</span>: <span class="string">&quot;master&quot;</span>,</span><br><span class="line">      <span class="attr">&quot;customPath&quot;</span>: <span class="string">&quot;&quot;</span>,</span><br><span class="line">      <span class="attr">&quot;customUrl&quot;</span>: <span class="string">&quot;&quot;</span>,</span><br><span class="line">      <span class="attr">&quot;path&quot;</span>: <span class="string">&quot;文件夹名称&quot;</span>,</span><br><span class="line">      <span class="attr">&quot;repo&quot;</span>: <span class="string">&quot;用户名/仓库名&quot;</span>,</span><br><span class="line">      <span class="attr">&quot;token&quot;</span>: <span class="string">&quot;这里是你的token&quot;</span></span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="attr">&quot;picgoPlugins&quot;</span>: &#123;</span><br><span class="line">    <span class="attr">&quot;picgo-plugin-gitee-uploader&quot;</span>: <span class="literal">true</span></span><br><span class="line"></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>在 picgo 的目录下 执行如下命令, 并等待安装成功 。（我的目录是 C:\Users\用户名\AppData\Roaming\Typora\picgo\win64）</p>
-<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.\picgo.exe install gitee-uploader</span><br></pre></td></tr></table></figure>
-<p><img src="https://gitee.com/wang_wx/image_bed/raw/master/2020/20200419182318.png" alt></p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">.\picgo.exe install <span class="built_in">gi</span><span class="built_in">tee-uploader</span></span><br></pre></td></tr></table></figure>
+<p><img src="https://gitee.com/wang_wx/image_bed/raw/master/2020/20200419182318.png" alt=""></p>
 <p>然后就可以上传至 gitee 了 ，需要注意的是 图片不要大于 1 MB ，因为 gitee 会有限制。</p>
 <blockquote class="blockquote-center"><p>常常问题是提出了，但还不能解决，就是因为还没有暴露事物的内部联系。</p>
 <p>   ——毛泽东</p>
@@ -395,7 +397,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://www.lifeee.top/posts/1004.html" title="解决 tunneling socket could not be established, cause=getaddrinfo ENOTFOUND 8000 问题">https://www.lifeee.top/posts/1004.html</a>
+    <a href="https://www.lifeee.top/posts/1004.html" title="解决 tunneling socket could not be established, cause&#x3D;getaddrinfo ENOTFOUND 8000 问题">https://www.lifeee.top/posts/1004.html</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-Hans" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -407,8 +409,8 @@
       <footer class="post-footer">
           
           <div class="post-tags">
-              <a href="/tags/教程/" rel="tag"><i class="fa fa-tag"></i> 教程</a>
-              <a href="/tags/问题/" rel="tag"><i class="fa fa-tag"></i> 问题</a>
+              <a href="/tags/%E6%95%99%E7%A8%8B/" rel="tag"><i class="fa fa-tag"></i> 教程</a>
+              <a href="/tags/%E9%97%AE%E9%A2%98/" rel="tag"><i class="fa fa-tag"></i> 问题</a>
           </div>
 
         
@@ -489,7 +491,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#错误"><span class="nav-text">错误</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解决方案"><span class="nav-text">解决方案</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#临时给-cmd-设置代理"><span class="nav-text">临时给 cmd 设置代理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Typora-PicGo-Core-SM-MS"><span class="nav-text">Typora + PicGo-Core + SM.MS</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-安装PicGo-Core"><span class="nav-text">1. 安装PicGo-Core</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-安装-smms-v2-API-插件"><span class="nav-text">2. 安装 smms v2 API 插件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-配置-PicGo-Core"><span class="nav-text">3. 配置 PicGo-Core</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-体验效果"><span class="nav-text">4. 体验效果</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Typora-PicGo-Core-gitee"><span class="nav-text">Typora + PicGo-Core + gitee</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%94%99%E8%AF%AF"><span class="nav-text">错误</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88"><span class="nav-text">解决方案</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%B4%E6%97%B6%E7%BB%99-cmd-%E8%AE%BE%E7%BD%AE%E4%BB%A3%E7%90%86"><span class="nav-text">临时给 cmd 设置代理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Typora-PicGo-Core-SM-MS"><span class="nav-text">Typora + PicGo-Core + SM.MS</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E5%AE%89%E8%A3%85PicGo-Core"><span class="nav-text">1. 安装PicGo-Core</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E5%AE%89%E8%A3%85-smms-v2-API-%E6%8F%92%E4%BB%B6"><span class="nav-text">2. 安装 smms v2 API 插件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E9%85%8D%E7%BD%AE-PicGo-Core"><span class="nav-text">3. 配置 PicGo-Core</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-%E4%BD%93%E9%AA%8C%E6%95%88%E6%9E%9C"><span class="nav-text">4. 体验效果</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Typora-PicGo-Core-gitee"><span class="nav-text">Typora + PicGo-Core + gitee</span></a></li></ol></div>
 
 
       </div>
@@ -507,7 +509,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">64</span>
+          <span class="site-state-item-count">65</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -520,20 +522,20 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">40</span>
+        <span class="site-state-item-count">41</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
 </div>
   <div class="links-of-author motion-element">
       <span class="links-of-author-item">
-        <a href="https://github.com/upwon" title="GitHub → https://github.com/upwon" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+        <a href="https://github.com/upwon" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;upwon" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
       </span>
       <span class="links-of-author-item">
         <a href="mailto:w1244753906@gmail.com" title="E-Mail → mailto:w1244753906@gmail.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
       </span>
       <span class="links-of-author-item">
-        <a href="https://www.lifeee.top///atom.xml" title="RSS → https://www.lifeee.top///atom.xml"><i class="fa fa-fw fa-rss"></i>RSS</a>
+        <a href="https://www.lifeee.top///atom.xml" title="RSS → https:&#x2F;&#x2F;www.lifeee.top&#x2F;&#x2F;&#x2F;atom.xml"><i class="fa fa-fw fa-rss"></i>RSS</a>
       </span>
   </div>
 
@@ -571,13 +573,13 @@
       <i class="fa fa-area-chart"></i>
     </span>
       <span class="post-meta-item-text">站点总字数：</span>
-    <span title="站点总字数">554k</span>
+    <span title="站点总字数">579k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">8:24</span>
+    <span title="站点阅读时长">8:46</span>
 </div>
 
         
@@ -610,9 +612,17 @@
   <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
   <script src="/lib/velocity/velocity.min.js"></script>
   <script src="/lib/velocity/velocity.ui.min.js"></script>
-<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
 <script src="/js/schemes/pisces.js"></script>
+
+
 <script src="/js/next-boot.js"></script>
+
 
 
 
@@ -630,7 +640,9 @@
 
 
 
-  <script src="/js/local-search.js"></script>
+  
+<script src="/js/local-search.js"></script>
+
 
 
 

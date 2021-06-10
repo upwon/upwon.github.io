@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 3.9.0">
+<meta name="generator" content="Hexo 5.4.0">
   <link rel="apple-touch-icon" sizes="180x180" href="/images/myapple-touch-icon-next.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/myfavicon-32x32-next.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/myfavicon-16x16-next.png">
@@ -52,13 +52,12 @@
 </script>
 
   <meta name="description" content="Qt Creator 中为 UI 界面的窗体控件设置自适应窗口大小布局">
-<meta name="keywords" content="C++,问题,QT">
 <meta property="og:type" content="article">
 <meta property="og:title" content="QT 控件自适应窗口大小布局">
 <meta property="og:url" content="https://www.lifeee.top/posts/52368.html">
 <meta property="og:site_name" content="热夏的博客">
 <meta property="og:description" content="Qt Creator 中为 UI 界面的窗体控件设置自适应窗口大小布局">
-<meta property="og:locale" content="zh-Hans">
+<meta property="og:locale">
 <meta property="og:image" content="https://gitee.com/wang_wx/image_bed/raw/master/2020/landscape-mountains-nature-sky-129105_compressed.jpg">
 <meta property="og:image" content="https://gitee.com/wang_wx/image_bed/raw/master/2020/graphicsanchorlayout-example.png">
 <meta property="og:image" content="https://gitee.com/wang_wx/image_bed/raw/master/2020/image-20200714213057149.png">
@@ -68,10 +67,13 @@
 <meta property="og:image" content="https://gitee.com/wang_wx/image_bed/raw/master/2020/image-20200714215641676.png">
 <meta property="og:image" content="https://gitee.com/wang_wx/image_bed/raw/master/2020/简单布局2.gif">
 <meta property="og:image" content="https://gitee.com/wang_wx/image_bed/raw/master/2020/image-20200714220148683.png">
-<meta property="og:updated_time" content="2021-04-08T13:25:56.004Z">
+<meta property="article:published_time" content="2020-07-14T14:12:17.000Z">
+<meta property="article:modified_time" content="2021-04-08T13:25:56.004Z">
+<meta property="article:author" content="热夏">
+<meta property="article:tag" content="C++">
+<meta property="article:tag" content="问题">
+<meta property="article:tag" content="QT">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="QT 控件自适应窗口大小布局">
-<meta name="twitter:description" content="Qt Creator 中为 UI 界面的窗体控件设置自适应窗口大小布局">
 <meta name="twitter:image" content="https://gitee.com/wang_wx/image_bed/raw/master/2020/landscape-mountains-nature-sky-129105_compressed.jpg">
 
 <link rel="canonical" href="https://www.lifeee.top/posts/52368.html">
@@ -117,6 +119,7 @@
   </style>
 </noscript>
 
+<link rel="alternate" href="/atom.xml" title="热夏的博客" type="application/atom+xml">
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
@@ -267,13 +270,13 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/编程/" itemprop="url" rel="index">
+                  <a href="/categories/%E7%BC%96%E7%A8%8B/" itemprop="url" rel="index">
                     <span itemprop="name">编程</span>
                   </a>
                 </span>
                   ，
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/问题/" itemprop="url" rel="index">
+                  <a href="/categories/%E9%97%AE%E9%A2%98/" itemprop="url" rel="index">
                     <span itemprop="name">问题</span>
                   </a>
                 </span>
@@ -311,9 +314,9 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p><img src="https://gitee.com/wang_wx/image_bed/raw/master/2020/landscape-mountains-nature-sky-129105_compressed.jpg" alt></p>
+        <p><img src="https://gitee.com/wang_wx/image_bed/raw/master/2020/landscape-mountains-nature-sky-129105_compressed.jpg" alt=""></p>
 <p>Qt Creator 中为 UI 界面的窗体控件设置自适应窗口大小布局</p>
-<a id="more"></a>
+<span id="more"></span>
 <p>一般的应用软件除了最大化最小化外都会让窗体中的控件能够自适应的改变大小。C#、Android以及Qt 中都有自己的一套布局方案。而在Qt中我却扰了弯路，确切的说应该是忘记了以前怎样布局的。网上很多人都是去用代码布局的，我觉得既然有了界面布局那就得用起来，所见即所得，改需求也会方便不少。</p>
 <h2 id="布局概述"><a href="#布局概述" class="headerlink" title="布局概述"></a>布局概述</h2><p>Qt 布局系统提供了一种简单而强大的方法，可以在一个 widget 中自动排列子 widget ，以确保它们充分利用可用空间。</p>
 <p>Qt 包括一组布局管理类，用于描述 widget  如何在应用程序的界面中布局。当可用空间变化时，这些布局可以自动定位和调整窗口 widget  的大小，确保它们的布局一致。</p>
@@ -328,7 +331,7 @@
 <li>Hiding or showing a child widget 隐藏或显示子窗口小部件</li>
 <li>Removal of child widgets 删除子窗口部件</li>
 </ul>
-<p><img src="https://gitee.com/wang_wx/image_bed/raw/master/2020/graphicsanchorlayout-example.png" alt></p>
+<p><img src="https://gitee.com/wang_wx/image_bed/raw/master/2020/graphicsanchorlayout-example.png" alt=""></p>
 <h2 id="常用布局方式"><a href="#常用布局方式" class="headerlink" title="常用布局方式"></a>常用布局方式</h2><p>常用的布局方式有 Horizontal  水平, Vertical 垂直, Grid 网格, 和 Form Layouts 窗体布局 。善于结合多种布局方式不能界面美观大方，而且也能够使维护或修改布局变得十分惬意。</p>
 <p>为 widgets 提供良好布局的最简单方法是使用内置布局管理器：QHBoxLayout、QVBoxLayout、QGridLayout和QFormLayout。这些类继承自QLayout，而QLayout又派生自QObject(而不是QWidget)。要创建更复杂的布局，可以将布局管理器嵌套在彼此内部。为了将界面上的各个组件的分布设计得更加美观，经常使用一些容器类，如 QgoupBox、QtabWidget、QFrame 等。</p>
 <div class="table-container">
@@ -394,9 +397,9 @@
 </blockquote>
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>第一要设置顶级布局，即前面说的右击后设置栅格布局。</p>
 <p>第二设置好控件的SizePolicy属性，以达到预期希望。</p>
-<p><br></p>
-<p><br></p>
-<p><br></p>
+<p><br /></p>
+<p><br /></p>
+<p><br /></p>
 
     </div>
 
@@ -440,7 +443,7 @@
           
           <div class="post-tags">
               <a href="/tags/C/" rel="tag"><i class="fa fa-tag"></i> C++</a>
-              <a href="/tags/问题/" rel="tag"><i class="fa fa-tag"></i> 问题</a>
+              <a href="/tags/%E9%97%AE%E9%A2%98/" rel="tag"><i class="fa fa-tag"></i> 问题</a>
               <a href="/tags/QT/" rel="tag"><i class="fa fa-tag"></i> QT</a>
           </div>
 
@@ -522,7 +525,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#布局概述"><span class="nav-text">布局概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常用布局方式"><span class="nav-text">常用布局方式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#布局示例"><span class="nav-text">布局示例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-text">总结</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%83%E5%B1%80%E6%A6%82%E8%BF%B0"><span class="nav-text">布局概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%B8%E7%94%A8%E5%B8%83%E5%B1%80%E6%96%B9%E5%BC%8F"><span class="nav-text">常用布局方式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%83%E5%B1%80%E7%A4%BA%E4%BE%8B"><span class="nav-text">布局示例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-text">总结</span></a></li></ol></div>
 
 
       </div>
@@ -540,7 +543,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">64</span>
+          <span class="site-state-item-count">65</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -553,20 +556,20 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">40</span>
+        <span class="site-state-item-count">41</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
 </div>
   <div class="links-of-author motion-element">
       <span class="links-of-author-item">
-        <a href="https://github.com/upwon" title="GitHub → https://github.com/upwon" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+        <a href="https://github.com/upwon" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;upwon" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
       </span>
       <span class="links-of-author-item">
         <a href="mailto:w1244753906@gmail.com" title="E-Mail → mailto:w1244753906@gmail.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
       </span>
       <span class="links-of-author-item">
-        <a href="https://www.lifeee.top///atom.xml" title="RSS → https://www.lifeee.top///atom.xml"><i class="fa fa-fw fa-rss"></i>RSS</a>
+        <a href="https://www.lifeee.top///atom.xml" title="RSS → https:&#x2F;&#x2F;www.lifeee.top&#x2F;&#x2F;&#x2F;atom.xml"><i class="fa fa-fw fa-rss"></i>RSS</a>
       </span>
   </div>
 
@@ -604,13 +607,13 @@
       <i class="fa fa-area-chart"></i>
     </span>
       <span class="post-meta-item-text">站点总字数：</span>
-    <span title="站点总字数">554k</span>
+    <span title="站点总字数">579k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">8:24</span>
+    <span title="站点阅读时长">8:46</span>
 </div>
 
         
@@ -643,9 +646,17 @@
   <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
   <script src="/lib/velocity/velocity.min.js"></script>
   <script src="/lib/velocity/velocity.ui.min.js"></script>
-<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
 <script src="/js/schemes/pisces.js"></script>
+
+
 <script src="/js/next-boot.js"></script>
+
 
 
 
@@ -663,7 +674,9 @@
 
 
 
-  <script src="/js/local-search.js"></script>
+  
+<script src="/js/local-search.js"></script>
+
 
 
 

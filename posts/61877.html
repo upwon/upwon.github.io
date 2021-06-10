@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 3.9.0">
+<meta name="generator" content="Hexo 5.4.0">
   <link rel="apple-touch-icon" sizes="180x180" href="/images/myapple-touch-icon-next.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/myfavicon-32x32-next.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/myfavicon-16x16-next.png">
@@ -52,13 +52,12 @@
 </script>
 
   <meta name="description" content="本文介绍了如何从 3GPP 36.331 或者 38.331 中提取出 RRC 中的 ASN.1 部分抽象描述内容。">
-<meta name="keywords" content="通信,教程,善用佳软,分享">
 <meta property="og:type" content="article">
 <meta property="og:title" content="提取3GPP LTE&#x2F;5GNR中RRC的ASN.1">
 <meta property="og:url" content="https://www.lifeee.top/posts/61877.html">
 <meta property="og:site_name" content="热夏的博客">
 <meta property="og:description" content="本文介绍了如何从 3GPP 36.331 或者 38.331 中提取出 RRC 中的 ASN.1 部分抽象描述内容。">
-<meta property="og:locale" content="zh-Hans">
+<meta property="og:locale">
 <meta property="og:image" content="https://gitee.com/wang_wx/image_bed/raw/master/2020/20200529230039.jpeg">
 <meta property="og:image" content="https://gitee.com/wang_wx/image_bed/raw/master/2020/20200529224451.png">
 <meta property="og:image" content="https://gitee.com/wang_wx/image_bed/raw/master/2020/20200529225240.png">
@@ -79,10 +78,14 @@
 <meta property="og:image" content="https://gitee.com/wang_wx/image_bed/raw/master/2020/20200530085738.png">
 <meta property="og:image" content="https://gitee.com/wang_wx/image_bed/raw/master/2020/20200530090004.png">
 <meta property="og:image" content="https://gitee.com/wang_wx/image_bed/raw/master/2020/20200530090820.png">
-<meta property="og:updated_time" content="2020-05-30T07:31:53.085Z">
+<meta property="article:published_time" content="2020-05-29T10:44:32.000Z">
+<meta property="article:modified_time" content="2020-05-30T07:31:53.085Z">
+<meta property="article:author" content="热夏">
+<meta property="article:tag" content="通信">
+<meta property="article:tag" content="教程">
+<meta property="article:tag" content="善用佳软">
+<meta property="article:tag" content="分享">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="提取3GPP LTE&#x2F;5GNR中RRC的ASN.1">
-<meta name="twitter:description" content="本文介绍了如何从 3GPP 36.331 或者 38.331 中提取出 RRC 中的 ASN.1 部分抽象描述内容。">
 <meta name="twitter:image" content="https://gitee.com/wang_wx/image_bed/raw/master/2020/20200529230039.jpeg">
 
 <link rel="canonical" href="https://www.lifeee.top/posts/61877.html">
@@ -128,6 +131,7 @@
   </style>
 </noscript>
 
+<link rel="alternate" href="/atom.xml" title="热夏的博客" type="application/atom+xml">
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
@@ -278,19 +282,19 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/技术/" itemprop="url" rel="index">
+                  <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index">
                     <span itemprop="name">技术</span>
                   </a>
                 </span>
                   ，
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/教程/" itemprop="url" rel="index">
+                  <a href="/categories/%E6%95%99%E7%A8%8B/" itemprop="url" rel="index">
                     <span itemprop="name">教程</span>
                   </a>
                 </span>
                   ，
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/通信/" itemprop="url" rel="index">
+                  <a href="/categories/%E9%80%9A%E4%BF%A1/" itemprop="url" rel="index">
                     <span itemprop="name">通信</span>
                   </a>
                 </span>
@@ -309,7 +313,7 @@
                 <i class="fa fa-file-word-o"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>4.4k</span>
+              <span>4.5k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -328,11 +332,11 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p><img src="https://gitee.com/wang_wx/image_bed/raw/master/2020/20200529230039.jpeg" alt></p>
+        <p><img src="https://gitee.com/wang_wx/image_bed/raw/master/2020/20200529230039.jpeg" alt=""></p>
 <p>本文介绍了如何从 3GPP 36.331 或者 38.331 中提取出 RRC 中的 ASN.1 部分抽象描述内容。</p>
-<a id="more"></a>
+<span id="more"></span>
 <h1 id="ASN-1-标准简介"><a href="#ASN-1-标准简介" class="headerlink" title="ASN.1 标准简介"></a>ASN.1 标准简介</h1><p>在电信和计算机网络领域，<strong>ASN.1</strong>（<strong>Abstract Syntax Notation One</strong>) 是一套标准，是描述数据、编码、传输、解码的灵活的抽象语义记法。它提供了一套正式、无歧义和精确的规则以描述独立于特定计算机硬件的对象结构。</p>
-<p><br></p>
+<p><br/></p>
 <h2 id="ASN-1-标准下载"><a href="#ASN-1-标准下载" class="headerlink" title="ASN.1  标准下载"></a>ASN.1  标准下载</h2><p>描述ASN.1记法的标准：</p>
 <ul>
 <li><p>ITU-T Rec. X.680 | ISO/IEC 8824-1</p>
@@ -344,7 +348,7 @@
 <li><p>ITU-T Rec. X.683 | ISO/IEC 8824-4</p>
 </li>
 </ul>
-<p><a href="http://www.itu.int/ITU-T/studygroups/com17/languages/" target="_blank" rel="noopener">从ITU-T网站免费下载</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.itu.int/ITU-T/studygroups/com17/languages/">从ITU-T网站免费下载</a></p>
 <p>描述ASN.1编码规则的标准</p>
 <ul>
 <li>ITU-T Rec. X.690 | ISO/IEC 8825-1 (BER, CER and DER)</li>
@@ -352,36 +356,36 @@
 <li>ITU-T Rec. X.692 | ISO/IEC 8825-3 (ECN)</li>
 <li>ITU-T Rec. X.693 | ISO/IEC 8825-4 (XER)</li>
 </ul>
-<p><a href="https://web.archive.org/web/20050930230347/http://asn1.elibel.tm.fr/standards/" target="_blank" rel="noopener">ASN.1标准列表</a></p>
+<p><a target="_blank" rel="noopener" href="https://web.archive.org/web/20050930230347/http://asn1.elibel.tm.fr/standards/">ASN.1标准列表</a></p>
 <blockquote>
-<p>关于 ASN.1的标准，可以在 ISO/ITU-T 中找到关于本部分标准的链接，打开 <a href="http://www.itu.int/ITU-T/recommendations/index.aspx" target="_blank" rel="noopener">http://www.itu.int/ITU-T/recommendations/index.aspx</a>  在 search 栏输入 x.680~x.683 或 x.690 可以查看到 ASN.1 的具体标准及编解码的方法，或者从 <a href="http://www.itu.int/ITU-T/studygroups/com17/languages/" target="_blank" rel="noopener">http://www.itu.int/ITU-T/studygroups/com17/languages/</a> 获得相关文档</p>
-<p><img src="https://gitee.com/wang_wx/image_bed/raw/master/2020/20200529224451.png" style="zoom:50%;"></p>
-<p><img src="https://gitee.com/wang_wx/image_bed/raw/master/2020/20200529225240.png" style="zoom:50%;"></p>
+<p>关于 ASN.1的标准，可以在 ISO/ITU-T 中找到关于本部分标准的链接，打开 <a target="_blank" rel="noopener" href="http://www.itu.int/ITU-T/recommendations/index.aspx">http://www.itu.int/ITU-T/recommendations/index.aspx</a>  在 search 栏输入 x.680~x.683 或 x.690 可以查看到 ASN.1 的具体标准及编解码的方法，或者从 <a target="_blank" rel="noopener" href="http://www.itu.int/ITU-T/studygroups/com17/languages/">http://www.itu.int/ITU-T/studygroups/com17/languages/</a> 获得相关文档</p>
+<p><img src="https://gitee.com/wang_wx/image_bed/raw/master/2020/20200529224451.png" style="zoom:50%;" /></p>
+<p><img src="https://gitee.com/wang_wx/image_bed/raw/master/2020/20200529225240.png" style="zoom:50%;" /></p>
 </blockquote>
-<p><br></p>
-<h2 id="范例"><a href="#范例" class="headerlink" title="范例"></a>范例</h2><p><a href="https://www.wikiwand.com/zh-cn/Foo" target="_blank" rel="noopener">Foo</a>Protocol 结构的定义系使用 ASN.1 表示法:</p>
+<p><br/></p>
+<h2 id="范例"><a href="#范例" class="headerlink" title="范例"></a>范例</h2><p><a target="_blank" rel="noopener" href="https://www.wikiwand.com/zh-cn/Foo">Foo</a>Protocol 结构的定义系使用 ASN.1 表示法:</p>
 <figure class="highlight pgsql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">FooProtocol DEFINITIONS ::= <span class="keyword">BEGIN</span></span><br><span class="line"></span><br><span class="line">    FooQuestion ::= <span class="keyword">SEQUENCE</span> &#123;</span><br><span class="line">        trackingNumber <span class="type">INTEGER</span>,</span><br><span class="line">        question       IA5String</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    FooAnswer ::= <span class="keyword">SEQUENCE</span> &#123;</span><br><span class="line">        questionNumber <span class="type">INTEGER</span>,</span><br><span class="line">        answer         <span class="type">BOOLEAN</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">END</span></span><br></pre></td></tr></table></figure>
 <p>ASN.1没有定义的谈话流动。 这是协议的文本描述。</p>
 <p>假设消息，符合与foo的协议将被发送到接收方。这种特定的消息（PDU）:</p>
-<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">myQuestion</span> FooQuestion ::= &#123;</span><br><span class="line">    <span class="attribute">trackingNumber</span>     <span class="number">5</span>,</span><br><span class="line">    question           <span class="string">"Anybody there?"</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">myQuestion</span> FooQuestion ::= &#123;</span><br><span class="line">    <span class="attribute">trackingNumber</span>     <span class="number">5</span>,</span><br><span class="line">    question           <span class="string">&quot;Anybody there?&quot;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>要通过网络发送上述消息，需要编码成位元字串（string of bits）。ASN.1定义了不同的算法来完成这项任务，被称为编码规则。有很多，最简单的一个是DER.</p>
 <p>Foo协议规范应明确名称一套编码规则的使用，Foo的协议，使用者 知道他们应该使用哪一个。</p>
-<p><br></p>
-<h2 id="下载3GPP协议"><a href="#下载3GPP协议" class="headerlink" title="下载3GPP协议"></a>下载3GPP协议</h2><p>打开<a href="https://www.3gpp.org/ftp/Specs/archive" target="_blank" rel="noopener">https://www.3gpp.org/ftp/Specs/archive</a></p>
+<p><br/></p>
+<h2 id="下载3GPP协议"><a href="#下载3GPP协议" class="headerlink" title="下载3GPP协议"></a>下载3GPP协议</h2><p>打开<a target="_blank" rel="noopener" href="https://www.3gpp.org/ftp/Specs/archive">https://www.3gpp.org/ftp/Specs/archive</a></p>
 <p>比如下载 <code>38.331</code></p>
-<p><img src="https://cdn.jsdelivr.net/gh/upwon/MyPicture@master/imgimage-20200529162852626.png" alt></p>
+<p><img src="https://cdn.jsdelivr.net/gh/upwon/MyPicture@master/imgimage-20200529162852626.png" alt=""></p>
 <div class="note info">
             <p>5G NR 的无线资源控制(RRC)协议是 38.331</p><p>LTE 的无线资源控制(RRC)协议是 36.331</p>
           </div>
-<p><br></p>
+<p><br/></p>
 <p>协议中的 ASN.1 描述长这个样子 😎</p>
-<p><img src="https://gitee.com/wang_wx/image_bed/raw/master/2020/20200530151548.png" alt></p>
+<p><img src="https://gitee.com/wang_wx/image_bed/raw/master/2020/20200530151548.png" alt=""></p>
 <p>当然你可以手动复制粘贴出来，但是这样效率低下，浪费时间。因此推荐使用工具或者自己用代码来提取。具体方法请继续往下看哦 🌱</p>
-<p><br></p>
-<h2 id="转换工具下载"><a href="#转换工具下载" class="headerlink" title="转换工具下载"></a>转换工具下载</h2><p>在 <a href="https://github.com/Dybinx/txt2asn1" target="_blank" rel="noopener">https://github.com/Dybinx/txt2asn1</a> 中下载 txt2asn1 </p>
-<p><img src="https://cdn.jsdelivr.net/gh/upwon/MyPicture@master/img20200529115445.png" alt></p>
+<p><br/></p>
+<h2 id="转换工具下载"><a href="#转换工具下载" class="headerlink" title="转换工具下载"></a>转换工具下载</h2><p>在 <a target="_blank" rel="noopener" href="https://github.com/Dybinx/txt2asn1">https://github.com/Dybinx/txt2asn1</a> 中下载 txt2asn1 </p>
+<p><img src="https://cdn.jsdelivr.net/gh/upwon/MyPicture@master/img20200529115445.png" alt=""></p>
 <p><img src="https://cdn.jsdelivr.net/gh/upwon/MyPicture@master/imgimage-20200529115520938.png" alt="下载好的工具 txt2asn1.exe"></p>
-<p><br></p>
+<p><br/></p>
 <h2 id="开始转换为-ASN-1"><a href="#开始转换为-ASN-1" class="headerlink" title="开始转换为 ASN.1"></a>开始转换为 ASN.1</h2><p>下载好 38.331或者36.331，在 <code>word</code> 中打开协议，选择另存为，将其保存为 TXT 格式。</p>
 <p><img src="https://cdn.jsdelivr.net/gh/upwon/MyPicture@master/imgimage-20200529115152665.png" alt="另存为txt"></p>
 <p>在  txt2asn1 所在的路径下打开终端，输入：</p>
@@ -391,53 +395,53 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">txt2asn1.exe 36331-g00.txt</span><br></pre></td></tr></table></figure>
 <p>就能获得 <code>36331-g00.asn1</code> 文件了。</p>
 <p><img src="https://cdn.jsdelivr.net/gh/upwon/MyPicture@master/imgimage-20200529120250918.png" alt="转换成功"></p>
-<p><br></p>
+<p><br/></p>
 <p>在 <code>VS Code</code> 打开生成的文件看一看 ，效果美滋滋 🍦</p>
 <p><img src="https://cdn.jsdelivr.net/gh/upwon/MyPicture@master/imgimage-20200529120447300.png" alt="image-20200529120447300"></p>
 <p>推荐在  <code>VS Code</code> 中安装 <code>ASN.1 VS Code Extension</code> ，格式化后的 <code>ASN.1</code> 即美观又方便查看。</p>
 <p><img src="https://cdn.jsdelivr.net/gh/upwon/MyPicture@master/imgimage-20200529120533267.png" alt="安装的拓展"></p>
 <p>阅读过程中，可以按住 <kbd>Ctrl</kbd> 然后点击鼠标左键，就能实现在一些配置信息之间跳转。</p>
 <p><img src="https://cdn.jsdelivr.net/gh/upwon/MyPicture@master/img20200529140532.gif" alt="跳转示例"></p>
-<p><br></p>
-<h2 id="转换ASN-1-方式二"><a href="#转换ASN-1-方式二" class="headerlink" title="转换ASN.1-方式二"></a>转换ASN.1-方式二</h2><p>新建一个 <code>C++</code> 项目 ，在 <code>main.cpp</code> 中粘贴如下的代码。注意把 <code>input_file</code> 的路径改一下。代码来自 <a href="https://me.csdn.net/peng_yw" target="_blank" rel="noopener">peng_yw</a> 。</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;fstream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="built_in">std</span>::<span class="built_in">string</span> output_file;</span><br><span class="line"></span><br><span class="line">	<span class="built_in">std</span>::<span class="built_in">string</span> input_file = <span class="string">"D:/Project_codeing/VisualStudio/Cplusplus/3GPP-ASN.1/Get-3GPP-ASN.1/Files/36331-g00.txt"</span>;</span><br><span class="line"></span><br><span class="line">	<span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; input_file.c_str() &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">int</span> pos = input_file.find(<span class="string">'.'</span>);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span> (pos == <span class="built_in">std</span>::<span class="built_in">string</span>::npos)</span><br><span class="line"></span><br><span class="line">	&#123;</span><br><span class="line"></span><br><span class="line">		output_file = input_file + <span class="string">".asn1"</span>;</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line"></span><br><span class="line">	&#123;</span><br><span class="line">		output_file = input_file + <span class="string">"_.asn1"</span>;</span><br><span class="line">		<span class="comment">// output_file = input_file.substr(0, pos) + ".asn1";</span></span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	<span class="built_in">std</span>::fstream input;</span><br><span class="line"></span><br><span class="line">	input.open(input_file.c_str(), <span class="built_in">std</span>::fstream::in);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span> (input.fail() == <span class="literal">true</span>)</span><br><span class="line"></span><br><span class="line">	&#123;</span><br><span class="line"></span><br><span class="line">		<span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">"Please check input file is correct !"</span> &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	<span class="built_in">std</span>::fstream output;</span><br><span class="line"></span><br><span class="line">	output.open(output_file.c_str(), <span class="built_in">std</span>::fstream::out);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span> (output.fail() == <span class="literal">true</span>)</span><br><span class="line"></span><br><span class="line">	&#123;</span><br><span class="line"></span><br><span class="line">		<span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">"The output file can not be created here !"</span> &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	<span class="built_in">std</span>::<span class="built_in">string</span> input_line;</span><br><span class="line"></span><br><span class="line">	<span class="built_in">std</span>::<span class="built_in">vector</span>&lt;<span class="built_in">std</span>::<span class="built_in">string</span> &gt; vec_asn;</span><br><span class="line"></span><br><span class="line">	<span class="built_in">std</span>::<span class="built_in">vector</span>&lt;<span class="built_in">std</span>::<span class="built_in">string</span> &gt;::iterator itr;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	<span class="keyword">const</span> <span class="keyword">unsigned</span> <span class="keyword">long</span> cul_asn_idle = <span class="number">0x0</span>;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">const</span> <span class="keyword">unsigned</span> <span class="keyword">long</span> cul_asn_start = <span class="number">0x1</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	<span class="keyword">unsigned</span> <span class="keyword">long</span> asn_state = cul_asn_idle;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	<span class="keyword">while</span> (<span class="built_in">std</span>::getline(input, input_line))</span><br><span class="line"></span><br><span class="line">	&#123;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">if</span> (cul_asn_idle == asn_state)</span><br><span class="line"></span><br><span class="line">		&#123;</span><br><span class="line"></span><br><span class="line">			<span class="keyword">if</span> (input_line.find(<span class="string">"-- ASN1START"</span>) != <span class="built_in">std</span>::<span class="built_in">string</span>::npos)</span><br><span class="line"></span><br><span class="line">			&#123;</span><br><span class="line"></span><br><span class="line">				asn_state |= cul_asn_start;</span><br><span class="line"></span><br><span class="line">			&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">			<span class="keyword">continue</span>;</span><br><span class="line"></span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">		<span class="keyword">if</span> (<span class="number">0</span> != (cul_asn_start &amp; asn_state))</span><br><span class="line"></span><br><span class="line">		&#123;</span><br><span class="line"></span><br><span class="line">			<span class="keyword">if</span> (input_line.find(<span class="string">"-- ASN1STOP"</span>) != <span class="built_in">std</span>::<span class="built_in">string</span>::npos)</span><br><span class="line"></span><br><span class="line">			&#123;</span><br><span class="line"></span><br><span class="line">				asn_state = cul_asn_idle;</span><br><span class="line"></span><br><span class="line">			&#125;</span><br><span class="line"></span><br><span class="line">			<span class="keyword">else</span></span><br><span class="line"></span><br><span class="line">			&#123;</span><br><span class="line"></span><br><span class="line">				vec_asn.push_back(input_line);</span><br><span class="line"></span><br><span class="line">			&#125;</span><br><span class="line"></span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span> (itr = vec_asn.begin(); itr != vec_asn.end(); ++itr)</span><br><span class="line"></span><br><span class="line">	&#123;</span><br><span class="line"></span><br><span class="line">		output &lt;&lt; *itr &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	input.close();</span><br><span class="line"></span><br><span class="line">	output.close();</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><br/></p>
+<h2 id="转换ASN-1-方式二"><a href="#转换ASN-1-方式二" class="headerlink" title="转换ASN.1-方式二"></a>转换ASN.1-方式二</h2><p>新建一个 <code>C++</code> 项目 ，在 <code>main.cpp</code> 中粘贴如下的代码。注意把 <code>input_file</code> 的路径改一下。代码来自 <a target="_blank" rel="noopener" href="https://me.csdn.net/peng_yw">peng_yw</a> 。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;fstream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	std::string output_file;</span><br><span class="line"></span><br><span class="line">	std::string input_file = <span class="string">&quot;D:/Project_codeing/VisualStudio/Cplusplus/3GPP-ASN.1/Get-3GPP-ASN.1/Files/36331-g00.txt&quot;</span>;</span><br><span class="line"></span><br><span class="line">	std::cout &lt;&lt; input_file.<span class="built_in">c_str</span>() &lt;&lt; std::endl;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">int</span> pos = input_file.<span class="built_in">find</span>(<span class="string">&#x27;.&#x27;</span>);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span> (pos == std::string::npos)</span><br><span class="line"></span><br><span class="line">	&#123;</span><br><span class="line"></span><br><span class="line">		output_file = input_file + <span class="string">&quot;.asn1&quot;</span>;</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line"></span><br><span class="line">	&#123;</span><br><span class="line">		output_file = input_file + <span class="string">&quot;_.asn1&quot;</span>;</span><br><span class="line">		<span class="comment">// output_file = input_file.substr(0, pos) + &quot;.asn1&quot;;</span></span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	std::fstream input;</span><br><span class="line"></span><br><span class="line">	input.<span class="built_in">open</span>(input_file.<span class="built_in">c_str</span>(), std::fstream::in);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span> (input.<span class="built_in">fail</span>() == <span class="literal">true</span>)</span><br><span class="line"></span><br><span class="line">	&#123;</span><br><span class="line"></span><br><span class="line">		std::cout &lt;&lt; <span class="string">&quot;Please check input file is correct !&quot;</span> &lt;&lt; std::endl;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	std::fstream output;</span><br><span class="line"></span><br><span class="line">	output.<span class="built_in">open</span>(output_file.<span class="built_in">c_str</span>(), std::fstream::out);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span> (output.<span class="built_in">fail</span>() == <span class="literal">true</span>)</span><br><span class="line"></span><br><span class="line">	&#123;</span><br><span class="line"></span><br><span class="line">		std::cout &lt;&lt; <span class="string">&quot;The output file can not be created here !&quot;</span> &lt;&lt; std::endl;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	std::string input_line;</span><br><span class="line"></span><br><span class="line">	std::vector&lt;std::string &gt; vec_asn;</span><br><span class="line"></span><br><span class="line">	std::vector&lt;std::string &gt;::iterator itr;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	<span class="keyword">const</span> <span class="keyword">unsigned</span> <span class="keyword">long</span> cul_asn_idle = <span class="number">0x0</span>;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">const</span> <span class="keyword">unsigned</span> <span class="keyword">long</span> cul_asn_start = <span class="number">0x1</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	<span class="keyword">unsigned</span> <span class="keyword">long</span> asn_state = cul_asn_idle;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	<span class="keyword">while</span> (std::<span class="built_in">getline</span>(input, input_line))</span><br><span class="line"></span><br><span class="line">	&#123;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">if</span> (cul_asn_idle == asn_state)</span><br><span class="line"></span><br><span class="line">		&#123;</span><br><span class="line"></span><br><span class="line">			<span class="keyword">if</span> (input_line.<span class="built_in">find</span>(<span class="string">&quot;-- ASN1START&quot;</span>) != std::string::npos)</span><br><span class="line"></span><br><span class="line">			&#123;</span><br><span class="line"></span><br><span class="line">				asn_state |= cul_asn_start;</span><br><span class="line"></span><br><span class="line">			&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">			<span class="keyword">continue</span>;</span><br><span class="line"></span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">		<span class="keyword">if</span> (<span class="number">0</span> != (cul_asn_start &amp; asn_state))</span><br><span class="line"></span><br><span class="line">		&#123;</span><br><span class="line"></span><br><span class="line">			<span class="keyword">if</span> (input_line.<span class="built_in">find</span>(<span class="string">&quot;-- ASN1STOP&quot;</span>) != std::string::npos)</span><br><span class="line"></span><br><span class="line">			&#123;</span><br><span class="line"></span><br><span class="line">				asn_state = cul_asn_idle;</span><br><span class="line"></span><br><span class="line">			&#125;</span><br><span class="line"></span><br><span class="line">			<span class="keyword">else</span></span><br><span class="line"></span><br><span class="line">			&#123;</span><br><span class="line"></span><br><span class="line">				vec_asn.<span class="built_in">push_back</span>(input_line);</span><br><span class="line"></span><br><span class="line">			&#125;</span><br><span class="line"></span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span> (itr = vec_asn.<span class="built_in">begin</span>(); itr != vec_asn.<span class="built_in">end</span>(); ++itr)</span><br><span class="line"></span><br><span class="line">	&#123;</span><br><span class="line"></span><br><span class="line">		output &lt;&lt; *itr &lt;&lt; std::endl;</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	input.<span class="built_in">close</span>();</span><br><span class="line"></span><br><span class="line">	output.<span class="built_in">close</span>();</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>当然可以把输入参数那里不要固定死，弄成一个输入参数的程序，这样在命令行中使用的话也会很方便的。</p>
 <p>编译项目后运行，然后就会在 <code>input_file</code> 的路径下产生一个后缀为 <code>.asn1</code>的文件。</p>
 <p><img src="https://tva3.sinaimg.cn/large/c55aab25ly1gf9f1nix8ij20p50ag3z0.jpg" alt="生成的示例"></p>
-<p><br></p>
-<h2 id="利用开源ASN1C库实现asn-1的编解码，生成C代码"><a href="#利用开源ASN1C库实现asn-1的编解码，生成C代码" class="headerlink" title="利用开源ASN1C库实现asn.1的编解码，生成C代码"></a>利用开源ASN1C库实现asn.1的编解码，生成C代码</h2><p>在 <a href="http://lionet.info/asn1c/download.html" target="_blank" rel="noopener">http://lionet.info/asn1c/download.html</a> 中下载  <a href="http://lionet.info/soft/asn1c-0.9.21.exe" target="_blank" rel="noopener">Windows installer</a> ，然后安装。</p>
-<p>关于详细的使用方式可以在项目地址中查看到：<a href="https://github.com/vlm/asn1c" target="_blank" rel="noopener">https://github.com/vlm/asn1c</a> 。关于这个编译器的详细的文档在 <a href="https://github.com/vlm/asn1c/blob/master/doc/asn1c-usage.pdf" target="_blank" rel="noopener">doc / asn1c-usage.pdf</a> 中。</p>
-<p><img src="https://gitee.com/wang_wx/image_bed/raw/master/2020/20200530084146.png" alt></p>
-<h3 id="快速使用"><a href="#快速使用" class="headerlink" title="快速使用"></a>快速使用</h3><p>在安装编译器(请参阅 <a href="https://github.com/vlm/asn1c/blob/master/INSTALL.md" target="_blank" rel="noopener">INSTALL.md</a>)之后，您可以使用 asn1c 命令编译 ASN. 1规范:</p>
+<p><br/></p>
+<h2 id="利用开源ASN1C库实现asn-1的编解码，生成C代码"><a href="#利用开源ASN1C库实现asn-1的编解码，生成C代码" class="headerlink" title="利用开源ASN1C库实现asn.1的编解码，生成C代码"></a>利用开源ASN1C库实现asn.1的编解码，生成C代码</h2><p>在 <a target="_blank" rel="noopener" href="http://lionet.info/asn1c/download.html">http://lionet.info/asn1c/download.html</a> 中下载  <a target="_blank" rel="noopener" href="http://lionet.info/soft/asn1c-0.9.21.exe">Windows installer</a> ，然后安装。</p>
+<p>关于详细的使用方式可以在项目地址中查看到：<a target="_blank" rel="noopener" href="https://github.com/vlm/asn1c">https://github.com/vlm/asn1c</a> 。关于这个编译器的详细的文档在 <a target="_blank" rel="noopener" href="https://github.com/vlm/asn1c/blob/master/doc/asn1c-usage.pdf">doc / asn1c-usage.pdf</a> 中。</p>
+<p><img src="https://gitee.com/wang_wx/image_bed/raw/master/2020/20200530084146.png" alt=""></p>
+<h3 id="快速使用"><a href="#快速使用" class="headerlink" title="快速使用"></a>快速使用</h3><p>在安装编译器(请参阅 <a target="_blank" rel="noopener" href="https://github.com/vlm/asn1c/blob/master/INSTALL.md">INSTALL.md</a>)之后，您可以使用 asn1c 命令编译 ASN. 1规范:</p>
 <figure class="highlight clean"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">asn1c &lt;<span class="keyword">module</span>.asn1&gt;                         # Compile <span class="keyword">module</span></span><br></pre></td></tr></table></figure>
 <p>如果多个规范包含相互依赖关系，则必须同时指定所有规范:</p>
-<figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">asn1c <span class="params">&lt;module1.asn1&gt;</span> <span class="params">&lt;module2.asn1&gt;</span> ...     <span class="meta"># Compile interdependent modules</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">asn1c</span> &lt;module<span class="number">1</span>.asn<span class="number">1</span>&gt; &lt;module<span class="number">2</span>.asn<span class="number">1</span>&gt; ...     # Compile interdependent modules</span><br></pre></td></tr></table></figure>
 <h3 id="实际测试"><a href="#实际测试" class="headerlink" title="实际测试"></a>实际测试</h3><p>在 <code>samples</code> 文件夹下有 <code>ASN.1</code> 示例文件，就让我来测试一下吧。</p>
-<p><img src="https://gitee.com/wang_wx/image_bed/raw/master/2020/20200530084935.png" alt></p>
+<p><img src="https://gitee.com/wang_wx/image_bed/raw/master/2020/20200530084935.png" alt=""></p>
 <p><img src="https://gitee.com/wang_wx/image_bed/raw/master/2020/20200530084858.png" alt="这是我的目录结构"></p>
 <p>输入以下命令行</p>
-<figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">as<span class="symbol">n1</span>c -P ./samples/rfc<span class="number">3280</span>-*.as<span class="symbol">n1</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">asn1c</span> -P ./samples/rfc<span class="number">3280</span>-*.asn<span class="number">1</span></span><br></pre></td></tr></table></figure>
 <p>在本例中，-P选项用于在标准输出上打印编译后的文本。 默认行为是asn1c编译器为在指定ASN.1模块中找到的每个ASN.1类型创建多个.c和.h文件。</p>
 <p>这样就打印出来了：</p>
 <p><img src="https://gitee.com/wang_wx/image_bed/raw/master/2020/20200530085259.png" alt="打印"></p>
-<p>在使用说明 <a href="https://github.com/vlm/asn1c/blob/master/doc/asn1c-usage.pdf" target="_blank" rel="noopener">asn1c-usage.pdf</a> 中有其他使用的示例。</p>
-<p><img src="https://gitee.com/wang_wx/image_bed/raw/master/2020/20200530085738.png" alt></p>
+<p>在使用说明 <a target="_blank" rel="noopener" href="https://github.com/vlm/asn1c/blob/master/doc/asn1c-usage.pdf">asn1c-usage.pdf</a> 中有其他使用的示例。</p>
+<p><img src="https://gitee.com/wang_wx/image_bed/raw/master/2020/20200530085738.png" alt=""></p>
 <p>比如输入：</p>
-<figure class="highlight gcode"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">as<span class="symbol">n1</span>c ./samples/rfc<span class="number">3280</span>-*.as<span class="symbol">n1</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight apache"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">asn1c</span> ./samples/rfc<span class="number">3280</span>-*.asn<span class="number">1</span></span><br></pre></td></tr></table></figure>
 <p><img src="https://gitee.com/wang_wx/image_bed/raw/master/2020/20200530090004.png" alt="编译"></p>
 <p>编译成功，可以看到已经产生了很多的 <code>.c</code> 、 <code>.h</code> 文件。</p>
 <p><img src="https://gitee.com/wang_wx/image_bed/raw/master/2020/20200530090820.png" alt="编译后生成的c代码"></p>
-<p><br></p>
-<p><br></p>
-<p><br></p>
+<p><br /></p>
+<p><br /></p>
+<p><br /></p>
 <blockquote class="blockquote-center"><p>《小池》</p>
 <p>杨万里</p>
 <p>泉眼无声惜细流，树阴照水爱晴柔。<br>小荷才露尖尖角，早有蜻蜓立上头。</p>
 <p>🍉</p>
 </blockquote>
-<p><br></p>
-<p><br></p>
-<p><br></p>
+<p><br /></p>
+<p><br /></p>
+<p><br /></p>
 
     </div>
 
@@ -468,7 +472,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://www.lifeee.top/posts/61877.html" title="提取3GPP LTE/5GNR中RRC的ASN.1">https://www.lifeee.top/posts/61877.html</a>
+    <a href="https://www.lifeee.top/posts/61877.html" title="提取3GPP LTE&#x2F;5GNR中RRC的ASN.1">https://www.lifeee.top/posts/61877.html</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/zh-Hans" rel="noopener" target="_blank"><i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -480,10 +484,10 @@
       <footer class="post-footer">
           
           <div class="post-tags">
-              <a href="/tags/通信/" rel="tag"><i class="fa fa-tag"></i> 通信</a>
-              <a href="/tags/教程/" rel="tag"><i class="fa fa-tag"></i> 教程</a>
-              <a href="/tags/善用佳软/" rel="tag"><i class="fa fa-tag"></i> 善用佳软</a>
-              <a href="/tags/分享/" rel="tag"><i class="fa fa-tag"></i> 分享</a>
+              <a href="/tags/%E9%80%9A%E4%BF%A1/" rel="tag"><i class="fa fa-tag"></i> 通信</a>
+              <a href="/tags/%E6%95%99%E7%A8%8B/" rel="tag"><i class="fa fa-tag"></i> 教程</a>
+              <a href="/tags/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/" rel="tag"><i class="fa fa-tag"></i> 善用佳软</a>
+              <a href="/tags/%E5%88%86%E4%BA%AB/" rel="tag"><i class="fa fa-tag"></i> 分享</a>
           </div>
 
         
@@ -564,7 +568,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#ASN-1-标准简介"><span class="nav-text">ASN.1 标准简介</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#ASN-1-标准下载"><span class="nav-text">ASN.1  标准下载</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#范例"><span class="nav-text">范例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#下载3GPP协议"><span class="nav-text">下载3GPP协议</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#转换工具下载"><span class="nav-text">转换工具下载</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#开始转换为-ASN-1"><span class="nav-text">开始转换为 ASN.1</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#转换ASN-1-方式二"><span class="nav-text">转换ASN.1-方式二</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#利用开源ASN1C库实现asn-1的编解码，生成C代码"><span class="nav-text">利用开源ASN1C库实现asn.1的编解码，生成C代码</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#快速使用"><span class="nav-text">快速使用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#实际测试"><span class="nav-text">实际测试</span></a></li></ol></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#ASN-1-%E6%A0%87%E5%87%86%E7%AE%80%E4%BB%8B"><span class="nav-text">ASN.1 标准简介</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#ASN-1-%E6%A0%87%E5%87%86%E4%B8%8B%E8%BD%BD"><span class="nav-text">ASN.1  标准下载</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%8C%83%E4%BE%8B"><span class="nav-text">范例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%8B%E8%BD%BD3GPP%E5%8D%8F%E8%AE%AE"><span class="nav-text">下载3GPP协议</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BD%AC%E6%8D%A2%E5%B7%A5%E5%85%B7%E4%B8%8B%E8%BD%BD"><span class="nav-text">转换工具下载</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%80%E5%A7%8B%E8%BD%AC%E6%8D%A2%E4%B8%BA-ASN-1"><span class="nav-text">开始转换为 ASN.1</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BD%AC%E6%8D%A2ASN-1-%E6%96%B9%E5%BC%8F%E4%BA%8C"><span class="nav-text">转换ASN.1-方式二</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%A9%E7%94%A8%E5%BC%80%E6%BA%90ASN1C%E5%BA%93%E5%AE%9E%E7%8E%B0asn-1%E7%9A%84%E7%BC%96%E8%A7%A3%E7%A0%81%EF%BC%8C%E7%94%9F%E6%88%90C%E4%BB%A3%E7%A0%81"><span class="nav-text">利用开源ASN1C库实现asn.1的编解码，生成C代码</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BF%AB%E9%80%9F%E4%BD%BF%E7%94%A8"><span class="nav-text">快速使用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9E%E9%99%85%E6%B5%8B%E8%AF%95"><span class="nav-text">实际测试</span></a></li></ol></li></ol></li></ol></div>
 
 
       </div>
@@ -582,7 +586,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">64</span>
+          <span class="site-state-item-count">65</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -595,20 +599,20 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">40</span>
+        <span class="site-state-item-count">41</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
 </div>
   <div class="links-of-author motion-element">
       <span class="links-of-author-item">
-        <a href="https://github.com/upwon" title="GitHub → https://github.com/upwon" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+        <a href="https://github.com/upwon" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;upwon" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
       </span>
       <span class="links-of-author-item">
         <a href="mailto:w1244753906@gmail.com" title="E-Mail → mailto:w1244753906@gmail.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
       </span>
       <span class="links-of-author-item">
-        <a href="https://www.lifeee.top///atom.xml" title="RSS → https://www.lifeee.top///atom.xml"><i class="fa fa-fw fa-rss"></i>RSS</a>
+        <a href="https://www.lifeee.top///atom.xml" title="RSS → https:&#x2F;&#x2F;www.lifeee.top&#x2F;&#x2F;&#x2F;atom.xml"><i class="fa fa-fw fa-rss"></i>RSS</a>
       </span>
   </div>
 
@@ -646,13 +650,13 @@
       <i class="fa fa-area-chart"></i>
     </span>
       <span class="post-meta-item-text">站点总字数：</span>
-    <span title="站点总字数">554k</span>
+    <span title="站点总字数">579k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">8:24</span>
+    <span title="站点阅读时长">8:46</span>
 </div>
 
         
@@ -685,9 +689,17 @@
   <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
   <script src="/lib/velocity/velocity.min.js"></script>
   <script src="/lib/velocity/velocity.ui.min.js"></script>
-<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
 <script src="/js/schemes/pisces.js"></script>
+
+
 <script src="/js/next-boot.js"></script>
+
 
 
 
@@ -705,7 +717,9 @@
 
 
 
-  <script src="/js/local-search.js"></script>
+  
+<script src="/js/local-search.js"></script>
+
 
 
 

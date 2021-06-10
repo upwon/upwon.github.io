@@ -3,10 +3,10 @@
   <title>热夏的博客</title>
   
   
-  <link href="/atom.xml" rel="self"/>
+  <link href="https://www.lifeee.top/atom.xml" rel="self"/>
   
   <link href="https://www.lifeee.top/"/>
-  <updated>2021-05-24T07:44:44.279Z</updated>
+  <updated>2021-06-10T09:50:21.878Z</updated>
   <id>https://www.lifeee.top/</id>
   
   <author>
@@ -14,7 +14,29 @@
     
   </author>
   
-  <generator uri="http://hexo.io/">Hexo</generator>
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Linux 下安装中文版 man 手册 以及 C++ 帮助手册</title>
+    <link href="https://www.lifeee.top/posts/58853.html"/>
+    <id>https://www.lifeee.top/posts/58853.html</id>
+    <published>2021-06-10T09:07:55.000Z</published>
+    <updated>2021-06-10T09:50:21.878Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://tvax2.sinaimg.cn/large/ba920825gy1grdb8wqvaaj21s80to13l.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;man 手册页是在Unix或类Unix操作系统中常用的一种花在线软件文档形式，内容包括计算机程序（包括库和系统调用），正式的标准和惯例，甚至是抽象的概念。我们都可以通过执行man命令调用手册页。本文主要内容为：为 Linux 下的 man 手册安装中文版并设置别名 cman ， 方便中英阅读对照；同时安装 Ｃ++ 的 man 手册文档，方便查阅库函数的使用细节。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    
+    <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
+    
+    <category term="Linux" scheme="https://www.lifeee.top/tags/Linux/"/>
+    
+  </entry>
   
   <entry>
     <title> C++ stringstream 简介</title>
@@ -23,19 +45,18 @@
     <published>2021-05-24T06:46:15.000Z</published>
     <updated>2021-05-24T07:44:44.279Z</updated>
     
-    <summary type="html">
     
-      &lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/upwon/MyPicture@master/imgpexels-valiphotos-589802yas2.jpg&quot; alt&gt;&lt;/p&gt;
-&lt;p&gt;C++ stringstream 能够实现字符串流的输入输出操作，将字符串对象与流关联起来，允许像读取流一样读取字符串(如 cin)。能够很方便的从字符串中提取出以空格分割的子串、计算单词的频率，并且能够很方便地实现内置类型数据数据之间的转换(如 string 转 int)。🍦&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="技术" scheme="https://www.lifeee.top/categories/%E6%8A%80%E6%9C%AF/"/>
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/upwon/MyPicture@master/imgpexels-valiphotos-589802yas2.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;C++ stringstream 能够实现字符串流的输入输出操作，将字符串对象与流关联起来，允许像读取流一样读取字符串(如 cin)。能够很方便的从字符串中提取出以空格分割的子串、计算单词的频率，并且能够很方便地实现内置类型数据数据之间的转换(如 string 转 int)。🍦&lt;/p&gt;</summary>
     
     
-      <category term="C++" scheme="https://www.lifeee.top/tags/C/"/>
     
-      <category term="编程" scheme="https://www.lifeee.top/tags/%E7%BC%96%E7%A8%8B/"/>
+    <category term="技术" scheme="https://www.lifeee.top/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+    <category term="C++" scheme="https://www.lifeee.top/tags/C/"/>
+    
+    <category term="编程" scheme="https://www.lifeee.top/tags/%E7%BC%96%E7%A8%8B/"/>
     
   </entry>
   
@@ -46,21 +67,20 @@
     <published>2021-04-13T14:05:58.000Z</published>
     <updated>2021-04-13T14:19:52.968Z</updated>
     
-    <summary type="html">
     
-      &lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/upwon/MyPicture@master/imgimage-20210413220456534.png&quot; alt&gt;&lt;/p&gt;
-&lt;center&gt; &lt;font size=&quot;4.9&quot;&gt; 忽略 Git 仓库中的一些文件或文件夹.  &lt;/font&gt;&lt;/center&gt;
-    
-    </summary>
-    
-      <category term="技术" scheme="https://www.lifeee.top/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-      <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/upwon/MyPicture@master/imgimage-20210413220456534.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;center&gt; &lt;font size=4.9&gt; 忽略 Git 仓库中的一些文件或文件夹.  &lt;/center&gt;</summary>
     
     
-      <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
     
-      <category term="错误" scheme="https://www.lifeee.top/tags/%E9%94%99%E8%AF%AF/"/>
+    <category term="技术" scheme="https://www.lifeee.top/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    
+    <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
+    
+    <category term="错误" scheme="https://www.lifeee.top/tags/%E9%94%99%E8%AF%AF/"/>
     
   </entry>
   
@@ -71,17 +91,16 @@
     <published>2021-04-08T13:13:27.000Z</published>
     <updated>2021-05-23T08:16:54.791Z</updated>
     
-    <summary type="html">
     
-      &lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/upwon/MyPicture@master/imgkazuya-tachibana-arseniy-chebynkin-kitchen.jpg&quot; alt&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;优先队列&lt;/strong&gt;是计算机科学中的一类抽象数据类型。优先队列中的每个元素都有各自的优先级，优先级最高的元素最先得到服务；优先级相同的元素按照其在优先队列中的顺序得到服务，【不是普通队列的先进先出(FIFO)】。优先队列往往用&lt;strong&gt;&lt;a href=&quot;https://www.wikiwand.com/zh-cn/堆_(数据结构&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;堆&lt;/a&gt;)&lt;/strong&gt;来实现。🌴&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="技术" scheme="https://www.lifeee.top/categories/%E6%8A%80%E6%9C%AF/"/>
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/upwon/MyPicture@master/imgkazuya-tachibana-arseniy-chebynkin-kitchen.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;优先队列&lt;/strong&gt;是计算机科学中的一类抽象数据类型。优先队列中的每个元素都有各自的优先级，优先级最高的元素最先得到服务；优先级相同的元素按照其在优先队列中的顺序得到服务，【不是普通队列的先进先出(FIFO)】。优先队列往往用&lt;strong&gt;&lt;a href=&quot;https://www.wikiwand.com/zh-cn/堆_(数据结构&quot;&gt;堆&lt;/a&gt;)&lt;/strong&gt;来实现。🌴&lt;/p&gt;</summary>
     
     
-      <category term="C++" scheme="https://www.lifeee.top/tags/C/"/>
+    
+    <category term="技术" scheme="https://www.lifeee.top/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+    <category term="C++" scheme="https://www.lifeee.top/tags/C/"/>
     
   </entry>
   
@@ -92,21 +111,20 @@
     <published>2021-02-10T03:58:27.000Z</published>
     <updated>2021-02-10T10:54:03.101Z</updated>
     
-    <summary type="html">
     
-      &lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/upwon/MyPicture@master/img20210210181608.jpg&quot; alt&gt;&lt;/p&gt;
-&lt;p&gt;高频段拥有丰富空闲频谱资源，可有效满足未来 5G 对更高容量和速率的需求，用于传输高达 10Gbps 甚至更高的用户数据速率业务。高频段同时具有较大的传播损耗、散射损耗和准光学特性。 因此，有必要对高频段信道进行建模研究及测量。本文为高频段信道的调研报告。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="通信" scheme="https://www.lifeee.top/categories/%E9%80%9A%E4%BF%A1/"/>
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://cdn.jsdelivr.net/gh/upwon/MyPicture@master/img20210210181608.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;高频段拥有丰富空闲频谱资源，可有效满足未来 5G 对更高容量和速率的需求，用于传输高达 10Gbps 甚至更高的用户数据速率业务。高频段同时具有较大的传播损耗、散射损耗和准光学特性。 因此，有必要对高频段信道进行建模研究及测量。本文为高频段信道的调研报告。&lt;/p&gt;</summary>
     
     
-      <category term="通信" scheme="https://www.lifeee.top/tags/%E9%80%9A%E4%BF%A1/"/>
     
-      <category term="5G NR" scheme="https://www.lifeee.top/tags/5G-NR/"/>
+    <category term="通信" scheme="https://www.lifeee.top/categories/%E9%80%9A%E4%BF%A1/"/>
     
-      <category term="调研" scheme="https://www.lifeee.top/tags/%E8%B0%83%E7%A0%94/"/>
+    
+    <category term="通信" scheme="https://www.lifeee.top/tags/%E9%80%9A%E4%BF%A1/"/>
+    
+    <category term="5G NR" scheme="https://www.lifeee.top/tags/5G-NR/"/>
+    
+    <category term="调研" scheme="https://www.lifeee.top/tags/%E8%B0%83%E7%A0%94/"/>
     
   </entry>
   
@@ -117,21 +135,20 @@
     <published>2020-12-03T12:02:21.000Z</published>
     <updated>2020-12-03T15:14:38.622Z</updated>
     
-    <summary type="html">
     
-      &lt;p&gt;&lt;img src=&quot;https://tvax2.sinaimg.cn/large/c55aab25ly1glb1ucpm60j21040o2wos.jpg&quot; alt&gt;&lt;/p&gt;
-&lt;p&gt;　　在阅读英文网页或者中文网页时，有时候因为文字排版太密集了，难以一眼找到自己需要关注的一些关键字；在 IEEE 在线阅读时，一下子找不到关注的重点；需要高亮一段文字又要怎么办；高亮了需要保存网页为一个单文件又该怎么办？其实通过下面几个浏览器拓展就可以轻松解决这些问题，感兴趣的话继续看下去吧。😛&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://tvax2.sinaimg.cn/large/c55aab25ly1glb1ucpm60j21040o2wos.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;　　在阅读英文网页或者中文网页时，有时候因为文字排版太密集了，难以一眼找到自己需要关注的一些关键字；在 IEEE 在线阅读时，一下子找不到关注的重点；需要高亮一段文字又要怎么办；高亮了需要保存网页为一个单文件又该怎么办？其实通过下面几个浏览器拓展就可以轻松解决这些问题，感兴趣的话继续看下去吧。😛&lt;/p&gt;</summary>
     
     
-      <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
     
-      <category term="善用佳软" scheme="https://www.lifeee.top/tags/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
+    <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
     
-      <category term="浏览器拓展" scheme="https://www.lifeee.top/tags/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%8B%93%E5%B1%95/"/>
+    
+    <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
+    
+    <category term="善用佳软" scheme="https://www.lifeee.top/tags/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
+    
+    <category term="浏览器拓展" scheme="https://www.lifeee.top/tags/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%8B%93%E5%B1%95/"/>
     
   </entry>
   
@@ -142,21 +159,20 @@
     <published>2020-10-18T11:49:32.000Z</published>
     <updated>2020-11-07T01:47:05.924Z</updated>
     
-    <summary type="html">
     
-      &lt;p&gt;&lt;img src=&quot;https://gitee.com/wang_wx/image_bed/raw/master/2020/pexels-cottonbro-4855385_compressed.jpg&quot; alt&gt;&lt;/p&gt;
-&lt;p&gt;大家都知道要想快速的搜索文件可以使用 &lt;a href=&quot;https://www.voidtools.com/zh-cn/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Everything&lt;/a&gt; ，然而要想搜索文档文件中的内容  Everything 却做不到，那么搜索文档内容该怎么办呢？AnyTXT Searcher 和  BBdoc  是两款搜索文档内容的软件。🔍&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
-    
-      <category term="善用佳软" scheme="https://www.lifeee.top/categories/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://gitee.com/wang_wx/image_bed/raw/master/2020/pexels-cottonbro-4855385_compressed.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;大家都知道要想快速的搜索文件可以使用 &lt;a href=&quot;https://www.voidtools.com/zh-cn/&quot;&gt;Everything&lt;/a&gt; ，然而要想搜索文档文件中的内容  Everything 却做不到，那么搜索文档内容该怎么办呢？AnyTXT Searcher 和  BBdoc  是两款搜索文档内容的软件。🔍&lt;/p&gt;</summary>
     
     
-      <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
     
-      <category term="善用佳软" scheme="https://www.lifeee.top/tags/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
+    <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    <category term="善用佳软" scheme="https://www.lifeee.top/categories/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
+    
+    
+    <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
+    
+    <category term="善用佳软" scheme="https://www.lifeee.top/tags/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
     
   </entry>
   
@@ -167,23 +183,22 @@
     <published>2020-09-16T10:23:05.000Z</published>
     <updated>2020-09-16T10:32:19.947Z</updated>
     
-    <summary type="html">
     
-      &lt;p&gt;&lt;img src=&quot;https://gitee.com/wang_wx/image_bed/raw/master/2020/green-leafed-plant-1698560s.jpg&quot; alt&gt;&lt;/p&gt;
-&lt;p&gt;　　&lt;code&gt;Microsoft OneNote&lt;/code&gt;是一套用于自由形式的信息获取以及多用户协作工具。OneNote 是跨平台的，但并可使用触笔、声音或视频创建笔记，比单纯使用键盘更方便。 本文摘录了一些 OneNote 的快捷键 ，善于使用快捷键能够更加轻松的编辑笔记的格式。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
-    
-      <category term="善用佳软" scheme="https://www.lifeee.top/categories/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://gitee.com/wang_wx/image_bed/raw/master/2020/green-leafed-plant-1698560s.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;　　&lt;code&gt;Microsoft OneNote&lt;/code&gt;是一套用于自由形式的信息获取以及多用户协作工具。OneNote 是跨平台的，但并可使用触笔、声音或视频创建笔记，比单纯使用键盘更方便。 本文摘录了一些 OneNote 的快捷键 ，善于使用快捷键能够更加轻松的编辑笔记的格式。&lt;/p&gt;</summary>
     
     
-      <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
     
-      <category term="善用佳软" scheme="https://www.lifeee.top/tags/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
+    <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
     
-      <category term="高效" scheme="https://www.lifeee.top/tags/%E9%AB%98%E6%95%88/"/>
+    <category term="善用佳软" scheme="https://www.lifeee.top/categories/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
+    
+    
+    <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
+    
+    <category term="善用佳软" scheme="https://www.lifeee.top/tags/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
+    
+    <category term="高效" scheme="https://www.lifeee.top/tags/%E9%AB%98%E6%95%88/"/>
     
   </entry>
   
@@ -194,21 +209,20 @@
     <published>2020-09-16T08:37:03.000Z</published>
     <updated>2020-09-16T09:38:04.903Z</updated>
     
-    <summary type="html">
     
-      &lt;p&gt;&lt;img src=&quot;https://gitee.com/wang_wx/image_bed/raw/master/2020/pexels-fox-212323_compressed.jpg&quot; alt&gt;&lt;/p&gt;
-&lt;p&gt;　　无论在工作中还是学习中我们都会常常与PDF文档相伴，而有一些PDF文档却没有目录，这就很烦恼啦。所以我们需要为这些PDF添加上目录方便阅读的时候点击目录跳转。通过本文我会手把手教你为PDF文档添加目录，继续阅读下去吧。 💡&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://gitee.com/wang_wx/image_bed/raw/master/2020/pexels-fox-212323_compressed.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;　　无论在工作中还是学习中我们都会常常与PDF文档相伴，而有一些PDF文档却没有目录，这就很烦恼啦。所以我们需要为这些PDF添加上目录方便阅读的时候点击目录跳转。通过本文我会手把手教你为PDF文档添加目录，继续阅读下去吧。 💡&lt;/p&gt;</summary>
     
     
-      <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
     
-      <category term="善用佳软" scheme="https://www.lifeee.top/tags/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
+    <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
     
-      <category term="tips" scheme="https://www.lifeee.top/tags/tips/"/>
+    
+    <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
+    
+    <category term="善用佳软" scheme="https://www.lifeee.top/tags/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
+    
+    <category term="tips" scheme="https://www.lifeee.top/tags/tips/"/>
     
   </entry>
   
@@ -219,21 +233,20 @@
     <published>2020-09-16T06:54:51.000Z</published>
     <updated>2020-09-16T07:59:35.388Z</updated>
     
-    <summary type="html">
     
-      &lt;p&gt;&lt;img src=&quot;https://gitee.com/wang_wx/image_bed/raw/master/2020/检索硕博论文1_compressed.jpg&quot; alt&gt;&lt;/p&gt;
-&lt;p&gt;　　查找国内的硕博学位论文可以上万方、知网，那么要查找国外的呢？答案是 PQDT 。😉&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://gitee.com/wang_wx/image_bed/raw/master/2020/检索硕博论文1_compressed.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;　　查找国内的硕博学位论文可以上万方、知网，那么要查找国外的呢？答案是 PQDT 。😉&lt;/p&gt;</summary>
     
     
-      <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
     
-      <category term="网站分享" scheme="https://www.lifeee.top/tags/%E7%BD%91%E7%AB%99%E5%88%86%E4%BA%AB/"/>
+    <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
     
-      <category term="信息检索" scheme="https://www.lifeee.top/tags/%E4%BF%A1%E6%81%AF%E6%A3%80%E7%B4%A2/"/>
+    
+    <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
+    
+    <category term="网站分享" scheme="https://www.lifeee.top/tags/%E7%BD%91%E7%AB%99%E5%88%86%E4%BA%AB/"/>
+    
+    <category term="信息检索" scheme="https://www.lifeee.top/tags/%E4%BF%A1%E6%81%AF%E6%A3%80%E7%B4%A2/"/>
     
   </entry>
   
@@ -244,22 +257,21 @@
     <published>2020-09-16T03:57:26.000Z</published>
     <updated>2020-09-16T08:28:02.902Z</updated>
     
-    <summary type="html">
     
-      &lt;p&gt;&lt;img src=&quot;https://gitee.com/wang_wx/image_bed/raw/master/2020/phone_bg1-b8769697a0.jpg&quot; alt&gt;&lt;/p&gt;
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://gitee.com/wang_wx/image_bed/raw/master/2020/phone_bg1-b8769697a0.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 &lt;p&gt;　　&lt;/p&gt;
-&lt;p&gt;&lt;center&gt; 一些有关 QT 的学习网站  💻 &lt;center&gt;&lt;/center&gt;&lt;/center&gt;&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="技术" scheme="https://www.lifeee.top/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-      <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
+&lt;p&gt;&lt;center&gt; 一些有关 QT 的学习网站  💻 &lt;center/&gt;&lt;/p&gt;</summary>
     
     
-      <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
     
-      <category term="网站分享" scheme="https://www.lifeee.top/tags/%E7%BD%91%E7%AB%99%E5%88%86%E4%BA%AB/"/>
+    <category term="技术" scheme="https://www.lifeee.top/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    
+    <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
+    
+    <category term="网站分享" scheme="https://www.lifeee.top/tags/%E7%BD%91%E7%AB%99%E5%88%86%E4%BA%AB/"/>
     
   </entry>
   
@@ -270,21 +282,20 @@
     <published>2020-07-30T14:48:09.000Z</published>
     <updated>2020-09-16T07:32:44.678Z</updated>
     
-    <summary type="html">
     
-      &lt;p&gt;&lt;img src=&quot;https://gitee.com/wang_wx/image_bed/raw/master/2020/2-1___OneNote_Alternative.png&quot; alt&gt;&lt;/p&gt;
-&lt;p&gt;　　近些年来 数字化生活方式 已经出现在我们生活中的方方面面，笔记同样如此。曾经我们都习惯于纸质笔记，无论是日记亦或是上课的笔记都会选择记录在纸质的笔记本里。随着时间的推移，可能字迹褪去了原本的颜色，甚至根本不知道丢哪里去了，珍贵的笔记丢失总是像流逝的时光一般让人忧郁惆怅。一种解决方式是使用扫描软件扫描我们的纸质笔记本进行存储。而另一种思路是 我们为什么不直接使用数字笔记呢 ？ 因此，近些年来数字笔记兴起了。OneNote、Evernote、有道云笔记、Notion 等等笔记进入了我们的生活。今天介绍的是微软出品的 OneNote ，它熟悉的界面和高度的Microsoft  Office 集成可能会让你信服。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="善用佳软" scheme="https://www.lifeee.top/categories/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://gitee.com/wang_wx/image_bed/raw/master/2020/2-1___OneNote_Alternative.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;　　近些年来 数字化生活方式 已经出现在我们生活中的方方面面，笔记同样如此。曾经我们都习惯于纸质笔记，无论是日记亦或是上课的笔记都会选择记录在纸质的笔记本里。随着时间的推移，可能字迹褪去了原本的颜色，甚至根本不知道丢哪里去了，珍贵的笔记丢失总是像流逝的时光一般让人忧郁惆怅。一种解决方式是使用扫描软件扫描我们的纸质笔记本进行存储。而另一种思路是 我们为什么不直接使用数字笔记呢 ？ 因此，近些年来数字笔记兴起了。OneNote、Evernote、有道云笔记、Notion 等等笔记进入了我们的生活。今天介绍的是微软出品的 OneNote ，它熟悉的界面和高度的Microsoft  Office 集成可能会让你信服。&lt;/p&gt;</summary>
     
     
-      <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
     
-      <category term="善用佳软" scheme="https://www.lifeee.top/tags/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
+    <category term="善用佳软" scheme="https://www.lifeee.top/categories/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
     
-      <category term="笔记" scheme="https://www.lifeee.top/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
+    
+    <category term="善用佳软" scheme="https://www.lifeee.top/tags/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
+    
+    <category term="笔记" scheme="https://www.lifeee.top/tags/%E7%AC%94%E8%AE%B0/"/>
     
   </entry>
   
@@ -295,23 +306,22 @@
     <published>2020-07-29T12:56:40.000Z</published>
     <updated>2021-04-08T13:27:22.028Z</updated>
     
-    <summary type="html">
     
-      &lt;p&gt;&lt;img src=&quot;https://tvax1.sinaimg.cn/large/c55aab25ly1gh889n55kxj23s02iowz1.jpg&quot; alt&gt;&lt;/p&gt;
-&lt;p&gt;　　Qt 开发时 QtCreator 是不得不接触的 IDE，提供了代码编写与可视化设计 GUI 的环境，但有时候使用却有点稍显逊色 。CLion 是 JetBrains 出品的 C++ IDE ，使用 CLion 来编写 C++ 会大大提高效率，因此 CLion 写代码，Qt Designer设计界面的方式是个不错的选择。😛&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="编程" scheme="https://www.lifeee.top/categories/%E7%BC%96%E7%A8%8B/"/>
-    
-      <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://tvax1.sinaimg.cn/large/c55aab25ly1gh889n55kxj23s02iowz1.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;　　Qt 开发时 QtCreator 是不得不接触的 IDE，提供了代码编写与可视化设计 GUI 的环境，但有时候使用却有点稍显逊色 。CLion 是 JetBrains 出品的 C++ IDE ，使用 CLion 来编写 C++ 会大大提高效率，因此 CLion 写代码，Qt Designer设计界面的方式是个不错的选择。😛&lt;/p&gt;</summary>
     
     
-      <category term="C++" scheme="https://www.lifeee.top/tags/C/"/>
     
-      <category term="善用佳软" scheme="https://www.lifeee.top/tags/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
+    <category term="编程" scheme="https://www.lifeee.top/categories/%E7%BC%96%E7%A8%8B/"/>
     
-      <category term="QT" scheme="https://www.lifeee.top/tags/QT/"/>
+    <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    
+    <category term="C++" scheme="https://www.lifeee.top/tags/C/"/>
+    
+    <category term="善用佳软" scheme="https://www.lifeee.top/tags/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
+    
+    <category term="QT" scheme="https://www.lifeee.top/tags/QT/"/>
     
   </entry>
   
@@ -322,19 +332,18 @@
     <published>2020-07-21T13:37:03.000Z</published>
     <updated>2021-04-08T13:27:14.069Z</updated>
     
-    <summary type="html">
     
-      &lt;p&gt;&lt;img src=&quot;https://gitee.com/wang_wx/image_bed/raw/master/2020/20200721225351.jpg&quot; alt&gt;&lt;/p&gt;
-&lt;p&gt;　　测试使用 MinGW-64 编译的OpenCV 是否正常，用 Qt 打开视频显示在 &lt;code&gt;label&lt;/code&gt;。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="编程" scheme="https://www.lifeee.top/categories/%E7%BC%96%E7%A8%8B/"/>
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://gitee.com/wang_wx/image_bed/raw/master/2020/20200721225351.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;　　测试使用 MinGW-64 编译的OpenCV 是否正常，用 Qt 打开视频显示在 &lt;code&gt;label&lt;/code&gt;。&lt;/p&gt;</summary>
     
     
-      <category term="C++" scheme="https://www.lifeee.top/tags/C/"/>
     
-      <category term="QT" scheme="https://www.lifeee.top/tags/QT/"/>
+    <category term="编程" scheme="https://www.lifeee.top/categories/%E7%BC%96%E7%A8%8B/"/>
+    
+    
+    <category term="C++" scheme="https://www.lifeee.top/tags/C/"/>
+    
+    <category term="QT" scheme="https://www.lifeee.top/tags/QT/"/>
     
   </entry>
   
@@ -345,24 +354,23 @@
     <published>2020-07-21T13:36:32.000Z</published>
     <updated>2021-04-08T13:26:52.632Z</updated>
     
-    <summary type="html">
     
-      &lt;p&gt;​                           &lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://gitee.com/wang_wx/image_bed/raw/master/2020/20200721214708.jpg&quot; alt&gt;&lt;/p&gt;
-&lt;p&gt;　　minGW 64 bit 编译 OpenCV 3.4.11 ，记录了详细的下载、编译、安装以及问题解决的步骤与思路。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="编程" scheme="https://www.lifeee.top/categories/%E7%BC%96%E7%A8%8B/"/>
+    <summary type="html">&lt;p&gt;​                           &lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://gitee.com/wang_wx/image_bed/raw/master/2020/20200721214708.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;　　minGW 64 bit 编译 OpenCV 3.4.11 ，记录了详细的下载、编译、安装以及问题解决的步骤与思路。&lt;/p&gt;</summary>
     
     
-      <category term="C++" scheme="https://www.lifeee.top/tags/C/"/>
     
-      <category term="编程" scheme="https://www.lifeee.top/tags/%E7%BC%96%E7%A8%8B/"/>
+    <category term="编程" scheme="https://www.lifeee.top/categories/%E7%BC%96%E7%A8%8B/"/>
     
-      <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
     
-      <category term="QT" scheme="https://www.lifeee.top/tags/QT/"/>
+    <category term="C++" scheme="https://www.lifeee.top/tags/C/"/>
+    
+    <category term="编程" scheme="https://www.lifeee.top/tags/%E7%BC%96%E7%A8%8B/"/>
+    
+    <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
+    
+    <category term="QT" scheme="https://www.lifeee.top/tags/QT/"/>
     
   </entry>
   
@@ -373,25 +381,24 @@
     <published>2020-07-18T11:58:22.000Z</published>
     <updated>2020-07-19T08:25:21.815Z</updated>
     
-    <summary type="html">
     
-      &lt;p&gt;&lt;img src=&quot;https://gitee.com/wang_wx/image_bed/raw/master/2020/20200718211615.jpg&quot; alt&gt;&lt;/p&gt;
-&lt;p&gt;　　创世纪图书馆 Library  Genesis 是一个超棒的电子书下载网站，它让我们可以免费下载数百万本电子书，尤其是英文电子书。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
-    
-      <category term="生活" scheme="https://www.lifeee.top/categories/%E7%94%9F%E6%B4%BB/"/>
-    
-      <category term="善用佳软" scheme="https://www.lifeee.top/categories/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://gitee.com/wang_wx/image_bed/raw/master/2020/20200718211615.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;　　创世纪图书馆 Library  Genesis 是一个超棒的电子书下载网站，它让我们可以免费下载数百万本电子书，尤其是英文电子书。&lt;/p&gt;</summary>
     
     
-      <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
     
-      <category term="电子书" scheme="https://www.lifeee.top/tags/%E7%94%B5%E5%AD%90%E4%B9%A6/"/>
+    <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
     
-      <category term="网站分享" scheme="https://www.lifeee.top/tags/%E7%BD%91%E7%AB%99%E5%88%86%E4%BA%AB/"/>
+    <category term="生活" scheme="https://www.lifeee.top/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    <category term="善用佳软" scheme="https://www.lifeee.top/categories/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
+    
+    
+    <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
+    
+    <category term="电子书" scheme="https://www.lifeee.top/tags/%E7%94%B5%E5%AD%90%E4%B9%A6/"/>
+    
+    <category term="网站分享" scheme="https://www.lifeee.top/tags/%E7%BD%91%E7%AB%99%E5%88%86%E4%BA%AB/"/>
     
   </entry>
   
@@ -402,19 +409,18 @@
     <published>2020-07-18T07:31:52.000Z</published>
     <updated>2020-07-22T01:42:19.769Z</updated>
     
-    <summary type="html">
     
-      &lt;p&gt;&lt;img src=&quot;https://gitee.com/wang_wx/image_bed/raw/master/2020/20200718163554.jpg&quot; alt&gt;&lt;/p&gt;
-&lt;p&gt;　　本文主要对 5G NR 中的同步信号块 SSB 的结构以及时频位置进行了描述。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="通信" scheme="https://www.lifeee.top/categories/%E9%80%9A%E4%BF%A1/"/>
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://gitee.com/wang_wx/image_bed/raw/master/2020/20200718163554.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;　　本文主要对 5G NR 中的同步信号块 SSB 的结构以及时频位置进行了描述。&lt;/p&gt;</summary>
     
     
-      <category term="通信" scheme="https://www.lifeee.top/tags/%E9%80%9A%E4%BF%A1/"/>
     
-      <category term="5G NR" scheme="https://www.lifeee.top/tags/5G-NR/"/>
+    <category term="通信" scheme="https://www.lifeee.top/categories/%E9%80%9A%E4%BF%A1/"/>
+    
+    
+    <category term="通信" scheme="https://www.lifeee.top/tags/%E9%80%9A%E4%BF%A1/"/>
+    
+    <category term="5G NR" scheme="https://www.lifeee.top/tags/5G-NR/"/>
     
   </entry>
   
@@ -425,23 +431,22 @@
     <published>2020-07-14T14:12:17.000Z</published>
     <updated>2021-04-08T13:25:56.004Z</updated>
     
-    <summary type="html">
     
-      &lt;p&gt;&lt;img src=&quot;https://gitee.com/wang_wx/image_bed/raw/master/2020/landscape-mountains-nature-sky-129105_compressed.jpg&quot; alt&gt;&lt;/p&gt;
-&lt;p&gt;Qt Creator 中为 UI 界面的窗体控件设置自适应窗口大小布局&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="编程" scheme="https://www.lifeee.top/categories/%E7%BC%96%E7%A8%8B/"/>
-    
-      <category term="问题" scheme="https://www.lifeee.top/categories/%E9%97%AE%E9%A2%98/"/>
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://gitee.com/wang_wx/image_bed/raw/master/2020/landscape-mountains-nature-sky-129105_compressed.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Qt Creator 中为 UI 界面的窗体控件设置自适应窗口大小布局&lt;/p&gt;</summary>
     
     
-      <category term="C++" scheme="https://www.lifeee.top/tags/C/"/>
     
-      <category term="问题" scheme="https://www.lifeee.top/tags/%E9%97%AE%E9%A2%98/"/>
+    <category term="编程" scheme="https://www.lifeee.top/categories/%E7%BC%96%E7%A8%8B/"/>
     
-      <category term="QT" scheme="https://www.lifeee.top/tags/QT/"/>
+    <category term="问题" scheme="https://www.lifeee.top/categories/%E9%97%AE%E9%A2%98/"/>
+    
+    
+    <category term="C++" scheme="https://www.lifeee.top/tags/C/"/>
+    
+    <category term="问题" scheme="https://www.lifeee.top/tags/%E9%97%AE%E9%A2%98/"/>
+    
+    <category term="QT" scheme="https://www.lifeee.top/tags/QT/"/>
     
   </entry>
   
@@ -452,23 +457,22 @@
     <published>2020-06-28T12:55:16.000Z</published>
     <updated>2020-06-28T13:13:32.121Z</updated>
     
-    <summary type="html">
     
-      &lt;p&gt;&lt;img src=&quot;https://gitee.com/wang_wx/image_bed/raw/master/2020/20200628210339.jpg&quot; alt&gt;&lt;/p&gt;
-&lt;p&gt;Draw.io 是一款优秀的全平台开源绘图软件，支持在线绘图，而且还支持在 VS Code 中绘图。操作简便，内置模板丰富，支持导出 &lt;code&gt;png&lt;/code&gt;、&lt;code&gt;svg&lt;/code&gt; 、&lt;code&gt;VSDX&lt;/code&gt;(Visio格式) 、&lt;code&gt;PDF&lt;/code&gt; 等格式的文件。简直优秀至极，赶快去试一试吧。😉&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
-    
-      <category term="善用佳软" scheme="https://www.lifeee.top/categories/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://gitee.com/wang_wx/image_bed/raw/master/2020/20200628210339.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Draw.io 是一款优秀的全平台开源绘图软件，支持在线绘图，而且还支持在 VS Code 中绘图。操作简便，内置模板丰富，支持导出 &lt;code&gt;png&lt;/code&gt;、&lt;code&gt;svg&lt;/code&gt; 、&lt;code&gt;VSDX&lt;/code&gt;(Visio格式) 、&lt;code&gt;PDF&lt;/code&gt; 等格式的文件。简直优秀至极，赶快去试一试吧。😉&lt;/p&gt;</summary>
     
     
-      <category term="善用佳软" scheme="https://www.lifeee.top/tags/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
     
-      <category term="开源" scheme="https://www.lifeee.top/tags/%E5%BC%80%E6%BA%90/"/>
+    <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
     
-      <category term="绘图" scheme="https://www.lifeee.top/tags/%E7%BB%98%E5%9B%BE/"/>
+    <category term="善用佳软" scheme="https://www.lifeee.top/categories/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
+    
+    
+    <category term="善用佳软" scheme="https://www.lifeee.top/tags/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
+    
+    <category term="开源" scheme="https://www.lifeee.top/tags/%E5%BC%80%E6%BA%90/"/>
+    
+    <category term="绘图" scheme="https://www.lifeee.top/tags/%E7%BB%98%E5%9B%BE/"/>
     
   </entry>
   
@@ -479,54 +483,24 @@
     <published>2020-06-26T12:49:58.000Z</published>
     <updated>2020-06-26T13:25:42.209Z</updated>
     
-    <summary type="html">
     
-      &lt;p&gt;&lt;img src=&quot;https://gitee.com/wang_wx/image_bed/raw/master/2020/20200626212130.jpg&quot; alt&gt;&lt;/p&gt;
-&lt;p&gt;写程序的过程中，有时候难免要从网上直接寻找一些代码来修改。但经常会碰到代码格式不规范的情况，所以如果能够自动将代码格式规范化，或者对齐代码来符合自身的编程习惯，就很方便后续的修改等工作。此次就来在 VS Code上实现这一功能。🥤&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="技术" scheme="https://www.lifeee.top/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-      <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
-    
-      <category term="善用佳软" scheme="https://www.lifeee.top/categories/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://gitee.com/wang_wx/image_bed/raw/master/2020/20200626212130.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;写程序的过程中，有时候难免要从网上直接寻找一些代码来修改。但经常会碰到代码格式不规范的情况，所以如果能够自动将代码格式规范化，或者对齐代码来符合自身的编程习惯，就很方便后续的修改等工作。此次就来在 VS Code上实现这一功能。🥤&lt;/p&gt;</summary>
     
     
-      <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
     
-      <category term="善用佳软" scheme="https://www.lifeee.top/tags/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
+    <category term="技术" scheme="https://www.lifeee.top/categories/%E6%8A%80%E6%9C%AF/"/>
     
-      <category term="IDE" scheme="https://www.lifeee.top/tags/IDE/"/>
+    <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
     
-  </entry>
-  
-  <entry>
-    <title>Vivado与VS Code:强强联手2-自动生成 Testbench</title>
-    <link href="https://www.lifeee.top/posts/54635.html"/>
-    <id>https://www.lifeee.top/posts/54635.html</id>
-    <published>2020-06-26T12:49:52.000Z</published>
-    <updated>2020-06-26T13:24:53.039Z</updated>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;https://gitee.com/wang_wx/image_bed/raw/master/2020/20200626211322.jpg&quot; alt&gt;&lt;/p&gt;
-&lt;p&gt;  在对 Verilog 代码进行 行为级仿真 时，测试文件是必不可少的。可以自己写测试文件，但也会花费一些时间。利用 VS Code 可以自动生成测试文件，快速例化对应的模块，仅需要我们自己初始化时钟复位等信号，添加测试文件的运行时间等。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="技术" scheme="https://www.lifeee.top/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-      <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
-    
-      <category term="善用佳软" scheme="https://www.lifeee.top/categories/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
+    <category term="善用佳软" scheme="https://www.lifeee.top/categories/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
     
     
-      <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
+    <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
     
-      <category term="善用佳软" scheme="https://www.lifeee.top/tags/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
+    <category term="善用佳软" scheme="https://www.lifeee.top/tags/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
     
-      <category term="IDE" scheme="https://www.lifeee.top/tags/IDE/"/>
+    <category term="IDE" scheme="https://www.lifeee.top/tags/IDE/"/>
     
   </entry>
   

@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 3.9.0">
+<meta name="generator" content="Hexo 5.4.0">
   <link rel="apple-touch-icon" sizes="180x180" href="/images/myapple-touch-icon-next.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/myfavicon-32x32-next.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/myfavicon-16x16-next.png">
@@ -52,21 +52,23 @@
 </script>
 
   <meta name="description" content="高频段拥有丰富空闲频谱资源，可有效满足未来 5G 对更高容量和速率的需求，用于传输高达 10Gbps 甚至更高的用户数据速率业务。高频段同时具有较大的传播损耗、散射损耗和准光学特性。 因此，有必要对高频段信道进行建模研究及测量。本文为高频段信道的调研报告。">
-<meta name="keywords" content="通信,5G NR,调研">
 <meta property="og:type" content="article">
 <meta property="og:title" content="5G高频段信道测量与建模进展">
 <meta property="og:url" content="https://www.lifeee.top/posts/25652.html">
 <meta property="og:site_name" content="热夏的博客">
 <meta property="og:description" content="高频段拥有丰富空闲频谱资源，可有效满足未来 5G 对更高容量和速率的需求，用于传输高达 10Gbps 甚至更高的用户数据速率业务。高频段同时具有较大的传播损耗、散射损耗和准光学特性。 因此，有必要对高频段信道进行建模研究及测量。本文为高频段信道的调研报告。">
-<meta property="og:locale" content="zh-Hans">
+<meta property="og:locale">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/upwon/MyPicture@master/img20210210181608.jpg">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/upwon/MyPicture@master/img20210210185348.png">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/upwon/MyPicture@master/imgimage-20210210123525011.png">
 <meta property="og:image" content="https://cdn.jsdelivr.net/gh/upwon/MyPicture@master/imgimage-20210210124428428.png">
-<meta property="og:updated_time" content="2021-02-10T10:54:03.101Z">
+<meta property="article:published_time" content="2021-02-10T03:58:27.000Z">
+<meta property="article:modified_time" content="2021-02-10T10:54:03.101Z">
+<meta property="article:author" content="热夏">
+<meta property="article:tag" content="通信">
+<meta property="article:tag" content="5G NR">
+<meta property="article:tag" content="调研">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="5G高频段信道测量与建模进展">
-<meta name="twitter:description" content="高频段拥有丰富空闲频谱资源，可有效满足未来 5G 对更高容量和速率的需求，用于传输高达 10Gbps 甚至更高的用户数据速率业务。高频段同时具有较大的传播损耗、散射损耗和准光学特性。 因此，有必要对高频段信道进行建模研究及测量。本文为高频段信道的调研报告。">
 <meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/upwon/MyPicture@master/img20210210181608.jpg">
 
 <link rel="canonical" href="https://www.lifeee.top/posts/25652.html">
@@ -112,6 +114,7 @@
   </style>
 </noscript>
 
+<link rel="alternate" href="/atom.xml" title="热夏的博客" type="application/atom+xml">
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage">
@@ -256,7 +259,7 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/通信/" itemprop="url" rel="index">
+                  <a href="/categories/%E9%80%9A%E4%BF%A1/" itemprop="url" rel="index">
                     <span itemprop="name">通信</span>
                   </a>
                 </span>
@@ -294,11 +297,11 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p><img src="https://cdn.jsdelivr.net/gh/upwon/MyPicture@master/img20210210181608.jpg" alt></p>
+        <p><img src="https://cdn.jsdelivr.net/gh/upwon/MyPicture@master/img20210210181608.jpg" alt=""></p>
 <p>高频段拥有丰富空闲频谱资源，可有效满足未来 5G 对更高容量和速率的需求，用于传输高达 10Gbps 甚至更高的用户数据速率业务。高频段同时具有较大的传播损耗、散射损耗和准光学特性。 因此，有必要对高频段信道进行建模研究及测量。本文为高频段信道的调研报告。</p>
-<a id="more"></a>
+<span id="more"></span>
 <h2 id="一、简介"><a href="#一、简介" class="headerlink" title="一、简介"></a>一、简介</h2><p>研究高频段信道传播特征，获得信道模型，分析和评估使用场景，以及选择适用频段，是当前高频段的首要工作。针对高频段的信道测量和建模工作也已展，如10~11、28、38、43~50、56~76和81~86 GHz等一些重点频段，路损、阴影衰落、时延扩展（Delay Spread ,DS）、角度扩展（Angular Spread，AS）及极化等信道特征，以及它们随场景和频率的变化规律等成为研究的关键内容．几个高频段信道模型陆续被发布，如IEEE 802.11ad、METIS、MIWEBA、NYU、5GCM、3GPP-HF(high-frequency,6~100GHz)等。</p>
-<p><br></p>
+<p><br /></p>
 <h2 id="二、５G高频段信道建模的需求与挑战"><a href="#二、５G高频段信道建模的需求与挑战" class="headerlink" title="二、５Ｇ高频段信道建模的需求与挑战"></a>二、５Ｇ高频段信道建模的需求与挑战</h2><p>高频段信道具有许多明显不同于6GHz以下蜂窝移动通信信道的特征．开发新的可工作在高频段（直到100GHz）的5G系统，需要这些频段的精确传播模型，显然现有的为6GHz以下频段开发的信道模型无法胜任．相比传统信道模型，5G高频段信道模型应支持更宽的频率范围、更大的频带宽度和更大的天线孔径，并保持在空间、时间、频率和天线四个维度的一致性，具体体现在以下几个方面:</p>
 <ul>
 <li><p>支持广泛的传播场景及空间一致性</p>
@@ -308,7 +311,7 @@
 <li><p>支持大规模天线阵列（极窄波束）及天线一致性</p>
 </li>
 <li><p>支持高速移动及双向移动</p>
-<p><br></p>
+<p><br /></p>
 </li>
 </ul>
 <h2 id="三、信道建模方法"><a href="#三、信道建模方法" class="headerlink" title="三、信道建模方法"></a>三、信道建模方法</h2><p>信道模型通常将信道参数分为宏观参量（如路损和阴影衰落）和反映信道衰落特性的微观参量，如大尺度参数和小尺度参数（Small-Scale Parameters,SSPs，包括时延、功率、到达角和离开角等）。</p>
@@ -317,7 +320,7 @@
 P L(\mathrm{~dB})=20 \log _{10}(4 \pi f / c)+10 n \log _{10}(d / 1 m)+X_{\sigma} \qquad（1）</script><p>Friis公式给出了自由空间中信号视距传播模型，在实际的信道环境中，通过引入随环境而改变的路损指数ｎ，构造出一个更为普遍的路损模型．对于6GHz以下频段，往往忽略频率的影响，而高频段就不能忽略了，一个常用的路损模型为：</p>
 <script type="math/tex; mode=display">
 P L(\mathrm{~dB})=20 \alpha \log _{10}(d)+\beta+10 \gamma \log _{10}(f)+X_{\sigma}\qquad（2）</script><p>该式称为ABG模型（因三个系数记为Alpha-Beta-Gamma而得名），是对FI(Floating Interceoe)模型的扩展以反映频率影响．这里ｆ常以GHz计量。</p>
-<p><br></p>
+<p><br /></p>
 <p>3.2 GSCM模型结构<br>GSMＭ模型中的传播路径采用簇与射线结构表示，如图１所示．．通过几何关系，将具有不同小尺度参数的射线（平面波）叠加得到，包含链路两端（基站和终端）的天线阵列和传播路径的３D MIMO信道，其中发射单元ｓ到接收天线单元ｕ之间的子信道 可表示为：</p>
 <script type="math/tex; mode=display">
 \begin{aligned}
@@ -333,16 +336,16 @@ F_{t, s, \theta}\left(\boldsymbol{\Omega}_{t, s, m}\right) \\
 F_{t, s, \varphi}\left(\boldsymbol{\Omega}_{t, n, m}\right)
 \end{array}\right]\\
 &\cdot \mathrm{e}^{\mathrm{j} 2 \pi\left(\Omega_{t, n} \cdot d_{s}, \omega\right) / \lambda} \mathrm{e}^{j 2 \pi\left(\Omega_{n, n} \cdot d_{m}\right) / \lambda} \mathrm{e}^{j 2 \pi v_{n}, t} \delta\left(\tau-\tau_{n, m}\right)
-\end{aligned}</script><p><img src="https://cdn.jsdelivr.net/gh/upwon/MyPicture@master/img20210210185348.png" alt></p>
+\end{aligned}</script><p><img src="https://cdn.jsdelivr.net/gh/upwon/MyPicture@master/img20210210185348.png" alt=""></p>
 <blockquote>
 </blockquote>
 <p><img src="https://cdn.jsdelivr.net/gh/upwon/MyPicture@master/imgimage-20210210123525011.png" alt="图 1 GBSM信道模型中的簇与射线图"></p>
-<p><br></p>
+<p><br /></p>
 <p>通过合理的参数化，GSCM可以比较准确地、灵活地描述不同的场景和不同的天线类型．信道中的簇和射线由路损、阴影衰落和大小尺度衰落共同描述．为了更加准确反映实际情况，模型也考虑站内不同LSPs参数的相关性和不同站间同一LSPs的相关性（与站点的几何关系有关）．簇参数（数目、到达率、功率衰减指数、角度扩展）和簇内射线参数（到达率、平均到达时间、功率衰减率等）是模型的重要参数，现有的GSCM模型通常假设簇和簇内射线数目固定，簇时延间隔服从指数分布，簇功率随时延指数衰减，簇角度服从卷绕高斯或Laplacian分布，（子）簇内射线具有相同的时延、功率和不同的角度．ＳＶ模型同样采用簇和射线概念，区别是簇数及簇内射线数不固定，服从泊松分布，簇角度多采用ＲＴ方法获得；簇内射线时延间隔服从指数分布，功率随时延呈指数衰减，角度服从高斯分布。</p>
-<p><br></p>
+<p><br /></p>
 <h2 id="三、信道探测系统"><a href="#三、信道探测系统" class="headerlink" title="三、信道探测系统"></a>三、信道探测系统</h2><p>信道测量（信道探测）是以提取信道参数为主要目标的研究活动，能够为信道建模提供真实的测量数据，并作为验证模型有效性和合理性的有力工具，所有的信道模型都离不开信道测量。<br>在这些测量活动中主要使用了两类信道探测器：<br>基于矢量网络分析仪（VNA）的信道测量系统和针对特定频率所设计的宽带探测系统。前者将整个探测频段分为若干频点，在每个频点使用单频信号探测，依次扫描所有频点，其频率和带宽仅受限于VNA的能力，具有较大的灵活性，但扫频测量速度慢，且需要使用长电缆（或光缆）共享收发两端的本振来保证每个频点频率和相位的一致性，因此不适合远距离或动态场景测量．后者采用定制射频单元，频率固定，带宽为几百MHz到１GHz，常采用PN、Chirp、Zadoff-Chu或OFDM信号等宽带探测序列，收发两端通常使用GPS驯<br>服的恒温晶振或原子钟（铷钟、铯钟）来保持同步．这种方案能够提高频率维度的测量速度，但测量频宽有限．从硬件成本和校准成本考虑，除了少数的一发几收结构和多发多收结构外，多数系统都采用一个射频单元．<br>因为高频段信号有较大的传播损耗，为保证系统动态范围，探测天线主要采用：<br>（１）高增益方向天线，由于此类天线具有较窄波瓣角度，只能保证一定角度内的信号探测，需要旋转来实现全立体空间扫描，导致空间扫描周期较长，很难对时变信道进行空时联合测量；<br>（２）低增益或全向天线，通过平移构成线阵、面阵或立体阵等虚拟天线阵，由阵列处理增益来保证高信噪比，这种方式同样存在扫描周期较长的问题；</p>
 <p>（３）电控毫米波天线阵列，这种模块化天线阵可以通过电子控制在空间形成不同方向的扫描波束，能够提高扫描速度，但这种方式，需测量和保存大量的天线辐射模式数据．</p>
-<p><br></p>
+<p><br /></p>
 <h2 id="四、现有的信道模型"><a href="#四、现有的信道模型" class="headerlink" title="四、现有的信道模型"></a>四、现有的信道模型</h2><p><strong>IEEE信道模型</strong><br>IEEE802.15.3ｃ是IEEE802.15（ＷＰＡＮ）工作组推出的世界上首个60GHz信道模型，它将传统的SV模型进行了扩展以支持到达方位角，是一个单端二维（２Ｄ）信道模型．它针对从起居室、办公室、图书馆、会议室、桌面到走廊６个场景的LOS和NLOS条件，建立了１０个信道模型CM1～CM10模型。</p>
 <p>IEEE802.11ad信道模型是为超高数据速率60GHz WLAN系统所建议的双端３Ｄ信道模型，它基于扩展SV模型，支持三种室内环境的接入和D2D应用。</p>
 <p><strong>MiWEBA信道模型</strong><br>MiWEBA是一个致力于毫米波通信推广与应用的研究项目，主要参与单位包括Fraunhofer HHI，IMC以及日本、法国的几所大学和研究所．其中第五工作组专注于传播与天线，于２０１４年６月推出第一版毫米波段信模型．该模型支持57~66ＧＨｚ频段的室内和室外三种场景，包括开阔地（校园）、城市街区和旅馆大厅，每种场景都支持三种链路类型，即接入、前传／后传和D2D．采用测量和射线追踪建模方法，信道由视距和少数几条反射路径（统称为Quasi-Deteministic,Q-DＱ射线），再加上数个随机射线簇（Ｒ射线）组成．</p>
@@ -351,9 +354,9 @@ F_{t, s, \varphi}\left(\boldsymbol{\Omega}_{t, n, m}\right)
 <p><strong>mmMAGIC信道模型</strong><br>mmMAGIC旨在为６～100ＧＨｚ的５Ｇ通信开发新的无线接入技术，其中第二工作组专注于信道测量和建模，以欧洲研究机构为研究主体，包括Fraunhofer HHI、Ericsson、Aalto大学等．重点关注室外的城市街区和开<br>放广场，室内的办公室、购物中心、机场值机大厅和地铁站，以及O2I和体育馆．mmMAGIC以３ＧＰＰ３Ｄ模型为基准，采用测量、ＲＴ和点云相结合的建模方法，最终使用Fraunhofer HHI开发的开源QuaDRiGa工具实现三维统计信道模型．QuaDRiGa具有支持球面波，时间演进，场景转换，可变终端速度，ＬＯＳ和ＮＬＯＳ统一建模，几何极化分量计算，更平滑的LSPs相关性等优点．在建模方法上，除了采用ＫＥＤ阻挡建模，还采用更精细的簇内射线的功率、时延和角度建模．因为项目还在进行中，当前它仅综合WINNER、３GPP 3D、METIS和５GCM的结果，给出了初始模型参数．</p>
 <p><strong>３GPP高频段信道模型</strong><br>3GPP HF（６～100GHz）是第一个公开发布的５Ｇ高频段信道标准模型．除了5GCＭ典型场景外，还关注回传、Ｄ２Ｄ／Ｖ２Ｖ、体育场和体育馆．它同样基于3GPP3D模型，采用测量、ＲＴ相结合的建模方法．该模型有很多方法和参数值与５ＧＣＭ相同，但一些实现方法更具体，这包括：多频仿真时的频率相关性建模，使模型支持载波聚合仿真；更精细的射线功率、时延和角度建模，以支持大带宽；对于每一个路径，天线单元可以具有不同的时延，以支持大规模天线阵（但还不支持球面波）．借鉴５ＧＣＭ的两种空间一致性方法：给出空间一致性所需的相关距离，生成空间连续的随机变量分别应用于ＬＯＳ概率、位于室内的概率、建筑物类型及簇相关小尺度参数；基于散射体位置的信道动态演进．继承了５ＧＣＭ阻挡建模方法，对其中的极坐标表达进一步细化，将阻挡物体参数分为两个类型．此外，还提出了簇时延线（ＣＤＬ）和抽头延时线（ＴＤＬ）两个简化模型用于链路仿真，并借鉴METIS，给出了图谱混合信道模型.</p>
 <p><img src="https://cdn.jsdelivr.net/gh/upwon/MyPicture@master/imgimage-20210210124428428.png" alt="图 2 现有信道模型的比较"></p>
-<p><br></p>
+<p><br /></p>
 <p>现有模型能够提供各种场景、三种连接类型（具有不同的收发天线高度）的大、小尺度双端３Ｄ参数，使得MIMO系统能够充分利用俯仰方向信息，提升系统容量．在建模方法上，除了GSCM和SV扩展模型外，RT建模方法得到了足够重视．基于RT的METIS图谱模型宣称符合所有的５Ｇ对信道模型的需求，但是它过于复杂，仍需要增加信道测量工作来验证和校正．多数模型提供全向路损模型，在建模时搜集所有方向路径功率，而高频段多采用定向天线，在NLOS条件时部分较强方向信号不会被接收，会导致按模型和天线增益计算的接收功率过大（路损指数过小），造成夸大的小区覆盖范围，从而影响基站部署．而METIS和IEEE 802.11 ad将路损隐含在小尺度参数的方式可能更为合理，阴影衰落也是如此．除了路损与频率关系明显，多频测量结果并没有反映出LSPs和SSPs的频率依赖关系，而射线追踪仿真能反映出这种关系，时延扩展和角度扩展随频率增加而减小．这可能受限于测量系统的动态范围，还需要进一步测量和分析揭示其规律5G CM和3GPP HF模型都提供了对高带宽和频率一致性的支持，声称支持极窄３Ｄ波束（１°分辨率），在建模方法上有支持球面波和天线一致性的可能：由于散射体位置确定，可以确信定这种方法支持球面波建模，如果能够在GGSCM中将天线按相干距离区域划分，那么可以针对各个天线（组）设置其簇参数，支持天线一致性．最新的模型都<br>提供了多种方法来支持空间一致性．极化支持方面，所有路径采取同一个XPR并不能真实准确刻画信道的极化特征，而RT技术能够计算每条射线的ＰＭ显然更符合实际情况．</p>
-<p><br></p>
+<p><br /></p>
 <h2 id="参考文献及进一步阅读"><a href="#参考文献及进一步阅读" class="headerlink" title="参考文献及进一步阅读"></a>参考文献及进一步阅读</h2><blockquote>
 <p>[1]Qamar F, Siddiqui M H S, Dimyati K, et al. Channel characterization of 28 and 38 GHz MM-wave frequency band spectrum for the future 5G network[C]//2017 IEEE 15th student conference on research and development (SCOReD). IEEE, 2017: 291–296.</p>
 <p>[2]Imai T, Kitao K, Tran N, et al. Development of high frequency band over 6 GHz for 5G mobile communication systems[C]//2015 9th European Conference on Antennas and Propagation (EuCAP). IEEE, 2015: 1–4.</p>
@@ -364,19 +367,19 @@ F_{t, s, \varphi}\left(\boldsymbol{\Omega}_{t, n, m}\right)
 <p>[7]孙健,张文胜,王承祥.5G高频段信道测量与建模进展[J].电子学报,2017,45(05):1249-1260.</p>
 <p>[8]张沛泽,庞帅,周宇,孙向前,王洪博.5G高频段无线信道测量技术研究进展及发展趋势[J].移动通信,2017,41(18):67-72.</p>
 <p>[9]张建华,唐盼,田磊.高频段信道建模研究现状与展望[J].电信网技术,2016(03):10-17.</p>
-<p><a href="http://www.imt-2020.cn/zh/documents/download/148" target="_blank" rel="noopener">IMT-2020（5G）推进组高频段专题组技术报告</a></p>
-<p><a href="https://www.itu.int/en/journal/2019/001/Pages/04.aspx" target="_blank" rel="noopener">Channel models for 5G and beyond</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.imt-2020.cn/zh/documents/download/148">IMT-2020（5G）推进组高频段专题组技术报告</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.itu.int/en/journal/2019/001/Pages/04.aspx">Channel models for 5G and beyond</a></p>
 </blockquote>
-<p><br></p>
-<p><br></p>
-<p><br></p>
-<p><br></p>
+<p><br /></p>
+<p><br /></p>
+<p><br /></p>
+<p><br /></p>
 <blockquote class="blockquote-center"><p>爆竹声中一岁除，春风送暖入屠苏。<br>千门万户曈曈日，总把新桃换旧符。</p>
 <p>—王安石</p>
 </blockquote>
-<p><br></p>
-<p><br></p>
-<p><br></p>
+<p><br /></p>
+<p><br /></p>
+<p><br /></p>
 
     </div>
 
@@ -419,9 +422,9 @@ F_{t, s, \varphi}\left(\boldsymbol{\Omega}_{t, n, m}\right)
       <footer class="post-footer">
           
           <div class="post-tags">
-              <a href="/tags/通信/" rel="tag"><i class="fa fa-tag"></i> 通信</a>
+              <a href="/tags/%E9%80%9A%E4%BF%A1/" rel="tag"><i class="fa fa-tag"></i> 通信</a>
               <a href="/tags/5G-NR/" rel="tag"><i class="fa fa-tag"></i> 5G NR</a>
-              <a href="/tags/调研/" rel="tag"><i class="fa fa-tag"></i> 调研</a>
+              <a href="/tags/%E8%B0%83%E7%A0%94/" rel="tag"><i class="fa fa-tag"></i> 调研</a>
           </div>
 
         
@@ -502,7 +505,7 @@ F_{t, s, \varphi}\left(\boldsymbol{\Omega}_{t, n, m}\right)
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一、简介"><span class="nav-text">一、简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二、５G高频段信道建模的需求与挑战"><span class="nav-text">二、５Ｇ高频段信道建模的需求与挑战</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三、信道建模方法"><span class="nav-text">三、信道建模方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#三、信道探测系统"><span class="nav-text">三、信道探测系统</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#四、现有的信道模型"><span class="nav-text">四、现有的信道模型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考文献及进一步阅读"><span class="nav-text">参考文献及进一步阅读</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E7%AE%80%E4%BB%8B"><span class="nav-text">一、简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%EF%BC%95G%E9%AB%98%E9%A2%91%E6%AE%B5%E4%BF%A1%E9%81%93%E5%BB%BA%E6%A8%A1%E7%9A%84%E9%9C%80%E6%B1%82%E4%B8%8E%E6%8C%91%E6%88%98"><span class="nav-text">二、５Ｇ高频段信道建模的需求与挑战</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E4%BF%A1%E9%81%93%E5%BB%BA%E6%A8%A1%E6%96%B9%E6%B3%95"><span class="nav-text">三、信道建模方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E4%BF%A1%E9%81%93%E6%8E%A2%E6%B5%8B%E7%B3%BB%E7%BB%9F"><span class="nav-text">三、信道探测系统</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%9B%E3%80%81%E7%8E%B0%E6%9C%89%E7%9A%84%E4%BF%A1%E9%81%93%E6%A8%A1%E5%9E%8B"><span class="nav-text">四、现有的信道模型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE%E5%8F%8A%E8%BF%9B%E4%B8%80%E6%AD%A5%E9%98%85%E8%AF%BB"><span class="nav-text">参考文献及进一步阅读</span></a></li></ol></div>
 
 
       </div>
@@ -520,7 +523,7 @@ F_{t, s, \varphi}\left(\boldsymbol{\Omega}_{t, n, m}\right)
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">64</span>
+          <span class="site-state-item-count">65</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -533,20 +536,20 @@ F_{t, s, \varphi}\left(\boldsymbol{\Omega}_{t, n, m}\right)
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">40</span>
+        <span class="site-state-item-count">41</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
 </div>
   <div class="links-of-author motion-element">
       <span class="links-of-author-item">
-        <a href="https://github.com/upwon" title="GitHub → https://github.com/upwon" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+        <a href="https://github.com/upwon" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;upwon" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
       </span>
       <span class="links-of-author-item">
         <a href="mailto:w1244753906@gmail.com" title="E-Mail → mailto:w1244753906@gmail.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
       </span>
       <span class="links-of-author-item">
-        <a href="https://www.lifeee.top///atom.xml" title="RSS → https://www.lifeee.top///atom.xml"><i class="fa fa-fw fa-rss"></i>RSS</a>
+        <a href="https://www.lifeee.top///atom.xml" title="RSS → https:&#x2F;&#x2F;www.lifeee.top&#x2F;&#x2F;&#x2F;atom.xml"><i class="fa fa-fw fa-rss"></i>RSS</a>
       </span>
   </div>
 
@@ -584,13 +587,13 @@ F_{t, s, \varphi}\left(\boldsymbol{\Omega}_{t, n, m}\right)
       <i class="fa fa-area-chart"></i>
     </span>
       <span class="post-meta-item-text">站点总字数：</span>
-    <span title="站点总字数">554k</span>
+    <span title="站点总字数">579k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span class="post-meta-item-text">站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">8:24</span>
+    <span title="站点阅读时长">8:46</span>
 </div>
 
         
@@ -623,9 +626,17 @@ F_{t, s, \varphi}\left(\boldsymbol{\Omega}_{t, n, m}\right)
   <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
   <script src="/lib/velocity/velocity.min.js"></script>
   <script src="/lib/velocity/velocity.ui.min.js"></script>
-<script src="/js/utils.js"></script><script src="/js/motion.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
 <script src="/js/schemes/pisces.js"></script>
+
+
 <script src="/js/next-boot.js"></script>
+
 
 
 
@@ -643,7 +654,9 @@ F_{t, s, \varphi}\left(\boldsymbol{\Omega}_{t, n, m}\right)
 
 
 
-  <script src="/js/local-search.js"></script>
+  
+<script src="/js/local-search.js"></script>
+
 
 
 
