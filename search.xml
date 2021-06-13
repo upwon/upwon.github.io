@@ -23,7 +23,7 @@
 </li>
 </ul>
 <p><a href="https://github.com/microsoft/winget-cli">microsoft/winget-cli: Windows Package Manager CLI (aka winget) </a> 有英文介绍， <a href="https://docs.microsoft.com/zh-cn/windows/package-manager/winget/">使用 winget 工具安装和管理应用程序 | Microsoft Docs</a> 里面有详细的中文介绍 . </p>
-<p><img src="https://tvax3.sinaimg.cn/large/ba920825gy1grgn5ehrhsj21cw0pf421.jpg" alt="image"></p>
+<p><img src="https://tvax3.sinaimg.cn/large/ba920825gy1grgn5ehrhsj21cw0pf421.jpg" alt="下载这个"></p>
 <blockquote>
 <p> 备注</p>
 <p> <strong>winget</strong> 工具需要 Windows 10 版本 1709 (10.0.16299) 或更高版本的 Windows 10. </p>
@@ -54,7 +54,8 @@
 </blockquote>
 <p>接下来输入 <code>winget install Musescore.Musescore</code> 进行安装 . </p>
 <p>有一些软件安装时会弹窗出来申请权限，点击是就行啦 ，如下图所示就是安装成功了. </p>
-<p><img src="https://tva2.sinaimg.cn/large/ba920825gy1grgnnhcwwtj21900qh1kx.jpg" alt="image"></p>
+<p><img src="https://tva2.sinaimg.cn/large/ba920825gy1grgnnhcwwtj21900qh1kx.jpg" alt=""></p>
+<p><br/></p>
 <p><strong><font color='cyan'>更改安装路径 !!!</font></strong> </p>
 <p>默认的安装路径是在C盘里面，当然安装路径是可以更改的，使用 <code>-l</code>来指定路径，<code>l</code>代表 <code>location</code>的意思. </p>
 <p>比如： </p>
