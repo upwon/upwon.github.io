@@ -6,7 +6,7 @@
   <link href="https://www.lifeee.top/atom.xml" rel="self"/>
   
   <link href="https://www.lifeee.top/"/>
-  <updated>2021-06-10T09:50:21.878Z</updated>
+  <updated>2021-06-13T14:33:33.700Z</updated>
   <id>https://www.lifeee.top/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>包管理器 winget 使用指南</title>
+    <link href="https://www.lifeee.top/posts/36943.html"/>
+    <id>https://www.lifeee.top/posts/36943.html</id>
+    <published>2021-06-13T13:58:12.000Z</published>
+    <updated>2021-06-13T14:33:33.700Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://tvax1.sinaimg.cn/large/ba920825gy1grgzqvrxgaj21hc0zkgv6.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;winget 是 windows 10 平台的一个包管理工具，能够在终端通过简单的命令行实现软件的安装、更新、卸载等，与之类似的有 Scoop 和 Chocolatey. 由于 winget 是官方支持，因此安全性、兼容性方面都有保障. 若你和我一些是一个 「更新狂」， 那么你以后更新软件将十分惬意，没有要去进行一系列繁杂的下载安装 …  ,  只需打开终端输入简单的命令即可 . 🍨&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    <category term="善用佳软" scheme="https://www.lifeee.top/categories/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
+    
+    
+    <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
+    
+    <category term="善用佳软" scheme="https://www.lifeee.top/tags/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
+    
+    <category term="Windows" scheme="https://www.lifeee.top/tags/Windows/"/>
+    
+  </entry>
   
   <entry>
     <title>Linux 下安装中文版 man 手册 以及 C++ 帮助手册</title>
@@ -473,34 +499,6 @@
     <category term="开源" scheme="https://www.lifeee.top/tags/%E5%BC%80%E6%BA%90/"/>
     
     <category term="绘图" scheme="https://www.lifeee.top/tags/%E7%BB%98%E5%9B%BE/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Vivado与VS Code:强强联手3-自动对齐代码</title>
-    <link href="https://www.lifeee.top/posts/5546.html"/>
-    <id>https://www.lifeee.top/posts/5546.html</id>
-    <published>2020-06-26T12:49:58.000Z</published>
-    <updated>2020-06-26T13:25:42.209Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://gitee.com/wang_wx/image_bed/raw/master/2020/20200626212130.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;写程序的过程中，有时候难免要从网上直接寻找一些代码来修改。但经常会碰到代码格式不规范的情况，所以如果能够自动将代码格式规范化，或者对齐代码来符合自身的编程习惯，就很方便后续的修改等工作。此次就来在 VS Code上实现这一功能。🥤&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="技术" scheme="https://www.lifeee.top/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
-    
-    <category term="善用佳软" scheme="https://www.lifeee.top/categories/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
-    
-    
-    <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
-    
-    <category term="善用佳软" scheme="https://www.lifeee.top/tags/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
-    
-    <category term="IDE" scheme="https://www.lifeee.top/tags/IDE/"/>
     
   </entry>
   
