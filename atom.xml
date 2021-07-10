@@ -6,7 +6,7 @@
   <link href="https://www.lifeee.top/atom.xml" rel="self"/>
   
   <link href="https://www.lifeee.top/"/>
-  <updated>2021-07-10T13:36:18.513Z</updated>
+  <updated>2021-07-10T13:38:10.832Z</updated>
   <id>https://www.lifeee.top/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>使用 CLion 和 Valgrind 调试程序防止内存泄漏</title>
+    <title>使用 CLion 和 Valgrind 调试程序检查内存泄漏</title>
     <link href="https://www.lifeee.top/posts/9487.html"/>
     <id>https://www.lifeee.top/posts/9487.html</id>
     <published>2021-07-10T13:15:18.000Z</published>
-    <updated>2021-07-10T13:36:18.513Z</updated>
+    <updated>2021-07-10T13:38:10.832Z</updated>
     
     
     <summary type="html">&lt;p&gt;&lt;img src=&quot;https://tva2.sinaimg.cn/large/ba920825gy1gsc5u2610gj23su2j8dox.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
