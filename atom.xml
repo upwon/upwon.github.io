@@ -6,7 +6,7 @@
   <link href="https://www.lifeee.top/atom.xml" rel="self"/>
   
   <link href="https://www.lifeee.top/"/>
-  <updated>2021-06-13T14:42:53.446Z</updated>
+  <updated>2021-07-10T13:36:18.513Z</updated>
   <id>https://www.lifeee.top/</id>
   
   <author>
@@ -15,6 +15,54 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>使用 CLion 和 Valgrind 调试程序防止内存泄漏</title>
+    <link href="https://www.lifeee.top/posts/9487.html"/>
+    <id>https://www.lifeee.top/posts/9487.html</id>
+    <published>2021-07-10T13:15:18.000Z</published>
+    <updated>2021-07-10T13:36:18.513Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://tva2.sinaimg.cn/large/ba920825gy1gsc5u2610gj23su2j8dox.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt; Valgrind Memcheck 是一个用于检测内存使用问题的工具，比如泄漏、无效的内存访问、不正确的释放和引用未定义的值。CLion提供了配置Valgrind ，但不是开箱即用，需要自己安装然后配置一下，通过本文三言两语你将学会CLion 下 Valgrind 的配置。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    <category term="善用佳软" scheme="https://www.lifeee.top/categories/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
+    
+    
+    <category term="C++" scheme="https://www.lifeee.top/tags/C/"/>
+    
+    <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
+    
+    <category term="Windows" scheme="https://www.lifeee.top/tags/Windows/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>WSL SSH 自启动</title>
+    <link href="https://www.lifeee.top/posts/14733.html"/>
+    <id>https://www.lifeee.top/posts/14733.html</id>
+    <published>2021-07-10T13:14:58.000Z</published>
+    <updated>2021-07-10T13:19:40.519Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://tvax1.sinaimg.cn/large/ba920825gy1gsc5umbr8dj255p3ft484.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;p&gt;vbs脚本实现WSL SSH 自启动&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    
+    <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
+    
+    <category term="Windows" scheme="https://www.lifeee.top/tags/Windows/"/>
+    
+  </entry>
   
   <entry>
     <title>包管理器 winget 使用指南</title>
@@ -447,58 +495,6 @@
     <category term="通信" scheme="https://www.lifeee.top/tags/%E9%80%9A%E4%BF%A1/"/>
     
     <category term="5G NR" scheme="https://www.lifeee.top/tags/5G-NR/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>QT 控件自适应窗口大小布局</title>
-    <link href="https://www.lifeee.top/posts/52368.html"/>
-    <id>https://www.lifeee.top/posts/52368.html</id>
-    <published>2020-07-14T14:12:17.000Z</published>
-    <updated>2021-04-08T13:25:56.004Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://gitee.com/wang_wx/image_bed/raw/master/2020/landscape-mountains-nature-sky-129105_compressed.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;Qt Creator 中为 UI 界面的窗体控件设置自适应窗口大小布局&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="编程" scheme="https://www.lifeee.top/categories/%E7%BC%96%E7%A8%8B/"/>
-    
-    <category term="问题" scheme="https://www.lifeee.top/categories/%E9%97%AE%E9%A2%98/"/>
-    
-    
-    <category term="C++" scheme="https://www.lifeee.top/tags/C/"/>
-    
-    <category term="问题" scheme="https://www.lifeee.top/tags/%E9%97%AE%E9%A2%98/"/>
-    
-    <category term="QT" scheme="https://www.lifeee.top/tags/QT/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>全平台开源绘图利器 Draw.io</title>
-    <link href="https://www.lifeee.top/posts/18175.html"/>
-    <id>https://www.lifeee.top/posts/18175.html</id>
-    <published>2020-06-28T12:55:16.000Z</published>
-    <updated>2020-06-28T13:13:32.121Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://gitee.com/wang_wx/image_bed/raw/master/2020/20200628210339.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;Draw.io 是一款优秀的全平台开源绘图软件，支持在线绘图，而且还支持在 VS Code 中绘图。操作简便，内置模板丰富，支持导出 &lt;code&gt;png&lt;/code&gt;、&lt;code&gt;svg&lt;/code&gt; 、&lt;code&gt;VSDX&lt;/code&gt;(Visio格式) 、&lt;code&gt;PDF&lt;/code&gt; 等格式的文件。简直优秀至极，赶快去试一试吧。😉&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
-    
-    <category term="善用佳软" scheme="https://www.lifeee.top/categories/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
-    
-    
-    <category term="善用佳软" scheme="https://www.lifeee.top/tags/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
-    
-    <category term="开源" scheme="https://www.lifeee.top/tags/%E5%BC%80%E6%BA%90/"/>
-    
-    <category term="绘图" scheme="https://www.lifeee.top/tags/%E7%BB%98%E5%9B%BE/"/>
     
   </entry>
   
