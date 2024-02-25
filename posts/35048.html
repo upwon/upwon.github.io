@@ -1,0 +1,980 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.1.1">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/myapple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/myfavicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/myfavicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/myapple-touch-icon-next.png" color="#222">
+  <meta name="google-site-verification" content="google2fc64c2b92961282.html">
+  <meta name="baidu-site-verification" content="s6BwSjIZYB">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.loli.net/css?family='LXGW+WenKai+LITE':300,300italic,400,400italic,700,700italic%7C'LXGW+WenKai+Screen':300,300italic,400,400italic,700,700italic%7C'LXGW+WenKai':300,300italic,400,400italic,700,700italic%7C'Noto+Serif+SC':300,300italic,400,400italic,700,700italic%7C'EB+Garamond':300,300italic,400,400italic,700,700italic%7C'PingFang+SC':300,300italic,400,400italic,700,700italic%7C'Microsoft+YaHei':300,300italic,400,400italic,700,700italic%7C'sans-serif':300,300italic,400,400italic,700,700italic%7CMa+Shan+Zheng:300,300italic,400,400italic,700,700italic%7CLXGW+WenKai+Screen:300,300italic,400,400italic,700,700italic%7CLXGW+WenKai:300,300italic,400,400italic,700,700italic%7CMenlo:300,300italic,400,400italic,700,700italic%7CMonaco:300,300italic,400,400italic,700,700italic%7CConsolas:300,300italic,400,400italic,700,700italic%7CSource+Code+Pro:300,300italic,400,400italic,700,700italic%7Csystem-ui:300,300italic,400,400italic,700,700italic%7Cmonospace:300,300italic,400,400italic,700,700italic%7Csans-serif:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha256-yIDrPSXHZdOZhAqiBP7CKzIwMQmRCJ8UeB8Jo17YC4o=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/themes/blue/pace-theme-minimal.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"www.lifeee.top","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.19.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"mac","show_result":true},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="Markdown写作的基本语法，及一些Hexo特有的语法。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo博客Markdown写作">
+<meta property="og:url" content="https://www.lifeee.top/posts/35048.html">
+<meta property="og:site_name" content="热夏的博客">
+<meta property="og:description" content="Markdown写作的基本语法，及一些Hexo特有的语法。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200506232402.jpg">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/ShareX_20200506_171642_1057_621_firefox.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/ShareX_20200506_171801_1055_633_firefox.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/ShareX_20200506_171250_1066_619_firefox.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/ShareX_20200506_172051_1075_627_firefox.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200422083632.jpg">
+<meta property="article:published_time" content="2020-05-04T10:09:03.000Z">
+<meta property="article:modified_time" content="2022-11-14T16:57:17.380Z">
+<meta property="article:author" content="热夏">
+<meta property="article:tag" content="教程">
+<meta property="article:tag" content="技巧">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200506232402.jpg">
+
+
+<link rel="canonical" href="https://www.lifeee.top/posts/35048.html">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://www.lifeee.top/posts/35048.html","path":"posts/35048.html","title":"Hexo博客Markdown写作"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Hexo博客Markdown写作 | 热夏的博客</title>
+  
+
+
+
+
+
+
+
+<link href="https://fonts.loli.net/css?family=Noto+Serif+SC:400,500,700&display=swap&subset=chinese-simplified" rel="stylesheet">
+<link rel="stylesheet" href="https://npm.elemecdn.com/lxgw-wenkai-screen-webfont@1.7.0/style.css" />
+
+<link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&display=swap" rel="stylesheet">
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="热夏的博客" type="application/atom+xml">
+<style>.darkmode--activated{--body-bg-color:#282828;--content-bg-color:#333;--card-bg-color:#555;--text-color:#ccc;--blockquote-color:#bbb;--link-color:#ccc;--link-hover-color:#eee;--brand-color:#ddd;--brand-hover-color:#ddd;--table-row-odd-bg-color:#282828;--table-row-hover-bg-color:#363636;--menu-item-bg-color:#555;--btn-default-bg:#222;--btn-default-color:#ccc;--btn-default-border-color:#555;--btn-default-hover-bg:#666;--btn-default-hover-color:#ccc;--btn-default-hover-border-color:#666;--highlight-background:#282b2e;--highlight-foreground:#a9b7c6;--highlight-gutter-background:#34393d;--highlight-gutter-foreground:#9ca9b6}.darkmode--activated img{opacity:.75}.darkmode--activated img:hover{opacity:.9}.darkmode--activated code{color:#69dbdc;background:0 0}button.darkmode-toggle{z-index:9999}.darkmode-ignore,img{display:flex!important}.beian img{display:inline-block!important}</style></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">热夏的博客</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-heart fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Markdown%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95"><span class="nav-number">1.</span> <span class="nav-text">Markdown基本语法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A0%87%E9%A2%98"><span class="nav-number">1.1.</span> <span class="nav-text">标题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BC%BA%E8%B0%83"><span class="nav-number">1.2.</span> <span class="nav-text">强调</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%9C%E4%BD%93"><span class="nav-number">1.3.</span> <span class="nav-text">斜体</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BC%BA%E8%B0%83%E7%9A%84%E6%96%9C%E4%BD%93"><span class="nav-number">1.4.</span> <span class="nav-text">强调的斜体</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%A0%E9%99%A4"><span class="nav-number">1.5.</span> <span class="nav-text">删除</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%96%E9%93%BE%E7%9A%84%E8%B6%85%E9%93%BE%E6%8E%A5"><span class="nav-number">1.6.</span> <span class="nav-text">外链的超链接</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A1%B5%E5%86%85%E7%9A%84%E8%B6%85%E9%93%BE%E6%8E%A5"><span class="nav-number">1.7.</span> <span class="nav-text">页内的超链接</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9C%89%E5%BA%8F%E5%88%97%E8%A1%A8"><span class="nav-number">1.8.</span> <span class="nav-text">有序列表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%97%A0%E5%BA%8F%E5%88%97%E8%A1%A8"><span class="nav-number">1.9.</span> <span class="nav-text">无序列表</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BC%95%E7%94%A8%E5%9D%97"><span class="nav-number">1.10.</span> <span class="nav-text">引用块</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%86%E9%9A%94%E7%BA%BF"><span class="nav-number">1.11.</span> <span class="nav-text">分隔线</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8D%A2%E8%A1%8C"><span class="nav-number">1.12.</span> <span class="nav-text">换行</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A1%8C%E5%86%85%E4%BB%A3%E7%A0%81"><span class="nav-number">1.13.</span> <span class="nav-text">行内代码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HTML-%E6%A0%87%E7%AD%BE-%E9%94%AE%E7%9B%98%E6%8C%89%E9%94%AE"><span class="nav-number">1.14.</span> <span class="nav-text">HTML  标签 键盘按键</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81%E5%9D%97%E6%98%BE%E7%A4%BA%E6%95%88%E6%9E%9C"><span class="nav-number">1.15.</span> <span class="nav-text">代码块显示效果</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Markdown%E6%89%A9%E5%B1%95%E8%AF%AD%E6%B3%95"><span class="nav-number">2.</span> <span class="nav-text">Markdown扩展语法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A1%A8%E6%A0%BC"><span class="nav-number">2.1.</span> <span class="nav-text">表格</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HTML"><span class="nav-number">2.2.</span> <span class="nav-text">HTML</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AD%97%E4%BD%93%E9%A2%9C%E8%89%B2"><span class="nav-number">2.2.1.</span> <span class="nav-text">字体颜色</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%83%8C%E6%99%AF%E8%89%B2"><span class="nav-number">2.2.2.</span> <span class="nav-text">背景色</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%B8%A6%E9%A2%9C%E8%89%B2%E7%9A%84%E5%88%86%E5%89%B2%E7%BA%BF"><span class="nav-number">2.2.3.</span> <span class="nav-text">带颜色的分割线</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%A6%96%E8%A1%8C%E7%BC%A9%E8%BF%9B"><span class="nav-number">2.2.4.</span> <span class="nav-text">首行缩进</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AD%97%E4%BD%93%E5%A4%A7%E5%B0%8F"><span class="nav-number">2.2.5.</span> <span class="nav-text">字体大小</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%B1%85%E4%B8%AD"><span class="nav-number">2.2.6.</span> <span class="nav-text">居中</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Hexo-%E5%8D%9A%E5%AE%A2-Next%E4%B8%BB%E9%A2%98%E7%89%B9%E6%9C%89%E7%9A%84%E4%B8%80%E4%BA%9B%E8%AF%AD%E6%B3%95"><span class="nav-number">3.</span> <span class="nav-text">Hexo 博客 Next主题特有的一些语法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%87%E6%9C%AC%E5%B1%85%E4%B8%AD%E7%9A%84%E5%BC%95%E7%94%A8"><span class="nav-number">3.1.</span> <span class="nav-text">文本居中的引用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Note"><span class="nav-number">3.2.</span> <span class="nav-text">Note</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%80%89%E9%A1%B9%E5%8D%A1"><span class="nav-number">3.3.</span> <span class="nav-text">选项卡</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%BE%E6%A0%87"><span class="nav-number">3.4.</span> <span class="nav-text">图标</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Button-%E6%A0%87%E7%AD%BE"><span class="nav-number">3.5.</span> <span class="nav-text">Button 标签</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81%E6%B7%BB%E5%8A%A0%E6%94%B9%E5%8A%A8%E6%A0%87%E8%AE%B0"><span class="nav-number">3.6.</span> <span class="nav-text">代码添加改动标记</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="热夏"
+      src="/images/head.jpg">
+  <p class="site-author-name" itemprop="name">热夏</p>
+  <div class="site-description" itemprop="description">空山新雨后，天气晚来秋。</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">81</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">42</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/upwon" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;upwon" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:w1244753906@gmail.com" title="E-Mail → mailto:w1244753906@gmail.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.lifeee.top//atom.xml" title="RSS → https:&#x2F;&#x2F;www.lifeee.top&#x2F;&#x2F;atom.xml" rel="noopener me"><i class="fa fa-rss fa-fw"></i>RSS</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+        <div class="pjax">
+        </div>
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.lifeee.top/posts/35048.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/head.jpg">
+      <meta itemprop="name" content="热夏">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="热夏的博客">
+      <meta itemprop="description" content="空山新雨后，天气晚来秋。">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Hexo博客Markdown写作 | 热夏的博客">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Hexo博客Markdown写作
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2020-05-04 18:09:03" itemprop="dateCreated datePublished" datetime="2020-05-04T18:09:03+08:00">2020-05-04</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-11-15 00:57:17" itemprop="dateModified" datetime="2022-11-15T00:57:17+08:00">2022-11-15</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%95%99%E7%A8%8B/" itemprop="url" rel="index"><span itemprop="name">教程</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/" itemprop="url" rel="index"><span itemprop="name">善用佳软</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>9k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>8 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200506232402.jpg" alt="&lt;center&gt;&lt;font size=1.5&gt;  From Pexels&lt;/center&gt;"></p>
+<p>Markdown写作的基本语法，及一些Hexo特有的语法。</p>
+<span id="more"></span>
+
+
+
+
+
+
+
+<h2 id="Markdown基本语法"><a href="#Markdown基本语法" class="headerlink" title="Markdown基本语法"></a>Markdown基本语法</h2><h3 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h3><p>支持6种大小的标题，分别对应<code>#</code>,<code>##</code>,<code>###</code>,<code>####</code>,<code>#####</code>,<code>######</code>，和样式文件中的<code>h1,...,h6</code>如：<br>#####H5</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#####H5</span><br></pre></td></tr></table></figure>
+
+<p>######H6</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">######H6</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="强调"><a href="#强调" class="headerlink" title="强调"></a>强调</h3><p><strong>我是强调</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">**我是强调**</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="斜体"><a href="#斜体" class="headerlink" title="斜体"></a>斜体</h3><p>试试<em>斜体</em></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">试试*斜体*</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="强调的斜体"><a href="#强调的斜体" class="headerlink" title="强调的斜体"></a>强调的斜体</h3><p>试试<em><strong>强调的斜体</strong></em></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">试试***强调的斜体***</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h3><p>试试 <del>删除</del></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">试试 ~~删除~~</span><br></pre></td></tr></table></figure>
+
+<h3 id="外链的超链接"><a href="#外链的超链接" class="headerlink" title="外链的超链接"></a>外链的超链接</h3><p>试试外链的超链接：<a target="_blank" rel="noopener" href="https://upwon.github.io/">我是外链的超链接</a>,markdown对链接的语法为：<code>[]()</code>,如：<code>[我是外链的超链接](https://upwon.github.io/)</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[我是外链的超链接](https://upwon.github.io/),</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="页内的超链接"><a href="#页内的超链接" class="headerlink" title="页内的超链接"></a>页内的超链接</h3><p>试试页内的超链接：<a href="#jump_1">我是页内的超链接</a>，注：你先要在要跳转的到地方放置一个类似：<code>&lt;a id=&quot;jump_1&quot;&gt;任意内容&lt;/a&gt;</code>的锚点。由<code>id=&quot;jump_1&quot; </code>来匹配。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[我是页内的超链接](#jump_1)</span><br></pre></td></tr></table></figure>
+
+
+
+
+<h3 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h3><ol>
+<li><p>有序列表 1</p>
+</li>
+<li><p>有序列表 2</p>
+</li>
+<li><p>有序列表 3</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1. 有序列表 1</span><br><span class="line">2. 有序列表 2</span><br><span class="line">3. 有序列表 3</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h3 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h3><ul>
+<li><p>无序列表 1</p>
+</li>
+<li><p>无序列表 2</p>
+</li>
+<li><p>无序列表 3</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">- 无序列表 1</span><br><span class="line">- 无序列表 2</span><br><span class="line">- 无序列表 3</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="引用块"><a href="#引用块" class="headerlink" title="引用块"></a>引用块</h3><p>只需要在前面加 <code>&gt;</code>,如下:</p>
+<blockquote>
+<p>我是引用块</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt; 我是引用块</span><br></pre></td></tr></table></figure>
+
+<h3 id="分隔线"><a href="#分隔线" class="headerlink" title="分隔线"></a>分隔线</h3><hr>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">---</span><br></pre></td></tr></table></figure>
+
+<h3 id="换行"><a href="#换行" class="headerlink" title="换行"></a>换行</h3><p><br/> <br/> <br/> </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;br/&gt; </span><br><span class="line">&lt;br/&gt; </span><br><span class="line">&lt;br/&gt; </span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="行内代码"><a href="#行内代码" class="headerlink" title="行内代码"></a>行内代码</h3><p>如：<code>AppCompatActivity</code>类,markdown对行内代码的语法是前后用：`,其中 ` 为键盘<kbd>Tab</kbd>箭上面上角那个<kbd>`</kbd></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">`AppCompatActivity`</span><br></pre></td></tr></table></figure>
+
+<h3 id="HTML-标签-键盘按键"><a href="#HTML-标签-键盘按键" class="headerlink" title="HTML  标签 键盘按键"></a>HTML <kbd> 标签 键盘按键</h3><p>markdown中可以插入html标签来实现更加丰富的显示效果。例如<code>&lt;kbd&gt;</code>标签来插入键盘按键 <kbd>Ctrl+S</kbd></p>
+<p><strong>定义和用法</strong><br><code>&lt;kbd&gt;</code>标签定义键盘文本。<br>说到技术概念上的特殊样式时，就要提到 <code>&lt;kbd&gt;</code>标签。<br>正如你已经猜到的，它用来表示文本是从键盘上键入的。<br>浏览器通常用等宽字体来显示该标签中包含的文本。<code>&lt;kbd&gt;</code>标签经常用在于计算机相关的文档和手册中。例如：<br>键入<code>&lt;kbd&gt;quit&lt;/kbd&gt;</code>来退出程序，或者键入<code>&lt;kbd&gt;menu&lt;/kbd&gt;</code>来返回主菜单。</p>
+<p>比如：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">kbd</span>&gt;</span>Ctrl<span class="tag">&lt;/<span class="name">kbd</span>&gt;</span>+<span class="tag">&lt;<span class="name">kbd</span>&gt;</span>F<span class="tag">&lt;/<span class="name">kbd</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>显示为：</p>
+<p><kbd>Ctrl</kbd>+<kbd>F</kbd></p>
+<h3 id="代码块显示效果"><a href="#代码块显示效果" class="headerlink" title="代码块显示效果"></a>代码块显示效果</h3><p>注：markdown对代码块的语法是开始和结束行都要添加：&#96;&#96;&#96;,其中 ` 为windows键盘左上角那个，如下：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">kind:</span> <span class="string">RoleBinding</span></span><br><span class="line"><span class="attr">apiVersion:</span> <span class="string">rbac.authorization.k8s.io/v1</span></span><br><span class="line"><span class="attr">metadata:</span></span><br><span class="line">  <span class="attr">name:</span> <span class="string">haimaxy-sa-rolebinding</span></span><br><span class="line">  <span class="attr">namespace:</span> <span class="string">kube-system</span></span><br><span class="line"><span class="attr">subjects:</span></span><br><span class="line"><span class="bullet">-</span> <span class="attr">kind:</span> <span class="string">ServiceAccount</span></span><br><span class="line">  <span class="attr">name:</span> <span class="string">haimaxy-sa</span></span><br><span class="line">  <span class="attr">namespace:</span> <span class="string">kube-system</span></span><br><span class="line"><span class="attr">roleRef:</span></span><br><span class="line">  <span class="attr">kind:</span> <span class="string">Role</span></span><br><span class="line">  <span class="attr">name:</span> <span class="string">haimaxy-sa-role</span></span><br><span class="line">  <span class="attr">apiGroup:</span> <span class="string">rbac.authorization.k8s.io</span></span><br></pre></td></tr></table></figure>
+
+<p>要精确指定语言，</p>
+<p>如：<code>java,cpp,css,xml,javascript,python,php,go,kotlin,lua,objectivec</code>等等时，在头部直接指定，如：```javascript，如下：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">showSnackbar</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">var</span> $snackbar = $(<span class="string">&#x27;#snackbar&#x27;</span>);</span><br><span class="line">  $snackbar.<span class="title function_">addClass</span>(<span class="string">&#x27;show&#x27;</span>);</span><br><span class="line">  <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    $snackbar.<span class="title function_">removeClass</span>(<span class="string">&#x27;show&#x27;</span>);</span><br><span class="line">  &#125;, <span class="number">3000</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>```javascript</p>
+<p>function showSnackbar() {<br> var $snackbar &#x3D; $(‘#snackbar’);<br> $snackbar.addClass(‘show’);<br> setTimeout(() &#x3D;&gt; {<br>   $snackbar.removeClass(‘show’);<br> }, 3000);<br>}</p>
+</blockquote>
+<p>在页面头部提供了很多中<strong>代码主题</strong>风格，可以根据需要选择合适的即可。</p>
+<p><br/> <br/></p>
+<h2 id="Markdown扩展语法"><a href="#Markdown扩展语法" class="headerlink" title="Markdown扩展语法"></a>Markdown扩展语法</h2><h3 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h3><table>
+<thead>
+<tr>
+<th>班级</th>
+<th>男生</th>
+<th>女生</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>一(7)班</td>
+<td>30</td>
+<td>25</td>
+</tr>
+<tr>
+<td>一(8)班</td>
+<td>25</td>
+<td>30</td>
+</tr>
+</tbody></table>
+<p>注：表格在公众号预览时，可能在PC端显示的不是正确的全屏，但在手机上预览时就会正常显示为全屏的了。</p>
+<br/> 
+
+<h3 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h3><p>如果你懂html和css，那下面这些效果就不在话下了：</p>
+<p><a href="#jump_1">来个页内跳转</a>，跳转到文未的：<code>&lt;a id=&quot;jump_1&quot;&gt;我是页内跳转到的位置&lt;/a&gt;</code> ,对应：<code>id=&quot;jump_1&quot;</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;a href=&quot;#jump_1&quot;&gt;来个页内跳转&lt;/a&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<br/>
+
+<h4 id="字体颜色"><a href="#字体颜色" class="headerlink" title="字体颜色"></a>字体颜色</h4><p><span  style="color: #5bdaed; ">先给点颜色你看看</span></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">span</span>  <span class="attr">style</span>=<span class="string">&quot;color: #5bdaed; &quot;</span>&gt;</span>先给点颜色你看看<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<br/>
+
+<p><span  style="color: #AE87FA; ">再给点颜色你看看</span></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;span  style=&quot;color: #AE87FA; &quot;&gt;再给点颜色你看看&lt;/span&gt;</span><br></pre></td></tr></table></figure>
+
+<br/>
+
+<h4 id="背景色"><a href="#背景色" class="headerlink" title="背景色"></a>背景色</h4><table><tr><td bgcolor=green>背景色是：green</td></tr></table>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;table&gt;&lt;tr&gt;&lt;td bgcolor=green&gt;背景色是：green&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</span><br></pre></td></tr></table></figure>
+
+<br/>
+
+<h4 id="带颜色的分割线"><a href="#带颜色的分割线" class="headerlink" title="带颜色的分割线"></a>带颜色的分割线</h4><hr style="background-color : red;">
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;hr style=&quot;background-color : red;&quot;&gt;</span><br></pre></td></tr></table></figure>
+
+<br/>
+
+<h4 id="首行缩进"><a href="#首行缩进" class="headerlink" title="首行缩进"></a>首行缩进</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&amp;ensp;&amp;ensp;首行缩进测试</span><br></pre></td></tr></table></figure>
+
+<p>&ensp;&ensp;首行缩进测试</p>
+<p>这没有缩进</p>
+<blockquote>
+<p>(每个表示一个空格，连续使用两个即可）</p>
+<ul>
+<li><code>&amp;ensp;</code> 半角的空格</li>
+<li><code>&amp;emsp;</code>全角的空格</li>
+</ul>
+</blockquote>
+<br/>
+
+<h4 id="字体大小"><a href="#字体大小" class="headerlink" title="字体大小"></a>字体大小</h4><p><span  style="font-size:1.3em;">试试改变字体大小</span></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">span</span>  <span class="attr">style</span>=<span class="string">&quot;font-size:1.3em;&quot;</span>&gt;</span>试试改变字体大小<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<br/>
+
+
+
+<p><span  style="font-size:1.3em;font-weight: bold;">改变字体大小，再来个粗体又如何？</span></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">span</span>  <span class="attr">style</span>=<span class="string">&quot;font-size:1.3em;font-weight: bold;&quot;</span>&gt;</span>改变字体大小，再来个粗体又如何？<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<br/>
+
+<h4 id="居中"><a href="#居中" class="headerlink" title="居中"></a>居中</h4><p style="text-align:center">
+试试内容居中
+    </p>
+
+
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;p style=&quot;text-align:center&quot;&gt;</span><br><span class="line">试试内容居中</span><br><span class="line">&lt;/p&gt;</span><br></pre></td></tr></table></figure>
+
+<br/>
+
+<p style="text-align:right">
+那内容居右呢？
+</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;p style=&quot;text-align:right&quot;&gt;</span><br><span class="line">那内容居右呢？</span><br><span class="line">&lt;/p&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+<br/>
+
+
+
+
+<p style="text-align:center;color:#1e819e;font-size:1.3em;font-weight: bold;">
+来个综合的试试
+<br/>
+第二行
+</p>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;p style=&quot;text-align:center;color:#1e819e;font-size:1.3em;font-weight: bold;&quot;&gt;</span><br><span class="line">来个综合的试试</span><br><span class="line">&lt;br/&gt;</span><br><span class="line">第二行</span><br><span class="line">&lt;/p&gt;</span><br></pre></td></tr></table></figure>
+
+<br/>
+
+
+
+<p><a id="jump_1">我是页内跳转到的位置</a></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;a id=&quot;jump_1&quot;&gt;我是页内跳转到的位置&lt;/a&gt;</span><br></pre></td></tr></table></figure>
+
+<br/>
+
+
+
+<br/>
+
+<h2 id="Hexo-博客-Next主题特有的一些语法"><a href="#Hexo-博客-Next主题特有的一些语法" class="headerlink" title="Hexo 博客 Next主题特有的一些语法"></a>Hexo 博客 Next主题特有的一些语法</h2><h3 id="文本居中的引用"><a href="#文本居中的引用" class="headerlink" title="文本居中的引用"></a>文本居中的引用</h3><p>此标签将生成一个带上下分割线的引用，同时引用内文本将自动居中。 文本居中时，多行文本若长度不等，视觉上会显得不对称，因此建议在引用单行文本的场景下使用。   例如作为文章开篇引用 或者 结束语之前的总结引用。</p>
+<p><strong>使用方式</strong></p>
+<ul>
+<li>HTML方式：使用这种方式时，给 <code>img</code> 添加属性 <code>class=&quot;blockquote-center&quot;</code> 即可。</li>
+<li>标签方式：使用 <code>centerquote</code> 或者 简写 <code>cq</code>。</li>
+</ul>
+<p> 此标签要求 NexT 的版本在 0.4.5 或以上。      若你正在使用的版本比较低，可以选择使用 <code>HTML</code> 方式。    </p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- HTML方式: 直接在 Markdown 文件中编写 HTML 来调用 --&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 其中 class=&quot;blockquote-center&quot; 是必须的 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">blockquote</span> <span class="attr">class</span>=<span class="string">&quot;blockquote-center&quot;</span>&gt;</span>blah blah blah<span class="tag">&lt;/<span class="name">blockquote</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 标签 方式，要求版本在0.4.5或以上 --&gt;</span></span><br><span class="line">&#123;% centerquote %&#125;blah blah blah&#123;% endcenterquote %&#125;</span><br><span class="line"><span class="comment">&lt;!-- 标签别名 --&gt;</span></span><br><span class="line">&#123;% cq %&#125; blah blah blah &#123;% endcq %&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>举例</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;blockquote class=&quot;blockquote-center&quot;&gt;</span><br><span class="line">HTML方式 </span><br><span class="line">水止无痕地，云行不计程。</span><br><span class="line">到时为彼岸，过处即前生。</span><br><span class="line">——《送文畅上人东游》吕温</span><br><span class="line">&lt;/blockquote&gt;</span><br></pre></td></tr></table></figure>
+
+ <br/>
+
+<blockquote class="blockquote-center">HTML方式 
+水止无痕地，云行不计程。
+到时为彼岸，过处即前生。
+——《送文畅上人东游》吕温
+</blockquote>
+ <br/>
+
+ <br/>
+
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#123;% centerquote %&#125;</span><br><span class="line">标签方式</span><br><span class="line">晓看天色暮看云，行也思君，坐也思君。</span><br><span class="line">--唐寅《一剪梅·雨打梨花深闭门》</span><br><span class="line"></span><br><span class="line">&#123;% endcenterquote %&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<blockquote class="blockquote-center">
+<p>标签方式<br>晓看天色暮看云，行也思君，坐也思君。<br>–唐寅《一剪梅·雨打梨花深闭门》</p>
+
+</blockquote>
+
+ <br/>
+
+ <br/>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&#123;% cq %&#125;</span><br><span class="line"></span><br><span class="line">空山新雨后，天气晚来秋。</span><br><span class="line"></span><br><span class="line">明月松间照，清泉石上流。</span><br><span class="line"></span><br><span class="line">——《山居秋暝》王维</span><br><span class="line"></span><br><span class="line">&#123;% endcq %&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<blockquote class="blockquote-center">
+<p>空山新雨后，天气晚来秋。</p>
+<p>明月松间照，清泉石上流。</p>
+<p>——《山居秋暝》王维</p>
+
+</blockquote>
+
+ <br/>
+
+ <br/>
+
+ <br/>
+
+<h3 id="Note"><a href="#Note" class="headerlink" title="Note"></a>Note</h3><p>在 Hexo中可以使用 note 标签，在主题配置文件下可以配置风格</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">#<span class="title class_">Note</span> tag (bs-callout)</span><br><span class="line"><span class="attr">note</span>:</span><br><span class="line">  # <span class="title class_">Note</span> tag style <span class="attr">values</span>:</span><br><span class="line">  #  - simple    bs-callout old alert style. <span class="title class_">Default</span>.</span><br><span class="line">  #  - modern    bs-callout <span class="keyword">new</span> (v2-v3) alert style.</span><br><span class="line">  #  - flat      flat callout style <span class="keyword">with</span> background, like on <span class="title class_">Mozilla</span> or <span class="title class_">StackOverflow</span>.</span><br><span class="line">  #  - disabled  disable all <span class="variable constant_">CSS</span> styles <span class="keyword">import</span> <span class="keyword">of</span> note tag.</span><br><span class="line">  <span class="attr">style</span>: flat  #设置风格</span><br><span class="line">  <span class="attr">icons</span>: <span class="literal">false</span> #是否开启图标</span><br><span class="line">  # <span class="title class_">Offset</span> lighter <span class="keyword">of</span> background <span class="keyword">in</span> % <span class="keyword">for</span> modern and flat styles (<span class="attr">modern</span>: -<span class="number">12</span> | <span class="number">12</span>; <span class="attr">flat</span>: -<span class="number">18</span> | <span class="number">6</span>).</span><br><span class="line">  # <span class="title class_">Offset</span> also applied to label tag variables. <span class="title class_">This</span> option can work <span class="keyword">with</span> disabled note tag.</span><br><span class="line">  <span class="attr">light_bg_offset</span>: <span class="number">0</span></span><br></pre></td></tr></table></figure>
+
+ <br/>
+
+
+
+<p>simple 风格的是这样的</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/ShareX_20200506_171642_1057_621_firefox.png"></p>
+<p>相应的标签这样写就行啦</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">&#123;% note default %&#125;</span><br><span class="line">default 提示块标签</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% note primary %&#125;</span><br><span class="line">primary 提示块标签</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% note success %&#125;</span><br><span class="line">success 提示块标签</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% note info %&#125;</span><br><span class="line">info 提示块标签</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% note warning %&#125;</span><br><span class="line">warning 提示块标签</span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line"></span><br><span class="line">&#123;% note danger %&#125;</span><br><span class="line">danger 提示块标签</span><br><span class="line">&#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>
+
+ <br/>
+
+ <br/>
+
+<p>modern 风格的是这样的</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/ShareX_20200506_171801_1055_633_firefox.png"></p>
+ <br/>
+
+ <br/>
+
+<p>flat 风格的是这样的</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/ShareX_20200506_171250_1066_619_firefox.png"></p>
+<p>个人感觉 flat 扁平化的最为美观。</p>
+ <br/>
+
+  <br/>
+
+
+
+<p>开启 ico 后的效果是这样的：</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/ShareX_20200506_172051_1075_627_firefox.png"></p>
+<p> <br/> <br/></p>
+<h3 id="选项卡"><a href="#选项卡" class="headerlink" title="选项卡"></a>选项卡</h3><div class="tabs" id="tab"><ul class="nav-tabs"><li class="tab"><a href="#tab-1">tab 1</a></li><li class="tab active"><a href="#tab-2">tab 2</a></li><li class="tab"><a href="#tab-3">我的名字是tab3</a></li></ul><div class="tab-content"><div class="tab-pane" id="tab-1"><p>选项卡 1</p></div><div class="tab-pane active" id="tab-2"><p><strong>选项卡 2(加粗)</strong></p></div><div class="tab-pane" id="tab-3"><p><em><strong>选项卡 3</strong></em> (加粗斜体)</p></div></div></div>
+
+
+
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&#123;% tabs tab,2 %&#125; 名字为tab，默认在第2个选项卡，如果是-1则隐藏</span><br><span class="line"><span class="comment">&lt;!-- tab --&gt;</span></span><br><span class="line">选项卡 1</span><br><span class="line"><span class="comment">&lt;!-- endtab --&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- tab --&gt;</span></span><br><span class="line">**选项卡 2(加粗)**</span><br><span class="line"><span class="comment">&lt;!-- endtab --&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- tab A --&gt;</span></span><br><span class="line">***选项卡 3*** (加粗斜体)</span><br><span class="line"><span class="comment">&lt;!-- endtab --&gt;</span></span><br><span class="line">&#123;% endtabs %&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>选项卡名称自定义</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&#123;% tabs 选项卡 2 %&#125;</span><br><span class="line">&lt;!-- tab 自定义名称1 --&gt;</span><br><span class="line">这是选项卡 1</span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line">&lt;!-- tab 自定义名称2 --&gt;</span><br><span class="line">这是选项卡 2</span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line">&lt;!-- tab 自定义名称3 --&gt;</span><br><span class="line">这是选项卡 3</span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line">&#123;% endtabs %&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<div class="tabs" id="选项卡-2"><ul class="nav-tabs"><li class="tab active"><a href="#选项卡-2-1">自定义名称1</a></li><li class="tab"><a href="#选项卡-2-2">自定义名称2</a></li><li class="tab"><a href="#选项卡-2-3">自定义名称3</a></li></ul><div class="tab-content"><div class="tab-pane active" id="选项卡-2-1"><p>这是选项卡 1</p></div><div class="tab-pane" id="选项卡-2-2"><p>这是选项卡 2</p></div><div class="tab-pane" id="选项卡-2-3"><p>这是选项卡 3</p></div></div></div>
+
+<p><strong>选项卡名称使用 icon</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&#123;% tabs 选项卡 2 %&#125;</span><br><span class="line">&lt;!-- tab 自定义名称1@text-width --&gt;</span><br><span class="line">这是选项卡 1</span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line">&lt;!-- tab 自定义名称2@amazon --&gt;</span><br><span class="line">这是选项卡 2</span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line">&lt;!-- tab 自定义名称3@bold --&gt;</span><br><span class="line">这是选项卡 3</span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line">&#123;% endtabs %&#125;</span><br></pre></td></tr></table></figure>
+
+<div class="tabs" id="选项卡-2"><ul class="nav-tabs"><li class="tab active"><a href="#选项卡-2-1"><i class="fa fa-text-width"></i>自定义名称1</a></li><li class="tab"><a href="#选项卡-2-2"><i class="fa fa-amazon"></i>自定义名称2</a></li><li class="tab"><a href="#选项卡-2-3"><i class="fa fa-bold"></i>自定义名称3</a></li></ul><div class="tab-content"><div class="tab-pane active" id="选项卡-2-1"><p>这是选项卡 1</p></div><div class="tab-pane" id="选项卡-2-2"><p>这是选项卡 2</p></div><div class="tab-pane" id="选项卡-2-3"><p>这是选项卡 3</p></div></div></div>
+
+<br/>
+
+<br/>
+
+<h3 id="图标"><a href="#图标" class="headerlink" title="图标"></a>图标</h3><p>hexo 使用的是<a target="_blank" rel="noopener" href="http://www.fontawesome.com.cn/icons/">fontawesome</a>图标，有<a target="_blank" rel="noopener" href="http://www.fontawesome.com.cn/icons/">国内网站</a>和<a target="_blank" rel="noopener" href="https://fontawesome.com/icons">国外网站</a>。使用的时候对应相应的图标名称即可</p>
+<br/>
+
+<p>  <i class="fa fa-telegram" aria-hidden="true"></i> telegram</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;i class=&quot;fa fa-telegram&quot; aria-hidden=&quot;true&quot;&gt;&lt;/i&gt;telegram</span><br></pre></td></tr></table></figure>
+
+<br/>
+
+<p><i class="fa fa-google" ></i> Google</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;i class=&quot;fa fa-google&quot; &gt;&lt;/i&gt; Google</span><br></pre></td></tr></table></figure>
+
+<br/>
+
+<p>为了增加图标大小相对于它们的容器, 使用 <code>fa-lg</code> (33% 递增), <code>fa-2x</code>,    <code>fa-3x</code>, <code>fa-4x</code>, 或 <code>fa-5x</code> classes.</p>
+<p><i class="fa fa-camera-retro fa-lg"></i> fa-lg</p>
+<p><br/><i class="fa fa-camera-retro fa-2x"></i> fa-2x</p>
+<p><br/><i class="fa fa-camera-retro fa-3x"></i> fa-3x </p>
+<br/>
+<i class="fa fa-camera-retro fa-4x"></i> fa-4x
+
+<p><br/><i class="fa fa-camera-retro fa-5x"></i> fa-5x</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;i class=&quot;fa fa-camera-retro fa-lg&quot;&gt;&lt;/i&gt; fa-lg</span><br><span class="line">&lt;i class=&quot;fa fa-camera-retro fa-2x&quot;&gt;&lt;/i&gt; fa-2x</span><br><span class="line">&lt;i class=&quot;fa fa-camera-retro fa-3x&quot;&gt;&lt;/i&gt; fa-3x</span><br><span class="line">&lt;i class=&quot;fa fa-camera-retro fa-4x&quot;&gt;&lt;/i&gt; fa-4x</span><br><span class="line">&lt;i class=&quot;fa fa-camera-retro fa-5x&quot;&gt;&lt;/i&gt; fa-5x</span><br></pre></td></tr></table></figure>
+
+<br/>
+
+<br/>
+
+<h3 id="Button-标签"><a href="#Button-标签" class="headerlink" title="Button 标签"></a>Button 标签</h3><p><strong>使用方式</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- 标签 方式 --&gt;</span><br><span class="line">&#123;% button /path/to/url/, text, icon [class], title %&#125;</span><br><span class="line">&lt;!-- 标签别名 --&gt;</span><br><span class="line">&#123;% btn /path/to/url/, text, icon [class], title %&#125;</span><br><span class="line">&lt;!-- HTML标签 --&gt;</span><br><span class="line">&lt;button type=&quot;button&quot;&gt;这是标签名Click Me!&lt;/button&gt;</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例：</strong></p>
+<a class="btn" href="#">Text</a><a class="btn" href="#" title="Title"><i class="fa fa-home"></i>Text & Title</a>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% btn #, Text %&#125;&#123;% btn #, Text &amp; Title, home, Title %&#125;</span><br></pre></td></tr></table></figure>
+
+ <br/>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% btn url, text, icon [class], [title] %&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% btn https://upwon.github.io ,首页,home fa-2x,这是YouForever的首页%&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<div><a class="btn" target="_blank" rel="noopener" href="https://upwon.github.io " title="这是YouForever的首页"><i class="fa fa-home fa-2x"></i>首页</a></div>
+
+ <br/>
+
+<a class="btn" target="_blank" rel="noopener" href="https://www.google.com"><i class="fa fa-google fa-fw"></i>google一下</a>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;% btn https://www.google.com, google一下,  google fa-fw %&#125;</span><br></pre></td></tr></table></figure>
+
+ <br/>
+
+<p>HTML示例</p>
+<p>  <button type="button" style="color: #d54b44"> Click Me!</button></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;button type=&quot;button&quot; style=&quot;color: #d54b44&gt; Click Me!&lt;/button&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+ <br/>
+
+<button type="button" class="btn"  style="background-color: #c35655; width: 76px;height: 36px;color: #FFFFFF">
+            新建
+        </button>
+
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">type</span>=<span class="string">&quot;button&quot;</span> <span class="attr">class</span>=<span class="string">&quot;btn&quot;</span>  <span class="attr">style</span>=<span class="string">&quot;background-color: #c35655;width: 76px;height: 36px;color: #FFFFFF&quot;</span>&gt;</span></span><br><span class="line">    新建</span><br><span class="line"><span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+ <br/>
+
+<center><button type="button" class="btn"  style="background-color: #c35655; width: 76px;height: 36px;color: #FFFFFF">居中的</button> </center>
+
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">center</span>&gt;</span><span class="tag">&lt;<span class="name">button</span> <span class="attr">type</span>=<span class="string">&quot;button&quot;</span> <span class="attr">class</span>=<span class="string">&quot;btn&quot;</span>  <span class="attr">style</span>=<span class="string">&quot;background-color: #c35655; width: 76px;height: 36px;color: #FFFFFF&quot;</span>&gt;</span>居中的<span class="tag">&lt;/<span class="name">button</span>&gt;</span> <span class="tag">&lt;/<span class="name">center</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+ <br/>
+
+ 
+
+<div style="text-align: center;">
+   <input type="button" value="button">
+</div>
+
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">&quot;text-align: center;&quot;</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;button&quot;</span> <span class="attr">value</span>=<span class="string">&quot;button&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<br/>
+
+<div>
+  <input type="button" value="button" style="display: block; margin: 0 auto;">
+</div>
+
+
+
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;button&quot;</span> <span class="attr">value</span>=<span class="string">&quot;button&quot;</span> <span class="attr">style</span>=<span class="string">&quot;display: block; margin: 0 auto;&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<br/>
+
+<br/>
+
+<h3 id="代码添加改动标记"><a href="#代码添加改动标记" class="headerlink" title="代码添加改动标记"></a>代码添加改动标记</h3><p>只需将代码块中的语言指定为 <code>diff</code>，同时每行行首使用 <code>+</code> 和 <code>-</code> 来控制代码增减。</p>
+<p><strong>语法</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;% codeblock lang:diff %&#125;</span><br><span class="line">- code snippet deleted</span><br><span class="line">+ code snippet added</span><br><span class="line">&#123;% endcodeblock %&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例代码</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;% codeblock lang:diff %&#125;</span><br><span class="line">- print(&quot;删除的&quot;)</span><br><span class="line">+ print(&quot;增加的&quot;)</span><br><span class="line">&#123;% endcodeblock %&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>效果</strong></p>
+<figure class="highlight diff"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="deletion">- print(&quot;删除的&quot;)</span></span><br><span class="line"></span><br><span class="line"><span class="addition">+ print(&quot;增加的&quot;)</span></span><br><span class="line">  </span><br></pre></td></tr></table></figure>
+
+<br/>
+
+<p>示例代码<strong>2</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">diff</span><br><span class="line"></span><br><span class="line">- print(&quot;删除的&quot;)</span><br><span class="line"></span><br><span class="line">+ print(&quot;增加的&quot;)</span><br></pre></td></tr></table></figure>
+
+<p><strong>效果2</strong><br>​&#96;&#96;&#96;diff</p>
+<ul>
+<li>print(“删除的”)</li>
+</ul>
+<ul>
+<li>print(“增加的”)<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">### 标签效果</span><br><span class="line"></span><br><span class="line">**例：**</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+</ul>
+<p>我坐在床前，望着窗外，<mark class="label ">回忆满天</mark>。生命是<mark class="label primary">华丽错觉</mark>，时间是贼偷走一切。</p>
+<p>七岁的那一年，抓住那只<mark class="label success">蝉</mark>，以为能抓住夏天。十七岁的那年，吻过他的脸，就以为和他能<mark class="label info">永远</mark>。</p>
+<p>有没有那么一种永远，<mark class="label warning">永远不改变</mark>，拥抱过的美丽，都再也不破碎。<br>让险峻岁月不能，在脸上撒野，让<mark class="label danger">生离和死别都遥远</mark>，有谁能听见。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">**效果：**</span><br><span class="line"></span><br><span class="line">我坐在床前，望着窗外，&#123;% label @回忆满天 %&#125;。生命是&#123;% label primary @华丽错觉 %&#125;，时间是贼偷走一切。</span><br><span class="line"></span><br><span class="line">七岁的那一年，抓住那只&#123;% label success @蝉 %&#125;，以为能抓住夏天。十七岁的那年，吻过他的脸，就以为和他能&#123;% label info @永远 %&#125;。</span><br><span class="line"></span><br><span class="line">有没有那么一种永远，&#123;% label warning @永远不改变 %&#125;，拥抱过的美丽，都再也不破碎。</span><br><span class="line">让险峻岁月不能，在脸上撒野，让&#123;% label danger @生离和死别都遥远 %&#125;，有谁能听见。</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">   </span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line"> &lt;br/&gt;</span><br><span class="line"></span><br><span class="line">&#123;% note info %&#125;</span><br><span class="line">记得图片路径加上英文的双引号 &#x27;&#x27; &#x27;&#x27;</span><br><span class="line"></span><br><span class="line">我使用的是HTML方式，因为我尝试标签方式出不来</span><br><span class="line"></span><br><span class="line">&#123;% endnote %&#125;</span><br><span class="line"></span><br><span class="line">   &lt;br/&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&lt;img src=&quot;https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200422083632.jpg&quot; class=&quot;full-image&quot; /&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200422083632.jpg" class="full-image" />
+
+  
+
+
+   <br/>
+
+   <br/>
+
+  
+
+  
+
+<p>   <strong>Reference：</strong></p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="http://md.aclickall.com/">Md2All</a></p>
+<p><a target="_blank" rel="noopener" href="https://theme-next.iissnan.com/tag-plugins.html">内置标签</a></p>
+<p><a target="_blank" rel="noopener" href="https://theme-next.iissnan.com/tag-plugins.html">在hexo-NexT中插入note提示块</a></p>
+<p><a target="_blank" rel="noopener" href="https://io-oi.me/tech/hexo-next-optimization/">打造个性超赞博客 Hexo + NexT + GitHub Pages 的超深度优化</a></p>
+<p><a target="_blank" rel="noopener" href="http://yearito.cn/posts/hexo-writing-skills.html">Hexo 搭建个人博客系列：写作技巧篇</a> </p>
+<p><a target="_blank" rel="noopener" href="https://blog.lihj.me/post/next-tag-plugin-instruction.html">NexT 主题内置标签</a><br><a target="_blank" rel="noopener" href="https://www.w3school.com.cn/tags/tag_kbd.asp">W3school HTML <kbd> 标签</a></p>
+</blockquote>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>请我一杯咖啡吧！</div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/wechatpay.png" alt="热夏 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="/images/alipay.jpg" alt="热夏 支付宝">
+        <span>支付宝</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>热夏
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://www.lifeee.top/posts/35048.html" title="Hexo博客Markdown写作">https://www.lifeee.top/posts/35048.html</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="followme">
+  <span>欢迎关注我的其它发布渠道</span>
+
+  <div class="social-list">
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="/atom.xml">
+            <span class="icon">
+              <i class="fa fa-rss"></i>
+            </span>
+
+            <span class="label">RSS</span>
+          </a>
+      </div>
+  </div>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/%E6%95%99%E7%A8%8B/" rel="tag"><i class="fa fa-tag"></i> 教程</a>
+              <a href="/tags/%E6%8A%80%E5%B7%A7/" rel="tag"><i class="fa fa-tag"></i> 技巧</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/posts/30773.html" rel="prev" title="<span style="color:#5bdaed; ">使用SciHub下载论文</span>">
+                  <i class="fa fa-angle-left"></i> <span style="color:#5bdaed; ">使用SciHub下载论文</span>
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/posts/17155.html" rel="next" title="npm install 报错node-sass@4.13.0 postinstall:`node scripts/build.js` Failed at the node-sass@4.13.0">
+                  npm install 报错node-sass@4.13.0 postinstall:`node scripts/build.js` Failed at the node-sass@4.13.0 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments gitalk-container"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 2018 – 
+    <span itemprop="copyrightYear">2024</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">热夏</span>
+  </div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>站点总字数：</span>
+    <span title="站点总字数">629k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">9:32</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/next-theme-pjax/0.6.0/pjax.min.js" integrity="sha256-vxLn1tSKWD4dqbMRyv940UYw4sXgMtYcK6reefzZrao=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lozad.js/1.16.0/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script><script src="/js/pjax.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+  <script src="/js/third-party/pace.js"></script>
+
+
+  
+  <script data-pjax async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","mhchem":false,"js":{"url":"//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
+
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"upwon","repo":"upwon.github.io","client_id":"7e047047ecee7317452b","client_secret":"c60fbdf0eb19e7264e33ab780319e4d420a58fee","admin_user":"upwon","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":null,"js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"ee4b4114905da2a801b93913dde18550"}</script>
+<script src="/js/third-party/comments/gitalk.js"></script>
+
+
+  <script type="text/javascript" src="/js/clicklove.js"></script>
+   
+ 
+
+</body>
+</html>

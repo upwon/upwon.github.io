@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.1.1">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/myapple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/myfavicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/myfavicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/myapple-touch-icon-next.png" color="#222">
+  <meta name="google-site-verification" content="google2fc64c2b92961282.html">
+  <meta name="baidu-site-verification" content="s6BwSjIZYB">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.loli.net/css?family='LXGW+WenKai+LITE':300,300italic,400,400italic,700,700italic%7C'LXGW+WenKai+Screen':300,300italic,400,400italic,700,700italic%7C'LXGW+WenKai':300,300italic,400,400italic,700,700italic%7C'Noto+Serif+SC':300,300italic,400,400italic,700,700italic%7C'EB+Garamond':300,300italic,400,400italic,700,700italic%7C'PingFang+SC':300,300italic,400,400italic,700,700italic%7C'Microsoft+YaHei':300,300italic,400,400italic,700,700italic%7C'sans-serif':300,300italic,400,400italic,700,700italic%7CMa+Shan+Zheng:300,300italic,400,400italic,700,700italic%7CLXGW+WenKai+Screen:300,300italic,400,400italic,700,700italic%7CLXGW+WenKai:300,300italic,400,400italic,700,700italic%7CMenlo:300,300italic,400,400italic,700,700italic%7CMonaco:300,300italic,400,400italic,700,700italic%7CConsolas:300,300italic,400,400italic,700,700italic%7CSource+Code+Pro:300,300italic,400,400italic,700,700italic%7Csystem-ui:300,300italic,400,400italic,700,700italic%7Cmonospace:300,300italic,400,400italic,700,700italic%7Csans-serif:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha256-yIDrPSXHZdOZhAqiBP7CKzIwMQmRCJ8UeB8Jo17YC4o=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/themes/blue/pace-theme-minimal.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"www.lifeee.top","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.19.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"mac","show_result":true},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="本文主要对 5G NR 中的同步信号块 SSB 的结构以及时频位置进行了描述。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="5G NR Synchronization Signal&#x2F;PBCH block (SSB)">
+<meta property="og:url" content="https://www.lifeee.top/posts/18457.html">
+<meta property="og:site_name" content="热夏的博客">
+<meta property="og:description" content="本文主要对 5G NR 中的同步信号块 SSB 的结构以及时频位置进行了描述。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200718163554.jpg">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200718094757.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200718095429.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200718104159.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200722094041.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200718114146.jpg">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200718103811.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200718114523.png">
+<meta property="article:published_time" content="2020-07-18T07:31:52.000Z">
+<meta property="article:modified_time" content="2022-11-14T16:57:17.393Z">
+<meta property="article:author" content="热夏">
+<meta property="article:tag" content="通信">
+<meta property="article:tag" content="5G NR">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200718163554.jpg">
+
+
+<link rel="canonical" href="https://www.lifeee.top/posts/18457.html">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://www.lifeee.top/posts/18457.html","path":"posts/18457.html","title":"5G NR Synchronization Signal/PBCH block (SSB)"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>5G NR Synchronization Signal/PBCH block (SSB) | 热夏的博客</title>
+  
+
+
+
+
+
+
+
+<link href="https://fonts.loli.net/css?family=Noto+Serif+SC:400,500,700&display=swap&subset=chinese-simplified" rel="stylesheet">
+<link rel="stylesheet" href="https://npm.elemecdn.com/lxgw-wenkai-screen-webfont@1.7.0/style.css" />
+
+<link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&display=swap" rel="stylesheet">
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="热夏的博客" type="application/atom+xml">
+<style>.darkmode--activated{--body-bg-color:#282828;--content-bg-color:#333;--card-bg-color:#555;--text-color:#ccc;--blockquote-color:#bbb;--link-color:#ccc;--link-hover-color:#eee;--brand-color:#ddd;--brand-hover-color:#ddd;--table-row-odd-bg-color:#282828;--table-row-hover-bg-color:#363636;--menu-item-bg-color:#555;--btn-default-bg:#222;--btn-default-color:#ccc;--btn-default-border-color:#555;--btn-default-hover-bg:#666;--btn-default-hover-color:#ccc;--btn-default-hover-border-color:#666;--highlight-background:#282b2e;--highlight-foreground:#a9b7c6;--highlight-gutter-background:#34393d;--highlight-gutter-foreground:#9ca9b6}.darkmode--activated img{opacity:.75}.darkmode--activated img:hover{opacity:.9}.darkmode--activated code{color:#69dbdc;background:0 0}button.darkmode-toggle{z-index:9999}.darkmode-ignore,img{display:flex!important}.beian img{display:inline-block!important}</style></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">热夏的博客</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-heart fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#SSB%E6%97%B6%E9%A2%91%E7%BB%93%E6%9E%84"><span class="nav-number">1.</span> <span class="nav-text">SSB时频结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SSB%E9%A2%91%E5%9F%9F%E4%BD%8D%E7%BD%AE%E6%A6%82%E8%BF%B0"><span class="nav-number">2.</span> <span class="nav-text">SSB频域位置概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SSB%E6%97%B6%E5%9F%9F%E4%BD%8D%E7%BD%AE%E6%A6%82%E8%BF%B0"><span class="nav-number">3.</span> <span class="nav-text">SSB时域位置概述</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#SS-Burst-Set"><span class="nav-number">3.1.</span> <span class="nav-text">SS Burst Set</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#LTE%E5%90%8C%E6%AD%A5%E4%BF%A1%E5%8F%B7%E5%92%8C5G%E5%90%8C%E6%AD%A5%E4%BF%A1%E5%8F%B7%E4%B9%8B%E9%97%B4%E7%9A%84%E5%8C%BA%E5%88%AB%EF%BC%9A"><span class="nav-number">4.</span> <span class="nav-text">LTE同步信号和5G同步信号之间的区别：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%94%9F%E6%88%90%E6%96%B9%E6%B3%95%E4%B8%8D%E5%90%8C%EF%BC%9A"><span class="nav-number">4.1.</span> <span class="nav-text">生成方法不同：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#PCI%E7%9A%84%E6%95%B0%E9%87%8F%E4%B8%8D%E5%90%8C%EF%BC%9A"><span class="nav-number">4.2.</span> <span class="nav-text">PCI的数量不同：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%90%8C%E6%AD%A5%E4%BF%A1%E5%8F%B7%E7%9A%84%E6%97%B6%E5%9F%9F%E5%92%8C%E9%A2%91%E5%9F%9F%E4%BD%8D%E7%BD%AE%E4%B8%8D%E5%90%8C%EF%BC%9A"><span class="nav-number">4.3.</span> <span class="nav-text">同步信号的时域和频域位置不同：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%90%8C%E6%AD%A5%E8%BF%87%E7%A8%8B%E4%B8%8D%E5%90%8C"><span class="nav-number">4.4.</span> <span class="nav-text">同步过程不同 :</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#SSB-%E6%B3%A2%E6%9D%9F%E8%B5%8B%E5%BD%A2"><span class="nav-number">5.</span> <span class="nav-text">SSB 波束赋形</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-number">6.</span> <span class="nav-text">总结</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE"><span class="nav-number">7.</span> <span class="nav-text">参考文献</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="热夏"
+      src="/images/head.jpg">
+  <p class="site-author-name" itemprop="name">热夏</p>
+  <div class="site-description" itemprop="description">空山新雨后，天气晚来秋。</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">81</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">42</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/upwon" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;upwon" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:w1244753906@gmail.com" title="E-Mail → mailto:w1244753906@gmail.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.lifeee.top//atom.xml" title="RSS → https:&#x2F;&#x2F;www.lifeee.top&#x2F;&#x2F;atom.xml" rel="noopener me"><i class="fa fa-rss fa-fw"></i>RSS</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+        <div class="pjax">
+        </div>
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.lifeee.top/posts/18457.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/head.jpg">
+      <meta itemprop="name" content="热夏">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="热夏的博客">
+      <meta itemprop="description" content="空山新雨后，天气晚来秋。">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="5G NR Synchronization Signal/PBCH block (SSB) | 热夏的博客">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          5G NR Synchronization Signal/PBCH block (SSB)
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2020-07-18 15:31:52" itemprop="dateCreated datePublished" datetime="2020-07-18T15:31:52+08:00">2020-07-18</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-11-15 00:57:17" itemprop="dateModified" datetime="2022-11-15T00:57:17+08:00">2022-11-15</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E9%80%9A%E4%BF%A1/" itemprop="url" rel="index"><span itemprop="name">通信</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>7.3k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>7 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200718163554.jpg"></p>
+<p>　　本文主要对 5G NR 中的同步信号块 SSB 的结构以及时频位置进行了描述。</p>
+<span id="more"></span>
+
+
+
+
+
+<p>　　小区搜索是 UE 获取小区的时间和频率同步以及检测小区的物理层小区 ID (PCI)的过程。</p>
+<p>　　系统消息设计是无线通信系统中重要概念之一，小区级系统消息主要为了配置小区驻留、提供用户接入、互操作等一系列重要参数配置。5G NR对于系统消息进行了一定程度的简化，相比4G不仅在同步信号以及系统消息设计方面都进行了完全不同的设计。</p>
+<p>　　有别于4G将小区下行同步信号以及物理广播信道分离设计，5G中将小区主辅同步信号（SS，Synchronization Signal）与物理广播信道（PBCH，Physical Broadcast Channel）进行了某种程度上的耦合，以SS&#x2F;PBCH资源块的形式出现，简称为SSB。</p>
+<div class="note info"><p>注：本文描述中 SSB&#x3D;SS&#x2F;PBCH&#x3D;Synchronization Signal&#x2F;PBCH block</p>
+</div>
+
+<p>　　在NR 定义了两类同步信号：<em>Primary Synchronization Signal 主同步信号</em> (PSS) 以及 Secondary <em>Synchronization Signal  辅同步信号</em>  (SSS). Synchronization Signal&#x2F;PBCH block (SSB) 由PSS、SSS和 PBCH组成。即：$SSB&#x3D;PSS+SSS+PBCH$ 。其中 PBCH 中又存放着 DMRS 。</p>
+<p>　　下图显示了 PSS，SSS，PBCH 和 PBCH DMR 在 SSB 区块的位置</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200718094757.png" alt="图片来源：concepts-of-5g"></p>
+<h2 id="SSB时频结构"><a href="#SSB时频结构" class="headerlink" title="SSB时频结构"></a>SSB时频结构</h2><p>　　SSB的时频结构如下图所示</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200718095429.png"></p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200718104159.png"></p>
+<ul>
+<li><p>PSS、SSS 和 PBCH 始终以连续的 OFDM 符号组合在一起。</p>
+</li>
+<li><p>每个 SSB 在时域中占据 4 个 OFDM 符号，并分布在频域中的 240 个子载波 （20 RB）。</p>
+</li>
+<li><p>PSS 占据第一个 OFDM 符号，跨越 127 个子载波。</p>
+</li>
+<li><p>SSS 位于第三个 OFDM 符号中，跨越 127 个子载波。SSS 下方有 8 个未使用的子载波，SSS 上方有 9 个未使用的子载波。</p>
+</li>
+<li><p>PBCH 占据两个完整 OFDM 符号（第二和第四个），跨越 240 个子载波。在第三个 OFDM 符号中，占据SSS上方和下方的 48 个子载波。这导致 PBCH 在三个 OFDM 符号（$240+48+48+240 &#x3D; 576 $） 中占用 576 个子载波。</p>
+</li>
+<li><p>PBCH DM-RS占用144 个 RE，占总RE的四分之一，剩余用于PBCH有效载荷(576-144&#x3D;432 RE)。</p>
+</li>
+<li><p>SS&#x2F;PBCH 子载波间隔配置支持 $μ∈｛0,1,3,4｝$ 即 15 KHz 、30 KHz 、120 KHz 、240 KHz 。</p>
+<br/></li>
+</ul>
+<p>补充</p>
+<blockquote>
+<p>注意：5G的一个资源块（RB）包含频域上的12个子载波。注意这一点和4G不同，4G的RB是由频域上12个子载波和时域上的0.5毫秒（7个OFDM符号）组成的二维结构，而5G的RB只有频域这一个维度。</p>
+<p>5G的最小资源单位：资源单元（RE）由频域的一个子载波和时域的一个OFDM符号组成，是无线资源的最小单位（如上图中的小方格所示）。这一点是和4G一样的。</p>
+</blockquote>
+<blockquote>
+<p><strong>主同步信号</strong>的全称为：Primary Synchroniztion Singnal，简称PSS。PSS在SSB的第一个OFDM符号上发送，频域占用了127个子载波，其余子载波为空。</p>
+<p><strong>辅同步信号</strong>的全称为：Secondary Synchroniztion Singnal，简称SSS。SSS在SSB的第三个OFDM符号上发送，频域占用了127个子载波，其余子载波用于PBCH及隔离带。</p>
+<p>PSS携带了3个小区号，SSS携带了336个小区组号，这两者共同决定了5G系统中的1008个物理小区号（Physical Cell Identity，简称PCI）。一旦手机成功搜索到了PSS和SSS，也就知道了这个5G载波的物理小区号。</p>
+<p><strong>物理广播信道</strong>的全称为：Physical Broadcast Channel，简称PBCH。PBCH在第二个和第四个OFDM符号上在SSB内全带宽发送，另外也使用SSS两端的48个子载波来发送。</p>
+</blockquote>
+<br/>
+
+<h2 id="SSB频域位置概述"><a href="#SSB频域位置概述" class="headerlink" title="SSB频域位置概述"></a>SSB频域位置概述</h2><p>　　在频域中，一个 SS&#x2F;PBCH 块由240个相邻的子载波组成，子载波在 SS&#x2F;PBCH 块中按从0到239的顺序排列。下表给出了 PBCH 的 PSS、 SSS、 PBCH 和 DMRS 的位置。PBCH、 PBCH DMRS、 PSS 和 SSS 的位置参见38.211的表7.4.3.1-1 。下表中表示为“ Set to 0”的资源元素对应的复值符号被设置为零。 从下表中可以看到，PBCH DM-RS 的位置取决于PCI ($v &#x3D; N_{ID}^{cell } mod 4$) （小区ID PCI 由 UE 使用 PSS&#x2F;SSS 确定）</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200722094041.png"></p>
+  <br/>
+
+  <br/>
+
+<h2 id="SSB时域位置概述"><a href="#SSB时域位置概述" class="headerlink" title="SSB时域位置概述"></a>SSB时域位置概述</h2><ul>
+<li>每个 SSB 跨越时域中的 4 个 OFDM 符号。</li>
+<li>SSB 的周期性定期传输为 5ms、10ms、20ms、40ms、80ms 或 160ms。</li>
+<li>虽然较长的 SSB 周期可提高网络性能，但较短的周期有助于更快进行小区搜索。</li>
+<li>在初始小区搜索或空闲模式移动期间，UE 可以假定默认周期为<em>20ms。</em></li>
+</ul>
+<p>　　SSB是周期性发送的，其周期可以从5毫秒到160毫秒之间变化。手机在进行小区搜索时，不能在某一个频点上等待过长时间，因此默认按照20毫秒来进行。</p>
+<p>　　如果手机在某个频点上等待了20毫秒的时间，一直未发现SSB，则认为这个频点上不存在5G载波，然后转到同步栅格里面的下一个频点再次尝试。</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200718114146.jpg"></p>
+<blockquote>
+<p><strong>同步栅格</strong></p>
+<p>由于5G的系统带宽动辄100MHz，高频甚至能达到400MHz，远大于4G的系统带宽（最大20MHz），如果像4G一样把同步信号放在载波中心，手机按照100KHz的粒度来搜索的话，所需要的时间非常长，而且非常耗电，完全让人无法接受。</p>
+<p>因此，5G不再把SSB放在载波中心，而是放在每个频段内一组有限的可能位置，称作“<strong>同步栅格</strong>（Synchronization Raster）”。手机只需在这些稀疏的同步栅格上搜索SSB即可，速度更快。</p>
+</blockquote>
+<h3 id="SS-Burst-Set"><a href="#SS-Burst-Set" class="headerlink" title="SS Burst Set"></a>SS Burst Set</h3><p>　　为了使PSS &#x2F; SSS和PBCH能够进行波束扫描，定义了同步广播块集合(SS Burst Set)。 SS Burst Set由一个或多个SSB组成，每个SSB可能在不同的波束上传输。</p>
+<div class="note info"><p>　　一个波束扫描内所有SSB成的set被称作SS burst set</p>
+<p>SS Burst Set 有翻译为同步信号集、 同步广播块集合 也有翻译为 同步信号突发集</p>
+<p>本文翻译 为同步广播块集合 来自书籍 <a target="_blank" rel="noopener" href="https://book.douban.com/subject/30476355/">5G无线系统设计与国际标准</a></p>
+</div>
+
+<ul>
+<li><p>同步广播块集合由一个或多个SSB组成。</p>
+</li>
+<li><p>同步广播块集合中的SSB以时分复用的方式传输。</p>
+</li>
+<li><p>同步广播块集合始终限制在5ms窗口内，位于10ms无线帧的前半部分或后半部分。</p>
+</li>
+<li><p>网络通过RRC参数ssb-PeriodicityServingCell设置SSB周期性，其取值范围为{5ms，10ms，20ms，40ms，80ms，160ms}。</p>
+</li>
+<li><p>同步广播块集合内的候选SSB的最大数量（Lmax）取决于载波频率&#x2F;频段，如下表所示。</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th><strong>Carrier Frequency</strong></th>
+<th><strong>Max. No. of Candidate SSBs</strong> **within SS Burst Set ($L_{max}$)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>fc ≤ 3 GHz*</td>
+<td>4</td>
+</tr>
+<tr>
+<td>3 GHz* &lt; fc ≤ 6 GHz</td>
+<td>8</td>
+</tr>
+<tr>
+<td>fc &gt; 6 GHz</td>
+<td>64</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>注: SCS &#x3D; 30 kHz情况：对于成对频谱，为3 GHz，对于非成对频谱，为2.4 GHz</p>
+</blockquote>
+<p>　　在<em>5ms</em>半帧内，SS Burst Set 设置的候选 SSB 的起始 OFDM 符号索引取决于子载波间距 （SCS） 和载波频率&#x2F;频段（下表中汇总）。大括号内的条目表示候选 SSB 的 OFDM 起始符号。🌟有关详细信息，请参阅 38.213 的第 4.1 节。 </p>
+<table>
+<thead>
+<tr>
+<th>SCS</th>
+<th>OFDM starting symbols of the candidate SSBs</th>
+<th>fc ≤ 3 GHz  Lmax &#x3D; 4</th>
+<th>3 GHz&lt; fc≤ 6 GHz  Lmax &#x3D; 8</th>
+<th>fc &gt; 6 GHz   Lmax &#x3D; 4</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>CaseA: 15 kHz</td>
+<td>{2,8} + 14n</td>
+<td>n &#x3D; 0,1  {2,8,16,22}</td>
+<td>n &#x3D; 0, 1, 2, 3  {2,8,16,22,30,36,44,50}</td>
+<td>NA</td>
+</tr>
+<tr>
+<td>CaseB: 30 kHz</td>
+<td>{4,8,16,20} + 28n</td>
+<td>n &#x3D; 0   {4,8,16,20}</td>
+<td>n &#x3D; 0, 1  {4,8,16,20,32,36,44,48}</td>
+<td>NA</td>
+</tr>
+<tr>
+<td>CaseC: 30 kHz</td>
+<td>{2,8} + 14n</td>
+<td>n &#x3D; 0, 1   {2,8,16,22}</td>
+<td>n &#x3D; 0, 1, 2, 3  {2,8,16,22,30,36,44,50}</td>
+<td>NA</td>
+</tr>
+<tr>
+<td>CaseD:  120 kHz</td>
+<td>{4,8,16,20} + 28n</td>
+<td>NA</td>
+<td>NA</td>
+<td>n&#x3D;0,1,2,3,5,6,7,8,10,11,12,13,15,16,17,18{4,8,16,20 … 508,512,520,524}</td>
+</tr>
+<tr>
+<td>CaseE:  240 kHz</td>
+<td>{8,12,16,20,32,36,40,44} + 56n</td>
+<td>NA</td>
+<td>NA</td>
+<td>n&#x3D;0,1,2,3,5,6,7,8{8,12,16,20 … 480,484,488,492}</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>* SCS &#x3D; 30 kHz情况：对于成对频谱，为3 GHz，对于非成对频谱，为2.4 GHz</p>
+</blockquote>
+<p>注意，当网络不使用波束成形时，它可能只发送一个SSB，因此只能有一个SSB起始位置。</p>
+  <br/>
+
+<p>　　针对不同子载波间隔，每传输半帧SSB的候选位置如下定义：</p>
+<blockquote>
+<p>A：子载波间隔15kHz，针对FR1频带内不大于3GHz的NR载波频率，SSB的候选传输时刻可配置在0，1时隙的{2， 8}OFDM位置，这样共4个候选时刻；而FR1 频带内大于3 GHz的NR载波频率，SSB的候选传输时刻配置在0，1，2，3时隙的{2，8}OFDM位置，共8个候选时刻；</p>
+<p>B：子载波间隔30kHz，针对FR1频带内不大于3GHz的NR载波频率，SSB的候选传输时刻可配置在以0时隙起始计算的{4，8，16，20}OFDM位置，这样共4个候选时刻；而FR1 频带内大于3GHz的NR载波频率，SSB的候选传输时刻配置在0，2时隙分别为起始计算的{4，8，16，20}OFDM位置，共8个候选时刻；</p>
+<p>C：子载波间隔30kHz，5G FDD频谱模式下，针对FR1频带内不大于3GHz的NR载波频率，SSB的候选传输时刻可配置在0，1时隙的{2，8}OFDM位置，这样共4个候选时刻；而FR1频带内大于3GHz的NR载波频率，SSB的候选传输时刻配置在0，1，2，3时隙内的{2，8}OFDM位置，共8个候选时刻；5GTDD频谱模式下，针对FR1频带内不大于2.4GHz的NR载波频率，SSB的候选传输时刻可配置在0，1时隙的{2，8}OFDM位置，这样共4个候选时刻；而FR1频带内大于2.4GHz的NR载波频率，SSB的候选传输时刻刻配置在0，1，2，3时隙内的{2，8}OFDM位置，共8个候选时刻；</p>
+<p>D：子载波间隔120kHz，对于FR2频带内NR载波频率，SSB的候选传输时刻配置在0，2，4，6，10，12，14，16，20，22，24，26，30，32，35，36时隙分别为起始计算的{4，8，16，20}OFDM位置，共64个候选时刻。</p>
+<p>E：子载波间隔240kHz，对于FR频带内NR载波频率，SSB的候选传输时刻配置在0，4，8，12，20，24，28，32时隙分别为起始计算的{8，12，16，20，32，36，40，44}OFDM位置，共64个候选时刻。</p>
+</blockquote>
+  <br/>
+
+<p> 　　5G NR在系统架构中遵循一个重要设计理念就是系统参数设置相当灵活，在SSB中体现在子载波间隔（SCS，subcarrier spacing）可以与其他物理传输信道独立设置，但是否需要不同配置有待于实际组网环境下进一步验证。终端在开机搜网同步时，根据NR的工作频段可以确定SSB的子载波间隔以及SSB候选传输位置式样(A&#x2F;B&#x2F;C&#x2F;D&#x2F;E)，如果异频载波SSB的子载波间隔通过高层信令进行传递明确为30kHz时，SSB候选传输位置式样B可扩展适用于SCS定义为仅15kHz的FR1中NR工作频带。另外，当终端被配置为FR2频带内的载波聚合或者FR1频带内连续频率的载波聚合机制时，如果网络侧提供了载波聚合任何一个小区的SSB的子载波间隔信息，终端认为这一系列载波聚合小区的SSB子载波间隔一致。</p>
+<p>　　针对在半帧内传输的SSB候选位置式样ABCDE，终端可以通过解码PBCH载荷比特来确定当前传输SSB的具体索引位置，对于半帧包含4个SSB候选传输位置，通过2个低比特位（LSB）确定索引，而半帧包含8个SSB候选传输位置，则通过3个低比特位（LSB）确定索引，这两种情况下PBCH索引恰恰与SSB中DMRS的高德伪随机序列初始序列索引呈一一对应的关系，终端在确定2个低比特位或者3个低比特位时并不是直接通过解码PBCH传输比特获知，而是间接通过解码DMRS进行逻辑映射。半帧包含64个SSB候选传输位置，传输SSB中DMRS的索引按照3个低比特位循环映射（8个SSB循环），终端结合3个低比特位（LSB）与PBCH载荷的3个额外高比特位（MSB）共同确定SSB的传输索引。PBCH有效载荷共32比特，包含承载RRC内容23比特，这23比特中有6比特作为计算无线帧的高位6比特，除了这23比特之外，物理层额外与传输时刻相关4比特作为计算无线帧的的地位4比特， 1比特作为无线帧中的半帧标识，3比特作为确定SSB索引的高位3比特，剩余1比特协议没做规定，MAC层实体为了与传输字节对齐进行填补。</p>
+<p>　　作为示例，在SCS&#x3D;15 kHz且载波频率在3 GHz和6 GHz之间的情况下，SS突发集合内的候选SSB的时序在下图中示出。</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200718103811.png"></p>
+<br/>
+
+  <br/>
+
+<h2 id="LTE同步信号和5G同步信号之间的区别："><a href="#LTE同步信号和5G同步信号之间的区别：" class="headerlink" title="LTE同步信号和5G同步信号之间的区别："></a>LTE同步信号和5G同步信号之间的区别：</h2><h3 id="生成方法不同："><a href="#生成方法不同：" class="headerlink" title="生成方法不同："></a>生成方法不同：</h3><p>　　LTE中的PSS是长度为62的 Zadoff-Chu 序列，NR中的PSS是长度为127的m序列。LTE中的SSS是长度为62的m序列，而NR中的SSS是长度为127的GOLD序列。</p>
+<h3 id="PCI的数量不同："><a href="#PCI的数量不同：" class="headerlink" title="PCI的数量不同："></a>PCI的数量不同：</h3><p>　　LTE中定义了504 PCI，分为168组，对应168个SSS；每组包含3个小区，对应3个PSS。NR定义1008个PCI，分为336组，对应336个SSS；每组包含3个小区，对应3个PSS。</p>
+<h3 id="同步信号的时域和频域位置不同："><a href="#同步信号的时域和频域位置不同：" class="headerlink" title="同步信号的时域和频域位置不同："></a>同步信号的时域和频域位置不同：</h3><p>　　LTE PSS、SSS和PBCH的频域和时域位置在系统中是固定的，总是占据系统带宽的中心频率部分。PSS与SSS和PBCH没有严格的结合关系。然而，在5G中，PSS、SSS和PBCH绑定在一起，称为SSB。不同LTE子载波间隔固定为15k，而NR中的PBCH子载波间隔根据频带而变化。</p>
+<h3 id="同步过程不同"><a href="#同步过程不同" class="headerlink" title="同步过程不同 :"></a>同步过程不同 :</h3><p>  　　正是由于NR和LTE的同步信号不同，其同步过程也不同于LTE。在NR中通常使用波束成形，并且同步信号SSB在不同的波束上传输。因此，同步过程的一个目标是找到最佳波束。此过程通过确定 SSB 的索引 ( the SSB’s index)来完成。在5ms周期内，SSB的索引与波束一一对应。通过确定最佳SSB的索引，可以找到最佳的波束方向。</p>
+<p>　　通过确定SSB的频域位置，它可以基于其他参数（$k_{ssb}$，$N_{CRB} ^ {SSB}$等）。 获取 pointA 的位置，实现对BWP的管理。</p>
+<br/>
+
+<h2 id="SSB-波束赋形"><a href="#SSB-波束赋形" class="headerlink" title="SSB 波束赋形"></a>SSB 波束赋形</h2><p>　　5G相对于4G最大的优势在于引入了波束赋形。实际使用中，可以把一个周期内的不同SSB分配到不同的波束上发送，每个SSB的发送时间不同，大家轮流依次发送，因此这种方式叫做SSB波束扫描，这些参与波束扫描的SSB集合就叫做同步广播块集合（SS Burst Set）。由于每个波束的能量更为集中，这样就有效增强了5G的覆盖。</p>
+<p>　　由于每周期不同频段所支持的SSB发送次数不同，它们的波束赋形能力也各不相同。总体上来说，频段越高，波束赋形能力越强。</p>
+<p>　　由于同步信号SSB是在不同的beam上发送的。因此，同步过程的一个目的就是要找到最优的beam。这个过程是通过确定SSB的index来完成的。<br>5ms周期中SSB的index与波束是一一对应的关系，通过确定最优SSB的index就可以找到最优的波束方向。</p>
+<blockquote>
+<p>对于3GHz以下的频段，一个SS突发集里最多包含4个SSB，因此最多可扫描4个波束；</p>
+<p>对于3GHz~6GHz的频段，一个SS突发集里最多包含8个SSB，因此最多可扫描8个波束；</p>
+<p>对于高于6GHz的毫米波mmWave频段，一个SS突发集里最多包含64个SSB，因此最多可扫描64个波束。</p>
+</blockquote>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200718114523.png"></p>
+  <br/>
+
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>　　当UE开机后想要接入小区时，会进行小区搜索的操作。在NR中，小区搜索主要基于对下行同步信道及信号的检测来完成。终端通过小区搜索过程获得小区ID、频率同步（载波频率）、下行时间同步（包括无线帧定时、半帧定时，时隙定时及符号定时）。具体来看，整个小区搜索过程又包括主同步信号搜索、 辅同步信号检测及物理广播信道检测三部分。本文主要对同步信号块 SSB 的结构以及时频位置进行了描述。</p>
+  <br/>
+
+<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><blockquote>
+<p>封面图：<a target="_blank" rel="noopener" href="https://www.zcool.com.cn/u/14696761">壹零腾_-<em>原创作品</em>-<em>站酷</em>(ZCOOL)</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.sharetechnote.com/html/5G/5G_SS_Block.html">5 g&#x2F;nr-SS Block</a></p>
+<p>Lin X, Li J, Baldemair R, et al. 5G new radio: Unveiling the essentials of the next generation wireless access technology[J]. IEEE Communications Standards Magazine, 2019, 3(3): 30-37.</p>
+<p>Omri A, Shaqfeh M, Ali A, et al. Synchronization procedure in 5G NR systems[J]. IEEE Access, 2019, 7: 41286-41295.</p>
+<p><a target="_blank" rel="noopener" href="https://www.blacktechnoguys.com/2019/12/synchronization-signal-block.html">Synchronization Signal Block</a></p>
+<p><a target="_blank" rel="noopener" href="http://blog.sina.com.cn/s/blog_927cff0101019un0.html">LTE：小区搜索过程（cell search procedure）</a></p>
+<p><a target="_blank" rel="noopener" href="http://www.techplayon.com/5g-nr-cell-search-and-synchronization-acquiring-system-information/">5G NR Cell Search and Synchronization</a></p>
+<p><a target="_blank" rel="noopener" href="http://howltestuffworks.blogspot.com/2019/10/5g-nr-synchronization-signalpbch-block.html">5G NR: Synchronization Signal&#x2F;PBCH block (SSB)</a></p>
+<p><a target="_blank" rel="noopener" href="https://medium.com/@mishra.eric/understanding-nr5g-synchronisation-signal-block-ssb-7a8d56a48e16">Understanding NR5G Synchronisation Signal Block (SSB)</a></p>
+<ol>
+<li><p>3GPP TS 38.211</p>
+</li>
+<li><p>3GPP TS 38.212</p>
+</li>
+<li><p>3GPP TS 38.213</p>
+</li>
+<li><p>3GPP TS 38.331, 38.300</p>
+</li>
+</ol>
+</blockquote>
+<br />
+
+<br />
+
+<br />
+
+<blockquote class="blockquote-center">
+<p>溪云初起日沉阁，山雨欲来风满楼。</p>
+<p>– 志南 《绝句·古木阴中系短篷》</p>
+
+</blockquote>
+
+
+
+<br />
+
+<br />
+
+<br />
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>请我一杯咖啡吧！</div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/wechatpay.png" alt="热夏 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="/images/alipay.jpg" alt="热夏 支付宝">
+        <span>支付宝</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>热夏
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://www.lifeee.top/posts/18457.html" title="5G NR Synchronization Signal&#x2F;PBCH block (SSB)">https://www.lifeee.top/posts/18457.html</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="followme">
+  <span>欢迎关注我的其它发布渠道</span>
+
+  <div class="social-list">
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="/atom.xml">
+            <span class="icon">
+              <i class="fa fa-rss"></i>
+            </span>
+
+            <span class="label">RSS</span>
+          </a>
+      </div>
+  </div>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/%E9%80%9A%E4%BF%A1/" rel="tag"><i class="fa fa-tag"></i> 通信</a>
+              <a href="/tags/5G-NR/" rel="tag"><i class="fa fa-tag"></i> 5G NR</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/posts/52368.html" rel="prev" title="QT 控件自适应窗口大小布局">
+                  <i class="fa fa-angle-left"></i> QT 控件自适应窗口大小布局
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/posts/1788.html" rel="next" title="创世纪图书馆 Library Genesis 图书下载指南">
+                  创世纪图书馆 Library Genesis 图书下载指南 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments gitalk-container"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 2018 – 
+    <span itemprop="copyrightYear">2024</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">热夏</span>
+  </div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>站点总字数：</span>
+    <span title="站点总字数">629k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">9:32</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/next-theme-pjax/0.6.0/pjax.min.js" integrity="sha256-vxLn1tSKWD4dqbMRyv940UYw4sXgMtYcK6reefzZrao=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lozad.js/1.16.0/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script><script src="/js/pjax.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+  <script src="/js/third-party/pace.js"></script>
+
+
+  
+  <script data-pjax async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","mhchem":false,"js":{"url":"//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
+
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"upwon","repo":"upwon.github.io","client_id":"7e047047ecee7317452b","client_secret":"c60fbdf0eb19e7264e33ab780319e4d420a58fee","admin_user":"upwon","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":null,"js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"2958099e1749b8fa755bbe79171d5f14"}</script>
+<script src="/js/third-party/comments/gitalk.js"></script>
+
+
+  <script type="text/javascript" src="/js/clicklove.js"></script>
+   
+ 
+
+</body>
+</html>

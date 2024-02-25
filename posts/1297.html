@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.1.1">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/myapple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/myfavicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/myfavicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/myapple-touch-icon-next.png" color="#222">
+  <meta name="google-site-verification" content="google2fc64c2b92961282.html">
+  <meta name="baidu-site-verification" content="s6BwSjIZYB">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.loli.net/css?family='LXGW+WenKai+LITE':300,300italic,400,400italic,700,700italic%7C'LXGW+WenKai+Screen':300,300italic,400,400italic,700,700italic%7C'LXGW+WenKai':300,300italic,400,400italic,700,700italic%7C'Noto+Serif+SC':300,300italic,400,400italic,700,700italic%7C'EB+Garamond':300,300italic,400,400italic,700,700italic%7C'PingFang+SC':300,300italic,400,400italic,700,700italic%7C'Microsoft+YaHei':300,300italic,400,400italic,700,700italic%7C'sans-serif':300,300italic,400,400italic,700,700italic%7CMa+Shan+Zheng:300,300italic,400,400italic,700,700italic%7CLXGW+WenKai+Screen:300,300italic,400,400italic,700,700italic%7CLXGW+WenKai:300,300italic,400,400italic,700,700italic%7CMenlo:300,300italic,400,400italic,700,700italic%7CMonaco:300,300italic,400,400italic,700,700italic%7CConsolas:300,300italic,400,400italic,700,700italic%7CSource+Code+Pro:300,300italic,400,400italic,700,700italic%7Csystem-ui:300,300italic,400,400italic,700,700italic%7Cmonospace:300,300italic,400,400italic,700,700italic%7Csans-serif:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha256-yIDrPSXHZdOZhAqiBP7CKzIwMQmRCJ8UeB8Jo17YC4o=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/themes/blue/pace-theme-minimal.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"www.lifeee.top","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.19.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"mac","show_result":true},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="研究生阶段在学习通信(LTE&#x2F;5G)时偶遇到一些工具网站和不错的博客，在此分享给大家。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="通信专业网页工具和博客推荐">
+<meta property="og:url" content="https://www.lifeee.top/posts/1297.html">
+<meta property="og:site_name" content="热夏的博客">
+<meta property="og:description" content="研究生阶段在学习通信(LTE&#x2F;5G)时偶遇到一些工具网站和不错的博客，在此分享给大家。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/202210162224324.jpg">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/202210152324749.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/202307161119149.jpg">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/202210162219187.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/202210162219651.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/202210152325242.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/202210152326329.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/202210152326756.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/202210152327039.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/202210152350354.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/202210152350690.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/202210162154750.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img20200522200211.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img20200522214142.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/202210162129758.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/202210152356751.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/202210152357158.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/202210160001513.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/202210162232521.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/202210162122759.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/202210162125683.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/202210162157302.png">
+<meta property="article:published_time" content="2022-10-15T14:24:38.000Z">
+<meta property="article:modified_time" content="2023-07-16T03:19:34.531Z">
+<meta property="article:author" content="热夏">
+<meta property="article:tag" content="教程">
+<meta property="article:tag" content="善用佳软">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/202210162224324.jpg">
+
+
+<link rel="canonical" href="https://www.lifeee.top/posts/1297.html">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://www.lifeee.top/posts/1297.html","path":"posts/1297.html","title":"通信专业网页工具和博客推荐"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>通信专业网页工具和博客推荐 | 热夏的博客</title>
+  
+
+
+
+
+
+
+
+<link href="https://fonts.loli.net/css?family=Noto+Serif+SC:400,500,700&display=swap&subset=chinese-simplified" rel="stylesheet">
+<link rel="stylesheet" href="https://npm.elemecdn.com/lxgw-wenkai-screen-webfont@1.7.0/style.css" />
+
+<link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&display=swap" rel="stylesheet">
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="热夏的博客" type="application/atom+xml">
+<style>.darkmode--activated{--body-bg-color:#282828;--content-bg-color:#333;--card-bg-color:#555;--text-color:#ccc;--blockquote-color:#bbb;--link-color:#ccc;--link-hover-color:#eee;--brand-color:#ddd;--brand-hover-color:#ddd;--table-row-odd-bg-color:#282828;--table-row-hover-bg-color:#363636;--menu-item-bg-color:#555;--btn-default-bg:#222;--btn-default-color:#ccc;--btn-default-border-color:#555;--btn-default-hover-bg:#666;--btn-default-hover-color:#ccc;--btn-default-hover-border-color:#666;--highlight-background:#282b2e;--highlight-foreground:#a9b7c6;--highlight-gutter-background:#34393d;--highlight-gutter-foreground:#9ca9b6}.darkmode--activated img{opacity:.75}.darkmode--activated img:hover{opacity:.9}.darkmode--activated code{color:#69dbdc;background:0 0}button.darkmode-toggle{z-index:9999}.darkmode-ignore,img{display:flex!important}.beian img{display:inline-block!important}</style></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">热夏的博客</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-heart fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B7%A5%E5%85%B7%E7%B1%BB"><span class="nav-number">1.</span> <span class="nav-text">工具类</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9C%A8%E7%BA%BF%E7%BB%98%E5%88%B6-LTE%E8%B5%84%E6%BA%90%E7%BD%91%E6%A0%BC"><span class="nav-number">1.1.</span> <span class="nav-text">在线绘制 LTE资源网格</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9C%A8%E7%BA%BF%E7%BB%98%E5%88%B6-LTE%E8%B5%84%E6%BA%90%E7%BD%91%E6%A0%BC2"><span class="nav-number">1.2.</span> <span class="nav-text">在线绘制 LTE资源网格2</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5G-NR-LTE-ARFCN-Frequency-Caculator-ARFCN%E9%A2%91%E7%8E%87%E8%AE%A1%E7%AE%97"><span class="nav-number">1.3.</span> <span class="nav-text">5G NR&#x2F;LTE ARFCN-Frequency Caculator &#x2F; ARFCN频率计算</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9C%A8%E7%BA%BF%E4%BF%A1%E9%81%93%E7%BC%96%E7%A0%81%E8%AF%AF%E7%A0%81%E7%8E%87-%E6%AF%94%E8%BE%83%E5%99%A8"><span class="nav-number">1.4.</span> <span class="nav-text">在线信道编码误码率 比较器</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%80%9A%E4%BF%A1%E5%8D%9A%E5%AE%A2"><span class="nav-number">2.</span> <span class="nav-text">通信博客</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#ShareTechnote"><span class="nav-number">2.1.</span> <span class="nav-text">ShareTechnote</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#techplayon"><span class="nav-number">2.2.</span> <span class="nav-text">techplayon</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#How-LTE-Stuff-Works"><span class="nav-number">2.3.</span> <span class="nav-text">How LTE Stuff Works?</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5G-NBIOT-LTE-Question-Answers"><span class="nav-number">2.4.</span> <span class="nav-text">5G NBIOT LTE Question Answers</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Long-Term-Evolution-4G"><span class="nav-number">2.5.</span> <span class="nav-text">Long Term Evolution | 4G</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#BLOG-CommResearch"><span class="nav-number">2.6.</span> <span class="nav-text">BLOG | CommResearch</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ZCL-SPACE"><span class="nav-number">2.7.</span> <span class="nav-text">ZCL.SPACE</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#dspLog-Signal-processing-for-communication"><span class="nav-number">2.8.</span> <span class="nav-text">dspLog - Signal processing for communication</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B6%E5%AE%83"><span class="nav-number">2.9.</span> <span class="nav-text">其它</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%BA%90%E7%A0%81%E4%BB%93%E5%BA%93"><span class="nav-number">3.</span> <span class="nav-text">源码仓库</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#New-Radio-5G-Utils-5-g-utils"><span class="nav-number">3.1.</span> <span class="nav-text">New_Radio_5G_Utils 5 g utils</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="热夏"
+      src="/images/head.jpg">
+  <p class="site-author-name" itemprop="name">热夏</p>
+  <div class="site-description" itemprop="description">空山新雨后，天气晚来秋。</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">81</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">42</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/upwon" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;upwon" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:w1244753906@gmail.com" title="E-Mail → mailto:w1244753906@gmail.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.lifeee.top//atom.xml" title="RSS → https:&#x2F;&#x2F;www.lifeee.top&#x2F;&#x2F;atom.xml" rel="noopener me"><i class="fa fa-rss fa-fw"></i>RSS</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+        <div class="pjax">
+        </div>
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.lifeee.top/posts/1297.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/head.jpg">
+      <meta itemprop="name" content="热夏">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="热夏的博客">
+      <meta itemprop="description" content="空山新雨后，天气晚来秋。">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="通信专业网页工具和博客推荐 | 热夏的博客">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          通信专业网页工具和博客推荐
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2022-10-15 22:24:38" itemprop="dateCreated datePublished" datetime="2022-10-15T22:24:38+08:00">2022-10-15</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2023-07-16 11:19:34" itemprop="dateModified" datetime="2023-07-16T11:19:34+08:00">2023-07-16</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">技术</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>4k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>4 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/202210162224324.jpg"></p>
+<p>研究生阶段在学习通信(LTE&#x2F;5G)时偶遇到一些工具网站和不错的博客，在此分享给大家。</p>
+<span id="more"></span>
+
+
+
+<h2 id="工具类"><a href="#工具类" class="headerlink" title="工具类"></a>工具类</h2><h3 id="在线绘制-LTE资源网格"><a href="#在线绘制-LTE资源网格" class="headerlink" title="在线绘制 LTE资源网格"></a>在线绘制 LTE资源网格</h3><p><a target="_blank" rel="noopener" href="http://dhagle.in/LTE">http://dhagle.in/LTE</a></p>
+<p> 在线绘制 LTE资源网格 ，太棒了吧，还可以选各种参数。</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/202210152324749.png"></p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/202307161119149.jpg"></p>
+<p>可以根据自己的需求更改 FDD或者TDD 、带宽 、CP类型等等，然后点击 <code>Submit</code> 下方的资源网格就会刷新啦。</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/202210162219187.png"></p>
+<p>网页右上角这边还将不用信道资源的分配用不同颜色区分 ，对应着下方的各个 <code>RE</code> （资源网格上的每个元素称为一个RE Resource Element ，RE 是 LTE 中的最小物理资源，存放一个调制符号）。另外还有饼图列出了各个信道资源的比例，当然 PDSCH 占比是最大的，毕竟要传输业务数据。</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/202210162219651.png"></p>
+<h3 id="在线绘制-LTE资源网格2"><a href="#在线绘制-LTE资源网格2" class="headerlink" title="在线绘制 LTE资源网格2"></a>在线绘制 LTE资源网格2</h3><p><a target="_blank" rel="noopener" href="http://www.lte-bullets.com/">http://www.lte-bullets.com/</a></p>
+<p>同样是一个绘制资源网格的工具，可以在 <a target="_blank" rel="noopener" href="http://www.lte-bullets.com/visualisation_tool.html">lte-bullets</a> 的网站中下载。</p>
+<blockquote>
+<p>This tool is free to download and use. It models the allocation of  downlink Resource Elements to the set of Signals and Physical Channels.  The user can configure each of the variables which have an impact upon  the allocation of Resource Elements, e.g. the channel bandwidth, number  of transmit antenna and cell identity. The tool also quantifies  throughput for each modulation scheme and a range of assumed coding  rates.<br>       Results from the tool can be exported into a csv file for  subsequent viewing in Excel. An Excel Macro can be downloaded to read  and format the data.    </p>
+</blockquote>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/202210152325242.png"></p>
+<p>安装好后，根据需求设置参数，点击左下角的按钮生成即可。</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/202210152326329.png"></p>
+<p>  <img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/202210152326756.png"></p>
+<p>  <img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/202210152327039.png"></p>
+<p>还能计算出吞吐量什么的</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/202210152350354.png"></p>
+<p>还可以导出成 CSV 文件</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/202210152350690.png"></p>
+<h3 id="5G-NR-LTE-ARFCN-Frequency-Caculator-ARFCN频率计算"><a href="#5G-NR-LTE-ARFCN-Frequency-Caculator-ARFCN频率计算" class="headerlink" title="5G NR&#x2F;LTE ARFCN-Frequency Caculator &#x2F; ARFCN频率计算"></a>5G NR&#x2F;LTE ARFCN-Frequency Caculator &#x2F; ARFCN频率计算</h3><p><a target="_blank" rel="noopener" href="https://itecspec.com/3gpp-arfcn-frequency-converter/">5G NR&#x2F;LTE ARFCN-Frequency Caculator (3GPP Specs) – TechSpec (itecspec.com)</a></p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/202210162154750.png"></p>
+<h3 id="在线信道编码误码率-比较器"><a href="#在线信道编码误码率-比较器" class="headerlink" title="在线信道编码误码率 比较器"></a>在线信道编码误码率 比较器</h3><p><a target="_blank" rel="noopener" href="https://aff3ct.github.io/comparator.html?curve0=162fd1d&curve1=de60d27&xaxis=Eb/N0&yaxes=BER,FER">https://aff3ct.github.io/comparator.html?curve0=162fd1d&amp;curve1=de60d27&amp;xaxis=Eb%2FN0&amp;yaxes=BER%2CFER</a></p>
+<p>This page is an online tool dedicated to the <strong>Bit Error Rate (BER) and Frame Error Rate (FER) curve comparisons</strong>. Various type of codes are considered like <strong>the Turbo codes (LTE, LTE-Advanced, CCSDS, etc.), the Low-Density Parity-Check (LDPC) codes (5G, Wi-Fi, WiMAX, CCSDS, WRAN, DVB-S2, etc.), and the more recently introduced Polar codes (5G)</strong>.</p>
+<p>本页面是一个在线工具，专门用于比特错误率(BER)和帧错误率(FER)曲线比较。 各种类型的码被认为像 Turbo 码(LTE，LTE-advanced，CCSDS 等) ，低密度奇偶校验(LDPC)码(5 g，Wi-Fi，WiMAX，CCSDS，wlan，DVB-S2等) ，以及最近引入的极性码(5 g)。</p>
+<p>The presented results have been simulated with <a target="_blank" rel="noopener" href="https://aff3ct.github.io/index.html">AFF3CT</a>: our Open-source communication chain dedicated to the Forward Error Correction (FEC) simulations. The simulated output text files are freely available on our dedicated <a target="_blank" rel="noopener" href="https://github.com/aff3ct/error_rate_references/tree/development">GitHub repository</a>.</p>
+<p>给出的结果已经被 AFF3CT 模拟: 我们的开源通信链专门用于前向错误更正通信系统(FEC)模拟。 模拟输出的文本文件可以在我们专用的 GitHub 存储库中免费获得。</p>
+<p>Do you like the BER&#x2F;FER Comparator? Is it useful in your research works? If yes, you can thank us by citing the following journal article: <strong>A. Cassagne et al., “<a target="_blank" rel="noopener" href="https://doi.org/10.1016/j.softx.2019.100345">AFF3CT: A Fast Forward Error Correction Toolbox!</a>,“ *SoftwareX*, 2019</strong>. </p>
+<p>你喜欢 ber &#x2F; fer 比较器吗？ 它在你的研究工作中有用吗？ 如果答案是肯定的，你可以通过引用下面的期刊文章来感谢我们: a. Cassagne et A.. ，“ AFF3CT: 一个快速的前向错误更正工具箱！ ” SoftwareX，2019。</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img20200522200211.png"></p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img20200522214142.png"></p>
+<BR />
+
+
+
+<h2 id="通信博客"><a href="#通信博客" class="headerlink" title="通信博客"></a>通信博客</h2><h3 id="ShareTechnote"><a href="#ShareTechnote" class="headerlink" title="ShareTechnote"></a>ShareTechnote</h3><p><a target="_blank" rel="noopener" href="http://www.sharetechnote.com/">ShareTechnote</a></p>
+<p>鼎鼎大名的ShareTechnote ，没看过就真的很不应该了， 很多2345G、IoT、WIFI等等协议的解读 。</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/202210162129758.png"></p>
+<h3 id="techplayon"><a href="#techplayon" class="headerlink" title="techplayon"></a>techplayon</h3><p><a target="_blank" rel="noopener" href="http://www.techplayon.com/5gnr/">http://www.techplayon.com/5gnr/</a></p>
+<p>很多有关5G相关的协议分享与解读，很值得一读。</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/202210152356751.png"></p>
+<h3 id="How-LTE-Stuff-Works"><a href="#How-LTE-Stuff-Works" class="headerlink" title="How LTE Stuff Works?"></a>How LTE Stuff Works?</h3><p><a target="_blank" rel="noopener" href="http://howltestuffworks.blogspot.com/">http://howltestuffworks.blogspot.com/</a></p>
+<p>别被名字误会，里面有的内容不仅仅是LTE，还包括5G。</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/202210152357158.png"></p>
+<h3 id="5G-NBIOT-LTE-Question-Answers"><a href="#5G-NBIOT-LTE-Question-Answers" class="headerlink" title="5G NBIOT LTE Question Answers"></a>5G NBIOT LTE Question Answers</h3><p><a target="_blank" rel="noopener" href="https://www.blacktechnoguys.com/">https://www.blacktechnoguys.com/</a></p>
+<blockquote>
+<p>Hi, I am a tech freak and specifically a Telecom Enthusiast. I have always been interested in how our mobile phones communicate with the network and each other. I have created this blog to answer the basic and advanced questions that covers basics as far as 4G, NB-IoT and 5G are concerned. The main objective of this blog is to answer all the possible questions related to same that will help our fellow friends to enhance there skills in related filed.</p>
+<p>你好，我是一个科技迷，特别是一个电信爱好者。我一直对我们的移动电话如何与网络和彼此之间进行通信很感兴趣。我创建这个博客是为了回答一些基本的和高级的问题，这些问题涵盖了4G、 NB-IoT 和5G 的基本知识。这个博客的主要目的是回答所有可能的问题相同，将帮助我们的朋友提高有关领域的技能。</p>
+</blockquote>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/202210160001513.png"></p>
+<h3 id="Long-Term-Evolution-4G"><a href="#Long-Term-Evolution-4G" class="headerlink" title="Long Term Evolution | 4G"></a>Long Term Evolution | 4G</h3><p><a target="_blank" rel="noopener" href="https://ltebasics.wordpress.com/">Long Term Evolution | 4G – Get LTE Basics </a></p>
+<p>介绍LTE与5G NR 相关的技术。</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/202210162232521.png"></p>
+<h3 id="BLOG-CommResearch"><a href="#BLOG-CommResearch" class="headerlink" title="BLOG | CommResearch"></a>BLOG | CommResearch</h3><p><a target="_blank" rel="noopener" href="https://www.commresearch.com.tw/Blog/Index.aspx#4">BLOG | CommResearch</a></p>
+<p>台湾的有关通信的博客。</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/202210162122759.png"></p>
+<h3 id="ZCL-SPACE"><a href="#ZCL-SPACE" class="headerlink" title="ZCL.SPACE"></a>ZCL.SPACE</h3><p><a target="_blank" rel="noopener" href="https://zlearning.netlify.app/">ZCL.SPACE (zlearning.netlify.app)</a></p>
+<p>很多数学与通信知识，通信协议解读‘仿真等。</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/202210162125683.png"></p>
+<h3 id="dspLog-Signal-processing-for-communication"><a href="#dspLog-Signal-processing-for-communication" class="headerlink" title="dspLog - Signal processing for communication"></a><a target="_blank" rel="noopener" href="http://www.dsplog.com/">dspLog - Signal processing for communication</a></h3><p><a target="_blank" rel="noopener" href="http://www.dsplog.com/">dspLog - Signal processing for communication</a></p>
+<p>非常棒的一个网站，会详细的介绍如何写仿真代码，里面有很多MIMO的代码值得参考学习。</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/202210162157302.png"></p>
+<h3 id="其它"><a href="#其它" class="headerlink" title="其它"></a>其它</h3><ul>
+<li><p><a target="_blank" rel="noopener" href="https://www.txrjy.com/forum.php">通信人家园 论坛|通信社区 - Powered by C114 (txrjy.com)</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://www.witimes.com/">无线时代 | 个人博客 (witimes.com)</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="http://sdr-x.github.io/">SDR-X</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="http://www.hackrf.net/">HackRF.net</a> ： 开源SDR。</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/m0_45416816?type=blog">我就是你们要找的张小建的博客_CSDN博客-5G NR AS,其他,5G NR R16领域博主</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/m_052148?type=blog">阿米尔C的博客_CSDN博客-4GLTE协议开发,5GNR协议开发,其它领域博主</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/littleBird_2?type=blog">littleBird_2的博客_CSDN博客-5G,NR,LTE领域博主</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://zhuyulab.blog.csdn.net/?type=blog">B417科研笔记的博客_CSDN博客-通信中的常用数学,python,深度学习领域博主</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/kakamilan?type=blog">5G菜鸟成长日记的博客_CSDN博客-5G,通信算法,计算机领域博主</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://www.cablelabs.com/blog/join-cablelabs-cable-next-gen-conference">Join CableLabs Experts at Light Reading’s Annual Cable Next-Gen Conference - CableLabs</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://www.zhihu.com/column/xzclass">鲜枣课堂 - 知乎 (zhihu.com)</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://www.zhihu.com/people/fu-you-cai-cai/posts">无线深海 - 知乎 (zhihu.com)</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://www.techplayon.com/tar-gz-linux-tar-command-examples/">tar.gz - Linux tar command examples - Techplayon</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://najeebgafar.com/multi-language-laravel-8-project/">Multi language Laravel 8 project - Najeebgafar</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://pupuweb.com/">PUPUWEB - Information Resource for Emerging Technology Trends and Cybersecurity</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://wirelesspi.com/articles/">Articles - Wireless Pi</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://blog.3g4g.co.uk/">The 3G4G Blog</a></p>
+</li>
+</ul>
+<BR />
+
+<h2 id="源码仓库"><a href="#源码仓库" class="headerlink" title="源码仓库"></a>源码仓库</h2><h3 id="New-Radio-5G-Utils-5-g-utils"><a href="#New-Radio-5G-Utils-5-g-utils" class="headerlink" title="New_Radio_5G_Utils 5 g utils"></a><a target="_blank" rel="noopener" href="https://prtkmishra.github.io/New_Radio_5G_Utils/">New_Radio_5G_Utils 5 g utils</a></h3><p><a target="_blank" rel="noopener" href="https://prtkmishra.github.io/New_Radio_5G_Utils/">https://prtkmishra.github.io/New_Radio_5G_Utils&#x2F;</a></p>
+<p>This repository contains Physical layer utilities based on 3GPP specs for NR 5G</p>
+<p>该存储库包含基于3GPP 规范的 NR 5G 物理层实用程序</p>
+<blockquote>
+</blockquote>
+<p>其它源码仓库后续补充。</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>请我一杯咖啡吧！</div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/wechatpay.png" alt="热夏 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="/images/alipay.jpg" alt="热夏 支付宝">
+        <span>支付宝</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>热夏
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://www.lifeee.top/posts/1297.html" title="通信专业网页工具和博客推荐">https://www.lifeee.top/posts/1297.html</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="followme">
+  <span>欢迎关注我的其它发布渠道</span>
+
+  <div class="social-list">
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="/atom.xml">
+            <span class="icon">
+              <i class="fa fa-rss"></i>
+            </span>
+
+            <span class="label">RSS</span>
+          </a>
+      </div>
+  </div>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/%E6%95%99%E7%A8%8B/" rel="tag"><i class="fa fa-tag"></i> 教程</a>
+              <a href="/tags/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/" rel="tag"><i class="fa fa-tag"></i> 善用佳软</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/posts/14861.html" rel="prev" title="利用谷歌学术追踪最新论文动态">
+                  <i class="fa fa-angle-left"></i> 利用谷歌学术追踪最新论文动态
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/posts/23379.html" rel="next" title="Jetbrains全家桶及插件激活方式">
+                  Jetbrains全家桶及插件激活方式 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments gitalk-container"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 2018 – 
+    <span itemprop="copyrightYear">2024</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">热夏</span>
+  </div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>站点总字数：</span>
+    <span title="站点总字数">629k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">9:32</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/next-theme-pjax/0.6.0/pjax.min.js" integrity="sha256-vxLn1tSKWD4dqbMRyv940UYw4sXgMtYcK6reefzZrao=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lozad.js/1.16.0/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script><script src="/js/pjax.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+  <script src="/js/third-party/pace.js"></script>
+
+
+  
+  <script data-pjax async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","mhchem":false,"js":{"url":"//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
+
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"upwon","repo":"upwon.github.io","client_id":"7e047047ecee7317452b","client_secret":"c60fbdf0eb19e7264e33ab780319e4d420a58fee","admin_user":"upwon","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":null,"js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"d2959732e55bf7b4c322c5479447cfb4"}</script>
+<script src="/js/third-party/comments/gitalk.js"></script>
+
+
+  <script type="text/javascript" src="/js/clicklove.js"></script>
+   
+ 
+
+</body>
+</html>

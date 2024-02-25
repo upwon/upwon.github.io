@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.1.1">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/myapple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/myfavicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/myfavicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/myapple-touch-icon-next.png" color="#222">
+  <meta name="google-site-verification" content="google2fc64c2b92961282.html">
+  <meta name="baidu-site-verification" content="s6BwSjIZYB">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.loli.net/css?family='LXGW+WenKai+LITE':300,300italic,400,400italic,700,700italic%7C'LXGW+WenKai+Screen':300,300italic,400,400italic,700,700italic%7C'LXGW+WenKai':300,300italic,400,400italic,700,700italic%7C'Noto+Serif+SC':300,300italic,400,400italic,700,700italic%7C'EB+Garamond':300,300italic,400,400italic,700,700italic%7C'PingFang+SC':300,300italic,400,400italic,700,700italic%7C'Microsoft+YaHei':300,300italic,400,400italic,700,700italic%7C'sans-serif':300,300italic,400,400italic,700,700italic%7CMa+Shan+Zheng:300,300italic,400,400italic,700,700italic%7CLXGW+WenKai+Screen:300,300italic,400,400italic,700,700italic%7CLXGW+WenKai:300,300italic,400,400italic,700,700italic%7CMenlo:300,300italic,400,400italic,700,700italic%7CMonaco:300,300italic,400,400italic,700,700italic%7CConsolas:300,300italic,400,400italic,700,700italic%7CSource+Code+Pro:300,300italic,400,400italic,700,700italic%7Csystem-ui:300,300italic,400,400italic,700,700italic%7Cmonospace:300,300italic,400,400italic,700,700italic%7Csans-serif:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha256-yIDrPSXHZdOZhAqiBP7CKzIwMQmRCJ8UeB8Jo17YC4o=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/themes/blue/pace-theme-minimal.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"www.lifeee.top","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.19.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"mac","show_result":true},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="图片来自酷安   DFT-s-OFDM到底是什么呢？mMTC又为何？您能运用SS-RSRQ于句子中吗？5G术语和缩写的数量，无止境地不断增加。阅读本文，带您了解 5G NR 中常用的术语 🌞">
+<meta property="og:type" content="article">
+<meta property="og:title" content="5G NR 常用术语">
+<meta property="og:url" content="https://www.lifeee.top/posts/55098.html">
+<meta property="og:site_name" content="热夏的博客">
+<meta property="og:description" content="图片来自酷安   DFT-s-OFDM到底是什么呢？mMTC又为何？您能运用SS-RSRQ于句子中吗？5G术语和缩写的数量，无止境地不断增加。阅读本文，带您了解 5G NR 中常用的术语 🌞">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img20200604165231.jpeg">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/c55aab25ly1gffhhfr6wnj217a0itdi1.jpg">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/440px-Beamforming.jpg">
+<meta property="article:published_time" content="2020-06-03T13:53:25.000Z">
+<meta property="article:modified_time" content="2022-11-14T16:57:17.411Z">
+<meta property="article:author" content="热夏">
+<meta property="article:tag" content="通信">
+<meta property="article:tag" content="5G NR">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img20200604165231.jpeg">
+
+
+<link rel="canonical" href="https://www.lifeee.top/posts/55098.html">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://www.lifeee.top/posts/55098.html","path":"posts/55098.html","title":"5G NR 常用术语"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>5G NR 常用术语 | 热夏的博客</title>
+  
+
+
+
+
+
+
+
+<link href="https://fonts.loli.net/css?family=Noto+Serif+SC:400,500,700&display=swap&subset=chinese-simplified" rel="stylesheet">
+<link rel="stylesheet" href="https://npm.elemecdn.com/lxgw-wenkai-screen-webfont@1.7.0/style.css" />
+
+<link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&display=swap" rel="stylesheet">
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="热夏的博客" type="application/atom+xml">
+<style>.darkmode--activated{--body-bg-color:#282828;--content-bg-color:#333;--card-bg-color:#555;--text-color:#ccc;--blockquote-color:#bbb;--link-color:#ccc;--link-hover-color:#eee;--brand-color:#ddd;--brand-hover-color:#ddd;--table-row-odd-bg-color:#282828;--table-row-hover-bg-color:#363636;--menu-item-bg-color:#555;--btn-default-bg:#222;--btn-default-color:#ccc;--btn-default-border-color:#555;--btn-default-hover-bg:#666;--btn-default-hover-color:#ccc;--btn-default-hover-border-color:#666;--highlight-background:#282b2e;--highlight-foreground:#a9b7c6;--highlight-gutter-background:#34393d;--highlight-gutter-foreground:#9ca9b6}.darkmode--activated img{opacity:.75}.darkmode--activated img:hover{opacity:.9}.darkmode--activated code{color:#69dbdc;background:0 0}button.darkmode-toggle{z-index:9999}.darkmode-ignore,img{display:flex!important}.beian img{display:inline-block!important}</style></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">热夏的博客</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-heart fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#2G"><span class="nav-number">1.</span> <span class="nav-text">2G</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3G"><span class="nav-number">2.</span> <span class="nav-text">3G</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3GPP-%E2%80%93-3rd-Generation-Partnership-Project"><span class="nav-number">3.</span> <span class="nav-text">3GPP – 3rd Generation Partnership Project</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4G"><span class="nav-number">4.</span> <span class="nav-text">4G</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5G"><span class="nav-number">5.</span> <span class="nav-text">5G</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#AAT-%E2%80%93-Antenna-array-tool"><span class="nav-number">6.</span> <span class="nav-text">AAT – Antenna array tool</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ACP-%E2%80%93-Adjacent-channel-power"><span class="nav-number">7.</span> <span class="nav-text">ACP – Adjacent channel power</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ACPR-%E2%80%93-Adjacent-channel-power-ratio"><span class="nav-number">8.</span> <span class="nav-text">ACPR – Adjacent channel power ratio</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#ACLR-%E2%80%93-Adjacent-channel-leakage-ratio"><span class="nav-number">9.</span> <span class="nav-text">ACLR – Adjacent channel leakage ratio</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#AM-distortion"><span class="nav-number">10.</span> <span class="nav-text">AM distortion</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#AMF-%E2%80%93-Access-and-mobility-management-function"><span class="nav-number">11.</span> <span class="nav-text">AMF – Access and mobility management function</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#AM-PM-distortion"><span class="nav-number">12.</span> <span class="nav-text">AM&#x2F;PM distortion</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Antenna-reciprocity"><span class="nav-number">13.</span> <span class="nav-text">Antenna reciprocity</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#AWG-%E2%80%93-Arbitrary-waveform-generator"><span class="nav-number">14.</span> <span class="nav-text">AWG – Arbitrary waveform generator</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Backhaul"><span class="nav-number">15.</span> <span class="nav-text">Backhaul</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Base-station-network-emulator"><span class="nav-number">16.</span> <span class="nav-text">Base station network emulator</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#BBU-%E2%80%93-Baseband-unit"><span class="nav-number">17.</span> <span class="nav-text">BBU – Baseband unit</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Beam-acquisition"><span class="nav-number">18.</span> <span class="nav-text">Beam acquisition</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Beamforming"><span class="nav-number">19.</span> <span class="nav-text">Beamforming</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Beam-steering"><span class="nav-number">20.</span> <span class="nav-text">Beam steering</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Carrier-aggregation"><span class="nav-number">21.</span> <span class="nav-text">Carrier aggregation</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#CATR-%E2%80%93-Compact-antenna-test-range"><span class="nav-number">22.</span> <span class="nav-text">CATR – Compact antenna test range</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="热夏"
+      src="/images/head.jpg">
+  <p class="site-author-name" itemprop="name">热夏</p>
+  <div class="site-description" itemprop="description">空山新雨后，天气晚来秋。</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">81</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">42</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/upwon" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;upwon" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:w1244753906@gmail.com" title="E-Mail → mailto:w1244753906@gmail.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.lifeee.top//atom.xml" title="RSS → https:&#x2F;&#x2F;www.lifeee.top&#x2F;&#x2F;atom.xml" rel="noopener me"><i class="fa fa-rss fa-fw"></i>RSS</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+        <div class="pjax">
+        </div>
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.lifeee.top/posts/55098.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/head.jpg">
+      <meta itemprop="name" content="热夏">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="热夏的博客">
+      <meta itemprop="description" content="空山新雨后，天气晚来秋。">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="5G NR 常用术语 | 热夏的博客">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          5G NR 常用术语
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2020-06-03 21:53:25" itemprop="dateCreated datePublished" datetime="2020-06-03T21:53:25+08:00">2020-06-03</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-11-15 00:57:17" itemprop="dateModified" datetime="2022-11-15T00:57:17+08:00">2022-11-15</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">技术</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E9%80%9A%E4%BF%A1/" itemprop="url" rel="index"><span itemprop="name">通信</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>13k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>11 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img20200604165231.jpeg"></p>
+<center><font size=1>图片来自酷安 </center>
+
+<p>DFT-s-OFDM到底是什么呢？mMTC又为何？您能运用SS-RSRQ于句子中吗？5G术语和缩写的数量，无止境地不断增加。阅读本文，带您了解 5G NR 中常用的术语 🌞</p>
+<span id="more"></span>
+
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=36953766&auto=0&height=66"></iframe>
+
+<center><font size=4>🎵 & 📖</center>
+
+<h4 id="2G"><a href="#2G" class="headerlink" title="2G"></a>2G</h4><p>第二代数字蜂窝网络，旨在取代模拟通信的第一代无线电(1G)。主要设计旨在数字语音服务。</p>
+<blockquote>
+<p>第二代移动通信技术，简称2G（Second Generation）。相对于前一代直接以模拟信号的方式进行语音传输，2G移动通信系统对语音系以数字化方式传输，除具有通话功能外，某些系统并引入了短信（SMS，Short message service）功能。在某些2G系统中也支持数据传输与传真，但因为速度缓慢，只适合传输量低的电子邮件、软件等信息。 </p>
+<p>2G技术基本上可依照采用的多路复用（Multiplexing）技术形式分成两类：一种是基于TDMA所发展出来的系统，以GSM为代表；另一种则是基于CDMA所发展出来的系统。 </p>
+<p>主要的第二代手机通信技术规格标准有： </p>
+<ul>
+<li>GSM：以TDMA为基础所发展、源于欧洲、目前已全球化。 </li>
+<li>IDEN：以TDMA为基础所发展、美国独有的系统。被美国电信系统商Nextell使用。 </li>
+<li>IS-136﹙也叫做D-AMPS﹚：基于TDMA所发展，是美国最简单的TDMA系统，用于美洲。 </li>
+<li>IS-95﹙也叫做cdmaOne﹚：基于CDMA所发展、是美国最简单的CDMA系统、用于美洲和亚洲一些国家。 </li>
+<li>PDC﹙Personal Digital Cellular﹚：基于TDMA所发展，仅在日本普及。<br>在美国所使用的2G GSM系统通常称为PCS（Personal Communications Service），即采用1900MHz频段的GSM1900，频段异于欧洲所采用的GSM900（原始GSM频段）与GSM1800（原称PCN）。</li>
+</ul>
+</blockquote>
+<blockquote>
+<p>Second-generation digital cellular networks used by mobile phones, designed as a replacement for analog first-generation radio (1G). Designed primarily for voice using digital standards. </p>
+</blockquote>
+<br />
+
+<h4 id="3G"><a href="#3G" class="headerlink" title="3G"></a>3G</h4><p>3G第三代无线移动电信技术，由国际电信联盟(ITU)制定的2000年国际移动电信(IMT-2000)标准要求，峰值速率至少支持200kbps。 利用IP协议的移动宽带为语音电话添加了文本和图像消息。</p>
+<blockquote>
+<p><strong>第三代移动通信</strong>技术，简称<strong>3G</strong>（英语：<strong>3rd-Generation</strong>），规范名称<strong>IMT-2000</strong>（International Mobile Telecommunications-2000），是指支持高速数据传输的蜂窝网络移动电话技术。3G服务能够同时发送声音（通话）及信息（电子邮件、即时通信等）。3G的代表特征是提供高速数据业务，速率一般在几百kbps以上。</p>
+<p>3G规范是由国际电信联盟（ITU）所制定的IMT-2000规范的最终发展结果。原先制定的3G远景，是能够以此规范达到全球通信系统的标准化。当前3G存在四种标准：<a target="_blank" rel="noopener" href="https://www.wikiwand.com/zh-cn/W-CDMA">W-CDMA</a>、<a target="_blank" rel="noopener" href="https://www.wikiwand.com/zh-cn/CDMA2000">CDMA2000</a>、<a target="_blank" rel="noopener" href="https://www.wikiwand.com/zh-cn/TD-SCDMA">TD-SCDMA</a>、<a target="_blank" rel="noopener" href="https://www.wikiwand.com/zh-cn/WiMAX">WiMAX</a>。</p>
+</blockquote>
+<blockquote>
+<p>Third-generation wireless mobile telecommunications technology, required by International Mobile T elecommunications<br>for the year 2000 (IMT -2000) standard from International Telecommunication Union (ITU) to support at least 200 kbps at<br>peak rate. First mobile broadband utilizing IP protocols added text and image messaging to voice phone calls. </p>
+</blockquote>
+<br />
+
+<h4 id="3GPP-–-3rd-Generation-Partnership-Project"><a href="#3GPP-–-3rd-Generation-Partnership-Project" class="headerlink" title="3GPP – 3rd Generation Partnership Project"></a>3GPP – 3rd Generation Partnership Project</h4><p>3GPP最初的工作范围是为<strong>第三代移动通信系统（主要是UMTS）</strong>制定全球适用技术规范和技术报告。随后工作范围得到了改进，增加了对<strong>UTRA长期演进系统</strong>的研究和标准制定。组织开发和管理移动通信标准的移动通信行业协作。 关于5G，3GPP正在不断改进5G标准。</p>
+<blockquote>
+<p>A mobile communications industry collaboration that organizes the development and management of mobile communications standards. With respect to 5G, 3GPP is managing the evolving 5G standards.</p>
+</blockquote>
+<br/>
+
+<h4 id="4G"><a href="#4G" class="headerlink" title="4G"></a>4G</h4><p>4G第四代移动通信技术，旨在接替3G。一种移动宽带标准，旨在支持呼叫、视频、数据和Web访问的全网际协议(IP)网络。4G的性能目标是用于汽车等高速移动应用的100 Mbps，以及用于包括行人和固定位置访问在内的低移动性使用情况的1 Gbps。</p>
+<blockquote>
+<p>从技术标准的角度看，按照<a target="_blank" rel="noopener" href="https://www.wikiwand.com/zh-cn/ITU">ITU</a>的定义，静态传输速率达到1Gbps，用户在高速移动状态下可以达到100Mbps，就可以作为4G的技术之一。</p>
+<p>从运营商的角度看，除了与现有网络的可兼容性外，4G要有更高的数据吞吐量、更低时延、更低的建设和运行维护成本、更高的鉴权能力和安全能力、支持多种QoS。</p>
+<p>从融和的角度看，4G意味着更多的参与方，更多技术、行业、应用的融合，不再局限于电信行业，还可以应用于金融、医疗、教育、交通等行业；通信终端能做更多的事情，例如除语音通信之外的多媒体通信、远端控制等；或许局域网、互联网、电信网、广播网、卫星网等能够融为一体组成一个通播网，无论使用什么终端，都可以享受高质量的信息服务，向宽带无线化和无线宽带化演进，使4G渗透到生活的各个范畴。</p>
+<p>从用户需求的角度看，4G能为用户提供更快的速度并满足用户更多的需求。移动通信之所以从模拟到数字、从2G到4G以及将来的xG演进，最根本的推动力是用户需求由无线语音服务向无线多媒体服务转变，从而激发营运商为了提高ARPU、开拓新的频段支持用户数量的持续增长、更有效的频谱利用率以及更低的营运成本，不得不进行变革转型。</p>
+<p>因此，4G描述了下列两种不同但有所重叠的概念：</p>
+<ul>
+<li><strong>高速的移动电话网络</strong>，速度如同计算机网络[DSL的频宽，一秒能达10 Mbit或更多。此概念曾被用来描述在无线网络上。也是目前成功的3G系统提供商所提出来的愿景。</li>
+<li><strong>无限网络</strong>（Pervasive Network）技术，一个比较抽象的说法是“弥漫型”、“无定型”、“整体”的无线技术，让用户完全融入系统当中。这个概念也包括了智能无线电（Smart Radio）的技术，并能够达到更高的频谱（spectrum use）和传输力量。此外，也能过滤、传输大量消息。</li>
+</ul>
+</blockquote>
+<blockquote>
+<p>Fourth-generation mobile telecommunications technology, designed to succeed 3G. A mobile broadband standard<br>designed to support an all Internet Protocol (IP) network for calls, video, data, and web access. The performance goals of<br>4G are 100 Mbps for high-speed mobile applications such as automobiles, and 1 Gbps for low-mobility use cases including<br>pedestrians and fixed-location access.</p>
+</blockquote>
+<br/>
+
+<h4 id="5G"><a href="#5G" class="headerlink" title="5G"></a>5G</h4><p>5G第五代移动通信技术，国际移动T电子通信2020年(IMT-2020)标准要求支持全互联网协议(IP)网络。支持更快的数据速率、更高的连接密度和更低的延迟。</p>
+<blockquote>
+<p><strong>第五代移动通信技术</strong>（英语：5th generation mobile networks 或 5th generation wireless systems，简称<strong>5G</strong>）是最新一代移动通信技术，为4G（<a target="_blank" rel="noopener" href="https://www.wikiwand.com/zh-cn/%E9%80%B2%E9%9A%8E%E9%95%B7%E6%9C%9F%E6%BC%94%E9%80%B2%E6%8A%80%E8%A1%93">LTE-A</a>、 <a target="_blank" rel="noopener" href="https://www.wikiwand.com/zh-cn/IEEE_802.16">WiMAX-A</a>）系统后的延伸。5G的性能目标是高数据速率、减少延迟、节省能源、降低成本、提高系统容量和大规模设备连接。Release-15中的5G规范的第一阶段是为了适应早期的商业部署。Release-16的第二阶段将于2020年4月完成，作为IMT-2020技术的候选提交给国际电信联盟ITU）。</p>
+<p>ITU IMT-2020规范要求速度高达20 Gbit&#x2F;s，可以实现宽信道带宽和大容量<a target="_blank" rel="noopener" href="https://www.wikiwand.com/zh-cn/MIMO">MIMO</a>。第三代合作伙伴计划3GPP将提交<a target="_blank" rel="noopener" href="https://www.wikiwand.com/zh-cn/5G%E6%96%B0%E6%97%A0%E7%BA%BF">5G NR</a>（新无线电）作为其5G通信标准提案。5G NR可包括低频（FR1），低于6 GHz和更高频率（FR2），高于24 GHz和<a target="_blank" rel="noopener" href="https://www.wikiwand.com/zh-cn/%E6%A5%B5%E9%AB%98%E9%A0%BB">毫米波</a>范围。在早期发展时，在4G硬件（非独立）上使用5G NR软件的速度和延迟相较新一代4G系统只拥有约25％到50％的改善幅度。独立eMBB部署的仿真显示，在FR1范围内，吞吐量提高了2.5倍，在FR2范围内提高了近20倍。</p>
+<p>当前，提供5G无线硬件与系统的公司有：<a target="_blank" rel="noopener" href="https://www.wikiwand.com/zh-cn/%E8%8F%AF%E7%82%BA">华为</a>、<a target="_blank" rel="noopener" href="https://www.wikiwand.com/zh-cn/%E4%B8%89%E6%98%9F%E7%94%B5%E5%AD%90">三星</a>、<a target="_blank" rel="noopener" href="https://www.wikiwand.com/zh-cn/%E6%84%9B%E7%AB%8B%E4%BF%A1">爱立信</a>、<a target="_blank" rel="noopener" href="https://www.wikiwand.com/zh-cn/%E9%AB%98%E9%80%9A">高通</a>、<a target="_blank" rel="noopener" href="https://www.wikiwand.com/zh-cn/%E8%81%AF%E7%99%BC%E7%A7%91%E6%8A%80">联发科技</a>、<a target="_blank" rel="noopener" href="https://www.wikiwand.com/zh-cn/%E8%AB%BE%E5%9F%BA%E4%BA%9E">诺基亚</a>、<a target="_blank" rel="noopener" href="https://www.wikiwand.com/zh-cn/%E6%80%9D%E7%A7%91">思科</a>、<a target="_blank" rel="noopener" href="https://www.wikiwand.com/zh-cn/%E7%9E%BB%E5%8D%9A%E7%B6%B2%E8%B7%AF">瞻博网络</a>、<a target="_blank" rel="noopener" href="https://www.wikiwand.com/zh-cn/%E4%B8%AD%E8%88%88%E9%80%9A%E8%A8%8A">中兴</a>。</p>
+</blockquote>
+<blockquote>
+<p>Fifth-generation of mobile telecommunications technology, required by International Mobile T elecommunications for the<br>year 2020 (IMT -2020) standard to support an all Internet  Protocol (IP) network. Supports faster data rates, higher connection density, and much lower latency. </p>
+</blockquote>
+<br/>
+
+<h4 id="AAT-–-Antenna-array-tool"><a href="#AAT-–-Antenna-array-tool" class="headerlink" title="AAT – Antenna array tool"></a>AAT – Antenna array tool</h4><p>用于在测试场景中嵌入天线参数和辐射方向图的软件工具。</p>
+<blockquote>
+<p>Software tool for embedding antenna parameters and radiation patterns in test scenarios. </p>
+</blockquote>
+<br/>
+
+<h4 id="ACP-–-Adjacent-channel-power"><a href="#ACP-–-Adjacent-channel-power" class="headerlink" title="ACP – Adjacent channel power"></a>ACP – Adjacent channel power</h4><p>邻道功率，在指定信道邻近的信道中的功率。</p>
+<blockquote>
+<p>The power contained in a frequency channel next to the specified channel. </p>
+</blockquote>
+<br/>
+
+<h4 id="ACPR-–-Adjacent-channel-power-ratio"><a href="#ACPR-–-Adjacent-channel-power-ratio" class="headerlink" title="ACPR – Adjacent channel power ratio"></a>ACPR – Adjacent channel power ratio</h4><p>邻信道功率比(ACPR):Adjacent Channel Power Ratio是指相邻频率信道的平均功率和当前所用信道的平均功率之比。</p>
+<blockquote>
+<p>测量 ACPR 有两种方法。 第一种方法是找出总输出功率与相邻通道功率之比的10 ×log 对数。  第二种方法(也是更流行的方法)是在载波中心周围较小的带宽内求出输出功率与相邻信道功率的比值。 较小的带宽等于相邻信道信号的带宽。  第二种方法更受欢迎，因为它可以很容易地测量。ACPR 要求尽可能低。高 ACPR 表明已经发生了显著的光谱扩散。</p>
+</blockquote>
+<blockquote>
+<p>The ratio of the power contained in a specified frequency<br>channel bandwidth relative to the total carrier power.</p>
+</blockquote>
+<h4 id="ACLR-–-Adjacent-channel-leakage-ratio"><a href="#ACLR-–-Adjacent-channel-leakage-ratio" class="headerlink" title="ACLR – Adjacent channel leakage ratio"></a>ACLR – Adjacent channel leakage ratio</h4><p>邻道泄漏比，指定信道上的发射功率与通过根升余弦滤波器后相邻信道上接收的功率之比。</p>
+<blockquote>
+<p>相邻信道泄漏比率(ACLR)或相邻信道功率比率(ACPR)被定义为指定信道上的发射功率与经过接收滤波器后相邻无线信道接收到的功率之比。每个无线标准具有位于不同频率偏移的相邻信道。 例如，根据3GPP 标准，ACLR 在1.6 MHz 的偏移量下不应超过 -33 dB，在3.2  MHz 的偏移量下不应超过 -43 dB。 Cdma 放大器包括两个偏移量(从载波频率)885千赫和1.98兆赫，测量值为30千赫。</p>
+<p>ACLR也称为邻道功率比(ACPR).</p>
+<p><a target="_blank" rel="noopener" href="https://www.everythingrf.com/community/what-is-acpr-or-aclr">https://www.everythingrf.com/community/what-is-acpr-or-aclr</a></p>
+</blockquote>
+<blockquote>
+<p>The ratio of the transmitted power on the assigned channel to the power received on the adjacent channel after passing through a root raised-cosine filter. </p>
+</blockquote>
+<br/>
+
+<h4 id="AM-distortion"><a href="#AM-distortion" class="headerlink" title="AM distortion"></a>AM distortion</h4><p>由通信系统中的幅度变化引起的不期望的失真。</p>
+<blockquote>
+<p>调幅失真被定义为包含在解调的调幅波形的谐波中的功率与解调波形的基本分量的功率之比的平方根。</p>
+<p><a target="_blank" rel="noopener" href="https://cal.software.keysight.com/ESG/Help/Content/Performance_Tests/AM_Distortion_PT.htm">https://cal.software.keysight.com/ESG/Help/Content/Performance_Tests&#x2F;AM_Distortion_PT.htm</a></p>
+</blockquote>
+<blockquote>
+<p>Undesirable distortion caused by amplitude variation in a communications system.</p>
+</blockquote>
+<br/>
+
+<h4 id="AMF-–-Access-and-mobility-management-function"><a href="#AMF-–-Access-and-mobility-management-function" class="headerlink" title="AMF – Access and mobility management function"></a>AMF – Access and mobility management function</h4><p>接入和移动性管理功能</p>
+<p>3GPP核心网络架构的一个组件，用于管理用户设备注册、身份验证、标识和移动性。AMF还终止非接入层信令。</p>
+<blockquote>
+<p>随着4 g 移动性管理实体(MME)功能的分解，5 g 核心访问和移动性管理功能(AMF)从用户设备(UE)(n 1 &#x2F; n  2)接收所有连接和会话相关信息，但只负责处理连接和移动性管理任务。 与会话管理相关的所有消息都通过  N11引用接口转发到会话管理功能(Session Management Function，SMF)。</p>
+<p>移动网络由多个 AMF 实例组成，因此采用全局唯一的 AMF 标识符(GUAMI)。 UE  在它发送的第一条非接入层消息(NAS)中指定了这一点，这条消息通过无线接入网络(RAN)路由到所需的 AMF。 适用于3GPP 接入和非3GPP 接入，GUAMI 还确保来自一个 UE 的消息，通过两个接入网络注册，被转发到同一个 AMF。 非3gpp 互通功能(N3IWF)负责路由5G RAN 之外的消息。</p>
+<p>从而终止来自 N1或 N2参考接口的 RAN 控制平面和 UE 流量，AMF 实现 NAS 加密和完整性保护算法。 在初始 NAS 消息之后，AMF  以等效的方式向演化包核心(EPC)基础结构中的 MME 发送身份验证和密钥协议(AKA)请求。 这先于 UE 授权过程，其中基于5G  核心服务的体系结构(SBA)统一数据管理(UDM)功能取代了家庭订阅服务器(HSS)。 这是通过 N8引用接口执行的，因此使用了基于 http &#x2F; 2服务的接口(SBI)消息总线。 最后，为了发送适用的和适当的事件信息，AMF 连接到守序拦截(LI)系统。</p>
+<p>虽然信息可以以另一种方式存储，但是 AMF 通常会查询5G 基于服务架构(SBA’s)的网络存储库功能(NRF)来发现和选择可用的 SMF 实例。 这些可以通过 IP 地址或频繁限定域名(FQDN)来标识。</p>
+<p>这个过程在这里有进一步的详细描述。假设负责下一代无线接入网络，AMF 负责管理下一代无线接入网络中 gNodeB (gNB)之间的移交移动性管理。 形式上称为 X2交接，在5G 中称为 Xn 交接。 这代表了  gNB 基站之间使用的更新的参考接口应用程序协议(XnAP) ，该协议在3GPP 的技术规范(TS)38.423中定义。</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/c55aab25ly1gffhhfr6wnj217a0itdi1.jpg" alt="image"></p>
+<p><em>UE handover between source and target gNB’s within 5G infrastructures</em></p>
+<p>无线资源控制(RRC)信令通过源 gNB 将数据从 UE 传输到5G 核的数据平面(用户平面 &#x2F; UPF) ，实现对信号质量的连续测量和报告。  当源节点检测到需要切换时，它将连接到目标 gNB 以开始切换过程。 一旦将隧道移动到目标 gNB，UE 就执行切换并连接到同一个目标节点。  从目标 gNB 到 AMF 发出路径切换请求，一旦确认，数据就可以从 UE 流过该目标节点，然后流到指定的 UPF。</p>
+<p><a target="_blank" rel="noopener" href="https://www.metaswitch.com/knowledge-center/reference/what-is-the-5g-access-and-mobility-management-function-amf">What is the 5G Access and Mobility Management Function (AMF)?</a></p>
+</blockquote>
+<blockquote>
+<p>The Core Access and Mobility Management Function is part of the 3GPP 5G  Architecture. Its primary tasks include: Registration Management,  Connection Management, Reachability Management, Mobility Management and  various function relating to security and access management and  authorization.</p>
+<p>核心访问和移动性管理功能是3GPP 5 g 架构的一部分。 它的主要任务包括: 注册管理、连接管理、可达性管理、移动性管理管理和各种与安全、访问管理和授权相关的功能。</p>
+<p><a target="_blank" rel="noopener" href="https://www.mpirical.com/glossary/amf-core-access-and-mobility-management-function">https://www.mpirical.com/glossary/amf-core-access-and-mobility-management-function</a></p>
+</blockquote>
+<blockquote>
+<p>A component of the 3GPP core network architecture that<br>manages user equipment registration, authentication,<br>identification, and mobility. AMF also terminates non-access<br>stratum signaling.</p>
+</blockquote>
+<br/>
+
+<h4 id="AM-PM-distortion"><a href="#AM-PM-distortion" class="headerlink" title="AM&#x2F;PM distortion"></a>AM&#x2F;PM distortion</h4><p>通常由于放大器的相位响应和输入信号的功率电平(或幅度)之间的相互作用而导致通信系统中的信号劣化的不期望失真。</p>
+<blockquote>
+<p>Undesirable distortion that causes signal degradation in a communications system, typically as the result of the<br>interaction between an amplifier’ s phase response and the power level (or amplitude) of the input signal.</p>
+</blockquote>
+<br/>
+
+<h4 id="Antenna-reciprocity"><a href="#Antenna-reciprocity" class="headerlink" title="Antenna reciprocity"></a>Antenna reciprocity</h4><p>天线互易性指出在给定的介质中，天线的发射特性与接收特性相同。</p>
+<blockquote>
+<p>天线既可以用作发射天线，也可以用作接收天线。 在使用时，我们可能会遇到一个问题，即天线的性能是否会随着其工作模式的改变而改变。 幸运的是，我们不必担心这个问题。 天线不变的特性称为互易特性。</p>
+<p><a target="_blank" rel="noopener" href="https://www.tutorialspoint.com/antenna_theory/antenna_theory_reciprocity.htm">https://www.tutorialspoint.com/antenna_theory/antenna_theory_reciprocity.htm</a></p>
+</blockquote>
+<blockquote>
+<p>A theory that states that the transmit properties of an antenna<br>will be identical to the receive properties of that antenna in a<br>given medium. </p>
+</blockquote>
+<br />
+
+<p>AUSF – Authentication server function</p>
+<p>鉴权服务器功是 5G核心网络的主要组成部分，用于促进安全流程。 AUSF对UE进行身份验证并存储身份验证密钥。</p>
+<blockquote>
+<p>认证和密钥管理是蜂窝网络安全的基础，因为它们在用户和网络之间提供相互认证，并派生密钥来保护信令和用户面数据。 每一代蜂窝网络始终定义至少一种身份验证方法。 例如，4G 定义了 4G 的 EPS-AKA ，5G定义了三种认证方式：5G-AKA、EAP-AKA 和 EAP-TLS 。分析显示，5G 认证通过一系列功能在 4G 认证的基础上进行了改进，包括可以支持更多用户案例的统一认证框架，更好的用户设备身份保护，增强的家庭网络控制，以及密钥派生中更多的密钥分离等。</p>
+<p><a target="_blank" rel="noopener" href="https://www.cablelabs.com/insights/a-comparative-introduction-to-4g-and-5g-authentication">A Comparative Introduction to 4G and 5G Authentication 4G 认证与5G 认证的比较</a></p>
+</blockquote>
+<blockquote>
+<p>A major component of the 5G core network used to facilitate security processes. The AUSF authenticates UEs and stores authentication keys</p>
+</blockquote>
+<br />
+
+<h4 id="AWG-–-Arbitrary-waveform-generator"><a href="#AWG-–-Arbitrary-waveform-generator" class="headerlink" title="AWG – Arbitrary waveform generator"></a>AWG – Arbitrary waveform generator</h4><p>任意波形发生器，用于产生信号以便注入被测装置(DUT)以表征其性能的电子设备。是一种特殊形式的函数生成器，能够根据输入的一组值生成波形。</p>
+<blockquote>
+<p>任意波形发生器(AWG)是一种用于产生电波形的电子测试设备。 这些波形既可以是重复的，也可以是单脉冲的(只有一次) ，在这种情况下，需要某种形式的触发源(内部或外部)。 由此产生的波形可以注入到一个设备在测试和分析，因为他们通过它的进展，确认设备的正确运行或精确定位故障。</p>
+<p>与函数生成器不同，AWG可以生成任意定义的波形作为其输出。 波形通常定义为一系列“waypoints”(沿波形的特定时间出现的特定电压目标)，AWG可以跳到这些电平，也可以使用几种方法中的任何一种在这些电平之间进行插值。</p>
+<p><a target="_blank" rel="noopener" href="https://www.wikiwand.com/en/Arbitrary_waveform_generator">https://www.wikiwand.com/en/Arbitrary_waveform_generator</a></p>
+</blockquote>
+<blockquote>
+<p>Electronic equipment used to generate signals for injection into a device under test (DUT) to characterize its performance.</p>
+</blockquote>
+<br />
+
+<h4 id="Backhaul"><a href="#Backhaul" class="headerlink" title="Backhaul"></a>Backhaul</h4><p>回程线路， 负责在基带单元(BBU)和核心网络之间传输通信数据的网络部分。 用核心网络连接较小的外围网络。 回程在早期的蜂窝网络时代通常是专有的，但是在5G 时代正在转移到以太网。</p>
+<blockquote>
+<p>在分层电信网络中，网络的回程部分包括核心网络或骨干网络与网络边缘的小型子网之间的中间链路。</p>
+<p>将整个等级网络可视化为一个人体骨架，核心网络将代表脊椎，回程链接将是肢体，边缘网络将是手和脚，这些边缘网络中的单个链接将是手指和脚趾。</p>
+<p><a target="_blank" rel="noopener" href="https://www.wikiwand.com/en/Backhaul_(telecommunications)">https://www.wikiwand.com/en/Backhaul_(telecommunications)</a></p>
+</blockquote>
+<blockquote>
+<p>The part of the network responsible for transporting communication data between the baseband unit (BBU) and  the core network. Connects smaller outlying networks with the  core network. Backhaul was often proprietary in earlier cellular generations but is moving to ethernet in 5G. </p>
+</blockquote>
+<br />
+
+
+
+<h4 id="Base-station-network-emulator"><a href="#Base-station-network-emulator" class="headerlink" title="Base station network emulator"></a>Base station network emulator</h4><p>基站网络仿真器,</p>
+<p>用于在测试环境中模拟协议和网络流量的工具。与UE仿真和信道仿真协同工作，提供端到端系统，用于大规模测试和测量5G网络性能。</p>
+<blockquote>
+<p>A tool for simulating protocol and network traffic in a test environment. Works in concert with UE emulation and channel emulation to provide an end-to-end system for testing and  measuring 5G network performance at scale. </p>
+</blockquote>
+<br />
+
+<h4 id="BBU-–-Baseband-unit"><a href="#BBU-–-Baseband-unit" class="headerlink" title="BBU – Baseband unit"></a>BBU – Baseband unit</h4><p>基带单元，基站的一个组件。处理无线电通信和无线电控制处理功能的设备。基带单元将数据转换为数字信号，并将其发送到远程无线电报头(RRH)，远程无线电报头(RRH)随后将其转换为模拟信号。在C-RAN架构中，基带单元通常在地理上与无线电报头分开。</p>
+<blockquote>
+<p>基带单元 (BBU) 是电信系统的基带处理单元。 BBU 具有模块化设计的优势，体积小巧、集成度高、功耗低且易于部署。 典型的无线基站由基带处理单元 (BBU) 和射频处理单元（远端射频单元 - RRU）组成。 BBU 放置在机房，通过光纤与 RRU 连接。 BBU 负责通过物理接口进行通信。</p>
+</blockquote>
+<blockquote>
+<p>一个基站，通常包括BBU（主要负责信号调制）、RRU（主要负责射频处理），馈线（连接RRU和天线），天线（主要负责线缆上导行波和空气中空间波之间的转换）。在最早期的时候，BBU，RRU和供电单元等设备，是打包塞在一个柜子或一个机房里的。后来，慢慢开始发生变化。</p>
+<p>怎么变化呢？通信砖家们把它们拆分了。首先，就是把RRU和BBU先给拆分了。硬件上不再放在一起，RRU通常会挂在机房的墙上。BBU有时候挂墙，不过大部分时候是在机柜里。再到后来，RRU不再放在室内，而是被搬到了天线的身边（所谓的“<strong>RRU拉远</strong>”）。这样，我们的RAN就变成了<strong>D-RAN</strong>，也就是<strong>Distributed RAN</strong>（分布式无线接入网）。<strong>这样做有什么好处呢？</strong></p>
+<p>一方面，大大缩短了RRU和天线之间馈线的长度，可以减少信号损耗，也可以降低馈线的成本。</p>
+<p>另一方面，可以让网络规划更加灵活。毕竟RRU加天线比较小，想怎么放，就怎么放。</p>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/59654520">https://zhuanlan.zhihu.com/p/59654520</a></p>
+</blockquote>
+<blockquote>
+<p>A component of the base station. Equipment which handles radio communications and radio control processing functions. The baseband unit converts data into a digital signal and sends it on to the remote radio head (RRH), which then converts it into an analog signal. In a C-RAN architecture, the baseband unit is usually geographically separated from the radio head. </p>
+</blockquote>
+<br />
+
+<h4 id="Beam-acquisition"><a href="#Beam-acquisition" class="headerlink" title="Beam acquisition"></a>Beam acquisition</h4><p>波束捕获</p>
+<p>发现UE并与UE连接的过程。随着高方向性天线阵列和波束成形技术的部署，这一过程在5G中正在发生实质性变化。</p>
+<blockquote>
+<p>The process of discovering and connecting with UEs. This process is substantially changing in 5G with the deployment of  highly directional antenna arrays and beamforming techniques. </p>
+</blockquote>
+<br />
+
+<p>20200808更新以下内容</p>
+<h4 id="Beamforming"><a href="#Beamforming" class="headerlink" title="Beamforming"></a>Beamforming</h4><p>波束赋形</p>
+<p>　　<strong>波束赋形</strong>（Beamforming）又叫<strong>波束成型</strong>、<strong>空域滤波</strong>，是一种使用传感器阵列定向发送和接收信号的<a target="_blank" rel="noopener" href="https://www.wikiwand.com/zh-hans/%E4%BF%A1%E5%8F%B7%E5%A4%84%E7%90%86">信号处理</a>技术。 波束赋形技术通过调整相位阵列的基本单元的参数，使得某些角度的信号获得相长干涉，而另一些角度的信号获得相消干涉。波束赋形既可以用于信号发射端，又可以用于信号接收端。</p>
+<p>　　在发射端，波束赋形器控制每一个发射装置的相位和信号幅度，从而在发射出的信号波阵中获得需要相长和相消干涉模式。在接收端，不同接收器接收到的信号被以一种恰当的方式组合起来，从而获得期盼中的信号辐射模式。</p>
+<p>　　以水下声纳发射为例，我们希望向远处的船只发送一束集中尖锐的声纳信号。如果声纳发射装置的每个声纳发生器同时向一艘船发声纳信号，由于远方船只的方位角度，有的声纳发射器的信号先到达船只，有的声纳发射器的信号后到达船只，无法做到让所有声纳信号发生器的信号同时到达这条船只。有了波束赋形技术，就可以调整不同声纳发生器的信号发射时间（离船远的先发信号，离船近的后发信号），这样，所有的声纳信号就能同时击中船只，获得一个强大的声纳脉冲信号击中船只的效果。</p>
+<p>　　在被动式声纳系统或者主动式声纳的接收端，波束赋形技术为不同的水下听音器收集到的信号加上不同的时延（离开目标最近的水下听音器加上最长的时延），这样就能同时听到所有水下听音器的声音，就像声音是来自同一个水下听音器，从而获得最佳的效果。</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/440px-Beamforming.jpg" alt="波束赋形"></p>
+<p>－－　<a target="_blank" rel="noopener" href="https://www.wikiwand.com/zh-hans/%E6%B3%A2%E6%9D%9F%E8%B5%8B%E5%BD%A2">维基百科</a></p>
+<blockquote>
+<p>The method of applying relative phase and amplitude shifts to each antenna element to shape and provide discrete control  of the direction of a transmitted beam. Beamforming requires communication channel feedback to implement real-time control of the beam. </p>
+</blockquote>
+<p>＜br&#x2F;＞</p>
+<h4 id="Beam-steering"><a href="#Beam-steering" class="headerlink" title="Beam steering"></a>Beam steering</h4><p>波束控制</p>
+<p>用于聚焦辐射图案的方向和形状的一组技术。在无线通信中，波束控制通常通过操纵通过多个天线单元阵列的信号的相对相位和幅度移位来改变信号的方向并缩小发射信号的宽度。</p>
+<blockquote>
+<p>A set of techniques used to focus the direction and shape of a  radiation pattern. In wireless communications, beam steering  changes the direction of the signal and narrows the width of the transmitted signal, typically by manipulating relative phase<br>and amplitude shifts of the signal through an array of multiple antenna elements. </p>
+</blockquote>
+<br/>
+
+<h4 id="Carrier-aggregation"><a href="#Carrier-aggregation" class="headerlink" title="Carrier aggregation"></a>Carrier aggregation</h4><p>载波聚合</p>
+<p>LTE-Advanced引入的一项主要功能，使移动网络运营商能够将分段频段中的多个载波组合在一起，以提高峰值用户数据速率和网络的整体容量。</p>
+<blockquote>
+<p>A major feature introduced with LTE-Advanced, enabling  mobile network operators to combine multiple carriers in fragmented spectrum bands to increase peak user data rates and overall capacity of the network. </p>
+</blockquote>
+<br/>
+
+
+
+<h4 id="CATR-–-Compact-antenna-test-range"><a href="#CATR-–-Compact-antenna-test-range" class="headerlink" title="CATR – Compact antenna test range"></a>CATR – Compact antenna test range</h4><p>CATR-紧凑型天线测试范围</p>
+<p>在难以获得远场间距时测试频率上的天线的设备。CATR使用3GPP认可的间接远场(IFF)测试方法来克服与5G蜂窝通信相关的路径损耗和过大的远场距离问题。</p>
+<blockquote>
+<p>Equipment for testing of antennas at frequencies when difficult to obtain far-field spacing. The CATR uses the 3GPP-approved indirect far-field (IFF) test method to overcome the path loss and excessive far-field distance issues associated with 5G<br>cellular communications. </p>
+</blockquote>
+<p>其他内容正在整理…</p>
+<p>（逃 ）</p>
+<br />
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>请我一杯咖啡吧！</div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/wechatpay.png" alt="热夏 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="/images/alipay.jpg" alt="热夏 支付宝">
+        <span>支付宝</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>热夏
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://www.lifeee.top/posts/55098.html" title="5G NR 常用术语">https://www.lifeee.top/posts/55098.html</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="followme">
+  <span>欢迎关注我的其它发布渠道</span>
+
+  <div class="social-list">
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="/atom.xml">
+            <span class="icon">
+              <i class="fa fa-rss"></i>
+            </span>
+
+            <span class="label">RSS</span>
+          </a>
+      </div>
+  </div>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/%E9%80%9A%E4%BF%A1/" rel="tag"><i class="fa fa-tag"></i> 通信</a>
+              <a href="/tags/5G-NR/" rel="tag"><i class="fa fa-tag"></i> 5G NR</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/posts/61877.html" rel="prev" title="提取3GPP LTE/5GNR中RRC的ASN.1">
+                  <i class="fa fa-angle-left"></i> 提取3GPP LTE/5GNR中RRC的ASN.1
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/posts/20372.html" rel="next" title="网易云音乐生成外链播放器">
+                  网易云音乐生成外链播放器 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments gitalk-container"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 2018 – 
+    <span itemprop="copyrightYear">2024</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">热夏</span>
+  </div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>站点总字数：</span>
+    <span title="站点总字数">629k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">9:32</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/next-theme-pjax/0.6.0/pjax.min.js" integrity="sha256-vxLn1tSKWD4dqbMRyv940UYw4sXgMtYcK6reefzZrao=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lozad.js/1.16.0/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script><script src="/js/pjax.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+  <script src="/js/third-party/pace.js"></script>
+
+
+  
+  <script data-pjax async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","mhchem":false,"js":{"url":"//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
+
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"upwon","repo":"upwon.github.io","client_id":"7e047047ecee7317452b","client_secret":"c60fbdf0eb19e7264e33ab780319e4d420a58fee","admin_user":"upwon","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":null,"js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"a3c1858b678242d1ddaf34a9dafcf589"}</script>
+<script src="/js/third-party/comments/gitalk.js"></script>
+
+
+  <script type="text/javascript" src="/js/clicklove.js"></script>
+   
+ 
+
+</body>
+</html>

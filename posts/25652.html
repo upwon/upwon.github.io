@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.1.1">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/myapple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/myfavicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/myfavicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/myapple-touch-icon-next.png" color="#222">
+  <meta name="google-site-verification" content="google2fc64c2b92961282.html">
+  <meta name="baidu-site-verification" content="s6BwSjIZYB">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.loli.net/css?family='LXGW+WenKai+LITE':300,300italic,400,400italic,700,700italic%7C'LXGW+WenKai+Screen':300,300italic,400,400italic,700,700italic%7C'LXGW+WenKai':300,300italic,400,400italic,700,700italic%7C'Noto+Serif+SC':300,300italic,400,400italic,700,700italic%7C'EB+Garamond':300,300italic,400,400italic,700,700italic%7C'PingFang+SC':300,300italic,400,400italic,700,700italic%7C'Microsoft+YaHei':300,300italic,400,400italic,700,700italic%7C'sans-serif':300,300italic,400,400italic,700,700italic%7CMa+Shan+Zheng:300,300italic,400,400italic,700,700italic%7CLXGW+WenKai+Screen:300,300italic,400,400italic,700,700italic%7CLXGW+WenKai:300,300italic,400,400italic,700,700italic%7CMenlo:300,300italic,400,400italic,700,700italic%7CMonaco:300,300italic,400,400italic,700,700italic%7CConsolas:300,300italic,400,400italic,700,700italic%7CSource+Code+Pro:300,300italic,400,400italic,700,700italic%7Csystem-ui:300,300italic,400,400italic,700,700italic%7Cmonospace:300,300italic,400,400italic,700,700italic%7Csans-serif:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha256-yIDrPSXHZdOZhAqiBP7CKzIwMQmRCJ8UeB8Jo17YC4o=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/themes/blue/pace-theme-minimal.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"www.lifeee.top","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.19.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"mac","show_result":true},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="高频段拥有丰富空闲频谱资源，可有效满足未来 5G 对更高容量和速率的需求，用于传输高达 10Gbps 甚至更高的用户数据速率业务。高频段同时具有较大的传播损耗、散射损耗和准光学特性。 因此，有必要对高频段信道进行建模研究及测量。本文为高频段信道的调研报告。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="5G高频段信道测量与建模进展">
+<meta property="og:url" content="https://www.lifeee.top/posts/25652.html">
+<meta property="og:site_name" content="热夏的博客">
+<meta property="og:description" content="高频段拥有丰富空闲频谱资源，可有效满足未来 5G 对更高容量和速率的需求，用于传输高达 10Gbps 甚至更高的用户数据速率业务。高频段同时具有较大的传播损耗、散射损耗和准光学特性。 因此，有必要对高频段信道进行建模研究及测量。本文为高频段信道的调研报告。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img20210210181608.jpg">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img20210210185348.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/imgimage-20210210123525011.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/imgimage-20210210124428428.png">
+<meta property="article:published_time" content="2021-02-10T03:58:27.000Z">
+<meta property="article:modified_time" content="2022-11-14T16:43:07.406Z">
+<meta property="article:author" content="热夏">
+<meta property="article:tag" content="通信">
+<meta property="article:tag" content="5G NR">
+<meta property="article:tag" content="调研">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img20210210181608.jpg">
+
+
+<link rel="canonical" href="https://www.lifeee.top/posts/25652.html">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://www.lifeee.top/posts/25652.html","path":"posts/25652.html","title":"5G高频段信道测量与建模进展"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>5G高频段信道测量与建模进展 | 热夏的博客</title>
+  
+
+
+
+
+
+
+
+<link href="https://fonts.loli.net/css?family=Noto+Serif+SC:400,500,700&display=swap&subset=chinese-simplified" rel="stylesheet">
+<link rel="stylesheet" href="https://npm.elemecdn.com/lxgw-wenkai-screen-webfont@1.7.0/style.css" />
+
+<link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&display=swap" rel="stylesheet">
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="热夏的博客" type="application/atom+xml">
+<style>.darkmode--activated{--body-bg-color:#282828;--content-bg-color:#333;--card-bg-color:#555;--text-color:#ccc;--blockquote-color:#bbb;--link-color:#ccc;--link-hover-color:#eee;--brand-color:#ddd;--brand-hover-color:#ddd;--table-row-odd-bg-color:#282828;--table-row-hover-bg-color:#363636;--menu-item-bg-color:#555;--btn-default-bg:#222;--btn-default-color:#ccc;--btn-default-border-color:#555;--btn-default-hover-bg:#666;--btn-default-hover-color:#ccc;--btn-default-hover-border-color:#666;--highlight-background:#282b2e;--highlight-foreground:#a9b7c6;--highlight-gutter-background:#34393d;--highlight-gutter-foreground:#9ca9b6}.darkmode--activated img{opacity:.75}.darkmode--activated img:hover{opacity:.9}.darkmode--activated code{color:#69dbdc;background:0 0}button.darkmode-toggle{z-index:9999}.darkmode-ignore,img{display:flex!important}.beian img{display:inline-block!important}</style></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">热夏的博客</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-heart fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E3%80%81%E7%AE%80%E4%BB%8B"><span class="nav-number">1.</span> <span class="nav-text">一、简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C%E3%80%81%EF%BC%95G%E9%AB%98%E9%A2%91%E6%AE%B5%E4%BF%A1%E9%81%93%E5%BB%BA%E6%A8%A1%E7%9A%84%E9%9C%80%E6%B1%82%E4%B8%8E%E6%8C%91%E6%88%98"><span class="nav-number">2.</span> <span class="nav-text">二、５Ｇ高频段信道建模的需求与挑战</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E4%BF%A1%E9%81%93%E5%BB%BA%E6%A8%A1%E6%96%B9%E6%B3%95"><span class="nav-number">3.</span> <span class="nav-text">三、信道建模方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E3%80%81%E4%BF%A1%E9%81%93%E6%8E%A2%E6%B5%8B%E7%B3%BB%E7%BB%9F"><span class="nav-number">4.</span> <span class="nav-text">三、信道探测系统</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%9B%E3%80%81%E7%8E%B0%E6%9C%89%E7%9A%84%E4%BF%A1%E9%81%93%E6%A8%A1%E5%9E%8B"><span class="nav-number">5.</span> <span class="nav-text">四、现有的信道模型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE%E5%8F%8A%E8%BF%9B%E4%B8%80%E6%AD%A5%E9%98%85%E8%AF%BB"><span class="nav-number">6.</span> <span class="nav-text">参考文献及进一步阅读</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="热夏"
+      src="/images/head.jpg">
+  <p class="site-author-name" itemprop="name">热夏</p>
+  <div class="site-description" itemprop="description">空山新雨后，天气晚来秋。</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">81</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">42</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/upwon" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;upwon" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:w1244753906@gmail.com" title="E-Mail → mailto:w1244753906@gmail.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.lifeee.top//atom.xml" title="RSS → https:&#x2F;&#x2F;www.lifeee.top&#x2F;&#x2F;atom.xml" rel="noopener me"><i class="fa fa-rss fa-fw"></i>RSS</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+        <div class="pjax">
+        </div>
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.lifeee.top/posts/25652.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/head.jpg">
+      <meta itemprop="name" content="热夏">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="热夏的博客">
+      <meta itemprop="description" content="空山新雨后，天气晚来秋。">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="5G高频段信道测量与建模进展 | 热夏的博客">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          5G高频段信道测量与建模进展
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-02-10 11:58:27" itemprop="dateCreated datePublished" datetime="2021-02-10T11:58:27+08:00">2021-02-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-11-15 00:43:07" itemprop="dateModified" datetime="2022-11-15T00:43:07+08:00">2022-11-15</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E9%80%9A%E4%BF%A1/" itemprop="url" rel="index"><span itemprop="name">通信</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>7.1k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>6 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img20210210181608.jpg"></p>
+<p>高频段拥有丰富空闲频谱资源，可有效满足未来 5G 对更高容量和速率的需求，用于传输高达 10Gbps 甚至更高的用户数据速率业务。高频段同时具有较大的传播损耗、散射损耗和准光学特性。 因此，有必要对高频段信道进行建模研究及测量。本文为高频段信道的调研报告。</p>
+<span id="more"></span>
+
+<h2 id="一、简介"><a href="#一、简介" class="headerlink" title="一、简介"></a>一、简介</h2><p>研究高频段信道传播特征，获得信道模型，分析和评估使用场景，以及选择适用频段，是当前高频段的首要工作。针对高频段的信道测量和建模工作也已展，如10~11、28、38、43~50、56~76和81<del>86 GHz等一些重点频段，路损、阴影衰落、时延扩展（Delay Spread ,DS）、角度扩展（Angular Spread，AS）及极化等信道特征，以及它们随场景和频率的变化规律等成为研究的关键内容．几个高频段信道模型陆续被发布，如IEEE 802.11ad、METIS、MIWEBA、NYU、5GCM、3GPP-HF(high-frequency,6</del>100GHz)等。</p>
+<br />
+
+<h2 id="二、５G高频段信道建模的需求与挑战"><a href="#二、５G高频段信道建模的需求与挑战" class="headerlink" title="二、５Ｇ高频段信道建模的需求与挑战"></a>二、５Ｇ高频段信道建模的需求与挑战</h2><p>高频段信道具有许多明显不同于6GHz以下蜂窝移动通信信道的特征．开发新的可工作在高频段（直到100GHz）的5G系统，需要这些频段的精确传播模型，显然现有的为6GHz以下频段开发的信道模型无法胜任．相比传统信道模型，5G高频段信道模型应支持更宽的频率范围、更大的频带宽度和更大的天线孔径，并保持在空间、时间、频率和天线四个维度的一致性，具体体现在以下几个方面:</p>
+<ul>
+<li><p>支持广泛的传播场景及空间一致性</p>
+</li>
+<li><p>支持更高的带宽和频率一致性</p>
+</li>
+<li><p>支持大规模天线阵列（极窄波束）及天线一致性</p>
+</li>
+<li><p>支持高速移动及双向移动</p>
+<br /></li>
+</ul>
+<h2 id="三、信道建模方法"><a href="#三、信道建模方法" class="headerlink" title="三、信道建模方法"></a>三、信道建模方法</h2><p>信道模型通常将信道参数分为宏观参量（如路损和阴影衰落）和反映信道衰落特性的微观参量，如大尺度参数和小尺度参数（Small-Scale Parameters,SSPs，包括时延、功率、到达角和离开角等）。</p>
+<p>3.1 路损与阴影衰落模型</p>
+<p>$$<br>P L(\mathrm{~dB})&#x3D;20 \log _{10}(4 \pi f &#x2F; c)+10 n \log <em>{10}(d &#x2F; 1 m)+X</em>{\sigma} \qquad（1）<br>$$<br>Friis公式给出了自由空间中信号视距传播模型，在实际的信道环境中，通过引入随环境而改变的路损指数ｎ，构造出一个更为普遍的路损模型．对于6GHz以下频段，往往忽略频率的影响，而高频段就不能忽略了，一个常用的路损模型为：</p>
+<p>$$<br>P L(\mathrm{~dB})&#x3D;20 \alpha \log _{10}(d)+\beta+10 \gamma \log <em>{10}(f)+X</em>{\sigma}\qquad（2）<br>$$</p>
+<p>该式称为ABG模型（因三个系数记为Alpha-Beta-Gamma而得名），是对FI(Floating Interceoe)模型的扩展以反映频率影响．这里ｆ常以GHz计量。</p>
+<br />
+
+<p>3.2 GSCM模型结构<br>GSMＭ模型中的传播路径采用簇与射线结构表示，如图１所示．．通过几何关系，将具有不同小尺度参数的射线（平面波）叠加得到，包含链路两端（基站和终端）的天线阵列和传播路径的３D MIMO信道，其中发射单元ｓ到接收天线单元ｕ之间的子信道 可表示为：</p>
+<p>$$<br>\begin{aligned}<br>&amp;\mathbf{H}<em>{u</em>{s s}}(t ; \tau)&#x3D;\<br>&amp;\sum_{n&#x3D;1}^{N} \sum_{m&#x3D;1}^{M_{n}}\left[\begin{array}{l}<br>F_{r, u, \theta}\left(\boldsymbol{\Omega}<em>{r, n, m}\right) \<br>F</em>{r, u, \varphi}\left(\boldsymbol{\Omega}<em>{r, n, m}\right)<br>\end{array}\right]^{\mathrm{T}}\left[\begin{array}{ll}<br>\alpha</em>{n, m}^{\theta \theta} &amp; \boldsymbol{\alpha}<em>{n, m}^{\theta \varphi} \<br>\alpha</em>{n, m}^{\varphi \theta} &amp; \alpha_{n, m}^{\varphi \varphi}<br>\end{array}\right]\left[\begin{array}{l}<br>F_{t, s, \theta}\left(\boldsymbol{\Omega}<em>{t, s, m}\right) \<br>F</em>{t, s, \varphi}\left(\boldsymbol{\Omega}<em>{t, n, m}\right)<br>\end{array}\right]\<br>&amp;\cdot \mathrm{e}^{\mathrm{j} 2 \pi\left(\Omega</em>{t, n} \cdot d_{s}, \omega\right) &#x2F; \lambda} \mathrm{e}^{j 2 \pi\left(\Omega_{n, n} \cdot d_{m}\right) &#x2F; \lambda} \mathrm{e}^{j 2 \pi v_{n}, t} \delta\left(\tau-\tau_{n, m}\right)<br>\end{aligned}<br>$$<br><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img20210210185348.png"></p>
+<blockquote>
+</blockquote>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/imgimage-20210210123525011.png" alt="图 1 GBSM信道模型中的簇与射线图"></p>
+<br />
+
+<p>通过合理的参数化，GSCM可以比较准确地、灵活地描述不同的场景和不同的天线类型．信道中的簇和射线由路损、阴影衰落和大小尺度衰落共同描述．为了更加准确反映实际情况，模型也考虑站内不同LSPs参数的相关性和不同站间同一LSPs的相关性（与站点的几何关系有关）．簇参数（数目、到达率、功率衰减指数、角度扩展）和簇内射线参数（到达率、平均到达时间、功率衰减率等）是模型的重要参数，现有的GSCM模型通常假设簇和簇内射线数目固定，簇时延间隔服从指数分布，簇功率随时延指数衰减，簇角度服从卷绕高斯或Laplacian分布，（子）簇内射线具有相同的时延、功率和不同的角度．ＳＶ模型同样采用簇和射线概念，区别是簇数及簇内射线数不固定，服从泊松分布，簇角度多采用ＲＴ方法获得；簇内射线时延间隔服从指数分布，功率随时延呈指数衰减，角度服从高斯分布。</p>
+<br />
+
+<h2 id="三、信道探测系统"><a href="#三、信道探测系统" class="headerlink" title="三、信道探测系统"></a>三、信道探测系统</h2><p>信道测量（信道探测）是以提取信道参数为主要目标的研究活动，能够为信道建模提供真实的测量数据，并作为验证模型有效性和合理性的有力工具，所有的信道模型都离不开信道测量。<br>在这些测量活动中主要使用了两类信道探测器：<br>基于矢量网络分析仪（VNA）的信道测量系统和针对特定频率所设计的宽带探测系统。前者将整个探测频段分为若干频点，在每个频点使用单频信号探测，依次扫描所有频点，其频率和带宽仅受限于VNA的能力，具有较大的灵活性，但扫频测量速度慢，且需要使用长电缆（或光缆）共享收发两端的本振来保证每个频点频率和相位的一致性，因此不适合远距离或动态场景测量．后者采用定制射频单元，频率固定，带宽为几百MHz到１GHz，常采用PN、Chirp、Zadoff-Chu或OFDM信号等宽带探测序列，收发两端通常使用GPS驯<br>服的恒温晶振或原子钟（铷钟、铯钟）来保持同步．这种方案能够提高频率维度的测量速度，但测量频宽有限．从硬件成本和校准成本考虑，除了少数的一发几收结构和多发多收结构外，多数系统都采用一个射频单元．<br>因为高频段信号有较大的传播损耗，为保证系统动态范围，探测天线主要采用：<br>（１）高增益方向天线，由于此类天线具有较窄波瓣角度，只能保证一定角度内的信号探测，需要旋转来实现全立体空间扫描，导致空间扫描周期较长，很难对时变信道进行空时联合测量；<br>（２）低增益或全向天线，通过平移构成线阵、面阵或立体阵等虚拟天线阵，由阵列处理增益来保证高信噪比，这种方式同样存在扫描周期较长的问题；</p>
+<p>（３）电控毫米波天线阵列，这种模块化天线阵可以通过电子控制在空间形成不同方向的扫描波束，能够提高扫描速度，但这种方式，需测量和保存大量的天线辐射模式数据．</p>
+<br />
+
+<h2 id="四、现有的信道模型"><a href="#四、现有的信道模型" class="headerlink" title="四、现有的信道模型"></a>四、现有的信道模型</h2><p><strong>IEEE信道模型</strong><br>IEEE802.15.3ｃ是IEEE802.15（ＷＰＡＮ）工作组推出的世界上首个60GHz信道模型，它将传统的SV模型进行了扩展以支持到达方位角，是一个单端二维（２Ｄ）信道模型．它针对从起居室、办公室、图书馆、会议室、桌面到走廊６个场景的LOS和NLOS条件，建立了１０个信道模型CM1～CM10模型。</p>
+<p>IEEE802.11ad信道模型是为超高数据速率60GHz WLAN系统所建议的双端３Ｄ信道模型，它基于扩展SV模型，支持三种室内环境的接入和D2D应用。</p>
+<p><strong>MiWEBA信道模型</strong><br>MiWEBA是一个致力于毫米波通信推广与应用的研究项目，主要参与单位包括Fraunhofer HHI，IMC以及日本、法国的几所大学和研究所．其中第五工作组专注于传播与天线，于２０１４年６月推出第一版毫米波段信模型．该模型支持57~66ＧＨｚ频段的室内和室外三种场景，包括开阔地（校园）、城市街区和旅馆大厅，每种场景都支持三种链路类型，即接入、前传／后传和D2D．采用测量和射线追踪建模方法，信道由视距和少数几条反射路径（统称为Quasi-Deteministic,Q-DＱ射线），再加上数个随机射线簇（Ｒ射线）组成．</p>
+<p><strong>METIS信道模型</strong><br>METIS项目提出了灵活可扩展的信道建模框架，以满足不同精度和计算复杂度的要求，以期胜任５Ｇ技术研发．整个信道模型包括图谱（Mapbased）信道模型、随机信道模型或者两者混合建模．图谱模型基于射线追踪，使用简化的三维几何模型来描述包含衍射、反射、漫反射、阻碍等传播机制，支持频率范围为２～100ＧＨｚ.</p>
+<p><strong>NYU信道模型</strong><br>NYU的Rappaport教授团队在对多频段（28、38、60、73.5ＧＨｚ）、多场景（室内外、校园、市区）、多链路类型（回传、接入）测量分析的基础上，给出了室外二维（无俯仰角度）毫米波信道模型［３５］，该模型包括路损、时域簇和簇内射线功率和时延参数、以波瓣数和波瓣扩展表征的角度域参数等．随后该团队利用射线追踪技术，提出了GSCM框架下的三维信道模型．模型中簇和射线的功率是对数正态随机变量，并随时延指数衰减（类似于ＳＶ模型）；时域簇内射线随机指定波瓣，并生成所需角度，波瓣和射线角度均服从高斯或LAplacian分布．模型给出了定向路损、波束合并路损和全向路损三种模型。</p>
+<p><strong>mmMAGIC信道模型</strong><br>mmMAGIC旨在为６～100ＧＨｚ的５Ｇ通信开发新的无线接入技术，其中第二工作组专注于信道测量和建模，以欧洲研究机构为研究主体，包括Fraunhofer HHI、Ericsson、Aalto大学等．重点关注室外的城市街区和开<br>放广场，室内的办公室、购物中心、机场值机大厅和地铁站，以及O2I和体育馆．mmMAGIC以３ＧＰＰ３Ｄ模型为基准，采用测量、ＲＴ和点云相结合的建模方法，最终使用Fraunhofer HHI开发的开源QuaDRiGa工具实现三维统计信道模型．QuaDRiGa具有支持球面波，时间演进，场景转换，可变终端速度，ＬＯＳ和ＮＬＯＳ统一建模，几何极化分量计算，更平滑的LSPs相关性等优点．在建模方法上，除了采用ＫＥＤ阻挡建模，还采用更精细的簇内射线的功率、时延和角度建模．因为项目还在进行中，当前它仅综合WINNER、３GPP 3D、METIS和５GCM的结果，给出了初始模型参数．</p>
+<p><strong>３GPP高频段信道模型</strong><br>3GPP HF（６～100GHz）是第一个公开发布的５Ｇ高频段信道标准模型．除了5GCＭ典型场景外，还关注回传、Ｄ２Ｄ／Ｖ２Ｖ、体育场和体育馆．它同样基于3GPP3D模型，采用测量、ＲＴ相结合的建模方法．该模型有很多方法和参数值与５ＧＣＭ相同，但一些实现方法更具体，这包括：多频仿真时的频率相关性建模，使模型支持载波聚合仿真；更精细的射线功率、时延和角度建模，以支持大带宽；对于每一个路径，天线单元可以具有不同的时延，以支持大规模天线阵（但还不支持球面波）．借鉴５ＧＣＭ的两种空间一致性方法：给出空间一致性所需的相关距离，生成空间连续的随机变量分别应用于ＬＯＳ概率、位于室内的概率、建筑物类型及簇相关小尺度参数；基于散射体位置的信道动态演进．继承了５ＧＣＭ阻挡建模方法，对其中的极坐标表达进一步细化，将阻挡物体参数分为两个类型．此外，还提出了簇时延线（ＣＤＬ）和抽头延时线（ＴＤＬ）两个简化模型用于链路仿真，并借鉴METIS，给出了图谱混合信道模型.</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/imgimage-20210210124428428.png" alt="图 2 现有信道模型的比较"></p>
+<br />
+
+<p>现有模型能够提供各种场景、三种连接类型（具有不同的收发天线高度）的大、小尺度双端３Ｄ参数，使得MIMO系统能够充分利用俯仰方向信息，提升系统容量．在建模方法上，除了GSCM和SV扩展模型外，RT建模方法得到了足够重视．基于RT的METIS图谱模型宣称符合所有的５Ｇ对信道模型的需求，但是它过于复杂，仍需要增加信道测量工作来验证和校正．多数模型提供全向路损模型，在建模时搜集所有方向路径功率，而高频段多采用定向天线，在NLOS条件时部分较强方向信号不会被接收，会导致按模型和天线增益计算的接收功率过大（路损指数过小），造成夸大的小区覆盖范围，从而影响基站部署．而METIS和IEEE 802.11 ad将路损隐含在小尺度参数的方式可能更为合理，阴影衰落也是如此．除了路损与频率关系明显，多频测量结果并没有反映出LSPs和SSPs的频率依赖关系，而射线追踪仿真能反映出这种关系，时延扩展和角度扩展随频率增加而减小．这可能受限于测量系统的动态范围，还需要进一步测量和分析揭示其规律5G CM和3GPP HF模型都提供了对高带宽和频率一致性的支持，声称支持极窄３Ｄ波束（１°分辨率），在建模方法上有支持球面波和天线一致性的可能：由于散射体位置确定，可以确信定这种方法支持球面波建模，如果能够在GGSCM中将天线按相干距离区域划分，那么可以针对各个天线（组）设置其簇参数，支持天线一致性．最新的模型都<br>提供了多种方法来支持空间一致性．极化支持方面，所有路径采取同一个XPR并不能真实准确刻画信道的极化特征，而RT技术能够计算每条射线的ＰＭ显然更符合实际情况．</p>
+<br />
+
+
+
+
+
+<h2 id="参考文献及进一步阅读"><a href="#参考文献及进一步阅读" class="headerlink" title="参考文献及进一步阅读"></a>参考文献及进一步阅读</h2><blockquote>
+<p>[1]Qamar F, Siddiqui M H S, Dimyati K, et al. Channel characterization of 28 and 38 GHz MM-wave frequency band spectrum for the future 5G network[C]&#x2F;&#x2F;2017 IEEE 15th student conference on research and development (SCOReD). IEEE, 2017: 291–296.</p>
+<p>[2]Imai T, Kitao K, Tran N, et al. Development of high frequency band over 6 GHz for 5G mobile communication systems[C]&#x2F;&#x2F;2015 9th European Conference on Antennas and Propagation (EuCAP). IEEE, 2015: 1–4.</p>
+<p>[3]Elayan H, Amin O, Shubair R M, et al. Terahertz communication: The opportunities of wireless technology beyond 5G[C]&#x2F;&#x2F;2018 International Conference on Advanced Communication Technologies and Networking (CommNet). IEEE, 2018: 1–5.</p>
+<p>[4]Awada A, Lobinger A, Enqvist A, et al. A simplified deterministic channel model for user mobility investigations in 5G networks[C]&#x2F;&#x2F;2017 IEEE International Conference on Communications (ICC). IEEE, 2017: 1–7.</p>
+<p>[5]Wang C-X, Bian J, Sun J, et al. A survey of 5G channel measurements and models[J]. IEEE Communications Surveys &amp; Tutorials, IEEE, 2018, 20(4): 3142–3168.</p>
+<p>[6]He D, Ai B, Guan K, et al. Channel measurement, simulation, and analysis for high-speed railway communications in 5G millimeter-wave band[J]. IEEE Transactions on Intelligent Transportation Systems, IEEE, 2017, 19(10): 3144–3158.</p>
+<p>[7]孙健,张文胜,王承祥.5G高频段信道测量与建模进展[J].电子学报,2017,45(05):1249-1260.</p>
+<p>[8]张沛泽,庞帅,周宇,孙向前,王洪博.5G高频段无线信道测量技术研究进展及发展趋势[J].移动通信,2017,41(18):67-72.</p>
+<p>[9]张建华,唐盼,田磊.高频段信道建模研究现状与展望[J].电信网技术,2016(03):10-17.</p>
+<p><a target="_blank" rel="noopener" href="http://www.imt-2020.cn/zh/documents/download/148">IMT-2020（5G）推进组高频段专题组技术报告</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.itu.int/en/journal/2019/001/Pages/04.aspx">Channel models for 5G and beyond</a></p>
+</blockquote>
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+<blockquote class="blockquote-center">
+<p>爆竹声中一岁除，春风送暖入屠苏。<br>千门万户曈曈日，总把新桃换旧符。</p>
+<p>–王安石</p>
+
+</blockquote>
+
+
+
+<br />
+
+<br />
+
+<br />
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>请我一杯咖啡吧！</div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/wechatpay.png" alt="热夏 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="/images/alipay.jpg" alt="热夏 支付宝">
+        <span>支付宝</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>热夏
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://www.lifeee.top/posts/25652.html" title="5G高频段信道测量与建模进展">https://www.lifeee.top/posts/25652.html</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="followme">
+  <span>欢迎关注我的其它发布渠道</span>
+
+  <div class="social-list">
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="/atom.xml">
+            <span class="icon">
+              <i class="fa fa-rss"></i>
+            </span>
+
+            <span class="label">RSS</span>
+          </a>
+      </div>
+  </div>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/%E9%80%9A%E4%BF%A1/" rel="tag"><i class="fa fa-tag"></i> 通信</a>
+              <a href="/tags/5G-NR/" rel="tag"><i class="fa fa-tag"></i> 5G NR</a>
+              <a href="/tags/%E8%B0%83%E7%A0%94/" rel="tag"><i class="fa fa-tag"></i> 调研</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/posts/33359.html" rel="prev" title="网页关键字自动高亮，网页高亮批注，保存网页为单文件--浏览器拓展推荐">
+                  <i class="fa fa-angle-left"></i> 网页关键字自动高亮，网页高亮批注，保存网页为单文件--浏览器拓展推荐
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/posts/40836.html" rel="next" title="优先队列">
+                  优先队列 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments gitalk-container"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 2018 – 
+    <span itemprop="copyrightYear">2024</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">热夏</span>
+  </div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>站点总字数：</span>
+    <span title="站点总字数">629k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">9:32</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/next-theme-pjax/0.6.0/pjax.min.js" integrity="sha256-vxLn1tSKWD4dqbMRyv940UYw4sXgMtYcK6reefzZrao=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lozad.js/1.16.0/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script><script src="/js/pjax.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+  <script src="/js/third-party/pace.js"></script>
+
+
+  
+  <script data-pjax async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","mhchem":false,"js":{"url":"//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
+
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"upwon","repo":"upwon.github.io","client_id":"7e047047ecee7317452b","client_secret":"c60fbdf0eb19e7264e33ab780319e4d420a58fee","admin_user":"upwon","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":null,"js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"71a09c029927963c2f285f585bd6080d"}</script>
+<script src="/js/third-party/comments/gitalk.js"></script>
+
+
+  <script type="text/javascript" src="/js/clicklove.js"></script>
+   
+ 
+
+</body>
+</html>

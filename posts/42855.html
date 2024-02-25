@@ -1,0 +1,995 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.1.1">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/myapple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/myfavicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/myfavicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/myapple-touch-icon-next.png" color="#222">
+  <meta name="google-site-verification" content="google2fc64c2b92961282.html">
+  <meta name="baidu-site-verification" content="s6BwSjIZYB">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.loli.net/css?family='LXGW+WenKai+LITE':300,300italic,400,400italic,700,700italic%7C'LXGW+WenKai+Screen':300,300italic,400,400italic,700,700italic%7C'LXGW+WenKai':300,300italic,400,400italic,700,700italic%7C'Noto+Serif+SC':300,300italic,400,400italic,700,700italic%7C'EB+Garamond':300,300italic,400,400italic,700,700italic%7C'PingFang+SC':300,300italic,400,400italic,700,700italic%7C'Microsoft+YaHei':300,300italic,400,400italic,700,700italic%7C'sans-serif':300,300italic,400,400italic,700,700italic%7CMa+Shan+Zheng:300,300italic,400,400italic,700,700italic%7CLXGW+WenKai+Screen:300,300italic,400,400italic,700,700italic%7CLXGW+WenKai:300,300italic,400,400italic,700,700italic%7CMenlo:300,300italic,400,400italic,700,700italic%7CMonaco:300,300italic,400,400italic,700,700italic%7CConsolas:300,300italic,400,400italic,700,700italic%7CSource+Code+Pro:300,300italic,400,400italic,700,700italic%7Csystem-ui:300,300italic,400,400italic,700,700italic%7Cmonospace:300,300italic,400,400italic,700,700italic%7Csans-serif:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha256-yIDrPSXHZdOZhAqiBP7CKzIwMQmRCJ8UeB8Jo17YC4o=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/themes/blue/pace-theme-minimal.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"www.lifeee.top","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.19.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"mac","show_result":true},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="from pexels   本教程主要利用C++来实现一个基于多态的职工管理系统，通过这个简单的例子来了解多态的思想。😁 本文来源于：黑马程序员 对应视频地址为：黑马程序员匠心之作|C++教程从0到1入门编程,学习编程不再难">
+<meta property="og:type" content="article">
+<meta property="og:title" content="4-基于多态的企业职工系统">
+<meta property="og:url" content="https://www.lifeee.top/posts/42855.html">
+<meta property="og:site_name" content="热夏的博客">
+<meta property="og:description" content="from pexels   本教程主要利用C++来实现一个基于多态的职工管理系统，通过这个简单的例子来了解多态的思想。😁 本文来源于：黑马程序员 对应视频地址为：黑马程序员匠心之作|C++教程从0到1入门编程,学习编程不再难">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img20200529142602.jpg">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/1546511409198.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/1544151201465.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/1546349209805.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/1546349360960.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/1546349421496.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/1546349488752.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/1546349904944.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/1546351543942.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/1546352771191.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/1546353199424.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200520143459-2.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/1546398236081.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/1546399491099.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/1546401705277.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/1546401763461.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/1546432469465.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200520143801-2.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/1546432343078.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/1546435197575.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/1546656256176.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/1546436429055.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/1546436385793.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/1546436938152.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/1546497336465.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/1546497082135.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/1546496947671.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/1546502698622.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/1546500324196.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/1546500350526.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/1546500361889.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200520144146.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/1546502651922.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200520144244.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200520144304.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/1546502865443.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/1546502898653.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/1546504714318.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/1546504767229.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/1546505046521.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200520144433.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/1546507850441.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/1546507760284.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/1546510145181.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/1546658169987.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200520144530.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/1546658273581.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/1546658288936.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/1546658313704.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/1546511085541.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/1546510976745.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/1546510994196.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/1546511018517.png">
+<meta property="article:published_time" content="2020-05-20T06:27:13.000Z">
+<meta property="article:modified_time" content="2022-11-14T16:57:17.388Z">
+<meta property="article:author" content="热夏">
+<meta property="article:tag" content="C++">
+<meta property="article:tag" content="教程">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img20200529142602.jpg">
+
+
+<link rel="canonical" href="https://www.lifeee.top/posts/42855.html">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://www.lifeee.top/posts/42855.html","path":"posts/42855.html","title":"4-基于多态的企业职工系统"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>4-基于多态的企业职工系统 | 热夏的博客</title>
+  
+
+
+
+
+
+
+
+<link href="https://fonts.loli.net/css?family=Noto+Serif+SC:400,500,700&display=swap&subset=chinese-simplified" rel="stylesheet">
+<link rel="stylesheet" href="https://npm.elemecdn.com/lxgw-wenkai-screen-webfont@1.7.0/style.css" />
+
+<link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&display=swap" rel="stylesheet">
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="热夏的博客" type="application/atom+xml">
+<style>.darkmode--activated{--body-bg-color:#282828;--content-bg-color:#333;--card-bg-color:#555;--text-color:#ccc;--blockquote-color:#bbb;--link-color:#ccc;--link-hover-color:#eee;--brand-color:#ddd;--brand-hover-color:#ddd;--table-row-odd-bg-color:#282828;--table-row-hover-bg-color:#363636;--menu-item-bg-color:#555;--btn-default-bg:#222;--btn-default-color:#ccc;--btn-default-border-color:#555;--btn-default-hover-bg:#666;--btn-default-hover-color:#ccc;--btn-default-hover-border-color:#666;--highlight-background:#282b2e;--highlight-foreground:#a9b7c6;--highlight-gutter-background:#34393d;--highlight-gutter-foreground:#9ca9b6}.darkmode--activated img{opacity:.75}.darkmode--activated img:hover{opacity:.9}.darkmode--activated code{color:#69dbdc;background:0 0}button.darkmode-toggle{z-index:9999}.darkmode-ignore,img{display:flex!important}.beian img{display:inline-block!important}</style></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">热夏的博客</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-heart fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%81%8C%E5%B7%A5%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F"><span class="nav-number">1.</span> <span class="nav-text">职工管理系统</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1%E3%80%81%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F%E9%9C%80%E6%B1%82"><span class="nav-number">1.1.</span> <span class="nav-text">1、管理系统需求</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2%E3%80%81%E5%88%9B%E5%BB%BA%E9%A1%B9%E7%9B%AE"><span class="nav-number">1.2.</span> <span class="nav-text">2、创建项目</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-%E5%88%9B%E5%BB%BA%E9%A1%B9%E7%9B%AE"><span class="nav-number">1.2.1.</span> <span class="nav-text">2.1 创建项目</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-%E6%B7%BB%E5%8A%A0%E6%96%87%E4%BB%B6"><span class="nav-number">1.2.2.</span> <span class="nav-text">2.2 添加文件</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3%E3%80%81%E5%88%9B%E5%BB%BA%E7%AE%A1%E7%90%86%E7%B1%BB"><span class="nav-number">1.3.</span> <span class="nav-text">3、创建管理类</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1%E5%88%9B%E5%BB%BA%E6%96%87%E4%BB%B6"><span class="nav-number">1.3.1.</span> <span class="nav-text">3.1创建文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-%E5%A4%B4%E6%96%87%E4%BB%B6%E5%AE%9E%E7%8E%B0"><span class="nav-number">1.3.2.</span> <span class="nav-text">3.2 头文件实现</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-3-%E6%BA%90%E6%96%87%E4%BB%B6%E5%AE%9E%E7%8E%B0"><span class="nav-number">1.3.3.</span> <span class="nav-text">3.3 源文件实现</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4%E3%80%81%E8%8F%9C%E5%8D%95%E5%8A%9F%E8%83%BD"><span class="nav-number">1.4.</span> <span class="nav-text">4、菜单功能</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1-%E6%B7%BB%E5%8A%A0%E6%88%90%E5%91%98%E5%87%BD%E6%95%B0"><span class="nav-number">1.4.1.</span> <span class="nav-text">4.1 添加成员函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2-%E8%8F%9C%E5%8D%95%E5%8A%9F%E8%83%BD%E5%AE%9E%E7%8E%B0"><span class="nav-number">1.4.2.</span> <span class="nav-text">4.2 菜单功能实现</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-3-%E6%B5%8B%E8%AF%95%E8%8F%9C%E5%8D%95%E5%8A%9F%E8%83%BD"><span class="nav-number">1.4.3.</span> <span class="nav-text">4.3 测试菜单功能</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5%E3%80%81%E9%80%80%E5%87%BA%E5%8A%9F%E8%83%BD"><span class="nav-number">1.5.</span> <span class="nav-text">5、退出功能</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#5-1-%E6%8F%90%E4%BE%9B%E5%8A%9F%E8%83%BD%E6%8E%A5%E5%8F%A3"><span class="nav-number">1.5.1.</span> <span class="nav-text">5.1  提供功能接口</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-2-%E5%AE%9E%E7%8E%B0%E9%80%80%E5%87%BA%E5%8A%9F%E8%83%BD"><span class="nav-number">1.5.2.</span> <span class="nav-text">5.2 实现退出功能</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-3%E6%B5%8B%E8%AF%95%E5%8A%9F%E8%83%BD"><span class="nav-number">1.5.3.</span> <span class="nav-text">5.3测试功能</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6%E3%80%81%E5%88%9B%E5%BB%BA%E8%81%8C%E5%B7%A5%E7%B1%BB"><span class="nav-number">1.6.</span> <span class="nav-text">6、创建职工类</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#6-1-%E5%88%9B%E5%BB%BA%E8%81%8C%E5%B7%A5%E6%8A%BD%E8%B1%A1%E7%B1%BB"><span class="nav-number">1.6.1.</span> <span class="nav-text">6.1 创建职工抽象类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-2-%E5%88%9B%E5%BB%BA%E6%99%AE%E9%80%9A%E5%91%98%E5%B7%A5%E7%B1%BB"><span class="nav-number">1.6.2.</span> <span class="nav-text">6.2 创建普通员工类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-3-%E5%88%9B%E5%BB%BA%E7%BB%8F%E7%90%86%E7%B1%BB"><span class="nav-number">1.6.3.</span> <span class="nav-text">6.3 创建经理类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-4-%E5%88%9B%E5%BB%BA%E8%80%81%E6%9D%BF%E7%B1%BB"><span class="nav-number">1.6.4.</span> <span class="nav-text">6.4 创建老板类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6-5-%E6%B5%8B%E8%AF%95%E5%A4%9A%E6%80%81"><span class="nav-number">1.6.5.</span> <span class="nav-text">6.5 测试多态</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7%E3%80%81%E6%B7%BB%E5%8A%A0%E8%81%8C%E5%B7%A5"><span class="nav-number">1.7.</span> <span class="nav-text">7、添加职工</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#7-1-%E5%8A%9F%E8%83%BD%E5%88%86%E6%9E%90"><span class="nav-number">1.7.1.</span> <span class="nav-text">7.1 功能分析</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-2-%E5%8A%9F%E8%83%BD%E5%AE%9E%E7%8E%B0"><span class="nav-number">1.7.2.</span> <span class="nav-text">7.2 功能实现</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-3-%E6%B5%8B%E8%AF%95%E6%B7%BB%E5%8A%A0"><span class="nav-number">1.7.3.</span> <span class="nav-text">7.3 测试添加</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8%E3%80%81%E6%96%87%E4%BB%B6%E4%BA%A4%E4%BA%92-%E5%86%99%E6%96%87%E4%BB%B6"><span class="nav-number">1.8.</span> <span class="nav-text">8、文件交互 - 写文件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#8-1-%E8%AE%BE%E5%AE%9A%E6%96%87%E4%BB%B6%E8%B7%AF%E5%BE%84"><span class="nav-number">1.8.1.</span> <span class="nav-text">8.1 设定文件路径</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-2-%E6%88%90%E5%91%98%E5%87%BD%E6%95%B0%E5%A3%B0%E6%98%8E"><span class="nav-number">1.8.2.</span> <span class="nav-text">8.2 成员函数声明</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-3-%E4%BF%9D%E5%AD%98%E6%96%87%E4%BB%B6%E5%8A%9F%E8%83%BD%E5%AE%9E%E7%8E%B0"><span class="nav-number">1.8.3.</span> <span class="nav-text">8.3 保存文件功能实现</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-4-%E4%BF%9D%E5%AD%98%E6%96%87%E4%BB%B6%E5%8A%9F%E8%83%BD%E6%B5%8B%E8%AF%95"><span class="nav-number">1.8.4.</span> <span class="nav-text">8.4 保存文件功能测试</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9%E3%80%81%E6%96%87%E4%BB%B6%E4%BA%A4%E4%BA%92-%E8%AF%BB%E6%96%87%E4%BB%B6"><span class="nav-number">1.9.</span> <span class="nav-text">9、文件交互 - 读文件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#9-1-%E6%96%87%E4%BB%B6%E6%9C%AA%E5%88%9B%E5%BB%BA"><span class="nav-number">1.9.1.</span> <span class="nav-text">9.1 文件未创建</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-2-%E6%96%87%E4%BB%B6%E5%AD%98%E5%9C%A8%E4%B8%94%E6%95%B0%E6%8D%AE%E4%B8%BA%E7%A9%BA"><span class="nav-number">1.9.2.</span> <span class="nav-text">9.2 文件存在且数据为空</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#9-3-%E6%96%87%E4%BB%B6%E5%AD%98%E5%9C%A8%E4%B8%94%E4%BF%9D%E5%AD%98%E8%81%8C%E5%B7%A5%E6%95%B0%E6%8D%AE"><span class="nav-number">1.9.3.</span> <span class="nav-text">9.3 文件存在且保存职工数据</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#9-3-1-%E8%8E%B7%E5%8F%96%E8%AE%B0%E5%BD%95%E7%9A%84%E8%81%8C%E5%B7%A5%E4%BA%BA%E6%95%B0"><span class="nav-number">1.9.3.1.</span> <span class="nav-text">9.3.1 获取记录的职工人数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#9-3-2-%E5%88%9D%E5%A7%8B%E5%8C%96%E6%95%B0%E7%BB%84"><span class="nav-number">1.9.3.2.</span> <span class="nav-text">9.3.2 初始化数组</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#10%E3%80%81%E6%98%BE%E7%A4%BA%E8%81%8C%E5%B7%A5"><span class="nav-number">1.10.</span> <span class="nav-text">10、显示职工</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#10-1-%E6%98%BE%E7%A4%BA%E8%81%8C%E5%B7%A5%E5%87%BD%E6%95%B0%E5%A3%B0%E6%98%8E"><span class="nav-number">1.10.0.1.</span> <span class="nav-text">10.1 显示职工函数声明</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#10-2-%E6%98%BE%E7%A4%BA%E8%81%8C%E5%B7%A5%E5%87%BD%E6%95%B0%E5%AE%9E%E7%8E%B0"><span class="nav-number">1.10.0.2.</span> <span class="nav-text">10.2 显示职工函数实现</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#10-3-%E6%B5%8B%E8%AF%95%E6%98%BE%E7%A4%BA%E8%81%8C%E5%B7%A5"><span class="nav-number">1.10.0.3.</span> <span class="nav-text">10.3 测试显示职工</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#11%E3%80%81%E5%88%A0%E9%99%A4%E8%81%8C%E5%B7%A5"><span class="nav-number">1.11.</span> <span class="nav-text">11、删除职工</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#11-1-%E5%88%A0%E9%99%A4%E8%81%8C%E5%B7%A5%E5%87%BD%E6%95%B0%E5%A3%B0%E6%98%8E"><span class="nav-number">1.11.0.1.</span> <span class="nav-text">11.1 删除职工函数声明</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#11-2-%E8%81%8C%E5%B7%A5%E6%98%AF%E5%90%A6%E5%AD%98%E5%9C%A8%E5%87%BD%E6%95%B0%E5%A3%B0%E6%98%8E"><span class="nav-number">1.11.0.2.</span> <span class="nav-text">11.2 职工是否存在函数声明</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#11-3-%E8%81%8C%E5%B7%A5%E6%98%AF%E5%90%A6%E5%AD%98%E5%9C%A8%E5%87%BD%E6%95%B0%E5%AE%9E%E7%8E%B0"><span class="nav-number">1.11.0.3.</span> <span class="nav-text">11.3 职工是否存在函数实现</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#11-4-%E5%88%A0%E9%99%A4%E8%81%8C%E5%B7%A5%E5%87%BD%E6%95%B0%E5%AE%9E%E7%8E%B0"><span class="nav-number">1.11.0.4.</span> <span class="nav-text">11.4 删除职工函数实现</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#11-5-%E6%B5%8B%E8%AF%95%E5%88%A0%E9%99%A4%E8%81%8C%E5%B7%A5"><span class="nav-number">1.11.0.5.</span> <span class="nav-text">11.5 测试删除职工</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#12%E3%80%81%E4%BF%AE%E6%94%B9%E8%81%8C%E5%B7%A5"><span class="nav-number">1.12.</span> <span class="nav-text">12、修改职工</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#12-1-%E4%BF%AE%E6%94%B9%E8%81%8C%E5%B7%A5%E5%87%BD%E6%95%B0%E5%A3%B0%E6%98%8E"><span class="nav-number">1.12.0.1.</span> <span class="nav-text">12.1 修改职工函数声明</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#12-2-%E4%BF%AE%E6%94%B9%E8%81%8C%E5%B7%A5%E5%87%BD%E6%95%B0%E5%AE%9E%E7%8E%B0"><span class="nav-number">1.12.0.2.</span> <span class="nav-text">12.2 修改职工函数实现</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#12-3-%E6%B5%8B%E8%AF%95%E4%BF%AE%E6%94%B9%E8%81%8C%E5%B7%A5"><span class="nav-number">1.12.0.3.</span> <span class="nav-text">12.3 测试修改职工</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#13%E3%80%81%E6%9F%A5%E6%89%BE%E8%81%8C%E5%B7%A5"><span class="nav-number">1.13.</span> <span class="nav-text">13、查找职工</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#13-1-%E6%9F%A5%E6%89%BE%E8%81%8C%E5%B7%A5%E5%87%BD%E6%95%B0%E5%A3%B0%E6%98%8E"><span class="nav-number">1.13.0.1.</span> <span class="nav-text">13.1 查找职工函数声明</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#13-2-%E6%9F%A5%E6%89%BE%E8%81%8C%E5%B7%A5%E5%87%BD%E6%95%B0%E5%AE%9E%E7%8E%B0"><span class="nav-number">1.13.0.2.</span> <span class="nav-text">13.2 查找职工函数实现</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#13-3-%E6%B5%8B%E8%AF%95%E6%9F%A5%E6%89%BE%E8%81%8C%E5%B7%A5"><span class="nav-number">1.13.0.3.</span> <span class="nav-text">13.3 测试查找职工</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#14%E3%80%81%E6%8E%92%E5%BA%8F"><span class="nav-number">1.14.</span> <span class="nav-text">14、排序</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#14-1-%E6%8E%92%E5%BA%8F%E5%87%BD%E6%95%B0%E5%A3%B0%E6%98%8E"><span class="nav-number">1.14.0.1.</span> <span class="nav-text">14.1 排序函数声明</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#14-2-%E6%8E%92%E5%BA%8F%E5%87%BD%E6%95%B0%E5%AE%9E%E7%8E%B0"><span class="nav-number">1.14.0.2.</span> <span class="nav-text">14.2 排序函数实现</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#14-3-%E6%B5%8B%E8%AF%95%E6%8E%92%E5%BA%8F%E5%8A%9F%E8%83%BD"><span class="nav-number">1.14.0.3.</span> <span class="nav-text">14.3 测试排序功能</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#15%E3%80%81%E6%B8%85%E7%A9%BA%E6%96%87%E4%BB%B6"><span class="nav-number">1.15.</span> <span class="nav-text">15、清空文件</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#15-1-%E6%B8%85%E7%A9%BA%E5%87%BD%E6%95%B0%E5%A3%B0%E6%98%8E"><span class="nav-number">1.15.0.1.</span> <span class="nav-text">15.1 清空函数声明</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#15-2-%E6%B8%85%E7%A9%BA%E5%87%BD%E6%95%B0%E5%AE%9E%E7%8E%B0"><span class="nav-number">1.15.0.2.</span> <span class="nav-text">15.2 清空函数实现</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#15-3-%E6%B5%8B%E8%AF%95%E6%B8%85%E7%A9%BA%E6%96%87%E4%BB%B6"><span class="nav-number">1.15.0.3.</span> <span class="nav-text">15.3 测试清空文件</span></a></li></ol></li></ol></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="热夏"
+      src="/images/head.jpg">
+  <p class="site-author-name" itemprop="name">热夏</p>
+  <div class="site-description" itemprop="description">空山新雨后，天气晚来秋。</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">81</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">42</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/upwon" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;upwon" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:w1244753906@gmail.com" title="E-Mail → mailto:w1244753906@gmail.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.lifeee.top//atom.xml" title="RSS → https:&#x2F;&#x2F;www.lifeee.top&#x2F;&#x2F;atom.xml" rel="noopener me"><i class="fa fa-rss fa-fw"></i>RSS</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+        <div class="pjax">
+        </div>
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.lifeee.top/posts/42855.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/head.jpg">
+      <meta itemprop="name" content="热夏">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="热夏的博客">
+      <meta itemprop="description" content="空山新雨后，天气晚来秋。">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="4-基于多态的企业职工系统 | 热夏的博客">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          4-基于多态的企业职工系统
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2020-05-20 14:27:13" itemprop="dateCreated datePublished" datetime="2020-05-20T14:27:13+08:00">2020-05-20</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-11-15 00:57:17" itemprop="dateModified" datetime="2022-11-15T00:57:17+08:00">2022-11-15</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E7%BC%96%E7%A8%8B/" itemprop="url" rel="index"><span itemprop="name">编程</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">技术</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%95%99%E7%A8%8B/" itemprop="url" rel="index"><span itemprop="name">教程</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>19k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>18 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img20200529142602.jpg"></p>
+<center><font size=1>from pexels </center>
+
+<p>本教程主要利用C++来实现一个基于多态的职工管理系统，通过这个简单的例子来了解多态的思想。😁</p>
+<p>本文来源于：<a target="_blank" rel="noopener" href="http://yun.itheima.com/course/520.html?bili">黑马程序员</a></p>
+<p>对应视频地址为：<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/av41559729/?p=1">黑马程序员匠心之作|C++教程从0到1入门编程,学习编程不再难</a></p>
+<span id="more"></span>
+
+
+
+<h1 id="职工管理系统"><a href="#职工管理系统" class="headerlink" title="职工管理系统"></a>职工管理系统</h1><h2 id="1、管理系统需求"><a href="#1、管理系统需求" class="headerlink" title="1、管理系统需求"></a>1、管理系统需求</h2><p>职工管理系统可以用来管理公司内所有员工的信息</p>
+<p>本教程主要利用C++来实现一个基于多态的职工管理系统</p>
+<p>公司中职工分为三类：普通员工、经理、老板，显示信息时，需要显示职工编号、职工姓名、职工岗位、以及职责</p>
+<p>普通员工职责：完成经理交给的任务</p>
+<p>经理职责：完成老板交给的任务，并下发任务给员工</p>
+<p>老板职责：管理公司所有事务</p>
+<p>管理系统中需要实现的功能如下：</p>
+<ul>
+<li>退出管理程序：退出当前管理系统</li>
+</ul>
+<ul>
+<li>增加职工信息：实现批量添加职工功能，将信息录入到文件中，职工信息为：职工编号、姓名、部门编号</li>
+<li>显示职工信息：显示公司内部所有职工的信息</li>
+<li>删除离职职工：按照编号删除指定的职工</li>
+<li>修改职工信息：按照编号修改职工个人信息</li>
+<li>查找职工信息：按照职工的编号或者职工的姓名进行查找相关的人员信息</li>
+<li>按照编号排序：按照职工编号，进行排序，排序规则由用户指定</li>
+<li>清空所有文档：清空文件中记录的所有职工信息 （清空前需要再次确认，防止误删）</li>
+</ul>
+<p>系统界面效果图如下：</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/1546511409198.png" alt="1546511409198"></p>
+<p>需根据用户不同的选择，完成不同的功能！</p>
+<h2 id="2、创建项目"><a href="#2、创建项目" class="headerlink" title="2、创建项目"></a>2、创建项目</h2><p>创建项目步骤如下：</p>
+<ul>
+<li>创建新项目</li>
+<li>添加文件</li>
+</ul>
+<h3 id="2-1-创建项目"><a href="#2-1-创建项目" class="headerlink" title="2.1 创建项目"></a>2.1 创建项目</h3><p>打开vs2017后，点击创建新项目，创建新的C++项目</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/1544151201465.png" alt="1544151201465"></p>
+<p>填写项目名称以及项目路径，点击确定</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/1546349209805.png" alt="1546349209805"></p>
+<h3 id="2-2-添加文件"><a href="#2-2-添加文件" class="headerlink" title="2.2 添加文件"></a>2.2 添加文件</h3><p>右键源文件，进行添加文件操作</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/1546349360960.png" alt="1546349360960"></p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/1546349421496.png" alt="1546349421496"></p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/1546349488752.png" alt="1546349488752"></p>
+<p>至此，项目已创建完毕</p>
+<h2 id="3、创建管理类"><a href="#3、创建管理类" class="headerlink" title="3、创建管理类"></a>3、创建管理类</h2><p>​	管理类负责的内容如下：</p>
+<ul>
+<li>与用户的沟通菜单界面</li>
+<li>对职工增删改查的操作</li>
+<li>与文件的读写交互</li>
+</ul>
+<h3 id="3-1创建文件"><a href="#3-1创建文件" class="headerlink" title="3.1创建文件"></a>3.1创建文件</h3><p>在头文件和源文件的文件夹下分别创建workerManager.h 和 workerManager.cpp文件</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/1546349904944.png" alt="1546349904944"></p>
+<h3 id="3-2-头文件实现"><a href="#3-2-头文件实现" class="headerlink" title="3.2 头文件实现"></a>3.2 头文件实现</h3><p>在workerManager.h中设计管理类</p>
+<p>代码如下：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">pragma</span> once</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">WorkerManager</span></span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line"></span><br><span class="line">	<span class="comment">//构造函数</span></span><br><span class="line">	<span class="built_in">WorkerManager</span>();</span><br><span class="line"></span><br><span class="line">	<span class="comment">//析构函数</span></span><br><span class="line">	~<span class="built_in">WorkerManager</span>();</span><br><span class="line"></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-3-源文件实现"><a href="#3-3-源文件实现" class="headerlink" title="3.3 源文件实现"></a>3.3 源文件实现</h3><p>在workerManager.cpp中将构造和析构函数空实现补全</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;workerManager.h&quot;</span></span></span><br><span class="line"></span><br><span class="line">WorkerManager::<span class="built_in">WorkerManager</span>()</span><br><span class="line">&#123;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">WorkerManager::~<span class="built_in">WorkerManager</span>()</span><br><span class="line">&#123;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<p>至此职工管理类以创建完毕</p>
+<h2 id="4、菜单功能"><a href="#4、菜单功能" class="headerlink" title="4、菜单功能"></a>4、菜单功能</h2><p>功能描述：与用户的沟通界面</p>
+<h3 id="4-1-添加成员函数"><a href="#4-1-添加成员函数" class="headerlink" title="4.1 添加成员函数"></a>4.1 添加成员函数</h3><p>在管理类workerManager.h中添加成员函数  <code>void Show_Menu();</code></p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/1546351543942.png" alt="1546351543942"></p>
+<h3 id="4-2-菜单功能实现"><a href="#4-2-菜单功能实现" class="headerlink" title="4.2 菜单功能实现"></a>4.2 菜单功能实现</h3><p>在管理类workerManager.cpp中实现  Show_Menu()函数</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">WorkerManager::Show_Menu</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	cout &lt;&lt; <span class="string">&quot;********************************************&quot;</span> &lt;&lt; endl;</span><br><span class="line">	cout &lt;&lt; <span class="string">&quot;*********  欢迎使用职工管理系统！ **********&quot;</span> &lt;&lt; endl;</span><br><span class="line">	cout &lt;&lt; <span class="string">&quot;*************  0.退出管理程序  *************&quot;</span> &lt;&lt; endl;</span><br><span class="line">	cout &lt;&lt; <span class="string">&quot;*************  1.增加职工信息  *************&quot;</span> &lt;&lt; endl;</span><br><span class="line">	cout &lt;&lt; <span class="string">&quot;*************  2.显示职工信息  *************&quot;</span> &lt;&lt; endl;</span><br><span class="line">	cout &lt;&lt; <span class="string">&quot;*************  3.删除离职职工  *************&quot;</span> &lt;&lt; endl;</span><br><span class="line">	cout &lt;&lt; <span class="string">&quot;*************  4.修改职工信息  *************&quot;</span> &lt;&lt; endl;</span><br><span class="line">	cout &lt;&lt; <span class="string">&quot;*************  5.查找职工信息  *************&quot;</span> &lt;&lt; endl;</span><br><span class="line">	cout &lt;&lt; <span class="string">&quot;*************  6.按照编号排序  *************&quot;</span> &lt;&lt; endl;</span><br><span class="line">	cout &lt;&lt; <span class="string">&quot;*************  7.清空所有文档  *************&quot;</span> &lt;&lt; endl;</span><br><span class="line">	cout &lt;&lt; <span class="string">&quot;********************************************&quot;</span> &lt;&lt; endl;</span><br><span class="line">	cout &lt;&lt; endl;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="4-3-测试菜单功能"><a href="#4-3-测试菜单功能" class="headerlink" title="4.3 测试菜单功能"></a>4.3 测试菜单功能</h3><p>在职工管理系统.cpp中测试菜单功能</p>
+<p>代码：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;workerManager.h&quot;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	WorkerManager wm;</span><br><span class="line"></span><br><span class="line">	wm.<span class="built_in">Show_Menu</span>();</span><br><span class="line"></span><br><span class="line">	<span class="built_in">system</span>(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>运行效果如图：</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/1546352771191.png" alt="1546352771191"></p>
+<h2 id="5、退出功能"><a href="#5、退出功能" class="headerlink" title="5、退出功能"></a>5、退出功能</h2><h3 id="5-1-提供功能接口"><a href="#5-1-提供功能接口" class="headerlink" title="5.1  提供功能接口"></a>5.1  提供功能接口</h3><p>在main函数中提供分支选择，提供每个功能接口</p>
+<p>代码：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">	WorkerManager wm;</span><br><span class="line">	<span class="type">int</span> choice = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">while</span> (<span class="literal">true</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="comment">//展示菜单</span></span><br><span class="line">		wm.<span class="built_in">Show_Menu</span>();</span><br><span class="line">		cout &lt;&lt; <span class="string">&quot;请输入您的选择:&quot;</span> &lt;&lt; endl;</span><br><span class="line">		cin &gt;&gt; choice;</span><br><span class="line"></span><br><span class="line">		<span class="keyword">switch</span> (choice)</span><br><span class="line">		&#123;</span><br><span class="line">		<span class="keyword">case</span> <span class="number">0</span>: <span class="comment">//退出系统</span></span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		<span class="keyword">case</span> <span class="number">1</span>: <span class="comment">//添加职工</span></span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		<span class="keyword">case</span> <span class="number">2</span>: <span class="comment">//显示职工</span></span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		<span class="keyword">case</span> <span class="number">3</span>: <span class="comment">//删除职工</span></span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		<span class="keyword">case</span> <span class="number">4</span>: <span class="comment">//修改职工</span></span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		<span class="keyword">case</span> <span class="number">5</span>: <span class="comment">//查找职工</span></span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		<span class="keyword">case</span> <span class="number">6</span>: <span class="comment">//排序职工</span></span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		<span class="keyword">case</span> <span class="number">7</span>: <span class="comment">//清空文件</span></span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		<span class="keyword">default</span>:</span><br><span class="line">			<span class="built_in">system</span>(<span class="string">&quot;cls&quot;</span>);</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="built_in">system</span>(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="5-2-实现退出功能"><a href="#5-2-实现退出功能" class="headerlink" title="5.2 实现退出功能"></a>5.2 实现退出功能</h3><p>在workerManager.h中提供退出系统的成员函数 <code>	void exitSystem();</code></p>
+<p>在workerManager.cpp中提供具体的功能实现</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">WorkerManager::exitSystem</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	cout &lt;&lt; <span class="string">&quot;欢迎下次使用&quot;</span> &lt;&lt; endl;</span><br><span class="line">	<span class="built_in">system</span>(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line">	<span class="built_in">exit</span>(<span class="number">0</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="5-3测试功能"><a href="#5-3测试功能" class="headerlink" title="5.3测试功能"></a>5.3测试功能</h3><p>在main函数分支 0  选项中，调用退出程序的接口</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/1546353199424.png" alt="1546353199424"></p>
+<p>运行测试效果如图：</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200520143459-2.png"></p>
+<h2 id="6、创建职工类"><a href="#6、创建职工类" class="headerlink" title="6、创建职工类"></a>6、创建职工类</h2><h3 id="6-1-创建职工抽象类"><a href="#6-1-创建职工抽象类" class="headerlink" title="6.1 创建职工抽象类"></a>6.1 创建职工抽象类</h3><p>职工的分类为：普通员工、经理、老板</p>
+<p>将三种职工抽象到一个类（worker）中,利用多态管理不同职工种类</p>
+<p>职工的属性为：职工编号、职工姓名、职工所在部门编号</p>
+<p>职工的行为为：岗位职责信息描述，获取岗位名称</p>
+<p>头文件文件夹下  创建文件worker.h  文件并且添加如下代码：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">pragma</span> once</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;string&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="comment">//职工抽象基类</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Worker</span></span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line"></span><br><span class="line">	<span class="comment">//显示个人信息</span></span><br><span class="line">	<span class="function"><span class="keyword">virtual</span> <span class="type">void</span> <span class="title">showInfo</span><span class="params">()</span> </span>= <span class="number">0</span>;</span><br><span class="line">	<span class="comment">//获取岗位名称</span></span><br><span class="line">	<span class="function"><span class="keyword">virtual</span> string <span class="title">getDeptName</span><span class="params">()</span> </span>= <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">	<span class="type">int</span> m_Id; <span class="comment">//职工编号</span></span><br><span class="line">	string m_Name; <span class="comment">//职工姓名</span></span><br><span class="line">	<span class="type">int</span> m_DeptId; <span class="comment">//职工所在部门名称编号</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="6-2-创建普通员工类"><a href="#6-2-创建普通员工类" class="headerlink" title="6.2 创建普通员工类"></a>6.2 创建普通员工类</h3><p>普通员工类<strong>继承</strong>职工抽象类，并重写父类中纯虚函数</p>
+<p>在头文件和源文件的文件夹下分别创建employee.h 和 employee.cpp文件</p>
+<p>employee.h中代码如下：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">pragma</span> once </span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;worker.h&quot;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">//员工类</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Employee</span> :<span class="keyword">public</span> Worker</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line"></span><br><span class="line">	<span class="comment">//构造函数</span></span><br><span class="line">	<span class="built_in">Employee</span>(<span class="type">int</span> id, string name, <span class="type">int</span> dId);</span><br><span class="line"></span><br><span class="line">	<span class="comment">//显示个人信息</span></span><br><span class="line">	<span class="function"><span class="keyword">virtual</span> <span class="type">void</span> <span class="title">showInfo</span><span class="params">()</span></span>;</span><br><span class="line"></span><br><span class="line">	<span class="comment">//获取职工岗位名称</span></span><br><span class="line">	<span class="function"><span class="keyword">virtual</span> string <span class="title">getDeptName</span><span class="params">()</span></span>;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>employee.cpp中代码如下：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;employee.h&quot;</span></span></span><br><span class="line"></span><br><span class="line">Employee::<span class="built_in">Employee</span>(<span class="type">int</span> id, string name, <span class="type">int</span> dId)</span><br><span class="line">&#123;</span><br><span class="line">	<span class="keyword">this</span>-&gt;m_Id = id;</span><br><span class="line">	<span class="keyword">this</span>-&gt;m_Name = name;</span><br><span class="line">	<span class="keyword">this</span>-&gt;m_DeptId = dId;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">Employee::showInfo</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	cout &lt;&lt; <span class="string">&quot;职工编号： &quot;</span> &lt;&lt; <span class="keyword">this</span>-&gt;m_Id</span><br><span class="line">		&lt;&lt; <span class="string">&quot; \t职工姓名： &quot;</span> &lt;&lt; <span class="keyword">this</span>-&gt;m_Name</span><br><span class="line">		&lt;&lt; <span class="string">&quot; \t岗位：&quot;</span> &lt;&lt; <span class="keyword">this</span>-&gt;<span class="built_in">getDeptName</span>()</span><br><span class="line">		&lt;&lt; <span class="string">&quot; \t岗位职责：完成经理交给的任务&quot;</span> &lt;&lt; endl;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function">string <span class="title">Employee::getDeptName</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">return</span> <span class="built_in">string</span>(<span class="string">&quot;员工&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h3 id="6-3-创建经理类"><a href="#6-3-创建经理类" class="headerlink" title="6.3 创建经理类"></a>6.3 创建经理类</h3><p>经理类<strong>继承</strong>职工抽象类，并重写父类中纯虚函数，和普通员工类似</p>
+<p>在头文件和源文件的文件夹下分别创建manager.h 和 manager.cpp文件</p>
+<p>manager.h中代码如下：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">pragma</span> once</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;worker.h&quot;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">//经理类</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Manager</span> :<span class="keyword">public</span> Worker</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line"></span><br><span class="line">	<span class="built_in">Manager</span>(<span class="type">int</span> id, string name, <span class="type">int</span> dId);</span><br><span class="line"></span><br><span class="line">	<span class="comment">//显示个人信息</span></span><br><span class="line">	<span class="function"><span class="keyword">virtual</span> <span class="type">void</span> <span class="title">showInfo</span><span class="params">()</span></span>;</span><br><span class="line"></span><br><span class="line">	<span class="comment">//获取职工岗位名称</span></span><br><span class="line">	<span class="function"><span class="keyword">virtual</span> string <span class="title">getDeptName</span><span class="params">()</span></span>;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>manager.cpp中代码如下：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;manager.h&quot;</span></span></span><br><span class="line"></span><br><span class="line">Manager::<span class="built_in">Manager</span>(<span class="type">int</span> id, string name, <span class="type">int</span> dId)</span><br><span class="line">&#123;</span><br><span class="line">	<span class="keyword">this</span>-&gt;m_Id = id;</span><br><span class="line">	<span class="keyword">this</span>-&gt;m_Name = name;</span><br><span class="line">	<span class="keyword">this</span>-&gt;m_DeptId = dId;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">Manager::showInfo</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	cout &lt;&lt; <span class="string">&quot;职工编号： &quot;</span> &lt;&lt; <span class="keyword">this</span>-&gt;m_Id</span><br><span class="line">		&lt;&lt; <span class="string">&quot; \t职工姓名： &quot;</span> &lt;&lt; <span class="keyword">this</span>-&gt;m_Name</span><br><span class="line">		&lt;&lt; <span class="string">&quot; \t岗位：&quot;</span> &lt;&lt; <span class="keyword">this</span>-&gt;<span class="built_in">getDeptName</span>()</span><br><span class="line">		&lt;&lt; <span class="string">&quot; \t岗位职责：完成老板交给的任务,并下发任务给员工&quot;</span> &lt;&lt; endl;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function">string <span class="title">Manager::getDeptName</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">return</span> <span class="built_in">string</span>(<span class="string">&quot;经理&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="6-4-创建老板类"><a href="#6-4-创建老板类" class="headerlink" title="6.4 创建老板类"></a>6.4 创建老板类</h3><p>老板类<strong>继承</strong>职工抽象类，并重写父类中纯虚函数，和普通员工类似</p>
+<p>在头文件和源文件的文件夹下分别创建boss.h 和 boss.cpp文件</p>
+<p>boss.h中代码如下：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">pragma</span> once</span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;worker.h&quot;</span></span></span><br><span class="line"></span><br><span class="line"><span class="comment">//老板类</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">Boss</span> :<span class="keyword">public</span> Worker</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line"></span><br><span class="line">	<span class="built_in">Boss</span>(<span class="type">int</span> id, string name, <span class="type">int</span> dId);</span><br><span class="line"></span><br><span class="line">	<span class="comment">//显示个人信息</span></span><br><span class="line">	<span class="function"><span class="keyword">virtual</span> <span class="type">void</span> <span class="title">showInfo</span><span class="params">()</span></span>;</span><br><span class="line"></span><br><span class="line">	<span class="comment">//获取职工岗位名称</span></span><br><span class="line">	<span class="function"><span class="keyword">virtual</span> string <span class="title">getDeptName</span><span class="params">()</span></span>;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>boss.cpp中代码如下：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;boss.h&quot;</span></span></span><br><span class="line"></span><br><span class="line">Boss::<span class="built_in">Boss</span>(<span class="type">int</span> id, string name, <span class="type">int</span> dId)</span><br><span class="line">&#123;</span><br><span class="line">	<span class="keyword">this</span>-&gt;m_Id = id;</span><br><span class="line">	<span class="keyword">this</span>-&gt;m_Name = name;</span><br><span class="line">	<span class="keyword">this</span>-&gt;m_DeptId = dId;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">Boss::showInfo</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	cout &lt;&lt; <span class="string">&quot;职工编号： &quot;</span> &lt;&lt; <span class="keyword">this</span>-&gt;m_Id</span><br><span class="line">		&lt;&lt; <span class="string">&quot; \t职工姓名： &quot;</span> &lt;&lt; <span class="keyword">this</span>-&gt;m_Name</span><br><span class="line">		&lt;&lt; <span class="string">&quot; \t岗位：&quot;</span> &lt;&lt; <span class="keyword">this</span>-&gt;<span class="built_in">getDeptName</span>()</span><br><span class="line">		&lt;&lt; <span class="string">&quot; \t岗位职责：管理公司所有事务&quot;</span> &lt;&lt; endl;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function">string <span class="title">Boss::getDeptName</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">return</span> <span class="built_in">string</span>(<span class="string">&quot;总裁&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h3 id="6-5-测试多态"><a href="#6-5-测试多态" class="headerlink" title="6.5 测试多态"></a>6.5 测试多态</h3><p>在职工管理系统.cpp中添加测试函数，并且运行能够产生多态</p>
+<p>测试代码如下：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;worker.h&quot;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;employee.h&quot;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;manager.h&quot;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&quot;boss.h&quot;</span></span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">test</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	Worker * worker = <span class="literal">NULL</span>;</span><br><span class="line">	worker = <span class="keyword">new</span> <span class="built_in">Employee</span>(<span class="number">1</span>, <span class="string">&quot;张三&quot;</span>, <span class="number">1</span>);</span><br><span class="line">	worker-&gt;<span class="built_in">showInfo</span>();</span><br><span class="line">	<span class="keyword">delete</span> worker;</span><br><span class="line">	</span><br><span class="line">	worker = <span class="keyword">new</span> <span class="built_in">Manager</span>(<span class="number">2</span>, <span class="string">&quot;李四&quot;</span>, <span class="number">2</span>);</span><br><span class="line">	worker-&gt;<span class="built_in">showInfo</span>();</span><br><span class="line">	<span class="keyword">delete</span> worker;</span><br><span class="line"></span><br><span class="line">	worker = <span class="keyword">new</span> <span class="built_in">Boss</span>(<span class="number">3</span>, <span class="string">&quot;王五&quot;</span>, <span class="number">3</span>);</span><br><span class="line">	worker-&gt;<span class="built_in">showInfo</span>();</span><br><span class="line">	<span class="keyword">delete</span> worker;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<p>运行效果如图：</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/1546398236081.png" alt="1546398236081"></p>
+<p>测试成功后，测试代码可以注释保留，或者选择删除</p>
+<h2 id="7、添加职工"><a href="#7、添加职工" class="headerlink" title="7、添加职工"></a>7、添加职工</h2><p>功能描述：批量添加职工，并且保存到文件中</p>
+<h3 id="7-1-功能分析"><a href="#7-1-功能分析" class="headerlink" title="7.1 功能分析"></a>7.1 功能分析</h3><p>分析：</p>
+<p>用户在批量创建时，可能会创建不同种类的职工</p>
+<p>如果想将所有不同种类的员工都放入到一个数组中，可以将所有员工的指针维护到一个数组里</p>
+<p>如果想在程序中维护这个不定长度的数组，可以将数组创建到堆区，并利用Worker **的指针维护</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/1546399491099.png" alt="1546399491099"></p>
+<h3 id="7-2-功能实现"><a href="#7-2-功能实现" class="headerlink" title="7.2 功能实现"></a>7.2 功能实现</h3><p>在WokerManager.h头文件中添加成员属性 代码：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//记录文件中的人数个数</span></span><br><span class="line"><span class="type">int</span> m_EmpNum;</span><br><span class="line"></span><br><span class="line"><span class="comment">//员工数组的指针</span></span><br><span class="line">Worker ** m_EmpArray;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>在WorkerManager构造函数中初始化属性</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">WorkerManager::<span class="built_in">WorkerManager</span>()</span><br><span class="line">&#123;</span><br><span class="line">	<span class="comment">//初始化人数</span></span><br><span class="line">	<span class="keyword">this</span>-&gt;m_EmpNum = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">	<span class="comment">//初始化数组指针</span></span><br><span class="line">	<span class="keyword">this</span>-&gt;m_EmpArray = <span class="literal">NULL</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>在workerManager.h中添加成员函数</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//增加职工</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">Add_Emp</span><span class="params">()</span></span>;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>workerManager.cpp中实现该函数</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//增加职工</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">WorkerManager::Add_Emp</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	cout &lt;&lt; <span class="string">&quot;请输入增加职工数量： &quot;</span> &lt;&lt; endl;</span><br><span class="line"></span><br><span class="line">	<span class="type">int</span> addNum = <span class="number">0</span>;</span><br><span class="line">	cin &gt;&gt; addNum;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span> (addNum &gt; <span class="number">0</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="comment">//计算新空间大小</span></span><br><span class="line">		<span class="type">int</span> newSize = <span class="keyword">this</span>-&gt;m_EmpNum + addNum;</span><br><span class="line"></span><br><span class="line">		<span class="comment">//开辟新空间</span></span><br><span class="line">		Worker ** newSpace = <span class="keyword">new</span> Worker*[newSize];</span><br><span class="line"></span><br><span class="line">		<span class="comment">//将原空间下内容存放到新空间下</span></span><br><span class="line">		<span class="keyword">if</span> (<span class="keyword">this</span>-&gt;m_EmpArray != <span class="literal">NULL</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="keyword">this</span>-&gt;m_EmpNum; i++)</span><br><span class="line">			&#123;</span><br><span class="line">				newSpace[i] = <span class="keyword">this</span>-&gt;m_EmpArray[i];</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="comment">//输入新数据</span></span><br><span class="line">		<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; addNum; i++)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="type">int</span> id;</span><br><span class="line">			string name;</span><br><span class="line">			<span class="type">int</span> dSelect;</span><br><span class="line"></span><br><span class="line">			cout &lt;&lt; <span class="string">&quot;请输入第 &quot;</span> &lt;&lt; i + <span class="number">1</span> &lt;&lt; <span class="string">&quot; 个新职工编号：&quot;</span> &lt;&lt; endl;</span><br><span class="line">			cin &gt;&gt; id;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">			cout &lt;&lt; <span class="string">&quot;请输入第 &quot;</span> &lt;&lt; i + <span class="number">1</span> &lt;&lt; <span class="string">&quot; 个新职工姓名：&quot;</span> &lt;&lt; endl;</span><br><span class="line">			cin &gt;&gt; name;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">			cout &lt;&lt; <span class="string">&quot;请选择该职工的岗位：&quot;</span> &lt;&lt; endl;</span><br><span class="line">			cout &lt;&lt; <span class="string">&quot;1、普通职工&quot;</span> &lt;&lt; endl;</span><br><span class="line">			cout &lt;&lt; <span class="string">&quot;2、经理&quot;</span> &lt;&lt; endl;</span><br><span class="line">			cout &lt;&lt; <span class="string">&quot;3、老板&quot;</span> &lt;&lt; endl;</span><br><span class="line">			cin &gt;&gt; dSelect;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">			Worker * worker = <span class="literal">NULL</span>;</span><br><span class="line">			<span class="keyword">switch</span> (dSelect)</span><br><span class="line">			&#123;</span><br><span class="line">			<span class="keyword">case</span> <span class="number">1</span>: <span class="comment">//普通员工</span></span><br><span class="line">				worker = <span class="keyword">new</span> <span class="built_in">Employee</span>(id, name, <span class="number">1</span>);</span><br><span class="line">				<span class="keyword">break</span>;</span><br><span class="line">			<span class="keyword">case</span> <span class="number">2</span>: <span class="comment">//经理</span></span><br><span class="line">				worker = <span class="keyword">new</span> <span class="built_in">Manager</span>(id, name, <span class="number">2</span>);</span><br><span class="line">				<span class="keyword">break</span>;</span><br><span class="line">			<span class="keyword">case</span> <span class="number">3</span>:  <span class="comment">//老板</span></span><br><span class="line">				worker = <span class="keyword">new</span> <span class="built_in">Boss</span>(id, name, <span class="number">3</span>);</span><br><span class="line">				<span class="keyword">break</span>;</span><br><span class="line">			<span class="keyword">default</span>:</span><br><span class="line">				<span class="keyword">break</span>;</span><br><span class="line">			&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">			newSpace[<span class="keyword">this</span>-&gt;m_EmpNum + i] = worker;</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		<span class="comment">//释放原有空间</span></span><br><span class="line">		<span class="keyword">delete</span>[] <span class="keyword">this</span>-&gt;m_EmpArray;</span><br><span class="line"></span><br><span class="line">		<span class="comment">//更改新空间的指向</span></span><br><span class="line">		<span class="keyword">this</span>-&gt;m_EmpArray = newSpace;</span><br><span class="line"></span><br><span class="line">		<span class="comment">//更新新的个数</span></span><br><span class="line">		<span class="keyword">this</span>-&gt;m_EmpNum = newSize;</span><br><span class="line"></span><br><span class="line">		<span class="comment">//提示信息</span></span><br><span class="line">		cout &lt;&lt; <span class="string">&quot;成功添加&quot;</span> &lt;&lt; addNum &lt;&lt; <span class="string">&quot;名新职工！&quot;</span> &lt;&lt; endl;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">	&#123;</span><br><span class="line">		cout &lt;&lt; <span class="string">&quot;输入有误&quot;</span> &lt;&lt; endl;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="built_in">system</span>(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line">	<span class="built_in">system</span>(<span class="string">&quot;cls&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>在WorkerManager.cpp的析构函数中，释放堆区数据</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">WorkerManager::~<span class="built_in">WorkerManager</span>()</span><br><span class="line">&#123;</span><br><span class="line">	<span class="keyword">if</span> (<span class="keyword">this</span>-&gt;m_EmpArray != <span class="literal">NULL</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">delete</span>[] <span class="keyword">this</span>-&gt;m_EmpArray;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h3 id="7-3-测试添加"><a href="#7-3-测试添加" class="headerlink" title="7.3 测试添加"></a>7.3 测试添加</h3><p>在main函数分支 1  选项中，调用添加职工接口</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/1546401705277.png" alt="1546401705277"></p>
+<p>效果如图：</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/1546401763461.png" alt="1546401763461"></p>
+<p>至此，添加职工到程序中功能实现完毕</p>
+<h2 id="8、文件交互-写文件"><a href="#8、文件交互-写文件" class="headerlink" title="8、文件交互 - 写文件"></a>8、文件交互 - 写文件</h2><p>功能描述：对文件进行读写</p>
+<p>​	在上一个添加功能中，我们只是将所有的数据添加到了内存中，一旦程序结束就无法保存了</p>
+<p>​	因此文件管理类中需要一个与文件进行交互的功能，对于文件进行读写操作</p>
+<h3 id="8-1-设定文件路径"><a href="#8-1-设定文件路径" class="headerlink" title="8.1 设定文件路径"></a>8.1 设定文件路径</h3><p>首先我们将文件路径，在workerManager.h中添加宏常量,并且包含头文件 fstream</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;fstream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span>  FILENAME <span class="string">&quot;empFile.txt&quot;</span></span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="8-2-成员函数声明"><a href="#8-2-成员函数声明" class="headerlink" title="8.2 成员函数声明"></a>8.2 成员函数声明</h3><p>在workerManager.h中类里添加成员函数 <code>void save()</code></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//保存文件</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">save</span><span class="params">()</span></span>;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="8-3-保存文件功能实现"><a href="#8-3-保存文件功能实现" class="headerlink" title="8.3 保存文件功能实现"></a>8.3 保存文件功能实现</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">WorkerManager::save</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	ofstream ofs;</span><br><span class="line">	ofs.<span class="built_in">open</span>(FILENAME, ios::out);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="keyword">this</span>-&gt;m_EmpNum; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		ofs &lt;&lt; <span class="keyword">this</span>-&gt;m_EmpArray[i]-&gt;m_Id &lt;&lt; <span class="string">&quot; &quot;</span> </span><br><span class="line">			&lt;&lt; <span class="keyword">this</span>-&gt;m_EmpArray[i]-&gt;m_Name &lt;&lt; <span class="string">&quot; &quot;</span> </span><br><span class="line">			&lt;&lt; <span class="keyword">this</span>-&gt;m_EmpArray[i]-&gt;m_DeptId &lt;&lt; endl;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	ofs.<span class="built_in">close</span>();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="8-4-保存文件功能测试"><a href="#8-4-保存文件功能测试" class="headerlink" title="8.4 保存文件功能测试"></a>8.4 保存文件功能测试</h3><p>在添加职工功能中添加成功后添加保存文件函数</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/1546432469465.png" alt="1546432469465"></p>
+<p>再次运行代码，添加职工</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200520143801-2.png"></p>
+<p>同级目录下多出文件，并且保存了添加的信息</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/1546432343078.png" alt="1546432343078"></p>
+<h2 id="9、文件交互-读文件"><a href="#9、文件交互-读文件" class="headerlink" title="9、文件交互 - 读文件"></a>9、文件交互 - 读文件</h2><p>功能描述：将文件中的内容读取到程序中</p>
+<p>虽然我们实现了添加职工后保存到文件的操作，但是每次开始运行程序，并没有将文件中数据读取到程序中</p>
+<p>而我们的程序功能中还有清空文件的需求</p>
+<p>因此构造函数初始化数据的情况分为三种</p>
+<ol>
+<li>第一次使用，文件未创建</li>
+<li>文件存在，但是数据被用户清空</li>
+<li>文件存在，并且保存职工的所有数据</li>
+</ol>
+<h3 id="9-1-文件未创建"><a href="#9-1-文件未创建" class="headerlink" title="9.1 文件未创建"></a>9.1 文件未创建</h3><p>在workerManager.h中添加新的成员属性 m_FileIsEmpty标志文件是否为空</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//标志文件是否为空</span></span><br><span class="line"><span class="type">bool</span> m_FileIsEmpty;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>修改WorkerManager.cpp中构造函数代码</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">WorkerManager::<span class="built_in">WorkerManager</span>()</span><br><span class="line">&#123;</span><br><span class="line">	ifstream ifs;</span><br><span class="line">	ifs.<span class="built_in">open</span>(FILENAME, ios::in);</span><br><span class="line"></span><br><span class="line">	<span class="comment">//文件不存在情况</span></span><br><span class="line">	<span class="keyword">if</span> (!ifs.<span class="built_in">is_open</span>())</span><br><span class="line">	&#123;</span><br><span class="line">		cout &lt;&lt; <span class="string">&quot;文件不存在&quot;</span> &lt;&lt; endl; <span class="comment">//测试输出</span></span><br><span class="line">		<span class="keyword">this</span>-&gt;m_EmpNum = <span class="number">0</span>;  <span class="comment">//初始化人数</span></span><br><span class="line">		<span class="keyword">this</span>-&gt;m_FileIsEmpty = <span class="literal">true</span>; <span class="comment">//初始化文件为空标志</span></span><br><span class="line">		<span class="keyword">this</span>-&gt;m_EmpArray = <span class="literal">NULL</span>; <span class="comment">//初始化数组</span></span><br><span class="line">		ifs.<span class="built_in">close</span>(); <span class="comment">//关闭文件</span></span><br><span class="line">		<span class="keyword">return</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>删除文件后，测试文件不存在时初始化数据功能</p>
+<h3 id="9-2-文件存在且数据为空"><a href="#9-2-文件存在且数据为空" class="headerlink" title="9.2 文件存在且数据为空"></a>9.2 文件存在且数据为空</h3><p>在workerManager.cpp中的构造函数追加代码：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//文件存在，并且没有记录</span></span><br><span class="line"><span class="type">char</span> ch;</span><br><span class="line">ifs &gt;&gt; ch;</span><br><span class="line"><span class="keyword">if</span> (ifs.<span class="built_in">eof</span>())</span><br><span class="line">&#123;</span><br><span class="line">	cout &lt;&lt; <span class="string">&quot;文件为空!&quot;</span> &lt;&lt; endl;</span><br><span class="line">	<span class="keyword">this</span>-&gt;m_EmpNum = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">this</span>-&gt;m_FileIsEmpty = <span class="literal">true</span>;</span><br><span class="line">	<span class="keyword">this</span>-&gt;m_EmpArray = <span class="literal">NULL</span>;</span><br><span class="line">	ifs.<span class="built_in">close</span>();</span><br><span class="line">	<span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>追加代码位置如图：</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/1546435197575.png" alt="1546435197575"></p>
+<p>将文件创建后清空文件内容，并测试该情况下初始化功能</p>
+<p>我们发现文件不存在或者为空清空 m_FileIsEmpty 判断文件是否为空的标志都为真，那何时为假？</p>
+<p>成功添加职工后，应该更改文件不为空的标志</p>
+<p>在<code>void WorkerManager::Add_Emp() </code>成员函数中添加：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//更新职工不为空标志</span></span><br><span class="line"><span class="keyword">this</span>-&gt;m_FileIsEmpty = <span class="literal">false</span>;</span><br></pre></td></tr></table></figure>
+
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/1546656256176.png" alt="1546656256176"></p>
+<h3 id="9-3-文件存在且保存职工数据"><a href="#9-3-文件存在且保存职工数据" class="headerlink" title="9.3 文件存在且保存职工数据"></a>9.3 文件存在且保存职工数据</h3><h4 id="9-3-1-获取记录的职工人数"><a href="#9-3-1-获取记录的职工人数" class="headerlink" title="9.3.1 获取记录的职工人数"></a>9.3.1 获取记录的职工人数</h4><p>在workerManager.h中添加成员函数 <code> int get_EmpNum();</code></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//统计人数</span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">get_EmpNum</span><span class="params">()</span></span>;</span><br></pre></td></tr></table></figure>
+
+<p>workerManager.cpp中实现</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">WorkerManager::get_EmpNum</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	ifstream ifs;</span><br><span class="line">	ifs.<span class="built_in">open</span>(FILENAME, ios::in);</span><br><span class="line"></span><br><span class="line">	<span class="type">int</span> id;</span><br><span class="line">	string name;</span><br><span class="line">	<span class="type">int</span> dId;</span><br><span class="line"></span><br><span class="line">	<span class="type">int</span> num = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">while</span> (ifs &gt;&gt; id &amp;&amp; ifs &gt;&gt; name &amp;&amp; ifs &gt;&gt; dId)</span><br><span class="line">	&#123;</span><br><span class="line">        <span class="comment">//记录人数</span></span><br><span class="line">		num++;</span><br><span class="line">	&#125;</span><br><span class="line">	ifs.<span class="built_in">close</span>();</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> num;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>在workerManager.cpp构造函数中继续追加代码：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> num =  <span class="keyword">this</span>-&gt;<span class="built_in">get_EmpNum</span>();</span><br><span class="line">cout &lt;&lt; <span class="string">&quot;职工个数为：&quot;</span> &lt;&lt; num &lt;&lt; endl;  <span class="comment">//测试代码</span></span><br><span class="line"><span class="keyword">this</span>-&gt;m_EmpNum = num;  <span class="comment">//更新成员属性 </span></span><br></pre></td></tr></table></figure>
+
+
+
+<p>手动添加一些职工数据，测试获取职工数量函数</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/1546436429055.png" alt="1546436429055"></p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/1546436385793.png" alt="1546436385793"></p>
+<h4 id="9-3-2-初始化数组"><a href="#9-3-2-初始化数组" class="headerlink" title="9.3.2 初始化数组"></a>9.3.2 初始化数组</h4><p>根据职工的数据以及职工数据，初始化workerManager中的Worker ** m_EmpArray 指针</p>
+<p>在WorkerManager.h中添加成员函数  <code>void init_Emp();</code></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//初始化员工</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">init_Emp</span><span class="params">()</span></span>;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>在WorkerManager.cpp中实现</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">void</span> <span class="title">WorkerManager::init_Emp</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	ifstream ifs;</span><br><span class="line">	ifs.<span class="built_in">open</span>(FILENAME, ios::in);</span><br><span class="line"></span><br><span class="line">	<span class="type">int</span> id;</span><br><span class="line">	string name;</span><br><span class="line">	<span class="type">int</span> dId;</span><br><span class="line">	</span><br><span class="line">	<span class="type">int</span> index = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">while</span> (ifs &gt;&gt; id &amp;&amp; ifs &gt;&gt; name &amp;&amp; ifs &gt;&gt; dId)</span><br><span class="line">	&#123;</span><br><span class="line">		Worker * worker = <span class="literal">NULL</span>;</span><br><span class="line">		<span class="comment">//根据不同的部门Id创建不同对象</span></span><br><span class="line">		<span class="keyword">if</span> (dId == <span class="number">1</span>)  <span class="comment">// 1普通员工</span></span><br><span class="line">		&#123;</span><br><span class="line">			worker = <span class="keyword">new</span> <span class="built_in">Employee</span>(id, name, dId);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">if</span> (dId == <span class="number">2</span>) <span class="comment">//2经理</span></span><br><span class="line">		&#123;</span><br><span class="line">			worker = <span class="keyword">new</span> <span class="built_in">Manager</span>(id, name, dId);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span> <span class="comment">//总裁</span></span><br><span class="line">		&#123;</span><br><span class="line">			worker = <span class="keyword">new</span> <span class="built_in">Boss</span>(id, name, dId);</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="comment">//存放在数组中</span></span><br><span class="line">		<span class="keyword">this</span>-&gt;m_EmpArray[index] = worker;</span><br><span class="line">		index++;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>在workerManager.cpp构造函数中追加代码</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//根据职工数创建数组</span></span><br><span class="line"><span class="keyword">this</span>-&gt;m_EmpArray = <span class="keyword">new</span> Worker *[<span class="keyword">this</span>-&gt;m_EmpNum];</span><br><span class="line"><span class="comment">//初始化职工</span></span><br><span class="line"><span class="built_in">init_Emp</span>();</span><br><span class="line"></span><br><span class="line"><span class="comment">//测试代码</span></span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; m_EmpNum; i++)</span><br><span class="line">&#123;</span><br><span class="line">	cout &lt;&lt; <span class="string">&quot;职工号： &quot;</span> &lt;&lt; <span class="keyword">this</span>-&gt;m_EmpArray[i]-&gt;m_Id</span><br><span class="line">		&lt;&lt; <span class="string">&quot; 职工姓名： &quot;</span> &lt;&lt; <span class="keyword">this</span>-&gt;m_EmpArray[i]-&gt;m_Name</span><br><span class="line">		&lt;&lt; <span class="string">&quot; 部门编号： &quot;</span> &lt;&lt; <span class="keyword">this</span>-&gt;m_EmpArray[i]-&gt;m_DeptId &lt;&lt; endl;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>运行程序，测试从文件中获取的数据</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/1546436938152.png" alt="1546436938152"></p>
+<p>至此初始化数据功能完毕，测试代码可以注释或删除掉！</p>
+<h2 id="10、显示职工"><a href="#10、显示职工" class="headerlink" title="10、显示职工"></a>10、显示职工</h2><p>功能描述：显示当前所有职工信息</p>
+<h4 id="10-1-显示职工函数声明"><a href="#10-1-显示职工函数声明" class="headerlink" title="10.1 显示职工函数声明"></a>10.1 显示职工函数声明</h4><p>在workerManager.h中添加成员函数  <code>void Show_Emp();</code></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//显示职工</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">Show_Emp</span><span class="params">()</span></span>;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="10-2-显示职工函数实现"><a href="#10-2-显示职工函数实现" class="headerlink" title="10.2 显示职工函数实现"></a>10.2 显示职工函数实现</h4><p>在workerManager.cpp中实现成员函数 <code>void Show_Emp();</code></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//显示职工</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">WorkerManager::Show_Emp</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (<span class="keyword">this</span>-&gt;m_FileIsEmpty)</span><br><span class="line">	&#123;</span><br><span class="line">		cout &lt;&lt; <span class="string">&quot;文件不存在或记录为空！&quot;</span> &lt;&lt; endl;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; m_EmpNum; i++)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="comment">//利用多态调用接口</span></span><br><span class="line">			<span class="keyword">this</span>-&gt;m_EmpArray[i]-&gt;<span class="built_in">showInfo</span>();</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="built_in">system</span>(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line">	<span class="built_in">system</span>(<span class="string">&quot;cls&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="10-3-测试显示职工"><a href="#10-3-测试显示职工" class="headerlink" title="10.3 测试显示职工"></a>10.3 测试显示职工</h4><p>在main函数分支 2  选项中，调用显示职工接口</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/1546497336465.png" alt="1546497336465"></p>
+<p>测试时分别测试 文件为空和文件不为空两种情况</p>
+<p>测试效果：</p>
+<p>测试1-文件不存在或者为空情况</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/1546497082135.png" alt="1546497082135"></p>
+<p>测试2 - 文件存在且有记录情况</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/1546496947671.png" alt="1546496947671"></p>
+<p>测试完毕，至此，显示所有职工信息功能实现</p>
+<h2 id="11、删除职工"><a href="#11、删除职工" class="headerlink" title="11、删除职工"></a>11、删除职工</h2><p>功能描述：按照职工的编号进行删除职工操作</p>
+<h4 id="11-1-删除职工函数声明"><a href="#11-1-删除职工函数声明" class="headerlink" title="11.1 删除职工函数声明"></a>11.1 删除职工函数声明</h4><p>在workerManager.h中添加成员函数  <code>void Del_Emp();</code></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//删除职工</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">Del_Emp</span><span class="params">()</span></span>;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="11-2-职工是否存在函数声明"><a href="#11-2-职工是否存在函数声明" class="headerlink" title="11.2 职工是否存在函数声明"></a>11.2 职工是否存在函数声明</h4><p>很多功能都需要用到根据职工是否存在来进行操作如：删除职工、修改职工、查找职工</p>
+<p>因此添加该公告函数，以便后续调用</p>
+<p>在workerManager.h中添加成员函数  <code>int IsExist(int id);</code></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//按照职工编号判断职工是否存在,若存在返回职工在数组中位置，不存在返回-1</span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">IsExist</span><span class="params">(<span class="type">int</span> id)</span></span>;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="11-3-职工是否存在函数实现"><a href="#11-3-职工是否存在函数实现" class="headerlink" title="11.3 职工是否存在函数实现"></a>11.3 职工是否存在函数实现</h4><p>在workerManager.cpp中实现成员函数 <code>int IsExist(int id);</code></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">WorkerManager::IsExist</span><span class="params">(<span class="type">int</span> id)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="type">int</span> index = <span class="number">-1</span>;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="keyword">this</span>-&gt;m_EmpNum; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span> (<span class="keyword">this</span>-&gt;m_EmpArray[i]-&gt;m_Id == id)</span><br><span class="line">		&#123;</span><br><span class="line">			index = i;</span><br><span class="line"></span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">return</span> index;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h4 id="11-4-删除职工函数实现"><a href="#11-4-删除职工函数实现" class="headerlink" title="11.4 删除职工函数实现"></a>11.4 删除职工函数实现</h4><p>在workerManager.cpp中实现成员函数 <code> void Del_Emp();</code></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//删除职工</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">WorkerManager::Del_Emp</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (<span class="keyword">this</span>-&gt;m_FileIsEmpty)</span><br><span class="line">	&#123;</span><br><span class="line">		cout &lt;&lt; <span class="string">&quot;文件不存在或记录为空！&quot;</span> &lt;&lt; endl;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">	&#123;</span><br><span class="line">		<span class="comment">//按职工编号删除</span></span><br><span class="line">		cout &lt;&lt; <span class="string">&quot;请输入想要删除的职工号：&quot;</span> &lt;&lt; endl;</span><br><span class="line">		<span class="type">int</span> id = <span class="number">0</span>;</span><br><span class="line">		cin &gt;&gt; id;</span><br><span class="line"></span><br><span class="line">		<span class="type">int</span> index = <span class="keyword">this</span>-&gt;<span class="built_in">IsExist</span>(id);</span><br><span class="line"></span><br><span class="line">		<span class="keyword">if</span> (index != <span class="number">-1</span>)  <span class="comment">//说明index上位置数据需要删除</span></span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">for</span> (<span class="type">int</span> i = index; i &lt; <span class="keyword">this</span>-&gt;m_EmpNum - <span class="number">1</span>; i++)</span><br><span class="line">			&#123;</span><br><span class="line">				<span class="keyword">this</span>-&gt;m_EmpArray[i] = <span class="keyword">this</span>-&gt;m_EmpArray[i + <span class="number">1</span>];</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">this</span>-&gt;m_EmpNum--;</span><br><span class="line"></span><br><span class="line">			<span class="keyword">this</span>-&gt;<span class="built_in">save</span>(); <span class="comment">//删除后数据同步到文件中</span></span><br><span class="line">			cout &lt;&lt; <span class="string">&quot;删除成功！&quot;</span> &lt;&lt; endl;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">		&#123;</span><br><span class="line">			cout &lt;&lt; <span class="string">&quot;删除失败，未找到该职工&quot;</span> &lt;&lt; endl;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	<span class="built_in">system</span>(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line">	<span class="built_in">system</span>(<span class="string">&quot;cls&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="11-5-测试删除职工"><a href="#11-5-测试删除职工" class="headerlink" title="11.5 测试删除职工"></a>11.5 测试删除职工</h4><p>在main函数分支 3  选项中，调用删除职工接口</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/1546502698622.png" alt="1546502698622"></p>
+<p>测试1 - 删除不存在职工情况</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/1546500324196.png" alt="1546500324196"></p>
+<p>测试2 - 删除存在的职工情况</p>
+<p>删除成功提示图：</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/1546500350526.png" alt="1546500350526"></p>
+<p>再次显示所有职工信息，确保已经删除</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/1546500361889.png" alt="1546500361889"></p>
+<p>查看文件中信息，再次核实员工已被完全删除</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200520144146.png"></p>
+<p>至此，删除职工功能实现完毕！</p>
+<h2 id="12、修改职工"><a href="#12、修改职工" class="headerlink" title="12、修改职工"></a>12、修改职工</h2><p>功能描述：能够按照职工的编号对职工信息进行修改并保存</p>
+<h4 id="12-1-修改职工函数声明"><a href="#12-1-修改职工函数声明" class="headerlink" title="12.1 修改职工函数声明"></a>12.1 修改职工函数声明</h4><p>在workerManager.h中添加成员函数  <code>void Mod_Emp();</code></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//修改职工</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">Mod_Emp</span><span class="params">()</span></span>;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="12-2-修改职工函数实现"><a href="#12-2-修改职工函数实现" class="headerlink" title="12.2 修改职工函数实现"></a>12.2 修改职工函数实现</h4><p>在workerManager.cpp中实现成员函数 <code> void Mod_Emp();</code></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//修改职工</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">WorkerManager::Mod_Emp</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (<span class="keyword">this</span>-&gt;m_FileIsEmpty)</span><br><span class="line">	&#123;</span><br><span class="line">		cout &lt;&lt; <span class="string">&quot;文件不存在或记录为空！&quot;</span> &lt;&lt; endl;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">	&#123;</span><br><span class="line">		cout &lt;&lt; <span class="string">&quot;请输入修改职工的编号：&quot;</span> &lt;&lt; endl;</span><br><span class="line">		<span class="type">int</span> id;</span><br><span class="line">		cin &gt;&gt; id;</span><br><span class="line"></span><br><span class="line">		<span class="type">int</span> ret = <span class="keyword">this</span>-&gt;<span class="built_in">IsExist</span>(id);</span><br><span class="line">		<span class="keyword">if</span> (ret != <span class="number">-1</span>)</span><br><span class="line">		&#123; </span><br><span class="line">			<span class="comment">//查找到编号的职工</span></span><br><span class="line"></span><br><span class="line">			<span class="keyword">delete</span> <span class="keyword">this</span>-&gt;m_EmpArray[ret];</span><br><span class="line">			</span><br><span class="line">			<span class="type">int</span> newId = <span class="number">0</span>;</span><br><span class="line">			string newName = <span class="string">&quot;&quot;</span>;</span><br><span class="line">			<span class="type">int</span> dSelect = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">			cout &lt;&lt; <span class="string">&quot;查到： &quot;</span> &lt;&lt; id &lt;&lt; <span class="string">&quot;号职工，请输入新职工号： &quot;</span> &lt;&lt; endl;</span><br><span class="line">			cin &gt;&gt; newId;</span><br><span class="line"></span><br><span class="line">			cout &lt;&lt; <span class="string">&quot;请输入新姓名： &quot;</span> &lt;&lt; endl;</span><br><span class="line">			cin &gt;&gt; newName;</span><br><span class="line"></span><br><span class="line">			cout &lt;&lt; <span class="string">&quot;请输入岗位： &quot;</span> &lt;&lt; endl;</span><br><span class="line">			cout &lt;&lt; <span class="string">&quot;1、普通职工&quot;</span> &lt;&lt; endl;</span><br><span class="line">			cout &lt;&lt; <span class="string">&quot;2、经理&quot;</span> &lt;&lt; endl;</span><br><span class="line">			cout &lt;&lt; <span class="string">&quot;3、老板&quot;</span> &lt;&lt; endl;</span><br><span class="line">			cin &gt;&gt; dSelect;</span><br><span class="line"></span><br><span class="line">			Worker * worker = <span class="literal">NULL</span>;</span><br><span class="line">			<span class="keyword">switch</span> (dSelect)</span><br><span class="line">			&#123;</span><br><span class="line">			case1:</span><br><span class="line">				worker = <span class="keyword">new</span> <span class="built_in">Employee</span>(newId, newName, dSelect);</span><br><span class="line">				<span class="keyword">break</span>;</span><br><span class="line">			case2:</span><br><span class="line">				worker = <span class="keyword">new</span> <span class="built_in">Manager</span>(newId, newName, dSelect);</span><br><span class="line">				<span class="keyword">break</span>;</span><br><span class="line">			<span class="keyword">case</span> <span class="number">3</span>:</span><br><span class="line">				worker = <span class="keyword">new</span> <span class="built_in">Boss</span>(newId, newName, dSelect);</span><br><span class="line">				<span class="keyword">break</span>;</span><br><span class="line">			<span class="keyword">default</span>:</span><br><span class="line">				<span class="keyword">break</span>;</span><br><span class="line">			&#125;</span><br><span class="line"></span><br><span class="line">			<span class="comment">//更改数据 到数组中</span></span><br><span class="line">			<span class="keyword">this</span>-&gt;m_EmpArray[ret]= worker;</span><br><span class="line">			</span><br><span class="line">			cout &lt;&lt; <span class="string">&quot;修改成功！&quot;</span> &lt;&lt; endl;</span><br><span class="line"></span><br><span class="line">			<span class="comment">//保存到文件中</span></span><br><span class="line">			<span class="keyword">this</span>-&gt;<span class="built_in">save</span>();</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">		&#123;</span><br><span class="line">			cout &lt;&lt; <span class="string">&quot;修改失败，查无此人&quot;</span> &lt;&lt; endl;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="comment">//按任意键 清屏</span></span><br><span class="line">	<span class="built_in">system</span>(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line">	<span class="built_in">system</span>(<span class="string">&quot;cls&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h4 id="12-3-测试修改职工"><a href="#12-3-测试修改职工" class="headerlink" title="12.3 测试修改职工"></a>12.3 测试修改职工</h4><p>在main函数分支 4  选项中，调用修改职工接口</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/1546502651922.png" alt="1546502651922"></p>
+<p>测试1 - 修改不存在职工情况</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200520144244.png"></p>
+<p>测试2 - 修改存在职工情况，例如将职工 “李四” 改为 “赵四”</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200520144304.png"></p>
+<p>修改后再次查看所有职工信息，并确认修改成功</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/1546502865443.png" alt="1546502865443"></p>
+<p>再次确认文件中信息也同步更新</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/1546502898653.png" alt="1546502898653"></p>
+<p>至此，修改职工功能已实现！</p>
+<h2 id="13、查找职工"><a href="#13、查找职工" class="headerlink" title="13、查找职工"></a>13、查找职工</h2><p>功能描述：提供两种查找职工方式，一种按照职工编号，一种按照职工姓名</p>
+<h4 id="13-1-查找职工函数声明"><a href="#13-1-查找职工函数声明" class="headerlink" title="13.1 查找职工函数声明"></a>13.1 查找职工函数声明</h4><p>在workerManager.h中添加成员函数  <code>void Find_Emp();</code></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//查找职工</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">Find_Emp</span><span class="params">()</span></span>;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="13-2-查找职工函数实现"><a href="#13-2-查找职工函数实现" class="headerlink" title="13.2 查找职工函数实现"></a>13.2 查找职工函数实现</h4><p>在workerManager.cpp中实现成员函数 <code> void Find_Emp();</code></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//查找职工</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">WorkerManager::Find_Emp</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (<span class="keyword">this</span>-&gt;m_FileIsEmpty)</span><br><span class="line">	&#123;</span><br><span class="line">		cout &lt;&lt; <span class="string">&quot;文件不存在或记录为空！&quot;</span> &lt;&lt; endl;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">	&#123;</span><br><span class="line">		cout &lt;&lt; <span class="string">&quot;请输入查找的方式：&quot;</span> &lt;&lt; endl;</span><br><span class="line">		cout &lt;&lt; <span class="string">&quot;1、按职工编号查找&quot;</span> &lt;&lt; endl;</span><br><span class="line">		cout &lt;&lt; <span class="string">&quot;2、按姓名查找&quot;</span> &lt;&lt; endl;</span><br><span class="line"></span><br><span class="line">		<span class="type">int</span> select = <span class="number">0</span>;</span><br><span class="line">		cin &gt;&gt; select;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">		<span class="keyword">if</span> (select == <span class="number">1</span>) <span class="comment">//按职工号查找</span></span><br><span class="line">		&#123;</span><br><span class="line">			<span class="type">int</span> id;</span><br><span class="line">			cout &lt;&lt; <span class="string">&quot;请输入查找的职工编号：&quot;</span> &lt;&lt; endl;</span><br><span class="line">			cin &gt;&gt; id;</span><br><span class="line"></span><br><span class="line">			<span class="type">int</span> ret = <span class="built_in">IsExist</span>(id);</span><br><span class="line">			<span class="keyword">if</span> (ret != <span class="number">-1</span>)</span><br><span class="line">			&#123;</span><br><span class="line">				cout &lt;&lt; <span class="string">&quot;查找成功！该职工信息如下：&quot;</span> &lt;&lt; endl;</span><br><span class="line">				<span class="keyword">this</span>-&gt;m_EmpArray[ret]-&gt;<span class="built_in">showInfo</span>();</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">else</span></span><br><span class="line">			&#123;</span><br><span class="line">				cout &lt;&lt; <span class="string">&quot;查找失败，查无此人&quot;</span> &lt;&lt; endl;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span> <span class="keyword">if</span>(select == <span class="number">2</span>) <span class="comment">//按姓名查找</span></span><br><span class="line">		&#123;</span><br><span class="line">			string name;</span><br><span class="line">			cout &lt;&lt; <span class="string">&quot;请输入查找的姓名：&quot;</span> &lt;&lt; endl;</span><br><span class="line">			cin &gt;&gt; name;</span><br><span class="line"></span><br><span class="line">			<span class="type">bool</span> flag = <span class="literal">false</span>;  <span class="comment">//查找到的标志</span></span><br><span class="line">			<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; m_EmpNum; i++)</span><br><span class="line">			&#123;</span><br><span class="line">				<span class="keyword">if</span> (m_EmpArray[i]-&gt;m_Name == name)</span><br><span class="line">				&#123;</span><br><span class="line">					cout &lt;&lt; <span class="string">&quot;查找成功,职工编号为：&quot;</span></span><br><span class="line">                           &lt;&lt; m_EmpArray[i]-&gt;m_Id</span><br><span class="line">                           &lt;&lt; <span class="string">&quot; 号的信息如下：&quot;</span> &lt;&lt; endl;</span><br><span class="line">					</span><br><span class="line">					flag = <span class="literal">true</span>;</span><br><span class="line"></span><br><span class="line">					<span class="keyword">this</span>-&gt;m_EmpArray[i]-&gt;<span class="built_in">showInfo</span>();</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">if</span> (flag == <span class="literal">false</span>)</span><br><span class="line">			&#123;</span><br><span class="line">				<span class="comment">//查无此人</span></span><br><span class="line">				cout &lt;&lt; <span class="string">&quot;查找失败，查无此人&quot;</span> &lt;&lt; endl;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">else</span></span><br><span class="line">		&#123;</span><br><span class="line">			cout &lt;&lt; <span class="string">&quot;输入选项有误&quot;</span> &lt;&lt; endl;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	<span class="built_in">system</span>(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line">	<span class="built_in">system</span>(<span class="string">&quot;cls&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h4 id="13-3-测试查找职工"><a href="#13-3-测试查找职工" class="headerlink" title="13.3 测试查找职工"></a>13.3 测试查找职工</h4><p>在main函数分支 5  选项中，调用查找职工接口</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/1546504714318.png" alt="1546504714318"></p>
+<p>测试1 - 按照职工编号查找 - 查找不存在职工</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/1546504767229.png" alt="1546504767229"></p>
+<p>测试2 - 按照职工编号查找 -  查找存在职工</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/1546505046521.png" alt="1546505046521"></p>
+<p>测试3 - 按照职工姓名查找 - 查找不存在职工</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200520144433.png"></p>
+<p>测试4 - 按照职工姓名查找 - 查找存在职工（如果出现重名，也一并显示，在文件中可以添加重名职工）</p>
+<p>例如 添加两个王五的职工，然后按照姓名查找王五</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/1546507850441.png" alt="1546507850441"></p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/1546507760284.png" alt="1546507760284"></p>
+<p>至此，查找职工功能实现完毕！</p>
+<h2 id="14、排序"><a href="#14、排序" class="headerlink" title="14、排序"></a>14、排序</h2><p>功能描述：按照职工编号进行排序，排序的顺序由用户指定</p>
+<h4 id="14-1-排序函数声明"><a href="#14-1-排序函数声明" class="headerlink" title="14.1 排序函数声明"></a>14.1 排序函数声明</h4><p>在workerManager.h中添加成员函数  <code>void Sort_Emp();</code></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//排序职工</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">Sort_Emp</span><span class="params">()</span></span>;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="14-2-排序函数实现"><a href="#14-2-排序函数实现" class="headerlink" title="14.2 排序函数实现"></a>14.2 排序函数实现</h4><p>在workerManager.cpp中实现成员函数 <code> void Sort_Emp();</code></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//排序职工</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">WorkerManager::Sort_Emp</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (<span class="keyword">this</span>-&gt;m_FileIsEmpty)</span><br><span class="line">	&#123;</span><br><span class="line">		cout &lt;&lt; <span class="string">&quot;文件不存在或记录为空！&quot;</span> &lt;&lt; endl;</span><br><span class="line">		<span class="built_in">system</span>(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line">		<span class="built_in">system</span>(<span class="string">&quot;cls&quot;</span>);</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">else</span></span><br><span class="line">	&#123;</span><br><span class="line">		cout &lt;&lt; <span class="string">&quot;请选择排序方式： &quot;</span> &lt;&lt; endl;</span><br><span class="line">		cout &lt;&lt; <span class="string">&quot;1、按职工号进行升序&quot;</span> &lt;&lt; endl;</span><br><span class="line">		cout &lt;&lt; <span class="string">&quot;2、按职工号进行降序&quot;</span> &lt;&lt; endl;</span><br><span class="line"></span><br><span class="line">		<span class="type">int</span> select = <span class="number">0</span>;</span><br><span class="line">		cin &gt;&gt; select;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">		<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; m_EmpNum; i++)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="type">int</span> minOrMax = i;</span><br><span class="line">			<span class="keyword">for</span> (<span class="type">int</span> j = i + <span class="number">1</span>; j &lt; m_EmpNum; j++)</span><br><span class="line">			&#123;</span><br><span class="line">				<span class="keyword">if</span> (select == <span class="number">1</span>) <span class="comment">//升序</span></span><br><span class="line">				&#123;</span><br><span class="line">					<span class="keyword">if</span> (m_EmpArray[minOrMax]-&gt;m_Id &gt; m_EmpArray[j]-&gt;m_Id)</span><br><span class="line">					&#123;</span><br><span class="line">						minOrMax = j;</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;</span><br><span class="line">				<span class="keyword">else</span>  <span class="comment">//降序</span></span><br><span class="line">				&#123;</span><br><span class="line">					<span class="keyword">if</span> (m_EmpArray[minOrMax]-&gt;m_Id &lt; m_EmpArray[j]-&gt;m_Id)</span><br><span class="line">					&#123;</span><br><span class="line">						minOrMax = j;</span><br><span class="line">					&#125;</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line"></span><br><span class="line">			<span class="keyword">if</span> (i != minOrMax)</span><br><span class="line">			&#123;</span><br><span class="line">				Worker * temp = m_EmpArray[i];</span><br><span class="line">				m_EmpArray[i] = m_EmpArray[minOrMax];</span><br><span class="line">				m_EmpArray[minOrMax] = temp;</span><br><span class="line">			&#125;</span><br><span class="line"></span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		cout &lt;&lt; <span class="string">&quot;排序成功,排序后结果为：&quot;</span> &lt;&lt; endl;</span><br><span class="line">		<span class="keyword">this</span>-&gt;<span class="built_in">save</span>();</span><br><span class="line">		<span class="keyword">this</span>-&gt;<span class="built_in">Show_Emp</span>();</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h4 id="14-3-测试排序功能"><a href="#14-3-测试排序功能" class="headerlink" title="14.3 测试排序功能"></a>14.3 测试排序功能</h4><p>在main函数分支 6  选项中，调用排序职工接口</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/1546510145181.png" alt="1546510145181"></p>
+<p>测试：</p>
+<p>首先我们添加一些职工，序号是无序的，例如：</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/1546658169987.png" alt="1546658169987"></p>
+<p>测试 - 升序排序</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200520144530.png"></p>
+<p>文件同步更新</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/1546658273581.png" alt="1546658273581"></p>
+<p>测试 - 降序排序</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/1546658288936.png" alt="1546658288936"></p>
+<p>文件同步更新</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/1546658313704.png" alt="1546658313704"></p>
+<p>至此，职工按照编号排序的功能实现完毕！</p>
+<h2 id="15、清空文件"><a href="#15、清空文件" class="headerlink" title="15、清空文件"></a>15、清空文件</h2><p>功能描述：将文件中记录数据清空</p>
+<h4 id="15-1-清空函数声明"><a href="#15-1-清空函数声明" class="headerlink" title="15.1 清空函数声明"></a>15.1 清空函数声明</h4><p>在workerManager.h中添加成员函数  <code>void Clean_File();</code></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//清空文件</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">Clean_File</span><span class="params">()</span></span>;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h4 id="15-2-清空函数实现"><a href="#15-2-清空函数实现" class="headerlink" title="15.2 清空函数实现"></a>15.2 清空函数实现</h4><p>在workerManager.cpp中实现员函数 <code> void Clean_File();</code></p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//清空文件</span></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">WorkerManager::Clean_File</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	cout &lt;&lt; <span class="string">&quot;确认清空？&quot;</span> &lt;&lt; endl;</span><br><span class="line">	cout &lt;&lt; <span class="string">&quot;1、确认&quot;</span> &lt;&lt; endl;</span><br><span class="line">	cout &lt;&lt; <span class="string">&quot;2、返回&quot;</span> &lt;&lt; endl;</span><br><span class="line"></span><br><span class="line">	<span class="type">int</span> select = <span class="number">0</span>;</span><br><span class="line">	cin &gt;&gt; select;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span> (select == <span class="number">1</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="comment">//打开模式 ios::trunc 如果存在删除文件并重新创建</span></span><br><span class="line">		<span class="function">ofstream <span class="title">ofs</span><span class="params">(FILENAME, ios::trunc)</span></span>;</span><br><span class="line">		ofs.<span class="built_in">close</span>();</span><br><span class="line"></span><br><span class="line">		<span class="keyword">if</span> (<span class="keyword">this</span>-&gt;m_EmpArray != <span class="literal">NULL</span>)</span><br><span class="line">		&#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; <span class="keyword">this</span>-&gt;m_EmpNum; i++)</span><br><span class="line">			&#123;</span><br><span class="line">				<span class="keyword">if</span> (<span class="keyword">this</span>-&gt;m_EmpArray[i] != <span class="literal">NULL</span>)</span><br><span class="line">				&#123;</span><br><span class="line">					<span class="keyword">delete</span> <span class="keyword">this</span>-&gt;m_EmpArray[i];</span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">this</span>-&gt;m_EmpNum = <span class="number">0</span>;</span><br><span class="line">			<span class="keyword">delete</span>[] <span class="keyword">this</span>-&gt;m_EmpArray;</span><br><span class="line">			<span class="keyword">this</span>-&gt;m_EmpArray = <span class="literal">NULL</span>;</span><br><span class="line">			<span class="keyword">this</span>-&gt;m_FileIsEmpty = <span class="literal">true</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		cout &lt;&lt; <span class="string">&quot;清空成功！&quot;</span> &lt;&lt; endl;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="built_in">system</span>(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line">	<span class="built_in">system</span>(<span class="string">&quot;cls&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h4 id="15-3-测试清空文件"><a href="#15-3-测试清空文件" class="headerlink" title="15.3 测试清空文件"></a>15.3 测试清空文件</h4><p>在main函数分支 7  选项中，调用清空文件接口</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/1546511085541.png" alt="1546511085541"></p>
+<p>测试：确认清空文件</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/1546510976745.png" alt="1546510976745"></p>
+<p>再次查看文件中数据，记录已为空</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/1546510994196.png" alt="1546510994196"></p>
+<p>打开文件，里面数据已确保清空，该功能需要慎用！</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/1546511018517.png" alt="1546511018517"></p>
+<p>随着清空文件功能实现，本案例制作完毕  ^ _ ^  </p>
+<br />
+
+
+
+<blockquote class="blockquote-center">
+<p>人生乃是一面镜子，</p>
+<p>从镜子里认识自己，</p>
+<p>我要称之为头等大事，</p>
+<p>也只是我们追求的目的！</p>
+
+</blockquote>
+
+
+
+
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>请我一杯咖啡吧！</div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/wechatpay.png" alt="热夏 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="/images/alipay.jpg" alt="热夏 支付宝">
+        <span>支付宝</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>热夏
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://www.lifeee.top/posts/42855.html" title="4-基于多态的企业职工系统">https://www.lifeee.top/posts/42855.html</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="followme">
+  <span>欢迎关注我的其它发布渠道</span>
+
+  <div class="social-list">
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="/atom.xml">
+            <span class="icon">
+              <i class="fa fa-rss"></i>
+            </span>
+
+            <span class="label">RSS</span>
+          </a>
+      </div>
+  </div>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/C/" rel="tag"><i class="fa fa-tag"></i> C++</a>
+              <a href="/tags/%E6%95%99%E7%A8%8B/" rel="tag"><i class="fa fa-tag"></i> 教程</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/posts/18897.html" rel="prev" title="Filename too long in Git for Windows">
+                  <i class="fa fa-angle-left"></i> Filename too long in Git for Windows
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/posts/2687.html" rel="next" title="5-C++泛型编程和STL技术">
+                  5-C++泛型编程和STL技术 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments gitalk-container"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 2018 – 
+    <span itemprop="copyrightYear">2024</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">热夏</span>
+  </div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>站点总字数：</span>
+    <span title="站点总字数">629k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">9:32</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/next-theme-pjax/0.6.0/pjax.min.js" integrity="sha256-vxLn1tSKWD4dqbMRyv940UYw4sXgMtYcK6reefzZrao=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lozad.js/1.16.0/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script><script src="/js/pjax.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+  <script src="/js/third-party/pace.js"></script>
+
+
+  
+  <script data-pjax async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","mhchem":false,"js":{"url":"//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
+
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"upwon","repo":"upwon.github.io","client_id":"7e047047ecee7317452b","client_secret":"c60fbdf0eb19e7264e33ab780319e4d420a58fee","admin_user":"upwon","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":null,"js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"12550b42f7e14309726d48b591d3b653"}</script>
+<script src="/js/third-party/comments/gitalk.js"></script>
+
+
+  <script type="text/javascript" src="/js/clicklove.js"></script>
+   
+ 
+
+</body>
+</html>

@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.1.1">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/myapple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/myfavicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/myfavicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/myapple-touch-icon-next.png" color="#222">
+  <meta name="google-site-verification" content="google2fc64c2b92961282.html">
+  <meta name="baidu-site-verification" content="s6BwSjIZYB">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.loli.net/css?family='LXGW+WenKai+LITE':300,300italic,400,400italic,700,700italic%7C'LXGW+WenKai+Screen':300,300italic,400,400italic,700,700italic%7C'LXGW+WenKai':300,300italic,400,400italic,700,700italic%7C'Noto+Serif+SC':300,300italic,400,400italic,700,700italic%7C'EB+Garamond':300,300italic,400,400italic,700,700italic%7C'PingFang+SC':300,300italic,400,400italic,700,700italic%7C'Microsoft+YaHei':300,300italic,400,400italic,700,700italic%7C'sans-serif':300,300italic,400,400italic,700,700italic%7CMa+Shan+Zheng:300,300italic,400,400italic,700,700italic%7CLXGW+WenKai+Screen:300,300italic,400,400italic,700,700italic%7CLXGW+WenKai:300,300italic,400,400italic,700,700italic%7CMenlo:300,300italic,400,400italic,700,700italic%7CMonaco:300,300italic,400,400italic,700,700italic%7CConsolas:300,300italic,400,400italic,700,700italic%7CSource+Code+Pro:300,300italic,400,400italic,700,700italic%7Csystem-ui:300,300italic,400,400italic,700,700italic%7Cmonospace:300,300italic,400,400italic,700,700italic%7Csans-serif:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha256-yIDrPSXHZdOZhAqiBP7CKzIwMQmRCJ8UeB8Jo17YC4o=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/themes/blue/pace-theme-minimal.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"www.lifeee.top","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.19.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"mac","show_result":true},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="在对 Verilog 代码进行 行为级仿真 时，测试文件是必不可少的。可以自己写测试文件，但也会花费一些时间。利用 VS Code 可以自动生成测试文件，快速例化对应的模块，仅需要我们自己初始化时钟复位等信号，添加测试文件的运行时间等。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Vivado与VS Code:强强联手2-自动生成 Testbench">
+<meta property="og:url" content="https://www.lifeee.top/posts/54635.html">
+<meta property="og:site_name" content="热夏的博客">
+<meta property="og:description" content="在对 Verilog 代码进行 行为级仿真 时，测试文件是必不可少的。可以自己写测试文件，但也会花费一些时间。利用 VS Code 可以自动生成测试文件，快速例化对应的模块，仅需要我们自己初始化时钟复位等信号，添加测试文件的运行时间等。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200626211322.jpg">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/006fZGhNly1gg5ln0jt6ej312006k3ys.jpg">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/006fZGhNly1gg5lnhdcd0j30hw05w0sv.jpg">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/006fZGhNly1gg5lnw60x1j30wx0dmdkt.jpg">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/006fZGhNly1gg5loi3eo2j30ii0be0up.jpg">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/006fZGhNly1gg5lp0m9roj30h60ib756.jpg">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/006fZGhNly1gg5lpnn4sbj30r705lglk.jpg">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/006fZGhNly1gg5lq8tcmvj30wh0ja404.jpg">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/006fZGhNly1gg5lqw7uu3j30ik09bt9a.jpg">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/006fZGhNly1gg5lrh4376j30r70e8q3f.jpg">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/006fZGhNly1gg5lrw665oj30r70e8jrx.jpg">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/006fZGhNly1gg5lu94p5tj311z06y3yv.jpg">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/006fZGhNly1gg5lupqhr0j312406zq36.jpg">
+<meta property="article:published_time" content="2020-06-26T12:49:52.000Z">
+<meta property="article:modified_time" content="2022-11-14T16:57:17.403Z">
+<meta property="article:author" content="热夏">
+<meta property="article:tag" content="教程">
+<meta property="article:tag" content="善用佳软">
+<meta property="article:tag" content="IDE">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200626211322.jpg">
+
+
+<link rel="canonical" href="https://www.lifeee.top/posts/54635.html">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://www.lifeee.top/posts/54635.html","path":"posts/54635.html","title":"Vivado与VS Code:强强联手2-自动生成 Testbench"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Vivado与VS Code:强强联手2-自动生成 Testbench | 热夏的博客</title>
+  
+
+
+
+
+
+
+
+<link href="https://fonts.loli.net/css?family=Noto+Serif+SC:400,500,700&display=swap&subset=chinese-simplified" rel="stylesheet">
+<link rel="stylesheet" href="https://npm.elemecdn.com/lxgw-wenkai-screen-webfont@1.7.0/style.css" />
+
+<link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&display=swap" rel="stylesheet">
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="热夏的博客" type="application/atom+xml">
+<style>.darkmode--activated{--body-bg-color:#282828;--content-bg-color:#333;--card-bg-color:#555;--text-color:#ccc;--blockquote-color:#bbb;--link-color:#ccc;--link-hover-color:#eee;--brand-color:#ddd;--brand-hover-color:#ddd;--table-row-odd-bg-color:#282828;--table-row-hover-bg-color:#363636;--menu-item-bg-color:#555;--btn-default-bg:#222;--btn-default-color:#ccc;--btn-default-border-color:#555;--btn-default-hover-bg:#666;--btn-default-hover-color:#ccc;--btn-default-hover-border-color:#666;--highlight-background:#282b2e;--highlight-foreground:#a9b7c6;--highlight-gutter-background:#34393d;--highlight-gutter-foreground:#9ca9b6}.darkmode--activated img{opacity:.75}.darkmode--activated img:hover{opacity:.9}.darkmode--activated code{color:#69dbdc;background:0 0}button.darkmode-toggle{z-index:9999}.darkmode-ignore,img{display:flex!important}.beian img{display:inline-block!important}</style></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">热夏的博客</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-heart fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%AD%A5%E9%AA%A4"><span class="nav-number">2.</span> <span class="nav-text">步骤</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%EF%BC%881%EF%BC%89%E5%AE%89%E8%A3%85%E6%8F%92%E4%BB%B6-Verilog-Testbench"><span class="nav-number">2.1.</span> <span class="nav-text">（1）安装插件  Verilog_Testbench</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%EF%BC%882%EF%BC%89%E7%BB%99%E7%94%B5%E8%84%91%E5%AE%89%E8%A3%85-python3-%E5%8F%8A%E4%BB%A5%E4%B8%8A%E7%9A%84%E7%8E%AF%E5%A2%83"><span class="nav-number">2.2.</span> <span class="nav-text">（2）给电脑安装 python3 及以上的环境</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%EF%BC%883%EF%BC%89%E4%B8%BA%E7%A1%AE%E4%BF%9DVS-Code%E4%B8%AD%E7%9A%84%E6%8F%92%E4%BB%B6%E5%8F%AF%E7%94%A8%EF%BC%8C%E5%AE%89%E8%A3%85-chardet"><span class="nav-number">2.3.</span> <span class="nav-text">（3）为确保VS Code中的插件可用，安装 chardet</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%EF%BC%884%EF%BC%89%E4%BF%AE%E6%94%B9%E6%8F%92%E4%BB%B6%E7%9A%84%E5%8E%9F%E5%A7%8Bpy%E6%96%87%E4%BB%B6"><span class="nav-number">2.4.</span> <span class="nav-text">（4）修改插件的原始py文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%EF%BC%885%EF%BC%89%E6%95%88%E6%9E%9C%E5%B1%95%E7%A4%BA"><span class="nav-number">2.5.</span> <span class="nav-text">（5）效果展示</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%82%E8%80%83"><span class="nav-number">3.</span> <span class="nav-text">参考</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="热夏"
+      src="/images/head.jpg">
+  <p class="site-author-name" itemprop="name">热夏</p>
+  <div class="site-description" itemprop="description">空山新雨后，天气晚来秋。</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">81</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">42</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/upwon" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;upwon" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:w1244753906@gmail.com" title="E-Mail → mailto:w1244753906@gmail.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.lifeee.top//atom.xml" title="RSS → https:&#x2F;&#x2F;www.lifeee.top&#x2F;&#x2F;atom.xml" rel="noopener me"><i class="fa fa-rss fa-fw"></i>RSS</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+        <div class="pjax">
+        </div>
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.lifeee.top/posts/54635.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/head.jpg">
+      <meta itemprop="name" content="热夏">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="热夏的博客">
+      <meta itemprop="description" content="空山新雨后，天气晚来秋。">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Vivado与VS Code:强强联手2-自动生成 Testbench | 热夏的博客">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Vivado与VS Code:强强联手2-自动生成 Testbench
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2020-06-26 20:49:52" itemprop="dateCreated datePublished" datetime="2020-06-26T20:49:52+08:00">2020-06-26</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-11-15 00:57:17" itemprop="dateModified" datetime="2022-11-15T00:57:17+08:00">2022-11-15</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">技术</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%95%99%E7%A8%8B/" itemprop="url" rel="index"><span itemprop="name">教程</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/" itemprop="url" rel="index"><span itemprop="name">善用佳软</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>7.9k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>7 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200626211322.jpg"></p>
+<p>  在对 Verilog 代码进行 行为级仿真 时，测试文件是必不可少的。可以自己写测试文件，但也会花费一些时间。利用 VS Code 可以自动生成测试文件，快速例化对应的模块，仅需要我们自己初始化时钟复位等信号，添加测试文件的运行时间等。</p>
+<span id="more"></span>
+
+
+
+<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>​        在对 Verilog 代码进行 行为级仿真 时，测试文件是必不可少的。可以自己写测试文件，但也会花费一些时间。利用 VS Code 可以自动生成测试文件，快速例化对应的模块，仅需要我们自己初始化时钟复位等信号，添加测试文件的运行时间等。</p>
+<h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><p>自动生成 <strong>Testbench</strong> 的大致步骤如下：</p>
+<p>（1）在VS Code中安装插件  <strong>Verilog_Testbench</strong> 。</p>
+<p>（2）给电脑安装 <strong>python3</strong> 及以上的环境。 </p>
+<p>（3）为确保VS Code中的插件可用，安装 <strong>chardet</strong> 。 </p>
+<p>（4）修改插件的<strong>原始py文件</strong>。</p>
+<p>（5）效果展示。</p>
+<h3 id="（1）安装插件-Verilog-Testbench"><a href="#（1）安装插件-Verilog-Testbench" class="headerlink" title="（1）安装插件  Verilog_Testbench"></a>（1）安装插件  Verilog_Testbench</h3><p>具体的使用方法为：在快捷键 <strong>ctrl + shift + p</strong> 下打开命令行，输入 <strong>Testbench</strong>  或者 <strong>Instance</strong> 。</p>
+<p>刚开始没有设置的时候效果如下：</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/006fZGhNly1gg5ln0jt6ej312006k3ys.jpg"></p>
+<p>在 VS Code的应用商店搜索并安装插件 <strong>Verilog_Testbench</strong>；</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/006fZGhNly1gg5lnhdcd0j30hw05w0sv.jpg"></p>
+<h3 id="（2）给电脑安装-python3-及以上的环境"><a href="#（2）给电脑安装-python3-及以上的环境" class="headerlink" title="（2）给电脑安装 python3 及以上的环境"></a>（2）给电脑安装 python3 及以上的环境</h3><p>下载地址： <a target="_blank" rel="noopener" href="https://www.python.org/downloads/">https://www.python.org/downloads/</a></p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/006fZGhNly1gg5lnw60x1j30wx0dmdkt.jpg"></p>
+<p>进行安装；</p>
+<p>说明：</p>
+<p>​        1、安装时需要设置添加到系统变量的路径中。</p>
+<p>​        2、记住 python 的安装路径，后面可用。</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/006fZGhNly1gg5loi3eo2j30ii0be0up.jpg"></p>
+<p>或者根据安装地址添加两个环境变量到<strong>path</strong>下：</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/006fZGhNly1gg5lp0m9roj30h60ib756.jpg"></p>
+<p>在运行窗口下，输入 <strong>cmd</strong> ，打开终端命令窗口，输入 <strong>python</strong> 进行验证是否安装成功！</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/006fZGhNly1gg5lpnn4sbj30r705lglk.jpg"></p>
+<p>出现该信息则为成功；</p>
+<h3 id="（3）为确保VS-Code中的插件可用，安装-chardet"><a href="#（3）为确保VS-Code中的插件可用，安装-chardet" class="headerlink" title="（3）为确保VS Code中的插件可用，安装 chardet"></a>（3）为确保VS Code中的插件可用，安装 chardet</h3><p>说明：</p>
+<p>​        需要使用 chardet 检测编码，是适用于 Python 2和3的通用编码检测器。chardet 支持检测中文、日文、韩文等多种语言。</p>
+<p>下载地址：</p>
+<p>​        <a target="_blank" rel="noopener" href="https://pypi.org/project/chardet/">https://pypi.org/project/chardet/</a> </p>
+<p>下载压缩文件 “ <strong>chardet-3.0.4.tar.gz</strong> ”；</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/006fZGhNly1gg5lq8tcmvj30wh0ja404.jpg"></p>
+<p>解压该压缩文件到 python 安装位置下的 ‘<strong>site-packages</strong>’ 目录下，例如：”C:\Python\Python38-32\Lib\site-packages\chardet-3.0.4”</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/006fZGhNly1gg5lqw7uu3j30ik09bt9a.jpg"></p>
+<p>在运行窗口下，输入 <strong>cmd</strong> ，打开终端命令窗口，进入解压的 ‘<strong>chardet</strong>’ 目录下，执行命令：<strong>python setup.py install</strong> 。</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/006fZGhNly1gg5lrh4376j30r70e8q3f.jpg"></p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/006fZGhNly1gg5lrw665oj30r70e8jrx.jpg"></p>
+<p>显示出如此的信息即可。</p>
+<h3 id="（4）修改插件的原始py文件"><a href="#（4）修改插件的原始py文件" class="headerlink" title="（4）修改插件的原始py文件"></a>（4）修改插件的原始py文件</h3><p>在打开 .v 文件的 VS Code 下按 <strong>ctrl+p</strong>，输入 <strong>instance</strong> 可出现下述界面。  </p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/006fZGhNly1gg5lu94p5tj311z06y3yv.jpg"></p>
+<p>使用 <strong>Ctrl +单击</strong> 打开该链接，复制以下的代码来替换原文件中的代码，保存，重启  VS Code。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br><span class="line">228</span><br><span class="line">229</span><br><span class="line">230</span><br><span class="line">231</span><br><span class="line">232</span><br><span class="line">233</span><br><span class="line">234</span><br><span class="line">235</span><br><span class="line">236</span><br><span class="line">237</span><br><span class="line">238</span><br><span class="line">239</span><br><span class="line">240</span><br><span class="line">241</span><br><span class="line">242</span><br><span class="line">243</span><br><span class="line">244</span><br><span class="line">245</span><br><span class="line">246</span><br><span class="line">247</span><br><span class="line">248</span><br><span class="line">249</span><br><span class="line">250</span><br><span class="line">251</span><br><span class="line">252</span><br><span class="line">253</span><br><span class="line">254</span><br><span class="line">255</span><br><span class="line">256</span><br><span class="line">257</span><br><span class="line">258</span><br><span class="line">259</span><br><span class="line">260</span><br><span class="line">261</span><br><span class="line">262</span><br><span class="line">263</span><br><span class="line">264</span><br><span class="line">265</span><br><span class="line">266</span><br><span class="line">267</span><br><span class="line">268</span><br><span class="line">269</span><br><span class="line">270</span><br><span class="line">271</span><br><span class="line">272</span><br><span class="line">273</span><br><span class="line">274</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#! /usr/bin/env python</span></span><br><span class="line"></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">vTbgenerator.py -- generate verilog module Testbench</span></span><br><span class="line"><span class="string">generated bench file like this:</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">        fifo_sc #(</span></span><br><span class="line"><span class="string">            .DATA_WIDTH ( 8 ),</span></span><br><span class="line"><span class="string">            .ADDR_WIDTH ( 8 )</span></span><br><span class="line"><span class="string">        )</span></span><br><span class="line"><span class="string">         u_fifo_sc (</span></span><br><span class="line"><span class="string">            .CLK   ( CLK                     ),</span></span><br><span class="line"><span class="string">            .RST_N ( RST_N                   ),</span></span><br><span class="line"><span class="string">            .RD_EN ( RD_EN                   ),</span></span><br><span class="line"><span class="string">            .WR_EN ( WR_EN                   ),</span></span><br><span class="line"><span class="string">            .DIN   ( DIN   [DATA_WIDTH-1 :0] ),</span></span><br><span class="line"><span class="string">            .DOUT  ( DOUT  [DATA_WIDTH-1 :0] ),</span></span><br><span class="line"><span class="string">            .EMPTY ( EMPTY                   ),</span></span><br><span class="line"><span class="string">            .FULL  ( FULL                    )</span></span><br><span class="line"><span class="string">        );</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">Usage:</span></span><br><span class="line"><span class="string">      python vTbgenerator.py ModuleFileName.v</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="keyword">import</span> random</span><br><span class="line"><span class="keyword">import</span> re</span><br><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"><span class="keyword">from</span> queue <span class="keyword">import</span> Queue</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> chardet</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">delComment</span>(<span class="params">Text</span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot; removed comment &quot;&quot;&quot;</span></span><br><span class="line">    single_line_comment = re.<span class="built_in">compile</span>(<span class="string">r&quot;//(.*)$&quot;</span>, re.MULTILINE)</span><br><span class="line">    multi_line_comment = re.<span class="built_in">compile</span>(<span class="string">r&quot;/\*(.*?)\*/&quot;</span>, re.DOTALL)</span><br><span class="line">    Text = multi_line_comment.sub(<span class="string">&#x27;\n&#x27;</span>, Text)</span><br><span class="line">    Text = single_line_comment.sub(<span class="string">&#x27;\n&#x27;</span>, Text)</span><br><span class="line">    <span class="keyword">return</span> Text</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">delBlock</span>(<span class="params">Text</span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot; removed task and function block &quot;&quot;&quot;</span></span><br><span class="line">    Text = re.sub(<span class="string">r&#x27;\Wtask\W[\W\w]*?\Wendtask\W&#x27;</span>, <span class="string">&#x27;\n&#x27;</span>, Text)</span><br><span class="line">    Text = re.sub(<span class="string">r&#x27;\Wfunction\W[\W\w]*?\Wendfunction\W&#x27;</span>, <span class="string">&#x27;\n&#x27;</span>, Text)</span><br><span class="line">    <span class="keyword">return</span> Text</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">findName</span>(<span class="params">inText</span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot; find module name and port list&quot;&quot;&quot;</span></span><br><span class="line">    p = re.search(<span class="string">r&#x27;([a-zA-Z_][a-zA-Z_0-9]*)\s*&#x27;</span>, inText)</span><br><span class="line">    mo_Name = p.group(<span class="number">0</span>).strip()</span><br><span class="line">    <span class="keyword">return</span> mo_Name</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">paraDeclare</span>(<span class="params">inText, portArr</span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot; find parameter declare &quot;&quot;&quot;</span></span><br><span class="line">    pat = <span class="string">r&#x27;\s&#x27;</span> + portArr + <span class="string">r&#x27;\s[\w\W]*?[;,)]&#x27;</span></span><br><span class="line">    ParaList = re.findall(pat, inText)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> ParaList</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">portDeclare</span>(<span class="params">inText, portArr</span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;find port declare, Syntax:</span></span><br><span class="line"><span class="string">       input [ net_type ] [ signed ] [ range ] list_of_port_identifiers</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">       return list as : (port, [range])</span></span><br><span class="line"><span class="string">    &quot;&quot;&quot;</span></span><br><span class="line">    port_definition = re.<span class="built_in">compile</span>(</span><br><span class="line">        <span class="string">r&#x27;\b&#x27;</span> + portArr +</span><br><span class="line">        <span class="string">r&#x27;&#x27;&#x27; (\s+(wire|reg)\s+)* (\s*signed\s+)*  (\s*\[.*?:.*?\]\s*)*</span></span><br><span class="line"><span class="string">        (?P&lt;port_list&gt;.*?)</span></span><br><span class="line"><span class="string">        (?= \binput\b | \boutput\b | \binout\b | ; | \) )</span></span><br><span class="line"><span class="string">        &#x27;&#x27;&#x27;</span>,</span><br><span class="line">        re.VERBOSE | re.MULTILINE | re.DOTALL</span><br><span class="line">    )</span><br><span class="line"></span><br><span class="line">    pList = port_definition.findall(inText)</span><br><span class="line">    t = []</span><br><span class="line">    <span class="keyword">for</span> ls <span class="keyword">in</span> pList:</span><br><span class="line">        <span class="keyword">if</span> <span class="built_in">len</span>(ls) &gt;= <span class="number">2</span>:</span><br><span class="line">            t = t + portDic(ls[-<span class="number">2</span>:])</span><br><span class="line">    <span class="keyword">return</span> t</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">portDic</span>(<span class="params">port</span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot;delet as : input a =c &amp;d;</span></span><br><span class="line"><span class="string">        return list as : (port, [range])</span></span><br><span class="line"><span class="string">    &quot;&quot;&quot;</span></span><br><span class="line">    pRe = re.<span class="built_in">compile</span>(<span class="string">r&#x27;(.*?)\s*=.*&#x27;</span>, re.DOTALL)</span><br><span class="line"></span><br><span class="line">    pRange = port[<span class="number">0</span>]</span><br><span class="line">    pList = port[<span class="number">1</span>].split(<span class="string">&#x27;,&#x27;</span>)</span><br><span class="line">    pList = [i.strip() <span class="keyword">for</span> i <span class="keyword">in</span> pList <span class="keyword">if</span> i.strip() != <span class="string">&#x27;&#x27;</span>]</span><br><span class="line">    pList = [(pRe.sub(<span class="string">r&#x27;\1&#x27;</span>, p), pRange.strip()) <span class="keyword">for</span> p <span class="keyword">in</span> pList]</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> pList</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">formatPort</span>(<span class="params">AllPortList, isPortRange=<span class="number">1</span></span>):</span><br><span class="line">    PortList = AllPortList</span><br><span class="line"></span><br><span class="line">    <span class="built_in">str</span> = <span class="string">&#x27;&#x27;</span></span><br><span class="line">    <span class="keyword">if</span> PortList != []:</span><br><span class="line">        l1 = <span class="built_in">max</span>([<span class="built_in">len</span>(i[<span class="number">0</span>]) <span class="keyword">for</span> i <span class="keyword">in</span> PortList])+<span class="number">2</span></span><br><span class="line">        l3 = <span class="built_in">max</span>(<span class="number">18</span>, l1)</span><br><span class="line"></span><br><span class="line">        strList = []</span><br><span class="line">        <span class="built_in">str</span> = <span class="string">&#x27;,\n&#x27;</span>.join([<span class="string">&#x27; &#x27;</span> * <span class="number">4</span> + <span class="string">&#x27;.&#x27;</span> + i[<span class="number">0</span>].ljust(l3)</span><br><span class="line">                          + <span class="string">&#x27;(&#x27;</span> + (i[<span class="number">0</span>]) + <span class="string">&#x27;)&#x27;</span> <span class="keyword">for</span> i <span class="keyword">in</span> AllPortList])</span><br><span class="line">        strList = strList + [<span class="built_in">str</span>]</span><br><span class="line"></span><br><span class="line">        <span class="built_in">str</span> = <span class="string">&#x27;,\n\n&#x27;</span>.join(strList)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">str</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">formatDeclare</span>(<span class="params">PortList, portArr, initial=<span class="string">&quot;&quot;</span></span>):</span><br><span class="line">    <span class="built_in">str</span> = <span class="string">&#x27;&#x27;</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> PortList != []:</span><br><span class="line">        <span class="built_in">str</span> = <span class="string">&#x27;\n&#x27;</span>.join([portArr.ljust(<span class="number">4</span>) + <span class="string">&#x27;  &#x27;</span>+(i[<span class="number">1</span>]+<span class="built_in">min</span>(<span class="built_in">len</span>(i[<span class="number">1</span>]), <span class="number">1</span>)*<span class="string">&#x27;  &#x27;</span></span><br><span class="line">                                                  + i[<span class="number">0</span>]) + <span class="string">&#x27;;&#x27;</span> <span class="keyword">for</span> i <span class="keyword">in</span> PortList])</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">str</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">formatPara</span>(<span class="params">ParaList</span>):</span><br><span class="line">    paraDec = <span class="string">&#x27;&#x27;</span></span><br><span class="line">    paraDef = <span class="string">&#x27;&#x27;</span></span><br><span class="line">    <span class="keyword">if</span> ParaList != []:</span><br><span class="line">        s = <span class="string">&#x27;\n&#x27;</span>.join(ParaList)</span><br><span class="line">        pat = <span class="string">r&#x27;([a-zA-Z_][a-zA-Z_0-9]*)\s*=\s*([\w\W]*?)\s*[;,)]&#x27;</span></span><br><span class="line">        p = re.findall(pat, s)</span><br><span class="line"></span><br><span class="line">        l1 = <span class="built_in">max</span>([<span class="built_in">len</span>(i[<span class="number">0</span>]) <span class="keyword">for</span> i <span class="keyword">in</span> p])</span><br><span class="line">        l2 = <span class="built_in">max</span>([<span class="built_in">len</span>(i[<span class="number">1</span>]) <span class="keyword">for</span> i <span class="keyword">in</span> p])</span><br><span class="line">        paraDec = <span class="string">&#x27;\n&#x27;</span>.join([<span class="string">&#x27;parameter %s = %s;&#x27;</span></span><br><span class="line">                             % (i[<span class="number">0</span>].ljust(l1 + <span class="number">1</span>), i[<span class="number">1</span>].ljust(l2))</span><br><span class="line">                             <span class="keyword">for</span> i <span class="keyword">in</span> p])</span><br><span class="line">        paraDef = <span class="string">&#x27;#(\n&#x27;</span> + <span class="string">&#x27;,\n&#x27;</span>.join([<span class="string">&#x27;    .&#x27;</span> + i[<span class="number">0</span>].ljust(l1 + <span class="number">1</span>)</span><br><span class="line">                                       + <span class="string">&#x27;( &#x27;</span> + i[<span class="number">1</span>].ljust(l2)+<span class="string">&#x27; )&#x27;</span> <span class="keyword">for</span> i <span class="keyword">in</span> p]) + <span class="string">&#x27;)\n&#x27;</span></span><br><span class="line">    <span class="keyword">return</span> paraDec, paraDef</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">portT</span>(<span class="params">inText, ioPadAttr</span>):</span><br><span class="line">    x = &#123;&#125;</span><br><span class="line">    count_list = []</span><br><span class="line">    order_list = []</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> ioPadAttr:</span><br><span class="line">        p = port_index_list(inText, i)</span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> p:</span><br><span class="line">            count_list.append(j)</span><br><span class="line">            x[j] = i</span><br><span class="line">    count_list = quick_sort(count_list, <span class="number">0</span>, <span class="built_in">len</span>(count_list)-<span class="number">1</span>)</span><br><span class="line">    <span class="keyword">for</span> c <span class="keyword">in</span> count_list:</span><br><span class="line">        order_list.append(x.get(c))</span><br><span class="line">    <span class="keyword">return</span> order_list</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">quick_sort</span>(<span class="params">myList, start, end</span>):</span><br><span class="line">    <span class="keyword">if</span> start &lt; end:</span><br><span class="line">        i, j = start, end</span><br><span class="line">        base = myList[i]</span><br><span class="line">        <span class="keyword">while</span> i &lt; j:</span><br><span class="line">            <span class="keyword">while</span> (i &lt; j) <span class="keyword">and</span> (myList[j] &gt;= base):</span><br><span class="line">                j = j - <span class="number">1</span></span><br><span class="line"></span><br><span class="line">            myList[i] = myList[j]</span><br><span class="line"></span><br><span class="line">            <span class="keyword">while</span> (i &lt; j) <span class="keyword">and</span> (myList[i] &lt;= base):</span><br><span class="line">                i = i + <span class="number">1</span></span><br><span class="line">            myList[j] = myList[i]</span><br><span class="line">        myList[i] = base</span><br><span class="line"></span><br><span class="line">        quick_sort(myList, start, i - <span class="number">1</span>)</span><br><span class="line">        quick_sort(myList, j + <span class="number">1</span>, end)</span><br><span class="line">    <span class="keyword">return</span> myList</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">formatPort_order</span>(<span class="params">padAttr, orderList</span>):</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> p <span class="keyword">in</span> padAttr:</span><br><span class="line">        q = Queue()</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> padAttr.get(p):</span><br><span class="line">            q.put(i)</span><br><span class="line">        padAttr[p] = q</span><br><span class="line">    AllPortList = []</span><br><span class="line">    <span class="keyword">for</span> o <span class="keyword">in</span> orderList:</span><br><span class="line">        AllPortList.append(padAttr.get(o).get())</span><br><span class="line">    <span class="keyword">return</span> AllPortList</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">port_index_list</span>(<span class="params">intext, text</span>):</span><br><span class="line">    l = []</span><br><span class="line">    t = intext</span><br><span class="line">    index = t.find(text)</span><br><span class="line">    <span class="keyword">while</span> index &gt; -<span class="number">1</span>:</span><br><span class="line">        t = t.replace(text, random_str(<span class="built_in">len</span>(text)), <span class="number">1</span>)</span><br><span class="line">        l.append(index)</span><br><span class="line">        index = t.find(text)</span><br><span class="line">    <span class="keyword">return</span> l</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">random_str</span>(<span class="params">size</span>):</span><br><span class="line">    s = <span class="string">&#x27;&#x27;</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(size):</span><br><span class="line">        s += <span class="built_in">str</span>(random.randint(<span class="number">0</span>, <span class="number">9</span>))</span><br><span class="line">    <span class="keyword">return</span> s</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">getPortMap</span>(<span class="params">AllPortList, ioPadAttr</span>):</span><br><span class="line">    <span class="keyword">if</span> <span class="built_in">len</span>(AllPortList) != <span class="built_in">len</span>(ioPadAttr):</span><br><span class="line">        <span class="keyword">return</span></span><br><span class="line"></span><br><span class="line">    p_map = &#123;&#125;</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(AllPortList)):</span><br><span class="line">        p_map[ioPadAttr[i]] = AllPortList[i]</span><br><span class="line">    <span class="keyword">return</span> p_map</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">writeTestBench</span>(<span class="params">input_file</span>):</span><br><span class="line">    <span class="string">&quot;&quot;&quot; write testbench to file &quot;&quot;&quot;</span></span><br><span class="line">    <span class="keyword">with</span> <span class="built_in">open</span>(input_file, <span class="string">&#x27;rb&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">        f_info = chardet.detect(f.read())</span><br><span class="line">        f_encoding = f_info[<span class="string">&#x27;encoding&#x27;</span>]</span><br><span class="line">    <span class="keyword">with</span> <span class="built_in">open</span>(input_file, encoding=f_encoding) <span class="keyword">as</span> inFile:</span><br><span class="line">        inText = inFile.read()</span><br><span class="line"></span><br><span class="line">    <span class="comment"># removed comment,task,function</span></span><br><span class="line">    inText = delComment(inText)</span><br><span class="line">    inText = delBlock(inText)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># moduel ... endmodule  #</span></span><br><span class="line">    moPos_begin = re.search(<span class="string">r&#x27;(\b|^)module\b&#x27;</span>, inText).end()</span><br><span class="line">    moPos_end = re.search(<span class="string">r&#x27;\bendmodule\b&#x27;</span>, inText).start()</span><br><span class="line">    inText = inText[moPos_begin:moPos_end]</span><br><span class="line"></span><br><span class="line">    name = findName(inText)</span><br><span class="line">    paraList = paraDeclare(inText, <span class="string">&#x27;parameter&#x27;</span>)</span><br><span class="line">    paraDec, paraDef = formatPara(paraList)</span><br><span class="line"></span><br><span class="line">    ioPadAttr = [<span class="string">&#x27;input&#x27;</span>, <span class="string">&#x27;output&#x27;</span>, <span class="string">&#x27;inout&#x27;</span>]</span><br><span class="line">    orlder = portT(inText, ioPadAttr)</span><br><span class="line">    <span class="built_in">input</span> = portDeclare(inText, ioPadAttr[<span class="number">0</span>])</span><br><span class="line">    output = portDeclare(inText, ioPadAttr[<span class="number">1</span>])</span><br><span class="line">    inout = portDeclare(inText, ioPadAttr[<span class="number">2</span>])</span><br><span class="line"></span><br><span class="line">    portList = formatPort(formatPort_order(</span><br><span class="line">        getPortMap([<span class="built_in">input</span>, output, inout], ioPadAttr), orlder))</span><br><span class="line"></span><br><span class="line">    <span class="built_in">input</span> = formatDeclare(<span class="built_in">input</span>, <span class="string">&#x27;reg&#x27;</span>)</span><br><span class="line">    output = formatDeclare(output, <span class="string">&#x27;wire&#x27;</span>)</span><br><span class="line">    inout = formatDeclare(inout, <span class="string">&#x27;wire&#x27;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># write Instance</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># module_parameter_port_list</span></span><br><span class="line">    <span class="keyword">if</span>(paraDec != <span class="string">&#x27;&#x27;</span>):</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;// %s Parameters\n%s\n&quot;</span> % (name, paraDec))</span><br><span class="line"></span><br><span class="line">    <span class="comment"># list_of_port_declarations</span></span><br><span class="line">    <span class="comment">#print(&quot;// %s Inputs\n%s\n&quot; % (name, input))</span></span><br><span class="line">    <span class="comment">#print(&quot;// %s Outputs\n%s\n&quot; % (name, output))</span></span><br><span class="line">    <span class="comment">#if(inout != &#x27;&#x27;):</span></span><br><span class="line">    <span class="comment">#    print(&quot;// %s Bidirs\n%s\n&quot; % (name, inout))</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;\n&quot;</span>)</span><br><span class="line">    <span class="comment"># UUT</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;%s %s inst_%s (\n%s\n);&quot;</span> % (name, paraDef, name, portList))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">     writeTestBench(sys.argv[<span class="number">1</span>])</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="（5）效果展示"><a href="#（5）效果展示" class="headerlink" title="（5）效果展示"></a>（5）效果展示</h3><p>在快捷键 <strong>ctrl + shift + p</strong> 下打开命令行，输入 <strong>Testbench</strong>  或者 <strong>Instance</strong> 。</p>
+<p>输入 Instance，仅仅是对该 .v 文件模块的快速例化；</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/006fZGhNly1gg5lupqhr0j312406zq36.jpg"></p>
+<p>输入 Testbench，可以得到一个更为完整的测试文件；</p>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><blockquote>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/sinat_28631741/article/details/80483064">python–“chardet”安装方式</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/kingstacker/p/9944259.html">Vscode自动生成verilog例化</a></p>
+</blockquote>
+<br />
+
+<blockquote>
+<p> 本文来自实验室同学 <a target="_blank" rel="noopener" href="https://weibo.com/u/5733142591">@WanTwoWan</a> 投稿，在此表示感谢 🍰</p>
+</blockquote>
+<br />
+
+<br />
+
+<br />
+
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>请我一杯咖啡吧！</div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/wechatpay.png" alt="热夏 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="/images/alipay.jpg" alt="热夏 支付宝">
+        <span>支付宝</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>热夏
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://www.lifeee.top/posts/54635.html" title="Vivado与VS Code:强强联手2-自动生成 Testbench">https://www.lifeee.top/posts/54635.html</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="followme">
+  <span>欢迎关注我的其它发布渠道</span>
+
+  <div class="social-list">
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="/atom.xml">
+            <span class="icon">
+              <i class="fa fa-rss"></i>
+            </span>
+
+            <span class="label">RSS</span>
+          </a>
+      </div>
+  </div>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/%E6%95%99%E7%A8%8B/" rel="tag"><i class="fa fa-tag"></i> 教程</a>
+              <a href="/tags/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/" rel="tag"><i class="fa fa-tag"></i> 善用佳软</a>
+              <a href="/tags/IDE/" rel="tag"><i class="fa fa-tag"></i> IDE</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/posts/54594.html" rel="prev" title="Vivado与VS Code:强强联手1">
+                  <i class="fa fa-angle-left"></i> Vivado与VS Code:强强联手1
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/posts/5546.html" rel="next" title="Vivado与VS Code:强强联手3-自动对齐代码">
+                  Vivado与VS Code:强强联手3-自动对齐代码 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments gitalk-container"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 2018 – 
+    <span itemprop="copyrightYear">2024</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">热夏</span>
+  </div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>站点总字数：</span>
+    <span title="站点总字数">629k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">9:32</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/next-theme-pjax/0.6.0/pjax.min.js" integrity="sha256-vxLn1tSKWD4dqbMRyv940UYw4sXgMtYcK6reefzZrao=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lozad.js/1.16.0/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script><script src="/js/pjax.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+  <script src="/js/third-party/pace.js"></script>
+
+
+  
+  <script data-pjax async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","mhchem":false,"js":{"url":"//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
+
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"upwon","repo":"upwon.github.io","client_id":"7e047047ecee7317452b","client_secret":"c60fbdf0eb19e7264e33ab780319e4d420a58fee","admin_user":"upwon","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":null,"js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"449094a6e0cf32ae0d0efd4f1cd82799"}</script>
+<script src="/js/third-party/comments/gitalk.js"></script>
+
+
+  <script type="text/javascript" src="/js/clicklove.js"></script>
+   
+ 
+
+</body>
+</html>

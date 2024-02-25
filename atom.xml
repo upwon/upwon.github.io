@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>热夏的博客</title>
+  
+  
+  <link href="https://www.lifeee.top/atom.xml" rel="self"/>
+  
+  <link href="https://www.lifeee.top/"/>
+  <updated>2024-02-23T12:44:59.126Z</updated>
+  <id>https://www.lifeee.top/</id>
+  
+  <author>
+    <name>热夏</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>网上冲浪周刊第31期： 万物复苏🌱</title>
+    <link href="https://www.lifeee.top/posts/63498.html"/>
+    <id>https://www.lifeee.top/posts/63498.html</id>
+    <published>2024-02-22T15:18:34.000Z</published>
+    <updated>2024-02-23T12:44:59.126Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;欢迎阅读第31期技术资讯！本期我们推荐了Flutter 3.19、Android Sunflower、Google AI Dart SDK等技术，介绍了Obsidian 笔记画廊插件、微信 Markdown 编辑器、dockge等工具，分享了科大讯飞 iflycode 智能编程助手、go-proxy-bingai 微软 New Bing 演示站点等资源，推荐了必应每日超清壁纸采集、521GitHub镜像站、微信聊天记录可视化分析WechatVisualization等工具。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://s2.loli.net/2024/02/23/86s7evMFR3tANDk.jpg&quot; alt=&quot;封面图 https://www.pexels.com/zh-cn/photo/6602657/&quot;&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="冲浪" scheme="https://www.lifeee.top/categories/%E5%86%B2%E6%B5%AA/"/>
+    
+    
+    <category term="冲浪" scheme="https://www.lifeee.top/tags/%E5%86%B2%E6%B5%AA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>网上冲浪周刊第29期： 有钱没钱回家过年 🧧</title>
+    <link href="https://www.lifeee.top/posts/30183.html"/>
+    <id>https://www.lifeee.top/posts/30183.html</id>
+    <published>2024-02-01T14:58:30.000Z</published>
+    <updated>2024-02-14T13:00:39.183Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;欢迎阅读第29期技术资讯！这期我们推荐了一些技术相关的文章、工具和信息。在推荐阅读中，介绍使用Compose实现龙头绘制、对2024年前端技术发展的预测、Android架构中新引入的UseCase概念等。此外,还介绍了几款有意思的工具软件,如Microsoft的视频编辑软件Clipchamp、Python数据可视化工具PyGWalker、开发者瑞士军刀DevToys工具等。文章还分享了独立开发者Sindre Sorhus的多个知名软件作品、开源Android电视直播软件my-tv,以及IPtv直播源地址。最后推荐了一档热门新闻播客《新闻酸菜馆》。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/202402142100562.jpg&quot; alt=&quot;封面图 https://www.pexels.com/zh-cn/photo/900097/&quot;&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="冲浪" scheme="https://www.lifeee.top/categories/%E5%86%B2%E6%B5%AA/"/>
+    
+    
+    <category term="冲浪" scheme="https://www.lifeee.top/tags/%E5%86%B2%E6%B5%AA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>网上冲浪周刊第27期：大寒已至，暖春将启🍃</title>
+    <link href="https://www.lifeee.top/posts/4820.html"/>
+    <id>https://www.lifeee.top/posts/4820.html</id>
+    <published>2024-01-21T09:12:16.000Z</published>
+    <updated>2024-01-21T09:18:08.771Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;欢迎阅读第27期技术资讯！这期我们推荐了一系列精彩的技术文章、工具和开源项目。在推荐阅读中，介绍了Instagram如何在短时间内迅速扩大用户规模，网易云音乐的自动化测试实践以及Android图像加载库Coil。在有趣的工具部分，我们介绍能够裁剪保存网页内容的浏览器扩展”MaoXian Web Clipper”和免费的Web防火墙软件雷池防火墙社区版。此外，还介绍了一些宝藏信息，如一本图解算法的入门书《Hello 算法》，以及解锁Medium付费文章的在线网站和浏览器扩展。最后，推荐了一档泛文化类播客《鲸鱼赫兹》，以探索不同城市生活的话题和可能性。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/202401211710726.jpg&quot; alt=&quot;封面图https://www.pexels.com/zh-cn/photo/1105391&quot;&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="冲浪" scheme="https://www.lifeee.top/categories/%E5%86%B2%E6%B5%AA/"/>
+    
+    
+    <category term="冲浪" scheme="https://www.lifeee.top/tags/%E5%86%B2%E6%B5%AA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>网上冲浪周刊第25期：新年新气象🌱</title>
+    <link href="https://www.lifeee.top/posts/38961.html"/>
+    <id>https://www.lifeee.top/posts/38961.html</id>
+    <published>2024-01-07T11:55:22.000Z</published>
+    <updated>2024-01-10T14:35:14.523Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;欢迎阅读第25期技术资讯！这期我们推荐了一系列精彩的技术文章、工具和开源项目。在推荐阅读中，介绍2023年现代安卓开发的趋势，设计安全可靠的API的方法，以及Java 有哪些常见的误区问题。在有趣的工具部分，我们介绍了SmartDNS，一款本地DNS服务器，以及One Tab Group，一款多功能的标签页&amp;#x2F;标签组管理器。此外，还推荐了GitHub520、one-api、FreeControl和猫抓等实用工具。宝藏信息中，我们带来了Google Bard API、GitHub Web IDE等项目，以及一款能够在PC上控制Android设备的FreeControl。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/202401072002887.jpg&quot;&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="冲浪" scheme="https://www.lifeee.top/categories/%E5%86%B2%E6%B5%AA/"/>
+    
+    
+    <category term="冲浪" scheme="https://www.lifeee.top/tags/%E5%86%B2%E6%B5%AA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>网上冲浪周刊第23期：圣诞快乐🎄</title>
+    <link href="https://www.lifeee.top/posts/35341.html"/>
+    <id>https://www.lifeee.top/posts/35341.html</id>
+    <published>2023-12-23T15:10:40.000Z</published>
+    <updated>2024-01-07T12:12:27.342Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;在第23期的网上冲浪周刊中，我们为您精选了丰富的技术内容，包括Android动画、UI自动化项目、Flutter全埋点等。推荐阅读中涵盖Kotlin技术月报和Gemini Pro评测等热门话题。有趣的工具包括PDF转Markdown工具、Linux命令搜索和开源协作平台AppFlowy。宝藏信息中推荐Go语言学习指南和GPT导航站，同时分享了圣诞主题Lofi音乐。整体而言，本期周刊为您提供了丰富的技术资源和有趣发现，希望能够为您的学习和探索带来启发。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/202312232352753.jpg&quot; alt=&quot;封面图 https://www.pexels.com/zh-cn/photo/2842732/&quot;&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="冲浪" scheme="https://www.lifeee.top/categories/%E5%86%B2%E6%B5%AA/"/>
+    
+    
+    <category term="冲浪" scheme="https://www.lifeee.top/tags/%E5%86%B2%E6%B5%AA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>网上冲浪周刊第21期：我爱Flutter🎉</title>
+    <link href="https://www.lifeee.top/posts/57809.html"/>
+    <id>https://www.lifeee.top/posts/57809.html</id>
+    <published>2023-12-08T14:06:14.000Z</published>
+    <updated>2024-02-14T13:22:08.699Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;在第21期的网上冲浪周刊中，我们将为您介绍以下内容：猫哥整理了一份精致的Flutter插件收录，为开发者提供了更方便的工具。同时，macos_ui为Flutter带来了与macOS设计语言相符的组件和主题。&lt;/p&gt;
+&lt;p&gt;推荐阅读方面，Kotlin技术月报带来了一系列重要消息，包括Kotlin 1.9.20版本发布、Compose Multiplatform 1.5.10版本发布等。而2024年的Kotlin Multiplatform发展路线图更是让人瞩目，特别是Compose for iOS即将进入Beta版阶段。&lt;/p&gt;
+&lt;p&gt;有趣的工具方面，谷歌即将推出的AI大模型Gemini引人关注，能够无缝融合图像、音频、视频、代码等多个领域。而今日热榜、多摸鱼等工具为用户提供了便捷的获取热门资讯的途径。&lt;/p&gt;
+&lt;p&gt;宝藏信息方面，手绘线条插画网站bon.design提供了简洁极简的插画素材，而Poe AI平台的StableDiffusionXL图像生成机器人则为艺术创作者提供了创新灵感的空间。&lt;/p&gt;
+&lt;p&gt;在资讯板块，Google DevFest活动分享了Android开发、Kotlin元编程技术、Jetpack Compose等热门主题。而VSCode最新版本的上线，为开发者带来了更多便捷和功能改进。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/202402142120298.jpg&quot; alt=&quot;杭州青山湖&quot;&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="冲浪" scheme="https://www.lifeee.top/categories/%E5%86%B2%E6%B5%AA/"/>
+    
+    
+    <category term="冲浪" scheme="https://www.lifeee.top/tags/%E5%86%B2%E6%B5%AA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>开源软件商店 WingetUI 使用教程</title>
+    <link href="https://www.lifeee.top/posts/34001.html"/>
+    <id>https://www.lifeee.top/posts/34001.html</id>
+    <published>2023-09-23T09:01:00.000Z</published>
+    <updated>2023-09-23T09:23:59.461Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/202309231716883.jpg&quot;&gt;&lt;/p&gt;
+&lt;p&gt;在&lt;a href=&quot;https://www.lifeee.top/posts/36943.html&quot;&gt;包管理器 winget 使用指南 | 热夏的博客 (lifeee.top)&lt;/a&gt; 一文中介绍了利用 winget 来查找&amp;#x2F;安装&amp;#x2F;更新&amp;#x2F;卸载软件，这种方式是利用终端来进行的。而&lt;a href=&quot;https://www.marticliment.com/wingetui/&quot;&gt;WingetUI&lt;/a&gt;则是一款封装了常见包管理器的可视化GUI软件，本文将为大家介绍 WingetUI 的安装以及使用方法。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    <category term="善用佳软" scheme="https://www.lifeee.top/categories/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
+    
+    
+    <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
+    
+    <category term="善用佳软" scheme="https://www.lifeee.top/tags/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
+    
+    <category term="Windows" scheme="https://www.lifeee.top/tags/Windows/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Spotify桌面端去广告教程（Windows/Mac/Linux)</title>
+    <link href="https://www.lifeee.top/posts/54657.html"/>
+    <id>https://www.lifeee.top/posts/54657.html</id>
+    <published>2022-11-12T15:44:04.000Z</published>
+    <updated>2024-02-14T13:06:01.884Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/202402142104401.jpg&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Spotify桌面端去广告教程（Windows&amp;#x2F;Mac&amp;#x2F;Linux)。屏蔽客户端中的所有横幅、视频和音频广告，Unlocks the skip function of any track，从主页隐藏播客、剧集和有声读物(可选)。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    <category term="善用佳软" scheme="https://www.lifeee.top/categories/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
+    
+    
+    <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
+    
+    <category term="善用佳软" scheme="https://www.lifeee.top/tags/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Jetbrains全家桶及插件激活方式</title>
+    <link href="https://www.lifeee.top/posts/23379.html"/>
+    <id>https://www.lifeee.top/posts/23379.html</id>
+    <published>2022-11-12T14:37:59.000Z</published>
+    <updated>2024-02-14T13:25:13.716Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/202402142124323.jpg&quot;&gt;&lt;/p&gt;
+&lt;p&gt;JetBrains产品全版本及插件激活（Windows&amp;#x2F;Mac&amp;#x2F;Linux）。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    <category term="善用佳软" scheme="https://www.lifeee.top/categories/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
+    
+    
+    <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
+    
+    <category term="善用佳软" scheme="https://www.lifeee.top/tags/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>通信专业网页工具和博客推荐</title>
+    <link href="https://www.lifeee.top/posts/1297.html"/>
+    <id>https://www.lifeee.top/posts/1297.html</id>
+    <published>2022-10-15T14:24:38.000Z</published>
+    <updated>2023-07-16T03:19:34.531Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/202210162224324.jpg&quot;&gt;&lt;/p&gt;
+&lt;p&gt;研究生阶段在学习通信(LTE&amp;#x2F;5G)时偶遇到一些工具网站和不错的博客，在此分享给大家。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="技术" scheme="https://www.lifeee.top/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+    <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
+    
+    <category term="善用佳软" scheme="https://www.lifeee.top/tags/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>利用谷歌学术追踪最新论文动态</title>
+    <link href="https://www.lifeee.top/posts/14861.html"/>
+    <id>https://www.lifeee.top/posts/14861.html</id>
+    <published>2022-06-21T08:31:33.000Z</published>
+    <updated>2024-02-14T13:10:35.777Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/202402142109966.jpg&quot;&gt;&lt;/p&gt;
+&lt;p&gt;利用谷歌学术搜索的快讯来实时追踪最新的论文动态 🎉🎉&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    <category term="善用佳软" scheme="https://www.lifeee.top/categories/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
+    
+    
+    <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
+    
+    <category term="善用佳软" scheme="https://www.lifeee.top/tags/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>gitee图床迁移至Github并开启CDN</title>
+    <link href="https://www.lifeee.top/posts/20121.html"/>
+    <id>https://www.lifeee.top/posts/20121.html</id>
+    <published>2022-03-28T03:40:22.000Z</published>
+    <updated>2022-11-14T16:57:17.388Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/mmexport1648033893709-sq.jpg&quot;&gt;&lt;/p&gt;
+&lt;p&gt;近几天gitee做了防盗链处理，导致很多使用gitee作为图床的文章中图片挂了，为此决定将图片全部迁移到Github了（我以前两者都使用），本文主要描述了迁移的步骤，以及对原有文章中图片链接的替换。 🙃&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    <category term="善用佳软" scheme="https://www.lifeee.top/categories/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
+    
+    
+    <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
+    
+    <category term="善用佳软" scheme="https://www.lifeee.top/tags/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>custom cursor 个性化你的鼠标光标样式</title>
+    <link href="https://www.lifeee.top/posts/55161.html"/>
+    <id>https://www.lifeee.top/posts/55161.html</id>
+    <published>2022-01-11T03:51:50.000Z</published>
+    <updated>2023-07-16T03:19:05.609Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/202307161119090.jpg&quot;&gt;&lt;/p&gt;
+&lt;p&gt;推荐一款命名为 &lt;code&gt;Custom Cursor &lt;/code&gt;的鼠标光标个性化软件，为枯燥的生活增添一点点乐趣。 &lt;code&gt;Custom Cursor &lt;/code&gt;除了支持Chrome、Edge等浏览器扩展外，还支持Windows桌面端。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="善用佳软" scheme="https://www.lifeee.top/categories/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
+    
+    
+    <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
+    
+    <category term="善用佳软" scheme="https://www.lifeee.top/tags/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
+    
+    <category term="Windows" scheme="https://www.lifeee.top/tags/Windows/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>使用 CLion 和 Valgrind 调试程序检查内存泄漏</title>
+    <link href="https://www.lifeee.top/posts/9487.html"/>
+    <id>https://www.lifeee.top/posts/9487.html</id>
+    <published>2021-07-10T13:15:18.000Z</published>
+    <updated>2022-11-14T16:43:07.403Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/ba920825gy1gsc5u2610gj23su2j8dox.jpg&quot;&gt;&lt;/p&gt;
+&lt;p&gt; Valgrind Memcheck 是一个用于检测内存使用问题的工具，比如泄漏、无效的内存访问、不正确的释放和引用未定义的值。CLion提供了配置Valgrind ，但不是开箱即用，需要自己安装然后配置一下，通过本文三言两语你将学会CLion 下 Valgrind 的配置。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    <category term="善用佳软" scheme="https://www.lifeee.top/categories/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
+    
+    
+    <category term="C++" scheme="https://www.lifeee.top/tags/C/"/>
+    
+    <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
+    
+    <category term="Linux" scheme="https://www.lifeee.top/tags/Linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>WSL SSH 自启动</title>
+    <link href="https://www.lifeee.top/posts/14733.html"/>
+    <id>https://www.lifeee.top/posts/14733.html</id>
+    <published>2021-07-10T13:14:58.000Z</published>
+    <updated>2022-11-14T16:43:07.403Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/ba920825gy1gsc5umbr8dj255p3ft484.jpg&quot;&gt;&lt;/p&gt;
+&lt;p&gt;vbs脚本实现WSL SSH 自启动&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    
+    <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
+    
+    <category term="Windows" scheme="https://www.lifeee.top/tags/Windows/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>包管理器 winget 使用指南</title>
+    <link href="https://www.lifeee.top/posts/36943.html"/>
+    <id>https://www.lifeee.top/posts/36943.html</id>
+    <published>2021-06-13T13:58:12.000Z</published>
+    <updated>2022-11-14T16:43:07.386Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/ba920825gy1grgzqvrxgaj21hc0zkgv6.jpg&quot;&gt;&lt;/p&gt;
+&lt;p&gt;winget 是 windows 10 平台的一个包管理工具，能够在终端通过简单的命令行实现软件的安装、更新、卸载等，与之类似的有 Scoop 和 Chocolatey. 由于 winget 是官方支持，因此安全性、兼容性方面都有保障. 若你和我一样是一个 「更新狂」， 那么你以后更新软件将十分惬意，没有必要去进行一系列繁杂的下载安装 …  ,  只需打开终端输入简单的命令即可 . 🍨&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    <category term="善用佳软" scheme="https://www.lifeee.top/categories/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
+    
+    
+    <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
+    
+    <category term="善用佳软" scheme="https://www.lifeee.top/tags/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
+    
+    <category term="Windows" scheme="https://www.lifeee.top/tags/Windows/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Linux 下安装中文版 man 手册 以及 C++ 帮助手册</title>
+    <link href="https://www.lifeee.top/posts/58853.html"/>
+    <id>https://www.lifeee.top/posts/58853.html</id>
+    <published>2021-06-10T09:07:55.000Z</published>
+    <updated>2022-11-14T16:43:07.404Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/ba920825gy1grdb8wqvaaj21s80to13l.jpg&quot;&gt;&lt;/p&gt;
+&lt;p&gt;man 手册页是在Unix或类Unix操作系统中常用的一种花在线软件文档形式，内容包括计算机程序（包括库和系统调用），正式的标准和惯例，甚至是抽象的概念。我们都可以通过执行man命令调用手册页。本文主要内容为：为 Linux 下的 man 手册安装中文版并设置别名 cman ， 方便中英阅读对照；同时安装 Ｃ++ 的 man 手册文档，方便查阅库函数的使用细节。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    
+    <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
+    
+    <category term="Linux" scheme="https://www.lifeee.top/tags/Linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title> C++ stringstream 简介</title>
+    <link href="https://www.lifeee.top/posts/23490.html"/>
+    <id>https://www.lifeee.top/posts/23490.html</id>
+    <published>2021-05-24T06:46:15.000Z</published>
+    <updated>2022-11-14T16:43:07.396Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/imgpexels-valiphotos-589802yas2.jpg&quot;&gt;&lt;/p&gt;
+&lt;p&gt;C++ stringstream 能够实现字符串流的输入输出操作，将字符串对象与流关联起来，允许像读取流一样读取字符串(如 cin)。能够很方便的从字符串中提取出以空格分割的子串、计算单词的频率，并且能够很方便地实现内置类型数据数据之间的转换(如 string 转 int)。🍦&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="技术" scheme="https://www.lifeee.top/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+    <category term="C++" scheme="https://www.lifeee.top/tags/C/"/>
+    
+    <category term="编程" scheme="https://www.lifeee.top/tags/%E7%BC%96%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>.gitignore / Git 忽略文件无效解决方案</title>
+    <link href="https://www.lifeee.top/posts/6977.html"/>
+    <id>https://www.lifeee.top/posts/6977.html</id>
+    <published>2021-04-13T14:05:58.000Z</published>
+    <updated>2022-11-14T16:43:07.405Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/imgimage-20210413220456534.png&quot;&gt;&lt;/p&gt;
+&lt;center&gt; &lt;font size=4.9&gt; 忽略 Git 仓库中的一些文件或文件夹.  &lt;/center&gt;</summary>
+    
+    
+    
+    <category term="技术" scheme="https://www.lifeee.top/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    
+    <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
+    
+    <category term="错误" scheme="https://www.lifeee.top/tags/%E9%94%99%E8%AF%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>优先队列</title>
+    <link href="https://www.lifeee.top/posts/40836.html"/>
+    <id>https://www.lifeee.top/posts/40836.html</id>
+    <published>2021-04-08T13:13:27.000Z</published>
+    <updated>2022-11-14T16:43:07.406Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/imgkazuya-tachibana-arseniy-chebynkin-kitchen.jpg&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;优先队列&lt;/strong&gt;是计算机科学中的一类抽象数据类型。优先队列中的每个元素都有各自的优先级，优先级最高的元素最先得到服务；优先级相同的元素按照其在优先队列中的顺序得到服务，【不是普通队列的先进先出(FIFO)】。优先队列往往用**&lt;a href=&quot;https://www.wikiwand.com/zh-cn/%E5%A0%86_(%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84)&quot;&gt;堆&lt;/a&gt;**来实现。🌴&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="技术" scheme="https://www.lifeee.top/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+    <category term="C++" scheme="https://www.lifeee.top/tags/C/"/>
+    
+  </entry>
+  
+</feed>

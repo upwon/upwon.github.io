@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.1.1">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/myapple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/myfavicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/myfavicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/myapple-touch-icon-next.png" color="#222">
+  <meta name="google-site-verification" content="google2fc64c2b92961282.html">
+  <meta name="baidu-site-verification" content="s6BwSjIZYB">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.loli.net/css?family='LXGW+WenKai+LITE':300,300italic,400,400italic,700,700italic%7C'LXGW+WenKai+Screen':300,300italic,400,400italic,700,700italic%7C'LXGW+WenKai':300,300italic,400,400italic,700,700italic%7C'Noto+Serif+SC':300,300italic,400,400italic,700,700italic%7C'EB+Garamond':300,300italic,400,400italic,700,700italic%7C'PingFang+SC':300,300italic,400,400italic,700,700italic%7C'Microsoft+YaHei':300,300italic,400,400italic,700,700italic%7C'sans-serif':300,300italic,400,400italic,700,700italic%7CMa+Shan+Zheng:300,300italic,400,400italic,700,700italic%7CLXGW+WenKai+Screen:300,300italic,400,400italic,700,700italic%7CLXGW+WenKai:300,300italic,400,400italic,700,700italic%7CMenlo:300,300italic,400,400italic,700,700italic%7CMonaco:300,300italic,400,400italic,700,700italic%7CConsolas:300,300italic,400,400italic,700,700italic%7CSource+Code+Pro:300,300italic,400,400italic,700,700italic%7Csystem-ui:300,300italic,400,400italic,700,700italic%7Cmonospace:300,300italic,400,400italic,700,700italic%7Csans-serif:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha256-yIDrPSXHZdOZhAqiBP7CKzIwMQmRCJ8UeB8Jo17YC4o=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/themes/blue/pace-theme-minimal.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"www.lifeee.top","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.19.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"mac","show_result":true},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="欢迎阅读第27期技术资讯！这期我们推荐了一系列精彩的技术文章、工具和开源项目。在推荐阅读中，介绍了Instagram如何在短时间内迅速扩大用户规模，网易云音乐的自动化测试实践以及Android图像加载库Coil。在有趣的工具部分，我们介绍能够裁剪保存网页内容的浏览器扩展”MaoXian Web Clipper”和免费的Web防火墙软件雷池防火墙社区版。此外，还介绍了一些宝藏信息，如一本图解算法的入">
+<meta property="og:type" content="article">
+<meta property="og:title" content="网上冲浪周刊第27期：大寒已至，暖春将启🍃">
+<meta property="og:url" content="https://www.lifeee.top/posts/4820.html">
+<meta property="og:site_name" content="热夏的博客">
+<meta property="og:description" content="欢迎阅读第27期技术资讯！这期我们推荐了一系列精彩的技术文章、工具和开源项目。在推荐阅读中，介绍了Instagram如何在短时间内迅速扩大用户规模，网易云音乐的自动化测试实践以及Android图像加载库Coil。在有趣的工具部分，我们介绍能够裁剪保存网页内容的浏览器扩展”MaoXian Web Clipper”和免费的Web防火墙软件雷池防火墙社区版。此外，还介绍了一些宝藏信息，如一本图解算法的入">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/202401211710726.jpg">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/202401182310171.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/202401172138001.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/202401152327309.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/202401152326399.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/202401152335426.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/202401211556199.png">
+<meta property="article:published_time" content="2024-01-21T09:12:16.000Z">
+<meta property="article:modified_time" content="2024-01-21T09:18:08.771Z">
+<meta property="article:author" content="热夏">
+<meta property="article:tag" content="冲浪">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/202401211710726.jpg">
+
+
+<link rel="canonical" href="https://www.lifeee.top/posts/4820.html">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://www.lifeee.top/posts/4820.html","path":"posts/4820.html","title":"网上冲浪周刊第27期：大寒已至，暖春将启🍃"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>网上冲浪周刊第27期：大寒已至，暖春将启🍃 | 热夏的博客</title>
+  
+
+
+
+
+
+
+
+<link href="https://fonts.loli.net/css?family=Noto+Serif+SC:400,500,700&display=swap&subset=chinese-simplified" rel="stylesheet">
+<link rel="stylesheet" href="https://npm.elemecdn.com/lxgw-wenkai-screen-webfont@1.7.0/style.css" />
+
+<link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&display=swap" rel="stylesheet">
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="热夏的博客" type="application/atom+xml">
+<style>.darkmode--activated{--body-bg-color:#282828;--content-bg-color:#333;--card-bg-color:#555;--text-color:#ccc;--blockquote-color:#bbb;--link-color:#ccc;--link-hover-color:#eee;--brand-color:#ddd;--brand-hover-color:#ddd;--table-row-odd-bg-color:#282828;--table-row-hover-bg-color:#363636;--menu-item-bg-color:#555;--btn-default-bg:#222;--btn-default-color:#ccc;--btn-default-border-color:#555;--btn-default-hover-bg:#666;--btn-default-hover-color:#ccc;--btn-default-hover-border-color:#666;--highlight-background:#282b2e;--highlight-foreground:#a9b7c6;--highlight-gutter-background:#34393d;--highlight-gutter-foreground:#9ca9b6}.darkmode--activated img{opacity:.75}.darkmode--activated img:hover{opacity:.9}.darkmode--activated code{color:#69dbdc;background:0 0}button.darkmode-toggle{z-index:9999}.darkmode-ignore,img{display:flex!important}.beian img{display:inline-block!important}</style></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">热夏的博客</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-heart fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%8A%80%E6%9C%AF"><span class="nav-number">1.</span> <span class="nav-text">技术</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8E%A8%E8%8D%90%E9%98%85%E8%AF%BB"><span class="nav-number">1.1.</span> <span class="nav-text">推荐阅读</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%9C%89%E8%B6%A3%E7%9A%84%E5%B7%A5%E5%85%B7"><span class="nav-number">2.</span> <span class="nav-text">有趣的工具</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BD%91%E9%A1%B5%E7%9A%84%E5%86%85%E5%AE%B9%E8%A3%81%E5%89%AA%EF%BC%9A%E6%AF%9B%E7%BA%BF%E7%BD%91%E6%91%98"><span class="nav-number">2.1.</span> <span class="nav-text">网页的内容裁剪：毛线网摘</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Github%E5%85%A8%E7%90%83%E7%AC%AC%E4%B8%80%E7%9A%84%E5%85%8D%E8%B4%B9waf%E9%98%B2%E7%81%AB%E5%A2%99%E9%9B%B7%E6%B1%A0%E7%A4%BE%E5%8C%BA%E7%89%88"><span class="nav-number">2.2.</span> <span class="nav-text">Github全球第一的免费waf防火墙雷池社区版</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%9D%E8%97%8F%E4%BF%A1%E6%81%AF"><span class="nav-number">3.</span> <span class="nav-text">宝藏信息</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Hello-%E7%AE%97%E6%B3%95"><span class="nav-number">3.1.</span> <span class="nav-text">Hello 算法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ReadMedium-%E8%A7%A3%E9%94%81Medium%E4%BB%98%E8%B4%B9%E6%96%87%E7%AB%A0"><span class="nav-number">3.2.</span> <span class="nav-text">ReadMedium 解锁Medium付费文章</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B2%B9%E7%8C%B4%E8%84%9A%E6%9C%AC%E4%B8%80%E9%94%AE%E8%A7%A3%E9%94%81Medium"><span class="nav-number">3.3.</span> <span class="nav-text">油猴脚本一键解锁Medium</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B5%8F%E8%A7%88%E5%99%A8%E6%89%A9%E5%B1%95medium-parser-extension%E8%A7%A3%E9%94%81Medium"><span class="nav-number">3.4.</span> <span class="nav-text">浏览器扩展medium-parser-extension解锁Medium</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%92%AD%E5%AE%A2%E6%8E%A8%E8%8D%90%EF%BC%9A%E9%B2%B8%E9%B1%BC%E8%B5%AB%E5%85%B9"><span class="nav-number">3.5.</span> <span class="nav-text">播客推荐：鲸鱼赫兹</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%B5%84%E8%AE%AF"><span class="nav-number">4.</span> <span class="nav-text">资讯</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="热夏"
+      src="/images/head.jpg">
+  <p class="site-author-name" itemprop="name">热夏</p>
+  <div class="site-description" itemprop="description">空山新雨后，天气晚来秋。</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">81</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">42</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/upwon" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;upwon" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:w1244753906@gmail.com" title="E-Mail → mailto:w1244753906@gmail.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.lifeee.top//atom.xml" title="RSS → https:&#x2F;&#x2F;www.lifeee.top&#x2F;&#x2F;atom.xml" rel="noopener me"><i class="fa fa-rss fa-fw"></i>RSS</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+        <div class="pjax">
+        </div>
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.lifeee.top/posts/4820.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/head.jpg">
+      <meta itemprop="name" content="热夏">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="热夏的博客">
+      <meta itemprop="description" content="空山新雨后，天气晚来秋。">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="网上冲浪周刊第27期：大寒已至，暖春将启🍃 | 热夏的博客">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          网上冲浪周刊第27期：大寒已至，暖春将启🍃
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2024-01-21 17:12:16 / 修改时间：17:18:08" itemprop="dateCreated datePublished" datetime="2024-01-21T17:12:16+08:00">2024-01-21</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%86%B2%E6%B5%AA/" itemprop="url" rel="index"><span itemprop="name">冲浪</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>3.5k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>3 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p>欢迎阅读第27期技术资讯！这期我们推荐了一系列精彩的技术文章、工具和开源项目。在推荐阅读中，介绍了Instagram如何在短时间内迅速扩大用户规模，网易云音乐的自动化测试实践以及Android图像加载库Coil。在有趣的工具部分，我们介绍能够裁剪保存网页内容的浏览器扩展”MaoXian Web Clipper”和免费的Web防火墙软件雷池防火墙社区版。此外，还介绍了一些宝藏信息，如一本图解算法的入门书《Hello 算法》，以及解锁Medium付费文章的在线网站和浏览器扩展。最后，推荐了一档泛文化类播客《鲸鱼赫兹》，以探索不同城市生活的话题和可能性。</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/202401211710726.jpg" alt="封面图https://www.pexels.com/zh-cn/photo/1105391"></p>
+<span id="more"></span>
+
+
+
+
+
+<p>欢迎来到第27期 ！😄</p>
+<p>期待您通过RSS订阅本博客：<a href="https://www.lifeee.top///atom.xml">https://www.lifeee.top///atom.xml</a></p>
+<h1 id="技术"><a href="#技术" class="headerlink" title="技术"></a>技术</h1><h2 id="推荐阅读"><a href="#推荐阅读" class="headerlink" title="推荐阅读"></a>推荐阅读</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://read.engineerscodex.com/p/how-instagram-scaled-to-14-million">How Instagram scaled to 14 million users with only 3 engineers (engineerscodex.com)</a>：Instagram 的早期架构，从 2010 年 10 月到 2011 年 12 月，Instagram 在短短一年多的时间里，用户数量从 0 增长到 1,400 万。他们只用了 3 名工程师就完成了这一任务。</li>
+<li><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/-E8sVIgQ9IK--nrXO_95rw">客户端自动化测试在网易云音乐的实践与落地</a>：网易云音乐自动化测试 Saturn 平台设计思路、技术演进，专项，落地成果。</li>
+<li><a target="_blank" rel="noopener" href="https://medium.com/@awesomeAndroid/exploring-coil-a-powerful-image-loading-library-for-android-a5d12d96e5f6">探索 Coil：一个强大的 Android 图像加载库</a>  &amp;  <a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/VCBTeb9k-Ua8_Uzu76gaKg">Coil - Android开源图像加载库</a> ：在 Android 应用程序开发领域，高效显示图像对于提供流畅且具有视觉吸引力的用户体验至关重要。处理图像加载、缓存和显示可能具有挑战性，但幸运的是，有一些库可以简化该过程。 Coil 就是这样一个库，它是一个轻量级、多功能的 Android 图像加载库。</li>
+</ul>
+<h1 id="有趣的工具"><a href="#有趣的工具" class="headerlink" title="有趣的工具"></a>有趣的工具</h1><h2 id="网页的内容裁剪：毛线网摘"><a href="#网页的内容裁剪：毛线网摘" class="headerlink" title="网页的内容裁剪：毛线网摘"></a>网页的内容裁剪：<a target="_blank" rel="noopener" href="https://github.com/mika-cn/maoxian-web-clipper">毛线网摘</a></h2><p><a target="_blank" rel="noopener" href="https://github.com/mika-cn/maoxian-web-clipper">毛线网摘</a> 一个可以将网页的内容裁剪并保存到<strong>本地电脑</strong>的浏览器扩展。使用它，你可以避免网站挂了，网址失效，图片失效等问题。 它可以将网页保存为 HTML 格式或 Markdown 格式，图片样式等也会一同保存下来。</p>
+<p>详细介绍可以查看 <a target="_blank" rel="noopener" href="https://www.appinn.com/maoxian-web-clipper-2/">小众软件-毛线网摘使用</a> or <a target="_blank" rel="noopener" href="https://mika-cn.github.io/maoxian-web-clipper/index-zh-CN.html">MaoXian Web Clipper - 作者Mika的介绍</a></p>
+<p>安装：</p>
+<ul>
+<li>Firefox （火狐浏览器）- <a target="_blank" rel="noopener" href="https://addons.mozilla.org/zh-CN/firefox/addon/maoxian-web-clipper/">https://addons.mozilla.org/zh-CN/firefox/addon/maoxian-web-clipper/</a></li>
+<li>Chromium （谷歌浏览器社区版）- <a target="_blank" rel="noopener" href="https://mika-cn.github.io/maoxian-web-clipper/install-by-extension-file-zh-CN.html">安装</a></li>
+</ul>
+<p>开源地址：<a target="_blank" rel="noopener" href="https://github.com/mika-cn/maoxian-web-clipper">https://github.com/mika-cn/maoxian-web-clipper</a></p>
+<h2 id="Github全球第一的免费waf防火墙雷池社区版"><a href="#Github全球第一的免费waf防火墙雷池社区版" class="headerlink" title="Github全球第一的免费waf防火墙雷池社区版"></a>Github全球第一的免费waf防火墙雷池社区版</h2><p>就在前不久，<a target="_blank" rel="noopener" href="https://github.com/chaitin/SafeLine">雷池防火墙社区版</a>在Github上的Star数已经超过了老前辈ModSecurity，成为了全球第一的免费Web防火墙软件。<a target="_blank" rel="noopener" href="https://github.com/chaitin/SafeLine">雷池防火墙社区版</a>是一款足够简单、足够好用、足够强的免费 WAF。基于业界领先的语义引擎检测技术，作为反向代理接入，保护你的网站不受黑客攻击。</p>
+<p>雷池的工作原理是接收源Web站点的流量，然后经过检测和清洗，遇到恶意流量会拦截，然后将处理后的流量转发到源站。</p>
+<p><strong>特性</strong></p>
+<ul>
+<li>便捷性</li>
+</ul>
+<p>采用容器化部署，一条命令即可完成安装，0 成本上手。安全配置开箱即用，无需人工维护，可实现安全躺平式管理。</p>
+<ul>
+<li>安全性</li>
+</ul>
+<p>首创业内领先的智能语义分析算法，精准检测、低误报、难绕过。语义分析算法无规则，面对未知特征的 0day 攻击不再手足无措。</p>
+<ul>
+<li>高性能</li>
+</ul>
+<p>无规则引擎，线性安全检测算法，平均请求检测延迟在 1 毫秒级别。并发能力强，单核轻松检测 2000+ TPS，只要硬件足够强，可支撑的流量规模无上限。</p>
+<ul>
+<li>高可用</li>
+</ul>
+<p>流量处理引擎基于 Nginx 开发，性能与稳定性均可得到保障。内置完善的健康检查机制，服务可用性高达 99.99%。****</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/202401182310171.png"></p>
+<p>官网：<a target="_blank" rel="noopener" href="https://waf-ce.chaitin.cn/">https://waf-ce.chaitin.cn/</a></p>
+<p>开源地址：<a target="_blank" rel="noopener" href="https://github.com/chaitin/SafeLine">https://github.com/chaitin/SafeLine</a></p>
+<h1 id="宝藏信息"><a href="#宝藏信息" class="headerlink" title="宝藏信息"></a>宝藏信息</h1><h2 id="Hello-算法"><a href="#Hello-算法" class="headerlink" title="Hello 算法"></a>Hello 算法</h2><p><a target="_blank" rel="noopener" href="https://www.hello-algo.com/">Hello 算法</a>  是一本动画图解、能运行、可提问的数据结构与算法入门书，支持 Java, C++, Python, Go, JS, TS, C#, Swift 等语言。</p>
+<p>“一本通俗易懂的数据结构与算法入门书，引导读者手脑并用地学习，强烈推荐算法初学者阅读。”</p>
+<p>特性：</p>
+<ul>
+<li>全书采用动画图解，内容清晰易懂、学习曲线平滑，引导初学者探索数据结构与算法的知识地图。</li>
+<li>源代码可一键运行，帮助读者在练习中提升编程技能，了解算法工作原理和数据结构底层实现。</li>
+<li>鼓励读者互助学习，提问与评论通常可在两日内得到回复。</li>
+</ul>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/202401172138001.png"></p>
+<p>在线地址：<a target="_blank" rel="noopener" href="https://www.hello-algo.com/">https://www.hello-algo.com/</a></p>
+<p>开源地址：<a target="_blank" rel="noopener" href="https://github.com/krahets/hello-algo">https://github.com/krahets/hello-algo</a></p>
+<h2 id="ReadMedium-解锁Medium付费文章"><a href="#ReadMedium-解锁Medium付费文章" class="headerlink" title="ReadMedium 解锁Medium付费文章"></a><a target="_blank" rel="noopener" href="https://readmedium.com/">ReadMedium</a> 解锁Medium付费文章</h2><p><a target="_blank" rel="noopener" href="https://readmedium.com/">ReadMedium - Read Translated Articles for Free!</a> 是一个在线网站，能够解析Medium付费文章，因此免费就可以阅读Medium会员文章了。</p>
+<p>使用方式：复制Medium付费会员文章的链接，打开ReadMedium官网粘贴，点击 <code>Go</code> 即可解析文章免费阅读，或者在将“read”添加到付费文章网址前面即可。</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/202401152327309.png"></p>
+<blockquote>
+<p>Medium简介：</p>
+<p><a target="_blank" rel="noopener" href="https://medium.com/">Medium</a> 是一个国外的在线内容发布平台，提供各种领域的原创文章和博客。这个网站上的作者可以分享自己的想法、经验和见解，读者可以通过浏览不同主题的文章来获取有关技术、科学、写作、自我提升等方面的知识和见解。Medium 提供了一个开放的平台，让作者和读者可以互动和交流，同时也为写作爱好者提供了一个展示和推广自己作品的机会。</p>
+</blockquote>
+<p>在线地址：<a target="_blank" rel="noopener" href="https://readmedium.com/">https://readmedium.com/</a></p>
+<h2 id="油猴脚本一键解锁Medium"><a href="#油猴脚本一键解锁Medium" class="headerlink" title="油猴脚本一键解锁Medium"></a>油猴脚本一键解锁Medium</h2><p><a target="_blank" rel="noopener" href="https://greasyfork.org/zh-CN/scripts/481493-medium-unlocker-2023-12-06-updated">Medium解锁</a> 是一个油猴脚本，能够自动检测Medium文章（包括子域名和自定义域名），替换URL为readmedium.com来解锁Medium付费文章，使用的时候只需要点击一下按钮即可。原理其实替换URL为<a target="_blank" rel="noopener" href="https://readmedium.com/">ReadMedium</a> 这个网站来解锁Medium付费文章。</p>
+<p>安装地址：<a target="_blank" rel="noopener" href="https://greasyfork.org/zh-CN/scripts/481493-medium-unlocker-2023-12-06-updated">https://greasyfork.org/zh-CN/scripts/481493-medium-unlocker-2023-12-06-updated</a></p>
+<blockquote>
+<p>首先需要安装一个用户脚本管理器,根据当前使用的浏览器来<a target="_blank" rel="noopener" href="https://greasyfork.org/zh-CN">选择一个用户脚本管理器</a>。</p>
+<p><a target="_blank" rel="noopener" href="https://greasyfork.org/scripts/481493-medium-unlocker-2023-12-06-updated">Medium 解锁</a>页面点击安装，或者直接复制main.js的全部内容手动添加脚本。</p>
+<p><strong>使用方法</strong></p>
+<p>点击文章页面出现的绿色悬浮球</p>
+</blockquote>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/202401152326399.png"></p>
+<h2 id="浏览器扩展medium-parser-extension解锁Medium"><a href="#浏览器扩展medium-parser-extension解锁Medium" class="headerlink" title="浏览器扩展medium-parser-extension解锁Medium"></a>浏览器扩展<a target="_blank" rel="noopener" href="https://github.com/Xatta-Trone/medium-parser-extension">medium-parser-extension</a>解锁Medium</h2><p>推荐没法安装油猴脚本的同学再安装<a target="_blank" rel="noopener" href="https://github.com/Xatta-Trone/medium-parser-extension">medium-parser-extension</a>，原因是油猴脚本更加轻量级。</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/202401152335426.png"></p>
+<p>安装地址：<a target="_blank" rel="noopener" href="https://chrome.google.com/webstore/detail/medium-parser/egejbknaophaadmhijkepokfchkbnelc?hl=en&authuser=0">https://chrome.google.com/webstore/detail/medium-parser/egejbknaophaadmhijkepokfchkbnelc?hl=en&authuser=0</a></p>
+<p>开源地址：<a target="_blank" rel="noopener" href="https://github.com/Xatta-Trone/medium-parser-extension">https://github.com/Xatta-Trone/medium-parser-extension</a></p>
+<blockquote>
+<p>无法访问chrome商店的同学可以在 <a target="_blank" rel="noopener" href="https://github.com/Xatta-Trone/medium-parser-extension">Xatta-Trone&#x2F;medium-parser-extension: Read medium.com and medium based articles using google web cache. (github.com)</a> 下载后手动安装</p>
+</blockquote>
+<h2 id="播客推荐：鲸鱼赫兹"><a href="#播客推荐：鲸鱼赫兹" class="headerlink" title="播客推荐：鲸鱼赫兹"></a>播客推荐：<a target="_blank" rel="noopener" href="https://www.xiaoyuzhoufm.com/podcast/60acac17cd0329ebb0a9243b?s=eyJ1IjoiNWViZmQyY2MyMWFjODU4MDQxMzViYjkzIn0=">鲸鱼赫兹</a></h2><p>《鲸鱼赫兹》是一档自由探索城市风味的泛文化类播客，每周二更新。 我们一起聊聊不同的城市生活，分享风味的各种话题，回归日常的、自然的表达，探讨城市生活的不同方式和可能。</p>
+<p> 这里有姥姥熬的红豆沙，有四月末的香樟树，有日本宇治的抹茶…… 那些关于人、关于季节、关于城市的风味，其实是生活与时间的对话。 </p>
+<p>小宇宙收听链接： <a target="_blank" rel="noopener" href="https://www.xiaoyuzhoufm.com/podcast/60acac17cd0329ebb0a9243b?s=eyJ1IjoiNWViZmQyY2MyMWFjODU4MDQxMzViYjkzIn0=">鲸鱼赫兹 | 小宇宙 </a></p>
+<p> <img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/202401211556199.png"></p>
+<h1 id="资讯"><a href="#资讯" class="headerlink" title="资讯"></a>资讯</h1><ul>
+<li><a target="_blank" rel="noopener" href="https://www.cls.cn/detail/1574005">小米首款5G卫星移动终端入网   财联社 </a>：该设备支持天通卫星通信制式，以及 5G-增强移动宽带（eMBB）技术，搭载安卓系统，这将是小米首款5G卫星移动终端。</li>
+<li><a target="_blank" rel="noopener" href="https://www.zhihu.com/question/639927719">iPhone15 价格跌至史上最低，苹果公司罕见促销难挡股价跌势  知乎 )</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.huxiu.com/article/2559805.html">拼不到30岁的杭漂，开始回流北上广深-虎嗅网 (huxiu.com)</a></li>
+<li><a target="_blank" rel="noopener" href="https://deepmind.google/discover/blog/alphageometry-an-olympiad-level-ai-system-for-geometry/">谷歌 DeepMind 的 AI 新突破：构建 AGI 关键一步</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.bloomberg.com/news/articles/2024-01-18/youtube-and-spotify-join-netflix-in-not-launching-apple-vision-pro-apps">流媒体 YouTube 和 Spotify 将不会为苹果头显开发专门应用，跟 Netflix 一样。</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.ithome.com/0/745/256.htm">华为纯血鸿蒙 HarmonyOS NEXT 开发者预览版首批 Beta 招募开启，支持 Mate 60 &#x2F; Pro、X5 机型 - IT之家 </a></li>
+</ul>
+<p>🎉 本文同步更新于  <a target="_blank" rel="noopener" href="https://github.com/starsight/TechWeekly">https://github.com/starsight/TechWeekly</a></p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>请我一杯咖啡吧！</div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/wechatpay.png" alt="热夏 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="/images/alipay.jpg" alt="热夏 支付宝">
+        <span>支付宝</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>热夏
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://www.lifeee.top/posts/4820.html" title="网上冲浪周刊第27期：大寒已至，暖春将启🍃">https://www.lifeee.top/posts/4820.html</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="followme">
+  <span>欢迎关注我的其它发布渠道</span>
+
+  <div class="social-list">
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="/atom.xml">
+            <span class="icon">
+              <i class="fa fa-rss"></i>
+            </span>
+
+            <span class="label">RSS</span>
+          </a>
+      </div>
+  </div>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/%E5%86%B2%E6%B5%AA/" rel="tag"><i class="fa fa-tag"></i> 冲浪</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/posts/38961.html" rel="prev" title="网上冲浪周刊第25期：新年新气象🌱">
+                  <i class="fa fa-angle-left"></i> 网上冲浪周刊第25期：新年新气象🌱
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/posts/30183.html" rel="next" title="网上冲浪周刊第29期： 有钱没钱回家过年 🧧">
+                  网上冲浪周刊第29期： 有钱没钱回家过年 🧧 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments gitalk-container"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 2018 – 
+    <span itemprop="copyrightYear">2024</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">热夏</span>
+  </div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>站点总字数：</span>
+    <span title="站点总字数">629k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">9:32</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/next-theme-pjax/0.6.0/pjax.min.js" integrity="sha256-vxLn1tSKWD4dqbMRyv940UYw4sXgMtYcK6reefzZrao=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lozad.js/1.16.0/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script><script src="/js/pjax.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+  <script src="/js/third-party/pace.js"></script>
+
+
+  
+  <script data-pjax async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","mhchem":false,"js":{"url":"//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
+
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"upwon","repo":"upwon.github.io","client_id":"7e047047ecee7317452b","client_secret":"c60fbdf0eb19e7264e33ab780319e4d420a58fee","admin_user":"upwon","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":null,"js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"1781c6bcffe9b953b4a6760426899bc5"}</script>
+<script src="/js/third-party/comments/gitalk.js"></script>
+
+
+  <script type="text/javascript" src="/js/clicklove.js"></script>
+   
+ 
+
+</body>
+</html>

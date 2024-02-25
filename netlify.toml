@@ -1,0 +1,4 @@
+[[redirects]]
+  from = "https://summerblog.netlify.app/*"
+  to = "https://www.lifeee.top/:splat"
+  force = true

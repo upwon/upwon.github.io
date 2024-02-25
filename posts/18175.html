@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.1.1">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/myapple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/myfavicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/myfavicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/myapple-touch-icon-next.png" color="#222">
+  <meta name="google-site-verification" content="google2fc64c2b92961282.html">
+  <meta name="baidu-site-verification" content="s6BwSjIZYB">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.loli.net/css?family='LXGW+WenKai+LITE':300,300italic,400,400italic,700,700italic%7C'LXGW+WenKai+Screen':300,300italic,400,400italic,700,700italic%7C'LXGW+WenKai':300,300italic,400,400italic,700,700italic%7C'Noto+Serif+SC':300,300italic,400,400italic,700,700italic%7C'EB+Garamond':300,300italic,400,400italic,700,700italic%7C'PingFang+SC':300,300italic,400,400italic,700,700italic%7C'Microsoft+YaHei':300,300italic,400,400italic,700,700italic%7C'sans-serif':300,300italic,400,400italic,700,700italic%7CMa+Shan+Zheng:300,300italic,400,400italic,700,700italic%7CLXGW+WenKai+Screen:300,300italic,400,400italic,700,700italic%7CLXGW+WenKai:300,300italic,400,400italic,700,700italic%7CMenlo:300,300italic,400,400italic,700,700italic%7CMonaco:300,300italic,400,400italic,700,700italic%7CConsolas:300,300italic,400,400italic,700,700italic%7CSource+Code+Pro:300,300italic,400,400italic,700,700italic%7Csystem-ui:300,300italic,400,400italic,700,700italic%7Cmonospace:300,300italic,400,400italic,700,700italic%7Csans-serif:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha256-yIDrPSXHZdOZhAqiBP7CKzIwMQmRCJ8UeB8Jo17YC4o=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/themes/blue/pace-theme-minimal.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"www.lifeee.top","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.19.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"mac","show_result":true},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="Draw.io 是一款优秀的全平台开源绘图软件，支持在线绘图，而且还支持在 VS Code 中绘图。操作简便，内置模板丰富，支持导出 png 、svg 、VSDX(Visio格式) 、PDF 等格式的文件。简直优秀至极，赶快去试一试吧。😉">
+<meta property="og:type" content="article">
+<meta property="og:title" content="全平台开源绘图利器 Draw.io">
+<meta property="og:url" content="https://www.lifeee.top/posts/18175.html">
+<meta property="og:site_name" content="热夏的博客">
+<meta property="og:description" content="Draw.io 是一款优秀的全平台开源绘图软件，支持在线绘图，而且还支持在 VS Code 中绘图。操作简便，内置模板丰富，支持导出 png 、svg 、VSDX(Visio格式) 、PDF 等格式的文件。简直优秀至极，赶快去试一试吧。😉">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200628210339.jpg">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200628203416.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200628203255.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200628203341.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200628203649.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200628171718.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200628172208.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200628171940.png">
+<meta property="og:image" content="https://gblobscdn.gitbook.com/assets%2F-LdydZP_hsYeTeVUpPcf%2F-Ldyd_rCCzK2yvYaWEI3%2F-LdydgnPX-THlkkORiQ3%2F1-1.png?alt=media">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200628173111.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/c55aab25ly1gg8aeout4ej20av07gdfy.jpg">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/c55aab25ly1gg8aexvr33j20h30iyjs6.jpg">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/c55aab25ly1gg8af5nz6nj20bo09ijrr.jpg">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200628173111.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/c55aab25ly1gg8afotzkhj20jd0ejaao.jpg">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/c55aab25ly1gg8afwshudj20tp0in751.jpg">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/c55aab25ly1gg8ag531spj211b08a75a.jpg">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/c55aab25ly1gg8agbw9s9j20ex0d3q3n.jpg">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200628192901.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200628204828.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200628204848.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200628205015.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200628205036.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200628205135.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200628204703.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200628204625.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200628193354.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200628193719.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200628193927.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200628194217.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200628194332.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200628194401.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200628194529.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200628194635.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200628194829.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200628195032.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200628195105.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200628195652.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200628200036.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200628202125.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200628202407.png">
+<meta property="article:published_time" content="2020-06-28T12:55:16.000Z">
+<meta property="article:modified_time" content="2022-11-14T16:57:17.393Z">
+<meta property="article:author" content="热夏">
+<meta property="article:tag" content="善用佳软">
+<meta property="article:tag" content="开源">
+<meta property="article:tag" content="绘图">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200628210339.jpg">
+
+
+<link rel="canonical" href="https://www.lifeee.top/posts/18175.html">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://www.lifeee.top/posts/18175.html","path":"posts/18175.html","title":"全平台开源绘图利器 Draw.io"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>全平台开源绘图利器 Draw.io | 热夏的博客</title>
+  
+
+
+
+
+
+
+
+<link href="https://fonts.loli.net/css?family=Noto+Serif+SC:400,500,700&display=swap&subset=chinese-simplified" rel="stylesheet">
+<link rel="stylesheet" href="https://npm.elemecdn.com/lxgw-wenkai-screen-webfont@1.7.0/style.css" />
+
+<link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&display=swap" rel="stylesheet">
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="热夏的博客" type="application/atom+xml">
+<style>.darkmode--activated{--body-bg-color:#282828;--content-bg-color:#333;--card-bg-color:#555;--text-color:#ccc;--blockquote-color:#bbb;--link-color:#ccc;--link-hover-color:#eee;--brand-color:#ddd;--brand-hover-color:#ddd;--table-row-odd-bg-color:#282828;--table-row-hover-bg-color:#363636;--menu-item-bg-color:#555;--btn-default-bg:#222;--btn-default-color:#ccc;--btn-default-border-color:#555;--btn-default-hover-bg:#666;--btn-default-hover-color:#ccc;--btn-default-hover-border-color:#666;--highlight-background:#282b2e;--highlight-foreground:#a9b7c6;--highlight-gutter-background:#34393d;--highlight-gutter-foreground:#9ca9b6}.darkmode--activated img{opacity:.75}.darkmode--activated img:hover{opacity:.9}.darkmode--activated code{color:#69dbdc;background:0 0}button.darkmode-toggle{z-index:9999}.darkmode-ignore,img{display:flex!important}.beian img{display:inline-block!important}</style></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">热夏的博客</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-heart fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%BC%94%E7%A4%BA"><span class="nav-number">1.</span> <span class="nav-text">演示</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%8B%E8%BD%BD"><span class="nav-number">2.</span> <span class="nav-text">下载</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E6%AC%A1%E4%BD%BF%E7%94%A8"><span class="nav-number">3.</span> <span class="nav-text">第一次使用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BF%9D%E5%AD%98%E5%9C%A8%E6%9C%AC%E5%9C%B0%E7%A1%AC%E7%9B%98"><span class="nav-number">3.1.</span> <span class="nav-text">保存在本地硬盘</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BF%9D%E5%AD%98%E5%9C%A8%E4%BA%91%E7%AB%AF"><span class="nav-number">3.2.</span> <span class="nav-text">保存在云端</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%93%8D%E4%BD%9C%E7%95%8C%E9%9D%A2%E7%AE%80%E4%BB%8B"><span class="nav-number">4.</span> <span class="nav-text">操作界面简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AE%80%E5%8D%95%E7%9A%84%E6%93%8D%E4%BD%9C%E5%B8%AE%E5%8A%A9"><span class="nav-number">5.</span> <span class="nav-text">简单的操作帮助</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B7%BB%E5%8A%A0%E6%96%87%E6%9C%AC%E6%A1%86"><span class="nav-number">5.1.</span> <span class="nav-text">添加文本框</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9%E6%A0%BC%E5%BC%8F"><span class="nav-number">5.2.</span> <span class="nav-text">修改格式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9F%A5%E7%9C%8B%E5%9B%BE%E8%A1%A8%E5%86%85%E5%AE%B9"><span class="nav-number">5.3.</span> <span class="nav-text">查看图表内容</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BA%BF%E6%9D%A1%E8%BF%9E%E6%8E%A5%E7%82%B9%E5%9C%A8%E5%9B%BE%E5%BD%A2%E4%B8%AD%E4%BB%BB%E6%84%8F%E4%BD%8D%E7%BD%AE"><span class="nav-number">5.4.</span> <span class="nav-text">线条连接点在图形中任意位置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%BF%AB%E9%80%9F%E5%A4%8D%E5%88%B6"><span class="nav-number">5.5.</span> <span class="nav-text">快速复制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9B%BE%E5%BD%A2%E5%AF%B9%E9%BD%90%E5%92%8C%E7%AD%89%E8%B7%9D"><span class="nav-number">5.6.</span> <span class="nav-text">图形对齐和等距</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%BE%E5%BA%93"><span class="nav-number">6.</span> <span class="nav-text">图库</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%90%9C%E7%B4%A2%E5%BD%A2%E7%8A%B6"><span class="nav-number">6.1.</span> <span class="nav-text">搜索形状</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BE%BF%E7%AC%BA%E6%9C%AC"><span class="nav-number">6.2.</span> <span class="nav-text">便笺本</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B6%E5%AE%83%E5%9B%BE%E5%BD%A2%E5%BA%93"><span class="nav-number">6.3.</span> <span class="nav-text">其它图形库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9B%B4%E5%A4%9A%E5%9B%BE%E5%BD%A2%E2%80%A6"><span class="nav-number">6.4.</span> <span class="nav-text">+更多图形…</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B7%BB%E5%8A%A0%E5%9B%BE%E5%BA%93"><span class="nav-number">6.5.</span> <span class="nav-text">添加图库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%89%93%E5%BC%80%E5%9B%BE%E5%BA%93"><span class="nav-number">6.6.</span> <span class="nav-text">打开图库</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BA%95%E5%9B%BE"><span class="nav-number">7.</span> <span class="nav-text">底图</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%A1%B5%E9%9D%A2%E8%AE%BE%E7%BD%AE"><span class="nav-number">7.1.</span> <span class="nav-text">页面设置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%83%8C%E6%99%AF%E5%BA%95%E5%9B%BE%E6%80%BB%E7%BB%93"><span class="nav-number">7.2.</span> <span class="nav-text">背景底图总结</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-number">8.</span> <span class="nav-text">总结</span></a></li><li class="nav-item nav-level-2"><a class="nav-link"><span class="nav-number">9.</span> <span class="nav-text"></span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="热夏"
+      src="/images/head.jpg">
+  <p class="site-author-name" itemprop="name">热夏</p>
+  <div class="site-description" itemprop="description">空山新雨后，天气晚来秋。</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">81</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">42</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/upwon" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;upwon" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:w1244753906@gmail.com" title="E-Mail → mailto:w1244753906@gmail.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.lifeee.top//atom.xml" title="RSS → https:&#x2F;&#x2F;www.lifeee.top&#x2F;&#x2F;atom.xml" rel="noopener me"><i class="fa fa-rss fa-fw"></i>RSS</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+        <div class="pjax">
+        </div>
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.lifeee.top/posts/18175.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/head.jpg">
+      <meta itemprop="name" content="热夏">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="热夏的博客">
+      <meta itemprop="description" content="空山新雨后，天气晚来秋。">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="全平台开源绘图利器 Draw.io | 热夏的博客">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          全平台开源绘图利器 Draw.io
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2020-06-28 20:55:16" itemprop="dateCreated datePublished" datetime="2020-06-28T20:55:16+08:00">2020-06-28</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-11-15 00:57:17" itemprop="dateModified" datetime="2022-11-15T00:57:17+08:00">2022-11-15</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%95%99%E7%A8%8B/" itemprop="url" rel="index"><span itemprop="name">教程</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/" itemprop="url" rel="index"><span itemprop="name">善用佳软</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>4.7k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>4 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200628210339.jpg"></p>
+<p>Draw.io 是一款优秀的全平台开源绘图软件，支持在线绘图，而且还支持在 VS Code 中绘图。操作简便，内置模板丰富，支持导出 <code>png </code>、<code>svg</code> 、<code>VSDX</code>(Visio格式) 、<code>PDF</code> 等格式的文件。简直优秀至极，赶快去试一试吧。😉</p>
+<span id="more"></span>
+
+
+
+<h2 id="演示"><a href="#演示" class="headerlink" title="演示"></a>演示</h2><p>首先看一下各个平台的 Draw io 🍻</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200628203416.png" alt="桌面端演示"></p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200628203255.png" alt="VS Code 演示"></p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200628203341.png" alt="导出后用Visio打开"></p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200628203649.png" alt="网页端演示"></p>
+<h2 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h2><p>根据自身喜好选择在线绘图，或者下载桌面端。</p>
+<p>在线绘图: <a target="_blank" rel="noopener" href="https://www.draw.io/?lang=zh">https://www.draw.io/?lang=zh</a></p>
+<p>下载(Github Release) : <a target="_blank" rel="noopener" href="https://github.com/jgraph/drawio/releases">https://github.com/jgraph/drawio/releases</a></p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200628171718.png"></p>
+<p>下载时可根据 OS 选择不同的版本，windows平台有安装版与免安装版。</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200628172208.png"></p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200628171940.png" alt="在线绘图示例"></p>
+<h2 id="第一次使用"><a href="#第一次使用" class="headerlink" title="第一次使用"></a>第一次使用</h2><p>不论在windows、mac、还是透过浏览器使用draw.io，第一次使用时会出现下面的画面，可以选择Google Drive（google云端）、OneDrive（Microsoft云端）或Device（本机硬盘），依自已的喜好点选，如果真的不知道要选什么，请使用Device（本机硬盘），直接将档案存放在所操作的电脑中</p>
+<p>右下角的「Language」点击后可以切换，点击要使用的语言后，使用浏览器的在线版请点击「重新加载」或直接按「F5」键，使用桌面版请关闭程序后再重新启动即可</p>
+<p><img data-src="https://gblobscdn.gitbook.com/assets%2F-LdydZP_hsYeTeVUpPcf%2F-Ldyd_rCCzK2yvYaWEI3%2F-LdydgnPX-THlkkORiQ3%2F1-1.png?alt=media" alt="img"></p>
+<h3 id="保存在本地硬盘"><a href="#保存在本地硬盘" class="headerlink" title="保存在本地硬盘"></a>保存在本地硬盘</h3><p>填入文件名，然后选择一个模板，也可以选择空白。选择一个合适的模板，会提高绘图效率。</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200628173111.png"></p>
+<h3 id="保存在云端"><a href="#保存在云端" class="headerlink" title="保存在云端"></a>保存在云端</h3><p>若如果点选Google Drive的话会出现如下的画面，需要点选「Authorize」授权</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/c55aab25ly1gg8aeout4ej20av07gdfy.jpg" alt="image"></p>
+<p>按顺输入 google 账户和密码</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/c55aab25ly1gg8aexvr33j20h30iyjs6.jpg" alt="image"></p>
+<p>登录成功会看到如下的画面，如果之后不想用Google Drive，可以选「change storage」做切换</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/c55aab25ly1gg8af5nz6nj20bo09ijrr.jpg" alt="image"></p>
+<p>点击 “Create New Diagram”后会出现如下的画面，可以选现有的模板或者空白图表，选好后，请点击右下角的「新增」</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200628173111.png"></p>
+<p>「Use root folder？」 这是问您是否要在google drive的根目录（google drive的第一层文件夹）做新增，如果要在根目录新增请点击「是」，若想要放在自订的文件夹中，请选择「No， pick folder…」</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/c55aab25ly1gg8afotzkhj20jd0ejaao.jpg" alt="image"></p>
+<p>点击「No， pick folder…」的用户会看到如下图的google driver的「选择目录」页面，请点击要储存的文件夹后，点击左下方的「选取」</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/c55aab25ly1gg8afwshudj20tp0in751.jpg" alt="image"></p>
+<p>点击”选取”后，此文件就直接储存在 google drive 中，可以通过左上角的图案，点选后会打开目前档案所存放在 google drive 的目录页面</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/c55aab25ly1gg8ag531spj211b08a75a.jpg" alt="image"></p>
+<p>系统预设只有Google Drive（google云端）、OneDrive（Microsoft云端）或Device（本机硬盘），但其实还有更多的选择，如果选择Device（本机硬盘）的话，点选画面最上方的「档案-&gt;另存新档」就会出现如下的画面，可以存放在地方，例如github及dropbox等… 这部分有空时后可以试试</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/c55aab25ly1gg8agbw9s9j20ex0d3q3n.jpg" alt="image"></p>
+<h2 id="操作界面简介"><a href="#操作界面简介" class="headerlink" title="操作界面简介"></a>操作界面简介</h2><p>draw.io打开后，会看到如下的画面，和一般的软件操作区块差不多</p>
+<ul>
+<li>功能菜单：最上方有”文件、编辑、查看”等</li>
+<li>工具栏：位于功能菜单的下方，主要提供放大、缩小、删除、等功能，都是图标，看不懂可以将鼠标移过去后会有提示说明</li>
+<li>图形库：在软件的最左方为可以使用的图形库，可在最下方的「+更多图形…」去新增或删除，自定义要显示的图形库内容</li>
+<li>格式面版：在软件的最右方，当鼠标点击到某图形、文字、图表时会自动切换成被选取组件可以设置的参数内容</li>
+<li>编辑区：软件正中间，要编辑的块，点击图形库内的图形后，会自动把所点选的图形插入到编辑区中</li>
+<li>标签：位于编辑区的最下方，有一个像excel的页面功能，可以建立不同的标签在同一个文件中</li>
+</ul>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200628192901.png"></p>
+<h2 id="简单的操作帮助"><a href="#简单的操作帮助" class="headerlink" title="简单的操作帮助"></a>简单的操作帮助</h2><h3 id="添加文本框"><a href="#添加文本框" class="headerlink" title="添加文本框"></a>添加文本框</h3><ul>
+<li>图形说明文字：直接在图片、图形上用鼠标快点左键两下就会出现文字输入的光标”|」 在闪，这个位置不一定，有的会在图形的中间、有的会在下方、右方…，如果不清楚就先输入要显示的文字就看得到了</li>
+<li>纯文本区块：新增的方式就在图表空白的地方直接用鼠标快点左键两下就会新增一个文字块</li>
+</ul>
+<h3 id="修改格式"><a href="#修改格式" class="headerlink" title="修改格式"></a>修改格式</h3><p>一般来说点选图形后会出现三个页面，分别为</p>
+<ul>
+<li><p>对象样式：可修改图形的颜色、边线、透明度及一些特效（圆角、手绘等）</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200628204828.png"></p>
+</li>
+<li><p>文字：文字的设定就和word差不多，而且图标都一样，但字体的部分目前中文字是没办法俢改的</p>
+</li>
+</ul>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200628204848.png"></p>
+<p>不论是在图形上的文字还是纯文字区块，別头串的方式都一样，直接用鼠标点选要配置的文字区块或图形后再到右方的格式面版设定，点选鼠标一下所设定的文字是全部文字一起修改。 如果要部分文字修改，请改用鼠标快点左键两下就会切换成文字输入模式，用鼠标拉选要设定的文字内容，然后再到右方的格式面版去做设定，这部分要注意一下，要先选取要设定的文字后设定才有用，可以设定每一个文字的大小、颜色格式等… 如下图</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200628205015.png"></p>
+<ul>
+<li>调整：在此设定该图形的大小和位置和角度</li>
+</ul>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200628205036.png"></p>
+<p>一般来说除非要特别去设定，要不然都是在点选图形后，会出现如下图在周围会有蓝色的点，可以去拉动改变大小，而上方黑军的像一个圈的图，可以拉动改变角度</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200628205135.png"></p>
+<h3 id="查看图表内容"><a href="#查看图表内容" class="headerlink" title="查看图表内容"></a>查看图表内容</h3><p>检查图表，一般来说都可以用鼠标去点选工具栏上有+、-符号的放大镜来放大或缩小，上下左右移则可以拉动图表编辑区的右方及下方的滚轴去观看，那下方主要是透过键盘及鼠标来快速浏览</p>
+<ul>
+<li>放大：先按ctrl或alt键后，鼠标滚轮往上推</li>
+<li>缩小：先按ctrl或alt键后，鼠标滚轮往下推</li>
+<li>看图表的上方：鼠标滚轮往上推</li>
+<li>看图表的下方：鼠标滚轮往下推</li>
+<li>看图表的左方：先按shift键后，鼠标滚轮往上推</li>
+<li>看图表的右方：先按shift键后，鼠标滚轮往下推</li>
+<li>重置：ctrl+h 键</li>
+<li>自由移动：真的很不习惯鼠标滚来滚去的人，可以通过按住鼠标右键，然后拉动即可，如果鼠标的滚轮有支持点选功能的，也可以按住鼠标滚轮来移动</li>
+<li>画略图：当画面的内容很多，然后又需要放很大来俢改时，可以通过画略图来看目前编辑的块在整个图表的那个区块，可以拉动画略图中蓝色的方框移到想看的位置，右下角的蓝点可以改变观看的范围</li>
+</ul>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200628204703.png"></p>
+<h3 id="线条连接点在图形中任意位置"><a href="#线条连接点在图形中任意位置" class="headerlink" title="线条连接点在图形中任意位置"></a>线条连接点在图形中任意位置</h3><p>因为图形或线条在拉动时会有吸附及固定距离移动，当要把线条拉动到图形的中间时一般的拉动是没办法的，此时可以透过先拉动线条后再按alt键就可以自由移动</p>
+<h3 id="快速复制"><a href="#快速复制" class="headerlink" title="快速复制"></a>快速复制</h3><p>一般快速复制就是ctrl+c（复制）然后再ctrl+v（贴上）然后再把新复制的东西移到要放的位置，如果要再快一点，例如要复制很多的个同样的图形或文字到不同的位置，可以先按键 ctrl 键，然后再用鼠标点选中图形、文字不放，接着拉动，在拉动时会有该图形的外框，移到要放的位置后，再放开鼠标（ctrl键不放），可以一直随意拉动复制</p>
+<h3 id="图形对齐和等距"><a href="#图形对齐和等距" class="headerlink" title="图形对齐和等距"></a>图形对齐和等距</h3><p>当图形有很多，就会需要用到对齐及等距，让画面看起来比较漂亮，可以透过最上方的功能菜单「调整-&gt;对齐」及「调整-&gt; 等距分布」来处理，在点选前需要先把要处理的图形先选取起来，选取的方式可以用鼠标拉动一个范围来圈选，另外也可以透过按住ctrl或shift后去点选要的图形，这边建议使用shift，因为ctrl按着后再用鼠标点选图形不小心拉动后就变成复制的功能</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200628204625.png"></p>
+<h2 id="图库"><a href="#图库" class="headerlink" title="图库"></a>图库</h2><p>Draw.io操作画面的最左方就是图库，里面有几个区块，如下图</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200628193354.png"></p>
+<h3 id="搜索形状"><a href="#搜索形状" class="headerlink" title="搜索形状"></a>搜索形状</h3><p>可以通过这个区块，用关键字去寻找是否有可以使用的图形，但需要输入英文字，目前测试中文字是无法找到内容，如下图测试使用「爱心」及「fheart」</p>
+<ul>
+<li><p>爱心：未找到相关结果</p>
+</li>
+<li><p>heart：相关内容会显示在下方，最下面还有「更多结果」，可点击观看</p>
+</li>
+</ul>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200628193719.png"></p>
+<h3 id="便笺本"><a href="#便笺本" class="headerlink" title="便笺本"></a>便笺本</h3><p>这东西有点像便利贴的功能，该区块的底字「把元件拖到这里」，使用的方式就是如此简单，把自已设计好而且需要重复使用的元件，拖到此区块，之后要使用时就可以直接点选加入，如下图自已建立了一个防火墙的图，然后加文字改颜色，然后把此组件点选拖到便签本区块后就会自已建立，之后要使用时，直接点选就会加到中间的图表编辑区了</p>
+<p>注意看在便签本的右方有一个「？」 这是帮助的功能，会打开官方的说明文件，里面还有动画，看了就知道如何使用，网址如下</p>
+<p><a target="_blank" rel="noopener" href="https://desk.draw.io/support/solutions/articles/16000042367">https://desk.draw.io/support/solutions/articles/16000042367</a>     </p>
+<p>新增只要把图形拖到区块中即可，那删除就没办法直接del，需要点选右方「笔」编辑的图案，点击后会出现如下的编辑视窗，直接点击该图形右上角的「x」图，就可以删除，点选右下角的「储存」</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200628193927.png"></p>
+<h3 id="其它图形库"><a href="#其它图形库" class="headerlink" title="其它图形库"></a>其它图形库</h3><p>其他看到通用、杂项、高级….. 很多的图形都是通过下方的”+更多图形…”来新增，可点击名称展开或收合</p>
+<h3 id="更多图形…"><a href="#更多图形…" class="headerlink" title="+更多图形…"></a>+更多图形…</h3><p>可以通过此选项，去设定要显示在左方图形库中的内容，依自已的需求设定新增或删除，点击「+更多图形…」后会出现如下图的窗口，可以点选左边的项目，右边会出现该项目的图形内容，想要 使用的话就在前方的方框点选打勾，再点击右下角的「套用」，注意一下，下方有个「记住设定」，有勾选的话，下次再开起软件，所选的图形库就会一起载入</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200628194217.png"></p>
+<h3 id="添加图库"><a href="#添加图库" class="headerlink" title="添加图库"></a>添加图库</h3><p>如果要创建像模板中的Mikrotik.xml图库，可以从功能菜单的「档案-&gt;新增图库」来新增，如下图</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200628194332.png"></p>
+<p>点击”文件-&gt;添加图库”后会出现如下的窗口，先修改文件名称，然后依图面上的文字「把图片或链接干到这里」，就可以加入到图库中</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200628194401.png"></p>
+<p>从电脑文件夹中选取要的图片，点击然后拖拉到此区块中就会自动加入，点击下方文字可以编名图档名称，确认好后，点击右下角的「保存」</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200628194529.png"></p>
+<p>保存好后，回到draw.io的操作画面，就会在左方的图形库中看到刚刚所建立的「未命名图库.xml」</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200628194635.png"></p>
+<h3 id="打开图库"><a href="#打开图库" class="headerlink" title="打开图库"></a>打开图库</h3><p>要載入自訂的圖庫，可以從功能選單的「檔案-&gt;開啟圖庫」，選取xml圖庫檔後，就會自動載入，可在左方的圖形庫中找到</p>
+<p>要导入自定义的图库，可以从功能菜单的「文件-&gt;打开图库」，选取xml图库文件后，就会自动加载，可在左方的图形库中找到</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200628194829.png"></p>
+<h2 id="底图"><a href="#底图" class="headerlink" title="底图"></a>底图</h2><p>添加底图当前有2种方式</p>
+<ol>
+<li>页面设置</li>
+<li>直接将文件拖曳到编辑画面</li>
+</ol>
+<h3 id="页面设置"><a href="#页面设置" class="headerlink" title="页面设置"></a>页面设置</h3><p>可以从功能功中的”文件-&gt;页面设置”，如下图，点击图片旁边的”变更”</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200628195032.png"></p>
+<p>按画面中的提示「把图片或链接拖到这里」，然后点选套用后，就可以看到图片加载到画面中，但无法点选到底图</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200628195105.png"></p>
+<p>直接点选底图然后拖曳到draw.io中的编辑画面，底图就会出现在画面中，接着点选底图，右边就会出现如下图的功能列，请点击「调整图形」分页，然后点击移到最后，背景就出现啦。</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200628195652.png"></p>
+<p>页面设定方式，不会将底图加入图层中，真的只是背景，所以通过图层（查看-&gt;图层 Ctrl+Shift+L），去把目前的图层的勾勾取消时，背景还是显示在画面中，但通过「直接将背景图片拖曳到编辑画面」的方式时，该底图就是存在于图层中，所以可以控制是否显示底图。当然我们可以利用图层来放背景图，另一个图层画图形。</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200628200036.png"></p>
+<h3 id="背景底图总结"><a href="#背景底图总结" class="headerlink" title="背景底图总结"></a>背景底图总结</h3><p>使用「页面设定」的方式加入底图，在画图加物件时，不会移动到底图，因为它只是背景，但使用「直接将背景图片拖曳到编辑画面」这种方式，加物件拉动时可能不小心移动到底图，那处理方式就是先点底图，然后在编辑中选择锁定，或者用快捷键 Ctrl + L 锁定住背景图。这样就不会造成对象和底图的位置跑掉。</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200628202125.png"></p>
+<p>另一个比较好的方式就是使用「直接将背景图片拖曳到编辑画面」+「图层」，意思就是把底图就设定为一个图层，其它对象就新增图层去处理，然后可以把底图的图层做锁定，如下图，背景为底图的图层，然后前方有一个锁的图案，点选后可以「锁定&#x2F;解锁」，锁定后就不会再点选到底图喽！</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200628202407.png"></p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>Draw.io 十分好用，上手容易，绘制的图形美观简介。 关于其它没有讲解到的内容与用法可以在网络上搜一下就有啦 🌞</p>
+<br />
+
+<br />
+
+<p>参考</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/jgraph/drawio">https://github.com/jgraph/drawio</a></p>
+<p><a target="_blank" rel="noopener" href="https://gxiangco.gitbook.io/draw-io/">gitbook Draw.io</a></p>
+</blockquote>
+<br />
+
+<br />
+
+<h2 id=""><a href="#" class="headerlink" title=""></a><br /></h2><blockquote class="blockquote-center">
+<p>深夜无风新雨歇，凉月，露迎珠颗入圆荷。</p>
+<p>–《定风波·江水沉沉帆影过》</p>
+
+</blockquote>
+
+
+
+<br />
+
+<br />
+
+<br />
+
+<br />
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>请我一杯咖啡吧！</div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/wechatpay.png" alt="热夏 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="/images/alipay.jpg" alt="热夏 支付宝">
+        <span>支付宝</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>热夏
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://www.lifeee.top/posts/18175.html" title="全平台开源绘图利器 Draw.io">https://www.lifeee.top/posts/18175.html</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="followme">
+  <span>欢迎关注我的其它发布渠道</span>
+
+  <div class="social-list">
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="/atom.xml">
+            <span class="icon">
+              <i class="fa fa-rss"></i>
+            </span>
+
+            <span class="label">RSS</span>
+          </a>
+      </div>
+  </div>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/" rel="tag"><i class="fa fa-tag"></i> 善用佳软</a>
+              <a href="/tags/%E5%BC%80%E6%BA%90/" rel="tag"><i class="fa fa-tag"></i> 开源</a>
+              <a href="/tags/%E7%BB%98%E5%9B%BE/" rel="tag"><i class="fa fa-tag"></i> 绘图</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/posts/5546.html" rel="prev" title="Vivado与VS Code:强强联手3-自动对齐代码">
+                  <i class="fa fa-angle-left"></i> Vivado与VS Code:强强联手3-自动对齐代码
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/posts/52368.html" rel="next" title="QT 控件自适应窗口大小布局">
+                  QT 控件自适应窗口大小布局 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments gitalk-container"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 2018 – 
+    <span itemprop="copyrightYear">2024</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">热夏</span>
+  </div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>站点总字数：</span>
+    <span title="站点总字数">629k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">9:32</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/next-theme-pjax/0.6.0/pjax.min.js" integrity="sha256-vxLn1tSKWD4dqbMRyv940UYw4sXgMtYcK6reefzZrao=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lozad.js/1.16.0/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script><script src="/js/pjax.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+  <script src="/js/third-party/pace.js"></script>
+
+
+  
+  <script data-pjax async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","mhchem":false,"js":{"url":"//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
+
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"upwon","repo":"upwon.github.io","client_id":"7e047047ecee7317452b","client_secret":"c60fbdf0eb19e7264e33ab780319e4d420a58fee","admin_user":"upwon","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":null,"js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"5a69b820df0a485b9becc17b23e57fa0"}</script>
+<script src="/js/third-party/comments/gitalk.js"></script>
+
+
+  <script type="text/javascript" src="/js/clicklove.js"></script>
+   
+ 
+
+</body>
+</html>

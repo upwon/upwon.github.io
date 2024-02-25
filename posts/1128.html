@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.1.1">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/myapple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/myfavicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/myfavicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/myapple-touch-icon-next.png" color="#222">
+  <meta name="google-site-verification" content="google2fc64c2b92961282.html">
+  <meta name="baidu-site-verification" content="s6BwSjIZYB">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.loli.net/css?family='LXGW+WenKai+LITE':300,300italic,400,400italic,700,700italic%7C'LXGW+WenKai+Screen':300,300italic,400,400italic,700,700italic%7C'LXGW+WenKai':300,300italic,400,400italic,700,700italic%7C'Noto+Serif+SC':300,300italic,400,400italic,700,700italic%7C'EB+Garamond':300,300italic,400,400italic,700,700italic%7C'PingFang+SC':300,300italic,400,400italic,700,700italic%7C'Microsoft+YaHei':300,300italic,400,400italic,700,700italic%7C'sans-serif':300,300italic,400,400italic,700,700italic%7CMa+Shan+Zheng:300,300italic,400,400italic,700,700italic%7CLXGW+WenKai+Screen:300,300italic,400,400italic,700,700italic%7CLXGW+WenKai:300,300italic,400,400italic,700,700italic%7CMenlo:300,300italic,400,400italic,700,700italic%7CMonaco:300,300italic,400,400italic,700,700italic%7CConsolas:300,300italic,400,400italic,700,700italic%7CSource+Code+Pro:300,300italic,400,400italic,700,700italic%7Csystem-ui:300,300italic,400,400italic,700,700italic%7Cmonospace:300,300italic,400,400italic,700,700italic%7Csans-serif:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha256-yIDrPSXHZdOZhAqiBP7CKzIwMQmRCJ8UeB8Jo17YC4o=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/themes/blue/pace-theme-minimal.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"www.lifeee.top","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.19.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"mac","show_result":true},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="临近6.18电商促销日，火绒在官方微博、微信等平台收到不少用户反馈，称电脑不断出现托盘闪烁弹窗，点击后即为淘宝天猫的6.18促销网页。火绒工程师溯源调查后发现，该弹窗均来自于常用软件“搜狗输入法”，该广告配置通过云控下发，无法通过设置关闭。进一步分析发现，该软件除了疯狂弹窗，还存在统计用户浏览器浏览历史数据等越位行为，符合广告程序的定义。目前，火绒已对该软件中广告模块进行拦截查杀。  病毒名称">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【转载】搜狗输入法强制推广“618红包广告” 用户不堪其扰">
+<meta property="og:url" content="https://www.lifeee.top/posts/1128.html">
+<meta property="og:site_name" content="热夏的博客">
+<meta property="og:description" content="临近6.18电商促销日，火绒在官方微博、微信等平台收到不少用户反馈，称电脑不断出现托盘闪烁弹窗，点击后即为淘宝天猫的6.18促销网页。火绒工程师溯源调查后发现，该弹窗均来自于常用软件“搜狗输入法”，该广告配置通过云控下发，无法通过设置关闭。进一步分析发现，该软件除了疯狂弹窗，还存在统计用户浏览器浏览历史数据等越位行为，符合广告程序的定义。目前，火绒已对该软件中广告模块进行拦截查杀。  病毒名称">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/imgimage-20200610193140774.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img20200610193432.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img20200610193903.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img215210xooo7p7rk1q2qh72.jpg">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img215219oihl567ihvamhkgt.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img215228jmrj05zxv5kexlma.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img20200610195113.jpg">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/c55aab25ly1gfnftq9wxjj20oz0lctag.jpg">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/c55aab25ly1gfnfuijz71j20se0dqq3x.jpg">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/c55aab25ly1gfnfvbj3b1j20jd0gugmo.jpg">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/c55aab25ly1gfnfw5gi2vj206e03l0sk.jpg">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/c55aab25ly1gfnfwpbwxgj20l407gq2z.jpg">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/c55aab25ly1gfnfxj617lj20eb0nzq9k.jpg">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/c55aab25ly1gfnfy7pedjj210q0mswgk.jpg">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/c55aab25ly1gfnfzemjtpj20l50vu772.jpg">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img215335p4vd2addagg3knnl.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img215335jtxb225i50wi5vi0.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img215335ur5risr4r424r4v1.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img215335sdefpgo2rn22n2nz.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img215336sf6yuafsfy64ex21.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img215336vrjgxfjxxgxf4fe8.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img215336t0dvwk6djwvjz5dj.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img215336aparhnvlh25qtn2n.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img215336vmfh434ttr6as4ws.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img215336gyyhp8z68nxdn9od.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/c55aab25ly1gfngf7mcs9j20mg0to0uv.jpg">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img215336puwkiyhn3x7ir76n.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img215336ts200fpy2z2wspii.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img215337aoyqy0lxkkcrlzqr.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200610201643.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200610201721.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200610201808.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200610201903.png">
+<meta property="article:published_time" content="2020-06-10T11:23:01.000Z">
+<meta property="article:modified_time" content="2022-11-14T16:57:17.403Z">
+<meta property="article:author" content="热夏">
+<meta property="article:tag" content="网络安全">
+<meta property="article:tag" content="数学">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/imgimage-20200610193140774.png">
+
+
+<link rel="canonical" href="https://www.lifeee.top/posts/1128.html">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://www.lifeee.top/posts/1128.html","path":"posts/1128.html","title":"【转载】搜狗输入法强制推广“618红包广告” 用户不堪其扰"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>【转载】搜狗输入法强制推广“618红包广告” 用户不堪其扰 | 热夏的博客</title>
+  
+
+
+
+
+
+
+
+<link href="https://fonts.loli.net/css?family=Noto+Serif+SC:400,500,700&display=swap&subset=chinese-simplified" rel="stylesheet">
+<link rel="stylesheet" href="https://npm.elemecdn.com/lxgw-wenkai-screen-webfont@1.7.0/style.css" />
+
+<link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&display=swap" rel="stylesheet">
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="热夏的博客" type="application/atom+xml">
+<style>.darkmode--activated{--body-bg-color:#282828;--content-bg-color:#333;--card-bg-color:#555;--text-color:#ccc;--blockquote-color:#bbb;--link-color:#ccc;--link-hover-color:#eee;--brand-color:#ddd;--brand-hover-color:#ddd;--table-row-odd-bg-color:#282828;--table-row-hover-bg-color:#363636;--menu-item-bg-color:#555;--btn-default-bg:#222;--btn-default-color:#ccc;--btn-default-border-color:#555;--btn-default-hover-bg:#666;--btn-default-hover-color:#ccc;--btn-default-hover-border-color:#666;--highlight-background:#282b2e;--highlight-foreground:#a9b7c6;--highlight-gutter-background:#34393d;--highlight-gutter-foreground:#9ca9b6}.darkmode--activated img{opacity:.75}.darkmode--activated img:hover{opacity:.9}.darkmode--activated code{color:#69dbdc;background:0 0}button.darkmode-toggle{z-index:9999}.darkmode-ignore,img{display:flex!important}.beian img{display:inline-block!important}</style></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">热夏的博客</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-heart fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B5%81%E6%B0%93%E6%90%9C%E7%8B%97"><span class="nav-number">1.</span> <span class="nav-text">流氓搜狗</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%99%84%EF%BC%9A%E3%80%90%E5%88%86%E6%9E%90%E6%8A%A5%E5%91%8A%E3%80%91"><span class="nav-number">2.</span> <span class="nav-text">附：【分析报告】</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E3%80%81-%E8%AF%A6%E7%BB%86%E5%88%86%E6%9E%90"><span class="nav-number">2.1.</span> <span class="nav-text">一、    详细分析</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BA%8C%E3%80%81-%E9%99%84%E5%BD%95"><span class="nav-number">2.2.</span> <span class="nav-text">二、    附录</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="热夏"
+      src="/images/head.jpg">
+  <p class="site-author-name" itemprop="name">热夏</p>
+  <div class="site-description" itemprop="description">空山新雨后，天气晚来秋。</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">81</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">42</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/upwon" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;upwon" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:w1244753906@gmail.com" title="E-Mail → mailto:w1244753906@gmail.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.lifeee.top//atom.xml" title="RSS → https:&#x2F;&#x2F;www.lifeee.top&#x2F;&#x2F;atom.xml" rel="noopener me"><i class="fa fa-rss fa-fw"></i>RSS</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+        <div class="pjax">
+        </div>
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.lifeee.top/posts/1128.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/head.jpg">
+      <meta itemprop="name" content="热夏">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="热夏的博客">
+      <meta itemprop="description" content="空山新雨后，天气晚来秋。">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="【转载】搜狗输入法强制推广“618红包广告” 用户不堪其扰 | 热夏的博客">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          【转载】搜狗输入法强制推广“618红包广告” 用户不堪其扰
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2020-06-10 19:23:01" itemprop="dateCreated datePublished" datetime="2020-06-10T19:23:01+08:00">2020-06-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-11-15 00:57:17" itemprop="dateModified" datetime="2022-11-15T00:57:17+08:00">2022-11-15</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">技术</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E8%BD%AC%E8%BD%BD/" itemprop="url" rel="index"><span itemprop="name">转载</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>3.3k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>3 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/imgimage-20200610193140774.png" alt="火绒安全日志"></p>
+<p> 临近6.18电商促销日，火绒在官方微博、微信等平台收到不少用户反馈，称电脑不断出现托盘闪烁弹窗，点击后即为淘宝天猫的6.18促销网页。火绒工程师溯源调查后发现，该弹窗均来自于常用软件“搜狗输入法”，该广告配置通过云控下发，无法通过设置关闭。进一步分析发现，该软件除了疯狂弹窗，还存在统计用户浏览器浏览历史数据等越位行为，符合广告程序的定义。目前，火绒已对该软件中广告模块进行拦截查杀。</p>
+<blockquote>
+<p>病毒名称：Adware&#x2F;Sogou.a   病毒ID：DFFE5437C89E3403</p>
+</blockquote>
+<p>本文转载自 <a target="_blank" rel="noopener" href="http://bbs.huorong.cn/thread-72058-1-1.html">火绒安全论坛</a> <a target="_blank" rel="noopener" href="http://bbs.huorong.cn/thread-72058-1-1.html">http://bbs.huorong.cn/thread-72058-1-1.html</a></p>
+<span id="more"></span>
+
+
+
+
+
+<h2 id="流氓搜狗"><a href="#流氓搜狗" class="headerlink" title="流氓搜狗"></a>流氓搜狗</h2><p>临近6.18电商促销日，火绒在官方微博、微信等平台收到不少用户反馈，称电脑不断出现托盘闪烁弹窗，点击后即为淘宝天猫的6.18促销网页。火绒工程师溯源调查后发现，该弹窗均来自于常用软件“搜狗输入法”，该广告配置通过云控下发，无法通过设置关闭。进一步分析发现，该软件除了疯狂弹窗，还存在统计用户浏览器浏览历史数据等越位行为，符合广告程序的定义。目前，火绒已对该软件中广告模块进行拦截查杀。</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img20200610193432.png" alt="查杀图 "></p>
+<p>根据分析，“搜狗输入法”通过云控，向用户下发专门添加了用以在6.18期间弹窗的相关组件，该组件与“搜狗输入法”主程序功能之间并无任何关联作用。用户安装运行“搜狗输入法”后，就会频繁收到托盘闪烁弹窗，如果不小心点击，就会打开关于天猫6.18整个推广促销网页。    虽然右键可暂时退出该弹窗，但根据其云控下发的配置，5小时后仍旧会再次顽固弹出，循环往复，严重影响了用户的正常上网及工作。 </p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img20200610193903.png"></p>
+<p>​       除此之外，更为严重的是“搜狗输入法”还会收集用户本地的安全软件、广告拦截工具的运行状态，甚至搜集用户IE浏览器和搜狗浏览器历史记录数量和页面标题数量，并回传至后台服务器，推测用以制作用户画像进行精准推广。该行为涉及隐私数据，严重越位。存在损害用户权益的风险。    由于该软件下载量较多，导致受影响的用户范围较大，火绒在用户群、论坛、微博、微信、邮箱等各平台均收到大量的相关反馈与私信求助。目前，火绒最新版已对“搜狗输入法”内的弹窗与搜集用户信息的模块进行拦截查杀。需要注意的是，火绒查杀该广告模块后或导致“搜狗输入法”的“工具”功能无法使用，但不影响键入文字等主要功能。   </p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img215210xooo7p7rk1q2qh72.jpg" alt="图：火绒各平台的私信求助"></p>
+<p>​      </p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img215219oihl567ihvamhkgt.png" alt="图：火绒用户群的反馈情况  "></p>
+<p>​    <img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img215228jmrj05zxv5kexlma.png" alt="图：火绒论坛反馈信息"></p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img20200610195113.jpg" alt="图：知乎相关话题讨论 "></p>
+<p>​    弹窗问题由来已久，继去年人民日报点名批评弹窗乱象后，今年两会期间也有政协委员建议将过度弹窗的软件厂商列入失信名单。但随着流量经济愈发至上，部分软件厂商已然越过雷池，将弹窗流氓化、病毒化，对于此类软件和程序，火绒将会持续、及时进行拦截查杀，保护用户权益。同时我们也呼吁广大软件厂商抱表寝绳，合理逐利，注重用户体验才能长远发展。    </p>
+<h2 id="附：【分析报告】"><a href="#附：【分析报告】" class="headerlink" title="附：【分析报告】"></a>附：【分析报告】</h2><h3 id="一、-详细分析"><a href="#一、-详细分析" class="headerlink" title="一、    详细分析"></a><strong>一、    详细分析</strong></h3><p>近期，搜狗输入法用户大量遇到6.18托盘广告弹窗的情况，该流氓推广行为通过云控下发，在搜狗输入法界面中未发现相关功能开关。广告弹窗程序showinfo.exe由sgutil.dll释放执行，sgutil.dll被sgtool.exe调用。相关代码，如下图所示：  </p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/c55aab25ly1gfnftq9wxjj20oz0lctag.jpg" alt="sgtool.exe加载执行sgutil.dll"></p>
+<p>  sgutil.dll执行”StartPopupServer”导出函数后，会根据云端配置释放执行托盘广告模块showinfo.exe。相关代码，如下图所示： </p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/c55aab25ly1gfnfuijz71j20se0dqq3x.jpg" alt="根据配置决定是否释放执行showinfo模块"></p>
+<p><strong>showinfo模块</strong>  </p>
+<p>showInfo.exe模块主要负责弹出桌面托盘广告图标及更新广告配置。当此模块运行之后，首先会对存放于%Appdata%\LocalLow\SogouPY\Popup\traynet\目录下的配置资源config.ini进行AES解密并读取其中的配置信息，相关信息如下图所示：     </p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/c55aab25ly1gfnfvbj3b1j20jd0gugmo.jpg" alt="AES解密并读取配置信息"></p>
+<p>   解密后的config.ini配置信息如下图所示：   </p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/c55aab25ly1gfnfw5gi2vj206e03l0sk.jpg" alt="解密后的config.ini信息  "></p>
+<p>解密并读取配置信息无误之后，showInfo.exe模块便会收集：系统硬件签名、主机运行的安全软件等信息，连同搜狗输入法的版本信息一起回传。收集的安全软件信息如下图所示：      </p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/c55aab25ly1gfnfwpbwxgj20l407gq2z.jpg" alt="收集的安全软件信息 "></p>
+<p>​    收集安全软件运行信息相关代码如下图所示：</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/c55aab25ly1gfnfxj617lj20eb0nzq9k.jpg" alt="收集安全软件信息  "></p>
+<p>   收集的安全软件信息以标记位形式发送给服务器（sfsw及sfw参数中0,1代表各家安全软件运行状态。0代表未运行，1代表正在运行），相关信息如下图所示：   </p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/c55aab25ly1gfnfy7pedjj210q0mswgk.jpg" alt="收集的主机信息内容"></p>
+<p>  收集完所需的主机信息之后，程序便会将其与“<a target="_blank" rel="noopener" href="http://api.pinyin.sogou.com/v1/bubble/ad%E2%80%9C%E5%8A%A0%E5%AF%86%E5%8F%91%E9%80%81%E7%BB%99%E6%9C%8D%E5%8A%A1%E5%99%A8%E2%80%9Chttp://get.sogou.com/q%E2%80%9D%EF%BC%8C">http://api.pinyin.sogou.com/v1/bubble/ad“加密发送给服务器“http://get.sogou.com/q”，</a> 发送加密信息相关代码如下图所示 ： </p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/c55aab25ly1gfnfzemjtpj20l50vu772.jpg" alt="发送加密信息"></p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img215335p4vd2addagg3knnl.png" alt="传输的数据信息 ">   </p>
+<p> 服务器根据发送信息，返回加密数据。程序通过AES算法解密之后便得到托盘广告所需的配置信息，解密数据相关代码如下图所示：  </p>
+<p>  <img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img215335jtxb225i50wi5vi0.png" alt="AES解密返回数据 ">   </p>
+<p> 解密后的配置数据如下图所示：</p>
+<p>​    <img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img215335ur5risr4r424r4v1.png" alt="解密后的配置数据">   </p>
+<p>当得到所需的托盘广告配置信息以后，程序便将其AES加密并更新到<code>%Appdata%\LocalLow\SogouPY\Popup\traynet\</code>目录下的net.ini文件中。之后，开始检查当前系统时间是否在net.ini配置中所规定的“sdate”到“edate”时间范围之内，并且查询当前系统时间距离上次关闭广告托盘的时间（config.ini中的lastclose字段值）是否大于5个小时（net.ini中的interval字段值），满足上述两个条件则弹出托盘广告，相关代码如下图所示：</p>
+<p>​    <img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img215335sdefpgo2rn22n2nz.png" alt="时间检测"></p>
+<p>弹出广告托盘相关现象如下图所示： </p>
+<p>​     <img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img215336sf6yuafsfy64ex21.png" alt="广告托盘">   </p>
+<p>  <strong>sgutil模块</strong></p>
+<p>  在sgutil.dll加载执行后会根据云端返回的配置决定是否弹出托盘广告,广告弹窗的功能开关只能由云控页面控制（hxxp:&#x2F;&#x2F;api.pinyin.sogou.com&#x2F;v1&#x2F;config&#x2F;netswitch_pc），在搜狗输入法界面中，未发现相关弹窗功能开关。从云端请求的配置信息中“trayad”为弹出开关标记位，如下图所示：</p>
+<p>​      <img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img215336vrjgxfjxxgxf4fe8.png" alt="云端配置">     当“trayad”标记位为1时，sgutil.dll会从资源中释放执行showinfo模块。相关代码，如下图所示：     </p>
+<p>  <img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img215336t0dvwk6djwvjz5dj.png" alt="从资源中释放showinfo模块">     sgutil.dll会间隔6个小时取最新云端开关的状态。相关代码，如下图所示：</p>
+<p>​    <img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img215336aparhnvlh25qtn2n.png" alt="请求云端开关配置">     </p>
+<p>并且根据不同地区多次测试发现，请求到的开关配置会有所不同。相关现象如下图所示：     </p>
+<p> <img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img215336vmfh434ttr6as4ws.png" alt="不同地区多次测试得到不同的配置 ">   </p>
+<p> sgutil.dll除了会释放showInfo.exe外，还会收集Chrome内核浏览器和IE浏览器的历史记录信息。虽然历史记录中的URL、标题等数据也会进行收集，但是尚未发现上传上述数据的相关代码逻辑，现阶段仅会上传历史记录条目数量。在获取Chrome内核浏览器历史记录信息时，首先会根据预留的浏览器历史记录数据库路径找到数据库所在位置，如果预留路径为空，则不会执行任何操作。除IE浏览器外，现阶段最新的sgutil.dll模块只会获取搜狗浏览器的历史记录信息。获取Chrome内核浏览器历史记录信息，相关代码如下图所示： </p>
+<p>   <img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img215336gyyhp8z68nxdn9od.png" alt="搜集用户浏览器历史中的标题个数">   </p>
+<p> 获取搜狗浏览器历史记录信息相关代码，如下图所示： </p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/c55aab25ly1gfngf7mcs9j20mg0to0uv.jpg" alt="获取搜狗浏览器历史记录信息"></p>
+<p>​      </p>
+<p> 获取其他浏览器历史信息相关代码，如下图所示：</p>
+<p>​    <img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img215336puwkiyhn3x7ir76n.png" alt="获取其他Chomre内核浏览器历史记录信息"></p>
+<p>​     在搜集历史记录信息结束后，会将搜狗浏览器历史记录条目数拼接到HTTP请求参数中。相关代码，如下图所示：    </p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img215336ts200fpy2z2wspii.png" alt="将收集到的浏览器历史信息拼接为HTTP请求参数"></p>
+<p>​     获取IE浏览器中历史记录条目数和标题数相关代码，如下图所示：    </p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img215337aoyqy0lxkkcrlzqr.png" alt="IE浏览器历史记录信息收集"></p>
+<p>上述收集到的浏览器历史记录条目数量和标题数量，会被拼接为回传数据的请求链接地址，回传地址为：hxxp:&#x2F;&#x2F;ping.pinyin.sogou.com&#x2F;webtitlequery.gif。相关代码，如下图所示：</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200610201643.png" alt="拼接上传浏览器历史信息的请求参数"></p>
+<p>​     </p>
+<p>​       由于在目前最新模块中发现了疑似查找360安全浏览器等其他浏览器相关逻辑，但统计这些浏览器浏览历史的代码逻辑无法激活，所以推测以往版本中该模块曾安插过统计其他浏览器浏览历史的代码逻辑。通过分析发现，在2015年的sgutil.dll模块中，我们发现该模块会收集更多不同浏览器的历史记录信息，包括：360安全浏览器、搜狗浏览器、Chrome浏览器、360极速浏览器、猎豹浏览器和淘宝浏览器。相关代码及数据，如下图所示 ：     </p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200610201721.png" alt="早期的sgutil.dll模块历史记录信息收集代码"></p>
+<p>​    </p>
+<p> 2015年的sgutil.dll模块文件信息及数字签名信息，如下图所示：</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200610201808.png" alt="2015年的sgutil.dll模块文件信息及数字签名信息"></p>
+<h3 id="二、-附录"><a href="#二、-附录" class="headerlink" title="二、    附录"></a><strong>二、    附录</strong></h3><p>相关文件hash  </p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200610201903.png"></p>
+<p>​      </p>
+<p>本文转载自 <a target="_blank" rel="noopener" href="http://bbs.huorong.cn/thread-72058-1-1.html">火绒安全论坛</a> <a target="_blank" rel="noopener" href="http://bbs.huorong.cn/thread-72058-1-1.html">http://bbs.huorong.cn/thread-72058-1-1.html</a></p>
+<br />
+
+<br />
+
+<br />
+
+
+
+
+
+
+
+<blockquote class="blockquote-center">
+<p>用户不是上帝，用户只是任人宰割 ！</p>
+
+</blockquote>
+
+<br />
+
+<br />
+
+<br />
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>请我一杯咖啡吧！</div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/wechatpay.png" alt="热夏 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="/images/alipay.jpg" alt="热夏 支付宝">
+        <span>支付宝</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>热夏
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://www.lifeee.top/posts/1128.html" title="【转载】搜狗输入法强制推广“618红包广告” 用户不堪其扰">https://www.lifeee.top/posts/1128.html</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="followme">
+  <span>欢迎关注我的其它发布渠道</span>
+
+  <div class="social-list">
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="/atom.xml">
+            <span class="icon">
+              <i class="fa fa-rss"></i>
+            </span>
+
+            <span class="label">RSS</span>
+          </a>
+      </div>
+  </div>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/" rel="tag"><i class="fa fa-tag"></i> 网络安全</a>
+              <a href="/tags/%E6%95%B0%E5%AD%A6/" rel="tag"><i class="fa fa-tag"></i> 数学</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/posts/59557.html" rel="prev" title="C# VS Code launch:program … does not exist 不存在">
+                  <i class="fa fa-angle-left"></i> C# VS Code launch:program … does not exist 不存在
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/posts/45421.html" rel="next" title="向下就是天空">
+                  向下就是天空 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments gitalk-container"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 2018 – 
+    <span itemprop="copyrightYear">2024</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">热夏</span>
+  </div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>站点总字数：</span>
+    <span title="站点总字数">629k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">9:32</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/next-theme-pjax/0.6.0/pjax.min.js" integrity="sha256-vxLn1tSKWD4dqbMRyv940UYw4sXgMtYcK6reefzZrao=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lozad.js/1.16.0/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script><script src="/js/pjax.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+  <script src="/js/third-party/pace.js"></script>
+
+
+  
+  <script data-pjax async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","mhchem":false,"js":{"url":"//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
+
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"upwon","repo":"upwon.github.io","client_id":"7e047047ecee7317452b","client_secret":"c60fbdf0eb19e7264e33ab780319e4d420a58fee","admin_user":"upwon","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":null,"js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"835795fdcefd51e615dfe7563b8ac44a"}</script>
+<script src="/js/third-party/comments/gitalk.js"></script>
+
+
+  <script type="text/javascript" src="/js/clicklove.js"></script>
+   
+ 
+
+</body>
+</html>

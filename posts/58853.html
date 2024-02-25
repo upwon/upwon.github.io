@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.1.1">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/myapple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/myfavicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/myfavicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/myapple-touch-icon-next.png" color="#222">
+  <meta name="google-site-verification" content="google2fc64c2b92961282.html">
+  <meta name="baidu-site-verification" content="s6BwSjIZYB">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.loli.net/css?family='LXGW+WenKai+LITE':300,300italic,400,400italic,700,700italic%7C'LXGW+WenKai+Screen':300,300italic,400,400italic,700,700italic%7C'LXGW+WenKai':300,300italic,400,400italic,700,700italic%7C'Noto+Serif+SC':300,300italic,400,400italic,700,700italic%7C'EB+Garamond':300,300italic,400,400italic,700,700italic%7C'PingFang+SC':300,300italic,400,400italic,700,700italic%7C'Microsoft+YaHei':300,300italic,400,400italic,700,700italic%7C'sans-serif':300,300italic,400,400italic,700,700italic%7CMa+Shan+Zheng:300,300italic,400,400italic,700,700italic%7CLXGW+WenKai+Screen:300,300italic,400,400italic,700,700italic%7CLXGW+WenKai:300,300italic,400,400italic,700,700italic%7CMenlo:300,300italic,400,400italic,700,700italic%7CMonaco:300,300italic,400,400italic,700,700italic%7CConsolas:300,300italic,400,400italic,700,700italic%7CSource+Code+Pro:300,300italic,400,400italic,700,700italic%7Csystem-ui:300,300italic,400,400italic,700,700italic%7Cmonospace:300,300italic,400,400italic,700,700italic%7Csans-serif:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha256-yIDrPSXHZdOZhAqiBP7CKzIwMQmRCJ8UeB8Jo17YC4o=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/themes/blue/pace-theme-minimal.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"www.lifeee.top","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.19.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"mac","show_result":true},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="man 手册页是在Unix或类Unix操作系统中常用的一种花在线软件文档形式，内容包括计算机程序（包括库和系统调用），正式的标准和惯例，甚至是抽象的概念。我们都可以通过执行man命令调用手册页。本文主要内容为：为 Linux 下的 man 手册安装中文版并设置别名 cman ， 方便中英阅读对照；同时安装 Ｃ++ 的 man 手册文档，方便查阅库函数的使用细节。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Linux 下安装中文版 man 手册 以及 C++ 帮助手册">
+<meta property="og:url" content="https://www.lifeee.top/posts/58853.html">
+<meta property="og:site_name" content="热夏的博客">
+<meta property="og:description" content="man 手册页是在Unix或类Unix操作系统中常用的一种花在线软件文档形式，内容包括计算机程序（包括库和系统调用），正式的标准和惯例，甚至是抽象的概念。我们都可以通过执行man命令调用手册页。本文主要内容为：为 Linux 下的 man 手册安装中文版并设置别名 cman ， 方便中英阅读对照；同时安装 Ｃ++ 的 man 手册文档，方便查阅库函数的使用细节。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/ba920825gy1grdb8wqvaaj21s80to13l.jpg">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/ba920825gy1grd734x529j20xz0jsacb.jpg">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/ba920825gy1grd77lqdrdj20xz0jsng7.jpg">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/ba920825gy1grd876w823j20xz0jsas7.jpg">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/ba920825gy1grd8smjhbzj20xz0jsqm5.jpg">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/ba920825gy1grd9533h60j20xz0jsqld.jpg">
+<meta property="article:published_time" content="2021-06-10T09:07:55.000Z">
+<meta property="article:modified_time" content="2022-11-14T16:43:07.404Z">
+<meta property="article:author" content="热夏">
+<meta property="article:tag" content="教程">
+<meta property="article:tag" content="Linux">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/ba920825gy1grdb8wqvaaj21s80to13l.jpg">
+
+
+<link rel="canonical" href="https://www.lifeee.top/posts/58853.html">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://www.lifeee.top/posts/58853.html","path":"posts/58853.html","title":"Linux 下安装中文版 man 手册 以及 C++ 帮助手册"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Linux 下安装中文版 man 手册 以及 C++ 帮助手册 | 热夏的博客</title>
+  
+
+
+
+
+
+
+
+<link href="https://fonts.loli.net/css?family=Noto+Serif+SC:400,500,700&display=swap&subset=chinese-simplified" rel="stylesheet">
+<link rel="stylesheet" href="https://npm.elemecdn.com/lxgw-wenkai-screen-webfont@1.7.0/style.css" />
+
+<link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&display=swap" rel="stylesheet">
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="热夏的博客" type="application/atom+xml">
+<style>.darkmode--activated{--body-bg-color:#282828;--content-bg-color:#333;--card-bg-color:#555;--text-color:#ccc;--blockquote-color:#bbb;--link-color:#ccc;--link-hover-color:#eee;--brand-color:#ddd;--brand-hover-color:#ddd;--table-row-odd-bg-color:#282828;--table-row-hover-bg-color:#363636;--menu-item-bg-color:#555;--btn-default-bg:#222;--btn-default-color:#ccc;--btn-default-border-color:#555;--btn-default-hover-bg:#666;--btn-default-hover-color:#ccc;--btn-default-hover-border-color:#666;--highlight-background:#282b2e;--highlight-foreground:#a9b7c6;--highlight-gutter-background:#34393d;--highlight-gutter-foreground:#9ca9b6}.darkmode--activated img{opacity:.75}.darkmode--activated img:hover{opacity:.9}.darkmode--activated code{color:#69dbdc;background:0 0}button.darkmode-toggle{z-index:9999}.darkmode-ignore,img{display:flex!important}.beian img{display:inline-block!important}</style></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">热夏的博客</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-heart fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85-%E4%B8%AD%E6%96%87-man-%E6%89%8B%E5%86%8C"><span class="nav-number">1.</span> <span class="nav-text">安装 中文 man 手册</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9F%A5%E7%9C%8Bman-%E6%89%8B%E5%86%8C%E5%AE%89%E8%A3%85%E5%88%B0%E5%93%AA%E9%87%8C"><span class="nav-number">2.</span> <span class="nav-text">查看man 手册安装到哪里</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%BA-bash-%E8%AE%BE%E7%BD%AE%E4%B8%80%E4%B8%AA%E4%B8%AD%E6%96%87man%E7%9A%84%E5%88%AB%E5%90%8D"><span class="nav-number">3.</span> <span class="nav-text">为 bash 设置一个中文man的别名</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%BA-zsh-%E9%85%8D%E7%BD%AE%E5%88%AB%E5%90%8D"><span class="nav-number">4.</span> <span class="nav-text">为 zsh 配置别名</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85C-%E5%B8%AE%E5%8A%A9%E6%89%8B%E5%86%8C"><span class="nav-number">5.</span> <span class="nav-text">安装C++帮助手册</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE"><span class="nav-number">6.</span> <span class="nav-text">常用快捷键</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%99%84%E5%BD%951"><span class="nav-number">7.</span> <span class="nav-text">附录1</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%99%84%E5%BD%952"><span class="nav-number">8.</span> <span class="nav-text">附录2</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%99%84%E5%BD%953"><span class="nav-number">9.</span> <span class="nav-text">附录3</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE"><span class="nav-number">10.</span> <span class="nav-text">参考文献</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="热夏"
+      src="/images/head.jpg">
+  <p class="site-author-name" itemprop="name">热夏</p>
+  <div class="site-description" itemprop="description">空山新雨后，天气晚来秋。</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">81</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">42</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/upwon" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;upwon" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:w1244753906@gmail.com" title="E-Mail → mailto:w1244753906@gmail.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.lifeee.top//atom.xml" title="RSS → https:&#x2F;&#x2F;www.lifeee.top&#x2F;&#x2F;atom.xml" rel="noopener me"><i class="fa fa-rss fa-fw"></i>RSS</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+        <div class="pjax">
+        </div>
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.lifeee.top/posts/58853.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/head.jpg">
+      <meta itemprop="name" content="热夏">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="热夏的博客">
+      <meta itemprop="description" content="空山新雨后，天气晚来秋。">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Linux 下安装中文版 man 手册 以及 C++ 帮助手册 | 热夏的博客">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Linux 下安装中文版 man 手册 以及 C++ 帮助手册
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-06-10 17:07:55" itemprop="dateCreated datePublished" datetime="2021-06-10T17:07:55+08:00">2021-06-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-11-15 00:43:07" itemprop="dateModified" datetime="2022-11-15T00:43:07+08:00">2022-11-15</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%95%99%E7%A8%8B/" itemprop="url" rel="index"><span itemprop="name">教程</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>2.3k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>2 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/ba920825gy1grdb8wqvaaj21s80to13l.jpg"></p>
+<p>man 手册页是在Unix或类Unix操作系统中常用的一种花在线软件文档形式，内容包括计算机程序（包括库和系统调用），正式的标准和惯例，甚至是抽象的概念。我们都可以通过执行man命令调用手册页。本文主要内容为：为 Linux 下的 man 手册安装中文版并设置别名 cman ， 方便中英阅读对照；同时安装 Ｃ++ 的 man 手册文档，方便查阅库函数的使用细节。</p>
+<span id="more"></span>
+
+
+
+
+
+<h2 id="安装-中文-man-手册"><a href="#安装-中文-man-手册" class="headerlink" title="安装 中文 man 手册"></a>安装 中文 man 手册</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install manpages-zh</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="查看man-手册安装到哪里"><a href="#查看man-手册安装到哪里" class="headerlink" title="查看man 手册安装到哪里"></a>查看man 手册安装到哪里</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">dpkg -L manpages-zh | less</span><br></pre></td></tr></table></figure>
+
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/ba920825gy1grd734x529j20xz0jsacb.jpg"></p>
+<p>由上图可见，安装位置为 <code>/usr/share/man/zh_CN</code></p>
+<blockquote>
+<p>注： 从dpkg命令下退出请按 键盘的  <kbd>Q</kbd></p>
+</blockquote>
+<br />
+
+<br />
+
+<h2 id="为-bash-设置一个中文man的别名"><a href="#为-bash-设置一个中文man的别名" class="headerlink" title="为 bash 设置一个中文man的别名"></a>为 bash 设置一个中文man的别名</h2><p>为了不干扰原来 <code>man</code> 命令的使用，可以设置一个别名，比如 <code>cman</code></p>
+<p>​     修改 ~&#x2F;.bashrc 添加一个alias :</p>
+<p>修改方法1：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">vi ~/.bashrc</span><br><span class="line"><span class="built_in">alias</span> cman=<span class="string">&#x27;man -M /usr/share/man/zh_CN&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 使别名生效</span></span><br><span class="line"><span class="built_in">source</span> ~/.bashrc</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>修改方法2</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">&quot;alias cman=&#x27;man -M /usr/share/man/zh_CN&#x27;&quot;</span> &gt;&gt; ~/.bashrc</span><br><span class="line"></span><br><span class="line"><span class="comment"># 使别名生效</span></span><br><span class="line"><span class="built_in">source</span> ~/.bashrc</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/ba920825gy1grd77lqdrdj20xz0jsng7.jpg"></p>
+<p>这样以后查看 英文 继续使用 man 就行，查看中文版 使用 cman 命令就行，当然开两个终端中英对照更加有助于英语水平的提高 . 😀</p>
+<br />
+
+<br />
+
+<h2 id="为-zsh-配置别名"><a href="#为-zsh-配置别名" class="headerlink" title="为 zsh 配置别名"></a>为 zsh 配置别名</h2><p>若没有使用 zsh 可忽略这一步 ， 有的话执行下面的命令，因为 zsh 读取的配置文件和 bash 的不一样.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">&quot;alias cman=&#x27;man -M /usr/share/man/zh_CN&#x27;&quot;</span> &gt;&gt; ~/.zshrc</span><br><span class="line"></span><br><span class="line"><span class="comment"># 使别名生效</span></span><br><span class="line"><span class="built_in">source</span> ~/.zshrc</span><br></pre></td></tr></table></figure>
+
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/ba920825gy1grd876w823j20xz0jsas7.jpg"></p>
+<br />
+
+<br />
+
+
+
+<h2 id="安装C-帮助手册"><a href="#安装C-帮助手册" class="headerlink" title="安装C++帮助手册"></a>安装C++帮助手册</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install libstdc++-10-doc</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>这样就能查看一些 C++ 的东西了  ，比如 </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">man std::map</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>C++ 的好多好像没中文的，只能 man 了 ，不能 cman</p>
+</blockquote>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/ba920825gy1grd8smjhbzj20xz0jsqm5.jpg"></p>
+<br />
+
+<h2 id="常用快捷键"><a href="#常用快捷键" class="headerlink" title="常用快捷键"></a>常用快捷键</h2><blockquote>
+<p><strong>手册内容</strong></p>
+<p>多数手册包含以下几部分内容：</p>
+<ul>
+<li>NAME 功能的简单描述</li>
+<li>SYNOPSIS 语法格式</li>
+<li>DESCRIPTION 描述</li>
+<li>OPTIONS 选项</li>
+<li>ERRORS 描述出错场景，<strong>这在排查错误时很有帮助</strong></li>
+<li>NOTES 注意事项</li>
+<li>FILES 相关文件，例如对于man命令的FILES部分内容显示了它的配置文件位置等信息</li>
+<li>EXAMPLES 使用示例，会提供一些简单的示例</li>
+<li>BUGS 存在的bug，<strong>当遇到奇怪的问题时，不妨看看当前命令是否有已知的bug</strong></li>
+</ul>
+<p><strong>基本查看</strong></p>
+<p>手册的查看和less查看文本类似，可以参考《文本查看篇》或查看less命令的使用，这里介绍基本操作：</p>
+<ul>
+<li>空格 向下翻页</li>
+<li>Home 回到第一页</li>
+<li>End 跳到最后一页</li>
+<li>&#x2F;string 向前搜索string字符串</li>
+<li>?string 向后搜索string字符串</li>
+<li>n 下一个匹配字符</li>
+<li>N 上一个匹配字符</li>
+<li>q 退出</li>
+</ul>
+</blockquote>
+<br />
+
+<h2 id="附录1"><a href="#附录1" class="headerlink" title="附录1"></a>附录1</h2><blockquote>
+<p>对于 .bash_profile 和 .bashrc 区别 ：</p>
+<p>如果你想对bash的功能进行设置或者是定义一些别名，推荐你修改&#x2F;.bashrc文件，这样无论你以何种方式打开shell，你的配置都会生效。</p>
+<p>而如果你要更改一些环境变量，推荐你修改 ~&#x2F;.bash_profile文件，因为考虑到shell的继承特性，这些更改确实只应该被执行一次（而不是多次）。针对所有用户进行全局设置，推荐你在&#x2F;etc&#x2F;profile.d目录下添加以.sh结尾的文件，而不是去修改全局startup文件。</p>
+<p>摘录自 Charles Shih ，在此表示感谢</p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/sch0120/article/details/70256318">关于“.bash_profile”和“.bashrc”区别的总结_Charles Shih 技术博客</a></p>
+</blockquote>
+<br />
+
+<h2 id="附录2"><a href="#附录2" class="headerlink" title="附录2"></a>附录2</h2><p>其它版本Linux安装命令为：</p>
+<blockquote>
+<p><strong>Debian&#x2F;Ubuntu 安装</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt update</span><br><span class="line">sudo apt install manpages-zh</span><br></pre></td></tr></table></figure>
+
+<p><strong>Arch Linux</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pacman -Syu</span><br><span class="line">pacman -S man-pages-zh_cn man-pages-zh_tw</span><br></pre></td></tr></table></figure>
+
+<p><strong>Red Hat&#x2F;CentOS</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yum update</span><br><span class="line">yum install man-pages-zh-CN</span><br></pre></td></tr></table></figure>
+
+<p><strong>Fedora</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">dnf update</span><br><span class="line">dnf install man-pages-zh-CN</span><br></pre></td></tr></table></figure>
+</blockquote>
+<br />
+
+<h2 id="附录3"><a href="#附录3" class="headerlink" title="附录3"></a>附录3</h2><p> man命令并非仅仅能查看命令或者函数的介绍，在linux中，有丰富的帮助手册信息，并且每一个手册都有一个编号。编号和对应内容如下：</p>
+<table>
+<thead>
+<tr>
+<th align="left">编号</th>
+<th align="left">代表内容</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">1</td>
+<td align="left">可执行程序或shell命令，如ls</td>
+</tr>
+<tr>
+<td align="left">2</td>
+<td align="left">系统调用，如chdir</td>
+</tr>
+<tr>
+<td align="left">3</td>
+<td align="left">库函数，如printf</td>
+</tr>
+<tr>
+<td align="left">4</td>
+<td align="left">设备或特殊文件，如tty</td>
+</tr>
+<tr>
+<td align="left">5</td>
+<td align="left">配置文件格式或约定</td>
+</tr>
+<tr>
+<td align="left">6</td>
+<td align="left">游戏</td>
+</tr>
+<tr>
+<td align="left">7</td>
+<td align="left">杂项</td>
+</tr>
+<tr>
+<td align="left">8</td>
+<td align="left">管理命令，通常只有root用户可以使用</td>
+</tr>
+<tr>
+<td align="left">9</td>
+<td align="left">内核例程</td>
+</tr>
+<tr>
+<td align="left">n</td>
+<td align="left">内置命令，如cd</td>
+</tr>
+</tbody></table>
+<p>比如</p>
+<p>man 3 sleep</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/ba920825gy1grd9533h60j20xz0jsqld.jpg" alt="image"></p>
+<br />
+
+<br />
+
+<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><p>感谢以下参考文献 🍻</p>
+<p><a target="_blank" rel="noopener" href="https://www.wikiwand.com/en/Man_page">man page - Wikiwand</a></p>
+<p><a target="_blank" rel="noopener" href="https://segmentfault.com/a/1190000019972482">安装中文版 man 帮助命令 - SegmentFault 思否</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/sch0120/article/details/70256318">关于“.bash_profile”和“.bashrc”区别的总结_Charles Shih 技术博客</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.zhihu.com/question/22990045"> .bashrc文件和.bash_profile文件的区别？ - 知乎 (zhihu.com)</a></p>
+<p><a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/5293737/where-are-the-man-pages-for-c">linux - Where are the man pages for C++? - Stack Overflow</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.yanbinghu.com/2018/12/04/41455.html">Linux常用命令-man | 守望的个人博客 (yanbinghu.com)</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/185fe0a4f426">linux 设置中文版man手册 </a></p>
+<br />
+
+<br />
+
+<br />
+
+<blockquote class="blockquote-center">
+<p>山光忽西落，池月渐东上。<br>散发乘夕凉，开轩卧闲敞。<br>荷风送香气，竹露滴清响。<br>欲取鸣琴弹，恨无知音赏。<br>感此怀故人，中宵劳梦想。</p>
+<p>–  孟浩然 《<a target="_blank" rel="noopener" href="https://so.gushiwen.cn/shiwenv_9306064f2630.aspx">夏日南亭怀辛大</a>》</p>
+
+</blockquote>
+
+
+
+<br />
+
+<br />
+
+<br />
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>请我一杯咖啡吧！</div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/wechatpay.png" alt="热夏 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="/images/alipay.jpg" alt="热夏 支付宝">
+        <span>支付宝</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>热夏
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://www.lifeee.top/posts/58853.html" title="Linux 下安装中文版 man 手册 以及 C++ 帮助手册">https://www.lifeee.top/posts/58853.html</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="followme">
+  <span>欢迎关注我的其它发布渠道</span>
+
+  <div class="social-list">
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="/atom.xml">
+            <span class="icon">
+              <i class="fa fa-rss"></i>
+            </span>
+
+            <span class="label">RSS</span>
+          </a>
+      </div>
+  </div>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/%E6%95%99%E7%A8%8B/" rel="tag"><i class="fa fa-tag"></i> 教程</a>
+              <a href="/tags/Linux/" rel="tag"><i class="fa fa-tag"></i> Linux</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/posts/23490.html" rel="prev" title=" C++ stringstream 简介">
+                  <i class="fa fa-angle-left"></i>  C++ stringstream 简介
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/posts/36943.html" rel="next" title="包管理器 winget 使用指南">
+                  包管理器 winget 使用指南 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments gitalk-container"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 2018 – 
+    <span itemprop="copyrightYear">2024</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">热夏</span>
+  </div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>站点总字数：</span>
+    <span title="站点总字数">629k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">9:32</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/next-theme-pjax/0.6.0/pjax.min.js" integrity="sha256-vxLn1tSKWD4dqbMRyv940UYw4sXgMtYcK6reefzZrao=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lozad.js/1.16.0/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script><script src="/js/pjax.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+  <script src="/js/third-party/pace.js"></script>
+
+
+  
+  <script data-pjax async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","mhchem":false,"js":{"url":"//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
+
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"upwon","repo":"upwon.github.io","client_id":"7e047047ecee7317452b","client_secret":"c60fbdf0eb19e7264e33ab780319e4d420a58fee","admin_user":"upwon","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":null,"js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"5bf6f802bb7a623574ce5eb6adf0021c"}</script>
+<script src="/js/third-party/comments/gitalk.js"></script>
+
+
+  <script type="text/javascript" src="/js/clicklove.js"></script>
+   
+ 
+
+</body>
+</html>

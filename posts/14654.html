@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.1.1">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/myapple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/myfavicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/myfavicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/myapple-touch-icon-next.png" color="#222">
+  <meta name="google-site-verification" content="google2fc64c2b92961282.html">
+  <meta name="baidu-site-verification" content="s6BwSjIZYB">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.loli.net/css?family='LXGW+WenKai+LITE':300,300italic,400,400italic,700,700italic%7C'LXGW+WenKai+Screen':300,300italic,400,400italic,700,700italic%7C'LXGW+WenKai':300,300italic,400,400italic,700,700italic%7C'Noto+Serif+SC':300,300italic,400,400italic,700,700italic%7C'EB+Garamond':300,300italic,400,400italic,700,700italic%7C'PingFang+SC':300,300italic,400,400italic,700,700italic%7C'Microsoft+YaHei':300,300italic,400,400italic,700,700italic%7C'sans-serif':300,300italic,400,400italic,700,700italic%7CMa+Shan+Zheng:300,300italic,400,400italic,700,700italic%7CLXGW+WenKai+Screen:300,300italic,400,400italic,700,700italic%7CLXGW+WenKai:300,300italic,400,400italic,700,700italic%7CMenlo:300,300italic,400,400italic,700,700italic%7CMonaco:300,300italic,400,400italic,700,700italic%7CConsolas:300,300italic,400,400italic,700,700italic%7CSource+Code+Pro:300,300italic,400,400italic,700,700italic%7Csystem-ui:300,300italic,400,400italic,700,700italic%7Cmonospace:300,300italic,400,400italic,700,700italic%7Csans-serif:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha256-yIDrPSXHZdOZhAqiBP7CKzIwMQmRCJ8UeB8Jo17YC4o=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/themes/blue/pace-theme-minimal.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"www.lifeee.top","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.19.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"mac","show_result":true},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="Rclone (rsync for cloud storage) 是一个命令行程序,用于同步文件和目录，支持常见的 Amazon Drive 、Google Drive 、OneDrive 、Dropbox 等云存储。本文将演示在 Windows 平台下将 OneDrive 挂载为本地硬盘，并使用跨平台的 Rclone GUI 连接到云盘。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Windows平台下使用 Rclone 挂载 OneDrive 为本地硬盘">
+<meta property="og:url" content="https://www.lifeee.top/posts/14654.html">
+<meta property="og:site_name" content="热夏的博客">
+<meta property="og:description" content="Rclone (rsync for cloud storage) 是一个命令行程序,用于同步文件和目录，支持常见的 Amazon Drive 、Google Drive 、OneDrive 、Dropbox 等云存储。本文将演示在 Windows 平台下将 OneDrive 挂载为本地硬盘，并使用跨平台的 Rclone GUI 连接到云盘。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200502230457.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/202002/68747470733a2f2f72636c6f6e652e6f72672f696d672f6c6f676f5f6f6e5f6c696768745f5f686f72697a6f6e74616c5f636f6c6f722e737667.svg">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/202002/20200210092619.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/202002/20200211120423.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/202002/image-20200210093613457.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/202002/20200210105225.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/202002/image-20200210093901149.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/202002/20200210102009.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/202002/image-20200210104149803.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/202002/20200210104648.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/202002/20200210124133.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/202002/20200210124455.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/202002/20200211114237.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/202002/20200211120423.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/202002/20200211121437.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/202002/20200211122054.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/202002/20200211122953.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/202002/20200211123555.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/202002/20200211123950.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/202002/20200211144441.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200403082502.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/202002/20200210135030.png">
+<meta property="article:published_time" content="2020-02-11T03:34:18.000Z">
+<meta property="article:modified_time" content="2022-11-14T16:57:17.369Z">
+<meta property="article:author" content="热夏">
+<meta property="article:tag" content="善用佳软">
+<meta property="article:tag" content="Windows">
+<meta property="article:tag" content="tips">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200502230457.png">
+
+
+<link rel="canonical" href="https://www.lifeee.top/posts/14654.html">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://www.lifeee.top/posts/14654.html","path":"posts/14654.html","title":"Windows平台下使用 Rclone 挂载 OneDrive 为本地硬盘"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Windows平台下使用 Rclone 挂载 OneDrive 为本地硬盘 | 热夏的博客</title>
+  
+
+
+
+
+
+
+
+<link href="https://fonts.loli.net/css?family=Noto+Serif+SC:400,500,700&display=swap&subset=chinese-simplified" rel="stylesheet">
+<link rel="stylesheet" href="https://npm.elemecdn.com/lxgw-wenkai-screen-webfont@1.7.0/style.css" />
+
+<link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&display=swap" rel="stylesheet">
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="热夏的博客" type="application/atom+xml">
+<style>.darkmode--activated{--body-bg-color:#282828;--content-bg-color:#333;--card-bg-color:#555;--text-color:#ccc;--blockquote-color:#bbb;--link-color:#ccc;--link-hover-color:#eee;--brand-color:#ddd;--brand-hover-color:#ddd;--table-row-odd-bg-color:#282828;--table-row-hover-bg-color:#363636;--menu-item-bg-color:#555;--btn-default-bg:#222;--btn-default-color:#ccc;--btn-default-border-color:#555;--btn-default-hover-bg:#666;--btn-default-hover-color:#ccc;--btn-default-hover-border-color:#666;--highlight-background:#282b2e;--highlight-foreground:#a9b7c6;--highlight-gutter-background:#34393d;--highlight-gutter-foreground:#9ca9b6}.darkmode--activated img{opacity:.75}.darkmode--activated img:hover{opacity:.9}.darkmode--activated code{color:#69dbdc;background:0 0}button.darkmode-toggle{z-index:9999}.darkmode-ignore,img{display:flex!important}.beian img{display:inline-block!important}</style></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">热夏的博客</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-heart fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1%E3%80%81rclone%E4%B8%8B%E8%BD%BD%E5%9C%B0%E5%9D%80"><span class="nav-number">1.</span> <span class="nav-text">1、rclone下载地址</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2%E3%80%81%E4%B8%BArclone%E9%85%8D%E7%BD%AE%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F"><span class="nav-number">2.</span> <span class="nav-text">2、为rclone配置环境变量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3%E3%80%81%E6%A3%80%E6%9F%A5rclone%E6%98%AF%E5%90%A6%E9%85%8D%E7%BD%AE%E6%88%90%E5%8A%9F"><span class="nav-number">3.</span> <span class="nav-text">3、检查rclone是否配置成功</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4%E3%80%81%E5%BC%80%E5%A7%8B%E9%85%8D%E7%BD%AErclone"><span class="nav-number">4.</span> <span class="nav-text">4、开始配置rclone</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5%E3%80%81%E6%8C%82%E8%BD%BDOneDrive%E4%B8%BA%E6%9C%AC%E5%9C%B0%E7%A1%AC%E7%9B%98"><span class="nav-number">5.</span> <span class="nav-text">5、挂载OneDrive为本地硬盘</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#6%E3%80%81%E8%AE%BE%E7%BD%AE%E5%BC%80%E6%9C%BA%E8%87%AA%E5%90%AF%E5%8A%A8%E6%8C%82%E8%BD%BD"><span class="nav-number">6.</span> <span class="nav-text">6、设置开机自启动挂载</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7%E3%80%81%E5%8F%AF%E8%A7%86%E5%8C%96%E4%B8%8A%E4%BC%A0%E4%B8%8B%E8%BD%BD-RcloneBrowser"><span class="nav-number">7.</span> <span class="nav-text">7、可视化上传下载  RcloneBrowser</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="热夏"
+      src="/images/head.jpg">
+  <p class="site-author-name" itemprop="name">热夏</p>
+  <div class="site-description" itemprop="description">空山新雨后，天气晚来秋。</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">81</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">42</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/upwon" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;upwon" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:w1244753906@gmail.com" title="E-Mail → mailto:w1244753906@gmail.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.lifeee.top//atom.xml" title="RSS → https:&#x2F;&#x2F;www.lifeee.top&#x2F;&#x2F;atom.xml" rel="noopener me"><i class="fa fa-rss fa-fw"></i>RSS</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+        <div class="pjax">
+        </div>
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.lifeee.top/posts/14654.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/head.jpg">
+      <meta itemprop="name" content="热夏">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="热夏的博客">
+      <meta itemprop="description" content="空山新雨后，天气晚来秋。">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Windows平台下使用 Rclone 挂载 OneDrive 为本地硬盘 | 热夏的博客">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Windows平台下使用 Rclone 挂载 OneDrive 为本地硬盘
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2020-02-11 11:34:18" itemprop="dateCreated datePublished" datetime="2020-02-11T11:34:18+08:00">2020-02-11</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-11-15 00:57:17" itemprop="dateModified" datetime="2022-11-15T00:57:17+08:00">2022-11-15</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">技术</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%95%99%E7%A8%8B/" itemprop="url" rel="index"><span itemprop="name">教程</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>8.5k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>8 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200502230457.png"></p>
+<p>Rclone (rsync for cloud storage) 是一个命令行程序,用于同步文件和目录，支持常见的 Amazon Drive 、Google Drive 、OneDrive 、Dropbox 等云存储。本文将演示在 Windows 平台下将 OneDrive 挂载为本地硬盘，并使用跨平台的 Rclone GUI 连接到云盘。</p>
+<span id="more"></span>
+
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/202002/68747470733a2f2f72636c6f6e652e6f72672f696d672f6c6f676f5f6f6e5f6c696768745f5f686f72697a6f6e74616c5f636f6c6f722e737667.svg"></p>
+<h3 id="1、rclone下载地址"><a href="#1、rclone下载地址" class="headerlink" title="1、rclone下载地址"></a><strong>1、rclone下载地址</strong></h3><p>首先下载适用于 Windows 的 rclone 👇</p>
+<p>官网下载：<a target="_blank" rel="noopener" href="https://rclone.org/downloads/">https://rclone.org/downloads/</a><br>        GitHub下载：<a target="_blank" rel="noopener" href="https://github.com/ncw/rclone">https://github.com/ncw/rclone</a>  </p>
+<p>在<a target="_blank" rel="noopener" href="https://rclone.org/downloads/">rclone官网</a>中，Windows 平台下选择下载 AMD64 - 64 Bit</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/202002/20200210092619.png"></p>
+<p>或者在<a target="_blank" rel="noopener" href="https://github.com/rclone/rclone/releases">github</a>下载。</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/202002/20200211120423.png"></p>
+<p>下载后解压到一个英文路径中。</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/202002/image-20200210093613457.png"></p>
+<p>另外在Windows平台使用rclone还需要另一个依赖工具<code>winfsp</code>，下载地址：<a target="_blank" rel="noopener" href="http://www.secfs.net/winfsp/download/">http://www.secfs.net/winfsp/download/</a> ，下载后一路安装即可。</p>
+<img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/202002/20200210105225.png" style="zoom: 80%;" />
+
+
+
+
+
+<h3 id="2、为rclone配置环境变量"><a href="#2、为rclone配置环境变量" class="headerlink" title="2、为rclone配置环境变量"></a><strong>2、为rclone配置环境变量</strong></h3><ol>
+<li><p>在电脑桌面右键点击“此电脑”的“属性”选项</p>
+</li>
+<li><p>选择“高级系统设置”选项</p>
+</li>
+<li><p>在系统变量中找到path，添加刚才解压后的路径</p>
+</li>
+</ol>
+<img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/202002/image-20200210093901149.png" style="zoom:80%;" />
+
+
+
+<h3 id="3、检查rclone是否配置成功"><a href="#3、检查rclone是否配置成功" class="headerlink" title="3、检查rclone是否配置成功"></a><strong>3、检查rclone是否配置成功</strong></h3><p>按<code>win</code>+<code>X</code>，然后按<code>A</code> 打开 <code>powershell</code> ，当然也可以去打开 <code>cmd</code> ，输入<code>rclone --version</code>，如果出现下面的输出则安装成功，否则检查上面步骤的环境变量是否配置正确。</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/202002/20200210102009.png"></p>
+<h3 id="4、开始配置rclone"><a href="#4、开始配置rclone" class="headerlink" title="4、开始配置rclone"></a>4、<strong>开始配置rclone</strong></h3><p>在终端中依次输入以下命令行，请根据我下的步骤进操作。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br></pre></td><td class="code"><pre><span class="line">D:\AutoRclone&gt;rclone config                    // 第一步在终端输入 rclone config </span><br><span class="line">Current remotes:</span><br><span class="line">​</span><br><span class="line">Name                 Type</span><br><span class="line">====                 ====</span><br><span class="line">OneDrive             onedrive</span><br><span class="line">​</span><br><span class="line">e) Edit existing remote</span><br><span class="line">n) New remote</span><br><span class="line">d) Delete remote</span><br><span class="line">r) Rename remote</span><br><span class="line">c) Copy remote</span><br><span class="line">s) Set configuration password</span><br><span class="line">q) Quit config</span><br><span class="line">e/n/d/r/c/s/q&gt; n                          //第二步输入n创建新的配置，                                                                  </span><br><span class="line">​</span><br><span class="line">name&gt; OneDrive_local                      //第三步 输入一个英文名称 ，中间也不要有空格</span><br><span class="line">Type of storage to configure.</span><br><span class="line">Enter a string value. Press Enter <span class="keyword">for</span> the default (<span class="string">&quot;&quot;</span>).</span><br><span class="line">Choose a number from below, or <span class="built_in">type</span> <span class="keyword">in</span> your own value</span><br><span class="line"> 1 / 1Fichier</span><br><span class="line"> \ <span class="string">&quot;fichier&quot;</span></span><br><span class="line"> 2 / Alias <span class="keyword">for</span> an existing remote</span><br><span class="line"> \ <span class="string">&quot;alias&quot;</span></span><br><span class="line"> 3 / Amazon Drive</span><br><span class="line"> \ <span class="string">&quot;amazon cloud drive&quot;</span></span><br><span class="line"> 4 / Amazon S3 Compliant Storage Provider (AWS, Alibaba, Ceph, Digital Ocean, Dreamhost, IBM COS, Minio, etc)</span><br><span class="line"> \ <span class="string">&quot;s3&quot;</span></span><br><span class="line"> 5 / Backblaze B2</span><br><span class="line"> \ <span class="string">&quot;b2&quot;</span></span><br><span class="line"> 6 / Box</span><br><span class="line"> \ <span class="string">&quot;box&quot;</span></span><br><span class="line"> 7 / Cache a remote</span><br><span class="line"> \ <span class="string">&quot;cache&quot;</span></span><br><span class="line"> 8 / Citrix Sharefile</span><br><span class="line"> \ <span class="string">&quot;sharefile&quot;</span></span><br><span class="line"> 9 / Dropbox</span><br><span class="line"> \ <span class="string">&quot;dropbox&quot;</span></span><br><span class="line">10 / Encrypt/Decrypt a remote</span><br><span class="line"> \ <span class="string">&quot;crypt&quot;</span></span><br><span class="line">11 / FTP Connection</span><br><span class="line"> \ <span class="string">&quot;ftp&quot;</span></span><br><span class="line">12 / Google Cloud Storage (this is not Google Drive)</span><br><span class="line"> \ <span class="string">&quot;google cloud storage&quot;</span></span><br><span class="line">13 / Google Drive</span><br><span class="line"> \ <span class="string">&quot;drive&quot;</span></span><br><span class="line">14 / Google Photos</span><br><span class="line"> \ <span class="string">&quot;google photos&quot;</span></span><br><span class="line">15 / Hubic</span><br><span class="line"> \ <span class="string">&quot;hubic&quot;</span></span><br><span class="line">16 / In memory object storage system.</span><br><span class="line"> \ <span class="string">&quot;memory&quot;</span></span><br><span class="line">17 / JottaCloud</span><br><span class="line"> \ <span class="string">&quot;jottacloud&quot;</span></span><br><span class="line">18 / Koofr</span><br><span class="line"> \ <span class="string">&quot;koofr&quot;</span></span><br><span class="line">19 / Local Disk</span><br><span class="line"> \ <span class="string">&quot;local&quot;</span></span><br><span class="line">20 / Mail.ru Cloud</span><br><span class="line"> \ <span class="string">&quot;mailru&quot;</span></span><br><span class="line">21 / Mega</span><br><span class="line"> \ <span class="string">&quot;mega&quot;</span></span><br><span class="line">22 / Microsoft Azure Blob Storage</span><br><span class="line"> \ <span class="string">&quot;azureblob&quot;</span></span><br><span class="line">23 / Microsoft OneDrive</span><br><span class="line"> \ <span class="string">&quot;onedrive&quot;</span></span><br><span class="line">24 / OpenDrive</span><br><span class="line"> \ <span class="string">&quot;opendrive&quot;</span></span><br><span class="line">25 / Openstack Swift (Rackspace Cloud Files, Memset Memstore, OVH)</span><br><span class="line"> \ <span class="string">&quot;swift&quot;</span></span><br><span class="line">26 / Pcloud</span><br><span class="line"> \ <span class="string">&quot;pcloud&quot;</span></span><br><span class="line">27 / Put.io</span><br><span class="line"> \ <span class="string">&quot;putio&quot;</span></span><br><span class="line">28 / QingCloud Object Storage</span><br><span class="line"> \ <span class="string">&quot;qingstor&quot;</span></span><br><span class="line">29 / SSH/SFTP Connection</span><br><span class="line"> \ <span class="string">&quot;sftp&quot;</span></span><br><span class="line">30 / Sugarsync</span><br><span class="line"> \ <span class="string">&quot;sugarsync&quot;</span></span><br><span class="line">31 / Transparently chunk/split large files</span><br><span class="line"> \ <span class="string">&quot;chunker&quot;</span></span><br><span class="line">32 / Union merges the contents of several remotes</span><br><span class="line"> \ <span class="string">&quot;union&quot;</span></span><br><span class="line">33 / Webdav</span><br><span class="line"> \ <span class="string">&quot;webdav&quot;</span></span><br><span class="line">34 / Yandex Disk</span><br><span class="line"> \ <span class="string">&quot;yandex&quot;</span></span><br><span class="line">35 / http Connection</span><br><span class="line"> \ <span class="string">&quot;http&quot;</span></span><br><span class="line">36 / premiumize.me</span><br><span class="line"> \ <span class="string">&quot;premiumizeme&quot;</span></span><br><span class="line"> Storage&gt; 23                             //第四步 输入要配置的网盘类型 因为我们要配置Microsoft OneDrive 因此输入23</span><br><span class="line">** See <span class="built_in">help</span> <span class="keyword">for</span> onedrive backend at: https://rclone.org/onedrive/ **</span><br><span class="line">​</span><br><span class="line">Microsoft App Client Id</span><br><span class="line">Leave blank normally.</span><br><span class="line">Enter a string value. Press Enter <span class="keyword">for</span> the default (<span class="string">&quot;&quot;</span>).</span><br><span class="line">client_id&gt;                              //第五步 直接回车</span><br><span class="line">Microsoft App Client Secret                                  </span><br><span class="line">Leave blank normally.                                        </span><br><span class="line">Enter a string value. Press Enter <span class="keyword">for</span> the default (<span class="string">&quot;&quot;</span>).      </span><br><span class="line">client_secret&gt;                           //第六步 直接回车                    </span><br><span class="line">Edit advanced config? (y/n)                                  </span><br><span class="line">y) Yes </span><br><span class="line">n) No (default)                                              </span><br><span class="line">y/n&gt; n                                  //第七步 输入n 不进行高级配置 </span><br><span class="line">Remote config                                                </span><br><span class="line">Use auto config? </span><br><span class="line"> * Say Y <span class="keyword">if</span> not sure </span><br><span class="line"> * Say N <span class="keyword">if</span> you are working on a remote or headless machine</span><br><span class="line">y) Yes (default) </span><br><span class="line">n) No                                                        </span><br><span class="line">y/n&gt; y                                  //第八步 输入y 使用自动配置授权</span><br><span class="line">​</span><br><span class="line">//输入y后会打开默认浏览器 登录Microsoft账号后 选择 是 即可</span><br><span class="line"> If your browser doesn<span class="string">&#x27;t open automatically go to the following link: http://127.0.0.1:53682/auth?state=sUuYaGWtxruA81JiCokJGg</span></span><br><span class="line"><span class="string">Log in and authorize rclone for access</span></span><br><span class="line"><span class="string">Waiting for code...</span></span><br><span class="line"><span class="string">Got code</span></span><br><span class="line"><span class="string">Choose a number from below, or type in an existing value</span></span><br><span class="line"><span class="string"> 1 / OneDrive Personal or Business</span></span><br><span class="line"><span class="string"> \ &quot;onedrive&quot;</span></span><br><span class="line"><span class="string"> 2 / Root Sharepoint site</span></span><br><span class="line"><span class="string"> \ &quot;sharepoint&quot;</span></span><br><span class="line"><span class="string"> 3 / Type in driveID</span></span><br><span class="line"><span class="string"> \ &quot;driveid&quot;</span></span><br><span class="line"><span class="string"> 4 / Type in SiteID</span></span><br><span class="line"><span class="string"> \ &quot;siteid&quot;</span></span><br><span class="line"><span class="string"> 5 / Search a Sharepoint site</span></span><br><span class="line"><span class="string"> \ &quot;search&quot;</span></span><br><span class="line"><span class="string">Your choice&gt;1                            //第九步 输入1 因为现在我配置的是 OneDrive Personal or Business 类型的网盘</span></span><br><span class="line"><span class="string">​</span></span><br><span class="line"><span class="string">Found 1 drives, please select the one you want to use:</span></span><br><span class="line"><span class="string">0: OneDrive (business) id=b!qDQvcsZUTU-8eoYyKmtyyP1Jc0D8urZLlkATnfH1nWdJ1kkbrLsvQZLzVUTpeTrc</span></span><br><span class="line"><span class="string">Chose drive to use:&gt; 0              //第十步 输入0</span></span><br><span class="line"><span class="string">Found drive &#x27;</span>root<span class="string">&#x27; of type &#x27;</span>business<span class="string">&#x27;, URL: https://pmjs-my.sharepoint.com/personal/wld_365_w/Documents</span></span><br><span class="line"><span class="string">Is that okay?</span></span><br><span class="line"><span class="string">y) Yes (default)</span></span><br><span class="line"><span class="string">n) No</span></span><br><span class="line"><span class="string">y/n&gt; y                               //第十一步 输入y</span></span><br><span class="line"><span class="string">--------------------</span></span><br><span class="line"><span class="string">[OneDrive_local]</span></span><br><span class="line"><span class="string">type = onedrive</span></span><br><span class="line"><span class="string">token = &#123;&quot;access_token&quot;:&quot;eyJ0eXAiOiV1QiLCJub25jZSI6ImNRYjl5TDNZWE8yczdQd2N2WTlJRkV1ZXp0QVpZZV83QWpPaHZORTU0OTgiLCJhbGciOiJSUzI1NiIsIng1dCI6IkhsQzBSMTJza3hOWjFXUXdtak9GXzZ0X3RERSIsImtpZCI6IkhsQzBSMTJza3hOWjFXUXdtak9GXzZ0X3RERSJ9yJhdWQiOiIwMDAwMDAwMy0wMDAwLTAwMDAtYzAwMC0wMDAwMDAwMDAwMDAiLCJpc3MiOiJodHRwczovL3N0cy53aW5kb3dzLm5ldC84N2VjYmIxYi0wZTdlLTRlMDctOWFiMC00NWIwOTM1OTFjN2EvIiwiaWF0IjoxNTgxMzAxNLCJuYmYiOjE1ODEzMDE2MzAsImV4cCI6MTU4MTMwNTUzMCwiYWNjdCI6MCwiYWNyIjoiMSIsImFpbyI6IkFTUUyLzhPQUFBQWc2eURUazJNKzZ5YjVLNEJSN2VUR0lHT3EvSXFPT0dSZzlPWitrREoyaTg9IiwiYW1yIjpbInB3ZCJdLCJhcHBfZGlzcGxheW5hbWUiOiJyY2xvbmUiLCJhcHBpZCI6ImIxNTY2NWQ5LWVkYTYtNDA5Mi04NTM5LTBlZWMzNzZhZmQ1OSIsImFwcGlkYWNyIjoiMSIsImZhbWlseV9uYW1lIjoiV2FuZyIsImdpdmVuX25hbWUiOiJYaWFud2iwiaXBhZGRyIjoiMzkuMTI4LjIwMC4iwibmFtZSI6IldhbmdYaWFud2VuIiwib2lkIjoiZWE4ZjNjZDctN2IxYS00YmQ0LWFiNzItYzM4NDg4NTE5NDdhIiwicGxhdGYiOiIzIiwicHVpZCI6IjEwMDMzRkZGQUVGNEE2RTUiLCJzY3A5YWIwLTQ1YjA5MzU5MWM3YSIsInVuaXF1ZV9uYW1lIjoid29ybGRAbXkzNjUudHciLCJ1cG4iOiJ3b3JsZEBteTM2NS50dyIsInV0aSI6Il85MEZWRXBZcTBTYzckFuVDluQUEiLCJ2ZXIiOiIxLjAiLCJ4bXNfc3QiOnsic3ViIjoidXlWWU96UGF5RVBVWXlSbFlEVEl6QjhUZVBkZnNTMkVHcHczNGNDM2JRTSJ9LCJ4bXNfdGNkdCI6MTUzNDQyOTU0NH0.Ki9vor6NtxXJWsdumYddz8agrzVYXRCXVg0paW7XqDTq8i_vht8GK79F0F7xp3BSKzK5Xgxb0GzwPV9dPTb4IiXM0d17P5pQB3wHLMUbVFvRbLXNwSEtSJGKLttvxL8XfT8e51k4kyyH07CtozVBsF6fmMnhftp9ZbcEVrgnFKdwTE5In83G05V7L8wDCMiKrN0KX9iTKzxT9em5QtVhGZRZJDnNS2pJTQNhiWVatjDB4VHojG2C6J1LtU6YOOOAM2uBil2ovLFhQPy0l299ZJTJeyQCLQGJki9kZgAVI42iGP4mzvVPQAJk5Oad_4nPsT87QVH4NBA&quot;,&quot;token_type&quot;:&quot;Bearer&quot;,&quot;refresh_token&quot;:&quot;OAQABAAAAAABeAFzDwllzTYGDLh_qYbH8falkpBpCm5PZqagAkUNWFik3Mz2ZfDPeowwW9q5mlFoHSqyYNG8FayvZxxZEUGQWUaR520MuJ5i_mj9CNs0NahNOJAtvZOBV459VLMKaNiyK9GJIGvdDe4RkaV472hbq_po8K47yC053BLRIbRji9WfsCkSMj8UP792sNJ0Tm9ptfPmy1aP_TePX8dOWaC9qZN2jDIXJDjWjCvfDesNDWXAm9bpBp1oZmObLR85EKB9Vgsz7ccZIbKEa16Aiqb67xsQICG8AzjMli76nJ6o_EBGI3dQvikLg17kAKtdb9gGnCj7P1Rh6V_NW_SeN1A7mR7RXrjTvW0gd3_4tEQ4_vkjxz9L4Ymoh0NIwCE6Pu8cTLow83JJJPmdYM4LFHXYApm5fgC9CVFg4JYhALkTZ0KI9qtO3Qe16OyySjmtcs8rD3GnGtKQewRbMcVgkA0JpOzKRA53VFx1SB3rRc2rxSDcnVTx_Oja_6KuaUxQjhgi1XaH1Kk_c82iniwdj7EdHCbokk8eewYFyn4tBTL0xW8rwmoPDvvUvMVA7Z8Ph0AB66Ih5evroSEHsv072AyDWSwHfrEMueTeEgP5jA1aBSOXE2DDw3PySehFfbYpsh0AV3qPVP9lAHaGizEbFt9rEKl1R1bcMrEhxF9GjnvB5PChRK_abttEV2YWKWrTaEFJBTP40f96kCXZGMaE4RaUoMI7hKW4cLQrHuV5YCZQ_BQRj7r5PoUyelGPdvnW42lB8MvekksdrJAVnlUTTgVKlbpn9AUuOD2LUZ5A8IheWaLkhLXfUqjPg0UxjTLIAA&quot;,&quot;expiry&quot;:&quot;2020-02-10T11:32:10.852646+08:00&quot;&#125;</span></span><br><span class="line"><span class="string">drive_id = b!qDvcsZUTU8eoYyKmtyyP1Jc0D8urZLlkTnH1nWdJ1kbrLsvQZLzVUTpeTrc</span></span><br><span class="line"><span class="string">drive_type = business</span></span><br><span class="line"><span class="string">--------------------</span></span><br><span class="line"><span class="string">y) Yes this is OK (default)</span></span><br><span class="line"><span class="string">e) Edit this remote</span></span><br><span class="line"><span class="string">d) Delete this remote</span></span><br><span class="line"><span class="string">y/e/d&gt;y                                      //第十二步 输入y</span></span><br><span class="line"><span class="string">​</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string"></span></span><br></pre></td></tr></table></figure>
+
+<p>此时，就会出现刚刚配置好的网盘名称了</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/202002/image-20200210104149803.png"></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">e) Edit existing remote</span><br><span class="line">n) New remote</span><br><span class="line">d) Delete remote</span><br><span class="line">r) Rename remote</span><br><span class="line">c) Copy remote</span><br><span class="line">s) Set configuration password</span><br><span class="line">q) Quit config</span><br><span class="line">e/n/d/r/c/s/q&gt; q                //最后输入q退出配置即可</span><br></pre></td></tr></table></figure>
+
+
+
+<p>在 <code>C:\Users\你的用户名\.config\rclone</code>文件夹下就可以看见配置文件 rclone.conf 啦。</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/202002/20200210104648.png"></p>
+<h3 id="5、挂载OneDrive为本地硬盘"><a href="#5、挂载OneDrive为本地硬盘" class="headerlink" title="5、挂载OneDrive为本地硬盘"></a><strong>5、挂载OneDrive为本地硬盘</strong></h3><p>此时请使用 <code>git bash</code> 的终端执行以下命令，因为我使用<code>cmd</code> 和 <code>powershell</code> 都出现关闭终端后挂载程序退出、本地挂载的OneDrive退出的现象。 如果你的windows没有安装git ， 请<a target="_blank" rel="noopener" href="https://www.baidu.com/s?wd=windows%20%E5%AE%89%E8%A3%85git&ie=utf-8">自行安装</a>。若你使用 <code>cmd</code> 的话 ，<code>cmd</code> 是不能退出的，要保持 <code>cmd</code> 不退出本地硬盘才一直挂载着。</p>
+<p>在 <code>git bash</code> 中输入以下挂载命令：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rclone mount OneDrive_local:/  Q: --cache-dir E:\OneDrive --vfs-cache-mode writes &amp;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>其中：</p>
+<p><code>OneDrive_loca</code> 替换为你自己前面设置的名称 。</p>
+<p><code>Q:</code> 替换为你想要挂载后硬盘的盘符名称即可，记得不要和本地的C盘、D盘等重复。</p>
+<p><code>E:\OneDrive</code> 为本地缓存目录，可自行设置 。</p>
+<p>出现：<code>The service rclone has been started</code> 则说明挂载成功。</p>
+<p>然后输入 <code>exit</code> 退出终端即可。</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/202002/20200210124133.png"></p>
+<p>然后就可以看见本地多了一个盘，往里面复制文件就是上传，从里面复制文件到其它盘就是下载。</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/202002/20200210124455.png"></p>
+<h3 id="6、设置开机自启动挂载"><a href="#6、设置开机自启动挂载" class="headerlink" title="6、设置开机自启动挂载"></a><strong>6、设置开机自启动挂载</strong></h3><p>创建一个名称为 <code>startup_rclone.bat</code> 的文件，里面填写上面的挂载命令：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rclone mount OneDrive_local:/  Q: --cache-dir E:\OneDrive --vfs-cache-mode writes &amp;</span><br></pre></td></tr></table></figure>
+
+
+<p>将这个文件放在<code>C:\Users\用户名\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup</code> 中</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/202002/20200211114237.png"></p>
+<p>重启计算机后就会自动挂设置的云盘了，当然这样做由于调用的是 <code>cmd</code> 因此还是不能关闭运行的 <code>cmd</code>。下面介绍一种利用 Rclone GUI 的进行管理的使用方法。</p>
+<h3 id="7、可视化上传下载-RcloneBrowser"><a href="#7、可视化上传下载-RcloneBrowser" class="headerlink" title="7、可视化上传下载  RcloneBrowser"></a>7、<strong>可视化上传下载  RcloneBrowser</strong></h3><p>在 <a target="_blank" rel="noopener" href="https://github.com/kapitainsky/RcloneBrowser/releases">https://github.com/kapitainsky/RcloneBrowser/releases</a>中下载 <a href="">RcloneBrowser</a> 。</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/202002/20200211120423.png"></p>
+<p>下载好后进行安装，然后进行配置。配置 <code>rclone.exe</code>的路径还有 <code>rclone.conf</code> 配置文件的路径。</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/202002/20200211121437.png"></p>
+<img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/202002/20200211122054.png" style="zoom:80%;" />
+
+<center>这是我前面解压rclon的路径以及配置文件的路径 </center>
+配置好后就可以看见前面配置的 OneDrive 网盘了  ☁️
+
+
+
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/202002/20200211122953.png"></p>
+<p>双击打开就可以看见里面的内容了，可以去愉快的上传或者下载了。</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/202002/20200211123555.png"></p>
+<p>上传的话，选择要上传的文件或文件夹以及云盘的存放路径，再选择 <code>copy</code> 模式，点击 <code>run</code> 即可。下载与之类似。<br><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/202002/20200211123950.png"></p>
+<p>在 <code>Jobs</code>当中还可以查看任务的进度、速度等。</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/202002/20200211144441.png"></p>
+<p>另外还可以设置代理，见下图：</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200403082502.png"></p>
+<p>这样挂载谷歌云端硬盘就很方便了。</p>
+<p><del>如果你觉得rclone 太麻烦，还可以试试 <a href="%20https://www.raidrive.com/">RaiDrive</a> 挂载，安装后选择相应的网盘登录即可，但我用起来感觉比较卡顿。</del>  不推荐了，2020年3月份收到邮件说挂载 Onedrive 、Google Derive 要收费了，无奈🙃</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/202002/20200210135030.png" alt="https://www.raidrive.com/"></p>
+<p>参考</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://rclone.org/docs/">官方文档</a></p>
+<p><a href="%5Bhttps://telegra.ph/Windows%E4%B8%8B%E7%94%A8rclone%E6%8C%82%E8%BD%BDOneDrive%E4%B8%BA%E6%9C%AC%E5%9C%B0%E7%A1%AC%E7%9B%98-01-03%5D(https://telegra.ph/Windows%E4%B8%8B%E7%94%A8rclone%E6%8C%82%E8%BD%BDOneDrive%E4%B8%BA%E6%9C%AC%E5%9C%B0%E7%A1%AC%E7%9B%98-01-03)">Windows下用rclone挂载OneDrive为本地硬盘</a></p>
+<p><a target="_blank" rel="noopener" href="http://piaoyun.cc/1290.html">使用软件rclone在Windows操作系统上挂载OneDrive为本地硬盘的操作方法</a></p>
+<p><a target="_blank" rel="noopener" href="https://p3terx.com/archives/rclone-advanced-user-manual-common-command-parameters.html">Rclone 进阶使用教程 - 常用命令参数详解</a></p>
+</blockquote>
+<blockquote class="blockquote-center">
+<p>今夜偏知春气暖，虫声新透绿窗纱</p>
+
+</blockquote>
+
+
+
+
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>请我一杯咖啡吧！</div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/wechatpay.png" alt="热夏 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="/images/alipay.jpg" alt="热夏 支付宝">
+        <span>支付宝</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>热夏
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://www.lifeee.top/posts/14654.html" title="Windows平台下使用 Rclone 挂载 OneDrive 为本地硬盘">https://www.lifeee.top/posts/14654.html</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="followme">
+  <span>欢迎关注我的其它发布渠道</span>
+
+  <div class="social-list">
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="/atom.xml">
+            <span class="icon">
+              <i class="fa fa-rss"></i>
+            </span>
+
+            <span class="label">RSS</span>
+          </a>
+      </div>
+  </div>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/" rel="tag"><i class="fa fa-tag"></i> 善用佳软</a>
+              <a href="/tags/Windows/" rel="tag"><i class="fa fa-tag"></i> Windows</a>
+              <a href="/tags/tips/" rel="tag"><i class="fa fa-tag"></i> tips</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/posts/93e477bd.html" rel="prev" title="离线维基百科Kiwix😎">
+                  <i class="fa fa-angle-left"></i> 离线维基百科Kiwix😎
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/posts/1004.html" rel="next" title="解决 tunneling socket could not be established, cause=getaddrinfo ENOTFOUND 8000 问题">
+                  解决 tunneling socket could not be established, cause=getaddrinfo ENOTFOUND 8000 问题 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments gitalk-container"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 2018 – 
+    <span itemprop="copyrightYear">2024</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">热夏</span>
+  </div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>站点总字数：</span>
+    <span title="站点总字数">629k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">9:32</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/next-theme-pjax/0.6.0/pjax.min.js" integrity="sha256-vxLn1tSKWD4dqbMRyv940UYw4sXgMtYcK6reefzZrao=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lozad.js/1.16.0/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script><script src="/js/pjax.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+  <script src="/js/third-party/pace.js"></script>
+
+
+  
+  <script data-pjax async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","mhchem":false,"js":{"url":"//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
+
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"upwon","repo":"upwon.github.io","client_id":"7e047047ecee7317452b","client_secret":"c60fbdf0eb19e7264e33ab780319e4d420a58fee","admin_user":"upwon","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":null,"js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"b77b5a482434eed8a97c3b19fe36298c"}</script>
+<script src="/js/third-party/comments/gitalk.js"></script>
+
+
+  <script type="text/javascript" src="/js/clicklove.js"></script>
+   
+ 
+
+</body>
+</html>
