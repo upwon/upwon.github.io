@@ -19360,4 +19360,132 @@ Welcome to my Blog. This is my first post. If you want to konw more info about H
         <tag>云盘</tag>
       </tags>
   </entry>
+  <entry>
+    <title>网上冲浪周刊第33期</title>
+    <url>/posts/36684.html</url>
+    <content><![CDATA[<p>欢迎阅读第33期技术资讯！本期我们推荐了Android 15预览版多项创新功能如通知管理、窗口记录以及文件完整性保护，Flutter生态中的MiniTex文本渲染器及其在跨平台上的运用等技术，此外，涵盖了Kotlin 2.0.0-Beta4的更新内容，以及一系列Android开发者实用工具和技术要点，包括内存泄漏、必备插件、依赖管理和热修复方案Tinker。文章还推介了几款有趣的工具，如跨平台多媒体应用Miru App、MacOS应用更新检查工具latest、Windows桌面美化工具DWMBlurGlass。同时，特别推荐了方便快捷的开发者参考资料站点Quick Reference，满足您随时查阅技术细节的需求。最后，提及了一站式AI开发平台扣子和在线音视频处理工具ffmpeg-online。</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/202403091333548.jpg" alt="封面图 https://www.pexels.com/zh-cn/photo/17935433/"></p>
+<span id="more"></span>
+
+
+
+<br />
+
+<p>欢迎来到第33期 ！😄</p>
+<p>期待您通过RSS订阅本博客：<a href="https://www.lifeee.top//atom.xml">https://www.lifeee.top//atom.xml</a></p>
+<h1 id="技术"><a href="#技术" class="headerlink" title="技术"></a>技术</h1><h2 id="推荐阅读"><a href="#推荐阅读" class="headerlink" title="推荐阅读"></a>推荐阅读</h2><ul>
+<li><p><a href="https://mp.weixin.qq.com/s/JYeqP_-XNk7Bqow8Jompzg">2024 ，Android 15 预览版来了 </a> ：引入“通知冷却”功能，限制同一来源的连续通知，降低音量提醒；提供新的 API <code>setupFsVerity</code>，利用 Linux 内核中 fs-verity 功能，保护文件完整性；允许用户仅共享或记录某个应用窗口，而不是整个设备屏幕；</p>
+</li>
+<li><p><a href="https://mp.weixin.qq.com/s/cJqZ-WkJ24E4IRaDic8rNQ">Android 15 新功能与亮点大总结  </a></p>
+</li>
+<li><p><a href="https://mp.weixin.qq.com/s/p2hdpXXhN8dST8mJtWq5pg">免加载字体的 Flutter 文本渲染器 —— MiniTex  </a>：MiniTex 是一个文本渲染器，同时具备文本排版能力，借助 MiniTex，Flutter Web CanvasKit 应用可以在不加载字体文件的情况下，依然可以渲染多国语言。MiniTex 支持在 MPFlutter 和 Flutter Web 中使用，开源，免费。本文主要介绍 MiniTex 的实现原理以及使用方法。</p>
+</li>
+<li><p><a href="https://mp.weixin.qq.com/s/lTmgTV_Jf2C1rMsVN6s0NQ">Jetpack Compose 1.6 发布：性能大升级、拖放新功能、文本新变化</a>：Jetpack Compose 1.6 发布，带来了性能优化、文本改进、拖放支持等新功能。</p>
+</li>
+<li><p><a href="https://mp.weixin.qq.com/s/POvHlrDV5F9YubvEaSX_Bw">Android内存泄漏知识点  </a></p>
+</li>
+<li><p><a href="https://mp.weixin.qq.com/s/QcvvBhZZBO7RGPMUyT9KRQ">10款对Android开发者来说必不可少的Android Studio插件 </a></p>
+</li>
+<li><p><a href="https://mp.weixin.qq.com/s/C4krqPlptwOypyuslBlcug">使用 Gradle 版本目录进行依赖管理 - Android </a></p>
+</li>
+<li><p><a href="https://mp.weixin.qq.com/s/-huH9wFk64db-5UHV3DY-g">拥抱生成式AI，FlutterFlow 低代码移动应用开发平台获2550万美元融资  </a></p>
+</li>
+<li><p><a href="https://mp.weixin.qq.com/s/DI4F2zuRIiXHegT15DUbdg">Android热修复首选方案Tinker探究  </a></p>
+</li>
+<li><p><a href="https://mp.weixin.qq.com/s/AWrjhOv2RpUDVY37SQBvoA">Kotlin 技术月报 | 2024 年 2 月 </a> ：</p>
+<ul>
+<li>Kotlin 2.0.0-Beta4 版本发布，K2 编译器稳定性持续提升，Gradle 构建工具方面也有改进。</li>
+<li>Kotlin&#x2F;JS 支持类型安全的纯 JavaScript 对象、使用 npm 作为包管理器、导出 List, Map, Set 等集合类型。</li>
+<li>Amper 2024 年 2 月更新，支持 Gradle version catalogs、依赖补全、在 IDEA 中创建项目、支持 Fleet 等 IDE。</li>
+<li>Jetpack Lifecycle 支持 Kotlin 跨平台，核心 Lifecycle API 现在包含在与 Kotlin Multiplatform 兼容的工件中。</li>
+</ul>
+<br />
+
+<br /></li>
+</ul>
+<h1 id="有趣的工具"><a href="#有趣的工具" class="headerlink" title="有趣的工具"></a>有趣的工具</h1><h2 id="跨平台开源视频，漫画，小说应用-Miru-App"><a href="#跨平台开源视频，漫画，小说应用-Miru-App" class="headerlink" title="跨平台开源视频，漫画，小说应用 Miru App"></a>跨平台开源视频，漫画，小说应用 <a href="https://github.com/miru-project/miru-app">Miru App</a></h2><p>Miru App 是一款免费，开源的 ，支持视频，漫画，小说扩展源的多功能应用，支持 Android，Windows，Web。</p>
+<p>安装好后点开扩展仓库，目前已经提供了一些扩展源，包括有视频、漫画、动漫、小说各个网站平台，选择需要的源安装即可。</p>
+<p><strong>特性</strong></p>
+<ul>
+<li>支持 <code>windows</code>，<code>android</code></li>
+<li>友好的扩展编写支持，调试日志</li>
+<li>扩展使用 JavaScript 语言，开发简单</li>
+<li>支持自定义扩展仓库</li>
+<li>官方扩展仓库提供视频源，无需编写任何扩展即可使用</li>
+<li>支持在线观看多种视频，漫画，小说源，实现多平台的统一</li>
+<li>统一系统 UI 的设计语言</li>
+<li>自动获取 TMDB 元数据信息</li>
+</ul>
+<p><img data-src="https://fastly.jsdelivr.net/gh/upwon/MyPicture@master/img/screenshot.webp"></p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/202402161812039.png" alt="扩展仓库"></p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/202402161819255.png" alt="体验截图"></p>
+<p>开源地址：<a href="https://github.com/miru-project/miru-app">https://github.com/miru-project/miru-app</a></p>
+<p>TG 频道 ：  <a href="https://t.me/MiruChat">https://t.me/MiruChat</a></p>
+<br />
+
+<h2 id="保存-MacOS-应用最新：-latest"><a href="#保存-MacOS-应用最新：-latest" class="headerlink" title="保存 MacOS 应用最新： latest"></a>保存 MacOS 应用最新： <a href="https://github.com/mangerlahn/latest">latest</a></h2><p><a href="https://github.com/mangerlahn/latest">latest</a> 是一款免费开源的 macOS 应用程序，可轻松检查所有已安装应用程序的更新状态，并一键获取最新版本。</p>
+<p><img data-src="https://s2.loli.net/2024/02/16/ekCDQfAcxB9FoWH.png"></p>
+<p>开源地址：<a href="https://github.com/mangerlahn/latest">https://github.com/mangerlahn/latest</a></p>
+<br />
+
+<h2 id="DWMBlurGlass-给全局系统标题栏添加自定义效果-Windows平台"><a href="#DWMBlurGlass-给全局系统标题栏添加自定义效果-Windows平台" class="headerlink" title="DWMBlurGlass 给全局系统标题栏添加自定义效果 [Windows平台]"></a><a href="https://github.com/Maplespe/DWMBlurGlass?tab=readme-ov-file">DWMBlurGlass</a> 给全局系统标题栏添加自定义效果 [Windows平台]</h2><p><a href="https://github.com/Maplespe/DWMBlurGlass?tab=readme-ov-file">DWMBlurGlass</a> 是一款 Windows 桌面应用，可以给全局系统标题栏添加自定义效果实现美化，支持win10和win11。 </p>
+<p><strong>特效</strong></p>
+<ul>
+<li>为全局系统标题栏添加自定义效果</li>
+<li>可自定义全局或仅标题栏的模糊强度</li>
+<li>可自定义标题栏混合颜色</li>
+<li>可自定义标题栏文本颜色</li>
+<li>可添加Aero反射和视差效果</li>
+<li>可还原win7样式标题栏按钮高度</li>
+<li>支持为使用旧版win7API DwmEnableBlurBehindWindow 的程序启用模糊效果</li>
+<li>支持 <code>Blur</code>, <code>Aero</code>, <code>Acrylic</code>, <code>Mica(仅win11)</code> 效果</li>
+<li>可单独设置 亮&#x2F;暗 颜色模式颜色，跟随系统自动切换</li>
+<li>提供 <code>CustomBlur</code>、<code>AccentBlur</code>、<code>SystemBackdrop</code> 模糊方法可选</li>
+<li>第三方主题支持</li>
+</ul>
+<p><img data-src="https://s2.loli.net/2024/02/16/DrRO4XPiBdjN521.png"></p>
+<p>开源地址：<a href="https://github.com/Maplespe/DWMBlurGlass">https://github.com/Maplespe/DWMBlurGlass</a></p>
+<br />
+
+<h1 id="宝藏信息"><a href="#宝藏信息" class="headerlink" title="宝藏信息"></a>宝藏信息</h1><h2 id="为开发人员分享快速参考备忘清单-速查表-：reference"><a href="#为开发人员分享快速参考备忘清单-速查表-：reference" class="headerlink" title="为开发人员分享快速参考备忘清单(速查表) ：reference"></a>为开发人员分享快速参考备忘清单(速查表) ：<a href="https://github.com/jaywcjlove/reference">reference</a></h2><p><a href="https://wangchujiang.com/reference/">Quick Reference</a> 一个为开发人员分享快速参考备忘清单(速查表)的在线网站。</p>
+<p><img data-src="https://s2.loli.net/2024/02/16/yptnbUraTi8VS1g.png"></p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/202402161858206.png"></p>
+<p>在线地址：<a href="https://wangchujiang.com/reference/">https://wangchujiang.com/reference/</a></p>
+<p>开源地址：<a href="https://github.com/jaywcjlove/reference">https://github.com/jaywcjlove/reference</a></p>
+<p>自行部署教程：<a href="https://mp.weixin.qq.com/s/hravSQOfvw1Eu5odNCWaFA">https://mp.weixin.qq.com/s/hravSQOfvw1Eu5odNCWaFA</a></p>
+<br />
+
+<h2 id="一站式-AI-开发平台-扣子"><a href="#一站式-AI-开发平台-扣子" class="headerlink" title="一站式 AI 开发平台 扣子"></a>一站式 AI 开发平台 <a href="https://www.coze.cn/">扣子</a></h2><p>扣子是新一代 AI 大模型智能体开发平台。整合了插件、长短期记忆、工作流、卡片等丰富能力，扣子能帮你低门槛、快速搭建个性化或具备商业价值的智能体，并一键发布到豆包、飞书、微信服务号等各个渠道！</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/202403082327866.png"></p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/202403082329068.png"></p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/202403082329839.png"></p>
+<p>在线地址：<a href="https://www.coze.cn/">https://www.coze.cn/</a></p>
+<br />
+
+<h2 id="ffmpeg-online-：在线处理音视频"><a href="#ffmpeg-online-：在线处理音视频" class="headerlink" title="ffmpeg-online ：在线处理音视频"></a><a href="https://ffmpeg-online.vercel.app/?inputOptions=-i&output=output.mp4&outputOptions=">ffmpeg-online</a> ：在线处理音视频</h2><p><a href="https://ffmpeg-online.vercel.app/?inputOptions=-i&output=output.mp4&outputOptions=">ffmpeg-online</a>  是一个基于 <a href="https://github.com/ffmpegwasm/ffmpeg.wasm">ffmpeg.wasm</a> 的在线网站，可用于在线处理音频和视频。</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/202402161924945.png"></p>
+<p>体验地址：<a href="https://ffmpeg-online.vercel.app/?inputOptions=-i&output=output.mp4&outputOptions=">https://ffmpeg-online.vercel.app/?inputOptions=-i&output=output.mp4&outputOptions=</a></p>
+<p> <a href="https://github.com/ffmpegwasm/ffmpeg.wasm">ffmpeg.wasm</a> 地址： <a href="https://github.com/ffmpegwasm/ffmpeg.wasm">https://github.com/ffmpegwasm/ffmpeg.wasm</a> </p>
+<br />
+
+<h1 id="资讯"><a href="#资讯" class="headerlink" title="资讯"></a>资讯</h1><ul>
+<li><p><a href="https://www.iplaysoft.com/news/6106?utm_source=pocket_reader">凉了！微软正式 “砍掉” 大家都喜欢的安卓子系统！ </a>:  在 Windows 上运行安卓 APP 是无数网友对 Win11 最感兴趣的功能之一，发布后引来了叫好声一片！甚至很多人都是奔着这功能去升级 Win11的。然而非常痛心的是，微软发布公告宣布正式放弃 WSA！</p>
+</li>
+<li><p><a href="https://www.qbitai.com/2024/03/126453.html?utm_source=pocket_reader">GPT-4王冠没掉！Claude 3竞技场人类投票成绩出炉：仅居第三 | 量子位 (qbitai.com)</a>：人工智能模型Claude 3在“大模型竞技场”（LMSYS Chatbot Arena Leaderboard）上的人类投票成绩。经过约20000张投票，Claude 3的“大杯”模型(Opus)获得了1233分，位列第三，成为首个能在排行榜上与GPT-4-Turbo系列竞争的模型。然而，Claude 3并未超越GPT-4系列，其中GPT-4 Turbo的两个版本以相同的最高分1251分占据榜首位置。</p>
+</li>
+<li><p><a href="https://www.36kr.com/p/2676078636283398">暴跌90%，77亿市值灰飞烟灭，元宇宙第一股，崩了-36氪 (36kr.com)</a></p>
+</li>
+<li><p><a href="https://mp.weixin.qq.com/s/2fX4D2RJ8e_l_UfQo4ZGbQ">漫画家鸟山明因急性硬膜下血肿去世，享年68岁，曾创作《阿拉蕾》《龙珠》等经典作品</a></p>
+</li>
+</ul>
+<p>🎉 本文同步更新于  <a href="https://github.com/starsight/TechWeekly">https://github.com/starsight/TechWeekly</a></p>
+<hr>
+]]></content>
+      <categories>
+        <category>冲浪</category>
+      </categories>
+      <tags>
+        <tag>冲浪</tag>
+      </tags>
+  </entry>
 </search>

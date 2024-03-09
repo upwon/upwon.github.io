@@ -6,7 +6,7 @@
   <link href="https://www.lifeee.top/atom.xml" rel="self"/>
   
   <link href="https://www.lifeee.top/"/>
-  <updated>2024-02-23T12:44:59.126Z</updated>
+  <updated>2024-03-09T05:47:37.759Z</updated>
   <id>https://www.lifeee.top/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>网上冲浪周刊第33期</title>
+    <link href="https://www.lifeee.top/posts/36684.html"/>
+    <id>https://www.lifeee.top/posts/36684.html</id>
+    <published>2024-03-08T15:32:57.000Z</published>
+    <updated>2024-03-09T05:47:37.759Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;欢迎阅读第33期技术资讯！本期我们推荐了Android 15预览版多项创新功能如通知管理、窗口记录以及文件完整性保护，Flutter生态中的MiniTex文本渲染器及其在跨平台上的运用等技术，此外，涵盖了Kotlin 2.0.0-Beta4的更新内容，以及一系列Android开发者实用工具和技术要点，包括内存泄漏、必备插件、依赖管理和热修复方案Tinker。文章还推介了几款有趣的工具，如跨平台多媒体应用Miru App、MacOS应用更新检查工具latest、Windows桌面美化工具DWMBlurGlass。同时，特别推荐了方便快捷的开发者参考资料站点Quick Reference，满足您随时查阅技术细节的需求。最后，提及了一站式AI开发平台扣子和在线音视频处理工具ffmpeg-online。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/202403091333548.jpg&quot; alt=&quot;封面图 https://www.pexels.com/zh-cn/photo/17935433/&quot;&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="冲浪" scheme="https://www.lifeee.top/categories/%E5%86%B2%E6%B5%AA/"/>
+    
+    
+    <category term="冲浪" scheme="https://www.lifeee.top/tags/%E5%86%B2%E6%B5%AA/"/>
+    
+  </entry>
   
   <entry>
     <title>网上冲浪周刊第31期： 万物复苏🌱</title>
@@ -447,26 +467,6 @@
     <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
     
     <category term="错误" scheme="https://www.lifeee.top/tags/%E9%94%99%E8%AF%AF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>优先队列</title>
-    <link href="https://www.lifeee.top/posts/40836.html"/>
-    <id>https://www.lifeee.top/posts/40836.html</id>
-    <published>2021-04-08T13:13:27.000Z</published>
-    <updated>2022-11-14T16:43:07.406Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/imgkazuya-tachibana-arseniy-chebynkin-kitchen.jpg&quot;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;优先队列&lt;/strong&gt;是计算机科学中的一类抽象数据类型。优先队列中的每个元素都有各自的优先级，优先级最高的元素最先得到服务；优先级相同的元素按照其在优先队列中的顺序得到服务，【不是普通队列的先进先出(FIFO)】。优先队列往往用**&lt;a href=&quot;https://www.wikiwand.com/zh-cn/%E5%A0%86_(%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84)&quot;&gt;堆&lt;/a&gt;**来实现。🌴&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="技术" scheme="https://www.lifeee.top/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-    <category term="C++" scheme="https://www.lifeee.top/tags/C/"/>
     
   </entry>
   
