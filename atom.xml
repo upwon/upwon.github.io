@@ -6,7 +6,7 @@
   <link href="https://www.lifeee.top/atom.xml" rel="self"/>
   
   <link href="https://www.lifeee.top/"/>
-  <updated>2024-03-09T05:47:37.759Z</updated>
+  <updated>2024-03-24T13:13:34.956Z</updated>
   <id>https://www.lifeee.top/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>网上冲浪周刊第35期</title>
+    <link href="https://www.lifeee.top/posts/14475.html"/>
+    <id>https://www.lifeee.top/posts/14475.html</id>
+    <published>2024-03-21T15:56:58.000Z</published>
+    <updated>2024-03-24T13:13:34.956Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;欢迎阅读第35期技术资讯！欢迎阅读本期技术资讯！本期在工具推荐方面，我们发现了SuperDrag这款智能浏览器鼠标拖拽扩展，它能根据不同的拖拽内容执行相应操作，如打开链接、保存图片或搜索文本。Surfingkeys则为Chrome和Firefox用户提供了类似Vim的键盘快捷键操作方式，极大提升了浏览效率。RSSHub Radar和RSS+两个工具简化了RSS订阅源的发现和订阅过程，而Mihon作为一款Android端的免费开源漫画阅读器，支持丰富的图源扩展。在Python包管理方面，我们介绍了uv，这是一个用Rust编写的快速安装程序和解析器，旨在替代pip。此外，我们还分享了中国法律快查手册和Z-Library桌面端下载信息，以及基于Kimi Chat的AI渐进式阅读法，帮助读者高效处理大量阅读材料。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/202403241911541.jpg&quot; alt=&quot;封面图 西湖三月·2024&quot;&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="冲浪" scheme="https://www.lifeee.top/categories/%E5%86%B2%E6%B5%AA/"/>
+    
+    
+    <category term="冲浪" scheme="https://www.lifeee.top/tags/%E5%86%B2%E6%B5%AA/"/>
+    
+  </entry>
   
   <entry>
     <title>网上冲浪周刊第33期</title>
@@ -443,30 +463,6 @@
     <category term="C++" scheme="https://www.lifeee.top/tags/C/"/>
     
     <category term="编程" scheme="https://www.lifeee.top/tags/%E7%BC%96%E7%A8%8B/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>.gitignore / Git 忽略文件无效解决方案</title>
-    <link href="https://www.lifeee.top/posts/6977.html"/>
-    <id>https://www.lifeee.top/posts/6977.html</id>
-    <published>2021-04-13T14:05:58.000Z</published>
-    <updated>2022-11-14T16:43:07.405Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/imgimage-20210413220456534.png&quot;&gt;&lt;/p&gt;
-&lt;center&gt; &lt;font size=4.9&gt; 忽略 Git 仓库中的一些文件或文件夹.  &lt;/center&gt;</summary>
-    
-    
-    
-    <category term="技术" scheme="https://www.lifeee.top/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
-    
-    
-    <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
-    
-    <category term="错误" scheme="https://www.lifeee.top/tags/%E9%94%99%E8%AF%AF/"/>
     
   </entry>
   
