@@ -6,7 +6,7 @@
   <link href="https://www.lifeee.top/atom.xml" rel="self"/>
   
   <link href="https://www.lifeee.top/"/>
-  <updated>2024-03-24T13:13:34.956Z</updated>
+  <updated>2024-04-06T15:45:37.389Z</updated>
   <id>https://www.lifeee.top/</id>
   
   <author>
@@ -17,15 +17,15 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>网上冲浪周刊第35期</title>
-    <link href="https://www.lifeee.top/posts/14475.html"/>
-    <id>https://www.lifeee.top/posts/14475.html</id>
-    <published>2024-03-21T15:56:58.000Z</published>
-    <updated>2024-03-24T13:13:34.956Z</updated>
+    <title>网上冲浪周刊第37期</title>
+    <link href="https://www.lifeee.top/posts/43500.html"/>
+    <id>https://www.lifeee.top/posts/43500.html</id>
+    <published>2024-04-06T15:40:44.000Z</published>
+    <updated>2024-04-06T15:45:37.389Z</updated>
     
     
-    <summary type="html">&lt;p&gt;欢迎阅读第35期技术资讯！欢迎阅读本期技术资讯！本期在工具推荐方面，我们发现了SuperDrag这款智能浏览器鼠标拖拽扩展，它能根据不同的拖拽内容执行相应操作，如打开链接、保存图片或搜索文本。Surfingkeys则为Chrome和Firefox用户提供了类似Vim的键盘快捷键操作方式，极大提升了浏览效率。RSSHub Radar和RSS+两个工具简化了RSS订阅源的发现和订阅过程，而Mihon作为一款Android端的免费开源漫画阅读器，支持丰富的图源扩展。在Python包管理方面，我们介绍了uv，这是一个用Rust编写的快速安装程序和解析器，旨在替代pip。此外，我们还分享了中国法律快查手册和Z-Library桌面端下载信息，以及基于Kimi Chat的AI渐进式阅读法，帮助读者高效处理大量阅读材料。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/202403241911541.jpg&quot; alt=&quot;封面图 西湖三月·2024&quot;&gt;&lt;/p&gt;</summary>
+    <summary type="html">&lt;p&gt;欢迎阅读第37期技术资讯！欢迎阅读本期技术资讯！在&lt;strong&gt;软件开发&lt;/strong&gt;领域，Twitter 分享了 Compose 开发规范和检查，助您避免常见错误；Android Studio Iguana 发布了新版本，带来了 AppQualityInsights 中的版本控制、Compose UI 检查和预览的渐进式渲染等新特性。&lt;strong&gt;工具推荐&lt;/strong&gt;方面方面，我们介绍了高性能分布式存储数据库 Garnet，可无缝替换 Redis；类似 uTools 的工具 Fluent Search，可提升您的工作效率；软件下载网站，助您找到所需软件；Windows 白噪音应用 Ambie，可帮助您集中注意力、睡眠和放松；Mac 翻译和 OCR 软件 Bob，可轻松进行文本翻译和识别；跨平台划词翻译和 OCR 软件 pot，以及开源划词翻译软件 TTime，让您在不同平台也能轻松进行划词翻译和 OCR 操作。&lt;strong&gt;宝藏信息&lt;/strong&gt;方面，分享了无限制创建 Gmail 小号的方法，免费的闯关式 SQL 自学教程网站 SQL 之母，以及本地部署免费的 GPT3.5-API的aurora。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/202404062339649.jpg&quot; alt=&quot;封面图 宁波四月·2024&quot;&gt;&lt;/p&gt;</summary>
     
     
     
@@ -33,6 +33,22 @@
     
     
     <category term="冲浪" scheme="https://www.lifeee.top/tags/%E5%86%B2%E6%B5%AA/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>网上冲浪周刊第35期</title>
+    <link href="https://www.lifeee.top/posts/14475.html"/>
+    <id>https://www.lifeee.top/posts/14475.html</id>
+    <published>2024-03-21T15:56:58.000Z</published>
+    <updated>2024-03-24T13:24:45.327Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;欢迎阅读第35期技术资讯！欢迎阅读本期技术资讯！本期在工具推荐方面，我们发现了SuperDrag这款智能浏览器鼠标拖拽扩展，它能根据不同的拖拽内容执行相应操作，如打开链接、保存图片或搜索文本。Surfingkeys则为Chrome和Firefox用户提供了类似Vim的键盘快捷键操作方式，极大提升了浏览效率。RSSHub Radar和RSS+两个工具简化了RSS订阅源的发现和订阅过程，而Mihon作为一款Android端的免费开源漫画阅读器，支持丰富的图源扩展。在Python包管理方面，我们介绍了uv，这是一个用Rust编写的快速安装程序和解析器，旨在替代pip。此外，我们还分享了中国法律快查手册和Z-Library桌面端下载信息，以及基于Kimi Chat的AI渐进式阅读法，帮助读者高效处理大量阅读材料。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/202403241911541.jpg&quot; alt=&quot;封面图 西湖三月·2024&quot;&gt;&lt;/p&gt;</summary>
+    
+    
+    
     
   </entry>
   
@@ -49,10 +65,6 @@
     
     
     
-    <category term="冲浪" scheme="https://www.lifeee.top/categories/%E5%86%B2%E6%B5%AA/"/>
-    
-    
-    <category term="冲浪" scheme="https://www.lifeee.top/tags/%E5%86%B2%E6%B5%AA/"/>
     
   </entry>
   
@@ -69,10 +81,6 @@
     
     
     
-    <category term="冲浪" scheme="https://www.lifeee.top/categories/%E5%86%B2%E6%B5%AA/"/>
-    
-    
-    <category term="冲浪" scheme="https://www.lifeee.top/tags/%E5%86%B2%E6%B5%AA/"/>
     
   </entry>
   
@@ -89,10 +97,6 @@
     
     
     
-    <category term="冲浪" scheme="https://www.lifeee.top/categories/%E5%86%B2%E6%B5%AA/"/>
-    
-    
-    <category term="冲浪" scheme="https://www.lifeee.top/tags/%E5%86%B2%E6%B5%AA/"/>
     
   </entry>
   
@@ -109,10 +113,6 @@
     
     
     
-    <category term="冲浪" scheme="https://www.lifeee.top/categories/%E5%86%B2%E6%B5%AA/"/>
-    
-    
-    <category term="冲浪" scheme="https://www.lifeee.top/tags/%E5%86%B2%E6%B5%AA/"/>
     
   </entry>
   
@@ -129,10 +129,6 @@
     
     
     
-    <category term="冲浪" scheme="https://www.lifeee.top/categories/%E5%86%B2%E6%B5%AA/"/>
-    
-    
-    <category term="冲浪" scheme="https://www.lifeee.top/tags/%E5%86%B2%E6%B5%AA/"/>
     
   </entry>
   
@@ -149,10 +145,6 @@
     
     
     
-    <category term="冲浪" scheme="https://www.lifeee.top/categories/%E5%86%B2%E6%B5%AA/"/>
-    
-    
-    <category term="冲浪" scheme="https://www.lifeee.top/tags/%E5%86%B2%E6%B5%AA/"/>
     
   </entry>
   
@@ -173,10 +165,6 @@
     
     
     
-    <category term="冲浪" scheme="https://www.lifeee.top/categories/%E5%86%B2%E6%B5%AA/"/>
-    
-    
-    <category term="冲浪" scheme="https://www.lifeee.top/tags/%E5%86%B2%E6%B5%AA/"/>
     
   </entry>
   
@@ -193,16 +181,6 @@
     
     
     
-    <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
-    
-    <category term="善用佳软" scheme="https://www.lifeee.top/categories/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
-    
-    
-    <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
-    
-    <category term="善用佳软" scheme="https://www.lifeee.top/tags/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
-    
-    <category term="Windows" scheme="https://www.lifeee.top/tags/Windows/"/>
     
   </entry>
   
@@ -219,14 +197,6 @@
     
     
     
-    <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
-    
-    <category term="善用佳软" scheme="https://www.lifeee.top/categories/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
-    
-    
-    <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
-    
-    <category term="善用佳软" scheme="https://www.lifeee.top/tags/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
     
   </entry>
   
@@ -243,14 +213,6 @@
     
     
     
-    <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
-    
-    <category term="善用佳软" scheme="https://www.lifeee.top/categories/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
-    
-    
-    <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
-    
-    <category term="善用佳软" scheme="https://www.lifeee.top/tags/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
     
   </entry>
   
@@ -267,12 +229,6 @@
     
     
     
-    <category term="技术" scheme="https://www.lifeee.top/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-    <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
-    
-    <category term="善用佳软" scheme="https://www.lifeee.top/tags/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
     
   </entry>
   
@@ -289,14 +245,6 @@
     
     
     
-    <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
-    
-    <category term="善用佳软" scheme="https://www.lifeee.top/categories/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
-    
-    
-    <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
-    
-    <category term="善用佳软" scheme="https://www.lifeee.top/tags/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
     
   </entry>
   
@@ -313,14 +261,6 @@
     
     
     
-    <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
-    
-    <category term="善用佳软" scheme="https://www.lifeee.top/categories/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
-    
-    
-    <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
-    
-    <category term="善用佳软" scheme="https://www.lifeee.top/tags/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
     
   </entry>
   
@@ -337,14 +277,6 @@
     
     
     
-    <category term="善用佳软" scheme="https://www.lifeee.top/categories/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
-    
-    
-    <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
-    
-    <category term="善用佳软" scheme="https://www.lifeee.top/tags/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
-    
-    <category term="Windows" scheme="https://www.lifeee.top/tags/Windows/"/>
     
   </entry>
   
@@ -361,16 +293,6 @@
     
     
     
-    <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
-    
-    <category term="善用佳软" scheme="https://www.lifeee.top/categories/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
-    
-    
-    <category term="C++" scheme="https://www.lifeee.top/tags/C/"/>
-    
-    <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
-    
-    <category term="Linux" scheme="https://www.lifeee.top/tags/Linux/"/>
     
   </entry>
   
@@ -387,12 +309,6 @@
     
     
     
-    <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
-    
-    
-    <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
-    
-    <category term="Windows" scheme="https://www.lifeee.top/tags/Windows/"/>
     
   </entry>
   
@@ -409,16 +325,6 @@
     
     
     
-    <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
-    
-    <category term="善用佳软" scheme="https://www.lifeee.top/categories/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
-    
-    
-    <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
-    
-    <category term="善用佳软" scheme="https://www.lifeee.top/tags/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
-    
-    <category term="Windows" scheme="https://www.lifeee.top/tags/Windows/"/>
     
   </entry>
   
@@ -435,34 +341,6 @@
     
     
     
-    <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
-    
-    
-    <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
-    
-    <category term="Linux" scheme="https://www.lifeee.top/tags/Linux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title> C++ stringstream 简介</title>
-    <link href="https://www.lifeee.top/posts/23490.html"/>
-    <id>https://www.lifeee.top/posts/23490.html</id>
-    <published>2021-05-24T06:46:15.000Z</published>
-    <updated>2022-11-14T16:43:07.396Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/imgpexels-valiphotos-589802yas2.jpg&quot;&gt;&lt;/p&gt;
-&lt;p&gt;C++ stringstream 能够实现字符串流的输入输出操作，将字符串对象与流关联起来，允许像读取流一样读取字符串(如 cin)。能够很方便的从字符串中提取出以空格分割的子串、计算单词的频率，并且能够很方便地实现内置类型数据数据之间的转换(如 string 转 int)。🍦&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="技术" scheme="https://www.lifeee.top/categories/%E6%8A%80%E6%9C%AF/"/>
-    
-    
-    <category term="C++" scheme="https://www.lifeee.top/tags/C/"/>
-    
-    <category term="编程" scheme="https://www.lifeee.top/tags/%E7%BC%96%E7%A8%8B/"/>
     
   </entry>
   
