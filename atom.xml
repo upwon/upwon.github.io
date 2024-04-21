@@ -6,7 +6,7 @@
   <link href="https://www.lifeee.top/atom.xml" rel="self"/>
   
   <link href="https://www.lifeee.top/"/>
-  <updated>2024-04-06T15:51:10.851Z</updated>
+  <updated>2024-04-21T05:36:36.467Z</updated>
   <id>https://www.lifeee.top/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>网上冲浪周刊第39期</title>
+    <link href="https://www.lifeee.top/posts/16879.html"/>
+    <id>https://www.lifeee.top/posts/16879.html</id>
+    <published>2024-04-21T05:21:23.000Z</published>
+    <updated>2024-04-21T05:36:36.467Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;欢迎阅读第39期技术资讯！欢迎阅读本期技术资讯！ &lt;strong&gt;工具推荐&lt;/strong&gt;方面方面，我们介绍了UI Notes - 真实产品 UI 设计灵感库可以探索 UI 设计的最新趋势；AI编程助手：Fitten Code，可提供代码自动补全、注释生成、智能bug查找和自动生成单元测试等功能；算法可视化面板编辑器，旨在教用户如何使用一个算法可视化工具来增强对算法执行过程的理解；Pixiv第三方桌面客户端。&lt;strong&gt;宝藏信息&lt;/strong&gt;方面，分享了播客广场发现更多感兴趣的播客，本地知识库问答系统，以及TikTok Notes 图文社交平台。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/202404172314679.jpg&quot; alt=&quot;封面图 西溪湿地四月·2024&quot;&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="冲浪" scheme="https://www.lifeee.top/categories/%E5%86%B2%E6%B5%AA/"/>
+    
+    
+    <category term="冲浪" scheme="https://www.lifeee.top/tags/%E5%86%B2%E6%B5%AA/"/>
+    
+  </entry>
   
   <entry>
     <title>网上冲浪周刊第37期</title>
@@ -439,28 +459,6 @@
     <category term="善用佳软" scheme="https://www.lifeee.top/tags/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
     
     <category term="Windows" scheme="https://www.lifeee.top/tags/Windows/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Linux 下安装中文版 man 手册 以及 C++ 帮助手册</title>
-    <link href="https://www.lifeee.top/posts/58853.html"/>
-    <id>https://www.lifeee.top/posts/58853.html</id>
-    <published>2021-06-10T09:07:55.000Z</published>
-    <updated>2022-11-14T16:43:07.404Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/ba920825gy1grdb8wqvaaj21s80to13l.jpg&quot;&gt;&lt;/p&gt;
-&lt;p&gt;man 手册页是在Unix或类Unix操作系统中常用的一种花在线软件文档形式，内容包括计算机程序（包括库和系统调用），正式的标准和惯例，甚至是抽象的概念。我们都可以通过执行man命令调用手册页。本文主要内容为：为 Linux 下的 man 手册安装中文版并设置别名 cman ， 方便中英阅读对照；同时安装 Ｃ++ 的 man 手册文档，方便查阅库函数的使用细节。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
-    
-    
-    <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
-    
-    <category term="Linux" scheme="https://www.lifeee.top/tags/Linux/"/>
     
   </entry>
   
