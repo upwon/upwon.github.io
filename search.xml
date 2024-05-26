@@ -20344,4 +20344,113 @@ Welcome to my Blog. This is my first post. If you want to konw more info about H
         <tag>冲浪</tag>
       </tags>
   </entry>
+  <entry>
+    <title>网上冲浪周刊第43期</title>
+    <url>/posts/22872.html</url>
+    <content><![CDATA[<p>欢迎阅读本期技术资讯！我们为您推荐了一系列实用工具和资源：Bruno，一款开源API管理客户端，支持Git友好操作和纯文本标记语言；夸克搜，一个专注于夸克网盘资源的搜索引擎；FRE123动漫搜索引擎，提供在线动漫资源搜索；在线生成二维码油猴脚本，方便用户生成页面地址二维码；C-Light，一个AI图像处理工具，通过智能打光技术增强图片效果。此外，我们还介绍了沉浸式线性代数学习资源，以及流畅阅读浏览器翻译插件，支持多语言翻译和双语模式。这些工具和资源旨在提升您的工作效率和学习体验，助您在技术领域更进一步。</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/202405262249756.jpg"></p>
+<span id="more"></span>
+
+
+
+<br />
+
+<p>欢迎来到第43期 ！😄</p>
+<p>期待您通过RSS订阅我们：<a href="https://www.lifeee.top//atom.xml">https://www.lifeee.top//atom.xml</a></p>
+<br />
+
+<h1 id="技术"><a href="#技术" class="headerlink" title="技术"></a>技术</h1><h2 id="推荐阅读"><a href="#推荐阅读" class="headerlink" title="推荐阅读"></a>推荐阅读</h2><ul>
+<li><a href="https://juejin.cn/post/7335067315452428297">Flutter 2024 路线规划，更多可期待的功能正在路上</a>： 文章概述了Flutter在2024年的开发路线图，重点介绍了Impeller引擎的发展、Material 3的支持、跨平台视图、隐私标准适配、Dart与其他语言的交互、Web和桌面端的改进，以及Dart宏编程的引入。</li>
+<li><a href="https://mp.weixin.qq.com/s/-jsSQvGodOLmN6eseR8RNg?utm_source=pocket_saves">程序员如何提升个人技术影响力｜得物技术 </a>:  文章主要指导程序员如何通过一系列具体的方法和步骤来提升个人在技术领域的影响力。作者从技术大会主编的角度出发，分享了如何通过不断学习和实践，以及通过Github项目贡献、撰写技术文章、进行演讲和出版书籍等方式来构建和扩大技术影响力。文章强调了持续学习和输出的重要性，并提供了一些实用的建议和技巧，如如何准备技术文章、如何提升演讲技巧以及如何出版书籍等。</li>
+<li><a href="https://juejin.cn/post/7327686547808927778">聊聊鸿蒙HarmonyOS NEXT 的技术细节</a>：文章探讨了华为鸿蒙操作系统的技术细节，特别是其微内核架构、OS结构、方舟编译器以及鸿蒙应用开发的三种方式。</li>
+</ul>
+<br />
+
+<br />
+
+<h1 id="有趣的工具"><a href="#有趣的工具" class="headerlink" title="有趣的工具"></a>有趣的工具</h1><h2 id="Bruno-：API-管理请求客户端"><a href="#Bruno-：API-管理请求客户端" class="headerlink" title="Bruno ：API 管理请求客户端"></a>Bruno ：API 管理请求客户端</h2><p> <a href="https://www.usebruno.com/">Bruno</a> 是一款快速、Git 友好的开源 API 客户端，旨在彻底改变 Postman、Insomnia 和其他类似工具所代表的现状。<br>Bruno 会将收藏直接存储在文件系统的文件夹中。其使用纯文本标记语言 Bru 来保存有关 API 请求的信息。</p>
+<p><img data-src="https://www.usebruno.com/images/landing-2.png"></p>
+<p>开源地址：<a href="https://github.com/usebruno/bruno">https://github.com/usebruno/bruno</a></p>
+<h2 id="夸克搜-在线搜索夸克网盘资源"><a href="#夸克搜-在线搜索夸克网盘资源" class="headerlink" title="夸克搜 在线搜索夸克网盘资源"></a>夸克搜 在线搜索夸克网盘资源</h2><p>“夸克搜”是一个专注于夸克网盘的搜索引擎，它允许用户搜索存储在夸克网盘上的资源。网页提供了一些热门资源的展示，包括动漫、影视等，并有分类榜单和最近更新的内容。</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/202405222315528.png" alt="image-20240522231528274"></p>
+<p>在线地址：<a href="https://www.quark.so/">https://www.quark.so/</a></p>
+<h2 id="FRE123-动漫搜索引擎"><a href="#FRE123-动漫搜索引擎" class="headerlink" title="FRE123 动漫搜索引擎"></a>FRE123 动漫搜索引擎</h2><p>FRE123 动漫搜索引擎专注于在线搜索动漫资源。</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/202405222320567.png"></p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/202405222321827.png"></p>
+<p>在线地址：<a href="https://www.fre321.com/anime/s">https://www.fre321.com/anime/s</a></p>
+<br />
+
+
+
+<h2 id="在线生成二维码（油猴脚本）"><a href="#在线生成二维码（油猴脚本）" class="headerlink" title="在线生成二维码（油猴脚本）"></a>在线生成二维码（油猴脚本）</h2><p>在页面左下角添加一个图标，点击后生成当前页面地址二维码</p>
+<p>安装地址： <a href="https://greasyfork.org/en/scripts/473640-%E7%94%9F%E6%88%90%E4%BA%8C%E7%BB%B4%E7%A0%81%E5%9B%BE%E6%A0%87">https://greasyfork.org/en/scripts/473640-%E7%94%9F%E6%88%90%E4%BA%8C%E7%BB%B4%E7%A0%81%E5%9B%BE%E6%A0%87</a></p>
+<br />
+
+
+
+<h2 id="AI智能打光：C-Light"><a href="#AI智能打光：C-Light" class="headerlink" title="AI智能打光：C-Light"></a>AI智能打光：C-Light</h2><p>C-Light是一个AI图像处理工具，它通过智能打光技术来增强图片的视觉效果。用户可以上传图片，选择光源位置，并输入提示词，AI会根据这些信息生成具有优质光影效果的图片。此工具还能实现图片与背景的无缝融合，并提供多种场景的解决方案。</p>
+<p>在线体验①：<a href="https://www.appmiu.com/go/c88m">https://huggingface.co/spaces/lllyasviel/IC-Light</a><br>在线体验②：<a href="https://www.appmiu.com/go/nu5e">https://colab.research.google.com/drive/1-pXSpTH-zNhaAKFmMvh-xj7Zp9781L2f?usp=sharing</a></p>
+<br />
+
+<br />
+
+<h1 id="宝藏信息"><a href="#宝藏信息" class="headerlink" title="宝藏信息"></a>宝藏信息</h1><h2 id="沉浸式线性代数-immersivemath"><a href="#沉浸式线性代数-immersivemath" class="headerlink" title="沉浸式线性代数 immersivemath"></a>沉浸式线性代数 immersivemath</h2><p>《<a href="https://immersivemath.com/ila/learnmore.html?utm_source=pocket_saves">immersivemath: Immersive Linear Algebra</a>》是一本旨在通过沉浸式学习体验教授线性代数的书籍。它涵盖了从基础的向量操作到更高级的数学概念，如点积、向量积和高斯消元法等。通过这本书，读者可以系统地学习和理解线性代数的各个方面。</p>
+<p><a href="https://immersivemath.com/ila/ch01_introduction/ch01.html">Chapter 1: Introduction 第 1 章：简介</a></p>
+<p>How to navigate, notation, and a recap of some math that we think you already know.<br>如何导航、符号以及一些我们认为你已经知道的数学知识的回顾。</p>
+<p><a href="https://immersivemath.com/ila/ch02_vectors/ch02.html">Chapter 2: Vectors 第 2 章：向量</a></p>
+<p>The concept of a vector is introduced, and we learn how to add and subtract vectors, and more.<br>介绍向量的概念，学习向量的加减法等。</p>
+<p><a href="https://immersivemath.com/ila/ch03_dotproduct/ch03.html">Chapter 3: The Dot Product 第 3 章：点积</a></p>
+<p>A powerful tool that takes two vectors and produces a scalar.<br>一个强大的工具，它能将两个向量相加并产生一个标量。</p>
+<p><a href="https://immersivemath.com/ila/ch04_vectorproduct/ch04.html">Chapter 4: The Vector Product 第 4 章：矢量积</a></p>
+<p>In three-dimensional spaces you can produce a vector from two other vectors using this tool.<br>在三维空间中，你可以用这个工具从另外两个向量生成一个向量。</p>
+<p><a href="https://immersivemath.com/ila/ch05_gausselim/ch05.html">Chapter 5: Gaussian Elimination 第 5 章：高斯消元</a></p>
+<p>A way to solve systems of linear equations.<br>求解线性方程组的一种方法。</p>
+<p><a href="https://immersivemath.com/ila/ch06_matrices/ch06.html">Chapter 6: The Matrix 第 6 章：矩阵</a></p>
+<p>Enter the matrix. 输入矩阵。</p>
+<p><a href="https://immersivemath.com/ila/ch07_determinants/ch07.html">Chapter 7: Determinants 第 7 章：行列式</a></p>
+<p>A fundamental property of square matrices.<br>方阵的基本性质。</p>
+<p><a href="https://immersivemath.com/ila/ch08_rank/ch08.html">Chapter 8: Rank 第8章：秩</a></p>
+<p>Discover the behaviour of matrices.<br>探索矩阵的行为。</p>
+<p><a href="https://immersivemath.com/ila/ch09_linear_mappings/ch09.html">Chapter 9: Linear Mappings 第 9 章：线性映射</a></p>
+<p>Learn to harness the power of linearity…<br>学习利用线性的力量…</p>
+<p><a href="https://immersivemath.com/ila/ch10_eigen/ch10.html">Chapter 10: Eigenvalues and Eigenvectors 第10章：特征值和特征向量</a></p>
+<p>This chapter has a value in itself.<br>这一章本身就很有价值。</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/202405222257140.png"></p>
+<p>在线地址： <a href="https://immersivemath.com/ila/index.html">https://immersivemath.com/ila/index.html</a></p>
+<br />
+
+ 
+
+<h2 id="流畅阅读：浏览器翻译插件"><a href="#流畅阅读：浏览器翻译插件" class="headerlink" title="流畅阅读：浏览器翻译插件"></a>流畅阅读：浏览器翻译插件</h2><p>流畅阅读是一款高效的浏览器翻译插件，可以将网页上的文字翻译成任何语言，方便、快捷、直观，支持人工智能引擎。 </p>
+<p>流畅阅读支持「仅译文模式」和「双语模式」，为所有人提供可选的翻译模式。</p>
+<p><a href="https://github.com/Bistutu/FluentRead/blob/main/misc/sample-git-1.gif"><img data-src="https://github.com/Bistutu/FluentRead/raw/main/misc/sample-git-1.gif" alt="sample-git-1.gif" style="zoom:67%;" /></a></p>
+<p><a href="https://github.com/Bistutu/FluentRead/blob/main/misc/sample-git-4.gif"><img data-src="https://github.com/Bistutu/FluentRead/raw/main/misc/sample-git-4.gif" alt="sample-git-4.gif" style="zoom:67%;" /></a></p>
+<p><a href="https://github.com/Bistutu/FluentRead/blob/main/misc/screenshot-3.png"><img data-src="https://github.com/Bistutu/FluentRead/raw/main/misc/screenshot-3.png" alt="sample-git-1.gif" style="zoom:67%;" /></a></p>
+<p>安装指南：</p>
+<blockquote>
+<p>插件已经上架各大浏览器的应用商店，可以点击下方链接进行安装：</p>
+</blockquote>
+<ul>
+<li><strong>Chrome 浏览器</strong>：<a href="https://chromewebstore.google.com/detail/%E6%B5%81%E7%95%85%E9%98%85%E8%AF%BB/djnlaiohfaaifbibleebjggkghlmcpcj?hl=zh-CN&authuser=0">点击安装</a>、<a href="https://www.crxsoso.com/webstore/detail/djnlaiohfaaifbibleebjggkghlmcpcj">备用链接</a></li>
+<li><strong>Edge 浏览器</strong>：<a href="https://microsoftedge.microsoft.com/addons/detail/%E6%B5%81%E7%95%85%E9%98%85%E8%AF%BB/kakgmllfpjldjhcnkghpplmlbnmcoflp?hl=zh-CN">点击安装</a></li>
+<li><strong>Firefox（火狐）浏览器</strong>：<a href="https://addons.mozilla.org/zh-CN/firefox/addon/%E6%B5%81%E7%95%85%E9%98%85%E8%AF%BB/?utm_source=addons.mozilla.org&utm_medium=referral&utm_content=search">点击安装</a></li>
+<li><strong>其他浏览器，尝试</strong>：<a href="https://www.crxsoso.com/webstore/detail/djnlaiohfaaifbibleebjggkghlmcpcj">点击安装</a></li>
+</ul>
+<p>开源地址：<a href="https://github.com/Bistutu/FluentRead">https://github.com/Bistutu/FluentRead</a></p>
+<br />
+
+<br />
+
+<br />
+
+<h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>百闻不如一见，百见不如一试。</p>
+<p>🎉 本文同步更新于    <a href="https://github.com/starsight/TechWeekly">https://github.com/starsight/TechWeekly</a></p>
+]]></content>
+      <categories>
+        <category>冲浪</category>
+      </categories>
+      <tags>
+        <tag>冲浪</tag>
+      </tags>
+  </entry>
 </search>

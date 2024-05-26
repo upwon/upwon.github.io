@@ -6,7 +6,7 @@
   <link href="https://www.lifeee.top/atom.xml" rel="self"/>
   
   <link href="https://www.lifeee.top/"/>
-  <updated>2024-05-11T11:54:18.835Z</updated>
+  <updated>2024-05-26T14:49:54.862Z</updated>
   <id>https://www.lifeee.top/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>网上冲浪周刊第43期</title>
+    <link href="https://www.lifeee.top/posts/22872.html"/>
+    <id>https://www.lifeee.top/posts/22872.html</id>
+    <published>2024-05-26T14:44:01.000Z</published>
+    <updated>2024-05-26T14:49:54.862Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;欢迎阅读本期技术资讯！我们为您推荐了一系列实用工具和资源：Bruno，一款开源API管理客户端，支持Git友好操作和纯文本标记语言；夸克搜，一个专注于夸克网盘资源的搜索引擎；FRE123动漫搜索引擎，提供在线动漫资源搜索；在线生成二维码油猴脚本，方便用户生成页面地址二维码；C-Light，一个AI图像处理工具，通过智能打光技术增强图片效果。此外，我们还介绍了沉浸式线性代数学习资源，以及流畅阅读浏览器翻译插件，支持多语言翻译和双语模式。这些工具和资源旨在提升您的工作效率和学习体验，助您在技术领域更进一步。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/202405262249756.jpg&quot;&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="冲浪" scheme="https://www.lifeee.top/categories/%E5%86%B2%E6%B5%AA/"/>
+    
+    
+    <category term="冲浪" scheme="https://www.lifeee.top/tags/%E5%86%B2%E6%B5%AA/"/>
+    
+  </entry>
   
   <entry>
     <title>网上冲浪周刊第41期</title>
@@ -431,28 +451,6 @@
     <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
     
     <category term="Linux" scheme="https://www.lifeee.top/tags/Linux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>WSL SSH 自启动</title>
-    <link href="https://www.lifeee.top/posts/14733.html"/>
-    <id>https://www.lifeee.top/posts/14733.html</id>
-    <published>2021-07-10T13:14:58.000Z</published>
-    <updated>2022-11-14T16:43:07.403Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/ba920825gy1gsc5umbr8dj255p3ft484.jpg&quot;&gt;&lt;/p&gt;
-&lt;p&gt;vbs脚本实现WSL SSH 自启动&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
-    
-    
-    <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
-    
-    <category term="Windows" scheme="https://www.lifeee.top/tags/Windows/"/>
     
   </entry>
   
