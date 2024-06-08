@@ -6,7 +6,7 @@
   <link href="https://www.lifeee.top/atom.xml" rel="self"/>
   
   <link href="https://www.lifeee.top/"/>
-  <updated>2024-05-26T14:50:10.825Z</updated>
+  <updated>2024-06-06T13:14:37.293Z</updated>
   <id>https://www.lifeee.top/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>网上冲浪周刊第45期</title>
+    <link href="https://www.lifeee.top/posts/53592.html"/>
+    <id>https://www.lifeee.top/posts/53592.html</id>
+    <published>2024-06-06T13:11:02.000Z</published>
+    <updated>2024-06-06T13:14:37.293Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;欢迎阅读本期技术资讯！我们为您推荐了一些有趣的工具，如最懂程序员的新一代 AI 搜索引擎 Devv、文本生成语音模型 ChatTTS 及其 UI 项目、视频翻译配音工具 PYVIDEOTRANS。此外，还介绍了美图开源任务队列 LMSTFY 和动手学深度学习资源。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/202406052246720.jpg&quot; alt=&quot;https://www.pexels.com/zh-cn/photo/348706/&quot;&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="冲浪" scheme="https://www.lifeee.top/categories/%E5%86%B2%E6%B5%AA/"/>
+    
+    
+    <category term="冲浪" scheme="https://www.lifeee.top/tags/%E5%86%B2%E6%B5%AA/"/>
+    
+  </entry>
   
   <entry>
     <title>网上冲浪周刊第43期</title>
@@ -425,32 +445,6 @@
     <category term="善用佳软" scheme="https://www.lifeee.top/tags/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
     
     <category term="Windows" scheme="https://www.lifeee.top/tags/Windows/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>使用 CLion 和 Valgrind 调试程序检查内存泄漏</title>
-    <link href="https://www.lifeee.top/posts/9487.html"/>
-    <id>https://www.lifeee.top/posts/9487.html</id>
-    <published>2021-07-10T13:15:18.000Z</published>
-    <updated>2022-11-14T16:43:07.403Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/ba920825gy1gsc5u2610gj23su2j8dox.jpg&quot;&gt;&lt;/p&gt;
-&lt;p&gt; Valgrind Memcheck 是一个用于检测内存使用问题的工具，比如泄漏、无效的内存访问、不正确的释放和引用未定义的值。CLion提供了配置Valgrind ，但不是开箱即用，需要自己安装然后配置一下，通过本文三言两语你将学会CLion 下 Valgrind 的配置。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
-    
-    <category term="善用佳软" scheme="https://www.lifeee.top/categories/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
-    
-    
-    <category term="C++" scheme="https://www.lifeee.top/tags/C/"/>
-    
-    <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
-    
-    <category term="Linux" scheme="https://www.lifeee.top/tags/Linux/"/>
     
   </entry>
   

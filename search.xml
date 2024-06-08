@@ -20453,4 +20453,145 @@ Welcome to my Blog. This is my first post. If you want to konw more info about H
         <tag>冲浪</tag>
       </tags>
   </entry>
+  <entry>
+    <title>网上冲浪周刊第45期</title>
+    <url>/posts/53592.html</url>
+    <content><![CDATA[<p>欢迎阅读本期技术资讯！我们为您推荐了一些有趣的工具，如最懂程序员的新一代 AI 搜索引擎 Devv、文本生成语音模型 ChatTTS 及其 UI 项目、视频翻译配音工具 PYVIDEOTRANS。此外，还介绍了美图开源任务队列 LMSTFY 和动手学深度学习资源。</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/202406052246720.jpg" alt="https://www.pexels.com/zh-cn/photo/348706/"></p>
+<span id="more"></span>
+
+
+
+<br />
+
+<p>欢迎来到第45期 ！😄</p>
+<p>期待您通过RSS订阅我们：<a href="https://www.lifeee.top//atom.xml">https://www.lifeee.top//atom.xml</a></p>
+<br />
+
+<h1 id="技术"><a href="#技术" class="headerlink" title="技术"></a>技术</h1><h2 id="推荐阅读"><a href="#推荐阅读" class="headerlink" title="推荐阅读"></a>推荐阅读</h2><ul>
+<li><p><a href="https://juejin.cn/post/7316202809383321609">这是你们项目中WebView的样子吗？</a>：文章探讨了项目中WebView的使用规范和功能，包括可监控性、与前端的交互、安全问题以及WebView的封装思路。</p>
+</li>
+<li><p><a href="https://mp.weixin.qq.com/s/XMWbBcGUbGh61Vv8-Lz8NA">盘点 Google I&#x2F;O 2024 的 Android 领域关键进展 </a>:  </p>
+<p>文章的主要内容和进展包括：</p>
+<ul>
+<li><strong>AI编程助手</strong>：Gemini正式纳入产品家族，帮助提高代码质量和开发效率。</li>
+<li><strong>生成式AI应用</strong>：提供云端和设备端的大模型能力，助力开发新型应用。</li>
+<li><strong>不同屏幕尺寸适配</strong>：通过Compose自适应布局API，简化多设备适配。</li>
+<li><strong>桌面小部件</strong>：Jetpack Glance框架更新，提供新设计规范和UI组件库。</li>
+<li><strong>跨设备类型开发</strong>：Jetpack Compose更新，支持更广泛的Android设备生态系统。</li>
+<li><strong>WearOS &amp; 可穿戴</strong>：Wear OS 5预览版发布，带来电池续航和表盘格式改进。</li>
+<li><strong>Android for Car</strong>：Android Auto和Android Automotive OS进展，推动车机系统智能化。</li>
+<li><strong>Android TV</strong>：Android TV OS增长迅速，推出Android 14 for TV和Compose for TV。</li>
+<li><strong>Google Home API</strong>：基于Matter，简化家用产品开发，提供更丰富的家庭自动化体验。</li>
+<li><strong>Kotlin Multiplatform</strong>：Jetpack库迁移到KMP，推荐开发者共享跨平台业务逻辑。</li>
+<li><strong>Jetpack Compose</strong>：宣布新版本更新，增强跨设备适配和UI组件。</li>
+<li><strong>Android Studio</strong>：发布新版本，引入Gemini功能和UI自动化测试插件。</li>
+<li><strong>Google Play</strong>：分享最新进展，帮助开发者打造高质量用户体验和优化收入。</li>
+<li><strong>Checks</strong>：提供应用隐私合规检查服务，帮助遵守隐私法规。</li>
+<li><strong>Android 15</strong>：发布第二个测试版，注重提高生产效率、电池性能和应用流畅性。</li>
+</ul>
+</li>
+<li><p><a href="https://mp.weixin.qq.com/s/VjcU3s6YcyR5jr3tndov2g">Android vold (卷管理) 传记 </a>: 文章以自述和对话的方式详细介绍了Android系统中vold的作用、如何监听外部存储设备的热插拔事件、管理卷的方式以及为应用创建目录的能力。</p>
+<p>文章的主要内容和要点包括：</p>
+<ul>
+<li><strong>vold简介</strong>：vold是volume daemon的缩写，负责管理所有卷，包括加密解密CE和DE类型的目录，以及对存储设备或卷进行挂载、卸载、格式化等操作。</li>
+<li><strong>vold的作用</strong>：为app提供存储服务，管理卷信息，并与StorageManagerService通信，使应用能够访问外部存储。</li>
+<li><strong>卷管理</strong>：介绍了vold如何收集和管理外部存储设备卷和虚拟卷，以及如何通过NetlinkManager和VolumeManager类来处理uevent事件。</li>
+<li><strong>挂载userdata分区</strong>：解释了vold如何挂载userdata分区到&#x2F;data目录，以及fstab文件的作用。</li>
+<li><strong>解密CE和DE类型目录</strong>：简要提及了vold如何解密这些目录，具体内容在其他文章中介绍。</li>
+<li><strong>为app创建data和obb目录</strong>：vold利用其root权限为应用在外部存储下创建具有正确权限的data和obb目录。</li>
+</ul>
+</li>
+</ul>
+<br />
+
+<br />
+
+<h1 id="有趣的工具"><a href="#有趣的工具" class="headerlink" title="有趣的工具"></a>有趣的工具</h1><h2 id="最懂程序员的新一代-AI-搜索引擎"><a href="#最懂程序员的新一代-AI-搜索引擎" class="headerlink" title="最懂程序员的新一代 AI 搜索引擎"></a>最懂程序员的新一代 AI 搜索引擎</h2><p>Devv 支持直接连接 GitHub 仓库，进行搜索、提问、生成代码 , 非常适合程序员。  </p>
+<p>快速模式:基于 Devv 构建的 AI 搜索引擎，快速获取编程问题的答案、文档以及代码片段。</p>
+<p>Agent 模式：为复杂的开发问题提供 Agent 驱动的解决方案，涵盖问题搜索、代码生成、Debug 等场景。</p>
+<p>GitHub 模式：连接指定的公开或私有 GitHub 仓库，实现针对特定代码库的搜索、问答以及代码生成。</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/202406032333551.png"></p>
+<p>地址：<a href="https://devv.ai/">https://devv.ai/</a></p>
+<h2 id="ChatTTS：文本生成语音"><a href="#ChatTTS：文本生成语音" class="headerlink" title="ChatTTS：文本生成语音"></a>ChatTTS：文本生成语音</h2><p>ChatTTS 是专为 LLM 助手等对话场景设计的文本到语音模型。它支持中英文两种语言。我们的模型经过 100,000+ 小时的中英文训练。HuggingFace 上的开源版本是不含 SFT 的 40,000 小时预训练模型。</p>
+<p><strong>亮点</strong></p>
+<ol>
+<li><strong>对话式 TTS</strong>: ChatTTS针对对话式任务进行了优化，实现了自然流畅的语音合成，同时支持多说话人。</li>
+<li><strong>细粒度控制</strong>: 该模型能够预测和控制细粒度的韵律特征，包括笑声、停顿和插入词等。</li>
+<li><strong>更好的韵律</strong>: ChatTTS在韵律方面超越了大部分开源TTS模型。同时提供预训练模型，支持进一步的研究。</li>
+</ol>
+<p>对于模型的具体介绍, 可以参考B站的 <strong><a href="https://www.bilibili.com/video/BV1zn4y1o7iV">宣传视频</a></strong></p>
+<p>开源地址：<a href="https://github.com/2noise/chattts?tab=readme-ov-file">https://github.com/2noise/chattts</a></p>
+<p>官网：<a href="https://2noise.com/">https://2noise.com/</a></p>
+<h2 id="ChatTTS-ui"><a href="#ChatTTS-ui" class="headerlink" title="ChatTTS-ui"></a>ChatTTS-ui</h2><p><code>ChatTTS-ui</code> 是一个开源项目，主要用于文本到语音转换（Text-to-Speech, TTS）。该项目的主要功能是将输入的文本转换为语音输出，可能用于各种需要语音合成功能的应用场景，如聊天机器人、语音助手等。<br>提供了网页中使用 ChatTTS 合成语音及 API 接口服务，支持 Windows、Linux、macOS 部署。其中 Windows 用户可直接下载安装包，一键安装开箱即用。</p>
+<p>从项目的名称和文件结构来看，<code>ChatTTS-ui</code> 提供了一个用户界面（UI），使用户可以方便地输入文本并获得语音输出。项目的核心功能可能包括文本处理、语音合成以及用户界面的设计和实现。</p>
+<p>主要功能</p>
+<ol>
+<li><strong>文本到语音转换</strong>：将输入的文本转换为语音输出。</li>
+<li><strong>用户界面</strong>：提供一个直观的界面，用户可以在其中输入文本并播放生成的语音。</li>
+<li><strong>开源社区支持</strong>：项目在 GitHub 上开源，用户和开发者可以贡献代码、报告问题和提出改进建议。</li>
+</ol>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/202406042259781.png"></p>
+<p>开源地址：<a href="https://github.com/jianchang512/ChatTTS-ui">https://github.com/jianchang512/ChatTTS-ui</a></p>
+<h2 id="pyVideoTrans视频翻译配音"><a href="#pyVideoTrans视频翻译配音" class="headerlink" title="pyVideoTrans视频翻译配音"></a>pyVideoTrans视频翻译配音</h2><p>一键实现语音识别-&gt;字幕翻译-&gt;配音 &#x3D; 带字幕和配音的新视频。</p>
+<p>特性：</p>
+<p>💥自动视频翻译</p>
+<p>集成faster-whisper模型&#x2F;并支持自定义huggingface模型<br>同时集成批量语音转字幕、批量字幕翻译、批量配音小工具</p>
+<p>🤠多种配音和翻译渠道</p>
+<p>配音:edgeTTS|AzureTTS|OpenAiTTS|Elevenlabs|clone-voice|GPT-SoVITS<br>翻译:Google|ChatGPT|DeepL|Gemini|Mircosoft|百度|腾讯|本地模型</p>
+<p>🤖可完全离线</p>
+<p>翻译渠道替换为本地模型,配音渠道替换为clone-voice,即可实现完全本地离线视频翻译</p>
+<p>🚀免费+开源</p>
+<p>代码GitHub公开可审查，免费无功能限制，无隐藏收费<br>开源协议GPL-v3</p>
+<p>官网：<a href="https://pyvideotrans.com/">https://pyvideotrans.com/</a></p>
+<p>下载地址：<a href="https://pyvideotrans.com/downpackage.html">https://pyvideotrans.com/downpackage.html</a></p>
+<br />
+
+<br />
+
+<h1 id="宝藏信息"><a href="#宝藏信息" class="headerlink" title="宝藏信息"></a>宝藏信息</h1><h2 id="美图开源任务队列-lmstfy"><a href="#美图开源任务队列-lmstfy" class="headerlink" title="美图开源任务队列 lmstfy"></a>美图开源任务队列 lmstfy</h2><p> 具有 REST API 的任务队列 基于 redis 存储，使用 golang 开发，资源占用少，轻量级，并且经受美图线上环境大流量验证多年，较适合用来做延迟队列。</p>
+<p><img data-src="https://raw.githubusercontent.com/bitleak/lmstfy/master/doc/lmstfy-internal.png"></p>
+<p>开源地址：<a href="https://github.com/bitleak/lmstfy">https://github.com/bitleak/lmstfy</a></p>
+<h2 id="动手学深度学习"><a href="#动手学深度学习" class="headerlink" title="动手学深度学习"></a>动手学深度学习</h2><p>《动手学深度学习》：面向中文读者、能运行、可讨论。中英文版被70多个国家的500多所大学用于教学。</p>
+<p>特性：</p>
+<ol>
+<li><p>所有人均可在网上免费获取；</p>
+</li>
+<li><p>提供足够的技术深度，从而帮助读者实际成为深度学习应用科学家：既理解数学原理，又能够实现并不断改进方法；</p>
+</li>
+<li><p>包含可运行的代码，为读者展示如何在实际中解决问题。这样不仅直接将数学公式对应成实际代码，而且可以修改代码、观察结果并及时获取经验；</p>
+</li>
+<li><p>允许我们和整个社区不断快速迭代内容，从而紧跟仍在高速发展的深度学习领域；</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/202406042315100.png"></p>
+</li>
+</ol>
+<p>开源地址：<a href="https://github.com/d2l-ai/d2l-zh">https://github.com/d2l-ai/d2l-zh</a></p>
+<p>在线网站：<a href="http://zh.d2l.ai/">http://zh.d2l.ai/</a></p>
+<br />
+
+ 
+
+<h1 id="资讯"><a href="#资讯" class="headerlink" title="资讯"></a>资讯</h1><ul>
+<li><a href="https://www.36kr.com/p/2806457318700419">ChatGPT遭遇近8小时大规模宕机 </a></li>
+<li><a href="https://www.ithome.com/0/772/968.htm">快手推出团购配送到家服务</a></li>
+<li><a href="https://www.sohu.com/a/783674113_239259">微信推出锁屏录音功能</a></li>
+<li><a href="https://www.ithome.com/0/773/039.htm">高铁新增“优选一等座”票价介于商务座和一等座之间</a></li>
+<li><a href="https://36kr.com/newsflashes/2805335795381632">途牛2024年一季度净收入同比增71%</a></li>
+</ul>
+<br />
+
+<br />
+
+<br />
+
+<h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>百闻不如一见，百见不如一试。</p>
+<p>🎉 本文同步更新于 <a href="https://www.lifeee.top/posts/22872.html">https://www.lifeee.top/posts/22872.html</a>  </p>
+]]></content>
+      <categories>
+        <category>冲浪</category>
+      </categories>
+      <tags>
+        <tag>冲浪</tag>
+      </tags>
+  </entry>
 </search>
