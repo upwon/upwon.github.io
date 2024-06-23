@@ -20594,4 +20594,91 @@ Welcome to my Blog. This is my first post. If you want to konw more info about H
         <tag>冲浪</tag>
       </tags>
   </entry>
+  <entry>
+    <title>网上冲浪周刊第47期</title>
+    <url>/posts/26969.html</url>
+    <content><![CDATA[<p>欢迎阅读本期技术资讯！我们为您推荐了一些有趣的工具，如基于FunASR高准确率语音识别模型的智能视频剪辑工具、潮点AI工具导航网站、AI Girlfriends。此外，还介绍了影猫推荐、相似网站搜索   <a href="https://www.similarsites.com/">Similarsites</a>、食用手册。</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/202406152226878.jpg" alt="https://pixabay.com/photos/lugu-lake-boat-lake-blue-horizon-8679121/"></p>
+<span id="more"></span>
+
+
+
+<br />
+
+<p>欢迎来到第47期 ！😄</p>
+<p>期待您通过RSS订阅我们：<a href="https://www.lifeee.top//atom.xml">https://www.lifeee.top//atom.xml</a></p>
+<br />
+
+<h1 id="技术"><a href="#技术" class="headerlink" title="技术"></a>技术</h1><h2 id="推荐阅读"><a href="#推荐阅读" class="headerlink" title="推荐阅读"></a>推荐阅读</h2><ul>
+<li><p><a href="https://gityuan.com/2019/09/07/flutter_run/?utm_source=pocket_shared">源码解读Flutter run机制 - Gityuan博客 | 袁辉辉的技术博客</a>： 文章详细介绍了Flutter run命令的使用方法和背后的机制。首先，它解释了如何通过IDE或命令行运行Flutter应用，并区分了debug、profile和release模式。接着，文章详细解读了flutter run命令的参数，包括如何指定目标平台、输出目录、是否启用服务鉴权等。此外，文章还探讨了如何使用gradle构建APK，并通过adb命令安装和启动应用。最后，文章通过源码分析，揭示了Flutter run命令在Android和iOS设备上的具体实现细节，包括前端编译、AOT编译、构建bundle等关键步骤。</p>
+</li>
+<li><p><a href="https://juejin.cn/post/7381767811679502346">Flutter局部刷新三剑客</a>： 文章介绍了Flutter中实现局部刷新的三个工具：ChangeNotifier、ValueNotifier和ValueListenableBuilder，帮助开发者提高页面性能。</p>
+</li>
+<li><p><a href="http://w4lle.com/2021/01/15/flutter-ui-layout/?utm_source=pocket_shared">Flutter UI 渲染浅析（五）Layout | w4lle’s Notes</a>： 深入探讨了Render Tree的构建以及Layout阶段。</p>
+<p>作者首先回顾了<code>RenderObject</code>的角色和重要性，它是Render Tree的构成节点，负责布局和绘制。文章解释了并非所有Element都持有RenderObject的引用，只有特定的<code>RenderObjectWidget</code>及其对应的<code>RenderObjectElement</code>会创建RenderObject。</p>
+<p>文章提到<code>RenderObject</code>继承自<code>AbstractNode</code>，这使得它成为树状结构的一部分，并具备了节点的基本操作。<code>RenderObject</code>还混入了<code>HitTestTarget</code>，用以提供事件处理能力。作者还指出<code>RenderObject</code>定义了通用的布局和绘制协议，但没有具体定义坐标系统或布局协议的细节。</p>
+<p>最后，文章提到了<code>Layer</code>，它也是<code>AbstractNode</code>的子类，将在下一篇文章中分析。整体而言，文章为读者提供了对Flutter框架中UI渲染流程的深入理解，特别是Render Tree的构建和布局机制。</p>
+</li>
+</ul>
+<br />
+
+<br />
+
+<h1 id="有趣的工具"><a href="#有趣的工具" class="headerlink" title="有趣的工具"></a>有趣的工具</h1><h2 id="基于FunASR高准确率语音识别模型的智能视频剪辑工具"><a href="#基于FunASR高准确率语音识别模型的智能视频剪辑工具" class="headerlink" title="基于FunASR高准确率语音识别模型的智能视频剪辑工具"></a>基于FunASR高准确率语音识别模型的智能视频剪辑工具</h2><p>FunClip 是一款自动化视频剪辑工具，通过调用阿里巴巴通义实验室开源的FunASR Paraformer系列模型进行视频的语音识别，随后用户可以自由选择识别结果中的片段，点击裁剪按钮即可获取对应片段的视频（快速体验）。</p>
+<p>在上述基本功能的基础上，FunClip有以下特色：</p>
+<p>FunClip集成了阿里巴巴开源的工业级模型Paraformer-Large，是当前识别效果最优的开源中文ASR模型之一，Modelscope下载量1300w+次，并且能够一体化的准确预测时间戳。</p>
+<p>FunClip集成了SeACo-Paraformer的热词定制化功能，在ASR过程中可以指定一些实体词、人名等作为热词，提升识别效果。</p>
+<p>FunClip集成了CAM++说话人识别模型，用户可以将自动识别出的说话人ID作为裁剪目标，将某一说话人的段落裁剪出来。</p>
+<p>通过Gradio交互实现上述功能，安装简单使用方便，并且可以在服务端搭建服务通过浏览器使用。</p>
+<p>FunClip支持多段自由剪辑，并且会自动返回全视频SRT字幕、目标段落SRT字幕，使用简单方便。</p>
+<p>安装及使用方法可以查看： 使用FunClip进行视频剪辑</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/202403282310265.png"></p>
+<p>开源地址：<a href="https://github.com/alibaba-damo-academy/FunClip">https://github.com/alibaba-damo-academy/FunClip</a></p>
+<br />
+
+<h2 id="又一个AI导航网站：潮点AI工具导航网站"><a href="#又一个AI导航网站：潮点AI工具导航网站" class="headerlink" title="又一个AI导航网站：潮点AI工具导航网站"></a>又一个AI导航网站：潮点AI工具导航网站</h2><p><a href="https://aichaodian.com/">潮点AI工具导航网站</a>提供了一个广泛的AI工具和资源目录，覆盖了从AI对话互动、图像处理、视频工具、音频工具、设计工具、写作工具到办公工具等多个领域。此外，还包括了语言翻译、内容检测、提示指令、训练模型、学习网站、开发框架、编程工具等类别的链接。网站旨在帮助用户快速找到所需的AI服务和资源，无论是专业人士还是对AI感兴趣的学习者。</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/202406182334088.png"></p>
+<p>在线地址：<a href="https://aichaodian.com/">https://aichaodian.com/</a></p>
+<br />
+
+<h2 id="AI-Girlfriends"><a href="#AI-Girlfriends" class="headerlink" title="AI Girlfriends"></a>AI Girlfriends</h2><p><a href="https://aigirlfriends.ai/">AI Girlfriends</a> 是一个创新的虚拟伴侣平台，它通过结合尖端技术和现实世界的影响力，为用户提供沉浸式的AI聊天机器人伴侣体验。该平台与知名影响者合作，无论是寻求虚拟伴侣关系、数字友谊还是AI关系，这里都是理想的目的地。关键特点包括无缝对话、具有重要记忆功能的AI、独家图片以及语音文本功能，这些功能共同创造了一个超越文字的视觉和洞察力盛宴，提供了一个更加沉浸和吸引人的体验。</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/202406182338611.png"></p>
+<p>在线地址：<a href="https://aigirlfriends.ai/">https://aigirlfriends.ai/</a></p>
+<br />
+
+<br />
+
+<h1 id="宝藏信息"><a href="#宝藏信息" class="headerlink" title="宝藏信息"></a>宝藏信息</h1><h2 id="影猫推荐"><a href="#影猫推荐" class="headerlink" title="影猫推荐"></a>影猫推荐</h2><p><a href="">影猫推荐</a>（MVCAT）是一个多功能的影视推荐平台，提供包括每日推荐、热门作品、标签分类、日历、地图、海报、必看作品、人物解说等多种影视相关内容。电影分类很详细，还有随机推荐的电影。</p>
+<p>网站还设有书屋和好物推荐栏目，以及背景音乐服务。</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/202406182328165.png"></p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/202406182329331.png"></p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/202406182329915.png"></p>
+<p>地址： <a href="https://www.mvcat.com/">https://www.mvcat.com/</a> </p>
+<br />
+
+<h2 id="相似网站搜索-Similarsites"><a href="#相似网站搜索-Similarsites" class="headerlink" title="相似网站搜索   Similarsites"></a>相似网站搜索   <a href="https://www.similarsites.com/">Similarsites</a></h2><p><a href="https://www.similarsites.com/">SimilarSites</a> 是一个在线工具，它允许用户通过浏览器扩展发现与他们喜爱的网站类似的其他网站。SimilarSites 也提供了一个浏览器扩展，用户可以通过它来探索与他们当前访问的网站类似的其他网站。这个工具对于寻找特定主题或类型的替代网站非常有用。用户可以免费下载这个扩展，它支持即时查找类似网站，并且已经获得了一些用户的积极评价，他们认为这个扩展易于使用且功能强大。</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/202406182340422.png"></p>
+<p>在线网站： <a href="https://www.similarsites.com/">https://www.similarsites.com/</a></p>
+<br />
+
+<h2 id="食用手册-菜谱指南"><a href="#食用手册-菜谱指南" class="headerlink" title="食用手册: 菜谱指南"></a>食用手册: 菜谱指南</h2><p><a href="https://cook.yunyoujun.cn/">食用手册</a>提供了一个简单直观的界面，使用户可以通过选择各种食材和厨具来探索可能的菜谱组合。网站列出了多种蔬菜、肉类、主食选项以及不同类型的厨具，如烤箱、空气炸锅、微波炉和多功能锅。用户的选择将决定他们可以看到的菜谱，从而帮助他们创新自己的烹饪方式或找到新的烹饪灵感。</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/202406182347770.png"></p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/202406182348650.png"></p>
+<p>在线网站：<a href="https://cook.yunyoujun.cn/">https://cook.yunyoujun.cn/</a></p>
+<br />
+
+<br />
+
+<br />
+
+<h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>百闻不如一见，百见不如一试。</p>
+<p>🎉 本文同步更新于  <a href="https://www.lifeee.top/posts/53592.html">https://www.lifeee.top/posts/53592.html</a></p>
+]]></content>
+      <categories>
+        <category>冲浪</category>
+      </categories>
+      <tags>
+        <tag>冲浪</tag>
+      </tags>
+  </entry>
 </search>
