@@ -6,7 +6,7 @@
   <link href="https://www.lifeee.top/atom.xml" rel="self"/>
   
   <link href="https://www.lifeee.top/"/>
-  <updated>2024-06-19T15:24:31.257Z</updated>
+  <updated>2024-07-07T15:27:31.556Z</updated>
   <id>https://www.lifeee.top/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>网上冲浪周刊第49期</title>
+    <link href="https://www.lifeee.top/posts/33115.html"/>
+    <id>https://www.lifeee.top/posts/33115.html</id>
+    <published>2024-07-07T15:19:40.000Z</published>
+    <updated>2024-07-07T15:27:31.556Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;欢迎阅读本期技术资讯！我们为您推荐了一些有趣的工具，如可视化神经网络 Netron 、用于 Web 的表情符号选择器 HTML 组件、Notion 简体中文版帮助文档、 ZeroTermux  Android 终端。此外，还介绍了、全历史、大厂项目复盘。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/202407072325290.png&quot; alt=&quot;image-20240707232504020&quot;&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="冲浪" scheme="https://www.lifeee.top/categories/%E5%86%B2%E6%B5%AA/"/>
+    
+    
+    <category term="冲浪" scheme="https://www.lifeee.top/tags/%E5%86%B2%E6%B5%AA/"/>
+    
+  </entry>
   
   <entry>
     <title>网上冲浪周刊第47期</title>
@@ -406,30 +426,6 @@
     
     <summary type="html">&lt;p&gt;&lt;img src=&quot;https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/202402142109966.jpg&quot;&gt;&lt;/p&gt;
 &lt;p&gt;利用谷歌学术搜索的快讯来实时追踪最新的论文动态 🎉🎉&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
-    
-    <category term="善用佳软" scheme="https://www.lifeee.top/categories/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
-    
-    
-    <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
-    
-    <category term="善用佳软" scheme="https://www.lifeee.top/tags/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>gitee图床迁移至Github并开启CDN</title>
-    <link href="https://www.lifeee.top/posts/20121.html"/>
-    <id>https://www.lifeee.top/posts/20121.html</id>
-    <published>2022-03-28T03:40:22.000Z</published>
-    <updated>2022-11-14T16:57:17.388Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/mmexport1648033893709-sq.jpg&quot;&gt;&lt;/p&gt;
-&lt;p&gt;近几天gitee做了防盗链处理，导致很多使用gitee作为图床的文章中图片挂了，为此决定将图片全部迁移到Github了（我以前两者都使用），本文主要描述了迁移的步骤，以及对原有文章中图片链接的替换。 🙃&lt;/p&gt;</summary>
     
     
     
