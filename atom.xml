@@ -6,7 +6,7 @@
   <link href="https://www.lifeee.top/atom.xml" rel="self"/>
   
   <link href="https://www.lifeee.top/"/>
-  <updated>2024-07-19T14:20:41.994Z</updated>
+  <updated>2024-08-02T15:17:50.736Z</updated>
   <id>https://www.lifeee.top/</id>
   
   <author>
@@ -17,11 +17,31 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>网上冲浪周刊第53期</title>
+    <link href="https://www.lifeee.top/posts/61924.html"/>
+    <id>https://www.lifeee.top/posts/61924.html</id>
+    <published>2024-08-02T15:12:49.000Z</published>
+    <updated>2024-08-02T15:17:50.736Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;欢迎阅读本期技术资讯！我们为您推荐了一些有趣的工具，如开源剪切板管理器EcoPaste 、开源多端图像托管平台管理工具 PicList  、Notion的离线替代品Eidos。此外，还介绍了 Windows 开源沙盒软件 Sandboxie Plus以及开源产品图标库 QingIcon。&lt;/p&gt;
+&lt;p&gt; &lt;img src=&quot;https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/202408022300536.jpg&quot; alt=&quot;https://www.pexels.com/zh-cn/photo/21760959/&quot;&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="冲浪" scheme="https://www.lifeee.top/categories/%E5%86%B2%E6%B5%AA/"/>
+    
+    
+    <category term="冲浪" scheme="https://www.lifeee.top/tags/%E5%86%B2%E6%B5%AA/"/>
+    
+  </entry>
+  
+  <entry>
     <title>网上冲浪周刊第51期</title>
     <link href="https://www.lifeee.top/posts/49675.html"/>
     <id>https://www.lifeee.top/posts/49675.html</id>
     <published>2024-07-19T14:17:45.000Z</published>
-    <updated>2024-07-19T14:20:41.994Z</updated>
+    <updated>2024-08-02T15:17:30.928Z</updated>
     
     
     <summary type="html">&lt;p&gt;欢迎阅读本期技术资讯！我们为您推荐了一些有趣的工具，如Rodel Downloader AI模型下载工具、Apache Superset 数据可视化平台 、Ladybird - 一个真正独立的Web浏览器。此外，还介绍了在VSCode里离线使用语雀编辑器 以及优化React性能的一个虚拟DOM。&lt;/p&gt;
@@ -406,28 +426,6 @@
     <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
     
     <category term="善用佳软" scheme="https://www.lifeee.top/categories/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
-    
-    
-    <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
-    
-    <category term="善用佳软" scheme="https://www.lifeee.top/tags/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>通信专业网页工具和博客推荐</title>
-    <link href="https://www.lifeee.top/posts/1297.html"/>
-    <id>https://www.lifeee.top/posts/1297.html</id>
-    <published>2022-10-15T14:24:38.000Z</published>
-    <updated>2023-07-16T03:19:34.531Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/202210162224324.jpg&quot;&gt;&lt;/p&gt;
-&lt;p&gt;研究生阶段在学习通信(LTE&amp;#x2F;5G)时偶遇到一些工具网站和不错的博客，在此分享给大家。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="技术" scheme="https://www.lifeee.top/categories/%E6%8A%80%E6%9C%AF/"/>
     
     
     <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
