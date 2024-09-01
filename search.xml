@@ -21074,7 +21074,7 @@ Welcome to my Blog. This is my first post. If you want to konw more info about H
 
 <h1 id="有趣的工具"><a href="#有趣的工具" class="headerlink" title="有趣的工具"></a>有趣的工具</h1><h2 id="PDF工具箱-PDF-Guru-Anki"><a href="#PDF工具箱-PDF-Guru-Anki" class="headerlink" title="PDF工具箱 PDF Guru Anki"></a>PDF工具箱 PDF Guru Anki</h2><p> PDF Guru Anki是一款以PDF为中心的多功能办公学习工具箱软件，包含四大板块功能：PDF实用工具箱、Anki制卡神器、Anki最强辅助、视频笔记神器，软件功能众多且强大，熟练运用可以大幅提高办公和学习效率，绝对是您不可多得的效率神器。</p>
 <p><img data-src="https://camo.githubusercontent.com/ead8fc6ee74c8edd50a5987c591d8685110b020a91f5afdfff5eff2993fad9b5/68747470733a2f2f6d696e696f2e6b6576696e326c692e746f702f696d6167652d6265642f77696b692f32303234303731303232313431352e706e67"></p>
-<p>开源地址：  <a href="https://github.com/ayangweb/EcoPaste/">https://github.com/ayangweb/EcoPaste/</a></p>
+<p>开源地址：   <a href="https://github.com/kevin2li/PDF-Guru">https://github.com/kevin2li/PDF-Guru</a></p>
 <h2 id="开源在线白板工具-Excalidraw"><a href="#开源在线白板工具-Excalidraw" class="headerlink" title="开源在线白板工具 Excalidraw"></a>开源在线白板工具 Excalidraw</h2><p> Excalidraw 是一个开源的在线白板工具，以其手绘风格的图形设计受到用户的喜爱。它提供了简洁直观的界面和多种绘图工具，支持实时多人协作，允许用户离线使用并同步数据。此外，Excalidraw 支持将图表导出为 PNG、SVG 和 Excalidraw 格式。对于开发者，Excalidraw 还提供了 VS Code 插件，使得在代码编辑器中创建和编辑图表变得方便。文章还提供了如何在 VS Code 中使用 Excalidraw 插件的步骤，以及 Excalidraw 的使用场景和资源获取方式。</p>
 <p>特性：</p>
 <ul>
@@ -21137,6 +21137,146 @@ Welcome to my Blog. This is my first post. If you want to konw more info about H
 
 <h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>百闻不如一见，百见不如一试。</p>
 <p>🎉 本文同步更新于   <a href="https://github.com/starsight/TechWeekly">https://github.com/starsight/TechWeekly</a></p>
+]]></content>
+      <categories>
+        <category>数学</category>
+        <category>冲浪佳软</category>
+      </categories>
+      <tags>
+        <tag>冲浪</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>网上冲浪周刊第57期</title>
+    <url>/posts/43364.html</url>
+    <content><![CDATA[<p>欢迎阅读本期技术资讯！我们为您推荐了一些有趣的工具，如免费文件翻译工具 DeeplxFile  、 flutter 版的 confetti（放礼花）包、Revezone - 一款以图形为中心的思维管理工具、删除预装的 Windows 无用软件应用程序 Win11Debloat 、 ComfyUI  一款 Stable Diffusion 图形用户界面（GUI） 、AI 编程软件 Cursor 。此外，还推荐了开源数据结构与算法和开源数据结构与算法。</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/pexels-padrinan-434137.jpg" alt="https://www.pexels.com/zh-cn/photo/434137/"></p>
+<span id="more"></span>
+
+
+
+<br />
+
+<p>欢迎来到第57期 ！😄</p>
+<p>期待您通过RSS订阅我们：<a href="https://www.lifeee.top//atom.xml">https://www.lifeee.top//atom.xml</a></p>
+<br />
+
+<h1 id="技术"><a href="#技术" class="headerlink" title="技术"></a>技术</h1><h2 id="推荐阅读"><a href="#推荐阅读" class="headerlink" title="推荐阅读"></a>推荐阅读</h2><ul>
+<li><p><a href="https://mp.weixin.qq.com/s/wD0AGHMnrhTS-721YbRTLg">你的 Flutter 项目异常太多是因为代码没有这样写 </a> ：  </p>
+<p>文章首先介绍了 Git 的由来和它与其他版本控制工具的区别，包括分布式架构、数据完整性、高效的分支和合并、速度、内容跟踪等特性。接着，文章列出了 Git 的基本命令，涵盖了初始化和克隆、暂存和提交、分支创建和切换、合并、推送和拉取等操作。此外，还介绍了典型的开发工作流程，包括创建分支、开发和提交修改、合并改动和推送修改。最后，文章解释了冲突解决的过程，包括识别冲突、解决冲突和将冲突标记为已解决的步骤。</p>
+</li>
+<li><p><a href="https://mp.weixin.qq.com/s/g0FlqnCSFuA1EtpeWhKPfA">Flutter 的异常捕获</a>： 在 Flutter 应用程序开发中，异常捕获是一个重要的环节。文章首先解释了 Flutter 框架如何在 UI 构建过程中通过 <code>ComponentElement</code> 的 <code>performRebuild()</code> 方法自动捕获异常，并展示默认的异常信息提示页面。接着，文章展示了如何通过自定义 <code>ErrorWidget.builder</code> 来改变异常信息的显示方式。此外，文章还介绍了 <code>FlutterError.onError</code> 和 <code>PlatformDispatcher</code> 的全局异常捕获机制，允许开发者在 <code>main()</code> 函数中设置自定义的异常处理逻辑。最后，文章提供了一个示例代码，演示了如何结合使用这些机制来全局捕获和处理异常信息。</p>
+</li>
+<li><p><a href="https://mp.weixin.qq.com/s/jPgvhekDyZNiAzClogAe9g">安卓工程师必须了解的Gradle知识 </a> ：  文章详细介绍了 Cool Request 插件的新功能 Trace，该功能允许用户在 IntelliJ IDEA 中统计任意方法的耗时，而无需编写代码。Trace 功能可以自动从 Controller 方法开始跟踪，支持不同深度的跟踪，并可以手动添加方法跟踪。此外，Trace 还可以选择性地跟踪 Mybatis 的执行函数，显示调用次数，并且允许用户自定义耗时颜色以高亮显示超过特定时间阈值的方法。文章还提到了 Cool Request 插件在操作环境和响应脚本处理方面的优势，如获取 token 和使用 Java 代码解析 JSON。</p>
+</li>
+</ul>
+<br />
+
+<br />
+
+<h1 id="有趣的工具"><a href="#有趣的工具" class="headerlink" title="有趣的工具"></a>有趣的工具</h1><h2 id="flutter-版的-confetti（放礼花）包"><a href="#flutter-版的-confetti（放礼花）包" class="headerlink" title="flutter 版的 confetti（放礼花）包"></a>flutter 版的 confetti（放礼花）包</h2><p>在 Flutter 中轻松制作五彩纸屑动画。</p>
+<p>特性：</p>
+<ul>
+<li>各种开箱即用的形状，如圆形、星形、正方形等。</li>
+<li>许多示例演示了不同的五彩纸屑动画。</li>
+<li>轻松制作您想要的形状。</li>
+</ul>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/msedge_qGDaLXNx0H.png"></p>
+<p>开源地址：<a href="https://github.com/cj0x39e/flutter_confetti">https://github.com/cj0x39e/flutter_confetti</a></p>
+<p>在线地址： <a href="https://cj0x39e.github.io/flutter_confetti/">https://cj0x39e.github.io/flutter_confetti/</a></p>
+<br />
+
+
+
+<h2 id="Revezone-一款以图形为中心的思维管理工具"><a href="#Revezone-一款以图形为中心的思维管理工具" class="headerlink" title="Revezone - 一款以图形为中心的思维管理工具"></a>Revezone - 一款以图形为中心的思维管理工具</h2><p>Revezone 是一款以图形为中心、轻量级、本地优先的用于构建第二大脑的效率工具。</p>
+<p><a href="https://camo.githubusercontent.com/ceb28a145318da3ef5fce33771a7ad29c0608b4655bc002993d391744993d019/68747470733a2f2f696d672e616c6963646e2e636f6d2f696d6765787472612f69342f4f31434e303168777a75426131704854744b6a4b4841455f2121363030303030303030353333352d322d7470732d323935322d313730362e706e67"><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/68747470733a2f2f696d672e616c6963646e2e636f6d2f696d6765787472612f69342f4f31434e303168777a75426131704854744b6a4b4841455f2121363030303030303030353333352d322d7470732d323935322d313730362e706e67"></a></p>
+<h2 id=""><a href="#" class="headerlink" title=""></a></h2><ul>
+<li>在线试用版本（数据存储在浏览器中）：<a href="https://revezone.com/">https://revezone.com</a></li>
+<li>桌面应用程序版本（本地数据存储）：<a href="https://github.com/revezone/revezone/releases">https://github.com/revezone/revezone/releases</a></li>
+</ul>
+<p>开源地址： <a href="https://github.com/revezone/revezone">https://github.com/revezone/revezone</a></p>
+<br />
+
+
+
+
+
+<h2 id="AI-编程软件-Cursor"><a href="#AI-编程软件-Cursor" class="headerlink" title="AI 编程软件 Cursor"></a>AI 编程软件 Cursor</h2><p>Cursor是一款集成了 AI 的编程软件，能够根据用户的指令自动生成代码，显著提高了编程效率和便捷性。</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/image-20240827202328175.png"></p>
+<p>开源地址：<a href="https://www.cursor.com/">https://www.cursor.com/</a>  </p>
+<br />
+
+<h2 id="免费文件翻译工具-DeeplxFile"><a href="#免费文件翻译工具-DeeplxFile" class="headerlink" title="免费文件翻译工具 DeeplxFile"></a>免费文件翻译工具 DeeplxFile</h2><p>DeeplxFile 是一个基于 Deeplx 提供的免费文件翻译工具，它不限制文件大小，可以帮助用户将文件内容翻译成不同的语言。</p>
+<p>使用说明：</p>
+<blockquote>
+<p>Windows提供了编译好的exe版本, 直接双击运行即可<br>从源代码运行<br>也可以下载源代码， 然后运行 python deeplxfile.py</p>
+<p>MacOS右键解压出来的文件夹，选择在文件夹打开新终端， 终端中输入<br>.&#x2F;deelxfile</p>
+</blockquote>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/image-20240827193213686.png"></p>
+<p>开源地址：  <a href="https://github.com/infrost/DeeplxFile">https://github.com/infrost/DeeplxFile</a></p>
+<br />
+
+
+
+<h2 id="删除预装的-Windows-无用软件应用程序：-Win11Debloat"><a href="#删除预装的-Windows-无用软件应用程序：-Win11Debloat" class="headerlink" title="删除预装的 Windows 无用软件应用程序： Win11Debloat"></a>删除预装的 Windows 无用软件应用程序： Win11Debloat</h2><p>Win11Debloat 是一个面向 Windows 系统的 PowerShell 脚本，它允许用户通过简单的操作来定制和优化他们的 Windows 环境。这个工具的主要功能包括移除预装的冗余应用程序、禁用遥测和追踪功能、消除系统界面上的广告和建议等。它提供了应用程序删除、遥测与隐私保护、搜索与界面定制、文件资源管理器调整、任务栏定制、上下文菜单调整和其他功能。Win11Debloat 支持一键式的系统优化，让用户无需手动逐一调整系统设置。文章还提供了安装指南，包括准备环境、下载运行脚本、选择模式、执行功能以及完成和清理的步骤。</p>
+<blockquote>
+<h3 id="快速方法"><a href="#快速方法" class="headerlink" title="快速方法"></a>快速方法</h3><p>通过PowerShell自动下载并运行脚本。</p>
+<ol>
+<li>以管理员身份打开 PowerShell。</li>
+<li>将以下代码复制并粘贴到 PowerShell 中，按 Enter 运行脚本：</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&amp; ([scriptblock]::Create((irm &quot;https://win11debloat.raphi.re/&quot;)))</span><br></pre></td></tr></table></figure>
+
+
+
+<ol>
+<li>等待脚本自动下载 Win11Debloat。</li>
+<li>将打开一个新的 PowerShell 窗口，显示 Win11Debloat 菜单。选择默认模式或自定义模式以继续。</li>
+<li>请仔细阅读并按照屏幕上的说明进行操作。</li>
+</ol>
+<p>该方法支持<a href="https://github.com/Raphire/Win11Debloat#parameters">参数</a>。要使用参数，只需按照上述说明运行脚本，但在末尾添加参数，并在两者之间添加空格。例：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&amp; ([scriptblock]::Create((irm &quot;https://win11debloat.raphi.re/&quot;))) -RunDefaults -Silent</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="传统方法"><a href="#传统方法" class="headerlink" title="传统方法"></a>传统方法</h3><p>手动下载并运行脚本。</p>
+<ol>
+<li><a href="https://github.com/Raphire/Win11Debloat/archive/master.zip">下载最新版本的脚本</a>，并将 .ZIP 文件解压缩到所需位置。</li>
+<li>导航到 Win11Debloat 文件夹</li>
+<li>双击 <code>Run.bat</code> 文件以启动脚本。注意：如果控制台窗口立即关闭且没有任何反应，请尝试以下高级方法。</li>
+<li>接受 Windows UAC 提示以管理员身份运行脚本，这是脚本运行所必需的。</li>
+<li>现在将打开一个新的 PowerShell 窗口，显示 Win11Debloat 菜单。选择默认模式或自定义模式以继续。</li>
+<li>请仔细阅读并按照屏幕上的说明进行操作。</li>
+</ol>
+</blockquote>
+<p>开源地址：<a href="https://github.com/Raphire/Win11Debloat">https://github.com/Raphire/Win11Debloat</a></p>
+<p>使用教程：<a href="https://mp.weixin.qq.com/s/ewrxnrXOIgodQizUEG473A">https://mp.weixin.qq.com/s/ewrxnrXOIgodQizUEG473A</a></p>
+<br />
+
+
+
+<h2 id="ComfyUI-——-一款-Stable-Diffusion-图形用户界面（GUI）"><a href="#ComfyUI-——-一款-Stable-Diffusion-图形用户界面（GUI）" class="headerlink" title="ComfyUI —— 一款 Stable Diffusion 图形用户界面（GUI）"></a>ComfyUI —— 一款 Stable Diffusion 图形用户界面（GUI）</h2><p> ComfyUI，一个允许用户创建和运行复杂 Stable Diffusion 工作流程的程序。它讨论了 ComfyUI 的功能、如何安装 ComfyUI 以及如何使用 ComfyUI。一些重要的要点是 ComfyUI 是免费和开源的，并且可以用于创建各种 Stable Diffusion 工作流程。</p>
+<p>开源地址：<a href="https://github.com/comfyanonymous/ComfyUI">https://github.com/comfyanonymous/ComfyUI</a></p>
+<br />
+
+<br />
+
+<h1 id="宝藏信息"><a href="#宝藏信息" class="headerlink" title="宝藏信息"></a>宝藏信息</h1><h2 id="开源电子书You-Don’t-Know-JS-Yet"><a href="#开源电子书You-Don’t-Know-JS-Yet" class="headerlink" title="开源电子书You Don’t Know JS Yet"></a>开源电子书You Don’t Know JS Yet</h2><p>“You-Dont-Know-JS” 是一个广受欢迎的开源电子书系列，由 Kasper Tidemann 赞助，旨在深入探讨 JavaScript 语言的各个方面。这个项目适合所有希望加深对 JavaScript 工作原理理解的开发者，不论他们是初学者还是有经验的程序员。它涵盖了作用域与闭包、this 和对象原型、类型与文法、异步与性能以及 ES6 和更新版本的语法等高级主题。通过学习这些内容，开发者可以深入理解 JavaScript 的底层逻辑，更有效地解决实际问题，并为技术面试做好准备。</p>
+<p> <img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/msedge_8MnTr5gq34.png"></p>
+<p>开源地址： <a href="https://github.com/getify/You-Dont-Know-JS?tab=readme-ov-file">https://github.com/getify/You-Dont-Know-JS?tab=readme-ov-file</a></p>
+<br />
+
+
+
+<h2 id="开源数据结构与算法"><a href="#开源数据结构与算法" class="headerlink" title="开源数据结构与算法"></a>开源数据结构与算法</h2><p>一个包含所有 Data Structures 和 Algorithms 概念及其以多种方式实现的存储库，编程问题和 Interview 问题。该存储库的主要目的是帮助正在学习数据结构和算法或准备面试的学生。此存储库包含所有 数据结构和算法 概念及其以多种方式实现、编程问题和面试问题。该存储库的主要目的是帮助正在学习数据结构和算法或准备面试的学生。这包含来自流行编码平台的问题，包括 <a href="https://leetcode.com/">LeetCode</a>、<a href="https://www.hackerrank.com/">HackerRank</a>、<a href="https://www.codechef.com/">Codechef</a>、<a href="https://practice.geeksforgeeks.org/explore/">GeeksforGeeks</a> 等等。</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/image-20240827201511670.png"></p>
+<p>开源地址：<a href="https://github.com/thepranaygupta/Data-Structures-and-Algorithms">https://github.com/thepranaygupta/Data-Structures-and-Algorithms</a></p>
+<br />
+
+<br />
+
+<h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>百闻不如一见，百见不如一试。</p>
+<p>🎉 本文同步更新于  <a href="https://github.com/starsight/TechWeekly">starsight&#x2F;TechWeekly (github.com)</a></p>
 ]]></content>
       <categories>
         <category>数学</category>
