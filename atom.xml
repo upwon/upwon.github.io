@@ -6,7 +6,7 @@
   <link href="https://www.lifeee.top/atom.xml" rel="self"/>
   
   <link href="https://www.lifeee.top/"/>
-  <updated>2024-09-01T14:57:48.644Z</updated>
+  <updated>2024-09-13T13:20:42.606Z</updated>
   <id>https://www.lifeee.top/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>网上冲浪周刊第59期</title>
+    <link href="https://www.lifeee.top/posts/16742.html"/>
+    <id>https://www.lifeee.top/posts/16742.html</id>
+    <published>2024-09-13T13:18:17.000Z</published>
+    <updated>2024-09-13T13:20:42.606Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;欢迎阅读本期技术资讯！我们为您推荐了一些有趣的工具，如腾讯自研的 Git 客户端UGit  、 开源跨平台解压软件PeaZip 、 适用于 Mac 和 Windows 的免费剪贴板管理器PasteBar 、Obsidian  Folder Note插件 、 开源的 RAG 文档聊天工具kotaemon 、 由 KG 引擎驱动的创新代理框架muAgent。此外，还推荐了Claude Dev：一款集成了Claude 3.5 Sonnet的VSCode AI编程工具和轻量又高性能的 SSH 工具IShell。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/pexels-shaimacapture-8668726.jpg&quot; alt=&quot;https://www.pexels.com/zh-cn/photo/8668726/&quot;&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="冲浪" scheme="https://www.lifeee.top/categories/%E5%86%B2%E6%B5%AA/"/>
+    
+    
+    <category term="冲浪" scheme="https://www.lifeee.top/tags/%E5%86%B2%E6%B5%AA/"/>
+    
+  </entry>
   
   <entry>
     <title>网上冲浪周刊第57期</title>
@@ -397,32 +417,6 @@
     
     
     <category term="冲浪" scheme="https://www.lifeee.top/tags/%E5%86%B2%E6%B5%AA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>开源软件商店 WingetUI 使用教程</title>
-    <link href="https://www.lifeee.top/posts/34001.html"/>
-    <id>https://www.lifeee.top/posts/34001.html</id>
-    <published>2023-09-23T09:01:00.000Z</published>
-    <updated>2023-09-23T09:23:59.461Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/202309231716883.jpg&quot;&gt;&lt;/p&gt;
-&lt;p&gt;在&lt;a href=&quot;https://www.lifeee.top/posts/36943.html&quot;&gt;包管理器 winget 使用指南 | 热夏的博客 (lifeee.top)&lt;/a&gt; 一文中介绍了利用 winget 来查找&amp;#x2F;安装&amp;#x2F;更新&amp;#x2F;卸载软件，这种方式是利用终端来进行的。而&lt;a href=&quot;https://www.marticliment.com/wingetui/&quot;&gt;WingetUI&lt;/a&gt;则是一款封装了常见包管理器的可视化GUI软件，本文将为大家介绍 WingetUI 的安装以及使用方法。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
-    
-    <category term="善用佳软" scheme="https://www.lifeee.top/categories/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
-    
-    
-    <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
-    
-    <category term="善用佳软" scheme="https://www.lifeee.top/tags/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
-    
-    <category term="Windows" scheme="https://www.lifeee.top/tags/Windows/"/>
     
   </entry>
   
