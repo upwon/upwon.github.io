@@ -6,7 +6,7 @@
   <link href="https://www.lifeee.top/atom.xml" rel="self"/>
   
   <link href="https://www.lifeee.top/"/>
-  <updated>2024-09-13T13:20:42.606Z</updated>
+  <updated>2024-09-28T14:54:34.093Z</updated>
   <id>https://www.lifeee.top/</id>
   
   <author>
@@ -17,11 +17,31 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>网上冲浪周刊第61期</title>
+    <link href="https://www.lifeee.top/posts/35958.html"/>
+    <id>https://www.lifeee.top/posts/35958.html</id>
+    <published>2024-09-28T14:42:53.000Z</published>
+    <updated>2024-09-28T14:54:34.093Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;欢迎阅读本期技术资讯！我们为您推荐了一些有趣的工具，如专为 GitHub 项目创建分享图像Socialify  、开源数据库设计与可视化工具ChartDB 、 AIToolly：发现和选择最佳人AI工具 、Void：全面隐私保护的开源 AI 代码编辑器 、 Cherry Studio：支持多模型的跨平台 AI 助手。此外，还推荐了Mini-Cover：简洁的在线生成封面网站，专为博客、短视频、社交媒体等生成个性化封面和 Yaak：简洁高效的现代 API 客户端，开源替代 Postman。&lt;/p&gt;
+&lt;p&gt; &lt;img src=&quot;https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/image-20240924225509534.png&quot; alt=&quot;🍮&quot;&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="冲浪" scheme="https://www.lifeee.top/categories/%E5%86%B2%E6%B5%AA/"/>
+    
+    
+    <category term="冲浪" scheme="https://www.lifeee.top/tags/%E5%86%B2%E6%B5%AA/"/>
+    
+  </entry>
+  
+  <entry>
     <title>网上冲浪周刊第59期</title>
     <link href="https://www.lifeee.top/posts/16742.html"/>
     <id>https://www.lifeee.top/posts/16742.html</id>
     <published>2024-09-13T13:18:17.000Z</published>
-    <updated>2024-09-13T13:20:42.606Z</updated>
+    <updated>2024-09-28T14:49:16.544Z</updated>
     
     
     <summary type="html">&lt;p&gt;欢迎阅读本期技术资讯！我们为您推荐了一些有趣的工具，如腾讯自研的 Git 客户端UGit  、 开源跨平台解压软件PeaZip 、 适用于 Mac 和 Windows 的免费剪贴板管理器PasteBar 、Obsidian  Folder Note插件 、 开源的 RAG 文档聊天工具kotaemon 、 由 KG 引擎驱动的创新代理框架muAgent。此外，还推荐了Claude Dev：一款集成了Claude 3.5 Sonnet的VSCode AI编程工具和轻量又高性能的 SSH 工具IShell。&lt;/p&gt;
@@ -386,30 +406,6 @@
     
     <summary type="html">&lt;p&gt;在第23期的网上冲浪周刊中，我们为您精选了丰富的技术内容，包括Android动画、UI自动化项目、Flutter全埋点等。推荐阅读中涵盖Kotlin技术月报和Gemini Pro评测等热门话题。有趣的工具包括PDF转Markdown工具、Linux命令搜索和开源协作平台AppFlowy。宝藏信息中推荐Go语言学习指南和GPT导航站，同时分享了圣诞主题Lofi音乐。整体而言，本期周刊为您提供了丰富的技术资源和有趣发现，希望能够为您的学习和探索带来启发。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/202312232352753.jpg&quot; alt=&quot;封面图 https://www.pexels.com/zh-cn/photo/2842732/&quot;&gt;&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="冲浪" scheme="https://www.lifeee.top/categories/%E5%86%B2%E6%B5%AA/"/>
-    
-    
-    <category term="冲浪" scheme="https://www.lifeee.top/tags/%E5%86%B2%E6%B5%AA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>网上冲浪周刊第21期：我爱Flutter🎉</title>
-    <link href="https://www.lifeee.top/posts/57809.html"/>
-    <id>https://www.lifeee.top/posts/57809.html</id>
-    <published>2023-12-08T14:06:14.000Z</published>
-    <updated>2024-02-14T13:22:08.699Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;在第21期的网上冲浪周刊中，我们将为您介绍以下内容：猫哥整理了一份精致的Flutter插件收录，为开发者提供了更方便的工具。同时，macos_ui为Flutter带来了与macOS设计语言相符的组件和主题。&lt;/p&gt;
-&lt;p&gt;推荐阅读方面，Kotlin技术月报带来了一系列重要消息，包括Kotlin 1.9.20版本发布、Compose Multiplatform 1.5.10版本发布等。而2024年的Kotlin Multiplatform发展路线图更是让人瞩目，特别是Compose for iOS即将进入Beta版阶段。&lt;/p&gt;
-&lt;p&gt;有趣的工具方面，谷歌即将推出的AI大模型Gemini引人关注，能够无缝融合图像、音频、视频、代码等多个领域。而今日热榜、多摸鱼等工具为用户提供了便捷的获取热门资讯的途径。&lt;/p&gt;
-&lt;p&gt;宝藏信息方面，手绘线条插画网站bon.design提供了简洁极简的插画素材，而Poe AI平台的StableDiffusionXL图像生成机器人则为艺术创作者提供了创新灵感的空间。&lt;/p&gt;
-&lt;p&gt;在资讯板块，Google DevFest活动分享了Android开发、Kotlin元编程技术、Jetpack Compose等热门主题。而VSCode最新版本的上线，为开发者带来了更多便捷和功能改进。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/202402142120298.jpg&quot; alt=&quot;杭州青山湖&quot;&gt;&lt;/p&gt;</summary>
     
     
     
