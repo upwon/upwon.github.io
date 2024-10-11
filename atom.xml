@@ -6,7 +6,7 @@
   <link href="https://www.lifeee.top/atom.xml" rel="self"/>
   
   <link href="https://www.lifeee.top/"/>
-  <updated>2024-09-28T15:04:56.433Z</updated>
+  <updated>2024-10-11T15:00:55.669Z</updated>
   <id>https://www.lifeee.top/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>网上冲浪周刊第63期</title>
+    <link href="https://www.lifeee.top/posts/39201.html"/>
+    <id>https://www.lifeee.top/posts/39201.html</id>
+    <published>2024-10-11T14:58:08.000Z</published>
+    <updated>2024-10-11T15:00:55.669Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;欢迎阅读本期技术资讯！我们为您推荐了一些有趣的工具，如开源 PDF 文献翻译工具PDFMathTranslate  、AB Download Manager：加速下载与文件管理的开源工具、PMRF：一种实现高质量图像修复的新型算法、强大的开源OCR工具Surya 。此外，还推荐了Luxirty Search : 无内容农场的搜索引擎、Lemuroid：开源多合一游戏模拟器，让Android设备变身游戏机、ChatMemOllama：开源微信公众号聊天机器人。&lt;/p&gt;
+&lt;p&gt; &lt;img src=&quot;https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/image-20241011224826494.png&quot; alt=&quot;绍兴2024.10&quot;&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="冲浪" scheme="https://www.lifeee.top/categories/%E5%86%B2%E6%B5%AA/"/>
+    
+    
+    <category term="冲浪" scheme="https://www.lifeee.top/tags/%E5%86%B2%E6%B5%AA/"/>
+    
+  </entry>
   
   <entry>
     <title>网上冲浪周刊第61期</title>
@@ -386,26 +406,6 @@
     
     <summary type="html">&lt;p&gt;欢迎阅读第25期技术资讯！这期我们推荐了一系列精彩的技术文章、工具和开源项目。在推荐阅读中，介绍2023年现代安卓开发的趋势，设计安全可靠的API的方法，以及Java 有哪些常见的误区问题。在有趣的工具部分，我们介绍了SmartDNS，一款本地DNS服务器，以及One Tab Group，一款多功能的标签页&amp;#x2F;标签组管理器。此外，还推荐了GitHub520、one-api、FreeControl和猫抓等实用工具。宝藏信息中，我们带来了Google Bard API、GitHub Web IDE等项目，以及一款能够在PC上控制Android设备的FreeControl。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/202401072002887.jpg&quot;&gt;&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="冲浪" scheme="https://www.lifeee.top/categories/%E5%86%B2%E6%B5%AA/"/>
-    
-    
-    <category term="冲浪" scheme="https://www.lifeee.top/tags/%E5%86%B2%E6%B5%AA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>网上冲浪周刊第23期：圣诞快乐🎄</title>
-    <link href="https://www.lifeee.top/posts/35341.html"/>
-    <id>https://www.lifeee.top/posts/35341.html</id>
-    <published>2023-12-23T15:10:40.000Z</published>
-    <updated>2024-01-07T12:12:27.342Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;在第23期的网上冲浪周刊中，我们为您精选了丰富的技术内容，包括Android动画、UI自动化项目、Flutter全埋点等。推荐阅读中涵盖Kotlin技术月报和Gemini Pro评测等热门话题。有趣的工具包括PDF转Markdown工具、Linux命令搜索和开源协作平台AppFlowy。宝藏信息中推荐Go语言学习指南和GPT导航站，同时分享了圣诞主题Lofi音乐。整体而言，本期周刊为您提供了丰富的技术资源和有趣发现，希望能够为您的学习和探索带来启发。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/202312232352753.jpg&quot; alt=&quot;封面图 https://www.pexels.com/zh-cn/photo/2842732/&quot;&gt;&lt;/p&gt;</summary>
     
     
     
