@@ -6,7 +6,7 @@
   <link href="https://www.lifeee.top/atom.xml" rel="self"/>
   
   <link href="https://www.lifeee.top/"/>
-  <updated>2024-10-25T15:15:34.045Z</updated>
+  <updated>2024-11-08T11:45:52.075Z</updated>
   <id>https://www.lifeee.top/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>网上冲浪周刊第67期</title>
+    <link href="https://www.lifeee.top/posts/43296.html"/>
+    <id>https://www.lifeee.top/posts/43296.html</id>
+    <published>2024-11-05T15:03:32.000Z</published>
+    <updated>2024-11-08T11:45:52.075Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;欢迎阅读本期技术资讯！我们为您介绍了一些有趣的工具，如高效OCR屏幕捕捉工具 NormCap 、开源高效的文档解析器 MegaParse、开源的浏览器书签查看工具bookmarks-artist 、Lux跨平台视频下载工具 。此外，还安利了  API Hub - 学习和掌握 API 交互的工具 、MD3-Windows 高颜值的的 Windows 桌面美化工具以及一款跳过B站视频中恰饭片段的浏览器插件BilibiliSponsorBlock 。&lt;/p&gt;
+&lt;p&gt; &lt;img src=&quot;https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/pexels-qhung999-24768347%20(2).jpg&quot; alt=&quot;https://www.pexels.com/zh-cn/photo/24768347/&quot;&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="冲浪" scheme="https://www.lifeee.top/categories/%E5%86%B2%E6%B5%AA/"/>
+    
+    
+    <category term="冲浪" scheme="https://www.lifeee.top/tags/%E5%86%B2%E6%B5%AA/"/>
+    
+  </entry>
   
   <entry>
     <title>网上冲浪周刊第65期</title>
@@ -386,26 +406,6 @@
     
     <summary type="html">&lt;p&gt;欢迎阅读第29期技术资讯！这期我们推荐了一些技术相关的文章、工具和信息。在推荐阅读中，介绍使用Compose实现龙头绘制、对2024年前端技术发展的预测、Android架构中新引入的UseCase概念等。此外,还介绍了几款有意思的工具软件,如Microsoft的视频编辑软件Clipchamp、Python数据可视化工具PyGWalker、开发者瑞士军刀DevToys工具等。文章还分享了独立开发者Sindre Sorhus的多个知名软件作品、开源Android电视直播软件my-tv,以及IPtv直播源地址。最后推荐了一档热门新闻播客《新闻酸菜馆》。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/202402142100562.jpg&quot; alt=&quot;封面图 https://www.pexels.com/zh-cn/photo/900097/&quot;&gt;&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="冲浪" scheme="https://www.lifeee.top/categories/%E5%86%B2%E6%B5%AA/"/>
-    
-    
-    <category term="冲浪" scheme="https://www.lifeee.top/tags/%E5%86%B2%E6%B5%AA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>网上冲浪周刊第27期：大寒已至，暖春将启🍃</title>
-    <link href="https://www.lifeee.top/posts/4820.html"/>
-    <id>https://www.lifeee.top/posts/4820.html</id>
-    <published>2024-01-21T09:12:16.000Z</published>
-    <updated>2024-01-21T09:18:08.771Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;欢迎阅读第27期技术资讯！这期我们推荐了一系列精彩的技术文章、工具和开源项目。在推荐阅读中，介绍了Instagram如何在短时间内迅速扩大用户规模，网易云音乐的自动化测试实践以及Android图像加载库Coil。在有趣的工具部分，我们介绍能够裁剪保存网页内容的浏览器扩展”MaoXian Web Clipper”和免费的Web防火墙软件雷池防火墙社区版。此外，还介绍了一些宝藏信息，如一本图解算法的入门书《Hello 算法》，以及解锁Medium付费文章的在线网站和浏览器扩展。最后，推荐了一档泛文化类播客《鲸鱼赫兹》，以探索不同城市生活的话题和可能性。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/202401211710726.jpg&quot; alt=&quot;封面图https://www.pexels.com/zh-cn/photo/1105391&quot;&gt;&lt;/p&gt;</summary>
     
     
     

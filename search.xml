@@ -21845,4 +21845,95 @@ Welcome to my Blog. This is my first post. If you want to konw more info about H
         <tag>冲浪</tag>
       </tags>
   </entry>
+  <entry>
+    <title>网上冲浪周刊第67期</title>
+    <url>/posts/43296.html</url>
+    <content><![CDATA[<p>欢迎阅读本期技术资讯！我们为您介绍了一些有趣的工具，如高效OCR屏幕捕捉工具 NormCap 、开源高效的文档解析器 MegaParse、开源的浏览器书签查看工具bookmarks-artist 、Lux跨平台视频下载工具 。此外，还安利了  API Hub - 学习和掌握 API 交互的工具 、MD3-Windows 高颜值的的 Windows 桌面美化工具以及一款跳过B站视频中恰饭片段的浏览器插件BilibiliSponsorBlock 。</p>
+<p> <img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/pexels-qhung999-24768347%20(2).jpg" alt="https://www.pexels.com/zh-cn/photo/24768347/"></p>
+<span id="more"></span>
+
+
+
+<br />
+
+<p>欢迎来到第67期 ！😄</p>
+<p>期待您通过RSS订阅我们：<a href="https://www.lifeee.top//atom.xml">https://www.lifeee.top//atom.xml</a></p>
+<br />
+
+
+
+<h2 id="推荐阅读"><a href="#推荐阅读" class="headerlink" title="推荐阅读"></a>推荐阅读</h2><ul>
+<li><p><a href="https://mp.weixin.qq.com/s/Nvgf2fyXH229ZHT9x6F-lQ">一文搞懂Apk的各种类型</a>： 文章通过对话形式，由Android新人小昱和经验丰富的大牛探讨Apk的分类和特性。文章首先介绍了Apk的分类，包括系统Apk和普通Apk，然后详细解释了系统Apk的子分类，如privileged Apk、core Apk和persistent Apk等。文章还讨论了如何成为系统Apk，以及系统Apk相对于普通Apk的特权和特性。最后，文章总结了系统Apk和普通Apk的主要区别，并强调了系统Apk的优势。</p>
+</li>
+<li><p><a href="https://juejin.cn/post/7403553327019556891"><a href="https://mp.weixin.qq.com/s/yO8QLihZGSzEcrtxS1SH0g">微信朋友圈的技术选型竟然是Flutter…</a> </a> : 文章讨论了微信在鸿蒙Next版本中的适配情况，特别是微信朋友圈的技术选型。通过DevEco的Inspector工具，作者分析了微信朋友圈页面的布局，并推断出其使用了Flutter进行开发。文章强调了跨平台技术方案在鸿蒙系统适配中的优势，尤其是在处理像微信这样的大型App时。作者认为，微信选择Flutter进行朋友圈的开发是一个深思熟虑的决定，这也表明华为在Flutter上的投入足以支持大型App的开发架构。文章还提到了鸿蒙Flutter的开发体验已经得到改善，对于普通开发者和Flutter开发者来说是一个极大的便利。</p>
+</li>
+</ul>
+<br />
+
+<br />
+
+<h2 id="有趣的工具"><a href="#有趣的工具" class="headerlink" title="有趣的工具"></a>有趣的工具</h2><h3 id="高效OCR屏幕捕捉工具-NormCap"><a href="#高效OCR屏幕捕捉工具-NormCap" class="headerlink" title="高效OCR屏幕捕捉工具 NormCap"></a>高效OCR屏幕捕捉工具 NormCap</h3><p>NormCap 是一个开源的、跨平台的OCR屏幕捕捉工具，支持Linux、macOS和Windows系统。NormCap利用Tesseract OCR引擎，提供了简单易用的界面和强大的文本捕捉功能，允许用户快速从屏幕截图中提取文字。</p>
+<p><img data-src="https://socialify.git.ci/dynobo/normcap/image?description=1&forks=1&issues=1&language=1&name=1&owner=1&pulls=1&stargazers=1&theme=Light" alt="normcap"></p>
+<p>开源地址：  <a href="https://github.com/dynobo/normcap">https://github.com/dynobo/normcap</a> </p>
+<br />
+
+<h3 id="开源高效的文档解析器-MegaParse"><a href="#开源高效的文档解析器-MegaParse" class="headerlink" title="开源高效的文档解析器 MegaParse"></a>开源高效的文档解析器 MegaParse</h3><p>MegaParse，这是一个专为大语言模型（LLM）设计的开源文档解析器，能够处理包括文本、PDF、PowerPoint、Word、Excel和CSV在内的多种文档格式。MegaParse的核心优势在于其无信息损失的特性，能够确保解析的每一份资料都保持原始信息完整性。项目提供了API接口选项，允许用户将其集成到自有系统或应用中，提供了灵活性和扩展性。</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/image-20241105232114720.png"></p>
+<p><img data-src="https://socialify.git.ci/QuivrHQ/MegaParse/image?description=1&forks=1&issues=1&language=1&name=1&owner=1&pulls=1&stargazers=1&theme=Light" alt="MegaParse"></p>
+<p>开源地址：  <a href="https://github.com/QuivrHQ/MegaParse/">https://github.com/QuivrHQ/MegaParse/</a></p>
+<br />
+
+<h3 id="开源的浏览器书签查看工具bookmarks-artist"><a href="#开源的浏览器书签查看工具bookmarks-artist" class="headerlink" title="开源的浏览器书签查看工具bookmarks-artist"></a>开源的浏览器书签查看工具bookmarks-artist</h3><p>bookmarks-artist，这是一个开源的浏览器书签查看工具，旨在提供一种更美观和直观的方式来管理和查看用户的浏览器书签。</p>
+<p><img data-src="https://github.com/liujuntao123/bookmarks-artist/blob/main/Clip_2024-10-24_16-41-36.png"></p>
+<p><img data-src="https://socialify.git.ci/liujuntao123/bookmarks-artist/image?description=1&descriptionEditable=%E4%B8%80%E4%B8%AA%E9%AB%98%E9%A2%9C%E5%80%BC%E7%9A%84%E6%B5%8F%E8%A7%88%E5%99%A8%E4%B9%A6%E7%AD%BE%E6%9F%A5%E7%9C%8B%E5%B7%A5%E5%85%B7&forks=1&issues=1&language=1&name=1&owner=1&pulls=1&stargazers=1&theme=Light" alt="bookmarks-artist"></p>
+<p>下载地址： <strong><a href="https://github.com/liujuntao123/bookmarks-artist">https://github.com/liujuntao123/bookmarks-artist</a></strong></p>
+<br />
+
+<h3 id="Lux跨平台视频下载工具"><a href="#Lux跨平台视频下载工具" class="headerlink" title="Lux跨平台视频下载工具"></a>Lux跨平台视频下载工具</h3><p>Lux（原名Annie），这是一个开源的视频下载工具，支持从多个视频平台下载视频、图片、音频和字幕。Lux以其跨平台支持、多线程下载、断点续传、代理支持和自定义输出路径等特点而受到用户喜爱。</p>
+<p><img data-src="https://socialify.git.ci/iawia002/lux/image?description=1&forks=1&issues=1&language=1&name=1&owner=1&pulls=1&stargazers=1&theme=Light" alt="lux"></p>
+<p> 下载地址： <a href="https://github.com/iawia002/lux">https://github.com/iawia002/lux</a></p>
+<br />
+
+
+
+<h2 id="宝藏信息"><a href="#宝藏信息" class="headerlink" title="宝藏信息"></a>宝藏信息</h2><h3 id="API-Hub-学习和掌握-API-交互的工具"><a href="#API-Hub-学习和掌握-API-交互的工具" class="headerlink" title="API Hub - 学习和掌握 API 交互的工具"></a>API Hub - 学习和掌握 API 交互的工具</h3><p>API Hub提供了一个开源、免费的 API 中心，它是一个开放的学习平台，旨在帮助开发者更好地理解和掌握 API 的使用。平台包含了多种示例 API，可以方便地进行测试、集成并运用于前端、后端和移动开发中。通过这个工具，开发者能够在一个地方集中访问各种 API，简化开发流程，并提高工作效率。</p>
+<p><strong>API Hub</strong> 的目标是简化 API 交互的学习过程，让开发者能够轻松了解如何在实际项目中应用 API，无论是在构建网站、应用程序还是移动应用时。</p>
+<p><img data-src="https://socialify.git.ci/hiteshchoudhary/apihub/image?description=1&forks=1&issues=1&language=1&name=1&owner=1&pulls=1&stargazers=1&theme=Light" alt="apihub"></p>
+<p>开源地址： <a href="https://github.com/hiteshchoudhary/apihub">https://github.com/hiteshchoudhary/apihub</a></p>
+<br />
+
+<br />
+
+<h3 id="MD3-Windows-高颜值的的-Windows-桌面美化工具"><a href="#MD3-Windows-高颜值的的-Windows-桌面美化工具" class="headerlink" title="MD3-Windows 高颜值的的 Windows 桌面美化工具"></a>MD3-Windows 高颜值的的 Windows 桌面美化工具</h3><p>MD3-Windows，这是一个开源的Windows桌面美化工具，它采用Material You设计风格，并能根据壁纸自动调整配色。工具包括时钟、日期、天气、音乐、电池、文件夹、事件、问候等多种桌面小组件，以及自定义任务栏、开始菜单和功能菜单。</p>
+<p><img data-src="https://camo.githubusercontent.com/0ae8504fa241a3e5bc2f2a2f709c4606e6ac8664aa2b8ae8f8ab00069161da6e/68747470733a2f2f656e76732e73682f6e51422e6a7067"></p>
+<p><img data-src="https://camo.githubusercontent.com/018943739d131ddf3ec85d46de58382a2c3c531cf3f20146511b104eaa556fb4/68747470733a2f2f656e76732e73682f6e51542e6a7067"></p>
+<p><img data-src="https://socialify.git.ci/Runixe786/MD3-Windows/image?description=1&forks=1&issues=1&language=1&name=1&owner=1&pulls=1&stargazers=1&theme=Light" alt="MD3-Windows"></p>
+<p>开源地址： <a href="https://github.com/Runixe786/MD3-Windows">https://github.com/Runixe786/MD3-Windows</a></p>
+<br />
+
+<h3 id="一款跳过B站视频中恰饭片段的浏览器插件BilibiliSponsorBlock"><a href="#一款跳过B站视频中恰饭片段的浏览器插件BilibiliSponsorBlock" class="headerlink" title="一款跳过B站视频中恰饭片段的浏览器插件BilibiliSponsorBlock"></a>一款跳过B站视频中恰饭片段的浏览器插件BilibiliSponsorBlock</h3><p> BilibiliSponsorBlock是一款浏览器插件，该插件由开发者@hanydd受SponsorBlock启发而创建。插件的主要功能是帮助用户跳过B站视频中的广告片段，通过用户共享的广告片段开始和结束时间来实现。插件支持Chromium内核浏览器，并已上架Edge和Firefox商店。<a href="https://chromewebstore.google.com/detail/eaoelafamejbnggahofapllmfhlhajdd">Chrome 应用商店</a>，<a href="https://microsoftedge.microsoft.com/addons/detail/khkeolgobhdoloioehjgfpobjnmagfha">Edge 应用商店</a>， <a href="https://addons.mozilla.org/en-US/firefox/addon/bilisponsorblock/">火狐应用商店</a></p>
+<p><img data-src="https://socialify.git.ci/hanydd/BilibiliSponsorBlock/image?description=1&forks=1&issues=1&language=1&name=1&owner=1&pulls=1&stargazers=1&theme=Light" alt="BilibiliSponsorBlock"></p>
+<p>开源地址：  <a href="https://github.com/hanydd/BilibiliSponsorBlock">https://github.com/hanydd/BilibiliSponsorBlock</a></p>
+<br />
+
+
+
+
+
+<br />
+
+<br />
+
+<br />
+
+<h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>百闻不如一见，百见不如一试。</p>
+<p>🎉 本文同步更新于  <a href="https://www.lifeee.top/">https://www.lifeee.top</a></p>
+]]></content>
+      <categories>
+        <category>冲浪</category>
+      </categories>
+      <tags>
+        <tag>冲浪</tag>
+      </tags>
+  </entry>
 </search>
