@@ -6,7 +6,7 @@
   <link href="https://www.lifeee.top/atom.xml" rel="self"/>
   
   <link href="https://www.lifeee.top/"/>
-  <updated>2024-11-08T11:45:52.075Z</updated>
+  <updated>2024-11-30T15:59:23.751Z</updated>
   <id>https://www.lifeee.top/</id>
   
   <author>
@@ -17,11 +17,44 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>20241130-surfing-wekly-post-69</title>
+    <link href="https://www.lifeee.top/posts/52255.html"/>
+    <id>https://www.lifeee.top/posts/52255.html</id>
+    <published>2024-11-30T15:59:23.000Z</published>
+    <updated>2024-11-30T15:59:23.751Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;摘要&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="技术" scheme="https://www.lifeee.top/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    <category term="教程" scheme="https://www.lifeee.top/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    <category term="生活" scheme="https://www.lifeee.top/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    <category term="善用佳软" scheme="https://www.lifeee.top/categories/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
+    
+    <category term="数学" scheme="https://www.lifeee.top/categories/%E6%95%B0%E5%AD%A6/"/>
+    
+    
+    <category term="教程" scheme="https://www.lifeee.top/tags/%E6%95%99%E7%A8%8B/"/>
+    
+    <category term="善用佳软" scheme="https://www.lifeee.top/tags/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/"/>
+    
+    <category term="Windows" scheme="https://www.lifeee.top/tags/Windows/"/>
+    
+    <category term="数学" scheme="https://www.lifeee.top/tags/%E6%95%B0%E5%AD%A6/"/>
+    
+  </entry>
+  
+  <entry>
     <title>网上冲浪周刊第67期</title>
     <link href="https://www.lifeee.top/posts/43296.html"/>
     <id>https://www.lifeee.top/posts/43296.html</id>
     <published>2024-11-05T15:03:32.000Z</published>
-    <updated>2024-11-08T11:45:52.075Z</updated>
+    <updated>2024-11-08T11:49:00.443Z</updated>
     
     
     <summary type="html">&lt;p&gt;欢迎阅读本期技术资讯！我们为您介绍了一些有趣的工具，如高效OCR屏幕捕捉工具 NormCap 、开源高效的文档解析器 MegaParse、开源的浏览器书签查看工具bookmarks-artist 、Lux跨平台视频下载工具 。此外，还安利了  API Hub - 学习和掌握 API 交互的工具 、MD3-Windows 高颜值的的 Windows 桌面美化工具以及一款跳过B站视频中恰饭片段的浏览器插件BilibiliSponsorBlock 。&lt;/p&gt;
@@ -386,26 +419,6 @@
     
     <summary type="html">&lt;p&gt;欢迎阅读第31期技术资讯！本期我们推荐了Flutter 3.19、Android Sunflower、Google AI Dart SDK等技术，介绍了Obsidian 笔记画廊插件、微信 Markdown 编辑器、dockge等工具，分享了科大讯飞 iflycode 智能编程助手、go-proxy-bingai 微软 New Bing 演示站点等资源，推荐了必应每日超清壁纸采集、521GitHub镜像站、微信聊天记录可视化分析WechatVisualization等工具。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://s2.loli.net/2024/02/23/86s7evMFR3tANDk.jpg&quot; alt=&quot;封面图 https://www.pexels.com/zh-cn/photo/6602657/&quot;&gt;&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="冲浪" scheme="https://www.lifeee.top/categories/%E5%86%B2%E6%B5%AA/"/>
-    
-    
-    <category term="冲浪" scheme="https://www.lifeee.top/tags/%E5%86%B2%E6%B5%AA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>网上冲浪周刊第29期： 有钱没钱回家过年 🧧</title>
-    <link href="https://www.lifeee.top/posts/30183.html"/>
-    <id>https://www.lifeee.top/posts/30183.html</id>
-    <published>2024-02-01T14:58:30.000Z</published>
-    <updated>2024-02-14T13:00:39.183Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;欢迎阅读第29期技术资讯！这期我们推荐了一些技术相关的文章、工具和信息。在推荐阅读中，介绍使用Compose实现龙头绘制、对2024年前端技术发展的预测、Android架构中新引入的UseCase概念等。此外,还介绍了几款有意思的工具软件,如Microsoft的视频编辑软件Clipchamp、Python数据可视化工具PyGWalker、开发者瑞士军刀DevToys工具等。文章还分享了独立开发者Sindre Sorhus的多个知名软件作品、开源Android电视直播软件my-tv,以及IPtv直播源地址。最后推荐了一档热门新闻播客《新闻酸菜馆》。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/202402142100562.jpg&quot; alt=&quot;封面图 https://www.pexels.com/zh-cn/photo/900097/&quot;&gt;&lt;/p&gt;</summary>
     
     
     

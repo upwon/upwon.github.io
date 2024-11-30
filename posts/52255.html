@@ -23,34 +23,33 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"www.lifeee.top","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.19.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"mac","show_result":true},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="vbs脚本实现WSL SSH 自启动">
+    <meta name="description" content="摘要">
 <meta property="og:type" content="article">
-<meta property="og:title" content="WSL SSH 自启动">
-<meta property="og:url" content="https://www.lifeee.top/posts/14733.html">
+<meta property="og:title" content="20241130-surfing-wekly-post-69">
+<meta property="og:url" content="https://www.lifeee.top/posts/52255.html">
 <meta property="og:site_name" content="热夏的博客">
-<meta property="og:description" content="vbs脚本实现WSL SSH 自启动">
+<meta property="og:description" content="摘要">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/ba920825gy1gsc5umbr8dj255p3ft484.jpg">
-<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/ba920825gy1gr8fize385j20nx0alt9k.jpg">
-<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/ba920825gy1gr8fk8dzuwj21690o64m1.jpg">
-<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/ba920825gy1gr8flxspt8j21690o6h98.jpg">
-<meta property="article:published_time" content="2021-07-10T13:14:58.000Z">
-<meta property="article:modified_time" content="2022-11-14T16:43:07.403Z">
+<meta property="og:image" content="https://gitee.com/wang_wx/image_bed/raw/master/202002/20200208223217.png">
+<meta property="article:published_time" content="2024-11-30T15:59:23.000Z">
+<meta property="article:modified_time" content="2024-11-30T15:59:23.751Z">
 <meta property="article:author" content="热夏">
 <meta property="article:tag" content="教程">
+<meta property="article:tag" content="善用佳软">
 <meta property="article:tag" content="Windows">
+<meta property="article:tag" content="数学">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/ba920825gy1gsc5umbr8dj255p3ft484.jpg">
+<meta name="twitter:image" content="https://gitee.com/wang_wx/image_bed/raw/master/202002/20200208223217.png">
 
 
-<link rel="canonical" href="https://www.lifeee.top/posts/14733.html">
+<link rel="canonical" href="https://www.lifeee.top/posts/52255.html">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://www.lifeee.top/posts/14733.html","path":"posts/14733.html","title":"WSL SSH 自启动"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://www.lifeee.top/posts/52255.html","path":"posts/52255.html","title":"20241130-surfing-wekly-post-69"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>WSL SSH 自启动 | 热夏的博客</title>
+<title>20241130-surfing-wekly-post-69 | 热夏的博客</title>
   
 
 
@@ -153,7 +152,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A2%9E%E5%8A%A0%E8%84%9A%E6%9C%ACwsl-ssh-vbs-%E5%90%8D%E5%AD%97%E9%9A%8F%E4%BE%BF"><span class="nav-number">1.</span> <span class="nav-text">增加脚本wsl_ssh.vbs(名字随便)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE"><span class="nav-number">2.</span> <span class="nav-text">参考文献</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Markdown%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95"><span class="nav-number">1.</span> <span class="nav-text">Markdown基本语法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%A0%87%E9%A2%98"><span class="nav-number">1.1.</span> <span class="nav-text">标题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%BC%BA%E8%B0%83"><span class="nav-number">1.2.</span> <span class="nav-text">强调</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%96%9C%E4%BD%93"><span class="nav-number">1.3.</span> <span class="nav-text">斜体</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%BC%BA%E8%B0%83%E7%9A%84%E6%96%9C%E4%BD%93"><span class="nav-number">1.4.</span> <span class="nav-text">强调的斜体</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%88%A0%E9%99%A4"><span class="nav-number">1.5.</span> <span class="nav-text">删除</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%A4%96%E9%93%BE%E7%9A%84%E8%B6%85%E9%93%BE%E6%8E%A5"><span class="nav-number">1.6.</span> <span class="nav-text">外链的超链接</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E9%A1%B5%E5%86%85%E7%9A%84%E8%B6%85%E9%93%BE%E6%8E%A5"><span class="nav-number">1.7.</span> <span class="nav-text">页内的超链接</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9C%89%E5%BA%8F%E5%88%97%E8%A1%A8"><span class="nav-number">1.8.</span> <span class="nav-text">有序列表</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%97%A0%E5%BA%8F%E5%88%97%E8%A1%A8"><span class="nav-number">1.9.</span> <span class="nav-text">无序列表</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%BC%95%E7%94%A8%E5%9D%97"><span class="nav-number">1.10.</span> <span class="nav-text">引用块</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%88%86%E9%9A%94%E7%BA%BF"><span class="nav-number">1.11.</span> <span class="nav-text">分隔线</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81%E5%9D%97%E6%98%BE%E7%A4%BA%E6%95%88%E6%9E%9C"><span class="nav-number">2.</span> <span class="nav-text">代码块显示效果</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Markdown%E6%89%A9%E5%B1%95%E8%AF%AD%E6%B3%95"><span class="nav-number">3.</span> <span class="nav-text">Markdown扩展语法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%A1%A8%E6%A0%BC"><span class="nav-number">3.1.</span> <span class="nav-text">表格</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9B%B4%E6%8E%A5%E6%94%AF%E6%8C%81html-css"><span class="nav-number">4.</span> <span class="nav-text">直接支持html,css</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%87%E6%9C%AC%E5%B1%85%E4%B8%AD%E5%BC%95%E7%94%A8"><span class="nav-number"></span> <span class="nav-text">文本居中引用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B3%A8%E6%84%8F"><span class="nav-number"></span> <span class="nav-text">注意</span></a></div>
         </div>
         <!--/noindex-->
 
@@ -219,7 +218,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://www.lifeee.top/posts/14733.html">
+    <link itemprop="mainEntityOfPage" href="https://www.lifeee.top/posts/52255.html">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/head.jpg">
@@ -232,12 +231,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="WSL SSH 自启动 | 热夏的博客">
+      <meta itemprop="name" content="20241130-surfing-wekly-post-69 | 热夏的博客">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          WSL SSH 自启动
+          20241130-surfing-wekly-post-69
         </h1>
 
         <div class="post-meta-container">
@@ -248,14 +247,7 @@
       </span>
       <span class="post-meta-item-text">发表于</span>
 
-      <time title="创建时间：2021-07-10 21:14:58" itemprop="dateCreated datePublished" datetime="2021-07-10T21:14:58+08:00">2021-07-10</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2022-11-15 00:43:07" itemprop="dateModified" datetime="2022-11-15T00:43:07+08:00">2022-11-15</time>
+      <time title="创建时间：2024-11-30 23:59:23" itemprop="dateCreated datePublished" datetime="2024-11-30T23:59:23+08:00">2024-11-30</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -263,7 +255,23 @@
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">技术</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
           <a href="/categories/%E6%95%99%E7%A8%8B/" itemprop="url" rel="index"><span itemprop="name">教程</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E7%94%9F%E6%B4%BB/" itemprop="url" rel="index"><span itemprop="name">生活</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/" itemprop="url" rel="index"><span itemprop="name">善用佳软</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%95%B0%E5%AD%A6/" itemprop="url" rel="index"><span itemprop="name">数学</span></a>
         </span>
     </span>
 
@@ -281,7 +289,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>446</span>
+      <span>1.6k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -298,38 +306,99 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/ba920825gy1gsc5umbr8dj255p3ft484.jpg"></p>
-<p>vbs脚本实现WSL SSH 自启动</p>
+    <div class="post-body" itemprop="articleBody"><p>摘要</p>
 <span id="more"></span>
 
-<br />
-
-<p>按键<code>win+R</code> 输入<code>shell:startup</code>系统会自动打开一个目录</p>
-<h3 id="增加脚本wsl-ssh-vbs-名字随便"><a href="#增加脚本wsl-ssh-vbs-名字随便" class="headerlink" title="增加脚本wsl_ssh.vbs(名字随便)"></a>增加脚本<code>wsl_ssh.vbs</code>(名字随便)</h3><p>里面填写:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Set ws = CreateObject(<span class="string">&quot;Wscript.Shell&quot;</span>)</span><br><span class="line">ws.run <span class="string">&quot;wsl  -u root /etc/init.d/ssh start&quot;</span>, vbhide</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 
-
-<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/ba920825gy1gr8fize385j20nx0alt9k.jpg"></p>
-<p>重启电脑就会自动执行啦 。</p>
-<br />
-
-<p>检察一下是否启动成功，在  PowerShell  的话输入：  <code> wsl -u root /etc/init.d/ssh status </code>   . 在Linux终端的话输入 <code>/etc/init.d/ssh status</code></p>
-<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/ba920825gy1gr8fk8dzuwj21690o64m1.jpg"></p>
-<p> <img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/ba920825gy1gr8flxspt8j21690o6h98.jpg"></p>
-<p>这样就不用每次手动启动 ssh 了 ，手动启动的话在 PowerShell 输入 ：<code> wsl -u root /etc/init.d/ssh start</code> 或者 <code>wsl sudo /etc/init.d/ssh start</code>再输入密码，也是一样的。</p>
+<p>换行</p>
 <br />
 
 
 
-<h3 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h3><p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/47733615">WSL 服务自动启动的正确方法 )</a></p>
-<p><a target="_blank" rel="noopener" href="https://www.mingilin.com/2020/02/22/windows/windows-wsl-ssh/">win10 wsl子系统开机自启sshd | 情文のBLOG (mingilin.com)</a></p>
-<br />
+<h3 id="Markdown基本语法"><a href="#Markdown基本语法" class="headerlink" title="Markdown基本语法"></a>Markdown基本语法</h3><h4 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h4><p>支持6种大小的标题，分别对应<code>#</code>,<code>##</code>,<code>###</code>,<code>####</code>,<code>#####</code>,<code>######</code>，和样式文件中的<code>h1,...,h6</code>如：<br>#####H5<br>######H6<br>####行内代码<br>如：<code>AppCompatActivity</code>类,markdown对行内代码的语法是前后用：`,其中 ` 为windows键盘左上角那个,</p>
+<h4 id="强调"><a href="#强调" class="headerlink" title="强调"></a>强调</h4><p><strong>我是强调</strong></p>
+<h4 id="斜体"><a href="#斜体" class="headerlink" title="斜体"></a>斜体</h4><p>试试<em>斜体</em></p>
+<h4 id="强调的斜体"><a href="#强调的斜体" class="headerlink" title="强调的斜体"></a>强调的斜体</h4><p>试试<em><strong>强调的斜体</strong></em></p>
+<h4 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h4><p>试试 <del>删除</del></p>
+<h4 id="外链的超链接"><a href="#外链的超链接" class="headerlink" title="外链的超链接"></a>外链的超链接</h4><p>试试外链的超链接：<a target="_blank" rel="noopener" href="http://blog.qikqiak.com/">我是外链的超链接</a>,markdown对链接的语法为：<code>[]()</code>,如：<code>[我是外链的超链接](http://blog.qikqiak.com)</code></p>
+<h4 id="页内的超链接"><a href="#页内的超链接" class="headerlink" title="页内的超链接"></a>页内的超链接</h4><p>试试页内的超链接：<a href="#jump_1">我是页内的超链接</a>，注：你先要在要跳转的到地方放置一个类似：<code>&lt;a id=&quot;jump_1&quot;&gt;任意内容&lt;/a&gt;</code>的锚点。由<code>id=&quot;jump_1&quot; </code>来匹配。</p>
+<h4 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h4><ol>
+<li>有序列表 1</li>
+<li>有序列表 2</li>
+<li>有序列表 3</li>
+</ol>
+<h4 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h4><ul>
+<li>无序列表 1</li>
+<li>无序列表 2</li>
+<li>无序列表 3</li>
+</ul>
+<h4 id="引用块"><a href="#引用块" class="headerlink" title="引用块"></a>引用块</h4><p>只需要在前面加 <code>&gt;</code>,如下:</p>
+<blockquote>
+<p>我是引用块</p>
+</blockquote>
+<h4 id="分隔线"><a href="#分隔线" class="headerlink" title="分隔线"></a>分隔线</h4><hr>
+<h3 id="代码块显示效果"><a href="#代码块显示效果" class="headerlink" title="代码块显示效果"></a>代码块显示效果</h3><p>注：markdown对代码块的语法是开始和结束行都要添加：&#96;&#96;&#96;,其中 ` 为windows键盘左上角那个，如下：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">kind:</span> <span class="string">RoleBinding</span></span><br><span class="line"><span class="attr">apiVersion:</span> <span class="string">rbac.authorization.k8s.io/v1</span></span><br><span class="line"><span class="attr">metadata:</span></span><br><span class="line">  <span class="attr">name:</span> <span class="string">haimaxy-sa-rolebinding</span></span><br><span class="line">  <span class="attr">namespace:</span> <span class="string">kube-system</span></span><br><span class="line"><span class="attr">subjects:</span></span><br><span class="line"><span class="bullet">-</span> <span class="attr">kind:</span> <span class="string">ServiceAccount</span></span><br><span class="line">  <span class="attr">name:</span> <span class="string">haimaxy-sa</span></span><br><span class="line">  <span class="attr">namespace:</span> <span class="string">kube-system</span></span><br><span class="line"><span class="attr">roleRef:</span></span><br><span class="line">  <span class="attr">kind:</span> <span class="string">Role</span></span><br><span class="line">  <span class="attr">name:</span> <span class="string">haimaxy-sa-role</span></span><br><span class="line">  <span class="attr">apiGroup:</span> <span class="string">rbac.authorization.k8s.io</span></span><br></pre></td></tr></table></figure>
 
-<br />
+<p>要精确指定语言（如：<code>java,cpp,css,xml,javascript,python,php,go,kotlin,lua,objectivec</code>等等）时，在头部直接指定，如：```javascript，如下：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">showSnackbar</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">var</span> $snackbar = $(<span class="string">&#x27;#snackbar&#x27;</span>);</span><br><span class="line">  $snackbar.<span class="title function_">addClass</span>(<span class="string">&#x27;show&#x27;</span>);</span><br><span class="line">  <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    $snackbar.<span class="title function_">removeClass</span>(<span class="string">&#x27;show&#x27;</span>);</span><br><span class="line">  &#125;, <span class="number">3000</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<br />
+<p>在页面头部提供了很多中<strong>代码主题</strong>风格，可以根据需要选择合适的即可。</p>
+<h3 id="Markdown扩展语法"><a href="#Markdown扩展语法" class="headerlink" title="Markdown扩展语法"></a>Markdown扩展语法</h3><h4 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h4><table>
+<thead>
+<tr>
+<th>班级</th>
+<th>男生</th>
+<th>女生</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>一(7)班</td>
+<td>30</td>
+<td>25</td>
+</tr>
+<tr>
+<td>一(8)班</td>
+<td>25</td>
+<td>30</td>
+</tr>
+</tbody></table>
+<p>注：表格在公众号预览时，可能在PC端显示的不是正确的全屏，但在手机上预览时就会正常显示为全屏的了。</p>
+<h3 id="直接支持html-css"><a href="#直接支持html-css" class="headerlink" title="直接支持html,css"></a>直接支持html,css</h3><p>如果你懂html和css，那下面这些效果就不在话下了：</p>
+<p><a href="#jump_1">来个页内跳转</a>，跳转到文未的：<code>&lt;a id=&quot;jump_1&quot;&gt;我是页内跳转到的位置&lt;/a&gt;</code> ,对应：<code>id=&quot;jump_1&quot;</code><br><span  style="color: #5bdaed; ">先给点颜色你看看</span><br><span  style="color: #AE87FA; ">再给点颜色你看看</span><br><span  style="font-size:1.3em;">试试改变字体大小</span><br><span  style="font-size:1.3em;font-weight: bold;">改变字体大小，再来个粗体又如何？</span></p>
+<p style="text-align:center">
+试试内容居中
 
+</p>
+
+<p style="text-align:right">
+那内容居右呢？
+</p>
+
+<p style="text-align:center;color:#1e819e;font-size:1.3em;font-weight: bold;">
+来个综合的试试
+<br/>
+第二行
+</p>
+
+
+
+
+<hr>
+<p><a id="jump_1">我是页内跳转到的位置</a></p>
+<h2 id="文本居中引用"><a href="#文本居中引用" class="headerlink" title="文本居中引用"></a>文本居中引用</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#123;% cq %&#125;</span><br><span class="line">人生乃是一面镜子，</span><br><span class="line">从镜子里认识自己，</span><br><span class="line">我要称之为头等大事，</span><br><span class="line">也只是我们追求的目的！</span><br><span class="line">&#123;% endcq %&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote class="blockquote-center">
+<p>人生乃是一面镜子，</p>
+<p>从镜子里认识自己，</p>
+<p>我要称之为头等大事，</p>
+<p>也只是我们追求的目的！</p>
+
+</blockquote>
+
+<p><img data-src="https://gitee.com/wang_wx/image_bed/raw/master/202002/20200208223217.png"></p>
+<h2 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h2><p>1）文章内标题请从二级标题（<code>##</code>）开始！<br>2）英语单词、数字左右看情况加上空格！<br>3）Markdwon 文档写完一段回车后务必再回车一次空一行！</p>
 
     </div>
 
@@ -365,7 +434,7 @@
   </li>
   <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="https://www.lifeee.top/posts/14733.html" title="WSL SSH 自启动">https://www.lifeee.top/posts/14733.html</a>
+      <a href="https://www.lifeee.top/posts/52255.html" title="20241130-surfing-wekly-post-69">https://www.lifeee.top/posts/52255.html</a>
   </li>
   <li class="post-copyright-license">
       <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -392,21 +461,20 @@
 
           <div class="post-tags">
               <a href="/tags/%E6%95%99%E7%A8%8B/" rel="tag"><i class="fa fa-tag"></i> 教程</a>
+              <a href="/tags/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/" rel="tag"><i class="fa fa-tag"></i> 善用佳软</a>
               <a href="/tags/Windows/" rel="tag"><i class="fa fa-tag"></i> Windows</a>
+              <a href="/tags/%E6%95%B0%E5%AD%A6/" rel="tag"><i class="fa fa-tag"></i> 数学</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/posts/36943.html" rel="prev" title="包管理器 winget 使用指南">
-                  <i class="fa fa-angle-left"></i> 包管理器 winget 使用指南
+                <a href="/posts/43296.html" rel="prev" title="网上冲浪周刊第67期">
+                  <i class="fa fa-angle-left"></i> 网上冲浪周刊第67期
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/posts/9487.html" rel="next" title="使用 CLion 和 Valgrind 调试程序检查内存泄漏">
-                  使用 CLion 和 Valgrind 调试程序检查内存泄漏 <i class="fa fa-angle-right"></i>
-                </a>
             </div>
           </div>
     </footer>
@@ -513,7 +581,7 @@
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
 
-<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"upwon","repo":"upwon.github.io","client_id":"7e047047ecee7317452b","client_secret":"c60fbdf0eb19e7264e33ab780319e4d420a58fee","admin_user":"upwon","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":null,"js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"1f6628fd22fce5ed8d18869181850678"}</script>
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"upwon","repo":"upwon.github.io","client_id":"7e047047ecee7317452b","client_secret":"c60fbdf0eb19e7264e33ab780319e4d420a58fee","admin_user":"upwon","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":null,"js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"89a1882cf62caa9c1d72e2dfe008bb0d"}</script>
 <script src="/js/third-party/comments/gitalk.js"></script>
 
 
