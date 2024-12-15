@@ -22061,4 +22061,119 @@ Welcome to my Blog. This is my first post. If you want to konw more info about H
         <tag>冲浪</tag>
       </tags>
   </entry>
+  <entry>
+    <title>网上冲浪周刊第71期</title>
+    <url>/posts/54438.html</url>
+    <content><![CDATA[<p>欢迎阅读本期技术资讯！我们为您介绍了一些有趣的工具，如开源Android屏幕共享工具ScreenStream 、真正独立的网络浏览器Ladybird、基于 AI 的智能搜索网站Search For You。此外，还安利了2024年度Mac装机必备、安全私密的文件分享服务Send 、一站式MusicFree源插件订阅聚合器以及Windows按键映射工具QKeyMapper 。</p>
+<p> <img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/pexels-efrem-efre-2786187-25286643.jpg" alt="https://www.pexels.com/zh-cn/photo/25286643/"></p>
+<span id="more"></span>
+
+
+
+<br />
+
+<p>欢迎来到第71期 ！😄</p>
+<p>期待您通过RSS订阅我们：<a href="https://www.lifeee.top//atom.xml">https://www.lifeee.top//atom.xml</a></p>
+<br />
+
+
+
+<h2 id="推荐阅读"><a href="#推荐阅读" class="headerlink" title="推荐阅读"></a>推荐阅读</h2><ul>
+<li><p><a href="https://mp.weixin.qq.com/s/Kq8PTH82cfIG_J7OcJJ4RA">鸿蒙 OS Next 支持运行 Android 应用了</a>：文章讨论了鸿蒙OS Next 5.0上架的“出境易”应用，该应用使得不兼容原生鸿蒙OS Next的Android应用得以运行，并推测了其技术原理。</p>
+</li>
+<li><p><a href="https://mp.weixin.qq.com/s/GnGpaGWAKSHsFadmXqZvqQ">Android 崩溃率收敛至 0.01% 实践</a>:  文章详细介绍了作者在项目中如何通过创建修BUG分支、每日查看Dump后台、开发崩溃容灾机制等措施，将Android应用的崩溃率降低至0.01%。</p>
+</li>
+</ul>
+<br />
+
+<br />
+
+<h2 id="有趣的工具"><a href="#有趣的工具" class="headerlink" title="有趣的工具"></a>有趣的工具</h2><h3 id="ScreenStream：开源Android屏幕共享工具"><a href="#ScreenStream：开源Android屏幕共享工具" class="headerlink" title="ScreenStream：开源Android屏幕共享工具"></a>ScreenStream：开源Android屏幕共享工具</h3><p>ScreenStream是一个用户友好的Android应用程序，允许用户轻松地分享他们的设备屏幕，并直接在网络浏览器中查看。ScreenStream提供了全球模式和本地模式两种屏幕分享方式，全球模式基于WebRTC技术，支持视频和音频流，适用于全球范围内的屏幕分享；本地模式基于MJPEG标准，仅支持视频流，适用于局域网内的屏幕分享。 </p>
+<p> <img data-src="https://socialify.git.ci/dkrivoruchko/ScreenStream/image?description=1&forks=1&issues=1&language=1&name=1&owner=1&pulls=1&stargazers=1&theme=Light" alt="ScreenStream"></p>
+<p>Screenshots</p>
+<p><a href="https://github.com/dkrivoruchko/ScreenStream/blob/master/screenshots/screenshot_lm_d.png"><img data-src="https://github.com/dkrivoruchko/ScreenStream/raw/master/screenshots/screenshot_lm_d.png" alt="img"></a> <a href="https://github.com/dkrivoruchko/ScreenStream/blob/master/screenshots/screenshot_lm_d_about.png"><img data-src="https://github.com/dkrivoruchko/ScreenStream/raw/master/screenshots/screenshot_lm_d_about.png" alt="img"></a><br><a href="https://github.com/dkrivoruchko/ScreenStream/blob/master/screenshots/screenshot_gm_d.png"><img data-src="https://github.com/dkrivoruchko/ScreenStream/raw/master/screenshots/screenshot_gm_d.png" alt="img"></a> <a href="https://github.com/dkrivoruchko/ScreenStream/blob/master/screenshots/screenshot_gm_d_about.png"><img data-src="https://github.com/dkrivoruchko/ScreenStream/raw/master/screenshots/screenshot_gm_d_about.png" alt="img"></a><br><a href="https://github.com/dkrivoruchko/ScreenStream/blob/master/screenshots/screenshot_settings_1_d.png"><img data-src="https://github.com/dkrivoruchko/ScreenStream/raw/master/screenshots/screenshot_settings_1_d.png" alt="img"></a> <a href="https://github.com/dkrivoruchko/ScreenStream/blob/master/screenshots/screenshot_settings_1_l.png"><img data-src="https://github.com/dkrivoruchko/ScreenStream/raw/master/screenshots/screenshot_settings_1_l.png" alt="img"></a><br><a href="https://github.com/dkrivoruchko/ScreenStream/blob/master/screenshots/screenshot_settings_2_d.png"><img data-src="https://github.com/dkrivoruchko/ScreenStream/raw/master/screenshots/screenshot_settings_2_d.png" alt="img"></a> <a href="https://github.com/dkrivoruchko/ScreenStream/blob/master/screenshots/screenshot_settings_2_l.png"><img data-src="https://github.com/dkrivoruchko/ScreenStream/raw/master/screenshots/screenshot_settings_2_l.png" alt="img"></a><br><a href="https://github.com/dkrivoruchko/ScreenStream/blob/master/screenshots/screenshot_settings_3_d.png"><img data-src="https://github.com/dkrivoruchko/ScreenStream/raw/master/screenshots/screenshot_settings_3_d.png" alt="img"></a> <a href="https://github.com/dkrivoruchko/ScreenStream/blob/master/screenshots/screenshot_settings_3_l.png"><img data-src="https://github.com/dkrivoruchko/ScreenStream/raw/master/screenshots/screenshot_settings_3_l.png" alt="img"></a><br><a href="https://github.com/dkrivoruchko/ScreenStream/blob/master/screenshots/screenshot_settings_4_d.png"><img data-src="https://github.com/dkrivoruchko/ScreenStream/raw/master/screenshots/screenshot_settings_4_d.png" alt="img"></a> <a href="https://github.com/dkrivoruchko/ScreenStream/blob/master/screenshots/screenshot_settings_4_l.png"><img data-src="https://github.com/dkrivoruchko/ScreenStream/raw/master/screenshots/screenshot_settings_4_l.png" alt="img"></a><br><a href="https://github.com/dkrivoruchko/ScreenStream/blob/master/screenshots/screenshot_about_d.png"><img data-src="https://github.com/dkrivoruchko/ScreenStream/raw/master/screenshots/screenshot_about_d.png" alt="img"></a></p>
+<p>开源地址： <a href="https://github.com/dkrivoruchko/ScreenStream">https://github.com/dkrivoruchko/ScreenStream</a></p>
+<h3 id="Ladybird浏览器：真正独立的网络浏览器"><a href="#Ladybird浏览器：真正独立的网络浏览器" class="headerlink" title="Ladybird浏览器：真正独立的网络浏览器"></a>Ladybird浏览器：真正独立的网络浏览器</h3><p>Ladybird浏览器，这是一个独立的网络浏览器开源项目，目前处于预alpha阶段。Ladybird的目标是为现代网络构建一个完整、可用的浏览器，采用多进程架构，每个选项卡都有自己的渲染器进程，增强了安全性。项目的技术亮点包括多进程架构、图像解码和网络连接在进程外完成、核心库支持组件大多从SerenityOS继承等。</p>
+<p><img data-src="https://socialify.git.ci/LadybirdBrowser/ladybird/image?description=1&forks=1&issues=1&language=1&name=1&owner=1&pulls=1&stargazers=1&theme=Light" alt="ladybird"></p>
+<p>开源地址：   <a href="https://github.com/LadybirdBrowser/ladybird">https://github.com/LadybirdBrowser/ladybird</a></p>
+<br />
+
+<br />
+
+<h3 id="Search-For-You：基于-AI-的智能搜索网站"><a href="#Search-For-You：基于-AI-的智能搜索网站" class="headerlink" title="Search For You：基于 AI 的智能搜索网站"></a>Search For You：基于 AI 的智能搜索网站</h3><p> <strong>Search For You</strong> 是一个基于 AI 的智能搜索项目，旨在为用户提供强大的、贴心的搜索体验。项目实现前后端分离，前端使用 Vue 3，后端基于 .NET 6 构建，性能高效，交互友好。</p>
+<p><a href="https://q.embbot.com/">Live Demo</a></p>
+<p><a href="https://private-user-images.githubusercontent.com/58774414/389225621-18acd2c3-5a95-4d13-a637-e5861e773cf3.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MzQyNzE1OTUsIm5iZiI6MTczNDI3MTI5NSwicGF0aCI6Ii81ODc3NDQxNC8zODkyMjU2MjEtMThhY2QyYzMtNWE5NS00ZDEzLWE2MzctZTU4NjFlNzczY2YzLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDEyMTUlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQxMjE1VDE0MDEzNVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTA1YzUxOWIwYjk0OGY4MWE0NjcxNWY0ZWY3N2Y2NjBlYWM1ZGU2YjNmNzFiMGY1MmMzNjc1YWM1MjE5OGVhMmYmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0._rWU4cQLykq4KG2GI7MMQiUrxgZoHy13l-bPMckxAME"><img data-src="https://private-user-images.githubusercontent.com/58774414/389225621-18acd2c3-5a95-4d13-a637-e5861e773cf3.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MzQyNzE1OTUsIm5iZiI6MTczNDI3MTI5NSwicGF0aCI6Ii81ODc3NDQxNC8zODkyMjU2MjEtMThhY2QyYzMtNWE5NS00ZDEzLWE2MzctZTU4NjFlNzczY2YzLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDEyMTUlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQxMjE1VDE0MDEzNVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTA1YzUxOWIwYjk0OGY4MWE0NjcxNWY0ZWY3N2Y2NjBlYWM1ZGU2YjNmNzFiMGY1MmMzNjc1YWM1MjE5OGVhMmYmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0._rWU4cQLykq4KG2GI7MMQiUrxgZoHy13l-bPMckxAME"></a></p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/image-20241215220054836.png"></p>
+<hr>
+<p>✨ 特性</p>
+<ul>
+<li><strong>AI 驱动搜索</strong>：利用最新的人工智能技术，实现智能化搜索结果推荐。</li>
+<li><strong>高性能后端</strong>：基于 .NET 6 架构，支持快速响应请求，确保服务稳定。</li>
+<li><strong>现代化前端</strong>：基于 Vue 3，轻量、灵活，端到端提供流畅的用户体验。</li>
+<li><strong>模块化设计</strong>：项目结构清晰，易于扩展和维护。</li>
+<li><strong>跨平台支持</strong>：支持多设备访问，兼容多种浏览器。</li>
+</ul>
+<hr>
+<p>🌟 技术栈</p>
+<p>前端</p>
+<ul>
+<li><a href="https://vuejs.org/">Vue 3</a> - 渐进式 JavaScript 框架</li>
+<li><a href="https://router.vuejs.org/">Vue Router</a> - 路由管理</li>
+<li><a href="https://pinia.vuejs.org/">Pinia</a> - 状态管理</li>
+<li><a href="https://axios-http.com/">Axios</a> - HTTP 请求库</li>
+<li>其他前端工具及库</li>
+</ul>
+<p>后端</p>
+<ul>
+<li><a href="https://learn.microsoft.com/en-us/aspnet/core/">ASP.NET Core 6</a> - 开源、跨平台的现代 web 框架</li>
+<li><a href="https://learn.microsoft.com/en-us/ef/core/">Entity Framework Core</a> - ORM 工具，用于数据库操作</li>
+<li><a href="https://learn.microsoft.com/en-us/aspnet/core/web-api/">REST API</a> - 提供前后台数据交互接口</li>
+</ul>
+<p> <img data-src="https://socialify.git.ci/MayDay-wpf/SearchForYou/image?description=1&forks=1&issues=1&language=1&name=1&owner=1&pulls=1&stargazers=1&theme=Light" alt="SearchForYou"></p>
+<p>开源地址：<a href="https://github.com/mediar-ai/screenpipe">https://github.com/mediar-ai/screenpipe</a></p>
+<br />
+
+ 
+
+
+
+<h2 id="宝藏信息"><a href="#宝藏信息" class="headerlink" title="宝藏信息"></a>宝藏信息</h2><h3 id="2024年度Mac装机必备：50款精选软件推荐"><a href="#2024年度Mac装机必备：50款精选软件推荐" class="headerlink" title="2024年度Mac装机必备：50款精选软件推荐"></a>2024年度Mac装机必备：50款精选软件推荐</h3><p><a href="https://www.runningcheese.com/">奔跑中的奶酪</a>为Mac用户精心挑选了50款年度最喜欢的软件，包括了浏览器、输入法、看图软件、截图工具、GIF录制、视频录制、音乐播放器、视频播放器、下载工具、解压压缩工具、卸载清理工具、磁盘读写工具、手机助手、系统监控、快速启动、Office软件、社交工具、远程协助、待办清单、邮件管理、翻译词典、笔记、RSS阅读器、剪贴板管理、重命名工具、文本识别、思维导图、PDF阅读、电子书阅读、同步网盘、图片处理、平面设计、影音创作、视频编辑、视频转码、编程开发、虚拟机、终端、魔法（网络工具）、软件包管理等多个领域的软件。每款软件都提供了简短的介绍和推荐理由，部分软件还提供了同类软件推荐和详细说明链接，为用户提供了丰富的选择和便捷的获取方式。</p>
+<p>原文： <a href="https://www.runningcheese.com/mac">https://www.runningcheese.com/mac</a></p>
+<br />
+
+<br />
+
+<h3 id="Send-安全私密的文件分享服务"><a href="#Send-安全私密的文件分享服务" class="headerlink" title="Send: 安全私密的文件分享服务"></a>Send: 安全私密的文件分享服务</h3><p>Send提供一种简单且私密的文件分享方式，用户可以通过拖放或点击上传文件，支持最大2.5GB的文件大小。该服务的特点在于端到端加密，这意味着文件在传输过程中被加密，只有拥有正确密钥的接收者才能访问。此外，Send提供的链接会自动过期，确保用户分享的内容不会永久在线，从而保护用户的隐私和数据安全。</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/image-20241215221936966.png"></p>
+<p><img data-src="https://socialify.git.ci/timvisee/send/image?description=1&forks=1&issues=1&language=1&name=1&owner=1&pulls=1&stargazers=1&theme=Light"></p>
+<p>在线地址： <a href="https://send.vis.ee/">https://send.vis.ee/</a></p>
+<p>开源地址：<a href="https://github.com/timvisee/send">https://github.com/timvisee/send</a></p>
+<br />
+
+<h3 id="MusicFreePluginsHub：一站式MusicFree源插件订阅聚合器"><a href="#MusicFreePluginsHub：一站式MusicFree源插件订阅聚合器" class="headerlink" title="MusicFreePluginsHub：一站式MusicFree源插件订阅聚合器"></a>MusicFreePluginsHub：一站式MusicFree源插件订阅聚合器</h3><p>MusicFreePluginsHub是xxnuo在GitHub上发起的一个项目，旨在收集和分享MusicFree的源插件订阅链接。该项目为用户提供了一个集中的平台，方便用户管理和更新MusicFree的插件订阅。通过这个项目，用户可以轻松获取到全网的MusicFree订阅资源，从而增强他们的音乐体验。项目页面可能包含了订阅链接的列表、更新日志以及如何使用这些订阅的说明。</p>
+<p><img data-src="https://socialify.git.ci/xxnuo/MusicFreePluginsHub/image?description=1&forks=1&issues=1&language=1&name=1&owner=1&pulls=1&stargazers=1&theme=Light" alt="MusicFreePluginsHub"></p>
+<p>开源地址：  <a href="https://github.com/xxnuo/MusicFreePluginsHub">https://github.com/xxnuo/MusicFreePluginsHub</a></p>
+<br />
+
+
+
+<h3 id="Windows按键映射工具QKeyMapper"><a href="#Windows按键映射工具QKeyMapper" class="headerlink" title="Windows按键映射工具QKeyMapper"></a>Windows按键映射工具QKeyMapper</h3><p>QKeyMapper是一款在 Win10 和 Win11 下可用的按键映射工具，具有不修改注册表、无需重启系统等特点。</p>
+<p><img data-src="https://socialify.git.ci/Zalafina/QKeyMapper/image?description=1&forks=1&issues=1&language=1&name=1&owner=1&pulls=1&stargazers=1&theme=Light" alt="QKeyMapper"></p>
+<p>开源地址：<a href="https://github.com/Zalafina/QKeyMapper">https://github.com/Zalafina/QKeyMapper</a></p>
+<br />
+
+<br />
+
+<br />
+
+<h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>百闻不如一见，百见不如一试。</p>
+<p>🎉 本文同步更新于  <a href="https://www.lifeee.top/">https://www.lifeee.top</a></p>
+]]></content>
+      <categories>
+        <category>冲浪</category>
+      </categories>
+      <tags>
+        <tag>冲浪</tag>
+      </tags>
+  </entry>
 </search>
