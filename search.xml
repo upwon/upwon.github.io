@@ -22176,4 +22176,102 @@ Welcome to my Blog. This is my first post. If you want to konw more info about H
         <tag>冲浪</tag>
       </tags>
   </entry>
+  <entry>
+    <title>网上冲浪周刊第73期</title>
+    <url>/posts/22812.html</url>
+    <content><![CDATA[<p>欢迎阅读本期技术资讯！我们为您介绍了一些有趣的工具，如快速匹配 Emoji 表情的实用工具 、超快速全文搜索应用Buzee Tauri、小米智能家居设备Home Assistant。此外，还推荐了用Rust编写的Python解释器RustPython、专业的网站流量分析与工具集成平台WebSpy 以及免费开源的 AI logo 生成器logocreator 。</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/pexels-jimbear-1723679.jpg" alt="https://www.pexels.com/zh-cn/photo/1723679/"></p>
+<span id="more"></span>
+
+
+
+<br />
+
+<p>欢迎来到第73期 ！😄</p>
+<p>期待您通过RSS订阅我们：<a href="https://www.lifeee.top//atom.xml">https://www.lifeee.top//atom.xml</a></p>
+<br />
+
+
+
+<h2 id="推荐阅读"><a href="#推荐阅读" class="headerlink" title="推荐阅读"></a>推荐阅读</h2><ul>
+<li><p><a href="https://mp.weixin.qq.com/s/mpxVJpFNq6VYS4IzJ5tjMQ">5种常见Android的SDK开发的方式</a> ：这篇文章详细介绍了五种不同的Android SDK开发方式，包括Jar包式、SO库式、AAR包式、Dex插件式和Apk安装式，并重点介绍了后两种方式的实现细节。</p>
+</li>
+<li><p><a href="https://mp.weixin.qq.com/s/oFp9An0TOf-W0CAzYMW4ww">更顺畅的体验 | Android 模拟器稳定性和性能更新</a>：  文章详细描述了Android Studio团队对Android模拟器进行的一系列更新和改进，这些改进旨在减少崩溃、加快启动时间、解决Bug，并设立更好的方式来检测和预防未来的问题。Project Quartz的关键目标之一是减少模拟器崩溃，提高稳定性和可靠性。团队更新了界面框架、Hypervisor Framework和图形库，并处理了技术债务。此外，还增强了遥测和日志记录功能，以及在发布前流程中增加了更多测试，以提高发布质量。</p>
+</li>
+<li><p><a href="https://mp.weixin.qq.com/s?__biz=Mzk0NDIwMTExNw==&mid=2247590410&idx=1&sn=9bc20f441b1e371b18db7e2b5b20e845&chksm=c32b6ef8f45ce7ee3995fcb15a0fe77c8ce91a1ac58dc2d5f1cea13161421b2e313108e771f2&scene=178&cur_album_id=1825000553177792519#rd">Ink API | 一个适用于触控笔应用的全新 Jetpack 库</a>： Ink API，这是一个Alpha版本的Jetpack库，用于创建、渲染和操作墨迹笔画，使开发者能够构建具有丰富墨迹功能的应用。Ink API基于Android框架的低延迟和预测技术，提供模块化架构，包括笔画、几何、笔刷、渲染和实时创作模块。它兼容Android 5.0及以上版本的设备，并利用了Android 10和14中的延迟改进和渲染效果。Ink API的优势在于易用性、高性能和灵活性，已经被多个Google应用采用。</p>
+</li>
+<li><p><a href="https://mp.weixin.qq.com/s/_88yMWWkLI6fFPHhqMdc2w">聊聊 Flutter &amp; Dart 里的内存泄漏和优化，也许没你想的那么复杂</a>： 文章首先解释了内存泄漏的基本概念，即不再需要的内存被程序占用而无法回收。在Dart中，如果不需要的对象还存在某些引用，如全局变量或闭包捕获，垃圾回收器就无法识别它们，从而导致内存泄漏。文章强调了<code>BuildContext</code>在Flutter中的重要作用，以及如何由于<code>BuildContext</code>的泄漏导致整个控件或页面无法回收。文章还讨论了闭包和异步操作中可能导致内存泄漏的情况，并提供了一些代码示例来说明这些问题。最后，文章总结了一些避免内存泄漏的最佳实践，包括小心使用静态和全局变量，注意<code>BuildContext</code>和闭包捕获，以及在适当场景使用<code>WeakReference</code>和<code>Finalizer</code>。</p>
+</li>
+</ul>
+<br />
+
+<br />
+
+<h2 id="有趣的工具"><a href="#有趣的工具" class="headerlink" title="有趣的工具"></a>有趣的工具</h2><h3 id="quick-emoji：快速匹配-Emoji-表情的实用工具"><a href="#quick-emoji：快速匹配-Emoji-表情的实用工具" class="headerlink" title="quick - emoji：快速匹配 Emoji 表情的实用工具"></a>quick - emoji：快速匹配 Emoji 表情的实用工具</h3><p><strong>quick-emoji</strong> 是一款实用的工具，旨在帮助用户通过输入关键词快速匹配到所需的 Emoji 表情。无论是在社交媒体、聊天应用还是其他文本输入场景中，<strong>quick-emoji</strong> 都能显著提高你的输入效率。</p>
+<p><img data-src="https://socialify.git.ci/Jimmylxue/qucik-emoji/image?description=1&forks=1&issues=1&language=1&name=1&owner=1&pulls=1&stargazers=1&theme=Light" alt="qucik-emoji"></p>
+<p> 开源地址： <a href="https://github.com/Jimmylxue/qucik-emoji">https://github.com/Jimmylxue/qucik-emoji</a></p>
+<h3 id="Buzee-Tauri：超快速全文搜索应用，简化文件检索"><a href="#Buzee-Tauri：超快速全文搜索应用，简化文件检索" class="headerlink" title="Buzee Tauri：超快速全文搜索应用，简化文件检索"></a>Buzee Tauri：超快速全文搜索应用，简化文件检索</h3><p>Buzee Tauri（发音为_boozey_）是一个全文搜索应用程序，旨在帮助用户快速检索他们的文件。它支持对文档、图片、音频、视频、文件夹和浏览器历史进行全文搜索。Buzee具有多种功能，包括通过关键词、时间、类型或这些组合进行本地文档和文件夹搜索，忽略特定文件或文件夹的索引，全局快捷键操作，以及查看文件统计信息和获取独特文档配置文件。此外，它还支持OCR功能，可以从PDF和图片中提取文本，并提供一个快速记事本功能。Buzee自动与文件系统的变化同步，并具有轻量级安装包和低内存使用率。</p>
+<p><strong>特点</strong>：</p>
+<ul>
+<li>快速全文搜索</li>
+<li>搜索过滤和排除</li>
+<li>时间搜索</li>
+<li>OCR功能</li>
+<li>记事本功能</li>
+<li>文件系统同步</li>
+<li>轻量级安装和低内存使用</li>
+</ul>
+<p><img data-src="https://socialify.git.ci/gsidhu/buzee-tauri/image?description=1&forks=1&issues=1&language=1&name=1&owner=1&pulls=1&stargazers=1&theme=Light" alt="buzee-tauri"></p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/Screenshot2.png"></p>
+<p>开源地址：  <a href="https://github.com/gsidhu/buzee-tauri">https://github.com/gsidhu/buzee-tauri</a></p>
+<p>下载地址：<a href="https://buzee.co/">https://buzee.co/</a></p>
+<br />
+
+<br />
+
+<h3 id="小米智能家居设备Home-Assistant集成：安装和使用指南"><a href="#小米智能家居设备Home-Assistant集成：安装和使用指南" class="headerlink" title="小米智能家居设备Home Assistant集成：安装和使用指南"></a>小米智能家居设备Home Assistant集成：安装和使用指南</h3><p>Xiaomi Home Integration是小米官方支持的Home Assistant集成组件，它允许用户将小米IoT智能设备集成到Home Assistant中，实现设备控制和自动化。项目提供了详细的安装指南，包括通过Git克隆、HACS和手动安装的方法。用户需要满足Home Assistant版本和操作系统的最低要求。集成支持登录小米账户、添加MioT设备、多用户登录和更新配置。</p>
+<p><img data-src="https://socialify.git.ci/XiaoMi/ha_xiaomi_home/image?description=1&forks=1&issues=1&language=1&name=1&owner=1&pulls=1&stargazers=1&theme=Light" alt="ha_xiaomi_home"></p>
+<p>开源地址： <a href="https://github.com/XiaoMi/ha_xiaomi_home">https://github.com/XiaoMi/ha_xiaomi_home</a></p>
+<br />
+
+ 
+
+
+
+<h2 id="宝藏信息"><a href="#宝藏信息" class="headerlink" title="宝藏信息"></a>宝藏信息</h2><br />
+
+<br />
+
+<h3 id="RustPython：用Rust编写的Python解释器"><a href="#RustPython：用Rust编写的Python解释器" class="headerlink" title="RustPython：用Rust编写的Python解释器"></a>RustPython：用Rust编写的Python解释器</h3><p>RustPython项目旨在创建一个完全用Rust语言编写的Python 3解释器。它支持Python 3的核心特性，并兼容CPython 3.12.0及以上版本。项目提供了多种使用方式，包括在线演示、本地构建和运行、通过<code>cargo</code>安装和运行，以及通过conda安装。此外，RustPython还支持WebAssembly WASI模块编译，允许在任何地方运行。项目包括一个实验性的JIT编译器，可以将Python函数编译成本地代码。RustPython可以嵌入到Rust应用程序中，提供Python脚本功能。</p>
+<p><img data-src="https://socialify.git.ci/RustPython/RustPython/image?description=1&forks=1&issues=1&language=1&name=1&owner=1&pulls=1&stargazers=1&theme=Light" alt="RustPython"></p>
+<p>开源地址： <a href="https://github.com/RustPython/RustPython">https://github.com/RustPython/RustPython</a></p>
+<br />
+
+<h3 id="WebSpy-Site：专业的网站流量分析与工具集成平台"><a href="#WebSpy-Site：专业的网站流量分析与工具集成平台" class="headerlink" title="WebSpy.Site：专业的网站流量分析与工具集成平台"></a>WebSpy.Site：专业的网站流量分析与工具集成平台</h3><p>WebSpy.Site 是一个重新定义网站分析体验的专业平台，可深入分析任意网站的流量数据并生成高颜值多维度分析报告。其具有革新性的使用体验，如域名直达、工具坞集成、智能历史和趣味收藏等；能提供全方位的数据洞察，包括访问分析、用户行为和地域分布等；还具备人性化的功能设计，如一键分享、数据可视化、定期更新和移动适配等。</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/image-20241223235507393.png"></p>
+<p>在线地址： <a href="https://webspy.site/">https://webspy.site/</a></p>
+<p>开源地址：<a href="https://github.com/wincatcher/">https://github.com/wincatcher/</a></p>
+<br />
+
+
+
+<h3 id="logocreator：免费开源的-AI-logo-生成器"><a href="#logocreator：免费开源的-AI-logo-生成器" class="headerlink" title="logocreator：免费开源的 AI logo 生成器"></a>logocreator：免费开源的 AI logo 生成器</h3><p>Nutlope&#x2F;logocreator项目是一个开源的Logo生成工具，它允许用户创建免费的Logo设计。该项目利用了Together AI平台上的Flux技术，为用户提供一个简单易用的界面来生成个性化的Logo。</p>
+<p><img data-src="https://socialify.git.ci/Nutlope/logocreator/image?description=1&forks=1&issues=1&language=1&name=1&owner=1&pulls=1&stargazers=1&theme=Light" alt="logocreator"></p>
+<p>开源地址： <a href="https://github.com/Nutlope/logocreator">https://github.com/Nutlope/logocreator</a></p>
+<br />
+
+<br />
+
+<br />
+
+<h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>百闻不如一见，百见不如一试。</p>
+<p> 🎉 本文同步更新于 <a href="https://github.com/starsight/TechWeekly">https://github.com/starsight/TechWeekly</a></p>
+]]></content>
+      <categories>
+        <category>冲浪</category>
+      </categories>
+      <tags>
+        <tag>冲浪</tag>
+      </tags>
+  </entry>
 </search>

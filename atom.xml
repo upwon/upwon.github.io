@@ -6,7 +6,7 @@
   <link href="https://www.lifeee.top/atom.xml" rel="self"/>
   
   <link href="https://www.lifeee.top/"/>
-  <updated>2024-12-15T14:42:30.402Z</updated>
+  <updated>2024-12-27T13:39:01.753Z</updated>
   <id>https://www.lifeee.top/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>网上冲浪周刊第73期</title>
+    <link href="https://www.lifeee.top/posts/22812.html"/>
+    <id>https://www.lifeee.top/posts/22812.html</id>
+    <published>2024-12-27T13:36:24.000Z</published>
+    <updated>2024-12-27T13:39:01.753Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;欢迎阅读本期技术资讯！我们为您介绍了一些有趣的工具，如快速匹配 Emoji 表情的实用工具 、超快速全文搜索应用Buzee Tauri、小米智能家居设备Home Assistant。此外，还推荐了用Rust编写的Python解释器RustPython、专业的网站流量分析与工具集成平台WebSpy 以及免费开源的 AI logo 生成器logocreator 。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/pexels-jimbear-1723679.jpg&quot; alt=&quot;https://www.pexels.com/zh-cn/photo/1723679/&quot;&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="冲浪" scheme="https://www.lifeee.top/categories/%E5%86%B2%E6%B5%AA/"/>
+    
+    
+    <category term="冲浪" scheme="https://www.lifeee.top/tags/%E5%86%B2%E6%B5%AA/"/>
+    
+  </entry>
   
   <entry>
     <title>网上冲浪周刊第71期</title>
@@ -386,26 +406,6 @@
     
     <summary type="html">&lt;p&gt;欢迎阅读第35期技术资讯！欢迎阅读本期技术资讯！本期在工具推荐方面，我们发现了SuperDrag这款智能浏览器鼠标拖拽扩展，它能根据不同的拖拽内容执行相应操作，如打开链接、保存图片或搜索文本。Surfingkeys则为Chrome和Firefox用户提供了类似Vim的键盘快捷键操作方式，极大提升了浏览效率。RSSHub Radar和RSS+两个工具简化了RSS订阅源的发现和订阅过程，而Mihon作为一款Android端的免费开源漫画阅读器，支持丰富的图源扩展。在Python包管理方面，我们介绍了uv，这是一个用Rust编写的快速安装程序和解析器，旨在替代pip。此外，我们还分享了中国法律快查手册和Z-Library桌面端下载信息，以及基于Kimi Chat的AI渐进式阅读法，帮助读者高效处理大量阅读材料。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/202403241911541.jpg&quot; alt=&quot;封面图 西湖三月·2024&quot;&gt;&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="冲浪" scheme="https://www.lifeee.top/categories/%E5%86%B2%E6%B5%AA/"/>
-    
-    
-    <category term="冲浪" scheme="https://www.lifeee.top/tags/%E5%86%B2%E6%B5%AA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>网上冲浪周刊第33期</title>
-    <link href="https://www.lifeee.top/posts/36684.html"/>
-    <id>https://www.lifeee.top/posts/36684.html</id>
-    <published>2024-03-08T15:32:57.000Z</published>
-    <updated>2024-03-09T05:47:37.759Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;欢迎阅读第33期技术资讯！本期我们推荐了Android 15预览版多项创新功能如通知管理、窗口记录以及文件完整性保护，Flutter生态中的MiniTex文本渲染器及其在跨平台上的运用等技术，此外，涵盖了Kotlin 2.0.0-Beta4的更新内容，以及一系列Android开发者实用工具和技术要点，包括内存泄漏、必备插件、依赖管理和热修复方案Tinker。文章还推介了几款有趣的工具，如跨平台多媒体应用Miru App、MacOS应用更新检查工具latest、Windows桌面美化工具DWMBlurGlass。同时，特别推荐了方便快捷的开发者参考资料站点Quick Reference，满足您随时查阅技术细节的需求。最后，提及了一站式AI开发平台扣子和在线音视频处理工具ffmpeg-online。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/202403091333548.jpg&quot; alt=&quot;封面图 https://www.pexels.com/zh-cn/photo/17935433/&quot;&gt;&lt;/p&gt;</summary>
     
     
     
