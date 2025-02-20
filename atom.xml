@@ -6,7 +6,7 @@
   <link href="https://www.lifeee.top/atom.xml" rel="self"/>
   
   <link href="https://www.lifeee.top/"/>
-  <updated>2025-02-07T15:37:54.692Z</updated>
+  <updated>2025-02-19T14:54:14.322Z</updated>
   <id>https://www.lifeee.top/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>网上冲浪周刊第81期</title>
+    <link href="https://www.lifeee.top/posts/57417.html"/>
+    <id>https://www.lifeee.top/posts/57417.html</id>
+    <published>2025-02-19T13:52:32.000Z</published>
+    <updated>2025-02-19T14:54:14.322Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;欢迎阅读本期技术资讯！我们为您介绍了一些有趣的工具，由AI为 GitHub 个人资料提供有趣且诚实的评价、 专为中小团队设计的多模型支持 AI 聊天应用 HiveCha、开源语音处理模型与工具集Step-Audio发布、3 小时从零训练 26M 参数 GPT 模型 。此外，还推荐了连接设计师与开发者的现代化设计平台Semi Desig以及功能强大的开源Android图像编辑应用Image Toolbox。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/pexels-valentina-bondarenko-111153662-9792451.jpg&quot; alt=&quot;https://www.pexels.com/zh-cn/photo/9792451/&quot;&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="冲浪" scheme="https://www.lifeee.top/categories/%E5%86%B2%E6%B5%AA/"/>
+    
+    
+    <category term="冲浪" scheme="https://www.lifeee.top/tags/%E5%86%B2%E6%B5%AA/"/>
+    
+  </entry>
   
   <entry>
     <title>网上冲浪周刊第79期</title>
@@ -386,26 +406,6 @@
     
     <summary type="html">&lt;p&gt;欢迎阅读第41期技术资讯！ &lt;strong&gt;工具推荐方面&lt;/strong&gt;，我们介绍了剪切助手，一个高颜值、操作简便的剪切板管理工具，支持快速分享、数据云同步以及跨平台使用；ProxyPin一款基于Flutter开发的开源免费抓包工具，支持Windows、Mac、Android、IOS、Linux 全平台系统；哔哩哔哩插件大全；海螺AI，由 MiniMax 开发的综合AI助手，可以生成各种创意文本格式、进行网络搜索、解决图片相关难题、进行语音通话、生成文档摘要、进行休闲对话。鸿蒙hap查看器，一个跨平台的鸿蒙hap查看器，方便开发者在电脑上预览hap的信息，并提供一键安装到设备等功能；Video-subtitle-remover，一款基于AI技术，将视频中的硬字幕去除的软件GeekDesk，一款小巧、美观的桌面快速启动管理工具，集成了 Everything 搜索功能，适用Windows平台。&lt;strong&gt;宝藏信息方面&lt;/strong&gt;，分享CodeLocator，一个包含 Android SDK 与 Android Studio 插件的 Android 工具集，可以帮助开发者提高开发效率；fluent_ui ，使用 Flutter 设计漂亮的原生 Windows 应用程序。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/202405062234740.png&quot;&gt;&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="冲浪" scheme="https://www.lifeee.top/categories/%E5%86%B2%E6%B5%AA/"/>
-    
-    
-    <category term="冲浪" scheme="https://www.lifeee.top/tags/%E5%86%B2%E6%B5%AA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>网上冲浪周刊第39期</title>
-    <link href="https://www.lifeee.top/posts/16879.html"/>
-    <id>https://www.lifeee.top/posts/16879.html</id>
-    <published>2024-04-21T05:21:23.000Z</published>
-    <updated>2024-04-21T05:36:36.467Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;欢迎阅读第39期技术资讯！欢迎阅读本期技术资讯！ &lt;strong&gt;工具推荐&lt;/strong&gt;方面方面，我们介绍了UI Notes - 真实产品 UI 设计灵感库可以探索 UI 设计的最新趋势；AI编程助手：Fitten Code，可提供代码自动补全、注释生成、智能bug查找和自动生成单元测试等功能；算法可视化面板编辑器，旨在教用户如何使用一个算法可视化工具来增强对算法执行过程的理解；Pixiv第三方桌面客户端。&lt;strong&gt;宝藏信息&lt;/strong&gt;方面，分享了播客广场发现更多感兴趣的播客，本地知识库问答系统，以及TikTok Notes 图文社交平台。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/202404172314679.jpg&quot; alt=&quot;封面图 西溪湿地四月·2024&quot;&gt;&lt;/p&gt;</summary>
     
     
     
