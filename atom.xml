@@ -6,7 +6,7 @@
   <link href="https://www.lifeee.top/atom.xml" rel="self"/>
   
   <link href="https://www.lifeee.top/"/>
-  <updated>2025-02-19T14:54:14.322Z</updated>
+  <updated>2025-03-06T15:09:04.848Z</updated>
   <id>https://www.lifeee.top/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>网上冲浪周刊第83期</title>
+    <link href="https://www.lifeee.top/posts/22604.html"/>
+    <id>https://www.lifeee.top/posts/22604.html</id>
+    <published>2025-03-07T13:52:32.000Z</published>
+    <updated>2025-03-06T15:09:04.848Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;欢迎阅读本期技术资讯！我们为您介绍了一些有趣的工具，检索增强生成（RAG）技术详解与实践 、ComfyUI-RMBG：高级图像背景移除与分割工具详解、AI 对冲基金项目 。此外，还推荐了现代化 React UI 库HeroUI、跨平台的原生 UI 应用Lynx、发现最好的Cloudflare 开源工具 &amp;amp; 文档以及轻量级非官方 Android Steam 客户端。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/pexels-ilia-bronskiy-1137858493-28829673.jpg&quot; alt=&quot;https://www.pexels.com/zh-cn/photo/28829673/&quot;&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="冲浪" scheme="https://www.lifeee.top/categories/%E5%86%B2%E6%B5%AA/"/>
+    
+    
+    <category term="冲浪" scheme="https://www.lifeee.top/tags/%E5%86%B2%E6%B5%AA/"/>
+    
+  </entry>
   
   <entry>
     <title>网上冲浪周刊第81期</title>
@@ -386,26 +406,6 @@
     
     <summary type="html">&lt;p&gt;欢迎阅读本期技术资讯！我们为您推荐了一系列实用工具和资源：Bruno，一款开源API管理客户端，支持Git友好操作和纯文本标记语言；夸克搜，一个专注于夸克网盘资源的搜索引擎；FRE123动漫搜索引擎，提供在线动漫资源搜索；在线生成二维码油猴脚本，方便用户生成页面地址二维码；C-Light，一个AI图像处理工具，通过智能打光技术增强图片效果。此外，我们还介绍了沉浸式线性代数学习资源，以及流畅阅读浏览器翻译插件，支持多语言翻译和双语模式。这些工具和资源旨在提升您的工作效率和学习体验，助您在技术领域更进一步。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/202405262249756.jpg&quot;&gt;&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="冲浪" scheme="https://www.lifeee.top/categories/%E5%86%B2%E6%B5%AA/"/>
-    
-    
-    <category term="冲浪" scheme="https://www.lifeee.top/tags/%E5%86%B2%E6%B5%AA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>网上冲浪周刊第41期</title>
-    <link href="https://www.lifeee.top/posts/57689.html"/>
-    <id>https://www.lifeee.top/posts/57689.html</id>
-    <published>2024-05-11T11:50:55.000Z</published>
-    <updated>2024-05-11T11:54:18.835Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;欢迎阅读第41期技术资讯！ &lt;strong&gt;工具推荐方面&lt;/strong&gt;，我们介绍了剪切助手，一个高颜值、操作简便的剪切板管理工具，支持快速分享、数据云同步以及跨平台使用；ProxyPin一款基于Flutter开发的开源免费抓包工具，支持Windows、Mac、Android、IOS、Linux 全平台系统；哔哩哔哩插件大全；海螺AI，由 MiniMax 开发的综合AI助手，可以生成各种创意文本格式、进行网络搜索、解决图片相关难题、进行语音通话、生成文档摘要、进行休闲对话。鸿蒙hap查看器，一个跨平台的鸿蒙hap查看器，方便开发者在电脑上预览hap的信息，并提供一键安装到设备等功能；Video-subtitle-remover，一款基于AI技术，将视频中的硬字幕去除的软件GeekDesk，一款小巧、美观的桌面快速启动管理工具，集成了 Everything 搜索功能，适用Windows平台。&lt;strong&gt;宝藏信息方面&lt;/strong&gt;，分享CodeLocator，一个包含 Android SDK 与 Android Studio 插件的 Android 工具集，可以帮助开发者提高开发效率；fluent_ui ，使用 Flutter 设计漂亮的原生 Windows 应用程序。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/202405062234740.png&quot;&gt;&lt;/p&gt;</summary>
     
     
     
