@@ -6,7 +6,7 @@
   <link href="https://www.lifeee.top/atom.xml" rel="self"/>
   
   <link href="https://www.lifeee.top/"/>
-  <updated>2025-03-06T15:09:04.848Z</updated>
+  <updated>2025-03-22T13:48:48.520Z</updated>
   <id>https://www.lifeee.top/</id>
   
   <author>
@@ -17,11 +17,31 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>网上冲浪周刊第85期</title>
+    <link href="https://www.lifeee.top/posts/53320.html"/>
+    <id>https://www.lifeee.top/posts/53320.html</id>
+    <published>2025-03-22T13:48:11.000Z</published>
+    <updated>2025-03-22T13:48:48.520Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;欢迎阅读本期技术资讯！我们为您介绍了一些有趣的工具，包括可视化 LLM 推理过程的&lt;strong&gt;ReasonGraph&lt;/strong&gt;、自由的浏览器 AI 阅读助手&lt;strong&gt;SumBuddy&lt;/strong&gt;、Neovim 的 AI 代码辅助插件&lt;strong&gt;avante.nvim&lt;/strong&gt;、低资源消耗的离线翻译服务器&lt;strong&gt;MTranServer&lt;/strong&gt;，以及开源视频生成模型&lt;strong&gt;Open-Sora&lt;/strong&gt;。此外，还推荐了多平台内容发布工具&lt;strong&gt;MultiPost&lt;/strong&gt;、Windows 快速启动工具&lt;strong&gt;Flow.Launcher&lt;/strong&gt;，以及聚合常用网站的神器、网页转应用的工具&lt;strong&gt;Tuboshu&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/pexels-guerrero-de-la-luz-346901328-14326763.jpg&quot; alt=&quot;https://www.pexels.com/zh-cn/photo/14326763/&quot;&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="冲浪" scheme="https://www.lifeee.top/categories/%E5%86%B2%E6%B5%AA/"/>
+    
+    
+    <category term="冲浪" scheme="https://www.lifeee.top/tags/%E5%86%B2%E6%B5%AA/"/>
+    
+  </entry>
+  
+  <entry>
     <title>网上冲浪周刊第83期</title>
     <link href="https://www.lifeee.top/posts/22604.html"/>
     <id>https://www.lifeee.top/posts/22604.html</id>
     <published>2025-03-07T13:52:32.000Z</published>
-    <updated>2025-03-06T15:09:04.848Z</updated>
+    <updated>2025-03-07T15:20:30.705Z</updated>
     
     
     <summary type="html">&lt;p&gt;欢迎阅读本期技术资讯！我们为您介绍了一些有趣的工具，检索增强生成（RAG）技术详解与实践 、ComfyUI-RMBG：高级图像背景移除与分割工具详解、AI 对冲基金项目 。此外，还推荐了现代化 React UI 库HeroUI、跨平台的原生 UI 应用Lynx、发现最好的Cloudflare 开源工具 &amp;amp; 文档以及轻量级非官方 Android Steam 客户端。&lt;/p&gt;
@@ -221,7 +241,7 @@
     <link href="https://www.lifeee.top/posts/35958.html"/>
     <id>https://www.lifeee.top/posts/35958.html</id>
     <published>2024-09-28T14:42:53.000Z</published>
-    <updated>2024-09-28T15:04:56.433Z</updated>
+    <updated>2024-09-28T15:07:51.449Z</updated>
     
     
     <summary type="html">&lt;p&gt;欢迎阅读本期技术资讯！我们为您推荐了一些有趣的工具，如专为 GitHub 项目创建分享图像Socialify  、开源数据库设计与可视化工具ChartDB 、 AIToolly：发现和选择最佳人AI工具 、Void：全面隐私保护的开源 AI 代码编辑器 、 Cherry Studio：支持多模型的跨平台 AI 助手。此外，还推荐了Mini-Cover：简洁的在线生成封面网站，专为博客、短视频、社交媒体等生成个性化封面和 Yaak：简洁高效的现代 API 客户端，开源替代 Postman。&lt;/p&gt;
@@ -386,26 +406,6 @@
     
     <summary type="html">&lt;p&gt;欢迎阅读本期技术资讯！我们为您推荐了一些有趣的工具，如最懂程序员的新一代 AI 搜索引擎 Devv、文本生成语音模型 ChatTTS 及其 UI 项目、视频翻译配音工具 PYVIDEOTRANS。此外，还介绍了美图开源任务队列 LMSTFY 和动手学深度学习资源。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/202406052246720.jpg&quot; alt=&quot;https://www.pexels.com/zh-cn/photo/348706/&quot;&gt;&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="冲浪" scheme="https://www.lifeee.top/categories/%E5%86%B2%E6%B5%AA/"/>
-    
-    
-    <category term="冲浪" scheme="https://www.lifeee.top/tags/%E5%86%B2%E6%B5%AA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>网上冲浪周刊第43期</title>
-    <link href="https://www.lifeee.top/posts/22872.html"/>
-    <id>https://www.lifeee.top/posts/22872.html</id>
-    <published>2024-05-26T14:44:01.000Z</published>
-    <updated>2024-05-26T14:50:10.825Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;欢迎阅读本期技术资讯！我们为您推荐了一系列实用工具和资源：Bruno，一款开源API管理客户端，支持Git友好操作和纯文本标记语言；夸克搜，一个专注于夸克网盘资源的搜索引擎；FRE123动漫搜索引擎，提供在线动漫资源搜索；在线生成二维码油猴脚本，方便用户生成页面地址二维码；C-Light，一个AI图像处理工具，通过智能打光技术增强图片效果。此外，我们还介绍了沉浸式线性代数学习资源，以及流畅阅读浏览器翻译插件，支持多语言翻译和双语模式。这些工具和资源旨在提升您的工作效率和学习体验，助您在技术领域更进一步。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/202405262249756.jpg&quot;&gt;&lt;/p&gt;</summary>
     
     
     
