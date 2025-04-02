@@ -6,7 +6,7 @@
   <link href="https://www.lifeee.top/atom.xml" rel="self"/>
   
   <link href="https://www.lifeee.top/"/>
-  <updated>2025-03-22T13:48:48.520Z</updated>
+  <updated>2025-04-02T14:14:32.013Z</updated>
   <id>https://www.lifeee.top/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>网上冲浪周刊第87期</title>
+    <link href="https://www.lifeee.top/posts/26697.html"/>
+    <id>https://www.lifeee.top/posts/26697.html</id>
+    <published>2025-04-02T13:33:51.000Z</published>
+    <updated>2025-04-02T14:14:32.013Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;欢迎阅读本期技术资讯！我们为您介绍了一些有趣的工具，包括开源的提示词优化工具&lt;strong&gt;Prompt Optimizer&lt;/strong&gt;（支持智能优化与多模型集成，提升AI输出质量）、微软为开发者打造的21课时&lt;strong&gt;生成式AI入门课程&lt;/strong&gt;（覆盖从基础到应用开发的全流程）、为Neovim用户提供Cursor AI IDE级代码辅助的插件&lt;strong&gt;avante.nvim&lt;/strong&gt;（支持OpenAI&amp;#x2F;Claude等模型一键应用建议）、基于MCP协议的高效AI代理框架&lt;strong&gt;mcp-agent&lt;/strong&gt;（实现多代理协作与流式处理），以及简化MCP开发的官方Python工具&lt;strong&gt;MCP Python SDK&lt;/strong&gt;。此外，还推荐了集成阿里云QWen模型的Java框架&lt;strong&gt;Spring AI Alibaba&lt;/strong&gt;（支持RAG与流式API），以及跨平台PS4模拟器&lt;strong&gt;shadPS4&lt;/strong&gt;（提供键鼠映射与调试支持）。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/pexels-wolfgang-weiser-467045605-29491832.jpg&quot; alt=&quot;https://www.pexels.com/zh-cn/photo/29491832/&quot;&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="冲浪" scheme="https://www.lifeee.top/categories/%E5%86%B2%E6%B5%AA/"/>
+    
+    
+    <category term="冲浪" scheme="https://www.lifeee.top/tags/%E5%86%B2%E6%B5%AA/"/>
+    
+  </entry>
   
   <entry>
     <title>网上冲浪周刊第85期</title>
@@ -386,26 +406,6 @@
     
     <summary type="html">&lt;p&gt;欢迎阅读本期技术资讯！我们为您推荐了一些有趣的工具，如基于FunASR高准确率语音识别模型的智能视频剪辑工具、潮点AI工具导航网站、AI Girlfriends。此外，还介绍了影猫推荐、相似网站搜索   &lt;a href=&quot;https://www.similarsites.com/&quot;&gt;Similarsites&lt;/a&gt;、食用手册。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/202406152226878.jpg&quot; alt=&quot;https://pixabay.com/photos/lugu-lake-boat-lake-blue-horizon-8679121/&quot;&gt;&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="冲浪" scheme="https://www.lifeee.top/categories/%E5%86%B2%E6%B5%AA/"/>
-    
-    
-    <category term="冲浪" scheme="https://www.lifeee.top/tags/%E5%86%B2%E6%B5%AA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>网上冲浪周刊第45期</title>
-    <link href="https://www.lifeee.top/posts/53592.html"/>
-    <id>https://www.lifeee.top/posts/53592.html</id>
-    <published>2024-06-06T13:11:02.000Z</published>
-    <updated>2024-06-06T13:14:37.293Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;欢迎阅读本期技术资讯！我们为您推荐了一些有趣的工具，如最懂程序员的新一代 AI 搜索引擎 Devv、文本生成语音模型 ChatTTS 及其 UI 项目、视频翻译配音工具 PYVIDEOTRANS。此外，还介绍了美图开源任务队列 LMSTFY 和动手学深度学习资源。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/202406052246720.jpg&quot; alt=&quot;https://www.pexels.com/zh-cn/photo/348706/&quot;&gt;&lt;/p&gt;</summary>
     
     
     
