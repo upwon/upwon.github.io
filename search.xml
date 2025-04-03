@@ -13341,6 +13341,7 @@ vgg_generated_48.i
 <p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/image-20250401223451108.png"></p>
 <p>开源地址 ： <a href="https://github.com/microsoft/generative-ai-for-beginners">https://github.com/microsoft/generative-ai-for-beginners</a></p>
 <p>课程主页：<a href="https://microsoft.github.io/generative-ai-for-beginners/#/">https://microsoft.github.io/generative-ai-for-beginners/#/</a></p>
+<p>&lt;br &#x2F;</p>
 <br />
 
 <h3 id="mcp-agent：基于-Model-Context-Protocol-构建高效-AI-代理的开源框架"><a href="#mcp-agent：基于-Model-Context-Protocol-构建高效-AI-代理的开源框架" class="headerlink" title="mcp-agent：基于 Model Context Protocol 构建高效 AI 代理的开源框架"></a>mcp-agent：基于 Model Context Protocol 构建高效 AI 代理的开源框架</h3><p><code>mcp-agent</code> 是一个用于构建 AI 代理的开源框架，基于 Model Context Protocol（MCP）设计。它通过简单的工作流模式，帮助开发者快速构建高效且可组合的 AI 代理。该框架支持多种工作流模式，包括增强型 LLM、并行处理、路由、意图分类、评估优化等，并提供了多代理协作（Swarm）的实现。<code>mcp-agent</code> 还支持持久化执行、内存管理、流式处理等功能，同时允许开发者在不依赖 MCP 客户端的情况下使用。项目提供了丰富的示例应用，包括桌面应用、Web 应用和多代理协作场景。</p>
@@ -13377,7 +13378,7 @@ vgg_generated_48.i
 <br />
 
 <h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>百闻不如一见，百见不如一试。</p>
-<p>🎉 本文同步更新于  <a href="https://www.lifeee.top/">https://www.lifeee.top</a></p>
+<p>🎉 本文同步更新于 <a href="https://github.com/starsight/TechWeekly">https://github.com/starsight/TechWeekly</a></p>
 ]]></content>
       <categories>
         <category>冲浪</category>
