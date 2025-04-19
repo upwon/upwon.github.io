@@ -6,7 +6,7 @@
   <link href="https://www.lifeee.top/atom.xml" rel="self"/>
   
   <link href="https://www.lifeee.top/"/>
-  <updated>2025-04-03T13:43:52.935Z</updated>
+  <updated>2025-04-19T07:51:27.812Z</updated>
   <id>https://www.lifeee.top/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>网上冲浪周刊第89期</title>
+    <link href="https://www.lifeee.top/posts/32843.html"/>
+    <id>https://www.lifeee.top/posts/32843.html</id>
+    <published>2025-04-19T07:48:40.000Z</published>
+    <updated>2025-04-19T07:51:27.812Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;欢迎阅读本期技术资讯！我们为您带来一系列实用工具与资源：专为闲鱼平台打造的&lt;strong&gt;智能闲鱼客服机器人系统&lt;/strong&gt;（支持7×24小时自动化值守、多专家协同议价与上下文对话，未来将强化情感分析与市场比价功能）；低代码自动化神器&lt;strong&gt;n8n&lt;/strong&gt;（集成400+预建API连接器，支持AI功能嵌入与自定义工作流，拥有超1亿次Docker拉取量）；Google重磅发布的&lt;strong&gt;生成式AI提示词工程指南&lt;/strong&gt;（详解零样本提示、思维链推理与ReAct方法，提供高效生产级AI应用方案）；以及展现创意边界的&lt;strong&gt;GPT-4o图像精选集&lt;/strong&gt;（收录46个跨模态艺术案例，涵盖立体相框设计、复古海报生成等多元场景）。此外，还推荐程序员健康指南&lt;strong&gt;HowToLiveLonger&lt;/strong&gt;（从饮食运动到心理调节的全方位延寿建议），以及语言学习者的全能工具&lt;strong&gt;LLPlayer&lt;/strong&gt;（支持134种语言实时翻译、OCR字幕提取与AI生成双语字幕，深度集成DeepL&amp;#x2F;Google翻译API）。  &lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/pexels-quang-nguyen-vinh-222549-6131289.jpg&quot; alt=&quot;https://www.pexels.com/zh-cn/photo/6131289/&quot;&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="数学" scheme="https://www.lifeee.top/categories/%E6%95%B0%E5%AD%A6/"/>
+    
+    <category term="冲浪佳软" scheme="https://www.lifeee.top/categories/%E5%86%B2%E6%B5%AA%E4%BD%B3%E8%BD%AF/"/>
+    
+    
+    <category term="冲浪" scheme="https://www.lifeee.top/tags/%E5%86%B2%E6%B5%AA/"/>
+    
+  </entry>
   
   <entry>
     <title>网上冲浪周刊第87期</title>
@@ -386,26 +408,6 @@
     
     <summary type="html">&lt;p&gt;欢迎阅读本期技术资讯！我们为您推荐了一些有趣的工具，如可视化神经网络 Netron 、用于 Web 的表情符号选择器 HTML 组件、Notion 简体中文版帮助文档、 ZeroTermux  Android 终端。此外，还介绍了、全历史、大厂项目复盘。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/202407072325290.png&quot; alt=&quot;image-20240707232504020&quot;&gt;&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="冲浪" scheme="https://www.lifeee.top/categories/%E5%86%B2%E6%B5%AA/"/>
-    
-    
-    <category term="冲浪" scheme="https://www.lifeee.top/tags/%E5%86%B2%E6%B5%AA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>网上冲浪周刊第47期</title>
-    <link href="https://www.lifeee.top/posts/26969.html"/>
-    <id>https://www.lifeee.top/posts/26969.html</id>
-    <published>2024-06-19T15:18:27.000Z</published>
-    <updated>2024-06-19T15:24:31.257Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;欢迎阅读本期技术资讯！我们为您推荐了一些有趣的工具，如基于FunASR高准确率语音识别模型的智能视频剪辑工具、潮点AI工具导航网站、AI Girlfriends。此外，还介绍了影猫推荐、相似网站搜索   &lt;a href=&quot;https://www.similarsites.com/&quot;&gt;Similarsites&lt;/a&gt;、食用手册。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/202406152226878.jpg&quot; alt=&quot;https://pixabay.com/photos/lugu-lake-boat-lake-blue-horizon-8679121/&quot;&gt;&lt;/p&gt;</summary>
     
     
     
