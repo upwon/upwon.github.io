@@ -6,7 +6,7 @@
   <link href="https://www.lifeee.top/atom.xml" rel="self"/>
   
   <link href="https://www.lifeee.top/"/>
-  <updated>2025-04-19T07:51:27.812Z</updated>
+  <updated>2025-05-10T10:23:30.685Z</updated>
   <id>https://www.lifeee.top/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>网上冲浪周刊第91期</title>
+    <link href="https://www.lifeee.top/posts/8308.html"/>
+    <id>https://www.lifeee.top/posts/8308.html</id>
+    <published>2025-05-10T10:22:51.000Z</published>
+    <updated>2025-05-10T10:23:30.685Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;欢迎阅读本期技术资讯！我们为您带来一系列前沿工具与解决方案：OpenAI推出的&lt;strong&gt;Codex&lt;/strong&gt;（终端轻量级编码代理，支持自然语言转代码与多模态输入，实现ChatGPT级推理能力）；沉浸式翻译的&lt;strong&gt;Babeldoc&lt;/strong&gt;（精准保持PDF排版与图表公式解析，免费版每月千页翻译额度，Pro版集成DeepSeek高级模型）；浏览器自动化神器&lt;strong&gt;Browser-use&lt;/strong&gt;（Python开发，支持Playwright集成，轻松完成购物车添加、LinkedIn关系处理等任务，GitHub星标超59,000）。此外，还推荐macOS菜单栏管理工具&lt;strong&gt;Ice&lt;/strong&gt;（自定义隐藏与显示项目，优化工作区布局）；提升微信公众号长文阅读体验的&lt;strong&gt;公众号阅读增强器&lt;/strong&gt;（智能目录导航、图片放大与实时位置追踪）；腾讯开源的&lt;strong&gt;Kuikly&lt;/strong&gt;（基于Kotlin的全平台框架，实现多端UI一致性，已应用于QQ、QQ音乐等产品）；以及开源免费的远程控制工具&lt;strong&gt;BilldDesk&lt;/strong&gt;（支持多平台、多屏操作与私有化部署，无连接限制，媲美商业软件功能）。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/pexels-tomi-s-125320012-19549650.jpg&quot; alt=&quot;https://www.pexels.com/zh-cn/photo/19549650/&quot;&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="数学" scheme="https://www.lifeee.top/categories/%E6%95%B0%E5%AD%A6/"/>
+    
+    <category term="冲浪佳软" scheme="https://www.lifeee.top/categories/%E5%86%B2%E6%B5%AA%E4%BD%B3%E8%BD%AF/"/>
+    
+    
+    <category term="冲浪" scheme="https://www.lifeee.top/tags/%E5%86%B2%E6%B5%AA/"/>
+    
+  </entry>
   
   <entry>
     <title>网上冲浪周刊第89期</title>
@@ -388,26 +410,6 @@
     
     <summary type="html">&lt;p&gt;欢迎阅读本期技术资讯！我们为您推荐了一些有趣的工具，如Rodel Downloader AI模型下载工具、Apache Superset 数据可视化平台 、Ladybird - 一个真正独立的Web浏览器。此外，还介绍了在VSCode里离线使用语雀编辑器 以及优化React性能的一个虚拟DOM。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/202407172208096.jpg&quot; alt=&quot;https://www.pexels.com/zh-cn/photo/19074550/&quot;&gt;&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="冲浪" scheme="https://www.lifeee.top/categories/%E5%86%B2%E6%B5%AA/"/>
-    
-    
-    <category term="冲浪" scheme="https://www.lifeee.top/tags/%E5%86%B2%E6%B5%AA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>网上冲浪周刊第49期</title>
-    <link href="https://www.lifeee.top/posts/33115.html"/>
-    <id>https://www.lifeee.top/posts/33115.html</id>
-    <published>2024-07-07T15:19:40.000Z</published>
-    <updated>2024-07-07T15:27:31.556Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;欢迎阅读本期技术资讯！我们为您推荐了一些有趣的工具，如可视化神经网络 Netron 、用于 Web 的表情符号选择器 HTML 组件、Notion 简体中文版帮助文档、 ZeroTermux  Android 终端。此外，还介绍了、全历史、大厂项目复盘。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/202407072325290.png&quot; alt=&quot;image-20240707232504020&quot;&gt;&lt;/p&gt;</summary>
     
     
     

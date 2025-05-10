@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/myapple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/myfavicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/myfavicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/myapple-touch-icon-next.png" color="#222">
+  <meta name="google-site-verification" content="google2fc64c2b92961282.html">
+  <meta name="baidu-site-verification" content="s6BwSjIZYB">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.loli.net/css?family='LXGW+WenKai+LITE':300,300italic,400,400italic,700,700italic%7C'LXGW+WenKai+Screen':300,300italic,400,400italic,700,700italic%7C'LXGW+WenKai':300,300italic,400,400italic,700,700italic%7C'Noto+Serif+SC':300,300italic,400,400italic,700,700italic%7C'EB+Garamond':300,300italic,400,400italic,700,700italic%7C'PingFang+SC':300,300italic,400,400italic,700,700italic%7C'Microsoft+YaHei':300,300italic,400,400italic,700,700italic%7C'sans-serif':300,300italic,400,400italic,700,700italic%7CMa+Shan+Zheng:300,300italic,400,400italic,700,700italic%7CLXGW+WenKai+Screen:300,300italic,400,400italic,700,700italic%7CLXGW+WenKai:300,300italic,400,400italic,700,700italic%7CMenlo:300,300italic,400,400italic,700,700italic%7CMonaco:300,300italic,400,400italic,700,700italic%7CConsolas:300,300italic,400,400italic,700,700italic%7CSource+Code+Pro:300,300italic,400,400italic,700,700italic%7Csystem-ui:300,300italic,400,400italic,700,700italic%7Cmonospace:300,300italic,400,400italic,700,700italic%7Csans-serif:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha256-yIDrPSXHZdOZhAqiBP7CKzIwMQmRCJ8UeB8Jo17YC4o=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/themes/blue/pace-theme-minimal.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"www.lifeee.top","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.19.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"mac","show_result":true},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="欢迎阅读本期技术资讯！我们为您带来一系列前沿工具与解决方案：OpenAI推出的Codex（终端轻量级编码代理，支持自然语言转代码与多模态输入，实现ChatGPT级推理能力）；沉浸式翻译的Babeldoc（精准保持PDF排版与图表公式解析，免费版每月千页翻译额度，Pro版集成DeepSeek高级模型）；浏览器自动化神器Browser-use（Python开发，支持Playwright集成，轻松完成购">
+<meta property="og:type" content="article">
+<meta property="og:title" content="网上冲浪周刊第91期">
+<meta property="og:url" content="https://www.lifeee.top/posts/8308.html">
+<meta property="og:site_name" content="热夏的博客">
+<meta property="og:description" content="欢迎阅读本期技术资讯！我们为您带来一系列前沿工具与解决方案：OpenAI推出的Codex（终端轻量级编码代理，支持自然语言转代码与多模态输入，实现ChatGPT级推理能力）；沉浸式翻译的Babeldoc（精准保持PDF排版与图表公式解析，免费版每月千页翻译额度，Pro版集成DeepSeek高级模型）；浏览器自动化神器Browser-use（Python开发，支持Playwright集成，轻松完成购">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/pexels-tomi-s-125320012-19549650.jpg">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/image-20250508224931682.png">
+<meta property="og:image" content="https://camo.githubusercontent.com/d336a8fa681155170445610e232044718443ca990fe6ffbd84221fdca14e4246/68747470733a2f2f732e696d6d6572736976657472616e736c6174652e636f6d2f6173736574732f72322d75706c6f6164732f696d616765732f626162656c646f632d707265766965772e706e67">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/410929479-1440affc-a552-442e-b702-d0d3b277b0ae.gif">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/image-20250508231208756.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/373391340-4423085c-4e4b-4f3d-ad0f-90a217c03470.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/image-20250508224117120.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/image-20250508230117292.png">
+<meta property="og:image" content="https://github.com/galaxy-s10/billd-desk/raw/main/src/assets/readme_img/111.png?raw=true">
+<meta property="og:image" content="https://github.com/galaxy-s10/billd-desk/raw/main/src/assets/readme_img/222.png?raw=true">
+<meta property="article:published_time" content="2025-05-10T10:22:51.000Z">
+<meta property="article:modified_time" content="2025-05-10T10:23:30.685Z">
+<meta property="article:author" content="热夏">
+<meta property="article:tag" content="冲浪">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/pexels-tomi-s-125320012-19549650.jpg">
+
+
+<link rel="canonical" href="https://www.lifeee.top/posts/8308.html">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://www.lifeee.top/posts/8308.html","path":"posts/8308.html","title":"网上冲浪周刊第91期"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>网上冲浪周刊第91期 | 热夏的博客</title>
+  
+
+
+
+
+
+
+
+<link href="https://fonts.loli.net/css?family=Noto+Serif+SC:400,500,700&display=swap&subset=chinese-simplified" rel="stylesheet">
+<link rel="stylesheet" href="https://npm.elemecdn.com/lxgw-wenkai-screen-webfont@1.7.0/style.css" />
+
+<link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&display=swap" rel="stylesheet">
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="热夏的博客" type="application/atom+xml">
+<style>.darkmode--activated{--body-bg-color:#282828;--content-bg-color:#333;--card-bg-color:#555;--text-color:#ccc;--blockquote-color:#bbb;--link-color:#ccc;--link-hover-color:#eee;--brand-color:#ddd;--brand-hover-color:#ddd;--table-row-odd-bg-color:#282828;--table-row-hover-bg-color:#363636;--menu-item-bg-color:#555;--btn-default-bg:#222;--btn-default-color:#ccc;--btn-default-border-color:#555;--btn-default-hover-bg:#666;--btn-default-hover-color:#ccc;--btn-default-hover-border-color:#666;--highlight-background:#282b2e;--highlight-foreground:#a9b7c6;--highlight-gutter-background:#34393d;--highlight-gutter-foreground:#9ca9b6}.darkmode--activated img{opacity:.75}.darkmode--activated img:hover{opacity:.9}.darkmode--activated code{color:#69dbdc;background:0 0}button.darkmode-toggle{z-index:9999}.darkmode-ignore,img{display:flex!important}.beian img{display:inline-block!important}</style></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">热夏的博客</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-heart fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8E%A8%E8%8D%90%E9%98%85%E8%AF%BB"><span class="nav-number">1.</span> <span class="nav-text">推荐阅读</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#AI%E4%BF%A1%E6%81%AF"><span class="nav-number">2.</span> <span class="nav-text">AI信息</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#OpenAI-Codex%EF%BC%9A%E7%A8%8B%E5%BA%8F%E5%91%98%E7%9A%84-AI-%E7%BC%96%E7%A8%8B%E5%8A%A9%E6%89%8B%EF%BC%8C%E8%AE%A9%E4%BB%A3%E7%A0%81%E8%87%AA%E5%B7%B1%E5%86%99%E8%87%AA%E5%B7%B1"><span class="nav-number">2.1.</span> <span class="nav-text">OpenAI Codex：程序员的 AI 编程助手，让代码自己写自己</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Babeldoc%EF%BC%9A%E6%B2%89%E6%B5%B8%E5%BC%8F%E7%BF%BB%E8%AF%91%E7%9A%84-PDF-%E7%BF%BB%E8%AF%91%E7%A5%9E%E5%99%A8%EF%BC%8C%E4%BF%9D%E6%8C%81%E6%8E%92%E7%89%88%E4%B8%94%E5%AE%8C%E5%85%A8%E5%85%8D%E8%B4%B9"><span class="nav-number">2.2.</span> <span class="nav-text">Babeldoc：沉浸式翻译的 PDF 翻译神器，保持排版且完全免费</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#AI-%E6%B5%8F%E8%A7%88%E5%99%A8%E6%8E%A7%E5%88%B6%E4%B8%8E%E8%87%AA%E5%8A%A8%E5%8C%96%E4%BB%BB%E5%8A%A1%E7%A5%9E%E5%99%A8%EF%BC%9ABrowser-use"><span class="nav-number">2.3.</span> <span class="nav-text">AI 浏览器控制与自动化任务神器：Browser-use</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8A%80%E6%9C%AF%E5%B7%A5%E5%85%B7"><span class="nav-number">3.</span> <span class="nav-text">技术工具</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#macOS%E8%8F%9C%E5%8D%95%E6%A0%8F%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7-%E2%80%94-Ice"><span class="nav-number">3.1.</span> <span class="nav-text">macOS菜单栏管理工具 — Ice</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8F%90%E5%8D%87%E5%BE%AE%E4%BF%A1%E5%85%AC%E4%BC%97%E5%8F%B7%E9%98%85%E8%AF%BB%E6%96%B0%E4%BD%93%E9%AA%8C%EF%BC%9A%E2%80%9C%E5%85%AC%E4%BC%97%E5%8F%B7%E9%98%85%E8%AF%BB%E5%A2%9E%E5%BC%BA%E5%99%A8%E2%80%9D-%E8%AE%A9%E9%95%BF%E6%96%87%E9%98%85%E8%AF%BB%E6%9B%B4%E8%BD%BB%E6%9D%BE"><span class="nav-number">3.2.</span> <span class="nav-text">提升微信公众号阅读新体验：“公众号阅读增强器” 让长文阅读更轻松</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%85%BE%E8%AE%AF-Kuikly-%E5%BC%80%E6%BA%90%EF%BC%9A%E5%9F%BA%E4%BA%8E-Kotlin-%E7%9A%84%E5%85%A8%E5%B9%B3%E5%8F%B0%E6%A1%86%E6%9E%B6"><span class="nav-number">3.3.</span> <span class="nav-text">腾讯 Kuikly 开源：基于 Kotlin 的全平台框架</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#BilldDesk%EF%BC%9A%E5%BC%80%E6%BA%90%E5%85%8D%E8%B4%B9%E7%9A%84%E8%BF%9C%E7%A8%8B%E6%A1%8C%E9%9D%A2%E6%8E%A7%E5%88%B6%E5%B7%A5%E5%85%B7%EF%BC%8C%E6%94%AF%E6%8C%81%E5%A4%9A%E5%B9%B3%E5%8F%B0%E5%92%8C%E7%A7%81%E6%9C%89%E5%8C%96%E9%83%A8%E7%BD%B2"><span class="nav-number">3.4.</span> <span class="nav-text">BilldDesk：开源免费的远程桌面控制工具，支持多平台和私有化部署</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%8E%E8%AE%B0"><span class="nav-number">4.</span> <span class="nav-text">后记</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="热夏"
+      src="/images/head.jpg">
+  <p class="site-author-name" itemprop="name">热夏</p>
+  <div class="site-description" itemprop="description">空山新雨后，天气晚来秋。</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">110</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">11</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">42</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/upwon" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;upwon" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:w1244753906@gmail.com" title="E-Mail → mailto:w1244753906@gmail.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.lifeee.top//atom.xml" title="RSS → https:&#x2F;&#x2F;www.lifeee.top&#x2F;&#x2F;atom.xml" rel="noopener me"><i class="fa fa-rss fa-fw"></i>RSS</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+        <div class="pjax">
+        </div>
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.lifeee.top/posts/8308.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/head.jpg">
+      <meta itemprop="name" content="热夏">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="热夏的博客">
+      <meta itemprop="description" content="空山新雨后，天气晚来秋。">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="网上冲浪周刊第91期 | 热夏的博客">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          网上冲浪周刊第91期
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2025-05-10 18:22:51 / 修改时间：18:23:30" itemprop="dateCreated datePublished" datetime="2025-05-10T18:22:51+08:00">2025-05-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%95%B0%E5%AD%A6/" itemprop="url" rel="index"><span itemprop="name">数学</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%86%B2%E6%B5%AA%E4%BD%B3%E8%BD%AF/" itemprop="url" rel="index"><span itemprop="name">冲浪佳软</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>3.2k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>3 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p>欢迎阅读本期技术资讯！我们为您带来一系列前沿工具与解决方案：OpenAI推出的<strong>Codex</strong>（终端轻量级编码代理，支持自然语言转代码与多模态输入，实现ChatGPT级推理能力）；沉浸式翻译的<strong>Babeldoc</strong>（精准保持PDF排版与图表公式解析，免费版每月千页翻译额度，Pro版集成DeepSeek高级模型）；浏览器自动化神器<strong>Browser-use</strong>（Python开发，支持Playwright集成，轻松完成购物车添加、LinkedIn关系处理等任务，GitHub星标超59,000）。此外，还推荐macOS菜单栏管理工具<strong>Ice</strong>（自定义隐藏与显示项目，优化工作区布局）；提升微信公众号长文阅读体验的<strong>公众号阅读增强器</strong>（智能目录导航、图片放大与实时位置追踪）；腾讯开源的<strong>Kuikly</strong>（基于Kotlin的全平台框架，实现多端UI一致性，已应用于QQ、QQ音乐等产品）；以及开源免费的远程控制工具<strong>BilldDesk</strong>（支持多平台、多屏操作与私有化部署，无连接限制，媲美商业软件功能）。</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/pexels-tomi-s-125320012-19549650.jpg" alt="https://www.pexels.com/zh-cn/photo/19549650/"></p>
+<span id="more"></span>
+
+
+
+<br />
+
+<p>欢迎来到第91期 , 期待您通过RSS订阅我们：<a href="https://www.lifeee.top//atom.xml">https://www.lifeee.top//atom.xml</a></p>
+<br />
+
+
+
+<h2 id="推荐阅读"><a href="#推荐阅读" class="headerlink" title="推荐阅读"></a>推荐阅读</h2><ul>
+<li><p><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/XFLTIFRUtr9dkoaxLzckPw">Kotlin 技术月报 | 2025 年 4 月</a>： 2025 年 4 月的 Kotlin 技术月报涵盖了当月 Kotlin 的主要更新和社区动态。关键更新包括引入了模糊测试库 kotlinx.fuzz，帮助开发者更轻松地进行模糊测试；Context Parameters 特性在 Kotlin 2.2.0 版本中以 Beta 形式发布，提升了扩展方法和 DSL 开发的能力；K2 模式在 IntelliJ IDEA 2025.1 中默认启用，带来了性能提升和新语言特性的支持。此外，JetBrains 推出了 Junie 和 AI 助手，为 Kotlin 开发者提供了更智能的编码工具。社区方面，KotlinConf 2025 即将到来，带来了一系列精彩的演讲和活动。</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://m.okjike.com/originalPosts/6811832d070109da492803d3?s=eyJ1IjoiNWVlMGYzMTU4MTY4MTAwMDE3NzVmZDZiIiwiZCI6MX0=&utm_source=wechat_timeline">关于 MCP 的几个理解误区- 即刻App</a>： 文章详细分析了关于 MCP（模型上下文协议）的几个常见误解。首先，MCP 协议并不需要大模型支持，其核心是指导应用层如何更好地补充上下文信息给大模型，即使使用较旧的模型（如 GPT-2）也可以通过 MCP 协议补充上下文信息。其次，文章指出并非只有支持 FunctionCalling 的模型才能使用 MCP 协议，FunctionCalling 是一种交互范式，而 MCP 是对这种机制的包装与升级，不支持 FunctionCalling 的模型也可以通过提示词工程实现类似功能。最后，文章澄清了大模型原生支持 MCP 协议的说法，认为这种说法不准确，因为大模型不可能内化所有基于 MCP 协议定义的工具，尤其是在面对海量且私有的资源时。</p>
+</li>
+</ul>
+<br />
+
+<br />
+
+<h2 id="AI信息"><a href="#AI信息" class="headerlink" title="AI信息"></a>AI信息</h2><h3 id="OpenAI-Codex：程序员的-AI-编程助手，让代码自己写自己"><a href="#OpenAI-Codex：程序员的-AI-编程助手，让代码自己写自己" class="headerlink" title="OpenAI Codex：程序员的 AI 编程助手，让代码自己写自己"></a>OpenAI Codex：程序员的 AI 编程助手，让代码自己写自己</h3><p> OpenAI 开源的 Codex 项目是一个在终端运行的轻量级编码代理，能够将自然语言转化为可执行代码。Codex 的使用非常简单，通过全局安装并设置 OpenAI API 密钥即可使用。它为开发者提供了 ChatGPT 级别的推理能力，支持在版本控制下运行代码、操作文件和迭代。Codex 的特点包括零配置、全自动审批、多模态支持（支持传入截图或图表），并且完全开源。项目地址为 <a target="_blank" rel="noopener" href="https://github.com/openai/codex%EF%BC%8C%E7%94%A8%E6%88%B7%E5%8F%AF%E4%BB%A5%E8%87%AA%E8%A1%8C%E6%9F%A5%E7%9C%8B%E5%92%8C%E5%8F%82%E4%B8%8E%E5%85%B6%E5%8F%91%E5%B1%95%E3%80%82">https://github.com/openai/codex，用户可以自行查看和参与其发展。</a></p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/image-20250508224931682.png"></p>
+<p>开源地址： <a target="_blank" rel="noopener" href="https://github.com/openai/codex">https://github.com/openai/codex</a></p>
+<br />
+
+<h3 id="Babeldoc：沉浸式翻译的-PDF-翻译神器，保持排版且完全免费"><a href="#Babeldoc：沉浸式翻译的-PDF-翻译神器，保持排版且完全免费" class="headerlink" title="Babeldoc：沉浸式翻译的 PDF 翻译神器，保持排版且完全免费"></a>Babeldoc：沉浸式翻译的 PDF 翻译神器，保持排版且完全免费</h3><p>沉浸式翻译推出了一款名为 Babeldoc 的 PDF 翻译工具，它能够保持 PDF 文档的原始排版，并完整提取图表、脚注、公式等非文本元素。该工具通过解析 PDF 结构并记忆布局信息，确保翻译后的内容能够无缝替换原文内容。Babeldoc 提供了免费版和 Pro 会员版两种套餐，免费版用户每月享有 1000 页的 PDF 解析翻译额度，而 Pro 会员则享有每月 10000 页额度，并接入 DeepSeek 高级翻译模型。此外，Babeldoc 项目是开源的，代码已发布在 GitHub 上。</p>
+<p><img data-src="https://camo.githubusercontent.com/d336a8fa681155170445610e232044718443ca990fe6ffbd84221fdca14e4246/68747470733a2f2f732e696d6d6572736976657472616e736c6174652e636f6d2f6173736574732f72322d75706c6f6164732f696d616765732f626162656c646f632d707265766965772e706e67"></p>
+<p>开源地址 ： <a target="_blank" rel="noopener" href="https://github.com/funstory-ai/BabelDOC">https://github.com/funstory-ai/BabelDOC</a></p>
+<br />
+
+<h3 id="AI-浏览器控制与自动化任务神器：Browser-use"><a href="#AI-浏览器控制与自动化任务神器：Browser-use" class="headerlink" title="AI 浏览器控制与自动化任务神器：Browser-use"></a>AI 浏览器控制与自动化任务神器：Browser-use</h3><p><strong>browser-use&#x2F;browser-use</strong> 是一个开源项目，一个旨在让 AI 代理能够控制浏览器、轻松实现在线任务自动化的工具。该项目使用 Python 语言开发，具有强大的功能，包括支持 AI 工具、浏览器自动化以及与 Playwright 等技术的集成。提供了丰富的示例和演示场景，例如添加商品到购物车、处理 LinkedIn 关系、在 Google Docs 中撰写文档等。还详细阐述了项目的愿景、路线图，包括改进智能代理记忆和规划能力、增强 DOM 提取功能、优化用户体验等。它采用 MIT 许可证，非常适合开发者使用和二次开发。目前该项目在 GitHub 上已获得超过 59,000 颗星标和 6,000 多次fork，显示出其在社区中的受欢迎程度。</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/410929479-1440affc-a552-442e-b702-d0d3b277b0ae.gif"></p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/image-20250508231208756.png"></p>
+<p>开源地址：<a target="_blank" rel="noopener" href="https://github.com/browser-use/browser-use">https://github.com/browser-use/browser-use</a></p>
+<p>官网介绍：<a target="_blank" rel="noopener" href="https://browser-use.com/">https://browser-use.com/</a></p>
+<br />
+
+<br />
+
+<h2 id="技术工具"><a href="#技术工具" class="headerlink" title="技术工具"></a>技术工具</h2><h3 id="macOS菜单栏管理工具-—-Ice"><a href="#macOS菜单栏管理工具-—-Ice" class="headerlink" title="macOS菜单栏管理工具 — Ice"></a>macOS菜单栏管理工具 — Ice</h3><p>Ice，这是一个强大的macOS菜单栏管理工具，旨在提供多样化的功能以增强用户体验。它支持隐藏和显示菜单栏项目、自定义菜单栏外观、设置快捷键等。</p>
+<p> <img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/373391340-4423085c-4e4b-4f3d-ad0f-90a217c03470.png"></p>
+<p>开源地址： <a target="_blank" rel="noopener" href="https://github.com/jordanbaird/Ice">https://github.com/jordanbaird/Ice</a></p>
+<br />
+
+<h3 id="提升微信公众号阅读新体验：“公众号阅读增强器”-让长文阅读更轻松"><a href="#提升微信公众号阅读新体验：“公众号阅读增强器”-让长文阅读更轻松" class="headerlink" title="提升微信公众号阅读新体验：“公众号阅读增强器” 让长文阅读更轻松"></a>提升微信公众号阅读新体验：“公众号阅读增强器” 让长文阅读更轻松</h3><p>“公众号阅读增强器”是一款专为提升微信公众号阅读体验而设计的浏览器扩展工具。该工具具备智能目录导航功能，可自动提取文章标题生成结构化目录，方便用户快速跳转和掌握文章脉络；图片查看增强功能允许用户点击放大查看文章中的任意图片，享受高清细节；阅读位置追踪功能则会在目录中高亮显示当前阅读位置，避免用户在长文中迷失 。</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/image-20250508224117120.png"></p>
+<p>开源地址：<a target="_blank" rel="noopener" href="https://github.com/someone1128/WeChatReaderEnhancer">https://github.com/someone1128/WeChatReaderEnhancer</a></p>
+<p>安装地址： <a target="_blank" rel="noopener" href="https://wxreader.browserplus.store/">https://wxreader.browserplus.store/</a></p>
+<br />
+
+<h3 id="腾讯-Kuikly-开源：基于-Kotlin-的全平台框架"><a href="#腾讯-Kuikly-开源：基于-Kotlin-的全平台框架" class="headerlink" title="腾讯 Kuikly 开源：基于 Kotlin 的全平台框架"></a>腾讯 Kuikly 开源：基于 Kotlin 的全平台框架</h3><p>Kuikly 是一个基于 Kotlin Multiplatform 的全平台框架，支持 Android、iOS、鸿蒙、Web 和小程序等多种平台。它通过自研 DSL 实现 UI 构建，利用 “薄原生层” 技术确保多端 UI 一致性，同时提供高性能的逻辑共享和动态化能力。Kuikly 的核心优势在于接近原生的性能体验和开发体验，同时支持动态化能力。目前，Kuikly 已在 QQ、QQ 音乐、腾讯新闻等多款产品中使用。</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/image-20250508230117292.png"></p>
+<p>开源地址：<a target="_blank" rel="noopener" href="https://github.com/Tencent-TDS/KuiklyUI/">https://github.com/Tencent-TDS/KuiklyUI/</a></p>
+<p>官网：<a target="_blank" rel="noopener" href="https://framework.tds.qq.com/">https://framework.tds.qq.com/</a></p>
+<br />
+
+<h3 id="BilldDesk：开源免费的远程桌面控制工具，支持多平台和私有化部署"><a href="#BilldDesk：开源免费的远程桌面控制工具，支持多平台和私有化部署" class="headerlink" title="BilldDesk：开源免费的远程桌面控制工具，支持多平台和私有化部署"></a>BilldDesk：开源免费的远程桌面控制工具，支持多平台和私有化部署</h3><p>BilldDesk 是一个开源的远程桌面控制项目，基于 Vue3、WebRTC、Nodejs 和 Electron 等技术搭建。它实现了类似 ToDesk、向日葵等远程桌面的功能，但完全免费且无连接次数、画质等限制。该项目支持多平台，包括 Windows、macOS、Linux 和 Android，提供了丰富的功能，如多设备同时远程控制、多屏操作、文件传输、屏幕墙、按键组合键等。此外，BilldDesk 还支持私有化部署，用户可以根据自己的需求进行二次开发。</p>
+<p><img data-src="https://github.com/galaxy-s10/billd-desk/raw/main/src/assets/readme_img/111.png?raw=true"></p>
+<p><img data-src="https://github.com/galaxy-s10/billd-desk/raw/main/src/assets/readme_img/222.png?raw=true"></p>
+<p>开源地址：<a target="_blank" rel="noopener" href="https://github.com/galaxy-s10/billd-desk">https://github.com/galaxy-s10/billd-desk</a></p>
+<br />
+
+<br />
+
+<h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>百闻不如一见，百见不如一试。</p>
+<p>🎉 本文同步更新于  <a href="https://www.lifeee.top/">https://www.lifeee.top</a></p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>请我一杯咖啡吧！</div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/wechatpay.png" alt="热夏 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="/images/alipay.jpg" alt="热夏 支付宝">
+        <span>支付宝</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>热夏
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://www.lifeee.top/posts/8308.html" title="网上冲浪周刊第91期">https://www.lifeee.top/posts/8308.html</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="followme">
+  <span>欢迎关注我的其它发布渠道</span>
+
+  <div class="social-list">
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="/atom.xml">
+            <span class="icon">
+              <i class="fa fa-rss"></i>
+            </span>
+
+            <span class="label">RSS</span>
+          </a>
+      </div>
+  </div>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/%E5%86%B2%E6%B5%AA/" rel="tag"><i class="fa fa-tag"></i> 冲浪</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/posts/32843.html" rel="prev" title="网上冲浪周刊第89期">
+                  <i class="fa fa-angle-left"></i> 网上冲浪周刊第89期
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments gitalk-container"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 2018 – 
+    <span itemprop="copyrightYear">2025</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">热夏</span>
+  </div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>站点总字数：</span>
+    <span title="站点总字数">736k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">11:09</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/next-theme-pjax/0.6.0/pjax.min.js" integrity="sha256-vxLn1tSKWD4dqbMRyv940UYw4sXgMtYcK6reefzZrao=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lozad.js/1.16.0/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script><script src="/js/pjax.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+  <script src="/js/third-party/pace.js"></script>
+
+
+  
+  <script data-pjax async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","mhchem":false,"js":{"url":"//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
+
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"upwon","repo":"upwon.github.io","client_id":"7e047047ecee7317452b","client_secret":"c60fbdf0eb19e7264e33ab780319e4d420a58fee","admin_user":"upwon","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":null,"js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"01c4181c72f0213b5346975b93f3b212"}</script>
+<script src="/js/third-party/comments/gitalk.js"></script>
+
+
+  <script type="text/javascript" src="/js/clicklove.js"></script>
+   
+ 
+
+</body>
+</html>
