@@ -6,7 +6,7 @@
   <link href="https://www.lifeee.top/atom.xml" rel="self"/>
   
   <link href="https://www.lifeee.top/"/>
-  <updated>2025-05-10T10:23:30.685Z</updated>
+  <updated>2025-05-28T13:09:07.557Z</updated>
   <id>https://www.lifeee.top/</id>
   
   <author>
@@ -17,11 +17,31 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>网上冲浪周刊第92期</title>
+    <link href="https://www.lifeee.top/posts/25716.html"/>
+    <id>https://www.lifeee.top/posts/25716.html</id>
+    <published>2025-05-28T13:05:24.000Z</published>
+    <updated>2025-05-28T13:09:07.557Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;strong&gt;欢迎阅读本期技术资讯！为您精选前沿工具：&lt;/strong&gt;专注隐私的开源浏览器助手&lt;strong&gt;BrowserBee&lt;/strong&gt; （支持自然语言控制与LLM指令解析，集成Playwright实现30+自动化操作，支持多模型服务商并自带记忆功能）；零成本AI数字人生成工具&lt;strong&gt;HeyGem&lt;/strong&gt; （1000美元级外貌语音克隆，离线运行保护隐私，支持文本&amp;#x2F;语音驱动虚拟形象及8语言适配）；Netflix级视频翻译神器&lt;strong&gt;VideoLingo&lt;/strong&gt; （WhisperX精准字幕识别，多引擎配音与术语库自定义，CUDA加速本地部署）。此外，推荐程序员转型指南&lt;strong&gt;developer2gwy&lt;/strong&gt; （体制内备考全流程解析，含薪资晋升第一手经验）；Cursor账号管理工具&lt;strong&gt;cursor-free-everyday&lt;/strong&gt; （自动重置额度规避机器码限制）；程序员情绪哲学书《&lt;strong&gt;自洽的程序员&lt;/strong&gt; 》（焦虑倦怠应对指南，构建职场心力模型）；全能VPS重装脚本&lt;strong&gt;reinstall&lt;/strong&gt; （支持Linux&amp;#x2F;Windows双向互刷，适配ARM低配服务器，官方源直供无风险）。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/pexels-atlantic-photovalv-23247576.jpg&quot; alt=&quot;https://www.pexels.com/zh-cn/photo/23247576/&quot;&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="冲浪" scheme="https://www.lifeee.top/categories/%E5%86%B2%E6%B5%AA/"/>
+    
+    
+    <category term="冲浪" scheme="https://www.lifeee.top/tags/%E5%86%B2%E6%B5%AA/"/>
+    
+  </entry>
+  
+  <entry>
     <title>网上冲浪周刊第91期</title>
     <link href="https://www.lifeee.top/posts/8308.html"/>
     <id>https://www.lifeee.top/posts/8308.html</id>
     <published>2025-05-10T10:22:51.000Z</published>
-    <updated>2025-05-10T10:23:30.685Z</updated>
+    <updated>2025-05-28T13:06:01.928Z</updated>
     
     
     <summary type="html">&lt;p&gt;欢迎阅读本期技术资讯！我们为您带来一系列前沿工具与解决方案：OpenAI推出的&lt;strong&gt;Codex&lt;/strong&gt;（终端轻量级编码代理，支持自然语言转代码与多模态输入，实现ChatGPT级推理能力）；沉浸式翻译的&lt;strong&gt;Babeldoc&lt;/strong&gt;（精准保持PDF排版与图表公式解析，免费版每月千页翻译额度，Pro版集成DeepSeek高级模型）；浏览器自动化神器&lt;strong&gt;Browser-use&lt;/strong&gt;（Python开发，支持Playwright集成，轻松完成购物车添加、LinkedIn关系处理等任务，GitHub星标超59,000）。此外，还推荐macOS菜单栏管理工具&lt;strong&gt;Ice&lt;/strong&gt;（自定义隐藏与显示项目，优化工作区布局）；提升微信公众号长文阅读体验的&lt;strong&gt;公众号阅读增强器&lt;/strong&gt;（智能目录导航、图片放大与实时位置追踪）；腾讯开源的&lt;strong&gt;Kuikly&lt;/strong&gt;（基于Kotlin的全平台框架，实现多端UI一致性，已应用于QQ、QQ音乐等产品）；以及开源免费的远程控制工具&lt;strong&gt;BilldDesk&lt;/strong&gt;（支持多平台、多屏操作与私有化部署，无连接限制，媲美商业软件功能）。&lt;/p&gt;
@@ -29,9 +49,7 @@
     
     
     
-    <category term="数学" scheme="https://www.lifeee.top/categories/%E6%95%B0%E5%AD%A6/"/>
-    
-    <category term="冲浪佳软" scheme="https://www.lifeee.top/categories/%E5%86%B2%E6%B5%AA%E4%BD%B3%E8%BD%AF/"/>
+    <category term="冲浪" scheme="https://www.lifeee.top/categories/%E5%86%B2%E6%B5%AA/"/>
     
     
     <category term="冲浪" scheme="https://www.lifeee.top/tags/%E5%86%B2%E6%B5%AA/"/>
@@ -43,7 +61,7 @@
     <link href="https://www.lifeee.top/posts/32843.html"/>
     <id>https://www.lifeee.top/posts/32843.html</id>
     <published>2025-04-19T07:48:40.000Z</published>
-    <updated>2025-04-19T07:51:27.812Z</updated>
+    <updated>2025-05-28T13:06:08.001Z</updated>
     
     
     <summary type="html">&lt;p&gt;欢迎阅读本期技术资讯！我们为您带来一系列实用工具与资源：专为闲鱼平台打造的&lt;strong&gt;智能闲鱼客服机器人系统&lt;/strong&gt;（支持7×24小时自动化值守、多专家协同议价与上下文对话，未来将强化情感分析与市场比价功能）；低代码自动化神器&lt;strong&gt;n8n&lt;/strong&gt;（集成400+预建API连接器，支持AI功能嵌入与自定义工作流，拥有超1亿次Docker拉取量）；Google重磅发布的&lt;strong&gt;生成式AI提示词工程指南&lt;/strong&gt;（详解零样本提示、思维链推理与ReAct方法，提供高效生产级AI应用方案）；以及展现创意边界的&lt;strong&gt;GPT-4o图像精选集&lt;/strong&gt;（收录46个跨模态艺术案例，涵盖立体相框设计、复古海报生成等多元场景）。此外，还推荐程序员健康指南&lt;strong&gt;HowToLiveLonger&lt;/strong&gt;（从饮食运动到心理调节的全方位延寿建议），以及语言学习者的全能工具&lt;strong&gt;LLPlayer&lt;/strong&gt;（支持134种语言实时翻译、OCR字幕提取与AI生成双语字幕，深度集成DeepL&amp;#x2F;Google翻译API）。  &lt;/p&gt;
@@ -51,9 +69,7 @@
     
     
     
-    <category term="数学" scheme="https://www.lifeee.top/categories/%E6%95%B0%E5%AD%A6/"/>
-    
-    <category term="冲浪佳软" scheme="https://www.lifeee.top/categories/%E5%86%B2%E6%B5%AA%E4%BD%B3%E8%BD%AF/"/>
+    <category term="冲浪" scheme="https://www.lifeee.top/categories/%E5%86%B2%E6%B5%AA/"/>
     
     
     <category term="冲浪" scheme="https://www.lifeee.top/tags/%E5%86%B2%E6%B5%AA/"/>
@@ -390,26 +406,6 @@
     
     <summary type="html">&lt;p&gt;欢迎阅读本期技术资讯！我们为您推荐了一些有趣的工具，如开源剪切板管理器EcoPaste 、开源多端图像托管平台管理工具 PicList  、Notion的离线替代品Eidos。此外，还介绍了 Windows 开源沙盒软件 Sandboxie Plus以及开源产品图标库 QingIcon。&lt;/p&gt;
 &lt;p&gt; &lt;img src=&quot;https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/202408022300536.jpg&quot; alt=&quot;https://www.pexels.com/zh-cn/photo/21760959/&quot;&gt;&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="冲浪" scheme="https://www.lifeee.top/categories/%E5%86%B2%E6%B5%AA/"/>
-    
-    
-    <category term="冲浪" scheme="https://www.lifeee.top/tags/%E5%86%B2%E6%B5%AA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>网上冲浪周刊第51期</title>
-    <link href="https://www.lifeee.top/posts/49675.html"/>
-    <id>https://www.lifeee.top/posts/49675.html</id>
-    <published>2024-07-19T14:17:45.000Z</published>
-    <updated>2024-08-02T15:17:30.928Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;欢迎阅读本期技术资讯！我们为您推荐了一些有趣的工具，如Rodel Downloader AI模型下载工具、Apache Superset 数据可视化平台 、Ladybird - 一个真正独立的Web浏览器。此外，还介绍了在VSCode里离线使用语雀编辑器 以及优化React性能的一个虚拟DOM。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/202407172208096.jpg&quot; alt=&quot;https://www.pexels.com/zh-cn/photo/19074550/&quot;&gt;&lt;/p&gt;</summary>
     
     
     
