@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/myapple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/myfavicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/myfavicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/myapple-touch-icon-next.png" color="#222">
+  <meta name="google-site-verification" content="google2fc64c2b92961282.html">
+  <meta name="baidu-site-verification" content="s6BwSjIZYB">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.loli.net/css?family='LXGW+WenKai+LITE':300,300italic,400,400italic,700,700italic%7C'LXGW+WenKai+Screen':300,300italic,400,400italic,700,700italic%7C'LXGW+WenKai':300,300italic,400,400italic,700,700italic%7C'Noto+Serif+SC':300,300italic,400,400italic,700,700italic%7C'EB+Garamond':300,300italic,400,400italic,700,700italic%7C'PingFang+SC':300,300italic,400,400italic,700,700italic%7C'Microsoft+YaHei':300,300italic,400,400italic,700,700italic%7C'sans-serif':300,300italic,400,400italic,700,700italic%7CMa+Shan+Zheng:300,300italic,400,400italic,700,700italic%7CLXGW+WenKai+Screen:300,300italic,400,400italic,700,700italic%7CLXGW+WenKai:300,300italic,400,400italic,700,700italic%7CMenlo:300,300italic,400,400italic,700,700italic%7CMonaco:300,300italic,400,400italic,700,700italic%7CConsolas:300,300italic,400,400italic,700,700italic%7CSource+Code+Pro:300,300italic,400,400italic,700,700italic%7Csystem-ui:300,300italic,400,400italic,700,700italic%7Cmonospace:300,300italic,400,400italic,700,700italic%7Csans-serif:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha256-yIDrPSXHZdOZhAqiBP7CKzIwMQmRCJ8UeB8Jo17YC4o=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/themes/blue/pace-theme-minimal.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"www.lifeee.top","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.19.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"mac","show_result":true},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="欢迎阅读本期技术资讯！为您精选前沿工具与解决方案：AI浏览器接管工具Chrome MCP Server （复用Chrome登录态+原生API，纯本地运行保障隐私，响应更快）；技术文章聚合平台BestBlogs （GPT-4o摘要评分，每周推送精选内容+多维RSS订阅，基于Dify Workflow智能分析）；字节多智能体框架DeerFlow （LLM+搜索+代码执行一体化，支持RAG私有知识库，学">
+<meta property="og:type" content="article">
+<meta property="og:title" content="网上冲浪周刊第93期">
+<meta property="og:url" content="https://www.lifeee.top/posts/39029.html">
+<meta property="og:site_name" content="热夏的博客">
+<meta property="og:description" content="欢迎阅读本期技术资讯！为您精选前沿工具与解决方案：AI浏览器接管工具Chrome MCP Server （复用Chrome登录态+原生API，纯本地运行保障隐私，响应更快）；技术文章聚合平台BestBlogs （GPT-4o摘要评分，每周推送精选内容+多维RSS订阅，基于Dify Workflow智能分析）；字节多智能体框架DeerFlow （LLM+搜索+代码执行一体化，支持RAG私有知识库，学">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/pexels-jordi-de-smedt-765443169-18781953.jpg">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/image-20250624225406333.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/image-20250624225443438.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/image-20250624224609441.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/image-20250624223645293.png">
+<meta property="og:image" content="https://private-user-images.githubusercontent.com/42989099/439764483-95af22fa-7760-4f7b-9c20-51fdcfe8f4ea.jpeg?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTA2OTIwODEsIm5iZiI6MTc1MDY5MTc4MSwicGF0aCI6Ii80Mjk4OTA5OS80Mzk3NjQ0ODMtOTVhZjIyZmEtNzc2MC00ZjdiLTljMjAtNTFmZGNmZThmNGVhLmpwZWc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwNjIzJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDYyM1QxNTE2MjFaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT0zZTE0OTNlMzk2OTg2MjY0NGNlMzlmMGNhNzQxMmQ4MTNkN2ZkZTE4NDI2MWI4ZjJkYmFjN2E5NmQ3ODA5MmZjJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.1GIPdG7RUX9YGMzbeG5BTjE8AfpOl7wC9xbZr9jfoaM">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/image-20250624222801307.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/image-20250624223526263.png">
+<meta property="article:published_time" content="2025-06-24T15:13:45.000Z">
+<meta property="article:modified_time" content="2025-06-24T15:14:52.381Z">
+<meta property="article:author" content="热夏">
+<meta property="article:tag" content="冲浪">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/pexels-jordi-de-smedt-765443169-18781953.jpg">
+
+
+<link rel="canonical" href="https://www.lifeee.top/posts/39029.html">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://www.lifeee.top/posts/39029.html","path":"posts/39029.html","title":"网上冲浪周刊第93期"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>网上冲浪周刊第93期 | 热夏的博客</title>
+  
+
+
+
+
+
+
+
+<link href="https://fonts.loli.net/css?family=Noto+Serif+SC:400,500,700&display=swap&subset=chinese-simplified" rel="stylesheet">
+<link rel="stylesheet" href="https://npm.elemecdn.com/lxgw-wenkai-screen-webfont@1.7.0/style.css" />
+
+<link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&display=swap" rel="stylesheet">
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="热夏的博客" type="application/atom+xml">
+<style>.darkmode--activated{--body-bg-color:#282828;--content-bg-color:#333;--card-bg-color:#555;--text-color:#ccc;--blockquote-color:#bbb;--link-color:#ccc;--link-hover-color:#eee;--brand-color:#ddd;--brand-hover-color:#ddd;--table-row-odd-bg-color:#282828;--table-row-hover-bg-color:#363636;--menu-item-bg-color:#555;--btn-default-bg:#222;--btn-default-color:#ccc;--btn-default-border-color:#555;--btn-default-hover-bg:#666;--btn-default-hover-color:#ccc;--btn-default-hover-border-color:#666;--highlight-background:#282b2e;--highlight-foreground:#a9b7c6;--highlight-gutter-background:#34393d;--highlight-gutter-foreground:#9ca9b6}.darkmode--activated img{opacity:.75}.darkmode--activated img:hover{opacity:.9}.darkmode--activated code{color:#69dbdc;background:0 0}button.darkmode-toggle{z-index:9999}.darkmode-ignore,img{display:flex!important}.beian img{display:inline-block!important}</style></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">热夏的博客</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-heart fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#AI%E4%BF%A1%E6%81%AF"><span class="nav-number">1.</span> <span class="nav-text">AI信息</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Chrome-MCP-Server%EF%BC%9A%E8%AE%A9-AI-%E6%8E%A5%E7%AE%A1%E4%BD%A0%E7%9A%84-Chrome-%E6%B5%8F%E8%A7%88%E5%99%A8"><span class="nav-number">1.1.</span> <span class="nav-text">Chrome MCP Server：让 AI 接管你的 Chrome 浏览器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#BestBlogs-%E6%B1%87%E9%9B%86%E9%A1%B6%E7%BA%A7%E7%BC%96%E7%A8%8B%E3%80%81%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E3%80%81%E4%BA%A7%E5%93%81%E3%80%81%E7%A7%91%E6%8A%80%E6%96%87%E7%AB%A0%EF%BC%8C%E5%A4%A7%E8%AF%AD%E8%A8%80%E6%A8%A1%E5%9E%8B%E6%91%98%E8%A6%81%E8%AF%84%E5%88%86%E8%BE%85%E5%8A%A9%E9%98%85%E8%AF%BB%EF%BC%8C%E6%8E%A2%E7%B4%A2%E7%BC%96%E7%A8%8B%E5%92%8C%E6%8A%80%E6%9C%AF%E6%9C%AA%E6%9D%A5"><span class="nav-number">1.2.</span> <span class="nav-text">BestBlogs - 汇集顶级编程、人工智能、产品、科技文章，大语言模型摘要评分辅助阅读，探索编程和技术未来</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DeerFlow%EF%BC%9A%E5%9F%BA%E4%BA%8E%E5%A4%9A%E6%99%BA%E8%83%BD%E4%BD%93%E7%B3%BB%E7%BB%9F%E7%9A%84%E5%BC%80%E6%BA%90%E6%B7%B1%E5%BA%A6%E7%A0%94%E7%A9%B6%E6%A1%86%E6%9E%B6"><span class="nav-number">1.3.</span> <span class="nav-text">DeerFlow：基于多智能体系统的开源深度研究框架</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8A%80%E6%9C%AF%E5%B7%A5%E5%85%B7"><span class="nav-number">2.</span> <span class="nav-text">技术工具</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Nginx-UI%EF%BC%9A%E4%BE%BF%E6%8D%B7%E7%AE%A1%E7%90%86-Nginx-%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84-Web-%E7%95%8C%E9%9D%A2%E5%B7%A5%E5%85%B7"><span class="nav-number">2.1.</span> <span class="nav-text">Nginx UI：便捷管理 Nginx 服务器的 Web 界面工具</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#FileBrowser-Quantum-%E8%87%AA%E6%89%98%E7%AE%A1web%E6%96%87%E4%BB%B6%E6%B5%8F%E8%A7%88%E5%99%A8"><span class="nav-number">2.2.</span> <span class="nav-text">FileBrowser Quantum - 自托管web文件浏览器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#BeddyStories-%E4%B8%AD%E6%96%87%E7%9D%A1%E5%89%8D%E6%95%85%E4%BA%8B%E4%B8%8E%E7%9F%AD%E7%AF%87%E6%96%87%E5%AD%A6%E3%80%82"><span class="nav-number">2.3.</span> <span class="nav-text">BeddyStories - 中文睡前故事与短篇文学。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ChinaTextbook%EF%BC%9A%E5%BC%80%E6%BA%90%E5%9B%BD%E5%86%85%E4%B9%89%E5%8A%A1%E6%95%99%E8%82%B2%E6%95%99%E7%A7%91%E4%B9%A6%E8%B5%84%E6%BA%90"><span class="nav-number">2.4.</span> <span class="nav-text">ChinaTextbook：开源国内义务教育教科书资源</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%8E%E8%AE%B0"><span class="nav-number">3.</span> <span class="nav-text">后记</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="热夏"
+      src="/images/head.jpg">
+  <p class="site-author-name" itemprop="name">热夏</p>
+  <div class="site-description" itemprop="description">空山新雨后，天气晚来秋。</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">112</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">42</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/upwon" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;upwon" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:w1244753906@gmail.com" title="E-Mail → mailto:w1244753906@gmail.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.lifeee.top//atom.xml" title="RSS → https:&#x2F;&#x2F;www.lifeee.top&#x2F;&#x2F;atom.xml" rel="noopener me"><i class="fa fa-rss fa-fw"></i>RSS</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+        <div class="pjax">
+        </div>
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.lifeee.top/posts/39029.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/head.jpg">
+      <meta itemprop="name" content="热夏">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="热夏的博客">
+      <meta itemprop="description" content="空山新雨后，天气晚来秋。">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="网上冲浪周刊第93期 | 热夏的博客">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          网上冲浪周刊第93期
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2025-06-24 23:13:45 / 修改时间：23:14:52" itemprop="dateCreated datePublished" datetime="2025-06-24T23:13:45+08:00">2025-06-24</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%86%B2%E6%B5%AA/" itemprop="url" rel="index"><span itemprop="name">冲浪</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>3.1k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>3 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p><strong>欢迎阅读本期技术资讯！为您精选前沿工具与解决方案：</strong>AI浏览器接管工具<strong>Chrome MCP Server</strong> （复用Chrome登录态+原生API，纯本地运行保障隐私，响应更快）；技术文章聚合平台<strong>BestBlogs</strong> （GPT-4o摘要评分，每周推送精选内容+多维RSS订阅，基于Dify Workflow智能分析）；字节多智能体框架<strong>DeerFlow</strong> （LLM+搜索+代码执行一体化，支持RAG私有知识库，学术研究到报告生成全流程，兼容FaaS一键部署）。此外推荐：<strong>Nginx UI</strong> （可视化配置编辑&#x2F;证书续期&#x2F;集群管理，集成ChatGPT助手+LLM代码补全）；<strong>FileBrowser Quantum</strong> （轻量级文件管理，多源支持&#x2F;权限分级，高效索引+极简三组件UI）；<br><strong>BeddyStories</strong> （中文亲子故事库适配全龄段，响应式设计优化阅读体验）；<strong>ChinaTextbook</strong> （开源国内K12数学教材，配套文件拆分合并工具适配多网络环境）。</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/pexels-jordi-de-smedt-765443169-18781953.jpg" alt="https://www.pexels.com/zh-cn/photo/18781953/"></p>
+<span id="more"></span>
+
+<br />
+
+<p>欢迎来到第93期 , 期待您通过RSS订阅我们：<a href="https://www.lifeee.top//atom.xml">https://www.lifeee.top//atom.xml</a></p>
+<br />
+
+<br />
+
+<h2 id="AI信息"><a href="#AI信息" class="headerlink" title="AI信息"></a>AI信息</h2><h3 id="Chrome-MCP-Server：让-AI-接管你的-Chrome-浏览器"><a href="#Chrome-MCP-Server：让-AI-接管你的-Chrome-浏览器" class="headerlink" title="Chrome MCP Server：让 AI 接管你的 Chrome 浏览器"></a>Chrome MCP Server：让 AI 接管你的 Chrome 浏览器</h3><p>Chrome MCP Server 是一个基于 Chrome 插件的MCP，旨在将 Chrome 浏览器转化为 AI 驱动的自动化工具。它直接利用用户日常使用的 Chrome 环境（含配置、登录态），通过 MCP 协议与 Claude 等大模型或 Chatbot 联动，实现复杂的浏览器自动化任务。</p>
+<p>核心特性包括：与模型无关、复用用户浏览器环境、纯本地运行保障隐私、支持 Streamable HTTP 连接及跨标签页上下文管理。相比基于 Playwright 的方案，其优势在于无需独立进程、自动复用登录态、全访问 Chrome 原生 API 及更快响应速度。</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/image-20250624225406333.png"></p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/image-20250624225443438.png"></p>
+<p>开源地址： <a target="_blank" rel="noopener" href="https://github.com/hangwin/mcp-chrome">https://github.com/hangwin/mcp-chrome</a></p>
+<p>中文介绍：<a target="_blank" rel="noopener" href="https://github.com/hangwin/mcp-chrome/blob/master/README_zh.md">https://github.com/hangwin/mcp-chrome/blob/master/README_zh.md</a></p>
+<br />
+
+
+
+
+
+<h3 id="BestBlogs-汇集顶级编程、人工智能、产品、科技文章，大语言模型摘要评分辅助阅读，探索编程和技术未来"><a href="#BestBlogs-汇集顶级编程、人工智能、产品、科技文章，大语言模型摘要评分辅助阅读，探索编程和技术未来" class="headerlink" title="BestBlogs - 汇集顶级编程、人工智能、产品、科技文章，大语言模型摘要评分辅助阅读，探索编程和技术未来"></a>BestBlogs - 汇集顶级编程、人工智能、产品、科技文章，大语言模型摘要评分辅助阅读，探索编程和技术未来</h3><p>BestBlogs 致力于为用户汇聚来自顶级技术公司和社区的编程、人工智能、产品设计、商业科技及个人成长领域的优质文章。该平台借助先进语言模型，对文章进行摘要、评分和翻译，以节省用户阅读时间，并且深知数据筛选的重要性，力求呈现高质量精选内容。用户可通过订阅功能，在每周五接收本周最新精选推送，及时掌握人工智能开发技术动态和行业前沿资讯。此外，平台还提供了灵活的 RSS 订阅功能，涵盖全站订阅、精选文章订阅、特定类别文章订阅等多种方式，并对订阅源进行严格筛选和管理。在实现原理上，BestBlogs.dev 基于 Dify Workflow 的文章智能分析实践，涵盖文章爬取、初评、分析以及分析结果翻译等流程，运用大语言模型如 GPT-4o 等技术，从文章正文提取到摘要、分类、评分生成，再到翻译优化，确保用户能高效便捷地获取有价值的技术信息。</p>
+<p>开源地址： <a target="_blank" rel="noopener" href="https://github.com/ginobefun/BestBlogs">https://github.com/ginobefun/BestBlogs</a></p>
+<br />
+
+
+
+<h3 id="DeerFlow：基于多智能体系统的开源深度研究框架"><a href="#DeerFlow：基于多智能体系统的开源深度研究框架" class="headerlink" title="DeerFlow：基于多智能体系统的开源深度研究框架"></a>DeerFlow：基于多智能体系统的开源深度研究框架</h3><p> DeerFlow是一个由字节跳动开发的开源深度研究框架，旨在通过结合语言模型、搜索工具和代码执行功能，为用户提供强大的研究支持。它支持多种搜索引擎（如Tavily、Brave Search等）和语言模型（如Qwen、OpenAI兼容API），并集成了RAG技术以处理私有知识库。DeerFlow采用多智能体系统架构，包含协调器、规划器、研究人员、编码员和报告生成器等模块，能够自动化地完成从研究计划到最终报告的全流程。此外，它还提供文本转语音、播客生成和PPT制作等功能，适用于学术研究、数据分析和技术文档撰写等多种场景。DeerFlow已集成到火山引擎FaaS平台，支持一键部署，适合开发者和研究人员使用。</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/image-20250624224609441.png"></p>
+<p>官网：<a target="_blank" rel="noopener" href="https://deerflow.tech/">https://deerflow.tech/</a></p>
+<p>演示视频：<a target="_blank" rel="noopener" href="https://github.com/bytedance/deer-flow/blob/main/README_zh.md">https://github.com/bytedance/deer-flow/blob/main/README_zh.md</a></p>
+<p>开源地址： <a target="_blank" rel="noopener" href="https://github.com/bytedance/deer-flow/">https://github.com/bytedance/deer-flow/</a></p>
+<br />
+
+<h2 id="技术工具"><a href="#技术工具" class="headerlink" title="技术工具"></a>技术工具</h2><h3 id="Nginx-UI：便捷管理-Nginx-服务器的-Web-界面工具"><a href="#Nginx-UI：便捷管理-Nginx-服务器的-Web-界面工具" class="headerlink" title="Nginx UI：便捷管理 Nginx 服务器的 Web 界面工具"></a>Nginx UI：便捷管理 Nginx 服务器的 Web 界面工具</h3><p>Nginx UI 是一款 Nginx Web 界面工具，旨在为用户提供了一个直观、便捷的 Nginx 管理平台。该项目提供了丰富的功能，包括但不限于：在线统计服务器指标（如 CPU 使用率、内存使用率等）、自动备份配置文件并支持版本对比与恢复、管理集群并支持多节点镜像操作、导出加密的 Nginx&#x2F;UI 配置以便快速部署、集成增强型在线 ChatGPT 助手、支持 MCP 协议便于 AI 代理交互、一键部署和自动续期 Let’s Encrypt 证书、在线编辑网站配置并配备自研的 NgxConfigEditor 或支持 LLM 代码补全及语法高亮的 Ace Code Editor、查看 Nginx 日志、内建 Web 终端以及支持暗黑模式和响应式设计等。</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/image-20250624223645293.png"></p>
+<p>开源地址：  <a target="_blank" rel="noopener" href="https://github.com/0xJacky/nginx-ui">https://github.com/0xJacky/nginx-ui</a></p>
+<br />
+
+<h3 id="FileBrowser-Quantum-自托管web文件浏览器"><a href="#FileBrowser-Quantum-自托管web文件浏览器" class="headerlink" title="FileBrowser Quantum - 自托管web文件浏览器"></a>FileBrowser Quantum - 自托管web文件浏览器</h3><p><strong>FileBrowser Quantum</strong> 是对原始 FileBrowser 项目的重大改进版本，它提供便捷的文件访问与管理方式，具备网页界面，可创建安全共享链接、设置用户特定权限，为多种文件类型提供良好查看体验。其以 “Quantum” 命名，因将大量高级功能集成于小巧易运行的文件，且安装和配置简便。相比原项目，它有诸多改变，如支持多源、多种登录方式、改进 UI、简化配置、实现超高效索引与实时更新等，同时也移除了部分功能。它还拥有简单的三组件导航 UI 系统。在安装、配置、命令行、API 使用、Office 文件支持及迁移等方面，均有相应的 Wiki 文档供参考。通过对比图可看出，它在文件系统支持、操作系统兼容性、自托管等多方面有独特表现，在功能上与其他同类应用各有优劣。</p>
+<p><img data-src="https://private-user-images.githubusercontent.com/42989099/439764483-95af22fa-7760-4f7b-9c20-51fdcfe8f4ea.jpeg?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTA2OTIwODEsIm5iZiI6MTc1MDY5MTc4MSwicGF0aCI6Ii80Mjk4OTA5OS80Mzk3NjQ0ODMtOTVhZjIyZmEtNzc2MC00ZjdiLTljMjAtNTFmZGNmZThmNGVhLmpwZWc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwNjIzJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDYyM1QxNTE2MjFaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT0zZTE0OTNlMzk2OTg2MjY0NGNlMzlmMGNhNzQxMmQ4MTNkN2ZkZTE4NDI2MWI4ZjJkYmFjN2E5NmQ3ODA5MmZjJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.1GIPdG7RUX9YGMzbeG5BTjE8AfpOl7wC9xbZr9jfoaM"></p>
+<p>开源地址： <a target="_blank" rel="noopener" href="https://github.com/gtsteffaniak/filebrowser">https://github.com/gtsteffaniak/filebrowser</a></p>
+<br />
+
+<h3 id="BeddyStories-中文睡前故事与短篇文学。"><a href="#BeddyStories-中文睡前故事与短篇文学。" class="headerlink" title="BeddyStories - 中文睡前故事与短篇文学。"></a>BeddyStories - 中文睡前故事与短篇文学。</h3><p><strong>BeddyStories</strong> 是一个专注于中文用户的在线平台，致力于提供高质量的短篇故事和睡前故事。网站内容适合各个年龄段的读者，尤其是儿童和家长。通过生动有趣的故事内容，网站希望帮助孩子们培养阅读兴趣，同时为家长提供优质的亲子阅读资源。此外，网站设计简洁友好，支持多种设备访问，方便用户随时随地享受阅读乐趣。</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/image-20250624222801307.png"></p>
+<p>在线地址： <a target="_blank" rel="noopener" href="https://beddystories.com/zh/">https://beddystories.com/zh/</a></p>
+<br />
+
+<h3 id="ChinaTextbook：开源国内义务教育教科书资源"><a href="#ChinaTextbook：开源国内义务教育教科书资源" class="headerlink" title="ChinaTextbook：开源国内义务教育教科书资源"></a>ChinaTextbook：开源国内义务教育教科书资源</h3><p>该项目开源分享中国小学、初中、高中及大学数学教材资源，解决教育资源获取受限问题。因 GitHub 文件上传限制（超过 50MB 需拆分），项目提供 Windows 系统文件合并工具及操作指南（下载程序至同目录双击即可合并）。同时，针对不同地区用户建议替代下载方式（内地推荐开源工具 tchMaterial-parser，国外建议从存储库签出）</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/image-20250624223526263.png"></p>
+<p>开源地址： <a target="_blank" rel="noopener" href="https://github.com/TapXWorld/ChinaTextbook">https://github.com/TapXWorld/ChinaTextbook</a></p>
+<br />
+
+<br />
+
+<h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>百闻不如一见，百见不如一试。</p>
+<p>🎉 本文同步更新于  <a href="https://www.lifeee.top/">https://www.lifeee.top</a></p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>请我一杯咖啡吧！</div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/wechatpay.png" alt="热夏 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="/images/alipay.jpg" alt="热夏 支付宝">
+        <span>支付宝</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>热夏
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://www.lifeee.top/posts/39029.html" title="网上冲浪周刊第93期">https://www.lifeee.top/posts/39029.html</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="followme">
+  <span>欢迎关注我的其它发布渠道</span>
+
+  <div class="social-list">
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="/atom.xml">
+            <span class="icon">
+              <i class="fa fa-rss"></i>
+            </span>
+
+            <span class="label">RSS</span>
+          </a>
+      </div>
+  </div>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/%E5%86%B2%E6%B5%AA/" rel="tag"><i class="fa fa-tag"></i> 冲浪</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/posts/25716.html" rel="prev" title="网上冲浪周刊第92期">
+                  <i class="fa fa-angle-left"></i> 网上冲浪周刊第92期
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments gitalk-container"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 2018 – 
+    <span itemprop="copyrightYear">2025</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">热夏</span>
+  </div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>站点总字数：</span>
+    <span title="站点总字数">743k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">11:15</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/next-theme-pjax/0.6.0/pjax.min.js" integrity="sha256-vxLn1tSKWD4dqbMRyv940UYw4sXgMtYcK6reefzZrao=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lozad.js/1.16.0/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script><script src="/js/pjax.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+  <script src="/js/third-party/pace.js"></script>
+
+
+  
+  <script data-pjax async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","mhchem":false,"js":{"url":"//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
+
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"upwon","repo":"upwon.github.io","client_id":"7e047047ecee7317452b","client_secret":"c60fbdf0eb19e7264e33ab780319e4d420a58fee","admin_user":"upwon","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":null,"js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"b7d264c44e6b8168ba1bcb4bb54e75da"}</script>
+<script src="/js/third-party/comments/gitalk.js"></script>
+
+
+  <script type="text/javascript" src="/js/clicklove.js"></script>
+   
+ 
+
+</body>
+</html>

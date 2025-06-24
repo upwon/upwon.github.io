@@ -6,7 +6,7 @@
   <link href="https://www.lifeee.top/atom.xml" rel="self"/>
   
   <link href="https://www.lifeee.top/"/>
-  <updated>2025-05-28T13:09:07.557Z</updated>
+  <updated>2025-06-24T15:14:52.381Z</updated>
   <id>https://www.lifeee.top/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>网上冲浪周刊第93期</title>
+    <link href="https://www.lifeee.top/posts/39029.html"/>
+    <id>https://www.lifeee.top/posts/39029.html</id>
+    <published>2025-06-24T15:13:45.000Z</published>
+    <updated>2025-06-24T15:14:52.381Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;strong&gt;欢迎阅读本期技术资讯！为您精选前沿工具与解决方案：&lt;/strong&gt;AI浏览器接管工具&lt;strong&gt;Chrome MCP Server&lt;/strong&gt; （复用Chrome登录态+原生API，纯本地运行保障隐私，响应更快）；技术文章聚合平台&lt;strong&gt;BestBlogs&lt;/strong&gt; （GPT-4o摘要评分，每周推送精选内容+多维RSS订阅，基于Dify Workflow智能分析）；字节多智能体框架&lt;strong&gt;DeerFlow&lt;/strong&gt; （LLM+搜索+代码执行一体化，支持RAG私有知识库，学术研究到报告生成全流程，兼容FaaS一键部署）。此外推荐：&lt;strong&gt;Nginx UI&lt;/strong&gt; （可视化配置编辑&amp;#x2F;证书续期&amp;#x2F;集群管理，集成ChatGPT助手+LLM代码补全）；&lt;strong&gt;FileBrowser Quantum&lt;/strong&gt; （轻量级文件管理，多源支持&amp;#x2F;权限分级，高效索引+极简三组件UI）；&lt;br&gt;&lt;strong&gt;BeddyStories&lt;/strong&gt; （中文亲子故事库适配全龄段，响应式设计优化阅读体验）；&lt;strong&gt;ChinaTextbook&lt;/strong&gt; （开源国内K12数学教材，配套文件拆分合并工具适配多网络环境）。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/pexels-jordi-de-smedt-765443169-18781953.jpg&quot; alt=&quot;https://www.pexels.com/zh-cn/photo/18781953/&quot;&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="冲浪" scheme="https://www.lifeee.top/categories/%E5%86%B2%E6%B5%AA/"/>
+    
+    
+    <category term="冲浪" scheme="https://www.lifeee.top/tags/%E5%86%B2%E6%B5%AA/"/>
+    
+  </entry>
   
   <entry>
     <title>网上冲浪周刊第92期</title>
@@ -386,26 +406,6 @@
     
     <summary type="html">&lt;p&gt;欢迎阅读本期技术资讯！我们为您推荐了一些有趣的工具，如开源剪切板管理器EcoPaste 、开源在线白板工具 Excalidraw  、开源在线白板工具 Excalidraw 。此外，还推荐了开源电子书开源在线白板工具 Excalidraw 以及Obsidian 虚拟双链插件Virtual Linker。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/imgpexels-phamnghia-1206597.jpg&quot; alt=&quot;https://www.pexels.com/zh-cn/photo/pinepapple-1206597/&quot;&gt;&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="冲浪" scheme="https://www.lifeee.top/categories/%E5%86%B2%E6%B5%AA/"/>
-    
-    
-    <category term="冲浪" scheme="https://www.lifeee.top/tags/%E5%86%B2%E6%B5%AA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>网上冲浪周刊第53期</title>
-    <link href="https://www.lifeee.top/posts/61924.html"/>
-    <id>https://www.lifeee.top/posts/61924.html</id>
-    <published>2024-08-02T15:12:49.000Z</published>
-    <updated>2024-08-02T15:17:50.736Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;欢迎阅读本期技术资讯！我们为您推荐了一些有趣的工具，如开源剪切板管理器EcoPaste 、开源多端图像托管平台管理工具 PicList  、Notion的离线替代品Eidos。此外，还介绍了 Windows 开源沙盒软件 Sandboxie Plus以及开源产品图标库 QingIcon。&lt;/p&gt;
-&lt;p&gt; &lt;img src=&quot;https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/202408022300536.jpg&quot; alt=&quot;https://www.pexels.com/zh-cn/photo/21760959/&quot;&gt;&lt;/p&gt;</summary>
     
     
     
