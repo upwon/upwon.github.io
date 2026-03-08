@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/myapple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/myfavicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/myfavicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/myapple-touch-icon-next.png" color="#222">
+  <meta name="google-site-verification" content="google2fc64c2b92961282.html">
+  <meta name="baidu-site-verification" content="s6BwSjIZYB">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.loli.net/css?family='LXGW+WenKai+LITE':300,300italic,400,400italic,700,700italic%7C'LXGW+WenKai+Screen':300,300italic,400,400italic,700,700italic%7C'LXGW+WenKai':300,300italic,400,400italic,700,700italic%7C'Noto+Serif+SC':300,300italic,400,400italic,700,700italic%7C'EB+Garamond':300,300italic,400,400italic,700,700italic%7C'PingFang+SC':300,300italic,400,400italic,700,700italic%7C'Microsoft+YaHei':300,300italic,400,400italic,700,700italic%7C'sans-serif':300,300italic,400,400italic,700,700italic%7CMa+Shan+Zheng:300,300italic,400,400italic,700,700italic%7CLXGW+WenKai+Screen:300,300italic,400,400italic,700,700italic%7CLXGW+WenKai:300,300italic,400,400italic,700,700italic%7CMenlo:300,300italic,400,400italic,700,700italic%7CMonaco:300,300italic,400,400italic,700,700italic%7CConsolas:300,300italic,400,400italic,700,700italic%7CSource+Code+Pro:300,300italic,400,400italic,700,700italic%7Csystem-ui:300,300italic,400,400italic,700,700italic%7Cmonospace:300,300italic,400,400italic,700,700italic%7Csans-serif:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha256-yIDrPSXHZdOZhAqiBP7CKzIwMQmRCJ8UeB8Jo17YC4o=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/themes/blue/pace-theme-minimal.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"www.lifeee.top","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.19.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"mac","show_result":true},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="Spotify桌面端去广告教程（Windows&#x2F;Mac&#x2F;Linux)。屏蔽客户端中的所有横幅、视频和音频广告，Unlocks the skip function of any track，从主页隐藏播客、剧集和有声读物(可选)。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Spotify桌面端去广告教程（Windows&#x2F;Mac&#x2F;Linux)">
+<meta property="og:url" content="https://www.lifeee.top/posts/54657.html">
+<meta property="og:site_name" content="热夏的博客">
+<meta property="og:description" content="Spotify桌面端去广告教程（Windows&#x2F;Mac&#x2F;Linux)。屏蔽客户端中的所有横幅、视频和音频广告，Unlocks the skip function of any track，从主页隐藏播客、剧集和有声读物(可选)。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/202402142104401.jpg">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/202307161119830.jpg">
+<meta property="article:published_time" content="2022-11-12T15:44:04.000Z">
+<meta property="article:modified_time" content="2026-03-08T07:46:57.145Z">
+<meta property="article:author" content="热夏">
+<meta property="article:tag" content="教程">
+<meta property="article:tag" content="善用佳软">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/202402142104401.jpg">
+
+
+<link rel="canonical" href="https://www.lifeee.top/posts/54657.html">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://www.lifeee.top/posts/54657.html","path":"posts/54657.html","title":"Spotify桌面端去广告教程（Windows/Mac/Linux)"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Spotify桌面端去广告教程（Windows/Mac/Linux) | 热夏的博客</title>
+  
+
+
+
+
+
+
+
+<link href="https://fonts.loli.net/css?family=Noto+Serif+SC:400,500,700&display=swap&subset=chinese-simplified" rel="stylesheet">
+<link rel="stylesheet" href="https://npm.elemecdn.com/lxgw-wenkai-screen-webfont@1.7.0/style.css" />
+
+<link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&display=swap" rel="stylesheet">
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="热夏的博客" type="application/atom+xml">
+<style>.darkmode--activated{--body-bg-color:#282828;--content-bg-color:#333;--card-bg-color:#555;--text-color:#ccc;--blockquote-color:#bbb;--link-color:#ccc;--link-hover-color:#eee;--brand-color:#ddd;--brand-hover-color:#ddd;--table-row-odd-bg-color:#282828;--table-row-hover-bg-color:#363636;--menu-item-bg-color:#555;--btn-default-bg:#222;--btn-default-color:#ccc;--btn-default-border-color:#555;--btn-default-hover-bg:#666;--btn-default-hover-color:#ccc;--btn-default-hover-border-color:#666;--highlight-background:#282b2e;--highlight-foreground:#a9b7c6;--highlight-gutter-background:#34393d;--highlight-gutter-foreground:#9ca9b6}.darkmode--activated img{opacity:.75}.darkmode--activated img:hover{opacity:.9}.darkmode--activated code{color:#69dbdc;background:0 0}button.darkmode-toggle{z-index:9999}.darkmode-ignore,img{display:flex!important}.beian img{display:inline-block!important}</style></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">热夏的博客</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-heart fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Windows%E7%AB%AF"><span class="nav-number">1.</span> <span class="nav-text">Windows端</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Mac%E7%AB%AF"><span class="nav-number">2.</span> <span class="nav-text">Mac端</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Linux%E7%AB%AF"><span class="nav-number">3.</span> <span class="nav-text">Linux端</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="热夏"
+      src="/images/head.jpg">
+  <p class="site-author-name" itemprop="name">热夏</p>
+  <div class="site-description" itemprop="description">空山新雨后，天气晚来秋。</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">112</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">44</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/upwon" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;upwon" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:w1244753906@gmail.com" title="E-Mail → mailto:w1244753906@gmail.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.lifeee.top//atom.xml" title="RSS → https:&#x2F;&#x2F;www.lifeee.top&#x2F;&#x2F;atom.xml" rel="noopener me"><i class="fa fa-rss fa-fw"></i>RSS</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+        <div class="pjax">
+        </div>
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.lifeee.top/posts/54657.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/head.jpg">
+      <meta itemprop="name" content="热夏">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="热夏的博客">
+      <meta itemprop="description" content="空山新雨后，天气晚来秋。">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Spotify桌面端去广告教程（Windows/Mac/Linux) | 热夏的博客">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Spotify桌面端去广告教程（Windows/Mac/Linux)
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2022-11-12 23:44:04" itemprop="dateCreated datePublished" datetime="2022-11-12T23:44:04+08:00">2022-11-12</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2026-03-08 15:46:57" itemprop="dateModified" datetime="2026-03-08T15:46:57+08:00">2026-03-08</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%95%99%E7%A8%8B/" itemprop="url" rel="index"><span itemprop="name">教程</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/" itemprop="url" rel="index"><span itemprop="name">善用佳软</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>2.6k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>2 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/202402142104401.jpg"></p>
+<p>Spotify桌面端去广告教程（Windows&#x2F;Mac&#x2F;Linux)。屏蔽客户端中的所有横幅、视频和音频广告，Unlocks the skip function of any track，从主页隐藏播客、剧集和有声读物(可选)。</p>
+<span id="more"></span>
+
+<h2 id="Windows端"><a href="#Windows端" class="headerlink" title="Windows端"></a>Windows端</h2><p>关闭spotify桌面端，在 <a target="_blank" rel="noopener" href="https://github.com/SpotX-CLI/SpotX-Win">SpotX-CLI&#x2F;SpotX-Win: Blocking ads and updates for the desktop version of Spotify, disabling podcasts and more. (github.com)</a> 复制以下命令在Windows的PowerShell执行</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; (iwr -useb <span class="string">&#x27;https://raw.githubusercontent.com/SpotX-CLI/SpotX-Win/main/Install.ps1&#x27;</span>).Content | iex</span><br></pre></td></tr></table></figure>
+
+<p>根据你的喜好输入y或n来调整脚本的一些功能，也可以和我输一样的。</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/202307161119830.jpg" alt="脚本执行过程"></p>
+<p>另一种方式是下载 <a target="_blank" rel="noopener" href="https://raw.githack.com/SpotX-CLI/SpotX-Win/main/Install.bat">Install.bat</a> 然后执行即可。</p>
+<p>要想卸载可以下载并执行 <a target="_blank" rel="noopener" href="https://raw.githack.com/SpotX-CLI/SpotX-Win/main/Uninstall.bat">Uninstall.bat</a> ，或者直接卸载重新安装spotify也可以。</p>
+<blockquote>
+<p>脚本特性</p>
+<ul>
+<li><strong>Blocks all banner, video and audio ads in the client</strong></li>
+<li>屏蔽客户端中的所有横幅、视频和音频广告</li>
+<li><strong>Unlocks the skip function of any track</strong></li>
+<li>解锁任何轨道的跳跃功能</li>
+<li><strong>Hiding podcasts, episodes and audiobooks from the homepage (optional)</strong></li>
+<li>从主页隐藏播客、剧集和有声读物(可选)</li>
+<li><strong>Block Spotify automatic updates (optional) 阻止 Spotify 自动更新(可选)</strong></li>
+<li><strong>Automatic clearing of <a target="_blank" rel="noopener" href="https://github.com/SpotX-CLI/SpotX-Win/discussions/2">audio cache</a> (optional)</strong></li>
+<li>自动清除音频缓存(可选)</li>
+<li><strong>More experimental features have been activated (<a target="_blank" rel="noopener" href="https://github.com/SpotX-CLI/SpotX-Win/discussions/50">see the full list</a>)</strong></li>
+<li>更多的实验特性已经被激活(见完整列表)</li>
+<li><strong>Disabled Sentry (Prevented Sentry from sending console log&#x2F;error&#x2F;warning to Spotify developers)</strong></li>
+<li>禁用哨兵(防止哨兵向 Spotify 开发人员发送控制台日志&#x2F;错误&#x2F;警告)</li>
+<li><strong>Disabled logging (Stopped various elements to log user interaction)</strong></li>
+<li>禁用日志记录(停止各种元素以记录用户交互)</li>
+<li><strong>Removed RTL rules (Removed all right-to-left CSS rules to simplify CSS files)</strong></li>
+<li>删除了 RTL 规则(删除了所有从右到左的 CSS 规则以简化 CSS 文件)</li>
+<li><strong>Code minification 代码简化</strong></li>
+</ul>
+</blockquote>
+ <br />
+
+<h2 id="Mac端"><a href="#Mac端" class="headerlink" title="Mac端"></a>Mac端</h2><p>关闭spotify桌面端，在 <a target="_blank" rel="noopener" href="https://github.com/SpotX-CLI/SpotX-Mac">SpotX-CLI&#x2F;SpotX-Mac: Spotify Ad blocker based on SpotX for MacOS (github.com)</a>  复制以下命令在终端执行</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bash &lt;(curl -sSL https://raw.githubusercontent.com/SpotX-CLI/SpotX-Mac/main/install.sh)</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>也可以带一些参数，支持的参数有</p>
+<p><code>-c</code> Clear app cache – use if UI-related patches aren’t working<br><code>-e</code> Experimental features – enables experimental features<br><code>-E</code> Exclude feature – disables specified feature(s) [currently only supports <code>leftsidebar</code>]<br><code>-f</code> Force patch – forces re-patching if backup detected<br><code>-h</code> Hide podcasts, episodes and audiobooks on home screen<br><code>-o</code> Old UI – skips forced ‘new UI’ patch<br><code>-p</code> Premium subscription setup – use if premium subscriber<br><code>-u</code> Update block – blocks automatic updates</p>
+</blockquote>
+<p>卸载请执行</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bash &lt;(curl -sSL https://raw.githubusercontent.com/SpotX-CLI/SpotX-Mac/main/uninstall.sh)</span><br></pre></td></tr></table></figure>
+
+<p>或者直接卸载重新安装spotify也可以。</p>
+<br />
+
+<h2 id="Linux端"><a href="#Linux端" class="headerlink" title="Linux端"></a>Linux端</h2><p>关闭spotify桌面端，在 <a target="_blank" rel="noopener" href="https://github.com/SpotX-CLI/SpotX-Linux">SpotX-CLI&#x2F;SpotX-Linux: Spotify Ad blocker based on SpotX for Linux (github.com)</a> 复制以下命令在终端执行</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bash &lt;(curl -sSL https://raw.githubusercontent.com/SpotX-CLI/SpotX-Linux/main/install.sh)</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>也可以带一些参数，支持的参数有</p>
+<p><code>-c</code> Clear app cache – use if UI-related patches aren’t working<br><code>-e</code> Experimental features – enables experimental features<br><code>-f</code> Force patch – forces re-patching if backup detected<br><code>-P</code> Path directory – manually set Spotify directory if not found in PATH<br><code>-p</code> Premium subscription setup – use if premium subscriber</p>
+</blockquote>
+<p>卸载请执行</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bash &lt;(curl -sSL https://raw.githubusercontent.com/SpotX-CLI/SpotX-Linux/main/uninstall.sh)</span><br></pre></td></tr></table></figure>
+
+<p>或者直接卸载重新安装spotify也可以。</p>
+<br />
+
+<p>接下来请尽情享受音乐。🎉🎉</p>
+<br />
+
+<br />
+
+<br />
+
+<br />
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>请我一杯咖啡吧！</div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/wechatpay.png" alt="热夏 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="/images/alipay.jpg" alt="热夏 支付宝">
+        <span>支付宝</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>热夏
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://www.lifeee.top/posts/54657.html" title="Spotify桌面端去广告教程（Windows&#x2F;Mac&#x2F;Linux)">https://www.lifeee.top/posts/54657.html</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="followme">
+  <span>欢迎关注我的其它发布渠道</span>
+
+  <div class="social-list">
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="/atom.xml">
+            <span class="icon">
+              <i class="fa fa-rss"></i>
+            </span>
+
+            <span class="label">RSS</span>
+          </a>
+      </div>
+  </div>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/%E6%95%99%E7%A8%8B/" rel="tag"><i class="fa fa-tag"></i> 教程</a>
+              <a href="/tags/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/" rel="tag"><i class="fa fa-tag"></i> 善用佳软</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/posts/23379.html" rel="prev" title="Jetbrains全家桶及插件激活方式">
+                  <i class="fa fa-angle-left"></i> Jetbrains全家桶及插件激活方式
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/posts/34001.html" rel="next" title="开源软件商店 WingetUI 使用教程">
+                  开源软件商店 WingetUI 使用教程 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments gitalk-container"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 2018 – 
+    <span itemprop="copyrightYear">2026</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">热夏</span>
+  </div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>站点总字数：</span>
+    <span title="站点总字数">743k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">11:15</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/next-theme-pjax/0.6.0/pjax.min.js" integrity="sha256-vxLn1tSKWD4dqbMRyv940UYw4sXgMtYcK6reefzZrao=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lozad.js/1.16.0/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script><script src="/js/pjax.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+  <script src="/js/third-party/pace.js"></script>
+
+
+  
+  <script data-pjax async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","mhchem":false,"js":{"url":"//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
+
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"upwon","repo":"upwon.github.io","client_id":"7e047047ecee7317452b","client_secret":"c60fbdf0eb19e7264e33ab780319e4d420a58fee","admin_user":"upwon","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":null,"js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"1fdfc0ccb11f772f6d6e843d4524b6b6"}</script>
+<script src="/js/third-party/comments/gitalk.js"></script>
+
+</body>
+</html>

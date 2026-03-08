@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/myapple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/myfavicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/myfavicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/myapple-touch-icon-next.png" color="#222">
+  <meta name="google-site-verification" content="google2fc64c2b92961282.html">
+  <meta name="baidu-site-verification" content="s6BwSjIZYB">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.loli.net/css?family='LXGW+WenKai+LITE':300,300italic,400,400italic,700,700italic%7C'LXGW+WenKai+Screen':300,300italic,400,400italic,700,700italic%7C'LXGW+WenKai':300,300italic,400,400italic,700,700italic%7C'Noto+Serif+SC':300,300italic,400,400italic,700,700italic%7C'EB+Garamond':300,300italic,400,400italic,700,700italic%7C'PingFang+SC':300,300italic,400,400italic,700,700italic%7C'Microsoft+YaHei':300,300italic,400,400italic,700,700italic%7C'sans-serif':300,300italic,400,400italic,700,700italic%7CMa+Shan+Zheng:300,300italic,400,400italic,700,700italic%7CLXGW+WenKai+Screen:300,300italic,400,400italic,700,700italic%7CLXGW+WenKai:300,300italic,400,400italic,700,700italic%7CMenlo:300,300italic,400,400italic,700,700italic%7CMonaco:300,300italic,400,400italic,700,700italic%7CConsolas:300,300italic,400,400italic,700,700italic%7CSource+Code+Pro:300,300italic,400,400italic,700,700italic%7Csystem-ui:300,300italic,400,400italic,700,700italic%7Cmonospace:300,300italic,400,400italic,700,700italic%7Csans-serif:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha256-yIDrPSXHZdOZhAqiBP7CKzIwMQmRCJ8UeB8Jo17YC4o=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/themes/blue/pace-theme-minimal.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"www.lifeee.top","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.19.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"mac","show_result":true},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="欢迎阅读第25期技术资讯！这期我们推荐了一系列精彩的技术文章、工具和开源项目。在推荐阅读中，介绍2023年现代安卓开发的趋势，设计安全可靠的API的方法，以及Java 有哪些常见的误区问题。在有趣的工具部分，我们介绍了SmartDNS，一款本地DNS服务器，以及One Tab Group，一款多功能的标签页&#x2F;标签组管理器。此外，还推荐了GitHub520、one-api、FreeCont">
+<meta property="og:type" content="article">
+<meta property="og:title" content="网上冲浪周刊第25期：新年新气象🌱">
+<meta property="og:url" content="https://www.lifeee.top/posts/38961.html">
+<meta property="og:site_name" content="热夏的博客">
+<meta property="og:description" content="欢迎阅读第25期技术资讯！这期我们推荐了一系列精彩的技术文章、工具和开源项目。在推荐阅读中，介绍2023年现代安卓开发的趋势，设计安全可靠的API的方法，以及Java 有哪些常见的误区问题。在有趣的工具部分，我们介绍了SmartDNS，一款本地DNS服务器，以及One Tab Group，一款多功能的标签页&#x2F;标签组管理器。此外，还推荐了GitHub520、one-api、FreeCont">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/202401072002887.jpg">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/202401102231073.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/202312162155093.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/202401072014776.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/202401071927156.png">
+<meta property="article:published_time" content="2024-01-07T11:55:22.000Z">
+<meta property="article:modified_time" content="2026-03-08T07:46:57.146Z">
+<meta property="article:author" content="热夏">
+<meta property="article:tag" content="冲浪">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/202401072002887.jpg">
+
+
+<link rel="canonical" href="https://www.lifeee.top/posts/38961.html">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://www.lifeee.top/posts/38961.html","path":"posts/38961.html","title":"网上冲浪周刊第25期：新年新气象🌱"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>网上冲浪周刊第25期：新年新气象🌱 | 热夏的博客</title>
+  
+
+
+
+
+
+
+
+<link href="https://fonts.loli.net/css?family=Noto+Serif+SC:400,500,700&display=swap&subset=chinese-simplified" rel="stylesheet">
+<link rel="stylesheet" href="https://npm.elemecdn.com/lxgw-wenkai-screen-webfont@1.7.0/style.css" />
+
+<link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&display=swap" rel="stylesheet">
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="热夏的博客" type="application/atom+xml">
+<style>.darkmode--activated{--body-bg-color:#282828;--content-bg-color:#333;--card-bg-color:#555;--text-color:#ccc;--blockquote-color:#bbb;--link-color:#ccc;--link-hover-color:#eee;--brand-color:#ddd;--brand-hover-color:#ddd;--table-row-odd-bg-color:#282828;--table-row-hover-bg-color:#363636;--menu-item-bg-color:#555;--btn-default-bg:#222;--btn-default-color:#ccc;--btn-default-border-color:#555;--btn-default-hover-bg:#666;--btn-default-hover-color:#ccc;--btn-default-hover-border-color:#666;--highlight-background:#282b2e;--highlight-foreground:#a9b7c6;--highlight-gutter-background:#34393d;--highlight-gutter-foreground:#9ca9b6}.darkmode--activated img{opacity:.75}.darkmode--activated img:hover{opacity:.9}.darkmode--activated code{color:#69dbdc;background:0 0}button.darkmode-toggle{z-index:9999}.darkmode-ignore,img{display:flex!important}.beian img{display:inline-block!important}</style></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">热夏的博客</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-heart fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%8A%80%E6%9C%AF"><span class="nav-number">1.</span> <span class="nav-text">技术</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8E%A8%E8%8D%90%E9%98%85%E8%AF%BB"><span class="nav-number">1.1.</span> <span class="nav-text">推荐阅读</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%9C%89%E8%B6%A3%E7%9A%84%E5%B7%A5%E5%85%B7"><span class="nav-number">2.</span> <span class="nav-text">有趣的工具</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Obsidian-%E4%BD%BF%E7%94%A8-picgo%E8%87%AA%E5%8A%A8%E4%B8%8A%E4%BC%A0%E5%9B%BE%E7%89%87"><span class="nav-number">3.</span> <span class="nav-text">Obsidian 使用 picgo自动上传图片</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#One-Tab-Group-%E6%A0%87%E7%AD%BE%E9%A1%B5-%E6%A0%87%E7%AD%BE%E7%BB%84%E7%AE%A1%E7%90%86%E5%99%A8"><span class="nav-number">3.1.</span> <span class="nav-text">One Tab Group - 标签页&#x2F;标签组管理器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Github520%EF%BC%9A%E5%8A%A0%E9%80%9F%E8%AE%BF%E9%97%AEGithub"><span class="nav-number">3.2.</span> <span class="nav-text">Github520：加速访问Github</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#one-api%EF%BC%9AOpenAI-%E6%8E%A5%E5%8F%A3%E7%AE%A1%E7%90%86"><span class="nav-number">3.3.</span> <span class="nav-text">one-api：OpenAI 接口管理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#FreeControl%EF%BC%9A%E5%9F%BA%E4%BA%8Escrcpy%E7%9A%84GUI"><span class="nav-number">3.4.</span> <span class="nav-text">FreeControl：基于scrcpy的GUI</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%8C%AB%E6%8A%93%E8%B5%84%E6%BA%90%E5%97%85%E6%8E%A2%E6%89%A9%E5%B1%95%EF%BC%8C%E8%83%BD%E5%A4%9F%E5%B8%AE%E4%BD%A0%E7%AD%9B%E9%80%89%E5%88%97%E5%87%BA%E5%BD%93%E5%89%8D%E9%A1%B5%E9%9D%A2%E7%9A%84%E8%B5%84%E6%BA%90"><span class="nav-number">3.5.</span> <span class="nav-text">猫抓资源嗅探扩展，能够帮你筛选列出当前页面的资源</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%9D%E8%97%8F%E4%BF%A1%E6%81%AF"><span class="nav-number">4.</span> <span class="nav-text">宝藏信息</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Google-Bard-API-%E8%BD%BB%E6%9D%BE%E5%90%91-Google-Bard-%E5%8F%91%E9%80%81%E8%AF%B7%E6%B1%82"><span class="nav-number">4.1.</span> <span class="nav-text">Google Bard API 轻松向 Google Bard 发送请求</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#GitHub-Web-IDE%EF%BC%9A%E6%B5%8F%E8%A7%88%E5%99%A8%E6%8B%93%E5%B1%95"><span class="nav-number">4.2.</span> <span class="nav-text">GitHub Web IDE：浏览器拓展</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%92%AD%E5%AE%A2%E6%8E%A8%E8%8D%90%EF%BC%9A%E8%82%A5%E8%AF%9D%E8%BF%9E%E7%AF%87"><span class="nav-number">4.3.</span> <span class="nav-text">播客推荐：肥话连篇</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%B5%84%E8%AE%AF"><span class="nav-number">5.</span> <span class="nav-text">资讯</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="热夏"
+      src="/images/head.jpg">
+  <p class="site-author-name" itemprop="name">热夏</p>
+  <div class="site-description" itemprop="description">空山新雨后，天气晚来秋。</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">112</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">44</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/upwon" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;upwon" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:w1244753906@gmail.com" title="E-Mail → mailto:w1244753906@gmail.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.lifeee.top//atom.xml" title="RSS → https:&#x2F;&#x2F;www.lifeee.top&#x2F;&#x2F;atom.xml" rel="noopener me"><i class="fa fa-rss fa-fw"></i>RSS</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+        <div class="pjax">
+        </div>
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.lifeee.top/posts/38961.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/head.jpg">
+      <meta itemprop="name" content="热夏">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="热夏的博客">
+      <meta itemprop="description" content="空山新雨后，天气晚来秋。">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="网上冲浪周刊第25期：新年新气象🌱 | 热夏的博客">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          网上冲浪周刊第25期：新年新气象🌱
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2024-01-07 19:55:22" itemprop="dateCreated datePublished" datetime="2024-01-07T19:55:22+08:00">2024-01-07</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2026-03-08 15:46:57" itemprop="dateModified" datetime="2026-03-08T15:46:57+08:00">2026-03-08</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%86%B2%E6%B5%AA/" itemprop="url" rel="index"><span itemprop="name">冲浪</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>3.5k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>3 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p>欢迎阅读第25期技术资讯！这期我们推荐了一系列精彩的技术文章、工具和开源项目。在推荐阅读中，介绍2023年现代安卓开发的趋势，设计安全可靠的API的方法，以及Java 有哪些常见的误区问题。在有趣的工具部分，我们介绍了SmartDNS，一款本地DNS服务器，以及One Tab Group，一款多功能的标签页&#x2F;标签组管理器。此外，还推荐了GitHub520、one-api、FreeControl和猫抓等实用工具。宝藏信息中，我们带来了Google Bard API、GitHub Web IDE等项目，以及一款能够在PC上控制Android设备的FreeControl。</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/202401072002887.jpg"></p>
+<span id="more"></span>
+
+
+
+
+
+<p>欢迎来到第25期 ！😄</p>
+<p>期待您通过RSS订阅本博客：<a href="https://www.lifeee.top///atom.xml">https://www.lifeee.top///atom.xml</a></p>
+<h1 id="技术"><a href="#技术" class="headerlink" title="技术"></a>技术</h1><h2 id="推荐阅读"><a href="#推荐阅读" class="headerlink" title="推荐阅读"></a>推荐阅读</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://juejin.cn/post/7229151797415051322">2023年的现代安卓开发</a>：Jetpack Compose、Android Jetpack、Material Design、Clean Architecture</li>
+<li><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/foFc9iSeBUTD2I5QnvIyaw">如何设计安全可靠的 API ？</a>：使用 HTTPS、使用 OAuth 2.0、使用 WebAuthn、使用分级 API Key、授权、限流、版本控制、白名单、定期检查 OWASP API 安全风险清单、使用 API 网关、错误处理、输入验证。</li>
+<li>【[干货建议收藏]我们对 Java 有哪些常见的误区？】<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV14e41167CM?vd_source=1e1aa0f06f98286544f4193f7bfd4bdc">https://www.bilibili.com/video/BV14e41167CM?vd_source=1e1aa0f06f98286544f4193f7bfd4bdc</a></li>
+</ul>
+<h1 id="有趣的工具"><a href="#有趣的工具" class="headerlink" title="有趣的工具"></a>有趣的工具</h1><h1 id="Obsidian-使用-picgo自动上传图片"><a href="#Obsidian-使用-picgo自动上传图片" class="headerlink" title="Obsidian 使用 picgo自动上传图片"></a>Obsidian 使用 picgo自动上传图片</h1><p><a target="_blank" rel="noopener" href="https://github.com/renmu123/obsidian-image-auto-upload-plugin/tree/master">obsidian-image-auto-upload-plugin</a> 是一个 Obsidian 插件，用于自动上传图片到图床中。</p>
+<p>配置步骤为：</p>
+<ol>
+<li><p>安装 <a target="_blank" rel="noopener" href="https://github.com/Molunerfinn/PicGo">PicGo</a> 或者 <a target="_blank" rel="noopener" href="https://github.com/Kuingsmile/PicList">PicList</a> ，并进行配置，配置参考<a target="_blank" rel="noopener" href="https://github.com/Molunerfinn/PicGo">官网</a> </p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/Kuingsmile/PicList">PicList</a> 是 PicGo 的升级版，主要添加了相册云删除和云存储管理两个功能。</p>
+</blockquote>
+</li>
+<li><p>开启 <a target="_blank" rel="noopener" href="https://github.com/Molunerfinn/PicGo">PicGo</a> 或者 <a target="_blank" rel="noopener" href="https://github.com/Kuingsmile/PicList">PicList</a>的 Server 服务，并记住端口号</p>
+<img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/202401102231073.png" style="zoom: 67%;" />
+</li>
+<li><p>在Obsidian 安装插件 <strong>Image auto upload plugin</strong></p>
+</li>
+<li><p>打开插件配置项，设置为<code>http://127.0.0.1:&#123;&#123;PicGo设置的端口号&#125;&#125;/upload</code>（例如：<code>http://127.0.0.1:36686/upload</code>）</p>
+</li>
+<li><p>在 Obsidian  Ctrl+V 粘贴剪切板中的图片就会自动上传</p>
+</li>
+</ol>
+<p>详细使用步骤可参见 <a target="_blank" rel="noopener" href="https://github.com/renmu123/obsidian-image-auto-upload-plugin/blob/master/readme-zh.md">Obsidian Image Auto Upload Plugin</a> </p>
+<p>开源地址： <a target="_blank" rel="noopener" href="https://github.com/renmu123/obsidian-image-auto-upload-plugin">https://github.com/renmu123/obsidian-image-auto-upload-plugin</a>  </p>
+<h2 id="One-Tab-Group-标签页-标签组管理器"><a href="#One-Tab-Group-标签页-标签组管理器" class="headerlink" title="One Tab Group - 标签页&#x2F;标签组管理器"></a><a target="_blank" rel="noopener" href="https://www.onetab.group/">One Tab Group - 标签页&#x2F;标签组管理器</a></h2><p>One Tab Group 一款集多功能于一身的代替 <code>OneTab</code>&#x2F;<code>Session Buddy</code> 的下一代标签页&#x2F;标签组管理器, 帮助你有效地管理、组织您的浏览器标签页，支持云同步以及同步到 Notion 等功能。可以理解为是扩展 OneTab 的代替品，除了继承它的功能外，还有以下特性：</p>
+<p>✨ <strong>特性</strong></p>
+<ul>
+<li><p>⚡️ 有效地在会话中组织您的标签页、标签组</p>
+</li>
+<li><p>🗂️ 保存&#x2F;恢复&#x2F;重组标签页、标签组</p>
+<ul>
+<li>在当前窗口中</li>
+<li>在新窗口中</li>
+<li>恢复为休眠模式以节省内存</li>
+</ul>
+</li>
+<li><p>🔄 同步您正在浏览（打开的）标签页、标签组</p>
+</li>
+<li><p>🤏 轻松通过拖拉拽的方式管理您的会话</p>
+</li>
+<li><p>⌨️ 支持命令行面板界面 - 轻松通过命令行面板探索您打开的标签页、标签组</p>
+</li>
+<li><p>🏷️ 可视化网络书签 - 将链接转化为一个可视化的网络书签，便于您分享给他人</p>
+</li>
+<li><p>🔲 支持单列 ｜ 双列 ｜ 时间线布局</p>
+</li>
+<li><p>🌛 支持暗色模式</p>
+</li>
+<li><p>🌍 多语言支持（中文、英文）</p>
+</li>
+<li><p>💾 会话备份方案</p>
+<ul>
+<li>📑 保存您的会话为一个 JSON 文件</li>
+<li>📧 发送会话备份文件到您的邮箱（需登录）</li>
+</ul>
+</li>
+<li><p>📥 支持导入方案</p>
+<ul>
+<li>🔖 支持将 <code>OneTab</code> 的数据导入到 <code>One Tab Group</code></li>
+<li>🔖 支持将 <code>SessionBuddy</code> 的数据导入到 <code>One Tab Group</code></li>
+</ul>
+</li>
+<li><p>🔍 支持在所有标签页中模糊搜索</p>
+</li>
+<li><p>🧹 休眠您打开的标签页以节省内存</p>
+</li>
+<li><p>☁️ 支持云备份同步、Notion 同步</p>
+</li>
+<li><p>❤️ 收藏您喜爱的 Session</p>
+</li>
+<li><p>✨ 将 Session 作为链接和任何人分享</p>
+</li>
+</ul>
+<p>chrome安装地址：<a target="_blank" rel="noopener" href="https://chromewebstore.google.com/detail/one-tab-group-%E6%A0%87%E7%AD%BE%E9%A1%B5%E6%A0%87%E7%AD%BE%E7%BB%84%E7%AE%A1%E7%90%86%E5%99%A8/lajbajamkpmkmldodfbljkjihppdclbm">One Tab Group - 标签页&#x2F;标签组管理器 (google.com)</a></p>
+<p>edge安装地址：<a target="_blank" rel="noopener" href="https://microsoftedge.microsoft.com/addons/detail/one-tab-group-%E6%A0%87%E7%AD%BE%E9%A1%B5%E6%A0%87%E7%AD%BE%E7%BB%84%E7%AE%A1%E7%90%86/njmgdlgmnlinpieohfpmiipenmgilpga">One Tab Group - 标签页&#x2F;标签组管理器 - Microsoft Edge Addons</a></p>
+<p>官网：<a target="_blank" rel="noopener" href="https://www.onetab.group/">https://www.onetab.group/</a></p>
+<h2 id="Github520：加速访问Github"><a href="#Github520：加速访问Github" class="headerlink" title="Github520：加速访问Github"></a><a target="_blank" rel="noopener" href="https://github.com/521xueweihan/GitHub520">Github520：加速访问Github</a></h2><p>让你“爱”上 GitHub，解决访问时图裂、加载慢的问题。（无需安装，通过修改本地 hosts 文件）</p>
+<p>使用方法：<a target="_blank" rel="noopener" href="https://github.com/521xueweihan/GitHub520#%E4%BA%8C%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95">https://github.com/521xueweihan/GitHub520#%E4%BA%8C%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95</a></p>
+<p>开源地址：<a target="_blank" rel="noopener" href="https://github.com/521xueweihan/GitHub520">https://github.com/521xueweihan/GitHub520</a></p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/202312162155093.png"></p>
+<h2 id="one-api：OpenAI-接口管理"><a href="#one-api：OpenAI-接口管理" class="headerlink" title="one-api：OpenAI 接口管理"></a><a target="_blank" rel="noopener" href="https://github.com/songquanpeng/one-api">one-api：OpenAI 接口管理</a></h2><p>OpenAI 接口管理 &amp; 分发系统，支持 Azure、Anthropic Claude、Google PaLM 2 &amp; Gemini、智谱 ChatGLM、百度文心一言、讯飞星火认知、阿里通义千问、360 智脑以及腾讯混元，可用于二次分发管理 key，仅单可执行文件，已打包好 Docker 镜像，一键部署，开箱即用。</p>
+<p>开源地址：<a target="_blank" rel="noopener" href="https://github.com/songquanpeng/one-api">https://github.com/songquanpeng/one-api</a></p>
+<h2 id="FreeControl：基于scrcpy的GUI"><a href="#FreeControl：基于scrcpy的GUI" class="headerlink" title="FreeControl：基于scrcpy的GUI"></a><a target="_blank" rel="noopener" href="https://github.com/pdone/FreeControl">FreeControl：基于scrcpy的GUI</a></h2><p>FreeControl是基于开源项目<a target="_blank" rel="noopener" href="https://github.com/Genymobile/scrcpy"><strong>scrcpy</strong></a>的进行开发的，可以在PC控制Android设备。</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/202401072014776.png"></p>
+<p>开源地址：<a target="_blank" rel="noopener" href="https://github.com/pdone/FreeControl">https://github.com/pdone/FreeControl</a></p>
+<h2 id="猫抓资源嗅探扩展，能够帮你筛选列出当前页面的资源"><a href="#猫抓资源嗅探扩展，能够帮你筛选列出当前页面的资源" class="headerlink" title="猫抓资源嗅探扩展，能够帮你筛选列出当前页面的资源"></a>猫抓资源嗅探扩展，能够帮你筛选列出当前页面的资源</h2><p>猫抓Cat Catch 是一款网页资源嗅探扩展，能帮你下载网页视频，支持M3U8，支持媒体控制，包括倍速、画中画、全屏、截图等。</p>
+<p>Chrome安装地址：<a target="_blank" rel="noopener" href="https://chrome.google.com/webstore/detail/jfedfbgedapdagkghmgibemcoggfppbb">https://chrome.google.com/webstore/detail/jfedfbgedapdagkghmgibemcoggfppbb</a></p>
+<p>Edge安装地址：<a target="_blank" rel="noopener" href="https://microsoftedge.microsoft.com/addons/detail/oohmdefbjalncfplafanlagojlakmjci">https://microsoftedge.microsoft.com/addons/detail/oohmdefbjalncfplafanlagojlakmjci</a></p>
+<p>Firefox安装地址：<a target="_blank" rel="noopener" href="https://addons.mozilla.org/addon/cat-catch/">https://addons.mozilla.org/addon/cat-catch/</a></p>
+<p>开源地址：<a target="_blank" rel="noopener" href="https://github.com/xifangczy/cat-catch?tab=readme-ov-file">https://github.com/xifangczy/cat-catch?tab=readme-ov-file</a></p>
+<h1 id="宝藏信息"><a href="#宝藏信息" class="headerlink" title="宝藏信息"></a>宝藏信息</h1><h2 id="Google-Bard-API-轻松向-Google-Bard-发送请求"><a href="#Google-Bard-API-轻松向-Google-Bard-发送请求" class="headerlink" title="Google Bard API 轻松向 Google Bard 发送请求"></a><a target="_blank" rel="noopener" href="https://github.com/ra83205/google-bard-api">Google Bard API</a> 轻松向 Google Bard 发送请求</h2><p>用于与Google Bard进行交互的FastAPI封装，允许用户通过一个简单的API发送消息给Google Bard，并接收响应</p>
+<p>Google Bard 是 Google 开发的出色的对话式人工智能。该项目包含一个用于轻松向 Google Bard 发送请求的综合库，以及一个简化的 API 服务器，允许用户通过一个简单的API发送消息给Google Bard，并接收响应。 </p>
+<p>开源地址：<a target="_blank" rel="noopener" href="https://github.com/ra83205/google-bard-api">https://github.com/ra83205/google-bard-api</a></p>
+<h2 id="GitHub-Web-IDE：浏览器拓展"><a href="#GitHub-Web-IDE：浏览器拓展" class="headerlink" title="GitHub Web IDE：浏览器拓展"></a>GitHub Web IDE：浏览器拓展</h2><p>GitHub Web IDE是是一款浏览器拓展，能够通过在线IDE浏览 Github 代码。</p>
+<p>Chrome 安装地址：<a target="_blank" rel="noopener" href="https://chrome.google.com/webstore/detail/adjiklnjodbiaioggfpbpkhbfcnhgkfe">https://chrome.google.com/webstore/detail/adjiklnjodbiaioggfpbpkhbfcnhgkfe</a></p>
+<p>Firefox 安装地址：<a target="_blank" rel="noopener" href="https://addons.mozilla.org/firefox/addon/github-web-ide">https://addons.mozilla.org/firefox/addon/github-web-ide</a></p>
+<p>Edge 安装地址：<a target="_blank" rel="noopener" href="https://microsoftedge.microsoft.com/addons/detail/akjbkjciknacicbnkfjbnlaeednpadcf">https://microsoftedge.microsoft.com/addons/detail/akjbkjciknacicbnkfjbnlaeednpadcf</a></p>
+<h2 id="播客推荐：肥话连篇"><a href="#播客推荐：肥话连篇" class="headerlink" title="播客推荐：肥话连篇"></a>播客推荐：肥话连篇</h2><p>肥话连篇是一档生活闲聊博客，小宇宙： <a target="_blank" rel="noopener" href="https://www.xiaoyuzhoufm.com/podcast/61d50d72ee197a3aac3dac42">肥话连篇 | 小宇宙</a></p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/202401071927156.png"></p>
+<h1 id="资讯"><a href="#资讯" class="headerlink" title="资讯"></a>资讯</h1><ul>
+<li><a target="_blank" rel="noopener" href="https://www.gov.cn/yaowen/liebiao/202401/content_6923849.htm">泰国宣布将对华永久免签</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.theverge.com/2024/1/4/24023809/microsoft-copilot-key-keyboard-windows-laptops-pcs">微软计划在键盘上新增 Copilot 按键</a></li>
+<li><a target="_blank" rel="noopener" href="https://workspace.dingtalk.com/welcome?from=dingtalk">2024 年 1 月 4 日，钉钉个人版正式上线。</a>：钉钉个人版旨在为小团队、个人用户和高校大学生等群体提供丰富的 AI 工具和服务，致力于成为 AI 时代的个人助理，提升个人和小团队的生产力。</li>
+</ul>
+<p>🎉 本文同步更新于  <a target="_blank" rel="noopener" href="https://github.com/starsight/TechWeekly">https://github.com/starsight/TechWeekly</a></p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>请我一杯咖啡吧！</div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/wechatpay.png" alt="热夏 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="/images/alipay.jpg" alt="热夏 支付宝">
+        <span>支付宝</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>热夏
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://www.lifeee.top/posts/38961.html" title="网上冲浪周刊第25期：新年新气象🌱">https://www.lifeee.top/posts/38961.html</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="followme">
+  <span>欢迎关注我的其它发布渠道</span>
+
+  <div class="social-list">
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="/atom.xml">
+            <span class="icon">
+              <i class="fa fa-rss"></i>
+            </span>
+
+            <span class="label">RSS</span>
+          </a>
+      </div>
+  </div>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/%E5%86%B2%E6%B5%AA/" rel="tag"><i class="fa fa-tag"></i> 冲浪</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/posts/35341.html" rel="prev" title="网上冲浪周刊第23期：圣诞快乐🎄">
+                  <i class="fa fa-angle-left"></i> 网上冲浪周刊第23期：圣诞快乐🎄
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/posts/4820.html" rel="next" title="网上冲浪周刊第27期：大寒已至，暖春将启🍃">
+                  网上冲浪周刊第27期：大寒已至，暖春将启🍃 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments gitalk-container"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 2018 – 
+    <span itemprop="copyrightYear">2026</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">热夏</span>
+  </div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>站点总字数：</span>
+    <span title="站点总字数">743k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">11:15</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/next-theme-pjax/0.6.0/pjax.min.js" integrity="sha256-vxLn1tSKWD4dqbMRyv940UYw4sXgMtYcK6reefzZrao=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lozad.js/1.16.0/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script><script src="/js/pjax.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+  <script src="/js/third-party/pace.js"></script>
+
+
+  
+  <script data-pjax async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","mhchem":false,"js":{"url":"//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
+
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"upwon","repo":"upwon.github.io","client_id":"7e047047ecee7317452b","client_secret":"c60fbdf0eb19e7264e33ab780319e4d420a58fee","admin_user":"upwon","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":null,"js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"c232fa184d2fe96cb6ca6e455d288963"}</script>
+<script src="/js/third-party/comments/gitalk.js"></script>
+
+</body>
+</html>

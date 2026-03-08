@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/myapple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/myfavicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/myfavicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/myapple-touch-icon-next.png" color="#222">
+  <meta name="google-site-verification" content="google2fc64c2b92961282.html">
+  <meta name="baidu-site-verification" content="s6BwSjIZYB">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.loli.net/css?family='LXGW+WenKai+LITE':300,300italic,400,400italic,700,700italic%7C'LXGW+WenKai+Screen':300,300italic,400,400italic,700,700italic%7C'LXGW+WenKai':300,300italic,400,400italic,700,700italic%7C'Noto+Serif+SC':300,300italic,400,400italic,700,700italic%7C'EB+Garamond':300,300italic,400,400italic,700,700italic%7C'PingFang+SC':300,300italic,400,400italic,700,700italic%7C'Microsoft+YaHei':300,300italic,400,400italic,700,700italic%7C'sans-serif':300,300italic,400,400italic,700,700italic%7CMa+Shan+Zheng:300,300italic,400,400italic,700,700italic%7CLXGW+WenKai+Screen:300,300italic,400,400italic,700,700italic%7CLXGW+WenKai:300,300italic,400,400italic,700,700italic%7CMenlo:300,300italic,400,400italic,700,700italic%7CMonaco:300,300italic,400,400italic,700,700italic%7CConsolas:300,300italic,400,400italic,700,700italic%7CSource+Code+Pro:300,300italic,400,400italic,700,700italic%7Csystem-ui:300,300italic,400,400italic,700,700italic%7Cmonospace:300,300italic,400,400italic,700,700italic%7Csans-serif:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha256-yIDrPSXHZdOZhAqiBP7CKzIwMQmRCJ8UeB8Jo17YC4o=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/themes/blue/pace-theme-minimal.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"www.lifeee.top","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.19.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"mac","show_result":true},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="欢迎阅读第33期技术资讯！本期我们推荐了Android 15预览版多项创新功能如通知管理、窗口记录以及文件完整性保护，Flutter生态中的MiniTex文本渲染器及其在跨平台上的运用等技术，此外，涵盖了Kotlin 2.0.0-Beta4的更新内容，以及一系列Android开发者实用工具和技术要点，包括内存泄漏、必备插件、依赖管理和热修复方案Tinker。文章还推介了几款有趣的工具，如跨平台多媒">
+<meta property="og:type" content="article">
+<meta property="og:title" content="网上冲浪周刊第33期">
+<meta property="og:url" content="https://www.lifeee.top/posts/36684.html">
+<meta property="og:site_name" content="热夏的博客">
+<meta property="og:description" content="欢迎阅读第33期技术资讯！本期我们推荐了Android 15预览版多项创新功能如通知管理、窗口记录以及文件完整性保护，Flutter生态中的MiniTex文本渲染器及其在跨平台上的运用等技术，此外，涵盖了Kotlin 2.0.0-Beta4的更新内容，以及一系列Android开发者实用工具和技术要点，包括内存泄漏、必备插件、依赖管理和热修复方案Tinker。文章还推介了几款有趣的工具，如跨平台多媒">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/202403091333548.jpg">
+<meta property="og:image" content="https://fastly.jsdelivr.net/gh/upwon/MyPicture@master/img/screenshot.webp">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/202402161812039.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/202402161819255.png">
+<meta property="og:image" content="https://s2.loli.net/2024/02/16/ekCDQfAcxB9FoWH.png">
+<meta property="og:image" content="https://s2.loli.net/2024/02/16/DrRO4XPiBdjN521.png">
+<meta property="og:image" content="https://s2.loli.net/2024/02/16/yptnbUraTi8VS1g.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/202402161858206.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/202403082327866.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/202403082329068.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/202403082329839.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/202402161924945.png">
+<meta property="article:published_time" content="2024-03-08T15:32:57.000Z">
+<meta property="article:modified_time" content="2026-03-08T07:46:57.147Z">
+<meta property="article:author" content="热夏">
+<meta property="article:tag" content="冲浪">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/202403091333548.jpg">
+
+
+<link rel="canonical" href="https://www.lifeee.top/posts/36684.html">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://www.lifeee.top/posts/36684.html","path":"posts/36684.html","title":"网上冲浪周刊第33期"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>网上冲浪周刊第33期 | 热夏的博客</title>
+  
+
+
+
+
+
+
+
+<link href="https://fonts.loli.net/css?family=Noto+Serif+SC:400,500,700&display=swap&subset=chinese-simplified" rel="stylesheet">
+<link rel="stylesheet" href="https://npm.elemecdn.com/lxgw-wenkai-screen-webfont@1.7.0/style.css" />
+
+<link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&display=swap" rel="stylesheet">
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="热夏的博客" type="application/atom+xml">
+<style>.darkmode--activated{--body-bg-color:#282828;--content-bg-color:#333;--card-bg-color:#555;--text-color:#ccc;--blockquote-color:#bbb;--link-color:#ccc;--link-hover-color:#eee;--brand-color:#ddd;--brand-hover-color:#ddd;--table-row-odd-bg-color:#282828;--table-row-hover-bg-color:#363636;--menu-item-bg-color:#555;--btn-default-bg:#222;--btn-default-color:#ccc;--btn-default-border-color:#555;--btn-default-hover-bg:#666;--btn-default-hover-color:#ccc;--btn-default-hover-border-color:#666;--highlight-background:#282b2e;--highlight-foreground:#a9b7c6;--highlight-gutter-background:#34393d;--highlight-gutter-foreground:#9ca9b6}.darkmode--activated img{opacity:.75}.darkmode--activated img:hover{opacity:.9}.darkmode--activated code{color:#69dbdc;background:0 0}button.darkmode-toggle{z-index:9999}.darkmode-ignore,img{display:flex!important}.beian img{display:inline-block!important}</style></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">热夏的博客</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-heart fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%8A%80%E6%9C%AF"><span class="nav-number">1.</span> <span class="nav-text">技术</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8E%A8%E8%8D%90%E9%98%85%E8%AF%BB"><span class="nav-number">1.1.</span> <span class="nav-text">推荐阅读</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%9C%89%E8%B6%A3%E7%9A%84%E5%B7%A5%E5%85%B7"><span class="nav-number">2.</span> <span class="nav-text">有趣的工具</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%B7%A8%E5%B9%B3%E5%8F%B0%E5%BC%80%E6%BA%90%E8%A7%86%E9%A2%91%EF%BC%8C%E6%BC%AB%E7%94%BB%EF%BC%8C%E5%B0%8F%E8%AF%B4%E5%BA%94%E7%94%A8-Miru-App"><span class="nav-number">2.1.</span> <span class="nav-text">跨平台开源视频，漫画，小说应用 Miru App</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BF%9D%E5%AD%98-MacOS-%E5%BA%94%E7%94%A8%E6%9C%80%E6%96%B0%EF%BC%9A-latest"><span class="nav-number">2.2.</span> <span class="nav-text">保存 MacOS 应用最新： latest</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#DWMBlurGlass-%E7%BB%99%E5%85%A8%E5%B1%80%E7%B3%BB%E7%BB%9F%E6%A0%87%E9%A2%98%E6%A0%8F%E6%B7%BB%E5%8A%A0%E8%87%AA%E5%AE%9A%E4%B9%89%E6%95%88%E6%9E%9C-Windows%E5%B9%B3%E5%8F%B0"><span class="nav-number">2.3.</span> <span class="nav-text">DWMBlurGlass 给全局系统标题栏添加自定义效果 [Windows平台]</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AE%9D%E8%97%8F%E4%BF%A1%E6%81%AF"><span class="nav-number">3.</span> <span class="nav-text">宝藏信息</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%BA%E5%BC%80%E5%8F%91%E4%BA%BA%E5%91%98%E5%88%86%E4%BA%AB%E5%BF%AB%E9%80%9F%E5%8F%82%E8%80%83%E5%A4%87%E5%BF%98%E6%B8%85%E5%8D%95-%E9%80%9F%E6%9F%A5%E8%A1%A8-%EF%BC%9Areference"><span class="nav-number">3.1.</span> <span class="nav-text">为开发人员分享快速参考备忘清单(速查表) ：reference</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80%E7%AB%99%E5%BC%8F-AI-%E5%BC%80%E5%8F%91%E5%B9%B3%E5%8F%B0-%E6%89%A3%E5%AD%90"><span class="nav-number">3.2.</span> <span class="nav-text">一站式 AI 开发平台 扣子</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ffmpeg-online-%EF%BC%9A%E5%9C%A8%E7%BA%BF%E5%A4%84%E7%90%86%E9%9F%B3%E8%A7%86%E9%A2%91"><span class="nav-number">3.3.</span> <span class="nav-text">ffmpeg-online ：在线处理音视频</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%B5%84%E8%AE%AF"><span class="nav-number">4.</span> <span class="nav-text">资讯</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="热夏"
+      src="/images/head.jpg">
+  <p class="site-author-name" itemprop="name">热夏</p>
+  <div class="site-description" itemprop="description">空山新雨后，天气晚来秋。</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">112</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">44</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/upwon" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;upwon" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:w1244753906@gmail.com" title="E-Mail → mailto:w1244753906@gmail.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.lifeee.top//atom.xml" title="RSS → https:&#x2F;&#x2F;www.lifeee.top&#x2F;&#x2F;atom.xml" rel="noopener me"><i class="fa fa-rss fa-fw"></i>RSS</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+        <div class="pjax">
+        </div>
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.lifeee.top/posts/36684.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/head.jpg">
+      <meta itemprop="name" content="热夏">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="热夏的博客">
+      <meta itemprop="description" content="空山新雨后，天气晚来秋。">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="网上冲浪周刊第33期 | 热夏的博客">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          网上冲浪周刊第33期
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2024-03-08 23:32:57" itemprop="dateCreated datePublished" datetime="2024-03-08T23:32:57+08:00">2024-03-08</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2026-03-08 15:46:57" itemprop="dateModified" datetime="2026-03-08T15:46:57+08:00">2026-03-08</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%86%B2%E6%B5%AA/" itemprop="url" rel="index"><span itemprop="name">冲浪</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>3.1k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>3 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p>欢迎阅读第33期技术资讯！本期我们推荐了Android 15预览版多项创新功能如通知管理、窗口记录以及文件完整性保护，Flutter生态中的MiniTex文本渲染器及其在跨平台上的运用等技术，此外，涵盖了Kotlin 2.0.0-Beta4的更新内容，以及一系列Android开发者实用工具和技术要点，包括内存泄漏、必备插件、依赖管理和热修复方案Tinker。文章还推介了几款有趣的工具，如跨平台多媒体应用Miru App、MacOS应用更新检查工具latest、Windows桌面美化工具DWMBlurGlass。同时，特别推荐了方便快捷的开发者参考资料站点Quick Reference，满足您随时查阅技术细节的需求。最后，提及了一站式AI开发平台扣子和在线音视频处理工具ffmpeg-online。</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/202403091333548.jpg" alt="封面图 https://www.pexels.com/zh-cn/photo/17935433/"></p>
+<span id="more"></span>
+
+
+
+<br />
+
+<p>欢迎来到第33期 ！😄</p>
+<p>期待您通过RSS订阅本博客：<a href="https://www.lifeee.top//atom.xml">https://www.lifeee.top//atom.xml</a></p>
+<h1 id="技术"><a href="#技术" class="headerlink" title="技术"></a>技术</h1><h2 id="推荐阅读"><a href="#推荐阅读" class="headerlink" title="推荐阅读"></a>推荐阅读</h2><ul>
+<li><p><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/JYeqP_-XNk7Bqow8Jompzg">2024 ，Android 15 预览版来了 </a> ：引入“通知冷却”功能，限制同一来源的连续通知，降低音量提醒；提供新的 API <code>setupFsVerity</code>，利用 Linux 内核中 fs-verity 功能，保护文件完整性；允许用户仅共享或记录某个应用窗口，而不是整个设备屏幕；</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/cJqZ-WkJ24E4IRaDic8rNQ">Android 15 新功能与亮点大总结  </a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/p2hdpXXhN8dST8mJtWq5pg">免加载字体的 Flutter 文本渲染器 —— MiniTex  </a>：MiniTex 是一个文本渲染器，同时具备文本排版能力，借助 MiniTex，Flutter Web CanvasKit 应用可以在不加载字体文件的情况下，依然可以渲染多国语言。MiniTex 支持在 MPFlutter 和 Flutter Web 中使用，开源，免费。本文主要介绍 MiniTex 的实现原理以及使用方法。</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/lTmgTV_Jf2C1rMsVN6s0NQ">Jetpack Compose 1.6 发布：性能大升级、拖放新功能、文本新变化</a>：Jetpack Compose 1.6 发布，带来了性能优化、文本改进、拖放支持等新功能。</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/POvHlrDV5F9YubvEaSX_Bw">Android内存泄漏知识点  </a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/QcvvBhZZBO7RGPMUyT9KRQ">10款对Android开发者来说必不可少的Android Studio插件 </a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/C4krqPlptwOypyuslBlcug">使用 Gradle 版本目录进行依赖管理 - Android </a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/-huH9wFk64db-5UHV3DY-g">拥抱生成式AI，FlutterFlow 低代码移动应用开发平台获2550万美元融资  </a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/DI4F2zuRIiXHegT15DUbdg">Android热修复首选方案Tinker探究  </a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/AWrjhOv2RpUDVY37SQBvoA">Kotlin 技术月报 | 2024 年 2 月 </a> ：</p>
+<ul>
+<li>Kotlin 2.0.0-Beta4 版本发布，K2 编译器稳定性持续提升，Gradle 构建工具方面也有改进。</li>
+<li>Kotlin&#x2F;JS 支持类型安全的纯 JavaScript 对象、使用 npm 作为包管理器、导出 List, Map, Set 等集合类型。</li>
+<li>Amper 2024 年 2 月更新，支持 Gradle version catalogs、依赖补全、在 IDEA 中创建项目、支持 Fleet 等 IDE。</li>
+<li>Jetpack Lifecycle 支持 Kotlin 跨平台，核心 Lifecycle API 现在包含在与 Kotlin Multiplatform 兼容的工件中。</li>
+</ul>
+<br />
+
+<br /></li>
+</ul>
+<h1 id="有趣的工具"><a href="#有趣的工具" class="headerlink" title="有趣的工具"></a>有趣的工具</h1><h2 id="跨平台开源视频，漫画，小说应用-Miru-App"><a href="#跨平台开源视频，漫画，小说应用-Miru-App" class="headerlink" title="跨平台开源视频，漫画，小说应用 Miru App"></a>跨平台开源视频，漫画，小说应用 <a target="_blank" rel="noopener" href="https://github.com/miru-project/miru-app">Miru App</a></h2><p>Miru App 是一款免费，开源的 ，支持视频，漫画，小说扩展源的多功能应用，支持 Android，Windows，Web。</p>
+<p>安装好后点开扩展仓库，目前已经提供了一些扩展源，包括有视频、漫画、动漫、小说各个网站平台，选择需要的源安装即可。</p>
+<p><strong>特性</strong></p>
+<ul>
+<li>支持 <code>windows</code>，<code>android</code></li>
+<li>友好的扩展编写支持，调试日志</li>
+<li>扩展使用 JavaScript 语言，开发简单</li>
+<li>支持自定义扩展仓库</li>
+<li>官方扩展仓库提供视频源，无需编写任何扩展即可使用</li>
+<li>支持在线观看多种视频，漫画，小说源，实现多平台的统一</li>
+<li>统一系统 UI 的设计语言</li>
+<li>自动获取 TMDB 元数据信息</li>
+</ul>
+<p><img data-src="https://fastly.jsdelivr.net/gh/upwon/MyPicture@master/img/screenshot.webp"></p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/202402161812039.png" alt="扩展仓库"></p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/202402161819255.png" alt="体验截图"></p>
+<p>开源地址：<a target="_blank" rel="noopener" href="https://github.com/miru-project/miru-app">https://github.com/miru-project/miru-app</a></p>
+<p>TG 频道 ：  <a target="_blank" rel="noopener" href="https://t.me/MiruChat">https://t.me/MiruChat</a></p>
+<br />
+
+<h2 id="保存-MacOS-应用最新：-latest"><a href="#保存-MacOS-应用最新：-latest" class="headerlink" title="保存 MacOS 应用最新： latest"></a>保存 MacOS 应用最新： <a target="_blank" rel="noopener" href="https://github.com/mangerlahn/latest">latest</a></h2><p><a target="_blank" rel="noopener" href="https://github.com/mangerlahn/latest">latest</a> 是一款免费开源的 macOS 应用程序，可轻松检查所有已安装应用程序的更新状态，并一键获取最新版本。</p>
+<p><img data-src="https://s2.loli.net/2024/02/16/ekCDQfAcxB9FoWH.png"></p>
+<p>开源地址：<a target="_blank" rel="noopener" href="https://github.com/mangerlahn/latest">https://github.com/mangerlahn/latest</a></p>
+<br />
+
+<h2 id="DWMBlurGlass-给全局系统标题栏添加自定义效果-Windows平台"><a href="#DWMBlurGlass-给全局系统标题栏添加自定义效果-Windows平台" class="headerlink" title="DWMBlurGlass 给全局系统标题栏添加自定义效果 [Windows平台]"></a><a target="_blank" rel="noopener" href="https://github.com/Maplespe/DWMBlurGlass?tab=readme-ov-file">DWMBlurGlass</a> 给全局系统标题栏添加自定义效果 [Windows平台]</h2><p><a target="_blank" rel="noopener" href="https://github.com/Maplespe/DWMBlurGlass?tab=readme-ov-file">DWMBlurGlass</a> 是一款 Windows 桌面应用，可以给全局系统标题栏添加自定义效果实现美化，支持win10和win11。 </p>
+<p><strong>特效</strong></p>
+<ul>
+<li>为全局系统标题栏添加自定义效果</li>
+<li>可自定义全局或仅标题栏的模糊强度</li>
+<li>可自定义标题栏混合颜色</li>
+<li>可自定义标题栏文本颜色</li>
+<li>可添加Aero反射和视差效果</li>
+<li>可还原win7样式标题栏按钮高度</li>
+<li>支持为使用旧版win7API DwmEnableBlurBehindWindow 的程序启用模糊效果</li>
+<li>支持 <code>Blur</code>, <code>Aero</code>, <code>Acrylic</code>, <code>Mica(仅win11)</code> 效果</li>
+<li>可单独设置 亮&#x2F;暗 颜色模式颜色，跟随系统自动切换</li>
+<li>提供 <code>CustomBlur</code>、<code>AccentBlur</code>、<code>SystemBackdrop</code> 模糊方法可选</li>
+<li>第三方主题支持</li>
+</ul>
+<p><img data-src="https://s2.loli.net/2024/02/16/DrRO4XPiBdjN521.png"></p>
+<p>开源地址：<a target="_blank" rel="noopener" href="https://github.com/Maplespe/DWMBlurGlass">https://github.com/Maplespe/DWMBlurGlass</a></p>
+<br />
+
+<h1 id="宝藏信息"><a href="#宝藏信息" class="headerlink" title="宝藏信息"></a>宝藏信息</h1><h2 id="为开发人员分享快速参考备忘清单-速查表-：reference"><a href="#为开发人员分享快速参考备忘清单-速查表-：reference" class="headerlink" title="为开发人员分享快速参考备忘清单(速查表) ：reference"></a>为开发人员分享快速参考备忘清单(速查表) ：<a target="_blank" rel="noopener" href="https://github.com/jaywcjlove/reference">reference</a></h2><p><a target="_blank" rel="noopener" href="https://wangchujiang.com/reference/">Quick Reference</a> 一个为开发人员分享快速参考备忘清单(速查表)的在线网站。</p>
+<p><img data-src="https://s2.loli.net/2024/02/16/yptnbUraTi8VS1g.png"></p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/202402161858206.png"></p>
+<p>在线地址：<a target="_blank" rel="noopener" href="https://wangchujiang.com/reference/">https://wangchujiang.com/reference/</a></p>
+<p>开源地址：<a target="_blank" rel="noopener" href="https://github.com/jaywcjlove/reference">https://github.com/jaywcjlove/reference</a></p>
+<p>自行部署教程：<a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/hravSQOfvw1Eu5odNCWaFA">https://mp.weixin.qq.com/s/hravSQOfvw1Eu5odNCWaFA</a></p>
+<br />
+
+<h2 id="一站式-AI-开发平台-扣子"><a href="#一站式-AI-开发平台-扣子" class="headerlink" title="一站式 AI 开发平台 扣子"></a>一站式 AI 开发平台 <a target="_blank" rel="noopener" href="https://www.coze.cn/">扣子</a></h2><p>扣子是新一代 AI 大模型智能体开发平台。整合了插件、长短期记忆、工作流、卡片等丰富能力，扣子能帮你低门槛、快速搭建个性化或具备商业价值的智能体，并一键发布到豆包、飞书、微信服务号等各个渠道！</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/202403082327866.png"></p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/202403082329068.png"></p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/202403082329839.png"></p>
+<p>在线地址：<a target="_blank" rel="noopener" href="https://www.coze.cn/">https://www.coze.cn/</a></p>
+<br />
+
+<h2 id="ffmpeg-online-：在线处理音视频"><a href="#ffmpeg-online-：在线处理音视频" class="headerlink" title="ffmpeg-online ：在线处理音视频"></a><a target="_blank" rel="noopener" href="https://ffmpeg-online.vercel.app/?inputOptions=-i&output=output.mp4&outputOptions=">ffmpeg-online</a> ：在线处理音视频</h2><p><a target="_blank" rel="noopener" href="https://ffmpeg-online.vercel.app/?inputOptions=-i&output=output.mp4&outputOptions=">ffmpeg-online</a>  是一个基于 <a target="_blank" rel="noopener" href="https://github.com/ffmpegwasm/ffmpeg.wasm">ffmpeg.wasm</a> 的在线网站，可用于在线处理音频和视频。</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/202402161924945.png"></p>
+<p>体验地址：<a target="_blank" rel="noopener" href="https://ffmpeg-online.vercel.app/?inputOptions=-i&output=output.mp4&outputOptions=">https://ffmpeg-online.vercel.app/?inputOptions=-i&output=output.mp4&outputOptions=</a></p>
+<p> <a target="_blank" rel="noopener" href="https://github.com/ffmpegwasm/ffmpeg.wasm">ffmpeg.wasm</a> 地址： <a target="_blank" rel="noopener" href="https://github.com/ffmpegwasm/ffmpeg.wasm">https://github.com/ffmpegwasm/ffmpeg.wasm</a> </p>
+<br />
+
+<h1 id="资讯"><a href="#资讯" class="headerlink" title="资讯"></a>资讯</h1><ul>
+<li><p><a target="_blank" rel="noopener" href="https://www.iplaysoft.com/news/6106?utm_source=pocket_reader">凉了！微软正式 “砍掉” 大家都喜欢的安卓子系统！ </a>:  在 Windows 上运行安卓 APP 是无数网友对 Win11 最感兴趣的功能之一，发布后引来了叫好声一片！甚至很多人都是奔着这功能去升级 Win11的。然而非常痛心的是，微软发布公告宣布正式放弃 WSA！</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://www.qbitai.com/2024/03/126453.html?utm_source=pocket_reader">GPT-4王冠没掉！Claude 3竞技场人类投票成绩出炉：仅居第三 | 量子位 (qbitai.com)</a>：人工智能模型Claude 3在“大模型竞技场”（LMSYS Chatbot Arena Leaderboard）上的人类投票成绩。经过约20000张投票，Claude 3的“大杯”模型(Opus)获得了1233分，位列第三，成为首个能在排行榜上与GPT-4-Turbo系列竞争的模型。然而，Claude 3并未超越GPT-4系列，其中GPT-4 Turbo的两个版本以相同的最高分1251分占据榜首位置。</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://www.36kr.com/p/2676078636283398">暴跌90%，77亿市值灰飞烟灭，元宇宙第一股，崩了-36氪 (36kr.com)</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/2fX4D2RJ8e_l_UfQo4ZGbQ">漫画家鸟山明因急性硬膜下血肿去世，享年68岁，曾创作《阿拉蕾》《龙珠》等经典作品</a></p>
+</li>
+</ul>
+<p>🎉 本文同步更新于  <a target="_blank" rel="noopener" href="https://github.com/starsight/TechWeekly">https://github.com/starsight/TechWeekly</a></p>
+<hr>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>请我一杯咖啡吧！</div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/wechatpay.png" alt="热夏 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="/images/alipay.jpg" alt="热夏 支付宝">
+        <span>支付宝</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>热夏
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://www.lifeee.top/posts/36684.html" title="网上冲浪周刊第33期">https://www.lifeee.top/posts/36684.html</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="followme">
+  <span>欢迎关注我的其它发布渠道</span>
+
+  <div class="social-list">
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="/atom.xml">
+            <span class="icon">
+              <i class="fa fa-rss"></i>
+            </span>
+
+            <span class="label">RSS</span>
+          </a>
+      </div>
+  </div>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/%E5%86%B2%E6%B5%AA/" rel="tag"><i class="fa fa-tag"></i> 冲浪</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/posts/63498.html" rel="prev" title="网上冲浪周刊第31期： 万物复苏🌱">
+                  <i class="fa fa-angle-left"></i> 网上冲浪周刊第31期： 万物复苏🌱
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/posts/14475.html" rel="next" title="网上冲浪周刊第35期">
+                  网上冲浪周刊第35期 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments gitalk-container"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 2018 – 
+    <span itemprop="copyrightYear">2026</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">热夏</span>
+  </div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>站点总字数：</span>
+    <span title="站点总字数">743k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">11:15</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/next-theme-pjax/0.6.0/pjax.min.js" integrity="sha256-vxLn1tSKWD4dqbMRyv940UYw4sXgMtYcK6reefzZrao=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lozad.js/1.16.0/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script><script src="/js/pjax.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+  <script src="/js/third-party/pace.js"></script>
+
+
+  
+  <script data-pjax async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","mhchem":false,"js":{"url":"//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
+
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"upwon","repo":"upwon.github.io","client_id":"7e047047ecee7317452b","client_secret":"c60fbdf0eb19e7264e33ab780319e4d420a58fee","admin_user":"upwon","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":null,"js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"d73d19f4036e0de596167174c4d28c00"}</script>
+<script src="/js/third-party/comments/gitalk.js"></script>
+
+</body>
+</html>

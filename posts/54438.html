@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/myapple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/myfavicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/myfavicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/myapple-touch-icon-next.png" color="#222">
+  <meta name="google-site-verification" content="google2fc64c2b92961282.html">
+  <meta name="baidu-site-verification" content="s6BwSjIZYB">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.loli.net/css?family='LXGW+WenKai+LITE':300,300italic,400,400italic,700,700italic%7C'LXGW+WenKai+Screen':300,300italic,400,400italic,700,700italic%7C'LXGW+WenKai':300,300italic,400,400italic,700,700italic%7C'Noto+Serif+SC':300,300italic,400,400italic,700,700italic%7C'EB+Garamond':300,300italic,400,400italic,700,700italic%7C'PingFang+SC':300,300italic,400,400italic,700,700italic%7C'Microsoft+YaHei':300,300italic,400,400italic,700,700italic%7C'sans-serif':300,300italic,400,400italic,700,700italic%7CMa+Shan+Zheng:300,300italic,400,400italic,700,700italic%7CLXGW+WenKai+Screen:300,300italic,400,400italic,700,700italic%7CLXGW+WenKai:300,300italic,400,400italic,700,700italic%7CMenlo:300,300italic,400,400italic,700,700italic%7CMonaco:300,300italic,400,400italic,700,700italic%7CConsolas:300,300italic,400,400italic,700,700italic%7CSource+Code+Pro:300,300italic,400,400italic,700,700italic%7Csystem-ui:300,300italic,400,400italic,700,700italic%7Cmonospace:300,300italic,400,400italic,700,700italic%7Csans-serif:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha256-yIDrPSXHZdOZhAqiBP7CKzIwMQmRCJ8UeB8Jo17YC4o=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/themes/blue/pace-theme-minimal.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"www.lifeee.top","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.19.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"mac","show_result":true},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="欢迎阅读本期技术资讯！我们为您介绍了一些有趣的工具，如开源Android屏幕共享工具ScreenStream 、真正独立的网络浏览器Ladybird、基于 AI 的智能搜索网站Search For You。此外，还安利了2024年度Mac装机必备、安全私密的文件分享服务Send 、一站式MusicFree源插件订阅聚合器以及Windows按键映射工具QKeyMapper 。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="网上冲浪周刊第71期">
+<meta property="og:url" content="https://www.lifeee.top/posts/54438.html">
+<meta property="og:site_name" content="热夏的博客">
+<meta property="og:description" content="欢迎阅读本期技术资讯！我们为您介绍了一些有趣的工具，如开源Android屏幕共享工具ScreenStream 、真正独立的网络浏览器Ladybird、基于 AI 的智能搜索网站Search For You。此外，还安利了2024年度Mac装机必备、安全私密的文件分享服务Send 、一站式MusicFree源插件订阅聚合器以及Windows按键映射工具QKeyMapper 。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/pexels-efrem-efre-2786187-25286643.jpg">
+<meta property="og:image" content="https://socialify.git.ci/dkrivoruchko/ScreenStream/image?description=1&forks=1&issues=1&language=1&name=1&owner=1&pulls=1&stargazers=1&theme=Light">
+<meta property="og:image" content="https://github.com/dkrivoruchko/ScreenStream/raw/master/screenshots/screenshot_lm_d.png">
+<meta property="og:image" content="https://github.com/dkrivoruchko/ScreenStream/raw/master/screenshots/screenshot_lm_d_about.png">
+<meta property="og:image" content="https://github.com/dkrivoruchko/ScreenStream/raw/master/screenshots/screenshot_gm_d.png">
+<meta property="og:image" content="https://github.com/dkrivoruchko/ScreenStream/raw/master/screenshots/screenshot_gm_d_about.png">
+<meta property="og:image" content="https://github.com/dkrivoruchko/ScreenStream/raw/master/screenshots/screenshot_settings_1_d.png">
+<meta property="og:image" content="https://github.com/dkrivoruchko/ScreenStream/raw/master/screenshots/screenshot_settings_1_l.png">
+<meta property="og:image" content="https://github.com/dkrivoruchko/ScreenStream/raw/master/screenshots/screenshot_settings_2_d.png">
+<meta property="og:image" content="https://github.com/dkrivoruchko/ScreenStream/raw/master/screenshots/screenshot_settings_2_l.png">
+<meta property="og:image" content="https://github.com/dkrivoruchko/ScreenStream/raw/master/screenshots/screenshot_settings_3_d.png">
+<meta property="og:image" content="https://github.com/dkrivoruchko/ScreenStream/raw/master/screenshots/screenshot_settings_3_l.png">
+<meta property="og:image" content="https://github.com/dkrivoruchko/ScreenStream/raw/master/screenshots/screenshot_settings_4_d.png">
+<meta property="og:image" content="https://github.com/dkrivoruchko/ScreenStream/raw/master/screenshots/screenshot_settings_4_l.png">
+<meta property="og:image" content="https://github.com/dkrivoruchko/ScreenStream/raw/master/screenshots/screenshot_about_d.png">
+<meta property="og:image" content="https://socialify.git.ci/LadybirdBrowser/ladybird/image?description=1&forks=1&issues=1&language=1&name=1&owner=1&pulls=1&stargazers=1&theme=Light">
+<meta property="og:image" content="https://private-user-images.githubusercontent.com/58774414/389225621-18acd2c3-5a95-4d13-a637-e5861e773cf3.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MzQyNzE1OTUsIm5iZiI6MTczNDI3MTI5NSwicGF0aCI6Ii81ODc3NDQxNC8zODkyMjU2MjEtMThhY2QyYzMtNWE5NS00ZDEzLWE2MzctZTU4NjFlNzczY2YzLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDEyMTUlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQxMjE1VDE0MDEzNVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTA1YzUxOWIwYjk0OGY4MWE0NjcxNWY0ZWY3N2Y2NjBlYWM1ZGU2YjNmNzFiMGY1MmMzNjc1YWM1MjE5OGVhMmYmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0._rWU4cQLykq4KG2GI7MMQiUrxgZoHy13l-bPMckxAME">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/image-20241215220054836.png">
+<meta property="og:image" content="https://socialify.git.ci/MayDay-wpf/SearchForYou/image?description=1&forks=1&issues=1&language=1&name=1&owner=1&pulls=1&stargazers=1&theme=Light">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/image-20241215221936966.png">
+<meta property="og:image" content="https://socialify.git.ci/timvisee/send/image?description=1&forks=1&issues=1&language=1&name=1&owner=1&pulls=1&stargazers=1&theme=Light">
+<meta property="og:image" content="https://socialify.git.ci/xxnuo/MusicFreePluginsHub/image?description=1&forks=1&issues=1&language=1&name=1&owner=1&pulls=1&stargazers=1&theme=Light">
+<meta property="og:image" content="https://socialify.git.ci/Zalafina/QKeyMapper/image?description=1&forks=1&issues=1&language=1&name=1&owner=1&pulls=1&stargazers=1&theme=Light">
+<meta property="article:published_time" content="2024-12-15T14:39:55.000Z">
+<meta property="article:modified_time" content="2026-03-08T07:46:57.151Z">
+<meta property="article:author" content="热夏">
+<meta property="article:tag" content="冲浪">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/pexels-efrem-efre-2786187-25286643.jpg">
+
+
+<link rel="canonical" href="https://www.lifeee.top/posts/54438.html">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://www.lifeee.top/posts/54438.html","path":"posts/54438.html","title":"网上冲浪周刊第71期"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>网上冲浪周刊第71期 | 热夏的博客</title>
+  
+
+
+
+
+
+
+
+<link href="https://fonts.loli.net/css?family=Noto+Serif+SC:400,500,700&display=swap&subset=chinese-simplified" rel="stylesheet">
+<link rel="stylesheet" href="https://npm.elemecdn.com/lxgw-wenkai-screen-webfont@1.7.0/style.css" />
+
+<link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&display=swap" rel="stylesheet">
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="热夏的博客" type="application/atom+xml">
+<style>.darkmode--activated{--body-bg-color:#282828;--content-bg-color:#333;--card-bg-color:#555;--text-color:#ccc;--blockquote-color:#bbb;--link-color:#ccc;--link-hover-color:#eee;--brand-color:#ddd;--brand-hover-color:#ddd;--table-row-odd-bg-color:#282828;--table-row-hover-bg-color:#363636;--menu-item-bg-color:#555;--btn-default-bg:#222;--btn-default-color:#ccc;--btn-default-border-color:#555;--btn-default-hover-bg:#666;--btn-default-hover-color:#ccc;--btn-default-hover-border-color:#666;--highlight-background:#282b2e;--highlight-foreground:#a9b7c6;--highlight-gutter-background:#34393d;--highlight-gutter-foreground:#9ca9b6}.darkmode--activated img{opacity:.75}.darkmode--activated img:hover{opacity:.9}.darkmode--activated code{color:#69dbdc;background:0 0}button.darkmode-toggle{z-index:9999}.darkmode-ignore,img{display:flex!important}.beian img{display:inline-block!important}</style></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">热夏的博客</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-heart fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8E%A8%E8%8D%90%E9%98%85%E8%AF%BB"><span class="nav-number">1.</span> <span class="nav-text">推荐阅读</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%89%E8%B6%A3%E7%9A%84%E5%B7%A5%E5%85%B7"><span class="nav-number">2.</span> <span class="nav-text">有趣的工具</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#ScreenStream%EF%BC%9A%E5%BC%80%E6%BA%90Android%E5%B1%8F%E5%B9%95%E5%85%B1%E4%BA%AB%E5%B7%A5%E5%85%B7"><span class="nav-number">2.1.</span> <span class="nav-text">ScreenStream：开源Android屏幕共享工具</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Ladybird%E6%B5%8F%E8%A7%88%E5%99%A8%EF%BC%9A%E7%9C%9F%E6%AD%A3%E7%8B%AC%E7%AB%8B%E7%9A%84%E7%BD%91%E7%BB%9C%E6%B5%8F%E8%A7%88%E5%99%A8"><span class="nav-number">2.2.</span> <span class="nav-text">Ladybird浏览器：真正独立的网络浏览器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Search-For-You%EF%BC%9A%E5%9F%BA%E4%BA%8E-AI-%E7%9A%84%E6%99%BA%E8%83%BD%E6%90%9C%E7%B4%A2%E7%BD%91%E7%AB%99"><span class="nav-number">2.3.</span> <span class="nav-text">Search For You：基于 AI 的智能搜索网站</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9D%E8%97%8F%E4%BF%A1%E6%81%AF"><span class="nav-number">3.</span> <span class="nav-text">宝藏信息</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2024%E5%B9%B4%E5%BA%A6Mac%E8%A3%85%E6%9C%BA%E5%BF%85%E5%A4%87%EF%BC%9A50%E6%AC%BE%E7%B2%BE%E9%80%89%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90"><span class="nav-number">3.1.</span> <span class="nav-text">2024年度Mac装机必备：50款精选软件推荐</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Send-%E5%AE%89%E5%85%A8%E7%A7%81%E5%AF%86%E7%9A%84%E6%96%87%E4%BB%B6%E5%88%86%E4%BA%AB%E6%9C%8D%E5%8A%A1"><span class="nav-number">3.2.</span> <span class="nav-text">Send: 安全私密的文件分享服务</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MusicFreePluginsHub%EF%BC%9A%E4%B8%80%E7%AB%99%E5%BC%8FMusicFree%E6%BA%90%E6%8F%92%E4%BB%B6%E8%AE%A2%E9%98%85%E8%81%9A%E5%90%88%E5%99%A8"><span class="nav-number">3.3.</span> <span class="nav-text">MusicFreePluginsHub：一站式MusicFree源插件订阅聚合器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Windows%E6%8C%89%E9%94%AE%E6%98%A0%E5%B0%84%E5%B7%A5%E5%85%B7QKeyMapper"><span class="nav-number">3.4.</span> <span class="nav-text">Windows按键映射工具QKeyMapper</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%90%8E%E8%AE%B0"><span class="nav-number">4.</span> <span class="nav-text">后记</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="热夏"
+      src="/images/head.jpg">
+  <p class="site-author-name" itemprop="name">热夏</p>
+  <div class="site-description" itemprop="description">空山新雨后，天气晚来秋。</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">112</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">44</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/upwon" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;upwon" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:w1244753906@gmail.com" title="E-Mail → mailto:w1244753906@gmail.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.lifeee.top//atom.xml" title="RSS → https:&#x2F;&#x2F;www.lifeee.top&#x2F;&#x2F;atom.xml" rel="noopener me"><i class="fa fa-rss fa-fw"></i>RSS</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+        <div class="pjax">
+        </div>
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.lifeee.top/posts/54438.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/head.jpg">
+      <meta itemprop="name" content="热夏">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="热夏的博客">
+      <meta itemprop="description" content="空山新雨后，天气晚来秋。">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="网上冲浪周刊第71期 | 热夏的博客">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          网上冲浪周刊第71期
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2024-12-15 22:39:55" itemprop="dateCreated datePublished" datetime="2024-12-15T22:39:55+08:00">2024-12-15</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2026-03-08 15:46:57" itemprop="dateModified" datetime="2026-03-08T15:46:57+08:00">2026-03-08</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%86%B2%E6%B5%AA/" itemprop="url" rel="index"><span itemprop="name">冲浪</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>2.4k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>2 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p>欢迎阅读本期技术资讯！我们为您介绍了一些有趣的工具，如开源Android屏幕共享工具ScreenStream 、真正独立的网络浏览器Ladybird、基于 AI 的智能搜索网站Search For You。此外，还安利了2024年度Mac装机必备、安全私密的文件分享服务Send 、一站式MusicFree源插件订阅聚合器以及Windows按键映射工具QKeyMapper 。</p>
+<p> <img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/pexels-efrem-efre-2786187-25286643.jpg" alt="https://www.pexels.com/zh-cn/photo/25286643/"></p>
+<span id="more"></span>
+
+
+
+<br />
+
+<p>欢迎来到第71期 ！😄</p>
+<p>期待您通过RSS订阅我们：<a href="https://www.lifeee.top//atom.xml">https://www.lifeee.top//atom.xml</a></p>
+<br />
+
+
+
+<h2 id="推荐阅读"><a href="#推荐阅读" class="headerlink" title="推荐阅读"></a>推荐阅读</h2><ul>
+<li><p><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/Kq8PTH82cfIG_J7OcJJ4RA">鸿蒙 OS Next 支持运行 Android 应用了</a>：文章讨论了鸿蒙OS Next 5.0上架的“出境易”应用，该应用使得不兼容原生鸿蒙OS Next的Android应用得以运行，并推测了其技术原理。</p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/GnGpaGWAKSHsFadmXqZvqQ">Android 崩溃率收敛至 0.01% 实践</a>:  文章详细介绍了作者在项目中如何通过创建修BUG分支、每日查看Dump后台、开发崩溃容灾机制等措施，将Android应用的崩溃率降低至0.01%。</p>
+</li>
+</ul>
+<br />
+
+<br />
+
+<h2 id="有趣的工具"><a href="#有趣的工具" class="headerlink" title="有趣的工具"></a>有趣的工具</h2><h3 id="ScreenStream：开源Android屏幕共享工具"><a href="#ScreenStream：开源Android屏幕共享工具" class="headerlink" title="ScreenStream：开源Android屏幕共享工具"></a>ScreenStream：开源Android屏幕共享工具</h3><p>ScreenStream是一个用户友好的Android应用程序，允许用户轻松地分享他们的设备屏幕，并直接在网络浏览器中查看。ScreenStream提供了全球模式和本地模式两种屏幕分享方式，全球模式基于WebRTC技术，支持视频和音频流，适用于全球范围内的屏幕分享；本地模式基于MJPEG标准，仅支持视频流，适用于局域网内的屏幕分享。 </p>
+<p> <img data-src="https://socialify.git.ci/dkrivoruchko/ScreenStream/image?description=1&forks=1&issues=1&language=1&name=1&owner=1&pulls=1&stargazers=1&theme=Light" alt="ScreenStream"></p>
+<p>Screenshots</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/dkrivoruchko/ScreenStream/blob/master/screenshots/screenshot_lm_d.png"><img data-src="https://github.com/dkrivoruchko/ScreenStream/raw/master/screenshots/screenshot_lm_d.png" alt="img"></a> <a target="_blank" rel="noopener" href="https://github.com/dkrivoruchko/ScreenStream/blob/master/screenshots/screenshot_lm_d_about.png"><img data-src="https://github.com/dkrivoruchko/ScreenStream/raw/master/screenshots/screenshot_lm_d_about.png" alt="img"></a><br><a target="_blank" rel="noopener" href="https://github.com/dkrivoruchko/ScreenStream/blob/master/screenshots/screenshot_gm_d.png"><img data-src="https://github.com/dkrivoruchko/ScreenStream/raw/master/screenshots/screenshot_gm_d.png" alt="img"></a> <a target="_blank" rel="noopener" href="https://github.com/dkrivoruchko/ScreenStream/blob/master/screenshots/screenshot_gm_d_about.png"><img data-src="https://github.com/dkrivoruchko/ScreenStream/raw/master/screenshots/screenshot_gm_d_about.png" alt="img"></a><br><a target="_blank" rel="noopener" href="https://github.com/dkrivoruchko/ScreenStream/blob/master/screenshots/screenshot_settings_1_d.png"><img data-src="https://github.com/dkrivoruchko/ScreenStream/raw/master/screenshots/screenshot_settings_1_d.png" alt="img"></a> <a target="_blank" rel="noopener" href="https://github.com/dkrivoruchko/ScreenStream/blob/master/screenshots/screenshot_settings_1_l.png"><img data-src="https://github.com/dkrivoruchko/ScreenStream/raw/master/screenshots/screenshot_settings_1_l.png" alt="img"></a><br><a target="_blank" rel="noopener" href="https://github.com/dkrivoruchko/ScreenStream/blob/master/screenshots/screenshot_settings_2_d.png"><img data-src="https://github.com/dkrivoruchko/ScreenStream/raw/master/screenshots/screenshot_settings_2_d.png" alt="img"></a> <a target="_blank" rel="noopener" href="https://github.com/dkrivoruchko/ScreenStream/blob/master/screenshots/screenshot_settings_2_l.png"><img data-src="https://github.com/dkrivoruchko/ScreenStream/raw/master/screenshots/screenshot_settings_2_l.png" alt="img"></a><br><a target="_blank" rel="noopener" href="https://github.com/dkrivoruchko/ScreenStream/blob/master/screenshots/screenshot_settings_3_d.png"><img data-src="https://github.com/dkrivoruchko/ScreenStream/raw/master/screenshots/screenshot_settings_3_d.png" alt="img"></a> <a target="_blank" rel="noopener" href="https://github.com/dkrivoruchko/ScreenStream/blob/master/screenshots/screenshot_settings_3_l.png"><img data-src="https://github.com/dkrivoruchko/ScreenStream/raw/master/screenshots/screenshot_settings_3_l.png" alt="img"></a><br><a target="_blank" rel="noopener" href="https://github.com/dkrivoruchko/ScreenStream/blob/master/screenshots/screenshot_settings_4_d.png"><img data-src="https://github.com/dkrivoruchko/ScreenStream/raw/master/screenshots/screenshot_settings_4_d.png" alt="img"></a> <a target="_blank" rel="noopener" href="https://github.com/dkrivoruchko/ScreenStream/blob/master/screenshots/screenshot_settings_4_l.png"><img data-src="https://github.com/dkrivoruchko/ScreenStream/raw/master/screenshots/screenshot_settings_4_l.png" alt="img"></a><br><a target="_blank" rel="noopener" href="https://github.com/dkrivoruchko/ScreenStream/blob/master/screenshots/screenshot_about_d.png"><img data-src="https://github.com/dkrivoruchko/ScreenStream/raw/master/screenshots/screenshot_about_d.png" alt="img"></a></p>
+<p>开源地址： <a target="_blank" rel="noopener" href="https://github.com/dkrivoruchko/ScreenStream">https://github.com/dkrivoruchko/ScreenStream</a></p>
+<h3 id="Ladybird浏览器：真正独立的网络浏览器"><a href="#Ladybird浏览器：真正独立的网络浏览器" class="headerlink" title="Ladybird浏览器：真正独立的网络浏览器"></a>Ladybird浏览器：真正独立的网络浏览器</h3><p>Ladybird浏览器，这是一个独立的网络浏览器开源项目，目前处于预alpha阶段。Ladybird的目标是为现代网络构建一个完整、可用的浏览器，采用多进程架构，每个选项卡都有自己的渲染器进程，增强了安全性。项目的技术亮点包括多进程架构、图像解码和网络连接在进程外完成、核心库支持组件大多从SerenityOS继承等。</p>
+<p><img data-src="https://socialify.git.ci/LadybirdBrowser/ladybird/image?description=1&forks=1&issues=1&language=1&name=1&owner=1&pulls=1&stargazers=1&theme=Light" alt="ladybird"></p>
+<p>开源地址：   <a target="_blank" rel="noopener" href="https://github.com/LadybirdBrowser/ladybird">https://github.com/LadybirdBrowser/ladybird</a></p>
+<br />
+
+<br />
+
+<h3 id="Search-For-You：基于-AI-的智能搜索网站"><a href="#Search-For-You：基于-AI-的智能搜索网站" class="headerlink" title="Search For You：基于 AI 的智能搜索网站"></a>Search For You：基于 AI 的智能搜索网站</h3><p> <strong>Search For You</strong> 是一个基于 AI 的智能搜索项目，旨在为用户提供强大的、贴心的搜索体验。项目实现前后端分离，前端使用 Vue 3，后端基于 .NET 6 构建，性能高效，交互友好。</p>
+<p><a target="_blank" rel="noopener" href="https://q.embbot.com/">Live Demo</a></p>
+<p><a target="_blank" rel="noopener" href="https://private-user-images.githubusercontent.com/58774414/389225621-18acd2c3-5a95-4d13-a637-e5861e773cf3.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MzQyNzE1OTUsIm5iZiI6MTczNDI3MTI5NSwicGF0aCI6Ii81ODc3NDQxNC8zODkyMjU2MjEtMThhY2QyYzMtNWE5NS00ZDEzLWE2MzctZTU4NjFlNzczY2YzLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDEyMTUlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQxMjE1VDE0MDEzNVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTA1YzUxOWIwYjk0OGY4MWE0NjcxNWY0ZWY3N2Y2NjBlYWM1ZGU2YjNmNzFiMGY1MmMzNjc1YWM1MjE5OGVhMmYmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0._rWU4cQLykq4KG2GI7MMQiUrxgZoHy13l-bPMckxAME"><img data-src="https://private-user-images.githubusercontent.com/58774414/389225621-18acd2c3-5a95-4d13-a637-e5861e773cf3.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MzQyNzE1OTUsIm5iZiI6MTczNDI3MTI5NSwicGF0aCI6Ii81ODc3NDQxNC8zODkyMjU2MjEtMThhY2QyYzMtNWE5NS00ZDEzLWE2MzctZTU4NjFlNzczY2YzLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDEyMTUlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQxMjE1VDE0MDEzNVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTA1YzUxOWIwYjk0OGY4MWE0NjcxNWY0ZWY3N2Y2NjBlYWM1ZGU2YjNmNzFiMGY1MmMzNjc1YWM1MjE5OGVhMmYmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0._rWU4cQLykq4KG2GI7MMQiUrxgZoHy13l-bPMckxAME"></a></p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/image-20241215220054836.png"></p>
+<hr>
+<p>✨ 特性</p>
+<ul>
+<li><strong>AI 驱动搜索</strong>：利用最新的人工智能技术，实现智能化搜索结果推荐。</li>
+<li><strong>高性能后端</strong>：基于 .NET 6 架构，支持快速响应请求，确保服务稳定。</li>
+<li><strong>现代化前端</strong>：基于 Vue 3，轻量、灵活，端到端提供流畅的用户体验。</li>
+<li><strong>模块化设计</strong>：项目结构清晰，易于扩展和维护。</li>
+<li><strong>跨平台支持</strong>：支持多设备访问，兼容多种浏览器。</li>
+</ul>
+<hr>
+<p>🌟 技术栈</p>
+<p>前端</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://vuejs.org/">Vue 3</a> - 渐进式 JavaScript 框架</li>
+<li><a target="_blank" rel="noopener" href="https://router.vuejs.org/">Vue Router</a> - 路由管理</li>
+<li><a target="_blank" rel="noopener" href="https://pinia.vuejs.org/">Pinia</a> - 状态管理</li>
+<li><a target="_blank" rel="noopener" href="https://axios-http.com/">Axios</a> - HTTP 请求库</li>
+<li>其他前端工具及库</li>
+</ul>
+<p>后端</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://learn.microsoft.com/en-us/aspnet/core/">ASP.NET Core 6</a> - 开源、跨平台的现代 web 框架</li>
+<li><a target="_blank" rel="noopener" href="https://learn.microsoft.com/en-us/ef/core/">Entity Framework Core</a> - ORM 工具，用于数据库操作</li>
+<li><a target="_blank" rel="noopener" href="https://learn.microsoft.com/en-us/aspnet/core/web-api/">REST API</a> - 提供前后台数据交互接口</li>
+</ul>
+<p> <img data-src="https://socialify.git.ci/MayDay-wpf/SearchForYou/image?description=1&forks=1&issues=1&language=1&name=1&owner=1&pulls=1&stargazers=1&theme=Light" alt="SearchForYou"></p>
+<p>开源地址：<a target="_blank" rel="noopener" href="https://github.com/mediar-ai/screenpipe">https://github.com/mediar-ai/screenpipe</a></p>
+<br />
+
+ 
+
+
+
+<h2 id="宝藏信息"><a href="#宝藏信息" class="headerlink" title="宝藏信息"></a>宝藏信息</h2><h3 id="2024年度Mac装机必备：50款精选软件推荐"><a href="#2024年度Mac装机必备：50款精选软件推荐" class="headerlink" title="2024年度Mac装机必备：50款精选软件推荐"></a>2024年度Mac装机必备：50款精选软件推荐</h3><p><a target="_blank" rel="noopener" href="https://www.runningcheese.com/">奔跑中的奶酪</a>为Mac用户精心挑选了50款年度最喜欢的软件，包括了浏览器、输入法、看图软件、截图工具、GIF录制、视频录制、音乐播放器、视频播放器、下载工具、解压压缩工具、卸载清理工具、磁盘读写工具、手机助手、系统监控、快速启动、Office软件、社交工具、远程协助、待办清单、邮件管理、翻译词典、笔记、RSS阅读器、剪贴板管理、重命名工具、文本识别、思维导图、PDF阅读、电子书阅读、同步网盘、图片处理、平面设计、影音创作、视频编辑、视频转码、编程开发、虚拟机、终端、魔法（网络工具）、软件包管理等多个领域的软件。每款软件都提供了简短的介绍和推荐理由，部分软件还提供了同类软件推荐和详细说明链接，为用户提供了丰富的选择和便捷的获取方式。</p>
+<p>原文： <a target="_blank" rel="noopener" href="https://www.runningcheese.com/mac">https://www.runningcheese.com/mac</a></p>
+<br />
+
+<br />
+
+<h3 id="Send-安全私密的文件分享服务"><a href="#Send-安全私密的文件分享服务" class="headerlink" title="Send: 安全私密的文件分享服务"></a>Send: 安全私密的文件分享服务</h3><p>Send提供一种简单且私密的文件分享方式，用户可以通过拖放或点击上传文件，支持最大2.5GB的文件大小。该服务的特点在于端到端加密，这意味着文件在传输过程中被加密，只有拥有正确密钥的接收者才能访问。此外，Send提供的链接会自动过期，确保用户分享的内容不会永久在线，从而保护用户的隐私和数据安全。</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/image-20241215221936966.png"></p>
+<p><img data-src="https://socialify.git.ci/timvisee/send/image?description=1&forks=1&issues=1&language=1&name=1&owner=1&pulls=1&stargazers=1&theme=Light"></p>
+<p>在线地址： <a target="_blank" rel="noopener" href="https://send.vis.ee/">https://send.vis.ee/</a></p>
+<p>开源地址：<a target="_blank" rel="noopener" href="https://github.com/timvisee/send">https://github.com/timvisee/send</a></p>
+<br />
+
+<h3 id="MusicFreePluginsHub：一站式MusicFree源插件订阅聚合器"><a href="#MusicFreePluginsHub：一站式MusicFree源插件订阅聚合器" class="headerlink" title="MusicFreePluginsHub：一站式MusicFree源插件订阅聚合器"></a>MusicFreePluginsHub：一站式MusicFree源插件订阅聚合器</h3><p>MusicFreePluginsHub是xxnuo在GitHub上发起的一个项目，旨在收集和分享MusicFree的源插件订阅链接。该项目为用户提供了一个集中的平台，方便用户管理和更新MusicFree的插件订阅。通过这个项目，用户可以轻松获取到全网的MusicFree订阅资源，从而增强他们的音乐体验。项目页面可能包含了订阅链接的列表、更新日志以及如何使用这些订阅的说明。</p>
+<p><img data-src="https://socialify.git.ci/xxnuo/MusicFreePluginsHub/image?description=1&forks=1&issues=1&language=1&name=1&owner=1&pulls=1&stargazers=1&theme=Light" alt="MusicFreePluginsHub"></p>
+<p>开源地址：  <a target="_blank" rel="noopener" href="https://github.com/xxnuo/MusicFreePluginsHub">https://github.com/xxnuo/MusicFreePluginsHub</a></p>
+<br />
+
+
+
+<h3 id="Windows按键映射工具QKeyMapper"><a href="#Windows按键映射工具QKeyMapper" class="headerlink" title="Windows按键映射工具QKeyMapper"></a>Windows按键映射工具QKeyMapper</h3><p>QKeyMapper是一款在 Win10 和 Win11 下可用的按键映射工具，具有不修改注册表、无需重启系统等特点。</p>
+<p><img data-src="https://socialify.git.ci/Zalafina/QKeyMapper/image?description=1&forks=1&issues=1&language=1&name=1&owner=1&pulls=1&stargazers=1&theme=Light" alt="QKeyMapper"></p>
+<p>开源地址：<a target="_blank" rel="noopener" href="https://github.com/Zalafina/QKeyMapper">https://github.com/Zalafina/QKeyMapper</a></p>
+<br />
+
+<br />
+
+<br />
+
+<h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>百闻不如一见，百见不如一试。</p>
+<p>🎉 本文同步更新于  <a href="https://www.lifeee.top/">https://www.lifeee.top</a></p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>请我一杯咖啡吧！</div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/wechatpay.png" alt="热夏 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="/images/alipay.jpg" alt="热夏 支付宝">
+        <span>支付宝</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>热夏
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://www.lifeee.top/posts/54438.html" title="网上冲浪周刊第71期">https://www.lifeee.top/posts/54438.html</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="followme">
+  <span>欢迎关注我的其它发布渠道</span>
+
+  <div class="social-list">
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="/atom.xml">
+            <span class="icon">
+              <i class="fa fa-rss"></i>
+            </span>
+
+            <span class="label">RSS</span>
+          </a>
+      </div>
+  </div>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/%E5%86%B2%E6%B5%AA/" rel="tag"><i class="fa fa-tag"></i> 冲浪</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/posts/52255.html" rel="prev" title="网上冲浪周刊第69期">
+                  <i class="fa fa-angle-left"></i> 网上冲浪周刊第69期
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/posts/22812.html" rel="next" title="网上冲浪周刊第73期">
+                  网上冲浪周刊第73期 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments gitalk-container"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 2018 – 
+    <span itemprop="copyrightYear">2026</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">热夏</span>
+  </div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>站点总字数：</span>
+    <span title="站点总字数">743k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">11:15</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/next-theme-pjax/0.6.0/pjax.min.js" integrity="sha256-vxLn1tSKWD4dqbMRyv940UYw4sXgMtYcK6reefzZrao=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lozad.js/1.16.0/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script><script src="/js/pjax.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+  <script src="/js/third-party/pace.js"></script>
+
+
+  
+  <script data-pjax async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","mhchem":false,"js":{"url":"//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
+
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"upwon","repo":"upwon.github.io","client_id":"7e047047ecee7317452b","client_secret":"c60fbdf0eb19e7264e33ab780319e4d420a58fee","admin_user":"upwon","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":null,"js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"0e539b490918b5aa8ce768af965d49bc"}</script>
+<script src="/js/third-party/comments/gitalk.js"></script>
+
+</body>
+</html>

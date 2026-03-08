@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/myapple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/myfavicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/myfavicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/myapple-touch-icon-next.png" color="#222">
+  <meta name="google-site-verification" content="google2fc64c2b92961282.html">
+  <meta name="baidu-site-verification" content="s6BwSjIZYB">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.loli.net/css?family='LXGW+WenKai+LITE':300,300italic,400,400italic,700,700italic%7C'LXGW+WenKai+Screen':300,300italic,400,400italic,700,700italic%7C'LXGW+WenKai':300,300italic,400,400italic,700,700italic%7C'Noto+Serif+SC':300,300italic,400,400italic,700,700italic%7C'EB+Garamond':300,300italic,400,400italic,700,700italic%7C'PingFang+SC':300,300italic,400,400italic,700,700italic%7C'Microsoft+YaHei':300,300italic,400,400italic,700,700italic%7C'sans-serif':300,300italic,400,400italic,700,700italic%7CMa+Shan+Zheng:300,300italic,400,400italic,700,700italic%7CLXGW+WenKai+Screen:300,300italic,400,400italic,700,700italic%7CLXGW+WenKai:300,300italic,400,400italic,700,700italic%7CMenlo:300,300italic,400,400italic,700,700italic%7CMonaco:300,300italic,400,400italic,700,700italic%7CConsolas:300,300italic,400,400italic,700,700italic%7CSource+Code+Pro:300,300italic,400,400italic,700,700italic%7Csystem-ui:300,300italic,400,400italic,700,700italic%7Cmonospace:300,300italic,400,400italic,700,700italic%7Csans-serif:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha256-yIDrPSXHZdOZhAqiBP7CKzIwMQmRCJ8UeB8Jo17YC4o=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/themes/blue/pace-theme-minimal.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"www.lifeee.top","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.19.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"mac","show_result":true},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="​                             　　minGW 64 bit 编译 OpenCV 3.4.11 ，记录了详细的下载、编译、安装以及问题解决的步骤与思路。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CMake和minGW-64 编译安装 OpenCV3.4.11以供 Qt 使用">
+<meta property="og:url" content="https://www.lifeee.top/posts/50934.html">
+<meta property="og:site_name" content="热夏的博客">
+<meta property="og:description" content="​                             　　minGW 64 bit 编译 OpenCV 3.4.11 ，记录了详细的下载、编译、安装以及问题解决的步骤与思路。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200721214708.jpg">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200720204354.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200720205416.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200720204053.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200720212343.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200720212434.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200720205135.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200720205902.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200720211945.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200720210535.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200720210920.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/image-20200720215345439.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/image-20200720215647092.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/image-20200720215757204.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200720220102.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/image-20200720220251581.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200720220945.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200720230336.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/image-20200720221357979.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200721145912.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200721150147.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200721150434.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/image-20200720233839776.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200721084902.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200721170744.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200721170724.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/image-20200721171330498.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200721172331.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200721172746.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/image-20200721085554357.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/image-20200721085950683.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/image-20200721094418287.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/image-20200721164200072.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200721164757.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/image-20200721163719900.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/image-20200721165031061.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200720225946.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200720230128.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/image-20200720232843831.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/image-20200721100208850.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/image-20200721101640012.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/image-20200721102242557.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/image-20200721102828601.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/image-20200721103805182.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/image-20200721103853226.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/image-20200721121509265.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200721143013.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200721143108.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200721143233.png">
+<meta property="article:published_time" content="2020-07-21T13:36:32.000Z">
+<meta property="article:modified_time" content="2026-03-08T07:46:57.142Z">
+<meta property="article:author" content="热夏">
+<meta property="article:tag" content="C++">
+<meta property="article:tag" content="编程">
+<meta property="article:tag" content="教程">
+<meta property="article:tag" content="QT">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200721214708.jpg">
+
+
+<link rel="canonical" href="https://www.lifeee.top/posts/50934.html">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://www.lifeee.top/posts/50934.html","path":"posts/50934.html","title":"CMake和minGW-64 编译安装 OpenCV3.4.11以供 Qt 使用"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>CMake和minGW-64 编译安装 OpenCV3.4.11以供 Qt 使用 | 热夏的博客</title>
+  
+
+
+
+
+
+
+
+<link href="https://fonts.loli.net/css?family=Noto+Serif+SC:400,500,700&display=swap&subset=chinese-simplified" rel="stylesheet">
+<link rel="stylesheet" href="https://npm.elemecdn.com/lxgw-wenkai-screen-webfont@1.7.0/style.css" />
+
+<link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&display=swap" rel="stylesheet">
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="热夏的博客" type="application/atom+xml">
+<style>.darkmode--activated{--body-bg-color:#282828;--content-bg-color:#333;--card-bg-color:#555;--text-color:#ccc;--blockquote-color:#bbb;--link-color:#ccc;--link-hover-color:#eee;--brand-color:#ddd;--brand-hover-color:#ddd;--table-row-odd-bg-color:#282828;--table-row-hover-bg-color:#363636;--menu-item-bg-color:#555;--btn-default-bg:#222;--btn-default-color:#ccc;--btn-default-border-color:#555;--btn-default-hover-bg:#666;--btn-default-hover-color:#ccc;--btn-default-hover-border-color:#666;--highlight-background:#282b2e;--highlight-foreground:#a9b7c6;--highlight-gutter-background:#34393d;--highlight-gutter-foreground:#9ca9b6}.darkmode--activated img{opacity:.75}.darkmode--activated img:hover{opacity:.9}.darkmode--activated code{color:#69dbdc;background:0 0}button.darkmode-toggle{z-index:9999}.darkmode-ignore,img{display:flex!important}.beian img{display:inline-block!important}</style></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">热夏的博客</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-heart fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BC%96%E8%AF%91%E7%8E%AF%E5%A2%83"><span class="nav-number">1.</span> <span class="nav-text">编译环境:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BC%96%E8%AF%91%E5%89%8D%E7%9A%84%E5%87%86%E5%A4%87%E2%80%93%E4%B8%8B%E8%BD%BD"><span class="nav-number">2.</span> <span class="nav-text">编译前的准备–下载</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%8B%E8%BD%BDOpenCV"><span class="nav-number">2.1.</span> <span class="nav-text">下载OpenCV</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%8B%E8%BD%BD-OpenCV-Contrib"><span class="nav-number">2.2.</span> <span class="nav-text">下载 OpenCV Contrib</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%8B%E8%BD%BD-CMake"><span class="nav-number">2.3.</span> <span class="nav-text">下载 CMake</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85-Qt"><span class="nav-number">2.4.</span> <span class="nav-text">安装 Qt</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BC%96%E8%AF%91%E5%89%8D%E7%9A%84%E5%87%86%E5%A4%87%E2%80%93%E8%A7%A3%E5%8E%8B"><span class="nav-number">3.</span> <span class="nav-text">编译前的准备–解压</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CMake-%E6%9E%84%E5%BB%BA"><span class="nav-number">4.</span> <span class="nav-text">CMake 构建</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BC%96%E8%AF%91-OpenCV"><span class="nav-number">5.</span> <span class="nav-text">编译 OpenCV</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BC%96%E8%AF%91-OpenCV-%E5%B8%B8%E8%A7%81%E9%94%99%E8%AF%AF"><span class="nav-number">6.</span> <span class="nav-text">编译 OpenCV 常见错误</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%8D%E6%98%8E%E7%A1%AE%E7%9A%84%E5%A4%9A%E7%BA%BF%E7%A8%8B%E9%94%99%E8%AF%AF"><span class="nav-number">6.1.</span> <span class="nav-text">不明确的多线程错误</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#vs-version-rc-obj-%E5%A4%84%E9%94%99%E8%AF%AF-gcc-error-long-No-such-file-or-directory"><span class="nav-number">6.2.</span> <span class="nav-text">vs_version.rc.obj 处错误  gcc: error: long: No such file or directory</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#mingw730-32-bin-windres-exe-preprocessing-failed"><span class="nav-number">6.3.</span> <span class="nav-text">mingw730_32\bin\windres.exe: preprocessing failed.</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Invalid-escape-sequence-2"><span class="nav-number">6.4.</span> <span class="nav-text">Invalid escape sequence \2</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#fatal-error-boostdesc-bgm-i-No-such-file-or-directory-include-%E2%80%9Cboostdesc-bgm-i%E2%80%9D"><span class="nav-number">6.5.</span> <span class="nav-text">fatal error: boostdesc_bgm.i: No such file or directory #include “boostdesc_bgm.i”</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CMake-Warning-at-cmake-OpenCVDownload-cmake-202-message-FFMPEG-Download-failed-28-%E2%80%9DTimeout-was-reached%E2%80%9D"><span class="nav-number">6.6.</span> <span class="nav-text">CMake Warning at cmake&#x2F;OpenCVDownload.cmake:202 (message): FFMPEG: Download failed: 28;”Timeout was reached”</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#data-Download-face-landmark-model-dat"><span class="nav-number">6.7.</span> <span class="nav-text">data: Download: face_landmark_model.dat</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE"><span class="nav-number">7.</span> <span class="nav-text">参考文献</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="热夏"
+      src="/images/head.jpg">
+  <p class="site-author-name" itemprop="name">热夏</p>
+  <div class="site-description" itemprop="description">空山新雨后，天气晚来秋。</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">112</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">44</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/upwon" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;upwon" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:w1244753906@gmail.com" title="E-Mail → mailto:w1244753906@gmail.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.lifeee.top//atom.xml" title="RSS → https:&#x2F;&#x2F;www.lifeee.top&#x2F;&#x2F;atom.xml" rel="noopener me"><i class="fa fa-rss fa-fw"></i>RSS</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+        <div class="pjax">
+        </div>
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.lifeee.top/posts/50934.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/head.jpg">
+      <meta itemprop="name" content="热夏">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="热夏的博客">
+      <meta itemprop="description" content="空山新雨后，天气晚来秋。">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="CMake和minGW-64 编译安装 OpenCV3.4.11以供 Qt 使用 | 热夏的博客">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          CMake和minGW-64 编译安装 OpenCV3.4.11以供 Qt 使用
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2020-07-21 21:36:32" itemprop="dateCreated datePublished" datetime="2020-07-21T21:36:32+08:00">2020-07-21</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2026-03-08 15:46:57" itemprop="dateModified" datetime="2026-03-08T15:46:57+08:00">2026-03-08</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E7%BC%96%E7%A8%8B/" itemprop="url" rel="index"><span itemprop="name">编程</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>15k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>14 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p>​                           </p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200721214708.jpg"></p>
+<p>　　minGW 64 bit 编译 OpenCV 3.4.11 ，记录了详细的下载、编译、安装以及问题解决的步骤与思路。</p>
+<span id="more"></span>
+
+
+
+<h2 id="编译环境"><a href="#编译环境" class="headerlink" title="编译环境:"></a>编译环境:</h2><p><font  color=green size=7>首</font>先说明我的操作系统版本与本文中编译的OpenCV版本等：</p>
+<p>Windows10 64bit</p>
+<p>OpenCV 3.4.11</p>
+<p>OpenCV Contrib 3.4.11 （可选，用到FREAK、Surf和Sift算法需要编译）</p>
+<p>QT5.14.0  with MinGW5.14.1 64bit<br>CMake 3.17.0</p>
+<br/>
+
+<h2 id="编译前的准备–下载"><a href="#编译前的准备–下载" class="headerlink" title="编译前的准备–下载"></a>编译前的准备–下载</h2><h3 id="下载OpenCV"><a href="#下载OpenCV" class="headerlink" title="下载OpenCV"></a>下载OpenCV</h3><p>　　在 Github 中下载 <a target="_blank" rel="noopener" href="https://github.com/opencv/opencv/releases">OpenCV</a> ，选择 3.4.11版本。</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200720204354.png"></p>
+<p>　　若使用 MSVC 版的，可直接下载 上图那个 vc14_vc15 .exe 那个，安装好后为openCV配置环境变量直接就能用了。而 OpenCV 没有编译好的 MinGW 版， 所以需要下载源码进行编译。</p>
+<blockquote>
+<ul>
+<li>MSVC，需要使用Visual C++（微软的VC编译器）作为编译器</li>
+<li>MinGW是指Minimalist GNU For  Windows，是将GNU开发工具移植到Win32平台下的产物，是一套Windows上的GNU开发工具移植到Win32平台下的产物，是一套Windows上的GNU工具集，用其开发的程序不需要额外的第三方DLL支持就可以在Windows下运行。</li>
+</ul>
+<p><strong>OpenCV官网&#x2F;GitHub下载的一般是支持的vc，所以对于MinGW版本的Qt需要自己下载源码重新编译</strong></p>
+</blockquote>
+<br/>
+
+<h3 id="下载-OpenCV-Contrib"><a href="#下载-OpenCV-Contrib" class="headerlink" title="下载 OpenCV Contrib"></a>下载 OpenCV Contrib</h3><p>　　在 Github 中下载 <a target="_blank" rel="noopener" href="https://github.com/opencv/opencv_contrib/releases">OpenCV Contrib 3.4.11</a> 。</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200720205416.png"></p>
+<br/>
+
+<h3 id="下载-CMake"><a href="#下载-CMake" class="headerlink" title="下载 CMake"></a>下载 CMake</h3><p>　　下载  <a target="_blank" rel="noopener" href="https://cmake.org/download/">CMake</a> 用于编译源码。</p>
+<blockquote>
+<p>　　互联网上大多数开源框架和库，或者至少是那些想要保持IDE中性的开源框架和库（这意味着，使用任意一个集成开发环境配置并建立不依赖特定的集成开发环境就能够工作的一个项目），都使用CMake或类似的make系统。我猜想这也回答了某些问题，例如，我为什么需要CMake？为什么不能只给出库以及用它来做什么呢？或者其他类似的问题。这里，我们需要CMake以便能够使用源代码来配置和构建OpenCV。CMake是一个开源并跨平台的应用程序，可用于配置和构建开源项目（或者应用程序、库等等）。</p>
+</blockquote>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200720204053.png"></p>
+<br/>
+
+<p>　　下载后好记得安装，安装CMake时除了应该确保安装GUI版本之外,还可以选择添加到环境变量里。</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200720212343.png"></p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200720212434.png"></p>
+<br/>
+
+<h3 id="安装-Qt"><a href="#安装-Qt" class="headerlink" title="安装 Qt"></a>安装 <a href="https://www.lifeee.top/posts/20536.html">Qt</a></h3><p>　　安装好 Qt ,关于 Qt 的下载 以及 详细的安装步骤 可以看我的这篇博文 <a href="https://www.lifeee.top/posts/20536.html">Visual Studio 2019配置qt开发环境</a> 。选择编译组件的时候选择了 mingw_32 、mingw_64 以及 msvc2017_64  ，你也可以按需选择，本文只需用到 mingw 64 。</p>
+<p>​      <img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200720205135.png"></p>
+<p>　　 <a target="_blank" rel="noopener" href="https://sourceforge.net/projects/mingw/">MinGW</a>  就不需要单独下载了，安装 Qt 的时候勾选上就好了。要手动下载的话可以在 <a target="_blank" rel="noopener" href="https://sourceforge.net/projects/mingw-w64/files/mingw-w64/mingw-w64-release/">https://sourceforge.net/projects/mingw-w64/files/mingw-w64/mingw-w64-release/</a> 下载最新版。</p>
+<br/>
+
+<br/>
+
+<h2 id="编译前的准备–解压"><a href="#编译前的准备–解压" class="headerlink" title="编译前的准备–解压"></a>编译前的准备–解压</h2><p>　　将下载好的 OpenCV 3.4.11 解压，解压到英文、无中文、无特殊字符、无空格的路径下，避免不必要的麻烦。</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200720205902.png"></p>
+<p>　　<strong>opencv_contrib-3.4.11 是可选的</strong>。</p>
+<p>　　在学习图像识别中的特征点检测和匹配时，需要用到一些常用的算法如FREAK、Surf和Sift算法等，但从OpenCV3以后，这些常用的算法OpenCV的Release版本中并不存在，因为他们是存放在opencv_contrib目录下面的未稳定功能模块，所以如果我们想要使用这些功能，需要自己下载代码并且自行编译。</p>
+<p>　　解压 opencv_contrib-3.4.11 ，我的如下图所示。</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200720211945.png"></p>
+<p>　　为 MinGW-w64 配置环境变量，在 Qt 的安装目录下找到 MinGW-w64 的路径。我的路径为 <code>D:\20200213\ForDevelopment\Qt\Qt5.14.1\Tools\mingw730_64\bin</code> 。</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200720210535.png"></p>
+<blockquote>
+<p>　　打开“环境变量”设置界面方法一，在“我的电脑”上右击鼠标，在弹出菜单中选择“属性”。</p>
+<p>在“系统”界面选择“高级系统设置”，接着点击环境变量。</p>
+<p>子系统变量 Path 中增加一个条目即可。</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200720210920.png"></p>
+<p>然后记得点三次确认。</p>
+</blockquote>
+<br/>
+
+<br/>
+
+<h2 id="CMake-构建"><a href="#CMake-构建" class="headerlink" title="CMake 构建"></a>CMake 构建</h2><blockquote>
+<p> 　　CMake 是一个跨平台的自动化建构系统,它使用一个名为 CMakeLists.txt 的文件来描述构建过程,可以产生标准的构建文件,如 Unix                的 Makefile 或Windows Visual C++ 的 projects&#x2F;workspaces 。文件 CMakeLists.txt  需要手工编写,也可以通过编写脚本进行半自动的生成。CMake 提供了比 autoconfig 更简洁的语法。</p>
+</blockquote>
+<p>　　打开 CMake ，设置源代码路径 “Where is the source code folder”，编译目标文件的路径 “Where to build the binaries folder” 。在下图 ① 中选择源码路径，在 ② 中选择 编译结果路径，推荐在源码路径后加<code>/build</code> ,到时候会自动生成该目录。接着点击 ③ 左下角的【Configure】。</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/image-20200720215345439.png" alt="image-20200720215345439"></p>
+<p>　　单击“Configure”按钮将启动配置过程。如果文件夹还不存在的话，可能会要求创建构建文件夹，需要通过单击“Yes”按钮来完成文件夹的创建。选择 YES  🏃🏻‍♂️</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/image-20200720215647092.png" alt="image-20200720215647092"></p>
+<p>　　按下图所示选择编译器。</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/image-20200720215757204.png" alt="image-20200720215757204"></p>
+<p>　　配置C和C++编译器路径，具体路径请根据自己电脑中QT的安装目录而定。注意选择 64 位的哦，我的目录下文件名为 mingw730_64 的为64位。</p>
+<p>　　我的 gcc 的路径在</p>
+<p> <code>D:\20200213\ForDevelopment\Qt\Qt5.14.1\Tools\mingw730_64\bin\gcc.exe</code>  </p>
+<p>　　 g++ 路径在</p>
+<p> <code>D:\20200213\ForDevelopment\Qt\Qt5.14.1\Tools\mingw730_64\bin\c++.exe</code></p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200720220102.png" alt="20200720220102"></p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/image-20200720220251581.png" alt="image-20200720220251581"></p>
+<p>　　点击 Finish ，等待一会。红红的报错是常有的事，记得善用搜索引擎查找解决方案。</p>
+<p>勾选上 <code>Grouped</code> 会分组显示配置信息。接着打开 OPENCV 组。</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200720220945.png" alt="20200720220945"></p>
+<p>　　找到 <code>OPENCV_EXTRA_MODULES_PATH</code> 项，填入<code>opencv_contrib</code>目录下的<code>modules</code> 文件夹路径，我的为: <code>E:/20200325/DevelopmentEnvironment/opencv_contrib-3.4.11/modules</code>，如下图所示。<strong>记得使用 <code>/</code> 而不是 <code>\</code> 不然报错</strong>，见后文常见错误。</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200720230336.png"></p>
+<p>　　展开 WITH 组。</p>
+<p>　　勾选中“WITH_OPENGL”、“<strong>WITH_QT</strong>”，将“WITH_IPP”取消。并勾选 <code>ENABLE_CXX11</code></p>
+<p>然后再次点【Configure】</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/image-20200720221357979.png" alt="image-20200720221357979"></p>
+<p>　　然后点击 左下角的【Configure】</p>
+<p>　　然后继续修改Qt路径，要是你的没有安装过 Annoconda 一般不用改，我的安装过。</p>
+<br/>
+
+<div class="note info"><p>下面这里一定看清楚，红色部分的value值和你的安装位置对不对应。我笔记本里面有 Annoconda  里面也有cmake，所以我的默认是Annoconda  的位置，要手动改到 Qt 所在的位置。</p>
+</div>
+
+<br/>
+
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200721145912.png" alt="错误示例 更改前"></p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200721150147.png" alt="应该是这下面的路径才对"></p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200721150434.png" alt="正确示例 更改后"></p>
+<p>　　然后点击 左下角的【Configure】，记得保持网络畅通。若还有红色，再一次configure，直到没有红色。</p>
+<p>　　【Configure】一切顺利之后，执行 【Generate】。</p>
+<p>很大可能性你会遇到编译错误，可参见后文的常见错误，若无法找到请 Google 错误日志，一般能找到解决方法。</p>
+<p>在这个过程中，如果网络环境不好，很可能卡在<code>opencv_ffmpeg.dll</code>和<code>opencv_ffmpeg_64.dll</code>的下载中，建议更换好一点的网络环境，或者多等一会。</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/image-20200720233839776.png"></p>
+<p>　　生成成功后需要去终端用命令行进行编译。</p>
+<br/>
+
+<br/>
+
+
+
+<h2 id="编译-OpenCV"><a href="#编译-OpenCV" class="headerlink" title="编译 OpenCV"></a>编译 OpenCV</h2><p>　　打开终端，并且路径切换到上一步生成的路径，我的是： </p>
+<p><code>E:\20200325\DevelopmentEnvironment\opencv3411\build</code></p>
+<p>　　这里推荐的终端是 <a target="_blank" rel="noopener" href="https://cmder.net/">cmder</a> ，很强大也很好用。当然也可以使用 <code>cmd</code> 或者 <code>Powershell</code>等。下面的命令行中先切换到路径下，然后使用 <code>mingw32-make -j 8</code> 进行编译 ，其中 <code>-j  8</code> 表示8个多线程，以加速编译，可根据硬件条件适当增减。当然可以使用默认的 <code>mingw32-make </code> 进行编译。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">E:</span><br><span class="line">cd E:\20200325\DevelopmentEnvironment\opencv3411\build</span><br><span class="line">mingw32-make -j 8</span><br><span class="line">mingw32-make install</span><br></pre></td></tr></table></figure>
+
+<p>　　如果 <code>mingw32-make -j 8</code> 遇到错误，请看下文的  <strong>编译 OpenCV 常见错误</strong>，否则执行 <code>mingw32-make install</code>，完成安装。</p>
+<p> <img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200721084902.png" alt="执行 mingw32-make -j 16"></p>
+<p>　　遇到更多的错误不要慌张，见本文的后半部分看看有没有相似的错误或日志。假若你没有遇到 5个 以上的错误，那么我觉得你肯定是一个很幸运的人 🍦</p>
+<br/>
+
+<p>　　我所有的配置，贴出来：</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200721170744.png"></p>
+<p>　　 mingw32-make 成功的界面 。 干杯 🍻</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200721170724.png" alt="🍉"></p>
+<p>　　mingw32-make install 成功的界面 🍰</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/image-20200721171330498.png" alt="🍶"></p>
+<p>　　生成成功后看一下 <code>build/bin</code> 下面的动态库 ，熟悉的味道，各种 OpenCV 的动态库。</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200721172331.png"></p>
+<p>　　看一下 <code>build/lib</code> 目录</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200721172746.png"></p>
+<blockquote>
+<p>dll.a 其实是MinGW下的DLL文件的imp-lib (Import Library)。</p>
+<p>.dll.a文件的最初用意其实是MinGW下的DLL文件的imp-lib (Import Library)，即与VC下DLL文件附带了一个引入库.lib类似。在VC下编程，当要使用DLL文件时，在开发时必须要有.lib文件才能链接通过。.dll.a文件就是这样的作用。</p>
+<p>但是，MinGW&#x2F;Cygwin确提供了直接与.dll文件链接的作用，就是可以不需要imp-lib库文件，只要DLL文件存在，也可以链接成功。这样就导致.dll.a文件似乎不是那么有用了。在很多场合下，可以不需要.dll.a文件了。但是有几个例外情况，来自于RedHat的官方描述。（<a target="_blank" rel="noopener" href="http://www.inonit.com/cygwin/jni/invocationApi/archive.html">Reference</a>）</p>
+<p>原文链接：<a target="_blank" rel="noopener" href="https://blog.csdn.net/tangketan/article/details/6997699">https://blog.csdn.net/tangketan/article/details/6997699</a></p>
+</blockquote>
+<br/>
+
+<br/>
+
+<h2 id="编译-OpenCV-常见错误"><a href="#编译-OpenCV-常见错误" class="headerlink" title="编译 OpenCV 常见错误"></a>编译 OpenCV 常见错误</h2><h3 id="不明确的多线程错误"><a href="#不明确的多线程错误" class="headerlink" title="不明确的多线程错误"></a>不明确的多线程错误</h3><p>　　如果使用了多线程编译，导致错误，但是错误信息不明确，如：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">  [ 82%] Built target opencv_ximgproc</span><br><span class="line">mingw32-make: *** [Makefile:181: all] Error 2</span><br></pre></td></tr></table></figure>
+
+<p>　　解决方法是使用单线程编译：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mingw32-make</span><br></pre></td></tr></table></figure>
+
+<p>　　以查看详细的错误提示，再根据具体情况解决。</p>
+<br/>
+
+<h3 id="vs-version-rc-obj-处错误-gcc-error-long-No-such-file-or-directory"><a href="#vs-version-rc-obj-处错误-gcc-error-long-No-such-file-or-directory" class="headerlink" title="vs_version.rc.obj 处错误  gcc: error: long: No such file or directory"></a>vs_version.rc.obj 处错误  gcc: error: long: No such file or directory</h3><p>错误日志：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">[ 29%] Building CXX object modules/core/CMakeFiles/opencv_core.dir/merge.avx2.cpp.obj</span><br><span class="line">[ 29%] Building CXX object modules/core/CMakeFiles/opencv_core.dir/split.avx2.cpp.obj</span><br><span class="line">[ 29%] Building CXX object modules/core/CMakeFiles/opencv_core.dir/sum.avx2.cpp.obj</span><br><span class="line">[ 29%] Building RC object modules/core/CMakeFiles/opencv_core.dir/vs_version.rc.obj</span><br><span class="line">gcc: error: long: No such file or directory</span><br><span class="line">D:\C++\Qt\Tools\mingw730_64\bin\windres.exe: preprocessing failed.</span><br><span class="line">mingw32-make[2]: *** [modules\core\CMakeFiles\opencv_core.dir\build.make:1508: modules/core/CMakeFiles/opencv_core.dir/vs_version.rc.obj] Error 1</span><br><span class="line">mingw32-make[2]: *** Waiting for unfinished jobs....</span><br><span class="line">mingw32-make[1]: *** [CMakeFiles\Makefile2:3687: modules/core/CMakeFiles/opencv_core.dir/all] Error 2</span><br><span class="line">mingw32-make: *** [Makefile:181: all] Error 2</span><br><span class="line"></span><br><span class="line">D:\Dev\OpenCV3411\opencv\sources\build&gt;D:\C++\Qt\Tools\mingw730_64\bin\windres.exe -O coff D:\Dev\OpenCV3411\opencv\sources\build\modules\core\vs_version.rc CMakeFiles\opencv_core.dir\vs_version.rc.obj</span><br><span class="line">D:\C++\Qt\Tools\mingw730_64\bin\windres.exe: CMakeFiles\opencv_core.dir\vs_version.rc.obj: No such file or directory</span><br></pre></td></tr></table></figure>
+
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/image-20200721085554357.png" alt="image-20200721085554357"></p>
+<p>　　根据错误日志，可发现在 <code>[modules\core\CMakeFiles\opencv_core.dir\build.make:1508: </code> 处出现错误。</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/image-20200721085950683.png" alt="image-20200721085950683"></p>
+<p>打开</p>
+<p><code>E:\20200325\DevelopmentEnvironment\opencv3411\build\modules\core\CMakeFiles\opencv_core.dir\build.make</code></p>
+<p>的第1508行发现一个很长的命令行</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd /E E:\20200325\DevelopmentEnvironment\opencv3411\build\modules\core &amp;&amp; D:\20200213\ForDevelopment\Qt\Qt5.14.1\Tools\mingw730_32\bin\windres.exe -O coff $(RC_DEFINES) $(RC_INCLUDES) $(RC_FLAGS) E:\20200325\DevelopmentEnvironment\opencv3411\build\modules\core\vs_version.rc CMakeFiles\opencv_core.dir\vs_version.rc.obj</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>可猜测错误原因是未成功生成vs_version.rc.obj。</p>
+<p>　　根据<strong>build.make</strong>中的错误行，需要修改编译命令，手动生成vs_version.rc.obj，并重新mingw32-make，解决方法是手动生成一下。</p>
+<p>进入到 <code>D:\Dev\OpenCV3411\opencv\sources\build\modules\core</code>  路径下，然后在终端运行下面的<strong>一句</strong>命令行。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">D:\20200213\ForDevelopment\Qt\Qt5.14.1\Tools\mingw730_32\bin\windres.exe -O coff  E:\20200325\DevelopmentEnvironment\opencv3411\build\modules\core\vs_version.rc CMakeFiles\opencv_core.dir\vs_version.rc.obj</span><br></pre></td></tr></table></figure>
+
+<p>　　注意上面那句命令行省略了中间的<code>$(RC_DEFINES) $(RC_INCLUDES) $(RC_FLAGS)</code> 。要是没省略是执行不了的。</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/image-20200721094418287.png" alt="输入命令行"></p>
+<p>　　然后重新点击【Configure】和 【Generate】。</p>
+<p>重新输入 <code>mingw32-make</code> 去编译，编译通过后 <code>mingw32-make install</code> 安装。</p>
+<div class="note info"><p>提示：一定要查看自己的 build.make </p>
+<p>每个人的路径都是不一样的</p>
+</div>
+
+
+
+<p><strong>出现上面这个原因还有可能是 windres.exe 的位数不同，看这个</strong> 👇🏻</p>
+<h3 id="mingw730-32-bin-windres-exe-preprocessing-failed"><a href="#mingw730-32-bin-windres-exe-preprocessing-failed" class="headerlink" title="mingw730_32\bin\windres.exe: preprocessing failed."></a>mingw730_32\bin\windres.exe: preprocessing failed.</h3><p>日志：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">[ 34%] Building RC object modules/core/CMakeFiles/opencv_core.dir/vs_version.rc.obj</span><br><span class="line">gcc: error: long: No such file or directory</span><br><span class="line">D:\20200213\ForDevelopment\Qt\Qt5.14.1\Tools\mingw730_32\bin\windres.exe: preprocessing failed.</span><br><span class="line">mingw32-make[2]: *** [modules\core\CMakeFiles\opencv_core.dir\build.make:1508: modules/core/CMakeFiles/opencv_core.dir/vs_version.rc.obj] Error 1</span><br><span class="line">mingw32-make[1]: *** [CMakeFiles\Makefile2:2239: modules/core/CMakeFiles/opencv_core.dir/all] Error 2</span><br><span class="line">mingw32-make: *** [Makefile:181: all] Error 2</span><br></pre></td></tr></table></figure>
+
+
+
+<p>　　报错中怎么会是 mingw730_32&#x2F;bin&#x2F;windres.exe 呢？ 应该是64位的啊 ，因为我要编译64位的，那么就更改一下：</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/image-20200721164200072.png" alt="更改前"></p>
+<p>　　更改为 64 位的路径：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">D:/20200213/ForDevelopment/Qt/Qt5.14.1/Tools/mingw730_64/bin/windres.exe</span><br></pre></td></tr></table></figure>
+
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200721164757.png" alt="更改后"></p>
+<p><code>mingw32-make.exe</code> 的路径也是32位，同样更改为64位。</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/image-20200721163719900.png" alt="更改前"></p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/image-20200721165031061.png" alt="更改后"></p>
+<p>　　重新【Configure】和 【Generate】。</p>
+<p>　　重新输入 <code>mingw32-make</code> 去编译，编译通过后 <code>mingw32-make install</code> 安装。</p>
+<br/>
+
+<h3 id="Invalid-escape-sequence-2"><a href="#Invalid-escape-sequence-2" class="headerlink" title="Invalid escape sequence \2"></a>Invalid escape sequence \2</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">CMake Error at cmake/OpenCVModule.cmake:369 (_glob_locations):</span><br><span class="line">  Syntax error in cmake code at</span><br><span class="line"></span><br><span class="line">    E:/20200325/DevelopmentEnvironment/opencv3411/cmake/OpenCVModule.cmake:369</span><br><span class="line"></span><br><span class="line">  when parsing string</span><br><span class="line"></span><br><span class="line">    E:\20200325\DevelopmentEnvironment\opencv_contrib-3.4.11\modules</span><br><span class="line"></span><br><span class="line">  Invalid escape sequence \2</span><br><span class="line">Call Stack (most recent call first):</span><br><span class="line">  modules/CMakeLists.txt:7 (ocv_glob_modules)</span><br></pre></td></tr></table></figure>
+
+
+
+<p>　　该错误的原因是使用的路径有有 <code>\</code> ,解决方法是使用<code>/</code> 或者<code>\\</code>。请参见 <a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/13737370/cmake-error-invalid-escape-sequence-u">stackoverflow</a> 。</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200720225946.png"></p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200720230128.png"></p>
+<p>　　然后重新点击【Configure】。</p>
+<br/>
+
+<h3 id="fatal-error-boostdesc-bgm-i-No-such-file-or-directory-include-“boostdesc-bgm-i”"><a href="#fatal-error-boostdesc-bgm-i-No-such-file-or-directory-include-“boostdesc-bgm-i”" class="headerlink" title="fatal error: boostdesc_bgm.i: No such file or directory #include “boostdesc_bgm.i”"></a>fatal error: boostdesc_bgm.i: No such file or directory #include “boostdesc_bgm.i”</h3><p>报错日志：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">[ 85%] Building CXX object modules/videostab/CMakeFiles/opencv_test_videostab.dir/test/test_main.cpp.obj</span><br><span class="line">[ 85%] Building CXX object modules/videostab/CMakeFiles/opencv_test_videostab.dir/test/test_motion_estimation.cpp.obj</span><br><span class="line">[ 85%] Linking CXX executable ..\..\bin\opencv_test_videostab.exe</span><br><span class="line">[ 85%] Built target opencv_test_videostab</span><br><span class="line">[ 85%] Building CXX object modules/xfeatures2d/CMakeFiles/opencv_xfeatures2d.dir/src/boostdesc.cpp.obj</span><br><span class="line">D:\Dev\OpenCV3411\opencv_contrib-3.4.11\modules\xfeatures2d\src\boostdesc.cpp:654:20: fatal error: boostdesc_bgm.i: No such file or directory</span><br><span class="line">           #include &quot;boostdesc_bgm.i&quot;</span><br><span class="line">                    ^~~~~~~~~~~~~~~~~</span><br><span class="line">compilation terminated.</span><br><span class="line">mingw32-make[2]: *** [modules\xfeatures2d\CMakeFiles\opencv_xfeatures2d.dir\build.make:101: modules/xfeatures2d/CMakeFiles/opencv_xfeatures2d.dir/src/boostdesc.cpp.obj] Error 1</span><br><span class="line">mingw32-make[1]: *** [CMakeFiles\Makefile2:6302: modules/xfeatures2d/CMakeFiles/opencv_xfeatures2d.dir/all] Error 2</span><br><span class="line">mingw32-make: *** [Makefile:181: all] Error 2</span><br></pre></td></tr></table></figure>
+
+<p>　　原因是某些文件没有从github下载下来，解决方法就是手动下载放到对应的路径中。可以查看 <strong>build</strong> 文件夹下的日志文件 <strong>CMakeDownloadLog.txt</strong>，在<strong>日志文件CMakeDownloadLog.txt</strong>中搜索 <strong>boostdesc_bgm.i</strong> 关键词 ，可以发现错误的原因是<br> 发现文件下载失败了。</p>
+<p>　　解决方法可以 在 github issue 中看到 <a target="_blank" rel="noopener" href="https://github.com/opencv/opencv_contrib/issues/1301">fatal error: boostdesc_bgm.i: No such file or directory  #1301</a></p>
+<p>下载缺失的文件  放在  <strong>opencv_contrib&#x2F;modules&#x2F;xfeatures2d&#x2F;src&#x2F;</strong> 路径下即可。</p>
+<p>总共缺了以下几个文件，都需要拷贝：</p>
+<pre><code>boostdesc_bgm.i
+boostdesc_bgm_bi.i
+boostdesc_bgm_hd.i
+boostdesc_lbgm.i
+boostdesc_binboost_064.i
+boostdesc_binboost_128.i
+boostdesc_binboost_256.i
+vgg_generated_120.i
+vgg_generated_64.i
+vgg_generated_80.i
+vgg_generated_48.i
+</code></pre>
+<p>　　各个文件的下载路径为：</p>
+<p> <a target="_blank" rel="noopener" href="https://raw.githubusercontent.com/opencv/opencv_3rdparty/34e4206aef44d50e6bbcd0ab06354b52e7466d26/boostdesc_lbgm.i">opencv&#x2F;opencv_3rdparty@<code>34e4206</code>&#x2F;boostdesc_lbgm.i (raw)</a><br> <a target="_blank" rel="noopener" href="https://raw.githubusercontent.com/opencv/opencv_3rdparty/34e4206aef44d50e6bbcd0ab06354b52e7466d26/boostdesc_binboost_256.i">opencv&#x2F;opencv_3rdparty@<code>34e4206</code>&#x2F;boostdesc_binboost_256.i (raw)</a><br>  <a target="_blank" rel="noopener" href="https://raw.githubusercontent.com/opencv/opencv_3rdparty/34e4206aef44d50e6bbcd0ab06354b52e7466d26/boostdesc_binboost_128.i">opencv&#x2F;opencv_3rdparty@<code>34e4206</code>&#x2F;boostdesc_binboost_128.i (raw)</a><br> <a target="_blank" rel="noopener" href="https://raw.githubusercontent.com/opencv/opencv_3rdparty/34e4206aef44d50e6bbcd0ab06354b52e7466d26/boostdesc_binboost_064.i">opencv&#x2F;opencv_3rdparty@<code>34e4206</code>&#x2F;boostdesc_binboost_064.i (raw)</a><br> <a target="_blank" rel="noopener" href="https://raw.githubusercontent.com/opencv/opencv_3rdparty/34e4206aef44d50e6bbcd0ab06354b52e7466d26/boostdesc_bgm_hd.i">opencv&#x2F;opencv_3rdparty@<code>34e4206</code>&#x2F;boostdesc_bgm_hd.i (raw)</a>  <a target="_blank" rel="noopener" href="https://raw.githubusercontent.com/opencv/opencv_3rdparty/34e4206aef44d50e6bbcd0ab06354b52e7466d26/boostdesc_bgm_bi.i">opencv&#x2F;opencv_3rdparty@<code>34e4206</code>&#x2F;boostdesc_bgm_bi.i (raw)</a>  <a target="_blank" rel="noopener" href="https://raw.githubusercontent.com/opencv/opencv_3rdparty/34e4206aef44d50e6bbcd0ab06354b52e7466d26/boostdesc_bgm.i">opencv&#x2F;opencv_3rdparty@<code>34e4206</code>&#x2F;boostdesc_bgm.i (raw)</a> <a target="_blank" rel="noopener" href="https://raw.githubusercontent.com/opencv/opencv_3rdparty/fccf7cd6a4b12079f73bbfb21745f9babcd4eb1d/vgg_generated_120.i">opencv&#x2F;opencv_3rdparty@<code>fccf7cd</code>&#x2F;vgg_generated_120.i (raw)</a><br> <a target="_blank" rel="noopener" href="https://raw.githubusercontent.com/opencv/opencv_3rdparty/fccf7cd6a4b12079f73bbfb21745f9babcd4eb1d/vgg_generated_64.i">opencv&#x2F;opencv_3rdparty@<code>fccf7cd</code>&#x2F;vgg_generated_64.i (raw)</a>  <a target="_blank" rel="noopener" href="https://raw.githubusercontent.com/opencv/opencv_3rdparty/fccf7cd6a4b12079f73bbfb21745f9babcd4eb1d/vgg_generated_48.i">opencv&#x2F;opencv_3rdparty@<code>fccf7cd</code>&#x2F;vgg_generated_48.i (raw)</a><br> <a target="_blank" rel="noopener" href="https://raw.githubusercontent.com/opencv/opencv_3rdparty/fccf7cd6a4b12079f73bbfb21745f9babcd4eb1d/vgg_generated_80.i">opencv&#x2F;opencv_3rdparty@<code>fccf7cd</code>&#x2F;vgg_generated_80.i (raw)</a> </p>
+<p>　　也可以在终端中一键下载 ,记得先进入对应的路径，然后输入 curl 后面那些命令行。😁</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">cd E:/20200325/DevelopmentEnvironment/opencv3411/.cache/xfeatures2d</span><br><span class="line">cd boostdesc</span><br><span class="line"></span><br><span class="line">curl opencv/opencv_3rdparty@34e4206/boostdesc_lbgm.i (raw) &gt; 0ae0675534aa318d9668f2a179c2a052-boostdesc_lbgm.i</span><br><span class="line">curl opencv/opencv_3rdparty@34e4206/boostdesc_binboost_256.i (raw) &gt; e6dcfa9f647779eb1ce446a8d759b6ea-boostdesc_binboost_256.i</span><br><span class="line">curl opencv/opencv_3rdparty@34e4206/boostdesc_binboost_128.i (raw) &gt; 98ea99d399965c03d555cef3ea502a0b-boostdesc_binboost_128.i</span><br><span class="line">curl opencv/opencv_3rdparty@34e4206/boostdesc_binboost_064.i (raw) &gt; 202e1b3e9fec871b04da31f7f016679f-boostdesc_binboost_064.i</span><br><span class="line">curl opencv/opencv_3rdparty@34e4206/boostdesc_bgm_hd.i (raw) &gt; 324426a24fa56ad9c5b8e3e0b3e5303e-boostdesc_bgm_hd.i</span><br><span class="line">curl opencv/opencv_3rdparty@34e4206/boostdesc_bgm_bi.i (raw) &gt; 232c966b13651bd0e46a1497b0852191-boostdesc_bgm_bi.i</span><br><span class="line">curl opencv/opencv_3rdparty@34e4206/boostdesc_bgm.i (raw) &gt; 0ea90e7a8f3f7876d450e4149c97c74f-boostdesc_bgm.i</span><br><span class="line">cd ../vgg</span><br><span class="line">curl opencv/opencv_3rdparty@fccf7cd/vgg_generated_120.i (raw) &gt; 151805e03568c9f490a5e3a872777b75-vgg_generated_120.i</span><br><span class="line">curl opencv/opencv_3rdparty@fccf7cd/vgg_generated_64.i (raw) &gt; 7126a5d9a8884ebca5aea5d63d677225-vgg_generated_64.i</span><br><span class="line">curl opencv/opencv_3rdparty@fccf7cd/vgg_generated_48.i (raw) &gt; e8d0dcd54d1bcfdc29203d011a797179-vgg_generated_48.i</span><br><span class="line">curl opencv/opencv_3rdparty@fccf7cd/vgg_generated_80.i (raw) &gt; 7cd47228edec52b6d82f46511af325c5-vgg_generated_80.i</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<p>　　下载好后在 CMake 中<strong>重新生成</strong>，然后继续编译。记得重新生成。</p>
+<blockquote>
+<p>in the end, your opencv&#x2F;.cache should look like this:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">.cache</span><br><span class="line">│</span><br><span class="line">└───xfeatures2d</span><br><span class="line"> ├───boostdesc</span><br><span class="line"> │       0ae0675534aa318d9668f2a179c2a052-boostdesc_lbgm.i</span><br><span class="line"> │       0ea90e7a8f3f7876d450e4149c97c74f-boostdesc_bgm.i</span><br><span class="line"> │       202e1b3e9fec871b04da31f7f016679f-boostdesc_binboost_064.i</span><br><span class="line"> │       232c966b13651bd0e46a1497b0852191-boostdesc_bgm_bi.i</span><br><span class="line"> │       324426a24fa56ad9c5b8e3e0b3e5303e-boostdesc_bgm_hd.i</span><br><span class="line"> │       98ea99d399965c03d555cef3ea502a0b-boostdesc_binboost_128.i</span><br><span class="line"> │       e6dcfa9f647779eb1ce446a8d759b6ea-boostdesc_binboost_256.i</span><br><span class="line"> │</span><br><span class="line"> └───vgg</span><br><span class="line">         151805e03568c9f490a5e3a872777b75-vgg_generated_120.i</span><br><span class="line">         7126a5d9a8884ebca5aea5d63d677225-vgg_generated_64.i</span><br><span class="line">         7cd47228edec52b6d82f46511af325c5-vgg_generated_80.i</span><br><span class="line">         e8d0dcd54d1bcfdc29203d011a797179-vgg_generated_48.i</span><br><span class="line">         </span><br><span class="line">https://github.com/opencv/opencv_contrib/issues/1301</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>　　其实下载失败一般是你的网络原因或者 hosts 的原因 ，我的就很正常，哈哈。自动下载。可以 <a href="https://www.lifeee.top/posts/32023.html">更改hosts加速访问Github</a>  试试看，不然可能很多 github release 的文件你应该也下载不了。      </p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/image-20200720232843831.png"></p>
+<br/>
+
+<h3 id="CMake-Warning-at-cmake-OpenCVDownload-cmake-202-message-FFMPEG-Download-failed-28-”Timeout-was-reached”"><a href="#CMake-Warning-at-cmake-OpenCVDownload-cmake-202-message-FFMPEG-Download-failed-28-”Timeout-was-reached”" class="headerlink" title="CMake Warning at cmake&#x2F;OpenCVDownload.cmake:202 (message): FFMPEG: Download failed: 28;”Timeout was reached”"></a>CMake Warning at cmake&#x2F;OpenCVDownload.cmake:202 (message): FFMPEG: Download failed: 28;”Timeout was reached”</h3><p>错误日志</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">CMake Warning at cmake/OpenCVDownload.cmake:202 (message):</span><br><span class="line">  FFMPEG: Download failed: 28;&quot;Timeout was reached&quot;</span><br></pre></td></tr></table></figure>
+
+<p>或者</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">FFMPEG: Download: opencv_videoio_ffmpeg_64.dll Try 1 failed CMake</span><br><span class="line">Warning at cmake/OpenCVDownload.cmake:202 (message): FFMPEG:</span><br><span class="line">Download failed: 35;“SSL connect error”</span><br></pre></td></tr></table></figure>
+
+<p>　　以上错误 的原因均是 <code>opencv_videoio_ffmpeg.dll</code> 和 <code>opencv_videoio_ffmpeg_64.dll</code>下载失败导致。</p>
+<p>查看 <code>E:\20200325\DevelopmentEnvironment\opencv3411\.cache\ffmpeg</code> 路径下的缓存，文件并未下载完成</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/image-20200721100208850.png"></p>
+<p>　　建议换个网络环境（比如 科学上网），重新生成一下看看能不能下载成功。若还是不能的话只能手动下载了。</p>
+<p>只需要下载对应的对应的 opencv_ffmpeg.dll 和 opencv_ffmpeg_64.dll即可，文件名前面的16进制前缀，为对应文件的md5值。</p>
+<p>手动下载的方法 请看这几个链接：</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/opencv/opencv/issues/5546">https://github.com/opencv/opencv/issues/5546</a></p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/image-20200721101640012.png"></p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/32932915/opencv-3-0-0-configure-fails-ffmpeg-not-downloaded">https://stackoverflow.com/questions/32932915/opencv-3-0-0-configure-fails-ffmpeg-not-downloaded</a></p>
+<p><a target="_blank" rel="noopener" href="https://github.com/opencv/opencv_3rdparty/tree/ffmpeg/master_20150703/ffmpeg">https://github.com/opencv/opencv_3rdparty&#x2F;tree&#x2F;ffmpeg&#x2F;master_20150703&#x2F;ffmpeg</a></p>
+</blockquote>
+<p>在 <a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/32932915/opencv-3-0-0-configure-fails-ffmpeg-not-downloaded">https://stackoverflow.com/questions/32932915/opencv-3-0-0-configure-fails-ffmpeg-not-downloaded</a> 下载下图 中的两个文件</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/image-20200721102242557.png"></p>
+<p>　　下载对应的 opencv_ffmpeg.dll 和 opencv_ffmpeg_64.dll即可，然后需要查看为对应文件的md5值。</p>
+<blockquote>
+<p><strong>windows下查看文件md5</strong></p>
+<figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">certutil -hashfile 文件路径 MD5</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/image-20200721102828601.png"></p>
+<p>我的 opencv_ffmpeg.dll 是 <code>f081abd9d6ca7e425d340ce586f9c090</code></p>
+<p> opencv_ffmpeg_64.dll 是 <code>35fe6ccdda6d7a04e9056b0d73b98e76</code></p>
+<p>拷贝下载好的文件放到</p>
+<p> <code>E:\20200325\DevelopmentEnvironment\opencv3411\.cache\ffmpeg</code> </p>
+<p>然后重命名为 </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">f081abd9d6ca7e425d340ce586f9c090-opencv_ffmpeg.dll</span><br><span class="line">35fe6ccdda6d7a04e9056b0d73b98e76-opencv_ffmpeg_64.dll</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/image-20200721103805182.png"></p>
+<p>　　不然编译的时候不一致又会重新下载了。</p>
+<p>　　仅仅把下载的文件放在缓冲区中是不够的，因为自己下载的MD5有可能和源码中指定的MD5不一致，从而导致编译后，依旧无法下载指定是的文件，同样无法编译！所以修改源码中指定的MD5。<br>打开文件 <code>opencv\sources\3rdparty\ffmpeg\ffmpeg.cmake</code><br>把如下两项对应的值，修改成以上文件的MD5，分别对应32位和64位的dll</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>ocv_update(FFMPEG_FILE_HASH_BIN32 “f081abd9d6ca7e425d340ce586f9c090”)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td>ocv_update(FFMPEG_FILE_HASH_BIN64 “35fe6ccdda6d7a04e9056b0d73b98e76”)</td>
+</tr>
+</tbody></table>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/image-20200721103853226.png"></p>
+<p>然后重新编译。</p>
+<br/>
+
+<h3 id="data-Download-face-landmark-model-dat"><a href="#data-Download-face-landmark-model-dat" class="headerlink" title="data: Download: face_landmark_model.dat"></a>data: Download: face_landmark_model.dat</h3><p>　　要是在生成中停留在下面这个界面比较久，是因为国内下载慢的原因。</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/image-20200721121509265.png"></p>
+<p>　　所以可手动下载好，然后放到指定目录下。首先这个文件下载地址为 <a target="_blank" rel="noopener" href="https://github.com/opencv/opencv_3rdparty/blob/contrib_face_alignment_20170818/face_landmark_model.dat">https://github.com/opencv/opencv_3rdparty&#x2F;blob&#x2F;contrib_face_alignment_20170818&#x2F;face_landmark_model.dat</a>，</p>
+<p>　　手动下载好之后，找到</p>
+<p><code>E:\20200325\DevelopmentEnvironment\opencv_contrib-3.4.11\modules\face\CMakeLists.txt</code></p>
+<p>打开。 找到其中以<code>https://raw”</code>开头的一串网址，如下图所示：</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200721143013.png"></p>
+<p>　　将其替换成本地文件路径，如下：</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200721143108.png"></p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200721143233.png"></p>
+<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><blockquote>
+<p><a target="_blank" rel="noopener" href="https://wiki.qt.io/How_to_setup_Qt_and_openCV_on_Windows">How to setup Qt and openCV on Windows</a></p>
+<p><a href="https://www.lifeee.top/posts/20536.html">Visual Studio 2019配置qt开发环境</a></p>
+<p><a href="https://www.lifeee.top/posts/32023.html">更改hosts加速访问Github</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.huihut.com/2018/07/31/CompiledOpenCVWithMinGW64/">OpenCV使用CMake和MinGW-w64的编译安装</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/ezrealiu/p/install-opencv-4-on-your-raspberry-pi-4.html">Install OpenCV 4 on your Raspberry Pi4</a></p>
+<p><a target="_blank" rel="noopener" href="https://sunjiadai.xyz/blog/2019/02/16/OpenCV-QT%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95/">OpenCV-QT项目开发记录</a></p>
+<p><a target="_blank" rel="noopener" href="https://github.com/opencv/opencv_contrib/issues/1301">fatal error: boostdesc_bgm.i: No such file or directory  #1301</a></p>
+<p><a target="_blank" rel="noopener" href="https://github.com/opencv/opencv/issues/11655">Windows 10 CMake | OPENCV_EXTRA_MODULES_PATH | Bug #11655</a></p>
+<p><a target="_blank" rel="noopener" href="https://github.com/opencv/opencv/issues/5546">OpenCV 3.0.0 “configure” fails - ffmpeg download error   #5546</a></p>
+<p><a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/32932915/opencv-3-0-0-configure-fails-ffmpeg-not-downloaded">OpenCV 3.0.0 “configure” fails, ffmpeg not downloaded</a></p>
+<p><a target="_blank" rel="noopener" href="https://github.com/opencv/opencv_3rdparty/tree/ffmpeg/master_20150703/ffmpeg">https://github.com/opencv/opencv_3rdparty&#x2F;tree&#x2F;ffmpeg&#x2F;master_20150703&#x2F;ffmpeg</a></p>
+<p><a target="_blank" rel="noopener" href="https://github.com/opencv/opencv_3rdparty/tree/contrib_face_alignment_20170818">https://github.com/opencv/opencv_3rdparty&#x2F;tree&#x2F;contrib_face_alignment_20170818</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_44381193/article/details/106103417">Windows 10使用Qt配置OpenCV时出现的一些编译错误小记</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.codenong.com/js3c4b1af3837f/">学习OpenCV3：MinGW编译OpenCV到vs_version.rc.obj处出错</a></p>
+<p><a target="_blank" rel="noopener" href="http://zhaoxuhui.top/blog/2019/06/04/OpenCVContribEnvCPP.html">再谈OpenCV Contrib编译与安装</a></p>
+<p><a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/13737370/cmake-error-invalid-escape-sequence-u">Cmake error: Invalid escape sequence \U</a></p>
+<p><a target="_blank" rel="noopener" href="https://answers.opencv.org/question/168538/building-opencv-with-mingw-gcc-710-and-cmake-390-windresexe-unknown-option-w/">Building OpenCV with MinGW (gcc 7.1.0 and cmake 3.9.0)-&gt; windres.exe:  unknown option – W</a></p>
+</blockquote>
+<br/>
+
+
+
+ 
+
+<br />
+
+
+
+ 
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>请我一杯咖啡吧！</div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/wechatpay.png" alt="热夏 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="/images/alipay.jpg" alt="热夏 支付宝">
+        <span>支付宝</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>热夏
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://www.lifeee.top/posts/50934.html" title="CMake和minGW-64 编译安装 OpenCV3.4.11以供 Qt 使用">https://www.lifeee.top/posts/50934.html</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="followme">
+  <span>欢迎关注我的其它发布渠道</span>
+
+  <div class="social-list">
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="/atom.xml">
+            <span class="icon">
+              <i class="fa fa-rss"></i>
+            </span>
+
+            <span class="label">RSS</span>
+          </a>
+      </div>
+  </div>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/C/" rel="tag"><i class="fa fa-tag"></i> C++</a>
+              <a href="/tags/%E7%BC%96%E7%A8%8B/" rel="tag"><i class="fa fa-tag"></i> 编程</a>
+              <a href="/tags/%E6%95%99%E7%A8%8B/" rel="tag"><i class="fa fa-tag"></i> 教程</a>
+              <a href="/tags/QT/" rel="tag"><i class="fa fa-tag"></i> QT</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/posts/1788.html" rel="prev" title="创世纪图书馆 Library Genesis 图书下载指南">
+                  <i class="fa fa-angle-left"></i> 创世纪图书馆 Library Genesis 图书下载指南
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/posts/56322.html" rel="next" title="QT 调用 OpenCV 打开摄像头">
+                  QT 调用 OpenCV 打开摄像头 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments gitalk-container"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 2018 – 
+    <span itemprop="copyrightYear">2026</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">热夏</span>
+  </div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>站点总字数：</span>
+    <span title="站点总字数">743k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">11:15</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/next-theme-pjax/0.6.0/pjax.min.js" integrity="sha256-vxLn1tSKWD4dqbMRyv940UYw4sXgMtYcK6reefzZrao=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lozad.js/1.16.0/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script><script src="/js/pjax.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+  <script src="/js/third-party/pace.js"></script>
+
+
+  
+  <script data-pjax async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","mhchem":false,"js":{"url":"//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
+
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"upwon","repo":"upwon.github.io","client_id":"7e047047ecee7317452b","client_secret":"c60fbdf0eb19e7264e33ab780319e4d420a58fee","admin_user":"upwon","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":null,"js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"b15f03d4a86c0ae676c0190cdf0c9843"}</script>
+<script src="/js/third-party/comments/gitalk.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/myapple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/myfavicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/myfavicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/myapple-touch-icon-next.png" color="#222">
+  <meta name="google-site-verification" content="google2fc64c2b92961282.html">
+  <meta name="baidu-site-verification" content="s6BwSjIZYB">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.loli.net/css?family='LXGW+WenKai+LITE':300,300italic,400,400italic,700,700italic%7C'LXGW+WenKai+Screen':300,300italic,400,400italic,700,700italic%7C'LXGW+WenKai':300,300italic,400,400italic,700,700italic%7C'Noto+Serif+SC':300,300italic,400,400italic,700,700italic%7C'EB+Garamond':300,300italic,400,400italic,700,700italic%7C'PingFang+SC':300,300italic,400,400italic,700,700italic%7C'Microsoft+YaHei':300,300italic,400,400italic,700,700italic%7C'sans-serif':300,300italic,400,400italic,700,700italic%7CMa+Shan+Zheng:300,300italic,400,400italic,700,700italic%7CLXGW+WenKai+Screen:300,300italic,400,400italic,700,700italic%7CLXGW+WenKai:300,300italic,400,400italic,700,700italic%7CMenlo:300,300italic,400,400italic,700,700italic%7CMonaco:300,300italic,400,400italic,700,700italic%7CConsolas:300,300italic,400,400italic,700,700italic%7CSource+Code+Pro:300,300italic,400,400italic,700,700italic%7Csystem-ui:300,300italic,400,400italic,700,700italic%7Cmonospace:300,300italic,400,400italic,700,700italic%7Csans-serif:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha256-yIDrPSXHZdOZhAqiBP7CKzIwMQmRCJ8UeB8Jo17YC4o=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/themes/blue/pace-theme-minimal.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"www.lifeee.top","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.19.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"mac","show_result":true},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="winget 是 windows 10 平台的一个包管理工具，能够在终端通过简单的命令行实现软件的安装、更新、卸载等，与之类似的有 Scoop 和 Chocolatey. 由于 winget 是官方支持，因此安全性、兼容性方面都有保障. 若你和我一样是一个 「更新狂」， 那么你以后更新软件将十分惬意，没有必要去进行一系列繁杂的下载安装 …  ,  只需打开终端输入简单的命令即可 . 🍨">
+<meta property="og:type" content="article">
+<meta property="og:title" content="包管理器 winget 使用指南">
+<meta property="og:url" content="https://www.lifeee.top/posts/36943.html">
+<meta property="og:site_name" content="热夏的博客">
+<meta property="og:description" content="winget 是 windows 10 平台的一个包管理工具，能够在终端通过简单的命令行实现软件的安装、更新、卸载等，与之类似的有 Scoop 和 Chocolatey. 由于 winget 是官方支持，因此安全性、兼容性方面都有保障. 若你和我一样是一个 「更新狂」， 那么你以后更新软件将十分惬意，没有必要去进行一系列繁杂的下载安装 …  ,  只需打开终端输入简单的命令即可 . 🍨">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/ba920825gy1grgzqvrxgaj21hc0zkgv6.jpg">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/ba920825gy1grgn87bkpsj21ig0vbamz.jpg">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/ba920825gy1grgnbbg6d6j21ig0vbqa3.jpg">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/ba920825gy1grgn5ehrhsj21cw0pf421.jpg">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/ba920825gy1grgnhiwi32j21ig0vbnpd.jpg">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/ba920825gy1grgnnhcwwtj21900qh1kx.jpg">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/ba920825gy1grgxbq5mqfj21690o6h80.jpg">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/ba920825gy1grgo52slltj21900qh1kx.jpg">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/ba920825gy1grgoitibnwj21cw0pf46p.jpg">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/ba920825gy1grgomziekij20wb0m8dmz.jpg">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/ba920825gy1grgp32ks30j21cc0t57wh.jpg">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/ba920825gy1grgpivchmhj21cc0t57wh.jpg">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/ba920825gy1grgpvc46bbj21cc0t5b29.jpg">
+<meta property="article:published_time" content="2021-06-13T13:58:12.000Z">
+<meta property="article:modified_time" content="2026-03-08T07:46:57.144Z">
+<meta property="article:author" content="热夏">
+<meta property="article:tag" content="教程">
+<meta property="article:tag" content="善用佳软">
+<meta property="article:tag" content="Windows">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/ba920825gy1grgzqvrxgaj21hc0zkgv6.jpg">
+
+
+<link rel="canonical" href="https://www.lifeee.top/posts/36943.html">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://www.lifeee.top/posts/36943.html","path":"posts/36943.html","title":"包管理器 winget 使用指南"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>包管理器 winget 使用指南 | 热夏的博客</title>
+  
+
+
+
+
+
+
+
+<link href="https://fonts.loli.net/css?family=Noto+Serif+SC:400,500,700&display=swap&subset=chinese-simplified" rel="stylesheet">
+<link rel="stylesheet" href="https://npm.elemecdn.com/lxgw-wenkai-screen-webfont@1.7.0/style.css" />
+
+<link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&display=swap" rel="stylesheet">
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="热夏的博客" type="application/atom+xml">
+<style>.darkmode--activated{--body-bg-color:#282828;--content-bg-color:#333;--card-bg-color:#555;--text-color:#ccc;--blockquote-color:#bbb;--link-color:#ccc;--link-hover-color:#eee;--brand-color:#ddd;--brand-hover-color:#ddd;--table-row-odd-bg-color:#282828;--table-row-hover-bg-color:#363636;--menu-item-bg-color:#555;--btn-default-bg:#222;--btn-default-color:#ccc;--btn-default-border-color:#555;--btn-default-hover-bg:#666;--btn-default-hover-color:#ccc;--btn-default-hover-border-color:#666;--highlight-background:#282b2e;--highlight-foreground:#a9b7c6;--highlight-gutter-background:#34393d;--highlight-gutter-foreground:#9ca9b6}.darkmode--activated img{opacity:.75}.darkmode--activated img:hover{opacity:.9}.darkmode--activated code{color:#69dbdc;background:0 0}button.darkmode-toggle{z-index:9999}.darkmode-ignore,img{display:flex!important}.beian img{display:inline-block!important}</style></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">热夏的博客</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-heart fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85-winget"><span class="nav-number">1.</span> <span class="nav-text">安装 winget</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8%E6%96%B9%E5%BC%8F"><span class="nav-number">2.</span> <span class="nav-text">使用方式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%91%BD%E4%BB%A4%E4%B8%80%E8%A7%88"><span class="nav-number">2.1.</span> <span class="nav-text">命令一览</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%89%E8%A3%85"><span class="nav-number">2.2.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8D%B8%E8%BD%BD"><span class="nav-number">2.3.</span> <span class="nav-text">卸载</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9B%B4%E6%96%B0"><span class="nav-number">2.4.</span> <span class="nav-text">更新</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AF%BC%E5%87%BA%E4%B8%8E%E5%AF%BC%E5%85%A5"><span class="nav-number">2.5.</span> <span class="nav-text">导出与导入</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AE%BE%E7%BD%AEwinget"><span class="nav-number">3.</span> <span class="nav-text">设置winget</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B6%E5%AE%83"><span class="nav-number">3.1.</span> <span class="nav-text">其它</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE"><span class="nav-number">4.</span> <span class="nav-text">参考文献</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="热夏"
+      src="/images/head.jpg">
+  <p class="site-author-name" itemprop="name">热夏</p>
+  <div class="site-description" itemprop="description">空山新雨后，天气晚来秋。</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">112</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">44</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/upwon" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;upwon" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:w1244753906@gmail.com" title="E-Mail → mailto:w1244753906@gmail.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.lifeee.top//atom.xml" title="RSS → https:&#x2F;&#x2F;www.lifeee.top&#x2F;&#x2F;atom.xml" rel="noopener me"><i class="fa fa-rss fa-fw"></i>RSS</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+        <div class="pjax">
+        </div>
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.lifeee.top/posts/36943.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/head.jpg">
+      <meta itemprop="name" content="热夏">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="热夏的博客">
+      <meta itemprop="description" content="空山新雨后，天气晚来秋。">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="包管理器 winget 使用指南 | 热夏的博客">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          包管理器 winget 使用指南
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-06-13 21:58:12" itemprop="dateCreated datePublished" datetime="2021-06-13T21:58:12+08:00">2021-06-13</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2026-03-08 15:46:57" itemprop="dateModified" datetime="2026-03-08T15:46:57+08:00">2026-03-08</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%95%99%E7%A8%8B/" itemprop="url" rel="index"><span itemprop="name">教程</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/" itemprop="url" rel="index"><span itemprop="name">善用佳软</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>6k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>5 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/ba920825gy1grgzqvrxgaj21hc0zkgv6.jpg"></p>
+<p>winget 是 windows 10 平台的一个包管理工具，能够在终端通过简单的命令行实现软件的安装、更新、卸载等，与之类似的有 Scoop 和 Chocolatey. 由于 winget 是官方支持，因此安全性、兼容性方面都有保障. 若你和我一样是一个 「更新狂」， 那么你以后更新软件将十分惬意，没有必要去进行一系列繁杂的下载安装 …  ,  只需打开终端输入简单的命令即可 . 🍨</p>
+<span id="more"></span>
+
+
+
+
+
+
+
+
+
+<br />
+
+<h2 id="安装-winget"><a href="#安装-winget" class="headerlink" title="安装 winget"></a>安装 winget</h2><p>winget是一个安装包管理器，可在Windows 10 计算机上使用 <strong>winget</strong> 命令行工具来检索、安装、升级、删除和配置应用程序.  此工具是 Windows 程序包管理器服务的客户端接口. </p>
+<p>可使用多种方法安装 <strong>winget</strong> 工具：</p>
+<ul>
+<li><p>应用商店</p>
+<p>在  Microsoft Store 安装的话会比较简单，因此很推荐 .  在应用商店搜索 <code>应用安装程序</code> ，如下图所示，第一个就是，点进去安装即可. </p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/ba920825gy1grgn87bkpsj21ig0vbamz.jpg" alt="搜索应用安装程序"></p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/ba920825gy1grgnbbg6d6j21ig0vbqa3.jpg" alt="已安装"></p>
+<br/>
+</li>
+<li><p>github下载安装</p>
+<p>在 <a target="_blank" rel="noopener" href="https://github.com/microsoft/winget-cli/releases">Github Release</a>下载<code>.appxbundle</code>格式的文件，双击打开并运行安装即可.</p>
+</li>
+</ul>
+<p><a target="_blank" rel="noopener" href="https://github.com/microsoft/winget-cli">microsoft&#x2F;winget-cli: Windows Package Manager CLI (aka winget) </a> 有英文介绍， <a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/windows/package-manager/winget/">使用 winget 工具安装和管理应用程序 | Microsoft Docs</a> 里面有详细的中文介绍 . </p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/ba920825gy1grgn5ehrhsj21cw0pf421.jpg" alt="下载这个"></p>
+<blockquote>
+<p> 备注</p>
+<p> <strong>winget</strong> 工具需要 Windows 10 版本 1709 (10.0.16299) 或更高版本的 Windows 10. </p>
+</blockquote>
+<br/>
+
+<br/>
+
+<h2 id="使用方式"><a href="#使用方式" class="headerlink" title="使用方式"></a><strong>使用方式</strong></h2><h3 id="命令一览"><a href="#命令一览" class="headerlink" title="命令一览"></a>命令一览</h3><p>winget 工具的当前预览版支持以下类型的安装程序：</p>
+<ul>
+<li>EXE</li>
+<li>MSIX</li>
+<li>MSI</li>
+</ul>
+<p>目前winget支持以下的命令 ， 可以在 cmd 或者 powershell 输入 winget ，就能查看所有支持的命令. </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">The following commands are available:</span><br><span class="line">  install    Installs the given package        安装指定的应用</span><br><span class="line">  show       Shows information about a package 显示具体应用的信息</span><br><span class="line">  <span class="built_in">source</span>     Manage sources of packages       添加、删除和更新winget工具访问的程序包管理器存储库</span><br><span class="line">  search     Find and show basic info of packages   搜索想要的应用</span><br><span class="line">  list       Display installed packages				列出来已经安装的应用</span><br><span class="line">  upgrade    Upgrades the given package		   升级指定的应用</span><br><span class="line">  uninstall  Uninstalls the given package      卸载指定的应用</span><br><span class="line">  <span class="built_in">hash</span>       Helper to <span class="built_in">hash</span> installer files    为安装程序生成 SHA256 哈希</span><br><span class="line">  validate   Validates a manifest file         验证验证清单文件？</span><br><span class="line">  settings   Open settings					   打开winget设置</span><br><span class="line">  features   Shows the status of experimental features  显示实验features的状态</span><br><span class="line">  <span class="built_in">export</span>     Exports a list of the installed packages   导出已安装软件包的列表</span><br><span class="line">  import     Installs all the packages <span class="keyword">in</span> a file        导入要安装软件包的列表</span><br><span class="line">  <span class="built_in">help</span>	显示 winget 工具命令的帮助信息. </span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>我们常用的也就几个，搜索、安装、卸载、升级，下面将会演示每一个的用法. </p>
+  <br/>
+
+<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>安装 <strong>应用安装程序</strong> 后，可以通过在命令提示符下键入“winget”来运行 <strong>winget</strong>. </p>
+<p>最常见的使用场景之一是搜索并安装你最喜欢的工具. </p>
+<ol>
+<li>若要<a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/windows/package-manager/winget/search">搜索</a>某个工具，请键入 <code>winget search &lt;appname&gt;</code>. </li>
+<li>确认你需要的工具可用后，可以通过键入 <code>winget install &lt;appname&gt;</code> 来<a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/windows/package-manager/winget/install">安装</a>该工具.  <strong>winget</strong> 工具会启动安装程序，将应用程序安装在你的电脑上.</li>
+</ol>
+<p>比如， 搜索 <code>winget search music</code> </p>
+<p>会出现很多结果，其中有应用的名称、ID、版本以及Tag  ，然后找到你想要安装的应用 ，比如我当前想要安装 <code>Musescore</code> ， 那么只需输入 <code>winget install Musescore.Musescore</code>  或  <code>winget install Musescore</code>   就行了，更推荐前一种，因为前一种包含 ID ，这是独一无二的不会造成错误 . </p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/ba920825gy1grgnhiwi32j21ig0vbnpd.jpg"></p>
+<blockquote>
+<p> 当然如果你很明确你需要的应用，并且你知道它的名称，那么你就不需要去搜索了，你直接就安装就行了，不需要去搜索了，不过一般都需要去搜一下保证名称的正确性 . </p>
+</blockquote>
+<p>接下来输入 <code>winget install Musescore.Musescore</code> 进行安装 . </p>
+<p>有一些软件安装时会弹窗出来申请权限，点击是就行啦 ，如下图所示就是安装成功了. </p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/ba920825gy1grgnnhcwwtj21900qh1kx.jpg"></p>
+<br/>
+
+<p><strong><font color='cyan'>更改安装路径 !!!</font></strong> </p>
+<p>默认的安装路径是在C盘里面，当然安装路径是可以更改的，使用 <code>-l </code>来指定路径，<code>l</code>代表 <code>location </code>的意思. </p>
+<p>比如： </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">winget install EliasFotinis.DeskPins -l <span class="string">&quot;D:\20200213\Tools\DeskPins&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>就指定了安装路径为 <code>D:\20200213\Tools\DeskPins</code></p>
+<p> <img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/ba920825gy1grgxbq5mqfj21690o6h80.jpg"></p>
+<p>&#x3D;&#x3D;若需要指定安装路径，则千万切记一定要指定一个空的文件夹作为路径，否则卸载的话会把该路径下的东西全部都给删除了. 不要问我为什么知道&#x3D;&#x3D;</p>
+<br />
+
+ 
+
+<h3 id="卸载"><a href="#卸载" class="headerlink" title="卸载"></a>卸载</h3><p>卸载的话与安装类似 ，把 <code>winget install</code>   换成  <code>winget uninstall</code></p>
+<p>一般卸载前 我会使用 <code>winget list</code> 罗列出来已安装的所有应用，然后找到想要卸载的应用的名字，然后再卸载 . 因为有时候名字变了， 输入 <code>winget uninstall &#39;MuseScore 3&#39;</code>   或  <code>winget uninstall &quot;MuseScore 3&quot; </code></p>
+<blockquote>
+<p>为什么有引号呢？</p>
+<p>因为应用的名字中有空格，因此需要用 <code>‘ ’</code> 或者 <code>“ ”</code>括起来</p>
+</blockquote>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/ba920825gy1grgo52slltj21900qh1kx.jpg" alt="winget list"></p>
+<p>当前另一种方法卸载就是， 打开 <a target="_blank" rel="noopener" href="https://geekuninstaller.com/">geek uninstaller</a> ， 手动卸载也可 ，哈哈哈 </p>
+<blockquote>
+<p>geek uninstaller 是一款很好用的卸载工具，免费版的就足够用了</p>
+<p>不妨一试</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/ba920825gy1grgoitibnwj21cw0pf46p.jpg"></p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/ba920825gy1grgomziekij20wb0m8dmz.jpg"></p>
+</blockquote>
+<br />
+
+<h3 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h3><p>一般我都会隔几个月统一更新应用，首先我会在终端输入命令 <code>winget list</code>来获取到现在 的应用列表. 然后在应用列表当中会显示已可更新的应用. 然后我们再更新这些可以更新的应用即可</p>
+<p>输入  <code>winget list</code> 后普通不可更新的应用只有三列，可以更新的应用会有四列，第四列是它的最新版本号，表示这个应用有了更新，因此我们只需要更新这个应用即可 . 下面以 YesPlayMusic 为例 ，因为它可更新了. </p>
+<p>输入： <code>winget upgrade qier222.yesplaymusic </code> 就行啦</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/ba920825gy1grgp32ks30j21cc0t57wh.jpg"></p>
+<p>然后会打印这样的信息，就表示更新成功. </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">已找到 YesPlayMusic [qier222.yesplaymusic]</span><br><span class="line">此应用程序由其所有者授权给你. </span><br><span class="line">Microsoft 对第三方程序包概不负责，也不向第三方程序包授予任何许可证. </span><br><span class="line">Downloading https://github.com/qier222/YesPlayMusic/releases/download/v0.4.0/YesPlayMusic-Setup-0.4.0.exe</span><br><span class="line">  ██████████████████████████████  54.9 MB / 54.9 MB</span><br><span class="line">已成功验证安装程序哈希</span><br><span class="line">正在启动程序包安装...</span><br><span class="line">已成功安装</span><br></pre></td></tr></table></figure>
+
+<br />
+
+<h3 id="导出与导入"><a href="#导出与导入" class="headerlink" title="导出与导入"></a>导出与导入</h3><p>导出功能的话，我觉得还是很实用的. 比如说有时候我们重装系统或者想要将一台计算机当中的应用迁移到另外一台计算机当中. 那我们就可以先导出，然后再导入，再进行安装，十分的便利 . </p>
+<p>导出命令为： <code>winget export &quot;E:/app.json&quot;</code></p>
+<p>后面的路径及文件名自己定义就行. </p>
+<p>对于不支持导出的应用的会报： 无法从任何源获得已安装的程序包 ，其余的都导出到指定的文件里面了. </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">无法从任何源获得已安装的程序包: Bluetooth Audio Receiver</span><br><span class="line">无法从任何源获得已安装的程序包: Maple</span><br><span class="line">无法从任何源获得已安装的程序包: Ark View</span><br><span class="line">无法从任何源获得已安装的程序包: PDF Reader - View, Edit, Annotate</span><br><span class="line">无法从任何源获得已安装的程序包: 蒲云加速器 2.0.0</span><br><span class="line">无法从任何源获得已安装的程序包: Office</span><br><span class="line">无法从任何源获得已安装的程序包: 中国天气网</span><br><span class="line">无法从任何源获得已安装的程序包: 简约倒计时</span><br><span class="line">无法从任何源获得已安装的程序包: 哔哩</span><br><span class="line">无法从任何源获得已安装的程序包: 网易云音乐-电台</span><br><span class="line">无法从任何源获得已安装的程序包: 极光天气</span><br><span class="line">无法从任何源获得已安装的程序包: Newsflow</span><br><span class="line">无法从任何源获得已安装的程序包: 工具管家</span><br><span class="line">无法从任何源获得已安装的程序包: 彩虹工具箱 2.0.2</span><br></pre></td></tr></table></figure>
+
+<p>就我体验而言，我觉得它的导出不太好用，因为很多很多的应用都无法导出. </p>
+<p>导入的话与导出类似，也是输入命令行并指定文件路径即可</p>
+<p><code>winget import  &quot;E:/app.json&quot;</code></p>
+<br />
+
+<h2 id="设置winget"><a href="#设置winget" class="headerlink" title="设置winget"></a>设置winget</h2><p>winget settings  打开 winget 的设置 json 文件进行配置，有需求的话可以在官方 <a target="_blank" rel="noopener" href="https://github.com/microsoft/winget-cli/blob/master/doc/Settings.md">winget-cli&#x2F;Settings.md at master · microsoft&#x2F;winget-cli (github.com)</a> 这里看看怎么配置 . </p>
+<p>如果想要更改 winget 显示的进度条视觉效果，可以 输入 winget settings  后在<code>setting.json</code>里增加：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&quot;visual&quot;: &#123;</span><br><span class="line">       &quot;progressBar&quot;: &quot;rainbow&quot;</span><br><span class="line">        // 三种样式可选：accent(默认值)、 retro、 rainbow</span><br><span class="line">&#125;,</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<p>完整的json为</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    // For documentation on these settings, see: https://aka.ms/winget-settings</span><br><span class="line">    // <span class="string">&quot;source&quot;</span>: &#123;</span><br><span class="line">    //    <span class="string">&quot;autoUpdateIntervalInMinutes&quot;</span>: 5</span><br><span class="line">    // &#125;,</span><br><span class="line">    <span class="string">&quot;visual&quot;</span>: &#123;</span><br><span class="line">          <span class="string">&quot;progressBar&quot;</span>: <span class="string">&quot;rainbow&quot;</span></span><br><span class="line">         // 三种样式可选：accent(默认值)、 retro、 rainbow</span><br><span class="line">&#125;,</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<p>这样子进度条就会变成彩虹色了，若没有更改设置json下的这个配置，也可以在安装的命令后面加上命令 –rainbow 来启用彩虹进度条.  比如 ： <code>winget install Musescore.Musescore --rainbow</code>  更改json后就不需要手动加 –rainbow 了. </p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/ba920825gy1grgpivchmhj21cc0t57wh.jpg" alt="手动 --rainbow"></p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/MyPicture/img/ba920825gy1grgpvc46bbj21cc0t5b29.jpg" alt="配置json后"></p>
+<br />
+
+<h3 id="其它"><a href="#其它" class="headerlink" title="其它"></a>其它</h3><p>还有这个其他的命令不太常用，因此我也就不演示了.  </p>
+<p>比如: <code> winget show calibre</code> 可以显示应用的一些相关描述，还有下载链接的</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"> winget show calibre</span><br><span class="line">尝试更新源时失败： winget</span><br><span class="line">已找到 calibre [calibre.calibre]</span><br><span class="line">Version: 5.21.0</span><br><span class="line">Publisher: calibre</span><br><span class="line">Author: Kovid Goyal</span><br><span class="line">Moniker: calibre</span><br><span class="line">Description: calibre is an e-book manager. It can view, convert, edit and catalog e-books <span class="keyword">in</span> all of the major e-book formats. It can also talk to e-book reader devices. It can go out to the internet and fetch metadata <span class="keyword">for</span> your books. It can download newspapers and convert them into e-books <span class="keyword">for</span> convenient reading. It is cross platform, running on Linux, Windows and macOS.</span><br><span class="line">Homepage: https://calibre-ebook.com/</span><br><span class="line">License: GPL-3.0-only</span><br><span class="line">License Url: https://github.com/kovidgoyal/calibre/blob/master/LICENSE</span><br><span class="line">Installer:</span><br><span class="line">  Type: Msi</span><br><span class="line">  Locale: en-US</span><br><span class="line">  Download Url: https://download.calibre-ebook.com/5.21.0/calibre-64bit-5.21.0.msi</span><br><span class="line">  SHA256: 5ac8bbd813210a0d1e9b3c7a8852f11aeec15abcbb89ed2b6edd09f51240c44a</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+<p>所有支持的命令：</p>
+<blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">The following commands are available:</span><br><span class="line">install    Installs the given package</span><br><span class="line">show       Shows information about a package</span><br><span class="line">source     Manage sources of packages</span><br><span class="line">search     Find and show basic info of packages</span><br><span class="line">list       Display installed packages</span><br><span class="line">upgrade    Upgrades the given package</span><br><span class="line">uninstall  Uninstalls the given package</span><br><span class="line">hash       Helper to hash installer files</span><br><span class="line">validate   Validates a manifest file</span><br><span class="line">settings   Open settings</span><br><span class="line">features   Shows the status of experimental features</span><br><span class="line">export     Exports a list of the installed packages</span><br><span class="line">import     Installs all the packages in a file</span><br></pre></td></tr></table></figure>
+</blockquote>
+<br />
+
+<br />
+
+<br />
+
+<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><p><a target="_blank" rel="noopener" href="https://docs.microsoft.com/zh-cn/windows/package-manager/winget/">使用 winget 工具安装和管理应用程序 | Microsoft Docs</a></p>
+<p><a target="_blank" rel="noopener" href="https://github.com/microsoft/winget-cli/tree/master/doc">winget-cli&#x2F;doc at master · microsoft&#x2F;winget-cli (github.com)</a></p>
+<p><a target="_blank" rel="noopener" href="https://sspai.com/post/67005">这或许是 Windows 上最好的包管理工具：Windows Package Manager 1.0 - 少数派 (sspai.com)</a></p>
+<p><a target="_blank" rel="noopener" href="https://github.com/microsoft/winget-cli/issues/201">Add option to specify winget install directory · Issue #201 · microsoft&#x2F;winget-cli (github.com)</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.pexels.com/zh-cn/photo/4503273/"> 可持續性的免费素材图片 (pexels.com)</a></p>
+<br />
+
+<br />
+
+<br />
+
+<blockquote class="blockquote-center">
+<p>叶上初阳干宿雨、水面清圆，一一风荷举. </p>
+<p>–  周邦彦 《<a target="_blank" rel="noopener" href="https://so.gushiwen.cn/shiwenv_faf9dc70bff2.aspx">苏幕遮·燎沉香</a>》</p>
+
+</blockquote>
+
+
+
+<br />
+
+<br />
+
+<br />
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>请我一杯咖啡吧！</div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/wechatpay.png" alt="热夏 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="/images/alipay.jpg" alt="热夏 支付宝">
+        <span>支付宝</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>热夏
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://www.lifeee.top/posts/36943.html" title="包管理器 winget 使用指南">https://www.lifeee.top/posts/36943.html</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="followme">
+  <span>欢迎关注我的其它发布渠道</span>
+
+  <div class="social-list">
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="/atom.xml">
+            <span class="icon">
+              <i class="fa fa-rss"></i>
+            </span>
+
+            <span class="label">RSS</span>
+          </a>
+      </div>
+  </div>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/%E6%95%99%E7%A8%8B/" rel="tag"><i class="fa fa-tag"></i> 教程</a>
+              <a href="/tags/%E5%96%84%E7%94%A8%E4%BD%B3%E8%BD%AF/" rel="tag"><i class="fa fa-tag"></i> 善用佳软</a>
+              <a href="/tags/Windows/" rel="tag"><i class="fa fa-tag"></i> Windows</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/posts/58853.html" rel="prev" title="Linux 下安装中文版 man 手册 以及 C++ 帮助手册">
+                  <i class="fa fa-angle-left"></i> Linux 下安装中文版 man 手册 以及 C++ 帮助手册
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/posts/14733.html" rel="next" title="WSL SSH 自启动">
+                  WSL SSH 自启动 <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments gitalk-container"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 2018 – 
+    <span itemprop="copyrightYear">2026</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">热夏</span>
+  </div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>站点总字数：</span>
+    <span title="站点总字数">743k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">11:15</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/next-theme-pjax/0.6.0/pjax.min.js" integrity="sha256-vxLn1tSKWD4dqbMRyv940UYw4sXgMtYcK6reefzZrao=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lozad.js/1.16.0/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script><script src="/js/pjax.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+  <script src="/js/third-party/pace.js"></script>
+
+
+  
+  <script data-pjax async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","mhchem":false,"js":{"url":"//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
+
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"upwon","repo":"upwon.github.io","client_id":"7e047047ecee7317452b","client_secret":"c60fbdf0eb19e7264e33ab780319e4d420a58fee","admin_user":"upwon","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":null,"js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"250c980502ce2b62b36a52d5e25f1407"}</script>
+<script src="/js/third-party/comments/gitalk.js"></script>
+
+</body>
+</html>
