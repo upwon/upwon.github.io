@@ -6,7 +6,7 @@
   <link href="https://www.lifeee.top/atom.xml" rel="self"/>
   
   <link href="https://www.lifeee.top/"/>
-  <updated>2026-03-08T08:29:26.445Z</updated>
+  <updated>2026-04-11T15:38:53.781Z</updated>
   <id>https://www.lifeee.top/</id>
   
   <author>
@@ -17,14 +17,41 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>HAPI + Tailscale 远程编程部署指南：手机随时写代码，数据全程加密</title>
+    <link href="https://www.lifeee.top/posts/38603.html"/>
+    <id>https://www.lifeee.top/posts/38603.html</id>
+    <published>2026-04-11T02:00:00.000Z</published>
+    <updated>2026-04-11T15:38:53.781Z</updated>
+    
+    
+    <summary type="html">用 HAPI + Tailscale 搭建安全的远程 AI 编程环境，手机随时访问本地 IDE，无需公网暴露端口。完整踩坑记录，包括 macOS 防火墙、WebSocket 代理、Android VPN 共存等问题的解决方案。</summary>
+    
+    
+    
+    <category term="技术" scheme="https://www.lifeee.top/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    <category term="教程" scheme="https://www.lifeee.top/categories/%E6%8A%80%E6%9C%AF/%E6%95%99%E7%A8%8B/"/>
+    
+    
+    <category term="HAPI" scheme="https://www.lifeee.top/tags/HAPI/"/>
+    
+    <category term="Tailscale" scheme="https://www.lifeee.top/tags/Tailscale/"/>
+    
+    <category term="远程开发" scheme="https://www.lifeee.top/tags/%E8%BF%9C%E7%A8%8B%E5%BC%80%E5%8F%91/"/>
+    
+    <category term="AI编程" scheme="https://www.lifeee.top/tags/AI%E7%BC%96%E7%A8%8B/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Spec编程你了解吗? 还在用Vibe Coding吗?</title>
     <link href="https://www.lifeee.top/posts/16168.html"/>
     <id>https://www.lifeee.top/posts/16168.html</id>
     <published>2026-03-08T08:08:41.000Z</published>
-    <updated>2026-03-08T08:29:26.445Z</updated>
+    <updated>2026-04-11T15:33:18.232Z</updated>
     
     
-    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://telegraph-image-92x.pages.dev/file/fb73dd0c89755146ffe6d-120a28db473e4be658.jpg&quot; alt=&quot;https://www.pexels.com/zh-cn/photo/27586826/&quot;&gt;&lt;/p&gt;
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/pexels-ghassan-hani-709938-32934074.jpg&quot;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;“spec编程”&lt;/strong&gt;（也叫 &lt;strong&gt;Spec Coding&lt;/strong&gt; 或 &lt;strong&gt;Spec-Driven Development&lt;/strong&gt;，简称 &lt;strong&gt;SDD&lt;/strong&gt;）是2025年后在AI编程领域特别火的一个概念。&lt;/p&gt;
 &lt;p&gt;简单来说，它指的是：&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;“先写清楚规范（Specification），再让AI根据规范去生成代码”&lt;/strong&gt; 的编程方式。&lt;/p&gt;
@@ -391,26 +418,6 @@
     
     <summary type="html">&lt;p&gt;欢迎阅读本期技术资讯！我们为您推荐了一些有趣的工具，如腾讯自研的 Git 客户端UGit  、 开源跨平台解压软件PeaZip 、 适用于 Mac 和 Windows 的免费剪贴板管理器PasteBar 、Obsidian  Folder Note插件 、 开源的 RAG 文档聊天工具kotaemon 、 由 KG 引擎驱动的创新代理框架muAgent。此外，还推荐了Claude Dev：一款集成了Claude 3.5 Sonnet的VSCode AI编程工具和轻量又高性能的 SSH 工具IShell。&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/pexels-shaimacapture-8668726.jpg&quot; alt=&quot;https://www.pexels.com/zh-cn/photo/8668726/&quot;&gt;&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="冲浪" scheme="https://www.lifeee.top/categories/%E5%86%B2%E6%B5%AA/"/>
-    
-    
-    <category term="冲浪" scheme="https://www.lifeee.top/tags/%E5%86%B2%E6%B5%AA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>网上冲浪周刊第57期</title>
-    <link href="https://www.lifeee.top/posts/43364.html"/>
-    <id>https://www.lifeee.top/posts/43364.html</id>
-    <published>2024-09-01T14:42:08.000Z</published>
-    <updated>2026-03-08T07:46:57.150Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;欢迎阅读本期技术资讯！我们为您推荐了一些有趣的工具，如免费文件翻译工具 DeeplxFile  、 flutter 版的 confetti（放礼花）包、Revezone - 一款以图形为中心的思维管理工具、删除预装的 Windows 无用软件应用程序 Win11Debloat 、 ComfyUI  一款 Stable Diffusion 图形用户界面（GUI） 、AI 编程软件 Cursor 。此外，还推荐了开源数据结构与算法和开源数据结构与算法。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/pexels-padrinan-434137.jpg&quot; alt=&quot;https://www.pexels.com/zh-cn/photo/434137/&quot;&gt;&lt;/p&gt;</summary>
     
     
     
