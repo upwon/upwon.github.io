@@ -6,7 +6,7 @@
   <link href="https://www.lifeee.top/atom.xml" rel="self"/>
   
   <link href="https://www.lifeee.top/"/>
-  <updated>2026-04-13T14:51:31.084Z</updated>
+  <updated>2026-04-13T14:58:54.363Z</updated>
   <id>https://www.lifeee.top/</id>
   
   <author>
@@ -21,10 +21,11 @@
     <link href="https://www.lifeee.top/posts/10642.html"/>
     <id>https://www.lifeee.top/posts/10642.html</id>
     <published>2026-04-13T02:00:00.000Z</published>
-    <updated>2026-04-13T14:51:31.084Z</updated>
+    <updated>2026-04-13T14:58:54.363Z</updated>
     
     
-    <summary type="html">AI Graveyard记录了1592个已死掉的AI工具，死亡率近30%。写作类工具死最多，薄包装产品全军覆没。本文拆解AI工具的死因，给出判断AI工具能否活过明年的三条生存法则。</summary>
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/Gemini_Generated_Image_1zh6tw1zh6tw1zh6.jpg&quot; alt=&quot;AI Graveyard - 记录已死掉的AI工具的赛博墓园&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Dang.ai 上有个页面叫 AI Graveyard，直译”AI 墓地”——专门给那些已经关停、被收购或停止运营的 AI 项目立碑。截至目前，这个墓地已经收录了 &lt;strong&gt;1,592 个”阵亡”的 AI 工具&lt;/strong&gt;，占 Dang.ai 收录总数 5,529 个的近 30%。也就是说，你今天看到的 AI 工具里，每 3-4 个就有一个可能已经或即将消失。2026 年才过了三个多月，就已经有 128 个新”入葬”的。&lt;/p&gt;</summary>
     
     
     
@@ -46,10 +47,11 @@
     <link href="https://www.lifeee.top/posts/38603.html"/>
     <id>https://www.lifeee.top/posts/38603.html</id>
     <published>2026-04-11T02:00:00.000Z</published>
-    <updated>2026-04-11T16:04:50.545Z</updated>
+    <updated>2026-04-13T14:59:49.963Z</updated>
     
     
-    <summary type="html">用 HAPI + Tailscale 搭建安全的远程 AI 编程环境，手机随时访问本地 IDE，无需公网暴露端口。完整踩坑记录，包括 macOS 防火墙、WebSocket 代理、Android VPN 共存等问题的解决方案。</summary>
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/pexels-alexandre-moreira-2527876-26772400.jpg&quot;&gt;&lt;/p&gt;
+&lt;p&gt;用手机远程操控电脑写代码——不是远程桌面那种卡顿体验，而是真正的原生 Web IDE，支持 Claude Code、Codex、Gemini 等 AI 代理，数据全程走加密隧道，零公网暴露。这就是 HAPI + Tailscale 的组合拳。&lt;/p&gt;</summary>
     
     
     
