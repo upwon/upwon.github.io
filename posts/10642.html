@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/myapple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/myfavicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/myfavicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/myapple-touch-icon-next.png" color="#222">
+  <meta name="google-site-verification" content="google2fc64c2b92961282.html">
+  <meta name="baidu-site-verification" content="s6BwSjIZYB">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.loli.net/css?family='LXGW+WenKai+LITE':300,300italic,400,400italic,700,700italic%7C'LXGW+WenKai+Screen':300,300italic,400,400italic,700,700italic%7C'LXGW+WenKai':300,300italic,400,400italic,700,700italic%7C'Noto+Serif+SC':300,300italic,400,400italic,700,700italic%7C'EB+Garamond':300,300italic,400,400italic,700,700italic%7C'PingFang+SC':300,300italic,400,400italic,700,700italic%7C'Microsoft+YaHei':300,300italic,400,400italic,700,700italic%7C'sans-serif':300,300italic,400,400italic,700,700italic%7CMa+Shan+Zheng:300,300italic,400,400italic,700,700italic%7CLXGW+WenKai+Screen:300,300italic,400,400italic,700,700italic%7CLXGW+WenKai:300,300italic,400,400italic,700,700italic%7CMenlo:300,300italic,400,400italic,700,700italic%7CMonaco:300,300italic,400,400italic,700,700italic%7CConsolas:300,300italic,400,400italic,700,700italic%7CSource+Code+Pro:300,300italic,400,400italic,700,700italic%7Csystem-ui:300,300italic,400,400italic,700,700italic%7Cmonospace:300,300italic,400,400italic,700,700italic%7Csans-serif:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha256-yIDrPSXHZdOZhAqiBP7CKzIwMQmRCJ8UeB8Jo17YC4o=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/themes/blue/pace-theme-minimal.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"www.lifeee.top","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.19.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"mac","show_result":true},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="AI Graveyard记录了1592个已死掉的AI工具，死亡率近30%。写作类工具死最多，薄包装产品全军覆没。本文拆解AI工具的死因，给出判断AI工具能否活过明年的三条生存法则。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="AI墓地：1592个死掉的AI工具，给创业者和用户的冷水">
+<meta property="og:url" content="https://www.lifeee.top/posts/10642.html">
+<meta property="og:site_name" content="热夏的博客">
+<meta property="og:description" content="AI Graveyard记录了1592个已死掉的AI工具，死亡率近30%。写作类工具死最多，薄包装产品全军覆没。本文拆解AI工具的死因，给出判断AI工具能否活过明年的三条生存法则。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/20260413224440133.png">
+<meta property="article:published_time" content="2026-04-13T02:00:00.000Z">
+<meta property="article:modified_time" content="2026-04-13T14:46:41.832Z">
+<meta property="article:author" content="热夏">
+<meta property="article:tag" content="AI">
+<meta property="article:tag" content="思考">
+<meta property="article:tag" content="创业">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/20260413224440133.png">
+
+
+<link rel="canonical" href="https://www.lifeee.top/posts/10642.html">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://www.lifeee.top/posts/10642.html","path":"posts/10642.html","title":"AI墓地：1592个死掉的AI工具，给创业者和用户的冷水"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>AI墓地：1592个死掉的AI工具，给创业者和用户的冷水 | 热夏的博客</title>
+  
+
+
+
+
+
+
+
+<link href="https://fonts.loli.net/css?family=Noto+Serif+SC:400,500,700&display=swap&subset=chinese-simplified" rel="stylesheet">
+<link rel="stylesheet" href="https://npm.elemecdn.com/lxgw-wenkai-screen-webfont@1.7.0/style.css" />
+
+<link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&display=swap" rel="stylesheet">
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="热夏的博客" type="application/atom+xml">
+<style>.darkmode--activated{--body-bg-color:#282828;--content-bg-color:#333;--card-bg-color:#555;--text-color:#ccc;--blockquote-color:#bbb;--link-color:#ccc;--link-hover-color:#eee;--brand-color:#ddd;--brand-hover-color:#ddd;--table-row-odd-bg-color:#282828;--table-row-hover-bg-color:#363636;--menu-item-bg-color:#555;--btn-default-bg:#222;--btn-default-color:#ccc;--btn-default-border-color:#555;--btn-default-hover-bg:#666;--btn-default-hover-color:#ccc;--btn-default-hover-border-color:#666;--highlight-background:#282b2e;--highlight-foreground:#a9b7c6;--highlight-gutter-background:#34393d;--highlight-gutter-foreground:#9ca9b6}.darkmode--activated img{opacity:.75}.darkmode--activated img:hover{opacity:.9}.darkmode--activated code{color:#69dbdc;background:0 0}button.darkmode-toggle{z-index:9999}.darkmode-ignore,img{display:flex!important}.beian img{display:inline-block!important}</style></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">热夏的博客</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-heart fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1592-%E5%9D%97%E5%A2%93%E7%A2%91%EF%BC%9AAI-%E5%A2%93%E5%9C%B0%E9%87%8C%E7%9A%84%E7%9C%9F%E5%AE%9E%E6%95%B0%E6%8D%AE"><span class="nav-number">1.</span> <span class="nav-text">1592 块墓碑：AI 墓地里的真实数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E4%B8%AA%E2%80%9D%E6%AD%BB%E6%B3%95%E2%80%9D%EF%BC%9A%E6%9C%89%E9%92%B1%E6%9C%89%E4%BA%BA%E6%B0%94%E6%9C%89%E6%8A%80%E6%9C%AF%EF%BC%8C%E7%85%A7%E6%A0%B7%E6%B4%BB%E4%B8%8D%E4%B8%8B%E5%8E%BB"><span class="nav-number">2.</span> <span class="nav-text">三个”死法”：有钱有人气有技术，照样活不下去</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Neeva%EF%BC%9A7-750-%E4%B8%87%E7%BE%8E%E5%85%83%E8%9E%8D%E8%B5%84%EF%BC%8C%E7%85%A7%E6%A0%B7%E5%85%B3%E5%81%9C"><span class="nav-number">2.1.</span> <span class="nav-text">Neeva：7,750 万美元融资，照样关停</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Themetavoice%EF%BC%9A49-847-%E7%A5%A8%EF%BC%8C%E4%BA%BA%E6%B0%94%E6%95%91%E4%B8%8D%E4%BA%86%E5%91%BD"><span class="nav-number">2.2.</span> <span class="nav-text">Themetavoice：49,847 票，人气救不了命</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%96%84%E5%8C%85%E8%A3%85%E7%BE%A4%E5%83%8F%EF%BC%9A100-%E4%B8%AA%E5%A5%97%E5%A3%B3%EF%BC%8C99-%E4%B8%AA%E8%BF%9B%E5%A2%93%E5%9C%B0"><span class="nav-number">2.3.</span> <span class="nav-text">薄包装群像：100 个套壳，99 个进墓地</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%AD%BB%E5%9B%A0%E8%A7%A3%E5%89%96%EF%BC%9AAI-%E5%B7%A5%E5%85%B7%E4%B8%BA%E4%BB%80%E4%B9%88%E6%B4%BB%E4%B8%8D%E4%B8%8B%E5%8E%BB%EF%BC%9F"><span class="nav-number">3.</span> <span class="nav-text">死因解剖：AI 工具为什么活不下去？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E6%9D%A1%E7%94%9F%E5%AD%98%E6%B3%95%E5%88%99%EF%BC%9A%E4%BD%A0%E7%9A%84-AI-%E5%B7%A5%E5%85%B7%E8%83%BD%E6%B4%BB%E8%BF%87%E6%98%8E%E5%B9%B4%E5%90%97%EF%BC%9F"><span class="nav-number">4.</span> <span class="nav-text">三条生存法则：你的 AI 工具能活过明年吗？</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B3%95%E5%88%99%E4%B8%80%EF%BC%9A%E6%9C%89%E6%B2%A1%E6%9C%89%E7%8B%AC%E5%8D%A0%E6%95%B0%E6%8D%AE%E6%88%96%E4%B8%93%E6%9C%89%E6%A8%A1%E5%9E%8B%EF%BC%9F"><span class="nav-number">4.1.</span> <span class="nav-text">法则一：有没有独占数据或专有模型？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B3%95%E5%88%99%E4%BA%8C%EF%BC%9A%E6%9C%89%E6%B2%A1%E6%9C%89%E5%B5%8C%E5%85%A5%E7%94%A8%E6%88%B7%E5%B7%A5%E4%BD%9C%E6%B5%81%EF%BC%9F"><span class="nav-number">4.2.</span> <span class="nav-text">法则二：有没有嵌入用户工作流？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B3%95%E5%88%99%E4%B8%89%EF%BC%9A%E6%9C%89%E6%B2%A1%E6%9C%89%E4%BB%98%E8%B4%B9%E7%94%A8%E6%88%B7%E7%9A%84%E6%8C%81%E7%BB%AD%E6%AD%A3%E5%8F%8D%E9%A6%88%EF%BC%9F"><span class="nav-number">4.3.</span> <span class="nav-text">法则三：有没有付费用户的持续正反馈？</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%86%B7%E6%B0%B4%E4%B9%8B%E5%90%8E%EF%BC%9A%E4%BB%80%E4%B9%88%E5%80%BC%E5%BE%97%E5%81%9A%EF%BC%9F"><span class="nav-number">5.</span> <span class="nav-text">冷水之后：什么值得做？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%80%E5%90%8E%E7%9A%84%E8%AF%9D"><span class="nav-number">6.</span> <span class="nav-text">最后的话</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="热夏"
+      src="/images/head.jpg">
+  <p class="site-author-name" itemprop="name">热夏</p>
+  <div class="site-description" itemprop="description">空山新雨后，天气晚来秋。</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">114</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">49</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/upwon" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;upwon" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:w1244753906@gmail.com" title="E-Mail → mailto:w1244753906@gmail.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.lifeee.top//atom.xml" title="RSS → https:&#x2F;&#x2F;www.lifeee.top&#x2F;&#x2F;atom.xml" rel="noopener me"><i class="fa fa-rss fa-fw"></i>RSS</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+        <div class="pjax">
+        </div>
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.lifeee.top/posts/10642.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/head.jpg">
+      <meta itemprop="name" content="热夏">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="热夏的博客">
+      <meta itemprop="description" content="空山新雨后，天气晚来秋。">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="AI墓地：1592个死掉的AI工具，给创业者和用户的冷水 | 热夏的博客">
+      <meta itemprop="description" content="AI Graveyard记录了1592个已死掉的AI工具，死亡率近30%。写作类工具死最多，薄包装产品全军覆没。本文拆解AI工具的死因，给出判断AI工具能否活过明年的三条生存法则。">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          AI墓地：1592个死掉的AI工具，给创业者和用户的冷水
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2026-04-13 10:00:00 / 修改时间：22:46:41" itemprop="dateCreated datePublished" datetime="2026-04-13T10:00:00+08:00">2026-04-13</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">技术</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF/AI/" itemprop="url" rel="index"><span itemprop="name">AI</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>3.9k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>4 分钟</span>
+    </span>
+</div>
+
+            <div class="post-description">AI Graveyard记录了1592个已死掉的AI工具，死亡率近30%。写作类工具死最多，薄包装产品全军覆没。本文拆解AI工具的死因，给出判断AI工具能否活过明年的三条生存法则。</div>
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/20260413224440133.png" alt="AI Graveyard - 记录已死掉的AI工具的赛博墓园"></p>
+<p>Dang.ai 上有个页面叫 AI Graveyard，直译”AI 墓地”——专门给那些已经关停、被收购或停止运营的 AI 项目立碑。截至目前，这个墓地已经收录了 <strong>1,592 个”阵亡”的 AI 工具</strong>，占 Dang.ai 收录总数 5,529 个的近 30%。也就是说，你今天看到的 AI 工具里，每 3-4 个就有一个可能已经或即将消失。2026 年才过了三个多月，就已经有 128 个新”入葬”的。</p>
+<span id="more"></span>
+
+<h2 id="1592-块墓碑：AI-墓地里的真实数据"><a href="#1592-块墓碑：AI-墓地里的真实数据" class="headerlink" title="1592 块墓碑：AI 墓地里的真实数据"></a>1592 块墓碑：AI 墓地里的真实数据</h2><p>打开 <a target="_blank" rel="noopener" href="https://dang.ai/ai-graveyard">AI Graveyard</a>，你会看到一个赛博墓园。每个”墓碑”是一张卡片，上面写着项目名称、功能简介、所属类别和死亡时间。浏览一圈，几个数据格外刺眼：</p>
+<p><strong>写作类工具死得最多。</strong> AI 写作助手、AI 邮件生成器、AI 贺卡工具……这类”套壳调用大模型 API + 套个 UI”的产品，在墓地里密密麻麻。原因很简单：ChatGPT、Claude、Gemini 自己就能写，而且写得越来越好，用户没有任何理由为一个中间层付费。</p>
+<p><strong>图像生成类紧随其后。</strong> FreewayML、StockAI、AI Pokémon Generator……这些 Stable Diffusion 的套壳网站，曾经在 2023 年风光一时，现在大多成了墓碑上的名字。Midjourney 和 DALL-E 把这个赛道卷到了极致，后来者几乎不可能靠”换皮”活下去。</p>
+<p><strong>聊天机器人&#x2F;伴侣类死伤惨重。</strong> JOI AI（11,221 票）、AI CharFriend、PillowTalks……有些产品拥有上万用户投票，依然关停了。流量不等于商业模式，这个教训在 AI 时代被反复验证。</p>
+<p>我在<a href="/posts/16168.html">之前的文章</a>里聊过 Spec 编程和 Vibe Coding 的区别，核心观点是”没有约束的自主性等于随机性”。AI 墓地里的这些项目，本质上也是同一个问题：没有护城河的自由度，等于随时可能死。</p>
+<h2 id="三个”死法”：有钱有人气有技术，照样活不下去"><a href="#三个”死法”：有钱有人气有技术，照样活不下去" class="headerlink" title="三个”死法”：有钱有人气有技术，照样活不下去"></a>三个”死法”：有钱有人气有技术，照样活不下去</h2><h3 id="Neeva：7-750-万美元融资，照样关停"><a href="#Neeva：7-750-万美元融资，照样关停" class="headerlink" title="Neeva：7,750 万美元融资，照样关停"></a>Neeva：7,750 万美元融资，照样关停</h3><p>Neeva 是前 Google 广告副总裁 Sridhar Ramaswamy 2019 年创办的 AI 搜索引擎，主打隐私和无广告。融资 7,750 万美元，团队 25 人，技术实力毋庸置疑。但 2023 年 6 月，Neeva 宣布关停消费者搜索产品。</p>
+<p>创始人在告别信里说了一句大实话：**”说服普通用户切换搜索引擎太难了。”** 用户习惯的切换成本，比任何技术壁垒都更难逾越。Neeva 后来被 Snowflake 以 1.854 亿美元现金收购，创始团队进入了 Snowflake——但 Neeva 的用户什么都没得到，产品直接下线。</p>
+<p>这个案例说明一个残酷事实：在巨头的主战场上，即使你有更好的产品、充足的资金、顶尖的团队，也很难赢。因为搜索是 Google 的护城河，就像社交是微信的护城河——你做得再好，用户也不愿意迁过来。</p>
+<h3 id="Themetavoice：49-847-票，人气救不了命"><a href="#Themetavoice：49-847-票，人气救不了命" class="headerlink" title="Themetavoice：49,847 票，人气救不了命"></a>Themetavoice：49,847 票，人气救不了命</h3><p>Themetavoice 是一个 AI 语音克隆工具，在 Dang.ai 上获得了 49,847 票——这是整个平台上投票数最高的项目之一。接近 5 万人点了赞，产品依然关停了。</p>
+<p>为什么？因为投票不等于付费，关注不等于留存。AI 语音克隆是一个技术上惊艳但商业上尴尬的赛道：用户愿意玩，但不愿意持续付钱。当 ElevenLabs 等竞品把价格压到极低，当开源模型让语音克隆的门槛几乎消失，这类工具的生存空间就被彻底挤压了。</p>
+<p><strong>人气是流量，不是商业模式。</strong> 这句话应该贴在每个 AI 创业者的工位上。</p>
+<h3 id="薄包装群像：100-个套壳，99-个进墓地"><a href="#薄包装群像：100-个套壳，99-个进墓地" class="headerlink" title="薄包装群像：100 个套壳，99 个进墓地"></a>薄包装群像：100 个套壳，99 个进墓地</h3><p>AI Graveyard 里最拥挤的不是某个具体项目，而是一整类产品的集体阵亡：<strong>薄包装（thin wrapper）</strong>。</p>
+<p>什么是薄包装？简单说就是：调用 GPT-4 的 API → 加一个漂亮的 UI → 定价 $9.9&#x2F;月 → 宣称”AI 一键生成 XX”。AI 写作助手、AI 邮件助手、AI 简历优化器、AI 贺卡生成器……2023-2024 年间，这类产品如雨后春笋般冒出来，然后又如秋风扫落叶般消失。</p>
+<p>死因极其一致：<strong>OpenAI 每次更新，都在杀死一批薄包装。</strong> GPT-4 增加了文件上传，一批”AI PDF 对话”工具死了；ChatGPT 加了自定义指令，一批”AI Prompt 管理”工具死了；Claude 加了 Artifacts，一批”AI 代码预览”工具死了。你的产品功能就是大模型的子集，大模型迭代一次，你的存在理由就少一分。</p>
+<h2 id="死因解剖：AI-工具为什么活不下去？"><a href="#死因解剖：AI-工具为什么活不下去？" class="headerlink" title="死因解剖：AI 工具为什么活不下去？"></a>死因解剖：AI 工具为什么活不下去？</h2><p>从 AI Graveyard 的 1,592 块墓碑里，我总结出四类最常见的死因：</p>
+<p><strong>第一，没有护城河的薄包装。</strong> 这是最普遍的死因。你的产品 &#x3D; API + UI，那你的命运就完全掌握在 API 提供商手里。大模型降价你就跟着降，大模型加功能你就被替代。你在给别人修路，别人开过去之后把路拆了。</p>
+<p><strong>第二，用户切换成本太低。</strong> Neeva 的故事就是典型。你的产品再好，用户迁移到另一个工具的成本如果是零——那你的留存率也迟早是零。用户凭什么一直用你？除非你嵌入了他们的工作流，让换掉你的代价大过继续付费。</p>
+<p><strong>第三，免费模式下不了车。</strong> AI Graveyard 里绝大多数死掉的工具都提供过免费或 freemium 模式。免费获客容易，但转化率极低。AI 产品的 API 调用成本是实打实的，每个免费用户都在烧钱。烧到融资用完，就是关停的那天。</p>
+<p><strong>第四，赛道本身就是红海。</strong> 写作、图像生成、聊天机器人——这三个类别在墓地里占比最高。为什么？因为这些是人人都能想到的场景，也是大厂优先布局的方向。在红海里创业，你需要的不只是”比别人好一点”，而是”好到用户没有理由不选你”。</p>
+<div class="note warning"><p>一个反直觉的事实：AI 降低的是创作门槛，但大幅提高了生存门槛。以前做一个软件产品需要开发能力，竞争者少；现在任何人都能用 AI 做出一个”能用”的产品，竞争者暴增，但”能用”和”能活”之间隔着一道鸿沟。</p>
+</div>
+
+<h2 id="三条生存法则：你的-AI-工具能活过明年吗？"><a href="#三条生存法则：你的-AI-工具能活过明年吗？" class="headerlink" title="三条生存法则：你的 AI 工具能活过明年吗？"></a>三条生存法则：你的 AI 工具能活过明年吗？</h2><p>不管是你在选择使用哪个 AI 工具，还是你在做 AI 产品，都可以用这三条法则来判断生存概率：</p>
+<h3 id="法则一：有没有独占数据或专有模型？"><a href="#法则一：有没有独占数据或专有模型？" class="headerlink" title="法则一：有没有独占数据或专有模型？"></a>法则一：有没有独占数据或专有模型？</h3><p>ChatGPT 之所以活得好，不只是因为 GPT-4 强，更因为 OpenAI 有从 RLHF 积累的海量人类偏好数据、从用户反馈持续优化的飞轮。Midjourney 之所以能赢过一堆 Stable Diffusion 套壳，是因为它有自己训练的模型和独占的美学风格。</p>
+<p><strong>反面教材：</strong> 那些直接调用 GPT-4 API 的写作工具，没有任何独占数据。OpenAI 每次降价，它们的利润空间就缩水；OpenAI 每次加功能，它们的存在理由就少一个。</p>
+<p><strong>判断方法：</strong> 如果把你的产品的 AI 后端从 GPT 换成 Claude，用户体验会有本质区别吗？如果没有，你就是薄包装。</p>
+<h3 id="法则二：有没有嵌入用户工作流？"><a href="#法则二：有没有嵌入用户工作流？" class="headerlink" title="法则二：有没有嵌入用户工作流？"></a>法则二：有没有嵌入用户工作流？</h3><p>Notion AI 不是一个独立的 AI 写作工具，它嵌入在 Notion 的工作流里——用户在 Notion 里写文档、管项目、做笔记，AI 是工作流的一部分，而不是一个需要单独打开的网站。这意味着用户要换掉 Notion AI，就得换掉整个 Notion，切换成本极高。</p>
+<p><strong>反面教材：</strong> 那些独立的 AI 写作网站，用户用完即走，没有任何粘性。你写完一篇文章，为什么还要回来？下次直接用 ChatGPT 不是一样吗？</p>
+<p><strong>判断方法：</strong> 你的用户如果停用你的产品，需要改多少习惯？改得越多，你越安全。</p>
+<h3 id="法则三：有没有付费用户的持续正反馈？"><a href="#法则三：有没有付费用户的持续正反馈？" class="headerlink" title="法则三：有没有付费用户的持续正反馈？"></a>法则三：有没有付费用户的持续正反馈？</h3><p>免费用户不是客户，是成本。真正的生存指标是：有多少用户在持续付费？付费用户的续费率是多少？如果续费率低于 60%，你的商业模式可能不可持续。</p>
+<p><strong>反面教材：</strong> AI Graveyard 里那些提供永久免费额度的工具，获客速度很快，但转化率通常在 2-5%。每个免费用户每天消耗 API 调用，烧完融资就是死期。</p>
+<p><strong>判断方法：</strong> 看月经常性收入（MRR）的增长曲线。如果新付费用户的增长速度低于老用户的流失速度，这就是死亡螺旋的开始。</p>
+<table>
+<thead>
+<tr>
+<th>生存指标</th>
+<th>安全区</th>
+<th>危险区</th>
+<th>死亡区</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>独占数据&#x2F;模型</td>
+<td>有自研模型</td>
+<td>有微调数据</td>
+<td>纯 API 调用</td>
+</tr>
+<tr>
+<td>工作流嵌入</td>
+<td>嵌入核心流程</td>
+<td>辅助工具</td>
+<td>独立网站</td>
+</tr>
+<tr>
+<td>付费续费率</td>
+<td>&gt;80%</td>
+<td>60-80%</td>
+<td>&lt;60%</td>
+</tr>
+</tbody></table>
+<p>如果你正在用的 AI 工具三条都不满足，建议早做备份方案。如果你正在做的 AI 产品三条都不满足，建议认真考虑转型。</p>
+<h2 id="冷水之后：什么值得做？"><a href="#冷水之后：什么值得做？" class="headerlink" title="冷水之后：什么值得做？"></a>冷水之后：什么值得做？</h2><p>说了这么多坏消息，那什么方向是有机会的？从 AI Graveyard 的反面看，活下来的工具通常有这些特征：</p>
+<p><strong>垂直行业的深度整合。</strong> 不做”AI 写作”，做”法律文书 AI 生成”，有法律语料库和合规校验；不做”AI 聊天”，做”医疗问诊 AI”，有医学知识图谱和审批资质。越垂直，护城河越深。</p>
+<p><strong>嵌入现有工作流而非创造新习惯。</strong> 我在<a href="/posts/38603.html">HAPI + Tailscale 远程编程部署指南</a>里介绍过怎么把开发环境无缝打通——这种”不改变习惯但提升效率”的思路，同样适用于 AI 产品。VS Code 里的 Copilot 比 GitHub 网站上单独的 AI 代码工具活得好，就是因为用户不需要改变任何习惯。</p>
+<p><strong>利用专有数据飞轮。</strong> 每个用户的使用数据让产品变得更好，产品更好又吸引更多用户。这个飞轮一旦转起来，后来者很难追上。</p>
+<div class="note info"><p>AI 墓地不是终点，而是校准器。它帮你校准预期：不是每个 AI 工具都值得投入时间学习，不是每个 AI 创业方向都值得投入资源尝试。在墓地里走一圈，你会更清楚什么能活、什么必死。</p>
+</div>
+
+<h2 id="最后的话"><a href="#最后的话" class="headerlink" title="最后的话"></a>最后的话</h2><p>1,592 个死掉的 AI 工具，不是 1,592 个失败故事，而是 1,592 次市场验证。它们用”死亡”告诉你：这条路走不通，那个模式活不了。</p>
+<p>如果你正在选 AI 工具，用三条法则筛一遍——没有独占数据、不嵌入工作流、续费率低的产品，慎用。如果你正在做 AI 产品，也用三条法则检视自己——如果三条都不满足，你的产品很可能正在去 AI Graveyard 的路上。</p>
+<p>去看看 <a target="_blank" rel="noopener" href="https://dang.ai/ai-graveyard">AI Graveyard</a>，走一圈回来，你会更冷静。</p>
+<p>但也可能，更有动力。因为看清楚什么会死，才知道什么能活。</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>请我一杯咖啡吧！</div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/wechatpay.png" alt="热夏 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="/images/alipay.jpg" alt="热夏 支付宝">
+        <span>支付宝</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>热夏
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://www.lifeee.top/posts/10642.html" title="AI墓地：1592个死掉的AI工具，给创业者和用户的冷水">https://www.lifeee.top/posts/10642.html</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="followme">
+  <span>欢迎关注我的其它发布渠道</span>
+
+  <div class="social-list">
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="/atom.xml">
+            <span class="icon">
+              <i class="fa fa-rss"></i>
+            </span>
+
+            <span class="label">RSS</span>
+          </a>
+      </div>
+  </div>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/AI/" rel="tag"><i class="fa fa-tag"></i> AI</a>
+              <a href="/tags/%E6%80%9D%E8%80%83/" rel="tag"><i class="fa fa-tag"></i> 思考</a>
+              <a href="/tags/%E5%88%9B%E4%B8%9A/" rel="tag"><i class="fa fa-tag"></i> 创业</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/posts/38603.html" rel="prev" title="HAPI + Tailscale 远程编程部署指南：手机随时写代码，数据全程加密">
+                  <i class="fa fa-angle-left"></i> HAPI + Tailscale 远程编程部署指南：手机随时写代码，数据全程加密
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments gitalk-container"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 2018 – 
+    <span itemprop="copyrightYear">2026</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">热夏</span>
+  </div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>站点总字数：</span>
+    <span title="站点总字数">754k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">11:25</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/next-theme-pjax/0.6.0/pjax.min.js" integrity="sha256-vxLn1tSKWD4dqbMRyv940UYw4sXgMtYcK6reefzZrao=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lozad.js/1.16.0/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script><script src="/js/pjax.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+  <script src="/js/third-party/pace.js"></script>
+
+
+  
+  <script data-pjax async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","mhchem":false,"js":{"url":"//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
+
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"upwon","repo":"upwon.github.io","client_id":"7e047047ecee7317452b","client_secret":"c60fbdf0eb19e7264e33ab780319e4d420a58fee","admin_user":"upwon","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":null,"js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"08126ed29421df6033903730998ea397"}</script>
+<script src="/js/third-party/comments/gitalk.js"></script>
+
+</body>
+</html>

@@ -6,7 +6,7 @@
   <link href="https://www.lifeee.top/atom.xml" rel="self"/>
   
   <link href="https://www.lifeee.top/"/>
-  <updated>2026-04-11T16:04:50.545Z</updated>
+  <updated>2026-04-13T14:46:41.832Z</updated>
   <id>https://www.lifeee.top/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>AI墓地：1592个死掉的AI工具，给创业者和用户的冷水</title>
+    <link href="https://www.lifeee.top/posts/10642.html"/>
+    <id>https://www.lifeee.top/posts/10642.html</id>
+    <published>2026-04-13T02:00:00.000Z</published>
+    <updated>2026-04-13T14:46:41.832Z</updated>
+    
+    
+    <summary type="html">AI Graveyard记录了1592个已死掉的AI工具，死亡率近30%。写作类工具死最多，薄包装产品全军覆没。本文拆解AI工具的死因，给出判断AI工具能否活过明年的三条生存法则。</summary>
+    
+    
+    
+    <category term="技术" scheme="https://www.lifeee.top/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    <category term="AI" scheme="https://www.lifeee.top/categories/%E6%8A%80%E6%9C%AF/AI/"/>
+    
+    
+    <category term="AI" scheme="https://www.lifeee.top/tags/AI/"/>
+    
+    <category term="思考" scheme="https://www.lifeee.top/tags/%E6%80%9D%E8%80%83/"/>
+    
+    <category term="创业" scheme="https://www.lifeee.top/tags/%E5%88%9B%E4%B8%9A/"/>
+    
+  </entry>
   
   <entry>
     <title>HAPI + Tailscale 远程编程部署指南：手机随时写代码，数据全程加密</title>
@@ -48,7 +73,7 @@
     <link href="https://www.lifeee.top/posts/16168.html"/>
     <id>https://www.lifeee.top/posts/16168.html</id>
     <published>2026-03-08T08:08:41.000Z</published>
-    <updated>2026-04-11T15:33:18.232Z</updated>
+    <updated>2026-04-11T15:35:27.160Z</updated>
     
     
     <summary type="html">&lt;p&gt;&lt;img src=&quot;https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/pexels-ghassan-hani-709938-32934074.jpg&quot;&gt;&lt;/p&gt;
@@ -398,26 +423,6 @@
     
     <summary type="html">&lt;p&gt;欢迎阅读本期技术资讯！我们为您推荐了一些有趣的工具，如专为 GitHub 项目创建分享图像Socialify  、开源数据库设计与可视化工具ChartDB 、 AIToolly：发现和选择最佳人AI工具 、Void：全面隐私保护的开源 AI 代码编辑器 、 Cherry Studio：支持多模型的跨平台 AI 助手。此外，还推荐了Mini-Cover：简洁的在线生成封面网站，专为博客、短视频、社交媒体等生成个性化封面和 Yaak：简洁高效的现代 API 客户端，开源替代 Postman。&lt;/p&gt;
 &lt;p&gt; &lt;img src=&quot;https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/image-20240924225509534.png&quot; alt=&quot;🍮&quot;&gt;&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="冲浪" scheme="https://www.lifeee.top/categories/%E5%86%B2%E6%B5%AA/"/>
-    
-    
-    <category term="冲浪" scheme="https://www.lifeee.top/tags/%E5%86%B2%E6%B5%AA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>网上冲浪周刊第59期</title>
-    <link href="https://www.lifeee.top/posts/16742.html"/>
-    <id>https://www.lifeee.top/posts/16742.html</id>
-    <published>2024-09-13T13:18:17.000Z</published>
-    <updated>2026-03-08T07:46:57.151Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;欢迎阅读本期技术资讯！我们为您推荐了一些有趣的工具，如腾讯自研的 Git 客户端UGit  、 开源跨平台解压软件PeaZip 、 适用于 Mac 和 Windows 的免费剪贴板管理器PasteBar 、Obsidian  Folder Note插件 、 开源的 RAG 文档聊天工具kotaemon 、 由 KG 引擎驱动的创新代理框架muAgent。此外，还推荐了Claude Dev：一款集成了Claude 3.5 Sonnet的VSCode AI编程工具和轻量又高性能的 SSH 工具IShell。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/pexels-shaimacapture-8668726.jpg&quot; alt=&quot;https://www.pexels.com/zh-cn/photo/8668726/&quot;&gt;&lt;/p&gt;</summary>
     
     
     
