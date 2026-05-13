@@ -6,7 +6,7 @@
   <link href="https://www.lifeee.top/atom.xml" rel="self"/>
   
   <link href="https://www.lifeee.top/"/>
-  <updated>2026-04-13T14:58:54.363Z</updated>
+  <updated>2026-05-13T15:46:13.799Z</updated>
   <id>https://www.lifeee.top/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>CCX + CC Switch：让Codex接入DeepSeek、Kimi Coding的黄金组合</title>
+    <link href="https://www.lifeee.top/posts/3334.html"/>
+    <id>https://www.lifeee.top/posts/3334.html</id>
+    <published>2026-04-14T02:00:00.000Z</published>
+    <updated>2026-05-13T15:46:13.799Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/ChatGPT%20Image%202026%E5%B9%B45%E6%9C%8812%E6%97%A5%2022_26_38.jpg&quot; alt=&quot;CCX + CC Switch 让 Codex 接入第三方模型&quot;&gt;&lt;/p&gt;
+&lt;p&gt;OpenAI 的 Codex 是个好东西——既有轻量开源的 CLI 版本可以直接在终端跑 AI 编程代理，也有图形界面版本（&lt;a href=&quot;https://chatgpt.com/zh-Hans-CN/codex/&quot;&gt;Codex GUI&lt;/a&gt;）适合不习惯终端的用户。但有一个问题让很多人头疼：&lt;strong&gt;它默认走 Responses API，而市面上 90% 的第三方模型只支持 Chat Completions 协议。&lt;/strong&gt; 想用 DeepSeek、Kimi Coding 这些便宜好用的模型？协议不兼容，直接报错。CCX + CC Switch 就是解决这个问题的黄金组合：CCX 负责底层协议转换，CC Switch 负责图形化管理切换。本文带你十分钟配置好，直接上手用。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="技术" scheme="https://www.lifeee.top/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    <category term="工具" scheme="https://www.lifeee.top/categories/%E6%8A%80%E6%9C%AF/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+    <category term="AI编程" scheme="https://www.lifeee.top/tags/AI%E7%BC%96%E7%A8%8B/"/>
+    
+    <category term="Codex" scheme="https://www.lifeee.top/tags/Codex/"/>
+    
+    <category term="工具" scheme="https://www.lifeee.top/tags/%E5%B7%A5%E5%85%B7/"/>
+    
+  </entry>
   
   <entry>
     <title>AI墓地：1592个死掉的AI工具，给创业者和用户的冷水</title>
@@ -60,13 +86,13 @@
     <category term="教程" scheme="https://www.lifeee.top/categories/%E6%8A%80%E6%9C%AF/%E6%95%99%E7%A8%8B/"/>
     
     
+    <category term="AI编程" scheme="https://www.lifeee.top/tags/AI%E7%BC%96%E7%A8%8B/"/>
+    
     <category term="HAPI" scheme="https://www.lifeee.top/tags/HAPI/"/>
     
     <category term="Tailscale" scheme="https://www.lifeee.top/tags/Tailscale/"/>
     
     <category term="远程开发" scheme="https://www.lifeee.top/tags/%E8%BF%9C%E7%A8%8B%E5%BC%80%E5%8F%91/"/>
-    
-    <category term="AI编程" scheme="https://www.lifeee.top/tags/AI%E7%BC%96%E7%A8%8B/"/>
     
   </entry>
   
@@ -405,26 +431,6 @@
     
     <summary type="html">&lt;p&gt;欢迎阅读本期技术资讯！我们为您推荐了一些有趣的工具，如开源 PDF 文献翻译工具PDFMathTranslate  、AB Download Manager：加速下载与文件管理的开源工具、PMRF：一种实现高质量图像修复的新型算法、强大的开源OCR工具Surya 。此外，还推荐了Luxirty Search : 无内容农场的搜索引擎、Lemuroid：开源多合一游戏模拟器，让Android设备变身游戏机、ChatMemOllama：开源微信公众号聊天机器人。&lt;/p&gt;
 &lt;p&gt; &lt;img src=&quot;https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/image-20241011224826494.png&quot; alt=&quot;绍兴2024.10&quot;&gt;&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="冲浪" scheme="https://www.lifeee.top/categories/%E5%86%B2%E6%B5%AA/"/>
-    
-    
-    <category term="冲浪" scheme="https://www.lifeee.top/tags/%E5%86%B2%E6%B5%AA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>网上冲浪周刊第61期</title>
-    <link href="https://www.lifeee.top/posts/35958.html"/>
-    <id>https://www.lifeee.top/posts/35958.html</id>
-    <published>2024-09-28T14:42:53.000Z</published>
-    <updated>2026-03-08T07:46:57.151Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;欢迎阅读本期技术资讯！我们为您推荐了一些有趣的工具，如专为 GitHub 项目创建分享图像Socialify  、开源数据库设计与可视化工具ChartDB 、 AIToolly：发现和选择最佳人AI工具 、Void：全面隐私保护的开源 AI 代码编辑器 、 Cherry Studio：支持多模型的跨平台 AI 助手。此外，还推荐了Mini-Cover：简洁的在线生成封面网站，专为博客、短视频、社交媒体等生成个性化封面和 Yaak：简洁高效的现代 API 客户端，开源替代 Postman。&lt;/p&gt;
-&lt;p&gt; &lt;img src=&quot;https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/image-20240924225509534.png&quot; alt=&quot;🍮&quot;&gt;&lt;/p&gt;</summary>
     
     
     
