@@ -6,7 +6,7 @@
   <link href="https://www.lifeee.top/atom.xml" rel="self"/>
   
   <link href="https://www.lifeee.top/"/>
-  <updated>2026-05-13T15:46:13.799Z</updated>
+  <updated>2026-06-01T15:29:42.852Z</updated>
   <id>https://www.lifeee.top/</id>
   
   <author>
@@ -17,11 +17,41 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>用网页做视频：一个 AI Agent Skill 如何重新定义内容生产流程</title>
+    <link href="https://www.lifeee.top/posts/18445.html"/>
+    <id>https://www.lifeee.top/posts/18445.html</id>
+    <published>2026-05-29T02:00:00.000Z</published>
+    <updated>2026-06-01T15:29:42.852Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/web-video-presentation-cover.png&quot;&gt;&lt;/p&gt;
+&lt;p&gt;最近接触了一个很有意思的 Claude Skill，叫 &lt;a href=&quot;https://github.com/ConardLi/garden-skills&quot;&gt;&lt;strong&gt;Web Video Presentation&lt;/strong&gt;&lt;/a&gt;。它的理念很简单：&lt;strong&gt;把一篇文章或口播稿，一步步做成可录屏的”伪装成视频的网页”，还能自动合成口播音频。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;听起来像是一个”网页模板”？不是。它是一个完整的内容生产方法论——从文稿到成片的完整工作流，而且产出物是一个&lt;strong&gt;可以部署、可以交互、可以无限修改&lt;/strong&gt;的网页项目。&lt;/p&gt;
+&lt;p&gt;这篇文章带你理解这个 Skill 的设计思路，以及它为什么值得创作者关注。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="技术" scheme="https://www.lifeee.top/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    <category term="工具" scheme="https://www.lifeee.top/categories/%E6%8A%80%E6%9C%AF/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+    <category term="AI" scheme="https://www.lifeee.top/tags/AI/"/>
+    
+    <category term="工具" scheme="https://www.lifeee.top/tags/%E5%B7%A5%E5%85%B7/"/>
+    
+    <category term="前端" scheme="https://www.lifeee.top/tags/%E5%89%8D%E7%AB%AF/"/>
+    
+    <category term="视频制作" scheme="https://www.lifeee.top/tags/%E8%A7%86%E9%A2%91%E5%88%B6%E4%BD%9C/"/>
+    
+  </entry>
+  
+  <entry>
     <title>CCX + CC Switch：让Codex接入DeepSeek、Kimi Coding的黄金组合</title>
     <link href="https://www.lifeee.top/posts/3334.html"/>
     <id>https://www.lifeee.top/posts/3334.html</id>
     <published>2026-04-14T02:00:00.000Z</published>
-    <updated>2026-05-13T15:46:13.799Z</updated>
+    <updated>2026-05-13T15:50:05.608Z</updated>
     
     
     <summary type="html">&lt;p&gt;&lt;img src=&quot;https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/ChatGPT%20Image%202026%E5%B9%B45%E6%9C%8812%E6%97%A5%2022_26_38.jpg&quot; alt=&quot;CCX + CC Switch 让 Codex 接入第三方模型&quot;&gt;&lt;/p&gt;
@@ -411,26 +441,6 @@
     
     <summary type="html">&lt;p&gt;欢迎阅读本期技术资讯！我们为您推荐了一些有趣的工具，如Xplorer：高颜值且功能强大的现代化文件管理器 、oneimg：开源前端应用，让文字和图片快速变身为社交媒体长图、Pocket Casts Android：开源Android播客应用 。此外，还推荐了Follow：集中管理在线内容的新一代信息浏览器、Python初学者的福音：Python-project-Scripts开源项目以及Manim：开源数学动画引擎。&lt;/p&gt;
 &lt;p&gt; &lt;img src=&quot;https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/photo_2024-10-22_23-50-30.jpg&quot;&gt;&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="冲浪" scheme="https://www.lifeee.top/categories/%E5%86%B2%E6%B5%AA/"/>
-    
-    
-    <category term="冲浪" scheme="https://www.lifeee.top/tags/%E5%86%B2%E6%B5%AA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>网上冲浪周刊第63期</title>
-    <link href="https://www.lifeee.top/posts/39201.html"/>
-    <id>https://www.lifeee.top/posts/39201.html</id>
-    <published>2024-10-11T14:58:08.000Z</published>
-    <updated>2026-03-08T07:46:57.151Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;欢迎阅读本期技术资讯！我们为您推荐了一些有趣的工具，如开源 PDF 文献翻译工具PDFMathTranslate  、AB Download Manager：加速下载与文件管理的开源工具、PMRF：一种实现高质量图像修复的新型算法、强大的开源OCR工具Surya 。此外，还推荐了Luxirty Search : 无内容农场的搜索引擎、Lemuroid：开源多合一游戏模拟器，让Android设备变身游戏机、ChatMemOllama：开源微信公众号聊天机器人。&lt;/p&gt;
-&lt;p&gt; &lt;img src=&quot;https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/image-20241011224826494.png&quot; alt=&quot;绍兴2024.10&quot;&gt;&lt;/p&gt;</summary>
     
     
     

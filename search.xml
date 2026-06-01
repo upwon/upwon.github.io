@@ -14250,7 +14250,7 @@ vgg_generated_48.i
 <h3 id="步骤-4：在-CC-Switch-中配置-Codex-使用-CCX"><a href="#步骤-4：在-CC-Switch-中配置-Codex-使用-CCX" class="headerlink" title="步骤 4：在 CC Switch 中配置 Codex 使用 CCX"></a>步骤 4：在 CC Switch 中配置 Codex 使用 CCX</h3><p>打开 CC Switch，确保在 <strong>Codex 模式</strong>下，添加新 Provider：</p>
 <ul>
 <li><strong>Base URL</strong>：<code>http://localhost:3333/v1</code>（指向本地 CCX）</li>
-<li><strong>API Key</strong>：你在 <code>.env</code> 中设置的 <code>PROXY_ACCESS_KEY</code></li>
+<li><strong>API Key</strong>：你在 <code>.env</code> 中设置的 <code>PROXY_ACCESS_KEY</code> </li>
 <li><strong>模型名称</strong>：获取模型列表，然后选中要使用的模块就行</li>
 </ul>
 <p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/CleanShot%202026-05-13%20at%2023.37.32%402x.png"></p>
@@ -23648,6 +23648,200 @@ Welcome to my Blog. This is my first post. If you want to konw more info about H
         <tag>Windows</tag>
         <tag>Visual Studio</tag>
         <tag>激活码</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>用网页做视频：一个 AI Agent Skill 如何重新定义内容生产流程</title>
+    <url>/posts/18445.html</url>
+    <content><![CDATA[<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/web-video-presentation-cover.png"></p>
+<p>最近接触了一个很有意思的 Claude Skill，叫 <a href="https://github.com/ConardLi/garden-skills"><strong>Web Video Presentation</strong></a>。它的理念很简单：<strong>把一篇文章或口播稿，一步步做成可录屏的”伪装成视频的网页”，还能自动合成口播音频。</strong></p>
+<p>听起来像是一个”网页模板”？不是。它是一个完整的内容生产方法论——从文稿到成片的完整工作流，而且产出物是一个<strong>可以部署、可以交互、可以无限修改</strong>的网页项目。</p>
+<p>这篇文章带你理解这个 Skill 的设计思路，以及它为什么值得创作者关注。</p>
+<span id="more"></span>
+
+</br>
+
+<h2 id="传统做视频，痛点在哪？"><a href="#传统做视频，痛点在哪？" class="headerlink" title="传统做视频，痛点在哪？"></a>传统做视频，痛点在哪？</h2><p>先想想我们平时”把文章做成视频”的路径：</p>
+<table>
+<thead>
+<tr>
+<th>路径</th>
+<th>工具</th>
+<th>痛点</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>PPT → 录屏</td>
+<td>Keynote &#x2F; PowerPoint</td>
+<td>动画僵硬，模板感重，改一帧重录</td>
+</tr>
+<tr>
+<td>剪辑工具</td>
+<td>Premiere &#x2F; 剪映</td>
+<td>逐帧对齐音频和画面，修改成本极高</td>
+</tr>
+<tr>
+<td>AI 视频生成</td>
+<td>各种”图文转视频”工具</td>
+<td>画面不可控，风格千篇一律，有”AI 味”</td>
+</tr>
+<tr>
+<td>真人出镜</td>
+<td>相机 + 剪辑</td>
+<td>成本高、周期长、对出镜者要求高</td>
+</tr>
+</tbody></table>
+<p>核心矛盾是：<strong>视频一旦”定稿”，修改成本极高。</strong> 改一句文案，可能要重新配音、重新对画面、重新导出。这让很多人在做视频时陷入”要么不做，做了就不能改”的两难。</p>
+<p><a href="https://github.com/ConardLi/garden-skills">Web Video Presentation</a> 的解法很独特：<strong>不做视频，做一个”看起来像视频的网页”。</strong></p>
+</br>
+
+<h2 id="核心思路：网页即视频源文件"><a href="#核心思路：网页即视频源文件" class="headerlink" title="核心思路：网页即视频源文件"></a>核心思路：网页即视频源文件</h2><p>这个 Skill 的产出物是一个 <strong>Vite + React + TypeScript</strong> 项目，运行在浏览器里，16:9 横屏，每次点击推进一”步”，每步独占一整屏。</p>
+<p><strong>为什么要用网页？</strong></p>
+<ul>
+<li><strong>动画自由</strong>：不是 PPT 的预设动画，而是 CSS &#x2F; SVG &#x2F; Canvas 级别的自由——数字可以逐位跳动，图表可以实时绘制，卡片可以 3D 翻转</li>
+<li><strong>音频天然同步</strong>：每步对应一段独立 MP3，<code>?auto=1</code> 模式下浏览器自动按顺序播放音频并推进画面，录屏时<strong>不需要后期对音轨</strong></li>
+<li><strong>修改即刷新</strong>：改文案 → 重跑 TTS → 刷新浏览器，增量合成，不需要从头录</li>
+<li><strong>可部署</strong>：这个网页本身可以发布到 Vercel &#x2F; Netlify，既是视频源也是可交互演示页</li>
+</ul>
+<blockquote>
+<p>简单说：你做的不是”一个视频文件”，而是”一个能播放视频的网页”。视频只是这个网页的一种消费方式（录屏），网页本身还可以独立存在。</p>
+</blockquote>
+</br>
+
+<h2 id="四阶段工作流"><a href="#四阶段工作流" class="headerlink" title="四阶段工作流"></a>四阶段工作流</h2><p>这个 Skill 定义了一套非常清晰的工作流程：</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/ChatGPT%20Image%202026%E5%B9%B46%E6%9C%881%E6%97%A5%2023_27_50.jpg"></p>
+<p>有两个<strong>硬节点（Checkpoint）</strong>必须停下来等用户确认。这个设计很务实——做视频最大的成本不是技术，而是”方向跑偏”。第 1 章做出来让用户看，不对就改，代价最小。</p>
+</br>
+
+<h2 id="关键设计：narrations-ts-是唯一真相源"><a href="#关键设计：narrations-ts-是唯一真相源" class="headerlink" title="关键设计：narrations.ts 是唯一真相源"></a>关键设计：narrations.ts 是唯一真相源</h2><p>一个视频项目里，”步数”出现在至少 5 个地方：口播稿、开发计划、React 组件代码、章节注册、音频文件。最容易出的 bug 就是”多加了一步但忘改音频”。</p>
+<p>这个 Skill 的解法是：**<code>narrations.ts</code> 是唯一的真相源。**</p>
+<figure class="highlight typescript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// src/chapters/01-intro/narrations.ts</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> narrations = [</span><br><span class="line">  <span class="string">&quot;欢迎来到本期视频。&quot;</span>,</span><br><span class="line">  <span class="string">&quot;今天我们要聊的是一个被很多人忽略的问题。&quot;</span>,</span><br><span class="line">  <span class="string">&quot;问题是什么？让我们从头说起。&quot;</span>,</span><br><span class="line">  <span class="comment">// ... 每步一句话</span></span><br><span class="line">];</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>Step 数 &#x3D; <code>narrations.length</code></li>
+<li>Extract 脚本从它生成 <code>audio-segments.json</code></li>
+<li>TTS 按它合成 <code>public/audio/&lt;id&gt;/&lt;N&gt;.mp3</code></li>
+<li>React 组件里的 <code>if (step === N)</code> 最大 N + 1 必须等于数组长度</li>
+</ul>
+<p><strong>5 处信息从 1 个源头派生</strong>，彻底消除”不同步”的问题。</p>
+</br>
+
+<h2 id="22-套策展主题，不是”随机配色”"><a href="#22-套策展主题，不是”随机配色”" class="headerlink" title="22 套策展主题，不是”随机配色”"></a>22 套策展主题，不是”随机配色”</h2><p>内置了 22 套主题，每一套都不是”随便挑了几个颜色”，而是有完整的设计策展：</p>
+<table>
+<thead>
+<tr>
+<th>主题</th>
+<th>气质</th>
+<th>签名元素</th>
+<th>适合内容</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>包豪斯</strong> <code>bauhaus-bold</code></td>
+<td>净白底 + 主色蓝，几何黑体</td>
+<td>大色块 + 粗边框</td>
+<td>产品发布、观点宣言</td>
+</tr>
+<tr>
+<td><strong>蓝图</strong> <code>blueprint</code></td>
+<td>深藏青 + 青色 + IBM Plex Mono</td>
+<td>工程图纸网格</td>
+<td>技术架构、系统拆解</td>
+</tr>
+<tr>
+<td><strong>沙丘</strong> <code>dune</code></td>
+<td>沙色底 + 炭褐字，几乎无 accent</td>
+<td>极度克制的留白</td>
+<td>建筑、画廊、高端品牌</td>
+</tr>
+<tr>
+<td><strong>瑞士克莱因蓝</strong> <code>swiss-ikb</code></td>
+<td>净暖白 + 极细 200w 字体 + IKB 蓝</td>
+<td>1px 发丝网格</td>
+<td>AI 发布、数据汇报、严肃学术</td>
+</tr>
+<tr>
+<td><strong>霓虹赛博</strong> <code>neon-cyber</code></td>
+<td>深海军底 + 电光青 + 玫红霓虹</td>
+<td>发光网格 + 双色描边</td>
+<td>AI 评测、web3、科幻</td>
+</tr>
+<tr>
+<td><strong>牛皮纸</strong> <code>kraft-paper</code></td>
+<td>牛皮米底 + 深棕字</td>
+<td>手作年代感</td>
+<td>书评、历史、独立杂志</td>
+</tr>
+</tbody></table>
+<p>每套主题都有 <code>mood</code>（情绪标签）、<code>bestFor</code>（适用场景）、<code>preview</code>（四色色板），选主题时一眼就能判断气质是否匹配。</p>
+</br>
+
+<h2 id="反-AI-味：一套有自觉的设计"><a href="#反-AI-味：一套有自觉的设计" class="headerlink" title="反 AI 味：一套有自觉的设计"></a>反 AI 味：一套有自觉的设计</h2><p>AI 生成的前端页面有极强的视觉指纹：紫粉渐变、圆角彩色边框卡片、假插画、emoji 堆砌、无意义微动效。这个 Skill 专门有一份 <code>CHAPTER-CRAFT.md</code> 讲”反 AI 味反模式”，每次实现单章都要走完工自检。</p>
+<p>几条让我印象深刻的规则：</p>
+<ul>
+<li><strong>内容驱动动画</strong>：先找内容的”内在动作”（数字增长、对比反差），找不到才用 <code>fadeIn</code> 兜底</li>
+<li><strong>1 项 &#x3D; 1 step</strong>：清单必须逐个揭示，禁 stagger 同时上 N 项</li>
+<li><strong>双源原则</strong>：口播稿定顺序，原文章定画面密度——口播没念但原文有的细节，要落到视觉上</li>
+<li><strong>章节自由发挥</strong>：主题 token 兜底颜色&#x2F;字体统一，但动画&#x2F;节奏&#x2F;视觉演示各章自由——这是”人手写视频的呼吸感”，不是 bug</li>
+</ul>
+</br>
+
+<h2 id="谁适合用？"><a href="#谁适合用？" class="headerlink" title="谁适合用？"></a>谁适合用？</h2><table>
+<thead>
+<tr>
+<th>场景</th>
+<th>为什么适合</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>技术博主做教程</td>
+<td>代码高亮、终端录屏、图表动画，网页天然擅长</td>
+</tr>
+<tr>
+<td>产品发布 &#x2F; Keynote</td>
+<td>22 套主题覆盖从 B2B 企业到赛博朋克</td>
+</tr>
+<tr>
+<td>知识科普</td>
+<td>口播驱动，每步一个聚焦点，信息密度可控</td>
+</tr>
+<tr>
+<td>数据汇报</td>
+<td>数字动画、图表绘制，比 PPT 生动</td>
+</tr>
+<tr>
+<td>品牌故事</td>
+<td>暗色主题 + 柔光晕染，像杂志封面</td>
+</tr>
+</tbody></table>
+<p>不适合的场景也有：需要真人出镜的 vlog、依赖实拍画面的内容、对实时交互要求高的直播。</p>
+</br>
+
+<h2 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h2><p>这个 Skill 最打动我的不是技术细节，而是它的<strong>设计自觉</strong>。</p>
+<p>它没有说”我给你一个模板，你填内容就行”——它知道模板会杀死创造力。相反，它提供了一套<strong>语法</strong>（口播驱动、点击推进、逐屏独占）和一套<strong>流程</strong>（四阶段 + 硬节点 + 自检协议），然后让每次实现都针对具体内容重新设计。</p>
+<p>22 套主题是策展的，不是生成的。动画是内容驱动的，不是预设的。风格是自由的，不是统一的。</p>
+<p><strong>用网页做视频，本质上是用前端技术重新定义了”视频”的生产方式。</strong> 视频不再是”一锤子买卖”的导出文件，而是一个可以持续迭代、可以交互、可以部署的活的网页项目。</p>
+<p>如果你也厌倦了 PPT 的僵硬和剪辑工具的繁琐，这个思路值得一试。</p>
+</br>
+
+<hr>
+<p><strong>参考</strong></p>
+<ul>
+<li><a href="https://github.com/ConardLi/garden-skills">GitHub: ConardLi&#x2F;garden-skills</a> — Skill 源码仓库，作者 ConardLi</li>
+<li><a href="https://claudemarketplaces.com/skills/conardli/garden-skills/web-video-presentation">在线主题画廊</a> — 23 套内置主题的 16:9 实时预览</li>
+<li>Claude Code 内置调用：<code>/presentation-skills:web-video-presentation</code></li>
+<li>本文基于 Skill 的 SKILL.md、references&#x2F;CHAPTER-CRAFT.md 等文档整理</li>
+</ul>
+]]></content>
+      <categories>
+        <category>技术</category>
+        <category>工具</category>
+      </categories>
+      <tags>
+        <tag>AI</tag>
+        <tag>工具</tag>
+        <tag>前端</tag>
+        <tag>视频制作</tag>
       </tags>
   </entry>
 </search>

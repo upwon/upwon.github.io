@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/myapple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/myfavicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/myfavicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/myapple-touch-icon-next.png" color="#222">
+  <meta name="google-site-verification" content="google2fc64c2b92961282.html">
+  <meta name="baidu-site-verification" content="s6BwSjIZYB">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.loli.net/css?family='LXGW+WenKai+LITE':300,300italic,400,400italic,700,700italic%7C'LXGW+WenKai+Screen':300,300italic,400,400italic,700,700italic%7C'LXGW+WenKai':300,300italic,400,400italic,700,700italic%7C'Noto+Serif+SC':300,300italic,400,400italic,700,700italic%7C'EB+Garamond':300,300italic,400,400italic,700,700italic%7C'PingFang+SC':300,300italic,400,400italic,700,700italic%7C'Microsoft+YaHei':300,300italic,400,400italic,700,700italic%7C'sans-serif':300,300italic,400,400italic,700,700italic%7CMa+Shan+Zheng:300,300italic,400,400italic,700,700italic%7CLXGW+WenKai+Screen:300,300italic,400,400italic,700,700italic%7CLXGW+WenKai:300,300italic,400,400italic,700,700italic%7CMenlo:300,300italic,400,400italic,700,700italic%7CMonaco:300,300italic,400,400italic,700,700italic%7CConsolas:300,300italic,400,400italic,700,700italic%7CSource+Code+Pro:300,300italic,400,400italic,700,700italic%7Csystem-ui:300,300italic,400,400italic,700,700italic%7Cmonospace:300,300italic,400,400italic,700,700italic%7Csans-serif:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha256-yIDrPSXHZdOZhAqiBP7CKzIwMQmRCJ8UeB8Jo17YC4o=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/themes/blue/pace-theme-minimal.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"www.lifeee.top","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.19.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"mac","show_result":true},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="最近接触了一个很有意思的 Claude Skill，叫 Web Video Presentation。它的理念很简单：把一篇文章或口播稿，一步步做成可录屏的”伪装成视频的网页”，还能自动合成口播音频。 听起来像是一个”网页模板”？不是。它是一个完整的内容生产方法论——从文稿到成片的完整工作流，而且产出物是一个可以部署、可以交互、可以无限修改的网页项目。 这篇文章带你理解这个 Skill 的设计思">
+<meta property="og:type" content="article">
+<meta property="og:title" content="用网页做视频：一个 AI Agent Skill 如何重新定义内容生产流程">
+<meta property="og:url" content="https://www.lifeee.top/posts/18445.html">
+<meta property="og:site_name" content="热夏的博客">
+<meta property="og:description" content="最近接触了一个很有意思的 Claude Skill，叫 Web Video Presentation。它的理念很简单：把一篇文章或口播稿，一步步做成可录屏的”伪装成视频的网页”，还能自动合成口播音频。 听起来像是一个”网页模板”？不是。它是一个完整的内容生产方法论——从文稿到成片的完整工作流，而且产出物是一个可以部署、可以交互、可以无限修改的网页项目。 这篇文章带你理解这个 Skill 的设计思">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/web-video-presentation-cover.png">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/ChatGPT%20Image%202026%E5%B9%B46%E6%9C%881%E6%97%A5%2023_27_50.jpg">
+<meta property="article:published_time" content="2026-05-29T02:00:00.000Z">
+<meta property="article:modified_time" content="2026-06-01T15:29:42.852Z">
+<meta property="article:author" content="热夏">
+<meta property="article:tag" content="AI">
+<meta property="article:tag" content="工具">
+<meta property="article:tag" content="前端">
+<meta property="article:tag" content="视频制作">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/web-video-presentation-cover.png">
+
+
+<link rel="canonical" href="https://www.lifeee.top/posts/18445.html">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://www.lifeee.top/posts/18445.html","path":"posts/18445.html","title":"用网页做视频：一个 AI Agent Skill 如何重新定义内容生产流程"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>用网页做视频：一个 AI Agent Skill 如何重新定义内容生产流程 | 热夏的博客</title>
+  
+
+
+
+
+
+
+
+<link href="https://fonts.loli.net/css?family=Noto+Serif+SC:400,500,700&display=swap&subset=chinese-simplified" rel="stylesheet">
+<link rel="stylesheet" href="https://npm.elemecdn.com/lxgw-wenkai-screen-webfont@1.7.0/style.css" />
+
+<link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&display=swap" rel="stylesheet">
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="热夏的博客" type="application/atom+xml">
+<style>.darkmode--activated{--body-bg-color:#282828;--content-bg-color:#333;--card-bg-color:#555;--text-color:#ccc;--blockquote-color:#bbb;--link-color:#ccc;--link-hover-color:#eee;--brand-color:#ddd;--brand-hover-color:#ddd;--table-row-odd-bg-color:#282828;--table-row-hover-bg-color:#363636;--menu-item-bg-color:#555;--btn-default-bg:#222;--btn-default-color:#ccc;--btn-default-border-color:#555;--btn-default-hover-bg:#666;--btn-default-hover-color:#ccc;--btn-default-hover-border-color:#666;--highlight-background:#282b2e;--highlight-foreground:#a9b7c6;--highlight-gutter-background:#34393d;--highlight-gutter-foreground:#9ca9b6}.darkmode--activated img{opacity:.75}.darkmode--activated img:hover{opacity:.9}.darkmode--activated code{color:#69dbdc;background:0 0}button.darkmode-toggle{z-index:9999}.darkmode-ignore,img{display:flex!important}.beian img{display:inline-block!important}</style></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">热夏的博客</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-heart fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BC%A0%E7%BB%9F%E5%81%9A%E8%A7%86%E9%A2%91%EF%BC%8C%E7%97%9B%E7%82%B9%E5%9C%A8%E5%93%AA%EF%BC%9F"><span class="nav-number">1.</span> <span class="nav-text">传统做视频，痛点在哪？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%A0%B8%E5%BF%83%E6%80%9D%E8%B7%AF%EF%BC%9A%E7%BD%91%E9%A1%B5%E5%8D%B3%E8%A7%86%E9%A2%91%E6%BA%90%E6%96%87%E4%BB%B6"><span class="nav-number">2.</span> <span class="nav-text">核心思路：网页即视频源文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%9B%E9%98%B6%E6%AE%B5%E5%B7%A5%E4%BD%9C%E6%B5%81"><span class="nav-number">3.</span> <span class="nav-text">四阶段工作流</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%B3%E9%94%AE%E8%AE%BE%E8%AE%A1%EF%BC%9Anarrations-ts-%E6%98%AF%E5%94%AF%E4%B8%80%E7%9C%9F%E7%9B%B8%E6%BA%90"><span class="nav-number">4.</span> <span class="nav-text">关键设计：narrations.ts 是唯一真相源</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#22-%E5%A5%97%E7%AD%96%E5%B1%95%E4%B8%BB%E9%A2%98%EF%BC%8C%E4%B8%8D%E6%98%AF%E2%80%9D%E9%9A%8F%E6%9C%BA%E9%85%8D%E8%89%B2%E2%80%9D"><span class="nav-number">5.</span> <span class="nav-text">22 套策展主题，不是”随机配色”</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%8D-AI-%E5%91%B3%EF%BC%9A%E4%B8%80%E5%A5%97%E6%9C%89%E8%87%AA%E8%A7%89%E7%9A%84%E8%AE%BE%E8%AE%A1"><span class="nav-number">6.</span> <span class="nav-text">反 AI 味：一套有自觉的设计</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%B0%81%E9%80%82%E5%90%88%E7%94%A8%EF%BC%9F"><span class="nav-number">7.</span> <span class="nav-text">谁适合用？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%86%99%E5%9C%A8%E6%9C%80%E5%90%8E"><span class="nav-number">8.</span> <span class="nav-text">写在最后</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="热夏"
+      src="/images/head.jpg">
+  <p class="site-author-name" itemprop="name">热夏</p>
+  <div class="site-description" itemprop="description">空山新雨后，天气晚来秋。</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">116</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">13</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">53</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/upwon" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;upwon" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:w1244753906@gmail.com" title="E-Mail → mailto:w1244753906@gmail.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.lifeee.top//atom.xml" title="RSS → https:&#x2F;&#x2F;www.lifeee.top&#x2F;&#x2F;atom.xml" rel="noopener me"><i class="fa fa-rss fa-fw"></i>RSS</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+        <div class="pjax">
+        </div>
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.lifeee.top/posts/18445.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/head.jpg">
+      <meta itemprop="name" content="热夏">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="热夏的博客">
+      <meta itemprop="description" content="空山新雨后，天气晚来秋。">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="用网页做视频：一个 AI Agent Skill 如何重新定义内容生产流程 | 热夏的博客">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          用网页做视频：一个 AI Agent Skill 如何重新定义内容生产流程
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2026-05-29 10:00:00" itemprop="dateCreated datePublished" datetime="2026-05-29T10:00:00+08:00">2026-05-29</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2026-06-01 23:29:42" itemprop="dateModified" datetime="2026-06-01T23:29:42+08:00">2026-06-01</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">技术</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF/%E5%B7%A5%E5%85%B7/" itemprop="url" rel="index"><span itemprop="name">工具</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>2.8k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>3 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/web-video-presentation-cover.png"></p>
+<p>最近接触了一个很有意思的 Claude Skill，叫 <a target="_blank" rel="noopener" href="https://github.com/ConardLi/garden-skills"><strong>Web Video Presentation</strong></a>。它的理念很简单：<strong>把一篇文章或口播稿，一步步做成可录屏的”伪装成视频的网页”，还能自动合成口播音频。</strong></p>
+<p>听起来像是一个”网页模板”？不是。它是一个完整的内容生产方法论——从文稿到成片的完整工作流，而且产出物是一个<strong>可以部署、可以交互、可以无限修改</strong>的网页项目。</p>
+<p>这篇文章带你理解这个 Skill 的设计思路，以及它为什么值得创作者关注。</p>
+<span id="more"></span>
+
+</br>
+
+<h2 id="传统做视频，痛点在哪？"><a href="#传统做视频，痛点在哪？" class="headerlink" title="传统做视频，痛点在哪？"></a>传统做视频，痛点在哪？</h2><p>先想想我们平时”把文章做成视频”的路径：</p>
+<table>
+<thead>
+<tr>
+<th>路径</th>
+<th>工具</th>
+<th>痛点</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>PPT → 录屏</td>
+<td>Keynote &#x2F; PowerPoint</td>
+<td>动画僵硬，模板感重，改一帧重录</td>
+</tr>
+<tr>
+<td>剪辑工具</td>
+<td>Premiere &#x2F; 剪映</td>
+<td>逐帧对齐音频和画面，修改成本极高</td>
+</tr>
+<tr>
+<td>AI 视频生成</td>
+<td>各种”图文转视频”工具</td>
+<td>画面不可控，风格千篇一律，有”AI 味”</td>
+</tr>
+<tr>
+<td>真人出镜</td>
+<td>相机 + 剪辑</td>
+<td>成本高、周期长、对出镜者要求高</td>
+</tr>
+</tbody></table>
+<p>核心矛盾是：<strong>视频一旦”定稿”，修改成本极高。</strong> 改一句文案，可能要重新配音、重新对画面、重新导出。这让很多人在做视频时陷入”要么不做，做了就不能改”的两难。</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/ConardLi/garden-skills">Web Video Presentation</a> 的解法很独特：<strong>不做视频，做一个”看起来像视频的网页”。</strong></p>
+</br>
+
+<h2 id="核心思路：网页即视频源文件"><a href="#核心思路：网页即视频源文件" class="headerlink" title="核心思路：网页即视频源文件"></a>核心思路：网页即视频源文件</h2><p>这个 Skill 的产出物是一个 <strong>Vite + React + TypeScript</strong> 项目，运行在浏览器里，16:9 横屏，每次点击推进一”步”，每步独占一整屏。</p>
+<p><strong>为什么要用网页？</strong></p>
+<ul>
+<li><strong>动画自由</strong>：不是 PPT 的预设动画，而是 CSS &#x2F; SVG &#x2F; Canvas 级别的自由——数字可以逐位跳动，图表可以实时绘制，卡片可以 3D 翻转</li>
+<li><strong>音频天然同步</strong>：每步对应一段独立 MP3，<code>?auto=1</code> 模式下浏览器自动按顺序播放音频并推进画面，录屏时<strong>不需要后期对音轨</strong></li>
+<li><strong>修改即刷新</strong>：改文案 → 重跑 TTS → 刷新浏览器，增量合成，不需要从头录</li>
+<li><strong>可部署</strong>：这个网页本身可以发布到 Vercel &#x2F; Netlify，既是视频源也是可交互演示页</li>
+</ul>
+<blockquote>
+<p>简单说：你做的不是”一个视频文件”，而是”一个能播放视频的网页”。视频只是这个网页的一种消费方式（录屏），网页本身还可以独立存在。</p>
+</blockquote>
+</br>
+
+<h2 id="四阶段工作流"><a href="#四阶段工作流" class="headerlink" title="四阶段工作流"></a>四阶段工作流</h2><p>这个 Skill 定义了一套非常清晰的工作流程：</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/ChatGPT%20Image%202026%E5%B9%B46%E6%9C%881%E6%97%A5%2023_27_50.jpg"></p>
+<p>有两个<strong>硬节点（Checkpoint）</strong>必须停下来等用户确认。这个设计很务实——做视频最大的成本不是技术，而是”方向跑偏”。第 1 章做出来让用户看，不对就改，代价最小。</p>
+</br>
+
+<h2 id="关键设计：narrations-ts-是唯一真相源"><a href="#关键设计：narrations-ts-是唯一真相源" class="headerlink" title="关键设计：narrations.ts 是唯一真相源"></a>关键设计：narrations.ts 是唯一真相源</h2><p>一个视频项目里，”步数”出现在至少 5 个地方：口播稿、开发计划、React 组件代码、章节注册、音频文件。最容易出的 bug 就是”多加了一步但忘改音频”。</p>
+<p>这个 Skill 的解法是：**<code>narrations.ts</code> 是唯一的真相源。**</p>
+<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// src/chapters/01-intro/narrations.ts</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> narrations = [</span><br><span class="line">  <span class="string">&quot;欢迎来到本期视频。&quot;</span>,</span><br><span class="line">  <span class="string">&quot;今天我们要聊的是一个被很多人忽略的问题。&quot;</span>,</span><br><span class="line">  <span class="string">&quot;问题是什么？让我们从头说起。&quot;</span>,</span><br><span class="line">  <span class="comment">// ... 每步一句话</span></span><br><span class="line">];</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>Step 数 &#x3D; <code>narrations.length</code></li>
+<li>Extract 脚本从它生成 <code>audio-segments.json</code></li>
+<li>TTS 按它合成 <code>public/audio/&lt;id&gt;/&lt;N&gt;.mp3</code></li>
+<li>React 组件里的 <code>if (step === N)</code> 最大 N + 1 必须等于数组长度</li>
+</ul>
+<p><strong>5 处信息从 1 个源头派生</strong>，彻底消除”不同步”的问题。</p>
+</br>
+
+<h2 id="22-套策展主题，不是”随机配色”"><a href="#22-套策展主题，不是”随机配色”" class="headerlink" title="22 套策展主题，不是”随机配色”"></a>22 套策展主题，不是”随机配色”</h2><p>内置了 22 套主题，每一套都不是”随便挑了几个颜色”，而是有完整的设计策展：</p>
+<table>
+<thead>
+<tr>
+<th>主题</th>
+<th>气质</th>
+<th>签名元素</th>
+<th>适合内容</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>包豪斯</strong> <code>bauhaus-bold</code></td>
+<td>净白底 + 主色蓝，几何黑体</td>
+<td>大色块 + 粗边框</td>
+<td>产品发布、观点宣言</td>
+</tr>
+<tr>
+<td><strong>蓝图</strong> <code>blueprint</code></td>
+<td>深藏青 + 青色 + IBM Plex Mono</td>
+<td>工程图纸网格</td>
+<td>技术架构、系统拆解</td>
+</tr>
+<tr>
+<td><strong>沙丘</strong> <code>dune</code></td>
+<td>沙色底 + 炭褐字，几乎无 accent</td>
+<td>极度克制的留白</td>
+<td>建筑、画廊、高端品牌</td>
+</tr>
+<tr>
+<td><strong>瑞士克莱因蓝</strong> <code>swiss-ikb</code></td>
+<td>净暖白 + 极细 200w 字体 + IKB 蓝</td>
+<td>1px 发丝网格</td>
+<td>AI 发布、数据汇报、严肃学术</td>
+</tr>
+<tr>
+<td><strong>霓虹赛博</strong> <code>neon-cyber</code></td>
+<td>深海军底 + 电光青 + 玫红霓虹</td>
+<td>发光网格 + 双色描边</td>
+<td>AI 评测、web3、科幻</td>
+</tr>
+<tr>
+<td><strong>牛皮纸</strong> <code>kraft-paper</code></td>
+<td>牛皮米底 + 深棕字</td>
+<td>手作年代感</td>
+<td>书评、历史、独立杂志</td>
+</tr>
+</tbody></table>
+<p>每套主题都有 <code>mood</code>（情绪标签）、<code>bestFor</code>（适用场景）、<code>preview</code>（四色色板），选主题时一眼就能判断气质是否匹配。</p>
+</br>
+
+<h2 id="反-AI-味：一套有自觉的设计"><a href="#反-AI-味：一套有自觉的设计" class="headerlink" title="反 AI 味：一套有自觉的设计"></a>反 AI 味：一套有自觉的设计</h2><p>AI 生成的前端页面有极强的视觉指纹：紫粉渐变、圆角彩色边框卡片、假插画、emoji 堆砌、无意义微动效。这个 Skill 专门有一份 <code>CHAPTER-CRAFT.md</code> 讲”反 AI 味反模式”，每次实现单章都要走完工自检。</p>
+<p>几条让我印象深刻的规则：</p>
+<ul>
+<li><strong>内容驱动动画</strong>：先找内容的”内在动作”（数字增长、对比反差），找不到才用 <code>fadeIn</code> 兜底</li>
+<li><strong>1 项 &#x3D; 1 step</strong>：清单必须逐个揭示，禁 stagger 同时上 N 项</li>
+<li><strong>双源原则</strong>：口播稿定顺序，原文章定画面密度——口播没念但原文有的细节，要落到视觉上</li>
+<li><strong>章节自由发挥</strong>：主题 token 兜底颜色&#x2F;字体统一，但动画&#x2F;节奏&#x2F;视觉演示各章自由——这是”人手写视频的呼吸感”，不是 bug</li>
+</ul>
+</br>
+
+<h2 id="谁适合用？"><a href="#谁适合用？" class="headerlink" title="谁适合用？"></a>谁适合用？</h2><table>
+<thead>
+<tr>
+<th>场景</th>
+<th>为什么适合</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>技术博主做教程</td>
+<td>代码高亮、终端录屏、图表动画，网页天然擅长</td>
+</tr>
+<tr>
+<td>产品发布 &#x2F; Keynote</td>
+<td>22 套主题覆盖从 B2B 企业到赛博朋克</td>
+</tr>
+<tr>
+<td>知识科普</td>
+<td>口播驱动，每步一个聚焦点，信息密度可控</td>
+</tr>
+<tr>
+<td>数据汇报</td>
+<td>数字动画、图表绘制，比 PPT 生动</td>
+</tr>
+<tr>
+<td>品牌故事</td>
+<td>暗色主题 + 柔光晕染，像杂志封面</td>
+</tr>
+</tbody></table>
+<p>不适合的场景也有：需要真人出镜的 vlog、依赖实拍画面的内容、对实时交互要求高的直播。</p>
+</br>
+
+<h2 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h2><p>这个 Skill 最打动我的不是技术细节，而是它的<strong>设计自觉</strong>。</p>
+<p>它没有说”我给你一个模板，你填内容就行”——它知道模板会杀死创造力。相反，它提供了一套<strong>语法</strong>（口播驱动、点击推进、逐屏独占）和一套<strong>流程</strong>（四阶段 + 硬节点 + 自检协议），然后让每次实现都针对具体内容重新设计。</p>
+<p>22 套主题是策展的，不是生成的。动画是内容驱动的，不是预设的。风格是自由的，不是统一的。</p>
+<p><strong>用网页做视频，本质上是用前端技术重新定义了”视频”的生产方式。</strong> 视频不再是”一锤子买卖”的导出文件，而是一个可以持续迭代、可以交互、可以部署的活的网页项目。</p>
+<p>如果你也厌倦了 PPT 的僵硬和剪辑工具的繁琐，这个思路值得一试。</p>
+</br>
+
+<hr>
+<p><strong>参考</strong></p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/ConardLi/garden-skills">GitHub: ConardLi&#x2F;garden-skills</a> — Skill 源码仓库，作者 ConardLi</li>
+<li><a target="_blank" rel="noopener" href="https://claudemarketplaces.com/skills/conardli/garden-skills/web-video-presentation">在线主题画廊</a> — 23 套内置主题的 16:9 实时预览</li>
+<li>Claude Code 内置调用：<code>/presentation-skills:web-video-presentation</code></li>
+<li>本文基于 Skill 的 SKILL.md、references&#x2F;CHAPTER-CRAFT.md 等文档整理</li>
+</ul>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>请我一杯咖啡吧！</div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/wechatpay.png" alt="热夏 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="/images/alipay.jpg" alt="热夏 支付宝">
+        <span>支付宝</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>热夏
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://www.lifeee.top/posts/18445.html" title="用网页做视频：一个 AI Agent Skill 如何重新定义内容生产流程">https://www.lifeee.top/posts/18445.html</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="followme">
+  <span>欢迎关注我的其它发布渠道</span>
+
+  <div class="social-list">
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="/atom.xml">
+            <span class="icon">
+              <i class="fa fa-rss"></i>
+            </span>
+
+            <span class="label">RSS</span>
+          </a>
+      </div>
+  </div>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/AI/" rel="tag"><i class="fa fa-tag"></i> AI</a>
+              <a href="/tags/%E5%B7%A5%E5%85%B7/" rel="tag"><i class="fa fa-tag"></i> 工具</a>
+              <a href="/tags/%E5%89%8D%E7%AB%AF/" rel="tag"><i class="fa fa-tag"></i> 前端</a>
+              <a href="/tags/%E8%A7%86%E9%A2%91%E5%88%B6%E4%BD%9C/" rel="tag"><i class="fa fa-tag"></i> 视频制作</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/posts/3334.html" rel="prev" title="CCX + CC Switch：让Codex接入DeepSeek、Kimi Coding的黄金组合">
+                  <i class="fa fa-angle-left"></i> CCX + CC Switch：让Codex接入DeepSeek、Kimi Coding的黄金组合
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments gitalk-container"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 2018 – 
+    <span itemprop="copyrightYear">2026</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">热夏</span>
+  </div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>站点总字数：</span>
+    <span title="站点总字数">760k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">11:31</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/next-theme-pjax/0.6.0/pjax.min.js" integrity="sha256-vxLn1tSKWD4dqbMRyv940UYw4sXgMtYcK6reefzZrao=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lozad.js/1.16.0/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script><script src="/js/pjax.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+  <script src="/js/third-party/pace.js"></script>
+
+
+  
+  <script data-pjax async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","mhchem":false,"js":{"url":"//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
+
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"upwon","repo":"upwon.github.io","client_id":"7e047047ecee7317452b","client_secret":"c60fbdf0eb19e7264e33ab780319e4d420a58fee","admin_user":"upwon","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":null,"js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"6ce26ad4aeb4dcd9a83b48aebc7b4887"}</script>
+<script src="/js/third-party/comments/gitalk.js"></script>
+
+</body>
+</html>
