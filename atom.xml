@@ -6,7 +6,7 @@
   <link href="https://www.lifeee.top/atom.xml" rel="self"/>
   
   <link href="https://www.lifeee.top/"/>
-  <updated>2026-06-01T15:29:42.852Z</updated>
+  <updated>2026-07-06T02:53:16.966Z</updated>
   <id>https://www.lifeee.top/</id>
   
   <author>
@@ -15,6 +15,61 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>把任意素材，编辑成一篇值得分享的文章</title>
+    <link href="https://www.lifeee.top/posts/5121.html"/>
+    <id>https://www.lifeee.top/posts/5121.html</id>
+    <published>2026-07-06T02:00:00.000Z</published>
+    <updated>2026-07-06T02:53:16.966Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;&lt;img src=&quot;https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/cover.jpg&quot; alt=&quot;beautiful-article 封面：一堆散乱的原始素材（网页、PDF、文档、便签）沿流动的路径汇聚、转化成右侧一本排版精致的书&quot;&gt;&lt;/p&gt;
+&lt;p&gt;你手里有一堆想分享的东西：一个讲得很好的网页、一份塞满干货的 PDF、一篇自己写的长文。可它们读起来累、发出去丑，别人点开就想关。beautiful-article 把这件事当”编辑活”来干 —— 先把素材读懂、拆解、重排，再设计成一份&lt;strong&gt;离线能打开、随手能分享的精美 HTML 文章&lt;/strong&gt;。它的注意力永远在”文章”本身，而不是”网页”。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="技术" scheme="https://www.lifeee.top/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    <category term="工具" scheme="https://www.lifeee.top/categories/%E6%8A%80%E6%9C%AF/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+    <category term="开源" scheme="https://www.lifeee.top/tags/%E5%BC%80%E6%BA%90/"/>
+    
+    <category term="AI" scheme="https://www.lifeee.top/tags/AI/"/>
+    
+    <category term="工具" scheme="https://www.lifeee.top/tags/%E5%B7%A5%E5%85%B7/"/>
+    
+    <category term="Claude" scheme="https://www.lifeee.top/tags/Claude/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>你的 AI 助手得了健忘症？这个工具让它拥有长期记忆</title>
+    <link href="https://www.lifeee.top/posts/18446.html"/>
+    <id>https://www.lifeee.top/posts/18446.html</id>
+    <published>2026-06-01T02:00:00.000Z</published>
+    <updated>2026-06-01T15:32:52.424Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;先说结论：如果你用 Claude Code 写代码，那你一定遇到过这种情况，agent 聊着聊着就”忘了”之前说过什么。Obelisk 这个开源工具让 agent 能直接查询自己的历史对话，而且核心设计特别有意思，不是让人去翻记录，而是让 agent 自己写代码查。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="技术" scheme="https://www.lifeee.top/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    <category term="工具" scheme="https://www.lifeee.top/categories/%E6%8A%80%E6%9C%AF/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+    <category term="开源" scheme="https://www.lifeee.top/tags/%E5%BC%80%E6%BA%90/"/>
+    
+    <category term="AI" scheme="https://www.lifeee.top/tags/AI/"/>
+    
+    <category term="工具" scheme="https://www.lifeee.top/tags/%E5%B7%A5%E5%85%B7/"/>
+    
+    <category term="Claude" scheme="https://www.lifeee.top/tags/Claude/"/>
+    
+  </entry>
   
   <entry>
     <title>用网页做视频：一个 AI Agent Skill 如何重新定义内容生产流程</title>
@@ -401,46 +456,6 @@
     
     <summary type="html">&lt;p&gt;欢迎阅读本期技术资讯！我们为您介绍了一些有趣的工具，如第三方哔哩哔哩Android端bilimiao2 、基于Rime引擎的Android端雨燕输入法、ScreenPipe：全天候屏幕和语音录制的智能助手。此外，还安利了 PyDracula：现代化的Python GUI框架以及Sequoia A股投资者的自动选股助手 。&lt;/p&gt;
 &lt;p&gt;  &lt;img src=&quot;https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/pexels-szafran-18611597.jpg&quot; alt=&quot;![](https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/pexels-szafran-18611597.jpg)&quot;&gt;&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="冲浪" scheme="https://www.lifeee.top/categories/%E5%86%B2%E6%B5%AA/"/>
-    
-    
-    <category term="冲浪" scheme="https://www.lifeee.top/tags/%E5%86%B2%E6%B5%AA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>网上冲浪周刊第67期</title>
-    <link href="https://www.lifeee.top/posts/43296.html"/>
-    <id>https://www.lifeee.top/posts/43296.html</id>
-    <published>2024-11-05T15:03:32.000Z</published>
-    <updated>2026-03-08T07:46:57.151Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;欢迎阅读本期技术资讯！我们为您介绍了一些有趣的工具，如高效OCR屏幕捕捉工具 NormCap 、开源高效的文档解析器 MegaParse、开源的浏览器书签查看工具bookmarks-artist 、Lux跨平台视频下载工具 。此外，还安利了  API Hub - 学习和掌握 API 交互的工具 、MD3-Windows 高颜值的的 Windows 桌面美化工具以及一款跳过B站视频中恰饭片段的浏览器插件BilibiliSponsorBlock 。&lt;/p&gt;
-&lt;p&gt; &lt;img src=&quot;https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/pexels-qhung999-24768347%20(2).jpg&quot; alt=&quot;https://www.pexels.com/zh-cn/photo/24768347/&quot;&gt;&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="冲浪" scheme="https://www.lifeee.top/categories/%E5%86%B2%E6%B5%AA/"/>
-    
-    
-    <category term="冲浪" scheme="https://www.lifeee.top/tags/%E5%86%B2%E6%B5%AA/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>网上冲浪周刊第65期</title>
-    <link href="https://www.lifeee.top/posts/4385.html"/>
-    <id>https://www.lifeee.top/posts/4385.html</id>
-    <published>2024-10-25T15:06:35.000Z</published>
-    <updated>2026-03-08T07:46:57.151Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;欢迎阅读本期技术资讯！我们为您推荐了一些有趣的工具，如Xplorer：高颜值且功能强大的现代化文件管理器 、oneimg：开源前端应用，让文字和图片快速变身为社交媒体长图、Pocket Casts Android：开源Android播客应用 。此外，还推荐了Follow：集中管理在线内容的新一代信息浏览器、Python初学者的福音：Python-project-Scripts开源项目以及Manim：开源数学动画引擎。&lt;/p&gt;
-&lt;p&gt; &lt;img src=&quot;https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/photo_2024-10-22_23-50-30.jpg&quot;&gt;&lt;/p&gt;</summary>
     
     
     

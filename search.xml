@@ -23844,4 +23844,360 @@ Welcome to my Blog. This is my first post. If you want to konw more info about H
         <tag>视频制作</tag>
       </tags>
   </entry>
+  <entry>
+    <title>你的 AI 助手得了健忘症？这个工具让它拥有长期记忆</title>
+    <url>/posts/18446.html</url>
+    <content><![CDATA[<p>先说结论：如果你用 Claude Code 写代码，那你一定遇到过这种情况，agent 聊着聊着就”忘了”之前说过什么。Obelisk 这个开源工具让 agent 能直接查询自己的历史对话，而且核心设计特别有意思，不是让人去翻记录，而是让 agent 自己写代码查。</p>
+<span id="more"></span>
+
+</br>
+
+<h2 id="问题从哪来"><a href="#问题从哪来" class="headerlink" title="问题从哪来"></a>问题从哪来</h2><p>用过 Claude Code 的人都知道，agent 的上下文窗口是有限的。</p>
+<p>compact 之后，很多决策细节就丢了。你明明前 5 分钟让 agent 改了一个接口的设计思路，后面它可能就忘了为什么要这么改。</p>
+<p>但其实 Claude Code 的每一次对话、subagent、workflow 都以 jsonl 的格式保存在本地了。信息就在那里，但 agent 没有工具去翻。</p>
+<p>说白了，agent 就像一个记忆力很差但笔记记得很全的人。问题是，它不会翻自己的笔记。</p>
+</br>
+
+<h2 id="Obelisk-是怎么解决的"><a href="#Obelisk-是怎么解决的" class="headerlink" title="Obelisk 是怎么解决的"></a>Obelisk 是怎么解决的</h2><p>这个项目出自开发者 <a href="https://github.com/tommy0103">tommy0103</a>，目前 <a href="https://github.com/tommy0103/obelisk">32 个 star</a>，MIT 协议，纯 JavaScript 实现，零 npm 依赖。</p>
+<p>它的核心思路很直接：不给人类设计一个历史浏览器，而是给 agent 一个查询接口，让它自己写 JS 去查 SQLite。</p>
+<p>整个项目就一个 <code>runtime.mjs</code>，大概 400 行代码。依赖只有 Node.js 22+ 的内置 <code>node:sqlite</code> 模块，支持 FTS5 全文搜索。</p>
+<p>安装也简单：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npx skills add tommy0103/obelisk</span><br></pre></td></tr></table></figure>
+
+<p>装完之后在 Claude Code 里直接说人话就行，比如：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">/obelisk 上次 auth bug 最后到底改了哪些文件</span><br><span class="line">/obelisk 找出最近失败的 tool calls</span><br><span class="line">/obelisk 我之前有没有试过这个方案</span><br></pre></td></tr></table></figure>
+
+</br>
+
+<h2 id="底层怎么运转"><a href="#底层怎么运转" class="headerlink" title="底层怎么运转"></a>底层怎么运转</h2><p>整个过程分四步：</p>
+<p><strong>你问问题 → Agent 写一个 JS 查询脚本 → runtime.mjs 在本地 SQLite 上执行 → Agent 拿到 JSON 结果，用自然语言回答你</strong></p>
+<p>Indexed 的数据包括 sessions、messages、tool calls、subagents、workflows，还有 workflow 里每个 agent 的完整对话记录。</p>
+<p>API 分两层设计。简单层直接教给 agent：</p>
+<ul>
+<li><code>search(text)</code>：FTS5 全文搜索，返回匹配结果和上下文</li>
+<li><code>context(uuid)</code>：拿到一条消息的完整前后链条</li>
+<li><code>sql(query, ...params)</code>：原始 SQL，想怎么查就怎么查</li>
+</ul>
+<p>复杂一点的查询，比如追踪 subagent 的调用链、分析 workflow 的执行树、查看文件修改历史，agent 需要时自己去读 <code>schema.md</code>，不需要一开始就把全部文档塞进上下文。</p>
+<p>这种渐进式披露的设计挺聪明的。agent 不会因为拿到太多用不到的信息而分心。</p>
+</br>
+
+<h2 id="为什么这个思路值得留意"><a href="#为什么这个思路值得留意" class="headerlink" title="为什么这个思路值得留意"></a>为什么这个思路值得留意</h2><p>市面上大多数历史工具是做给人看的。Obelisk 不一样，它是做给 agent 用的。</p>
+<p>这个区别很关键。人浏览历史需要 UI、需要搜索框、需要筛选器。Agent 不需要这些，它会写代码。给它一个查询运行时，它就能自己做调查、做推理、做总结。</p>
+<p>Twitter 上 <a href="https://x.com/QuantumTransf">@QuantumTransf</a> 提到一个很有意思的观察：看到 Claude 的 dynamic-workflow 功能后意识到，agent 已经会写脚本来编排工作了，那为什么不能写脚本来检索自己的历史？</p>
+<p>这就是 Obelisk 的核心原则：<strong>code as query language</strong>。不设计 DSL，不做固定 API，直接让 agent 写 JS 查 SQLite。有数据就能有分析。</p>
+<p>第一次运行会花大概 5 秒钟建索引（100 个 session 的量级），之后是增量更新，新的或修改过的 JSONL 文件才会被重新解析。</p>
+</br>
+
+<h2 id="局限性也得说清楚"><a href="#局限性也得说清楚" class="headerlink" title="局限性也得说清楚"></a>局限性也得说清楚</h2><p>目前只支持 Claude Code 的 skills 体系安装，其他 AI 编程工具暂时用不了。</p>
+<p>需要 Node.js 22 以上版本，因为依赖内置的 <code>node:sqlite</code> 和 FTS5。</p>
+<p>刚发布不久，7 个 commit，1 个 fork，社区还在早期阶段。能不能持续维护要看作者和社区参与度。</p>
+</br>
+
+<h2 id="适合谁用"><a href="#适合谁用" class="headerlink" title="适合谁用"></a>适合谁用</h2><p>如果你符合以下任意一条，可以试试看：</p>
+<ul>
+<li>用 Claude Code 做长期项目，session 多了之后找历史记录很痛苦</li>
+<li>Agent 经常”失忆”，重复犯之前讨论过的错误</li>
+<li>想让自己的 AI 编程助手有个可查询的”长期记忆”</li>
+<li>对 agent 架构设计感兴趣，想看看 code-as-query 的实践案例</li>
+</ul>
+<p>如果只是偶尔用几次 Claude Code，可能感受不明显。但长期用下来，agent 能记住自己做过什么、为什么这么做，体验差很多。</p>
+</br>
+
+<h2 id="上手建议"><a href="#上手建议" class="headerlink" title="上手建议"></a>上手建议</h2><p>安装很简单，按<a href="https://github.com/tommy0103/obelisk">官方 README</a> 走就行。装完之后别急着查复杂的东西，先用简单的自然语言问几个问题，感受下 agent 是怎么理解你的意图并转成查询的。</p>
+<p>有一个很实用的场景：项目做到一半，隔了几天再打开，直接问 agent “我之前在这个文件上做过哪些修改，为什么要改”，比人肉翻历史高效得多。</p>
+</br>
+
+<hr>
+<p><strong>参考</strong></p>
+<ul>
+<li><a href="https://github.com/tommy0103/obelisk">GitHub: tommy0103&#x2F;obelisk</a> — 开源仓库，MIT 协议</li>
+<li><a href="https://x.com/QuantumTransf">X&#x2F;Twitter @QuantumTransf</a> — 关于 agent 自省能力的讨论</li>
+<li>Node.js 22 <a href="https://nodejs.org/api/sqlite.html">node:sqlite 文档</a></li>
+</ul>
+]]></content>
+      <categories>
+        <category>技术</category>
+        <category>工具</category>
+      </categories>
+      <tags>
+        <tag>开源</tag>
+        <tag>AI</tag>
+        <tag>工具</tag>
+        <tag>Claude</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>把任意素材，编辑成一篇值得分享的文章</title>
+    <url>/posts/5121.html</url>
+    <content><![CDATA[<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/cover.jpg" alt="beautiful-article 封面：一堆散乱的原始素材（网页、PDF、文档、便签）沿流动的路径汇聚、转化成右侧一本排版精致的书"></p>
+<p>你手里有一堆想分享的东西：一个讲得很好的网页、一份塞满干货的 PDF、一篇自己写的长文。可它们读起来累、发出去丑，别人点开就想关。beautiful-article 把这件事当”编辑活”来干 —— 先把素材读懂、拆解、重排，再设计成一份<strong>离线能打开、随手能分享的精美 HTML 文章</strong>。它的注意力永远在”文章”本身，而不是”网页”。</p>
+<span id="more"></span>
+
+</br>
+
+<h2 id="一分钟看懂"><a href="#一分钟看懂" class="headerlink" title="一分钟看懂"></a>一分钟看懂</h2><ul>
+<li>它是什么：一个编辑型 harness Skill —— 把任意素材编辑成比原文更易读、更好分享的精美文章。</li>
+<li>为谁而做：手里有 URL &#x2F; PDF &#x2F; 长文、想做成可传播网页文章的开发者与创作者。</li>
+<li>怎么用：一行 <code>npx skills add</code> 装上，喂素材，它带你走完抽取 → 规划 → 生成 → 交付。</li>
+<li>你说了算：3 个硬 checkpoint 逐项确认文章类型 &#x2F; 主题 &#x2F; 版式 &#x2F; 配图 &#x2F; 封面，AI 推荐但绝不替你静默做主。</li>
+<li>交付什么：一份自包含的单文件 HTML（CSS + JS 内联，断网也能打开），可选导出 PDF。</li>
+</ul>
+</br>
+
+<h2 id="01-·-它到底是什么"><a href="#01-·-它到底是什么" class="headerlink" title="01 · 它到底是什么"></a>01 · 它到底是什么</h2><p>把一段素材丢给一个通用 AI，让它”做成网页”，你多半会拿到一个：能跑、但没人想读第二遍的页面 —— 信息按原样堆着，标题是加粗的第一句话，配色是模型的默认审美，读起来跟原文一样累，只是换了个壳。<strong>beautiful-article 想解决的正是这件事。</strong></p>
+<p>它把自己定位成一个<strong>编辑型 harness Skill</strong>：不是”套个模板生成网页”，而是像一位真正的编辑那样工作 —— 先把素材通读、理解，判断哪些是主干、哪些可以删，为它选一种合适的文章类型和视觉气质，再逐节写作、逐节校对，最后交付一份比原文更值得读的文章。所谓 harness，是说它不是一次性把活儿全干完，而是走一条有章法的流程，并在关键处停下来问你的意见。</p>
+<div class="note primary"><p><strong>它的第一性原理：首先是一篇文章。</strong></p>
+<p>注意力永远在”文章”本身 —— 更好的阅读、更好的节奏、更好的美学。交付物是一份自包含的 HTML 文件（可选 PDF），但那只是交付细节，不是目标。</p>
+</div>
+
+<p>这条原则听起来朴素，却决定了它和”网页生成器”的根本差别。下面这张对照，是同一份素材在两种思路下的不同命运：</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/raw-01-comparison.png" alt="同一份素材，两种命运：普通网页生成 vs beautiful-article 编辑成文章"></p>
+<p>换句话说，通用生成器给你的是”把文字放进网页”，beautiful-article 给你的是”把文字编辑成一篇文章，再顺手做成网页”。它做的减法和加法 —— 删掉旁枝、保住主干、补上视觉、控住节奏 —— 才是让成品”值得读”的地方。</p>
+</br>
+
+<h2 id="02-·-六步工作流，与三次交给你拍板"><a href="#02-·-六步工作流，与三次交给你拍板" class="headerlink" title="02 · 六步工作流，与三次交给你拍板"></a>02 · 六步工作流，与三次交给你拍板</h2><p>beautiful-article 不是一次性把素材吐成网页，而是走一条小型 harness 流程。它把”写文章”这件事拆成六步：先把素材抽成统一的 Markdown，再形成编辑方案；确认之后先做出首屏样张定调，再逐节生成；最后终审、修复、交付。整条线里，有<strong>三个硬 checkpoint</strong> 必须停下来，把决定权交到你手里 —— AI 可以推荐，但绝不替你静默选择。</p>
+<p>为什么非得停这三处？因为一篇文章的”编辑判断”只能由人来下：选什么类型、保留多少信息、用哪种版式气质、首屏调性对不对、最终交付什么格式。这三个暂停点，正是 beautiful-article 区别于普通生成器的关键。</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/raw-02-timeline.png" alt="从素材到文章的六步流程与三个硬 checkpoint"></p>
+<p>上图把整条流程压缩成一条时间线。前两个步骤属于”编辑准备”：Source 把任意输入统一成 Markdown，Plan 决定这篇文章该怎么写、为谁写、删什么。接下来进入”双确认” —— 先确认方案，再做首屏样张给你看效果；你点头之后，才进入完整生成。终审与第三次确认保证交付物符合预期。</p>
+<table>
+<thead>
+<tr>
+<th>Checkpoint</th>
+<th>确认内容</th>
+<th>为什么必须停在这里</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Checkpoint 1 · 方案确认</strong></td>
+<td>文章类型（含信息保留比例）、主题、版式宽度、配图策略、封面。逐项独立确认，AI 推荐但不替用户选。</td>
+<td>这些选择决定文章”怎么被读”：是 100% 归档长文，还是 50% 决策摘要？是书卷气的 press，还是海报感的 bayer？版式宽度和配图策略也必须在动笔前定调。</td>
+</tr>
+<tr>
+<td><strong>Checkpoint 2 · 首屏验收</strong></td>
+<td>首屏样张（Hero + Lead + 第一节 + 一个代表性视觉块）的观感，以及后续开发模式：单 Agent 顺序推进，或多 Agent 并行生成。</td>
+<td>首屏定下全篇的”视觉语气”。若此时不纠偏，后面每一节都会沿用错误基调。选择开发模式则是在质量与速度之间做权衡。</td>
+</tr>
+<tr>
+<td><strong>Checkpoint 3 · 交付确认</strong></td>
+<td>导出 HTML（可选 PDF）作为最终交付物。</td>
+<td>交付格式直接决定别人怎么使用：HTML 是自包含网页，可离线打开、随处分享；PDF 则适合打印与归档。需由人最终拍板。</td>
+</tr>
+</tbody></table>
+<p>注意，Checkpoint 1 的确认是逐项独立的，不是一张”总表让你打勾”。文章类型和保留比例、主题气质、版式宽度、配图策略、封面是否启用 —— 每一项都可以单独改。这种独立性防止了 AI 用”推荐方案”的名义悄悄替你做了打包决策。</p>
+<div class="note primary"><p><strong>流程背后的原则：把编辑判断权交给人。</strong></p>
+<p>beautiful-article 可以替你抽取、规划、写作、排版、修复，但它不能替你决定”这篇文章应该长什么样”。三个硬 checkpoint 不是流程装饰，而是把”你觉得对不对”这个环节真正嵌入到生成路径里。</p>
+</div>
+
+<p>说到底，这条流程的迷人之处在于：它把 AI 的生成能力当成一支高效的编辑团队，而把你当成主编。AI 做粗剪、做排版、做校对；你来拍板方向、气质和交付形态。</p>
+</br>
+
+<h2 id="03-·-10-种文章类型：按你要的「精修程度」来选"><a href="#03-·-10-种文章类型：按你要的「精修程度」来选" class="headerlink" title="03 · 10 种文章类型：按你要的「精修程度」来选"></a>03 · 10 种文章类型：按你要的「精修程度」来选</h2><p>上一节走完了六步流程。而流程里你要拍板的第一件事，既不是选颜色也不是排版式，而是先回答一个更根本的问题：<strong>这份素材，你想要多「精修」？</strong> beautiful-article 把这个问题设计成了一个很省心的选择 —— 选一种<strong>文章类型</strong>。因为每一种类型，都自带一个推荐的<strong>信息保留比例</strong>，选了类型，就等于顺手定下了精修程度。这个设计避免了最常见的扯皮：你脑中「一篇好文章」的标准，终于和 AI 脑中的标准对齐了。</p>
+<p>保留比例说的是：成品里保住了原素材多少信息量。它不是一把「删掉多少字」的裁纸刀，而是一位编辑的取舍尺度。<strong>100% 像一篇被精修过、但内容一句没少的长文</strong> —— 只重排、不删减；而 <strong>40% 更像一篇被编辑认真删改过的文章，而不是一份缩水的摘要</strong> —— 砍掉的是旁枝末节，留下的主干反而更立得住、更好读。比例越低，编辑的手就下得越重。</p>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>推荐保留比例</th>
+<th>适合场景</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>longform</code></td>
+<td>~100%</td>
+<td>完整长文 &#x2F; 归档</td>
+</tr>
+<tr>
+<td><code>tutorial</code> ← 本文</td>
+<td>~90%</td>
+<td>教学步骤 &#x2F; 上手指南</td>
+</tr>
+<tr>
+<td><code>full-report</code></td>
+<td>~80%</td>
+<td>研究报告 &#x2F; 正式分析</td>
+</tr>
+<tr>
+<td><code>explainer</code></td>
+<td>~80%</td>
+<td>概念 &#x2F; 系统解释</td>
+</tr>
+<tr>
+<td><code>dialogue</code></td>
+<td>~80%</td>
+<td>对话 &#x2F; 访谈 &#x2F; 播客</td>
+</tr>
+<tr>
+<td><code>review</code></td>
+<td>~70%</td>
+<td>PR &#x2F; 方案 &#x2F; 事故审阅</td>
+</tr>
+<tr>
+<td><code>essay</code></td>
+<td>~70%</td>
+<td>观点 &#x2F; 评论 &#x2F; 叙事</td>
+</tr>
+<tr>
+<td><code>briefing</code></td>
+<td>~50%</td>
+<td>决策摘要 &#x2F; 给忙人看</td>
+</tr>
+<tr>
+<td><code>visual-essay</code></td>
+<td>~40%</td>
+<td>图文为主 &#x2F; 传播展示</td>
+</tr>
+<tr>
+<td><code>interactive-explainer</code></td>
+<td>~25% 摘录 + 75% 重构</td>
+<td>围绕核心知识点重构</td>
+</tr>
+</tbody></table>
+<p>把这张表沿着比例铺开，就是一条<strong>信息保留光谱</strong>：左端是几乎原样保留的长文，一路向右，编辑的手越下越重，成品越来越短、越来越精。</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/raw-03-spectrum.png" alt="信息保留光谱：从 100% 完整长文到 25% 交互重构"></p>
+<p>大多数类型落在光谱的中段：<code>full-report</code>、<code>explainer</code>、<code>dialogue</code> 都保留约 80%，<code>review</code> 与 <code>essay</code> 约 70% —— 够完整地承载论证，又替读者滤掉了原文的啰嗦。再往右，<code>briefing</code> 只留约 50%，专给没空读全文的忙人看；<code>visual-essay</code> 约 40%，让位给图和版式，主打传播。</p>
+<p>光谱最右端的 <code>interactive-explainer</code> 是个特例，别被那个 25% 吓到：它<strong>不是把原文删掉了 75%<strong>，而是只摘录约 25% 的原文，再围绕核心知识点用 75% 的篇幅</strong>重新构建</strong>成一份可交互的解释。换句话说，别的类型是「保留多少」，它是「重写多少」—— 同一根尺子上，它衡量的其实是另一件事。</p>
+<p>回到你手里这篇：它选的是 <code>tutorial</code>、保留约 **90%**。所以你读到的，是一份把原始 README 里关于 beautiful-article 的每个要点都保住、只做了重排与精修的上手指南 —— 这，正是 90% 该有的样子。</p>
+</br>
+
+<h2 id="04-·-主题是一份契约，组件是一套语义"><a href="#04-·-主题是一份契约，组件是一套语义" class="headerlink" title="04 · 主题是一份契约，组件是一套语义"></a>04 · 主题是一份契约，组件是一套语义</h2><p>选完文章类型，接下来就是给文章选气质。beautiful-article 不让你在 CSS 里调颜色，而是提供<strong>11 套主题 authoring profile</strong>，每套都是一份给 Agent 看的 Markdown 契约 —— 它告诉 Agent 这篇文章该用什么语气、什么视觉节奏、Raw 该克制还是活泼、颜色该怎么用。你选的不是 CSS，而是一套”编辑共识”。</p>
+<h3 id="4-1-·-Reacticle-组件协议：prose-first"><a href="#4-1-·-Reacticle-组件协议：prose-first" class="headerlink" title="4.1 · Reacticle 组件协议：prose-first"></a>4.1 · Reacticle 组件协议：prose-first</h3><p>所有文章都基于底层组件库 <code>ConardLi/reacticle</code>。它定义了一套<strong>语义组件协议</strong>：你写的不是 CSS 类名，而是”这是一段引言”、”这是一条警告”、”这是一张表”。</p>
+<p>协议分三层。最底层是结构组件：<code>Article</code>、<code>Hero</code>、<code>Lead</code>、<code>Section</code>、<code>TOC</code>。中间层是语义组件：<code>Aside</code>（旁注&#x2F;判断&#x2F;警告）、<code>Quote</code>、<code>Table</code>、<code>CodeBlock</code>、<code>Formula</code>。最上面一层是 <code>Raw</code>：任意 HTML &#x2F; CSS &#x2F; JS &#x2F; React 的自由层，可以写交互、自定义布局、动效、SVG &#x2F; canvas 图解。</p>
+<div class="note primary"><p><strong>组件表达语义，不表达布局。</strong></p>
+<p>你不会说”蓝卡片 24px 边距”，而会说”这是一条 principle”。视觉长什么样由主题决定，你只管内容”是什么”。</p>
+</div>
+
+<p>Raw 是整个协议的”自由层”，但它不是乱写。两条铁律：第一，<strong>必须服务具体段落</strong> —— 每块 Raw 都要回答”它让这一段更好理解了，还是只是为了好看”。第二，<strong>只能用主题 token</strong> —— 颜色、字体、间距必须走 <code>--ra-*</code> 变量，这样 Raw 才能随主题切换而不破相。</p>
+<h3 id="4-2-·-11-套主题：每套都是一种编辑气质"><a href="#4-2-·-11-套主题：每套都是一种编辑气质" class="headerlink" title="4.2 · 11 套主题：每套都是一种编辑气质"></a>4.2 · 11 套主题：每套都是一种编辑气质</h3><p>下面是全部 11 套主题。它们不是 11 种 CSS，而是 11 种”读这篇文章的方式”。例如：同样是讲数据，<code>tufte</code> 让你凑近读证据，<code>press</code> 请你从一臂之外读一本书，<code>shannon</code> 像在暗纸上看工程仪表。你正在读的这篇，用的就是 <code>press</code>。</p>
+<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/raw-04-themes.png" alt="11 套主题名牌网格"></p>
+<table>
+<thead>
+<tr>
+<th>主题</th>
+<th>气质</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>tufte</code></td>
+<td>证据、数据、克制、低装饰</td>
+</tr>
+<tr>
+<td><code>press</code></td>
+<td>书卷、编辑、叙事、温暖（本文所用）</td>
+</tr>
+<tr>
+<td><code>bayer</code></td>
+<td>包豪斯几何、三原色、响亮理性</td>
+</tr>
+<tr>
+<td><code>bodoni</code></td>
+<td>报刊、Didone 高反差、戏剧黑白</td>
+</tr>
+<tr>
+<td><code>vignelli</code></td>
+<td>瑞士国际主义、sans、网格、系统化</td>
+</tr>
+<tr>
+<td><code>sottsass</code></td>
+<td>孟菲斯、80s 撞色、叛逆好玩</td>
+</tr>
+<tr>
+<td><code>freddie</code></td>
+<td>暖黄、友善、机灵有人味</td>
+</tr>
+<tr>
+<td><code>andy</code></td>
+<td>静谧、温柔、治愈、柔软奶油</td>
+</tr>
+<tr>
+<td><code>fuller</code></td>
+<td>蓝图、工程制图、冷峻技术</td>
+</tr>
+<tr>
+<td><code>knuth</code></td>
+<td>学术预印本、公式、严谨编号</td>
+</tr>
+<tr>
+<td><code>shannon</code></td>
+<td>暗色工程证据、仪表信号、克制</td>
+</tr>
+</tbody></table>
+<p>为什么把”主题”设计成给 Agent 看的 Markdown 契约，而不是普通 CSS 文件？因为这里的关键读者不是浏览器，而是<strong>写文章的 Agent</strong>。它要先读懂”这套主题喜欢什么、禁止什么”，才能在每一节里做出一致的选择 —— 从正文节奏到 Raw 视觉，都围着同一套气质展开。</p>
+</br>
+
+<h2 id="05-·-它的边界：一篇文章，不是一个应用"><a href="#05-·-它的边界：一篇文章，不是一个应用" class="headerlink" title="05 · 它的边界：一篇文章，不是一个应用"></a>05 · 它的边界：一篇文章，不是一个应用</h2><p>介绍一个工具时，光说它”能做什么”容易让人产生过高的期待。beautiful-article 的 Skill 文档用很大的篇幅划了一条清晰的边界线：它<strong>首先是一篇文章</strong>，最终主产物是<strong>一份单文件 HTML 文章</strong>，不是网页应用。</p>
+<p>这个边界不是能力限制，而是目标声明。它的核心使命是”让阅读更好” —— 更好的节奏、更好的信息密度、更好的视觉秩序、更好的分享体验。只要还在服务这个目标，它可以非常灵活：允许 HTML&#x2F;CSS&#x2F;JS&#x2F;React 的 Raw 自由层，允许交互控件、自定义排版、动效、SVG 图解。但这些自由层都必须服务于<strong>阅读、解释、论证、节奏或审美</strong>。</p>
+<div class="note warning"><p><strong>不做什么。</strong></p>
+<p>beautiful-article <strong>不生成</strong>：后台、表单、拖拽工作台、完整 dashboard、产品原型、通用 Web App。如果你要的是这类产物，Skill 会停下来澄清，不会硬接。</p>
+</div>
+
+<p>为什么这条线很重要？因为”网页”是一个比”文章”宽得多的概念。一旦你把 beautiful-article 当成通用网页生成器，很快就会发现它不会替你设计后台、不会连数据库、不会做 CRUD 表单 —— 那不是它存在的理由。但反过来看，正因为目标窄，它才能把”把一篇文章做到极致”这件事做得更深。</p>
+<p>另外一条隐性边界是<strong>信息密度由用户确认</strong>。默认它保留 100% 信息、生成长文式网页文章；但只要你选了 briefing 或 visual-essay，它就会按你确认的比例大刀阔斧地编辑。AI 不替你决定”该删多少”，而是在 Checkpoint 1 把这个问题交给你。</p>
+<p>所以，判断 beautiful-article 适不适合你的最简单标准就是：你要的是不是”一篇更好读、更好分享的文章”？如果是，它大概率是对的；如果你要的是”一个能交互的工具”或”一个后台系统”，那它从一开始就会告诉你：这不属于本 Skill 的边界。</p>
+</br>
+
+<h2 id="06-·-上手：一行装，喂素材就走"><a href="#06-·-上手：一行装，喂素材就走" class="headerlink" title="06 · 上手：一行装，喂素材就走"></a>06 · 上手：一行装，喂素材就走</h2><p>beautiful-article 属于 Garden Skills 集合，安装沿用整套 Skill 的通用方式。最快的一条路是社区标准的 <code>skills</code> CLI —— 它会自动识别你在用哪个 Agent（Claude Code &#x2F; Cursor &#x2F; Codex …），把 Skill 放到对的目录：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 一次装上整个 garden-skills 仓库</span></span><br><span class="line">npx skills add ConardLi/garden-skills</span><br><span class="line"></span><br><span class="line"><span class="comment"># 或只装 beautiful-article 一个</span></span><br><span class="line">npx skills add ConardLi/garden-skills -s beautiful-article</span><br><span class="line"></span><br><span class="line"><span class="comment"># 装到全局 (~/.skills) 而非当前项目</span></span><br><span class="line">npx skills add ConardLi/garden-skills -s beautiful-article --global</span><br></pre></td></tr></table></figure>
+
+<p>除了 CLI，还有另外四种安装方式：Claude Code 插件市场、GitHub Releases 里的钉版本 <code>.zip</code>（带 SHA-256 校验，适合 CI &#x2F; 内网）、<code>git clone</code> 后手动拷贝、以及 Git Submodule。选哪种取决于你要”永远拿最新”还是”钉死某个版本”。</p>
+<table>
+<thead>
+<tr>
+<th>Agent &#x2F; Runtime</th>
+<th>Skill 路径</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Claude Code</td>
+<td><code>.claude/skills/&lt;name&gt;/</code></td>
+</tr>
+<tr>
+<td>Claude.ai（网页端）</td>
+<td>Settings → Capabilities → Skills</td>
+</tr>
+<tr>
+<td>Cursor</td>
+<td><code>.agents/skills/&lt;name&gt;/</code></td>
+</tr>
+<tr>
+<td>Codex CLI</td>
+<td><code>.codex/skills/&lt;name&gt;/</code></td>
+</tr>
+<tr>
+<td>Gemini CLI</td>
+<td>extension manifest</td>
+</tr>
+<tr>
+<td>OpenCode</td>
+<td><code>.opencode/skills/&lt;name&gt;/</code></td>
+</tr>
+</tbody></table>
+<p>装好之后，用法非常朴素：<strong>把素材丢给它</strong>。可以是一个网页 URL、一份 PDF 或 DOCX、一段 Markdown、一大块粘贴的文字，甚至一张截图。它会先把素材抽成统一的 Markdown，然后带你走完前面讲过的那条流程 —— 规划、双确认、生成、终审，最后交付一份 <code>article.html</code>。</p>
+<div class="note info"><p><strong>它会主动激活。</strong></p>
+<p>Skill 靠 <code>SKILL.md</code> 里的 <code>description</code> 与 Agent 达成契约。当你说出「把这篇做成网页文章」「生成一篇可分享的 HTML 长文」这类意图时，Agent 会自动判断该不该激活它，你不必记住任何咒语。</p>
+</div>
+
+<p>整个过程里，你唯一需要”上心”的就是三个 checkpoint 的几次拍板；其余的抽取、排版、写作、校对，都交给它。这也正是它想给你的体验：<strong>把素材交出去，把主编的判断留下来。</strong></p>
+</br>
+
+<h2 id="把素材交出去，把主编的判断留下来"><a href="#把素材交出去，把主编的判断留下来" class="headerlink" title="把素材交出去，把主编的判断留下来"></a>把素材交出去，把主编的判断留下来</h2><p>回头看，beautiful-article 真正的巧思不在”能生成漂亮网页”，而在它<strong>把自己约束成一位编辑</strong>：先读懂素材，再按你选的类型和气质做取舍，最后交付一份自包含、可离线、可分享的文章。它把 AI 的生成力用在了粗剪、排版和校对上，把最重要的编辑判断权留给了你。</p>
+<p>想试试的话，装上它，然后随手拿一篇你收藏很久却一直没读完的长文、或一份塞满干货的 PDF 喂给它 —— 看它能不能把那份”想分享却拿不出手”的素材，变成一篇你愿意转发的文章。</p>
+<p>底层组件库在 <a href="https://github.com/ConardLi/reacticle">github.com&#x2F;ConardLi&#x2F;reacticle</a>，Skill 本体在 <a href="https://github.com/ConardLi/garden-skills">github.com&#x2F;ConardLi&#x2F;garden-skills</a>。</p>
+</br>
+
+<blockquote>
+<p>Made with <a href="https://github.com/ConardLi/garden-skills">beautiful-article</a> · press theme</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>技术</category>
+        <category>工具</category>
+      </categories>
+      <tags>
+        <tag>开源</tag>
+        <tag>AI</tag>
+        <tag>工具</tag>
+        <tag>Claude</tag>
+      </tags>
+  </entry>
 </search>
