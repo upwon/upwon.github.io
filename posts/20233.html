@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 7.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/myapple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/myfavicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/myfavicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/myapple-touch-icon-next.png" color="#222">
+  <meta name="google-site-verification" content="google2fc64c2b92961282.html">
+  <meta name="baidu-site-verification" content="s6BwSjIZYB">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<link rel="stylesheet" href="https://fonts.loli.net/css?family='LXGW+WenKai+LITE':300,300italic,400,400italic,700,700italic%7C'LXGW+WenKai+Screen':300,300italic,400,400italic,700,700italic%7C'LXGW+WenKai':300,300italic,400,400italic,700,700italic%7C'Noto+Serif+SC':300,300italic,400,400italic,700,700italic%7C'EB+Garamond':300,300italic,400,400italic,700,700italic%7C'PingFang+SC':300,300italic,400,400italic,700,700italic%7C'Microsoft+YaHei':300,300italic,400,400italic,700,700italic%7C'sans-serif':300,300italic,400,400italic,700,700italic%7CMa+Shan+Zheng:300,300italic,400,400italic,700,700italic%7CLXGW+WenKai+Screen:300,300italic,400,400italic,700,700italic%7CLXGW+WenKai:300,300italic,400,400italic,700,700italic%7CMenlo:300,300italic,400,400italic,700,700italic%7CMonaco:300,300italic,400,400italic,700,700italic%7CConsolas:300,300italic,400,400italic,700,700italic%7CSource+Code+Pro:300,300italic,400,400italic,700,700italic%7Csystem-ui:300,300italic,400,400italic,700,700italic%7Cmonospace:300,300italic,400,400italic,700,700italic%7Csans-serif:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha256-yIDrPSXHZdOZhAqiBP7CKzIwMQmRCJ8UeB8Jo17YC4o=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/themes/blue/pace-theme-minimal.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"www.lifeee.top","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.19.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":"mac","show_result":true},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="OpenSpec 最近很火。我今天拉了一下数据：GitHub 62,622 个 Star，npm 上过去 30 天下载 1,167,577 次。中文社区里介绍它的文章也开始多起来，说法高度一致——轻量、brownfield 友好、告别 AI 乱写代码。 但我把它的官方文档、CHANGELOG、GitHub Issue 列表和几篇实测博客全部翻了一遍之后，结论和这些文章不太一样：OpenSpec">
+<meta property="og:type" content="article">
+<meta property="og:title" content="OpenSpec 值得用吗？规范驱动开发不会让 AI 写出更好的代码">
+<meta property="og:url" content="https://www.lifeee.top/posts/20233.html">
+<meta property="og:site_name" content="热夏的博客">
+<meta property="og:description" content="OpenSpec 最近很火。我今天拉了一下数据：GitHub 62,622 个 Star，npm 上过去 30 天下载 1,167,577 次。中文社区里介绍它的文章也开始多起来，说法高度一致——轻量、brownfield 友好、告别 AI 乱写代码。 但我把它的官方文档、CHANGELOG、GitHub Issue 列表和几篇实测博客全部翻了一遍之后，结论和这些文章不太一样：OpenSpec">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/%E5%B7%B2%E7%94%9F%E6%88%90%E5%9B%BE%E5%83%8F%201%20(1).jpg">
+<meta property="article:published_time" content="2026-07-26T02:00:00.000Z">
+<meta property="article:modified_time" content="2026-07-27T03:34:47.255Z">
+<meta property="article:author" content="热夏">
+<meta property="article:tag" content="AI编程">
+<meta property="article:tag" content="工具">
+<meta property="article:tag" content="OpenSpec">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/%E5%B7%B2%E7%94%9F%E6%88%90%E5%9B%BE%E5%83%8F%201%20(1).jpg">
+
+
+<link rel="canonical" href="https://www.lifeee.top/posts/20233.html">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://www.lifeee.top/posts/20233.html","path":"posts/20233.html","title":"OpenSpec 值得用吗？规范驱动开发不会让 AI 写出更好的代码"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>OpenSpec 值得用吗？规范驱动开发不会让 AI 写出更好的代码 | 热夏的博客</title>
+  
+
+
+
+
+
+
+
+<link href="https://fonts.loli.net/css?family=Noto+Serif+SC:400,500,700&display=swap&subset=chinese-simplified" rel="stylesheet">
+<link rel="stylesheet" href="https://npm.elemecdn.com/lxgw-wenkai-screen-webfont@1.7.0/style.css" />
+
+<link href="https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&display=swap" rel="stylesheet">
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="热夏的博客" type="application/atom+xml">
+<style>.darkmode--activated{--body-bg-color:#282828;--content-bg-color:#333;--card-bg-color:#555;--text-color:#ccc;--blockquote-color:#bbb;--link-color:#ccc;--link-hover-color:#eee;--brand-color:#ddd;--brand-hover-color:#ddd;--table-row-odd-bg-color:#282828;--table-row-hover-bg-color:#363636;--menu-item-bg-color:#555;--btn-default-bg:#222;--btn-default-color:#ccc;--btn-default-border-color:#555;--btn-default-hover-bg:#666;--btn-default-hover-color:#ccc;--btn-default-hover-border-color:#666;--highlight-background:#282b2e;--highlight-foreground:#a9b7c6;--highlight-gutter-background:#34393d;--highlight-gutter-foreground:#9ca9b6}.darkmode--activated img{opacity:.75}.darkmode--activated img:hover{opacity:.9}.darkmode--activated code{color:#69dbdc;background:0 0}button.darkmode-toggle{z-index:9999}.darkmode-ignore,img{display:flex!important}.beian img{display:inline-block!important}</style></head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">热夏的博客</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-heart fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#OpenSpec-%E8%A7%A3%E5%86%B3%E7%9A%84%E6%98%AF%E5%AF%B9%E9%BD%90%E9%97%AE%E9%A2%98%EF%BC%8C%E4%B8%8D%E6%98%AF%E8%83%BD%E5%8A%9B%E9%97%AE%E9%A2%98"><span class="nav-number">1.</span> <span class="nav-text">OpenSpec 解决的是对齐问题，不是能力问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%89%E4%B8%AA%E5%85%B3%E4%BA%8E-OpenSpec-%E7%9A%84%E8%AF%AF%E8%A7%A3%EF%BC%8C%E5%AE%98%E6%96%B9%E6%96%87%E6%A1%A3%E9%87%8C%E9%83%BD%E5%86%99%E7%9D%80%EF%BC%8C%E4%BD%86%E6%B2%A1%E4%BA%BA%E8%AF%BB"><span class="nav-number">2.</span> <span class="nav-text">三个关于 OpenSpec 的误解，官方文档里都写着，但没人读</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AF%AF%E8%A7%A3%E4%B8%80%EF%BC%9Abrownfield-first-%E5%AE%83%E8%83%BD%E7%BB%99%E6%88%91%E7%9A%84%E8%80%81%E9%A1%B9%E7%9B%AE%E9%80%86%E5%90%91%E7%94%9F%E6%88%90%E8%A7%84%E6%A0%BC"><span class="nav-number">2.1.</span> <span class="nav-text">误解一：brownfield-first &#x3D; 它能给我的老项目逆向生成规格</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AF%AF%E8%A7%A3%E4%BA%8C%EF%BC%9A%E7%94%A8%E4%BA%86%E8%A7%84%E8%8C%83%E9%A9%B1%E5%8A%A8%E5%BC%80%E5%8F%91%EF%BC%8CAI-%E5%86%99%E5%87%BA%E6%9D%A5%E7%9A%84%E4%BB%A3%E7%A0%81%E8%B4%A8%E9%87%8F%E4%BC%9A%E6%9B%B4%E5%A5%BD"><span class="nav-number">2.2.</span> <span class="nav-text">误解二：用了规范驱动开发，AI 写出来的代码质量会更好</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%AF%AF%E8%A7%A3%E4%B8%89%EF%BC%9A%E8%BD%BB%E9%87%8F%E5%B0%B1%E6%84%8F%E5%91%B3%E7%9D%80%E6%B2%A1%E6%9C%89%E6%88%90%E6%9C%AC"><span class="nav-number">2.3.</span> <span class="nav-text">误解三：轻量就意味着没有成本</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#OpenSpec-vs-Spec-Kit%EF%BC%9A%E8%BD%BB-68-%E7%9A%84%E4%BB%A3%E4%BB%B7%E6%98%AF%E4%BB%80%E4%B9%88"><span class="nav-number">3.</span> <span class="nav-text">OpenSpec vs Spec Kit：轻 68% 的代价是什么</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%97%B6%E5%80%99%E8%AF%A5%E7%94%A8-OpenSpec%EF%BC%8C%E4%BB%80%E4%B9%88%E6%97%B6%E5%80%99%E6%98%AF%E7%BA%AF%E4%BA%8F%E6%8D%9F"><span class="nav-number">4.</span> <span class="nav-text">什么时候该用 OpenSpec，什么时候是纯亏损</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%8A%E6%89%8B-OpenSpec%EF%BC%9A%E5%91%BD%E4%BB%A4%EF%BC%8C%E4%BB%A5%E5%8F%8A-6-%E4%B8%AA%E4%BC%9A%E8%AE%A9%E4%BD%A0%E9%9D%99%E9%BB%98%E5%A4%B1%E8%B4%A5%E7%9A%84%E5%9D%91"><span class="nav-number">5.</span> <span class="nav-text">上手 OpenSpec：命令，以及 6 个会让你静默失败的坑</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%88%91%E7%9A%84%E5%BB%BA%E8%AE%AE"><span class="nav-number">6.</span> <span class="nav-text">我的建议</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="热夏"
+      src="/images/head.jpg">
+  <p class="site-author-name" itemprop="name">热夏</p>
+  <div class="site-description" itemprop="description">空山新雨后，天气晚来秋。</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">119</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">13</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">55</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/upwon" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;upwon" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:w1244753906@gmail.com" title="E-Mail → mailto:w1244753906@gmail.com" rel="noopener me" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.lifeee.top//atom.xml" title="RSS → https:&#x2F;&#x2F;www.lifeee.top&#x2F;&#x2F;atom.xml" rel="noopener me"><i class="fa fa-rss fa-fw"></i>RSS</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+        <div class="pjax">
+        </div>
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://www.lifeee.top/posts/20233.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/head.jpg">
+      <meta itemprop="name" content="热夏">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="热夏的博客">
+      <meta itemprop="description" content="空山新雨后，天气晚来秋。">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="OpenSpec 值得用吗？规范驱动开发不会让 AI 写出更好的代码 | 热夏的博客">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          OpenSpec 值得用吗？规范驱动开发不会让 AI 写出更好的代码
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2026-07-26 10:00:00" itemprop="dateCreated datePublished" datetime="2026-07-26T10:00:00+08:00">2026-07-26</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2026-07-27 11:34:47" itemprop="dateModified" datetime="2026-07-27T11:34:47+08:00">2026-07-27</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF/" itemprop="url" rel="index"><span itemprop="name">技术</span></a>
+        </span>
+          ，
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%8A%80%E6%9C%AF/%E5%B7%A5%E5%85%B7/" itemprop="url" rel="index"><span itemprop="name">工具</span></a>
+        </span>
+    </span>
+
+  
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+    <span class="post-meta-break"></span>
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>7.8k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>7 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/img/%E5%B7%B2%E7%94%9F%E6%88%90%E5%9B%BE%E5%83%8F%201%20(1).jpg" alt="OpenSpec 规范驱动开发框架实测：蓝图约束建造过程"></p>
+<p>OpenSpec 最近很火。我今天拉了一下数据：GitHub 62,622 个 Star，npm 上过去 30 天下载 1,167,577 次。中文社区里介绍它的文章也开始多起来，说法高度一致——轻量、brownfield 友好、告别 AI 乱写代码。</p>
+<p>但我把它的官方文档、CHANGELOG、GitHub Issue 列表和几篇实测博客全部翻了一遍之后，结论和这些文章不太一样：<strong>OpenSpec 不会让 AI 写出更好的代码，它只能让 AI 少写你没要求的东西。</strong> 这两件事听起来像一回事，实际上决定了这套规范驱动开发流程对你是净收益还是纯亏损。</p>
+<span id="more"></span>
+
+<p>我在<a href="/posts/16168.html">《Spec编程你了解吗? 还在用Vibe Coding吗?》</a>里聊过 SDD 这个范式本身，那篇是概念层面的。这篇不一样，这篇要落到一个具体工具上，并且我会花很大篇幅讲它<strong>不行</strong>的地方——因为决定你要不要引入一个流程框架的，从来不是它的优点清单。</p>
+<h2 id="OpenSpec-解决的是对齐问题，不是能力问题"><a href="#OpenSpec-解决的是对齐问题，不是能力问题" class="headerlink" title="OpenSpec 解决的是对齐问题，不是能力问题"></a>OpenSpec 解决的是对齐问题，不是能力问题</h2><p>想清楚这个区分，你就能自己判断该不该用它了，剩下的都是细节。</p>
+<p>AI 写代码写砸，其实是两类完全不同的失败。第一类是<strong>对齐失败</strong>：你要的是 A，它理解成了 A’，然后照着 A’ 一路写下去，你在第三轮对话才发现方向早就偏了。第二类是<strong>能力失败</strong>：它准确知道你要 A，但它就是做不好 A——架构品味不够、性能没考虑、UI 审美平庸。这两类失败看起来都是”AI 乱写代码”，治法完全不同。</p>
+<p>规范层只能治第一类。OpenSpec 的做法是把需求写成带场景的 Markdown，一条 requirement 配至少一个 GIVEN-WHEN-THEN 的 scenario，本质上是<strong>把验收标准提前固化成一份可以 review 的文本</strong>。你在看 250 行提案的时候纠正方向，成本远低于在看 2000 行 diff 的时候纠正方向。这是它真实的、可靠的价值。</p>
+<p>但它对第二类失败几乎无能为力。你可以在 spec 里写”按钮必须有 hover 态、必须支持键盘导航”，这些是可验收的；你写不出”这个配色要好看”——写了模型也不会因此突然长出审美。这一点后面我会用一个具体的失败实验来证明。</p>
+<p>还有一层价值容易被忽略，我认为反而是它最值钱的部分：**<code>openspec/specs/</code> 这个目录是给未来的 AI 会话读的项目记忆。** 一次变更 archive 之后，delta spec 会被合并进主规格库，跟着 git 一起版本管理。半年后你换了个新会话、甚至换了个 AI 工具来改同一块代码，它读到的不是你早就关掉的聊天记录，而是一份持续更新的、描述系统当前应该是什么样的文档。我之前写过<a href="/posts/18446.html">《你的 AI 助手得了健忘症？这个工具让它拥有长期记忆》</a>，讲的是用专门的记忆系统解决跨会话失忆；OpenSpec 走的是另一条路——不额外搭系统，就让规格文件本身当记忆，代价是这份记忆需要你在每次变更时付出维护成本。</p>
+<p>这也意味着一个判断：<strong>如果你这个项目根本不打算长期维护，OpenSpec 的一半价值直接归零。</strong> 写完就扔的脚本、验证想法的原型、周末的玩具项目，规格沉淀给谁看？</p>
+<h2 id="三个关于-OpenSpec-的误解，官方文档里都写着，但没人读"><a href="#三个关于-OpenSpec-的误解，官方文档里都写着，但没人读" class="headerlink" title="三个关于 OpenSpec 的误解，官方文档里都写着，但没人读"></a>三个关于 OpenSpec 的误解，官方文档里都写着，但没人读</h2><h3 id="误解一：brownfield-first-它能给我的老项目逆向生成规格"><a href="#误解一：brownfield-first-它能给我的老项目逆向生成规格" class="headerlink" title="误解一：brownfield-first &#x3D; 它能给我的老项目逆向生成规格"></a>误解一：brownfield-first &#x3D; 它能给我的老项目逆向生成规格</h3><p>这是我见过传播最广、也最容易让人失望的误解。很多介绍文章写”OpenSpec 专为已有代码库设计，不需要重写项目”，读者顺理成章地理解成：跑一下 init，它就能扫描我的代码库，把现有功能整理成规格文档。</p>
+<p><strong>它不做这件事，而且是明确拒绝做。</strong> 官方的 <a target="_blank" rel="noopener" href="https://github.com/Fission-AI/OpenSpec/blob/main/docs/existing-projects.md">existing-projects.md</a> 里原话是：”You do not document your whole codebase to start. You write specs only for what you’re about to change.”（一开始不要给整个代码库写文档，只给你即将改动的部分写规格。）文档里甚至专门有一条劝告：Resist the urge to back-fill everything——别想着把老代码统统补上规格，给你根本不打算改的代码写文档，”看着很有产出，其实多半没用”。</p>
+<p>所以你 <code>openspec init</code> 之后看到 <code>openspec/specs/</code> 是空的，那不是 bug，那是设计。这个目录从接近全空开始，靠你一次次真实变更慢慢累积。想要”读代码反向生成规格”这个功能的人不少，GitHub 上 <a target="_blank" rel="noopener" href="https://github.com/Fission-AI/OpenSpec/issues/724">#724 这个 issue</a> 就是专门提这个的，攒了十几个赞，至今没实现。</p>
+<p>那 “brownfield-first” 到底什么意思？意思是 <strong>delta spec</strong>：每次变更只描述增量，用 <code>## ADDED Requirements</code>、<code>## MODIFIED Requirements</code>、<code>## REMOVED Requirements</code>、<code>## RENAMED Requirements</code> 四种标记说明这次变了什么，archive 时按语义合并进主规格。它的对手是那种”必须先有完整系统规格才能开工”的重型流程——OpenSpec 不要求你先有完整规格，这才是它对老项目友好的地方。它友好的是<strong>流程门槛</strong>，不是<strong>文档存量</strong>。</p>
+<h3 id="误解二：用了规范驱动开发，AI-写出来的代码质量会更好"><a href="#误解二：用了规范驱动开发，AI-写出来的代码质量会更好" class="headerlink" title="误解二：用了规范驱动开发，AI 写出来的代码质量会更好"></a>误解二：用了规范驱动开发，AI 写出来的代码质量会更好</h3><p>这个误解我要用一个真实的失败案例来拆，因为光讲道理没有说服力。</p>
+<p>DEV Community 上有位开发者写了一篇<a target="_blank" rel="noopener" href="https://dev.to/incomplete_developer/openspec-spec-driven-development-failed-my-experiment-instructionsmd-was-simpler-and-faster-3a5d">《OpenSpec (Spec-Driven Development) Failed My Experiment》</a>，做的是一个 .NET Razor Pages 二手车信息站，后端已经有了，任务是把前端从”基础、没有生气”的样子改成”看起来高级”。他严格走了完整流程：生成提案 → 审核规格 → 批准任务 → 执行。<strong>花了约 2 小时，烧了可观的 token，最后产出的界面”和原来几乎一模一样”。</strong> 他怀疑是模型问题，换成 GitHub Copilot + Claude Haiku 又跑了一遍，结果同样令人失望。最后他把整个框架扔掉，写了一个普通的 <code>Instructions.md</code> 直接告诉 AI 要什么——更快、更便宜，效果反而更好。他还顺手用同样的方式修了个图片上传的 bug，几乎瞬间就解决了。</p>
+<p>很多人看到这个案例的反应是”这人不会用”。我的看法不一样：<strong>这个实验精准地暴露了规范层的边界。</strong> “把 UI 改得高级一点”这个任务的失败模式是能力失败，不是对齐失败——AI 完全清楚你要什么（它甚至能把”高级感”拆解成规格条款：留白、层次、微交互），它只是做不出来。在这种任务上，你写多少页 spec 都是在给一个没有审美的模型下达更详细的没有审美的指令，中间还多插了提案生成、规格审核、任务规划三道消耗 token 和时间的工序。</p>
+<p>反过来看什么任务适合：如果需求是”给结算流程加优惠券，不能影响现有退款逻辑和已有的满减规则”，那这就是纯对齐问题。这种需求口头说给 AI，它有八成概率会顺手把退款那块也”优化”一下；写成带场景的规格，你在动代码之前就能看到它打算碰哪些地方，这时候规范层是实打实的净收益。</p>
+<p>所以判断标准很简单：<strong>先问自己这个任务砸掉的话，是砸在”没听懂”还是”做不好”上。</strong> 前者用 OpenSpec，后者别浪费那 2 小时。</p>
+<h3 id="误解三：轻量就意味着没有成本"><a href="#误解三：轻量就意味着没有成本" class="headerlink" title="误解三：轻量就意味着没有成本"></a>误解三：轻量就意味着没有成本</h3><p>“轻量”是 OpenSpec 最核心的宣传词，我认为它对，但这个”轻”是有明确参照系的——<strong>它是相对 spec-kit 轻，不是相对”直接跟 AI 说”轻。</strong></p>
+<p>最硬的证据来自官方 README 自己的 Usage Notes。那里写着两句话：一句是 “OpenSpec works best with high-reasoning models. We recommend Codex 5.5 and Opus 4.7”，另一句是 “OpenSpec benefits from a clean context window. Clear your context before starting implementation”。说人话就是：<strong>这套流程得配最贵的模型才跑得动，而且开工前你得先把对话清干净。</strong> 真要是零成本的工具，用不着叮嘱你这些。</p>
+<p>成本具体花在哪？规格文件本身要占上下文，几千 token 的 proposal + specs + design + tasks 在实现阶段是要被读进去的；agent 的调用轮次也变多了，探索一轮、提案一轮、实现一轮、验证一轮。中文社区的实践反馈里，token 消耗在长会话中膨胀是被反复提到的问题，通行解法是开新会话再用 <code>/opsx:continue &lt;change-name&gt;</code> 接上——<code>tasks.md</code> 里的勾选状态就是断点续传的凭据。这个设计确实巧妙，但它存在本身就说明了问题的真实性。</p>
+<p>这里有个反直觉的推论值得单独说：我在<a href="/posts/3334.html">《CCX + CC Switch：让Codex接入DeepSeek、Kimi Coding的黄金组合》</a>里介绍过怎么把便宜的第三方模型接进主流 AI 编程工具，很多人的思路是”用便宜模型跑更严谨的流程来弥补能力差距”。<strong>在 OpenSpec 上这个组合恰恰是最差解。</strong> 弱模型写出来的规格本身就模糊、场景覆盖不全，你还得花时间审这份低质量规格，审完再让同一个弱模型照着实现——省下的模型钱，加倍地花在你自己的时间上了。规范驱动开发放大的是模型的推理能力，而不是替代它。</p>
+<h2 id="OpenSpec-vs-Spec-Kit：轻-68-的代价是什么"><a href="#OpenSpec-vs-Spec-Kit：轻-68-的代价是什么" class="headerlink" title="OpenSpec vs Spec Kit：轻 68% 的代价是什么"></a>OpenSpec vs Spec Kit：轻 68% 的代价是什么</h2><p>既然”轻”是相对 spec-kit 而言的，那就得把这个对比说清楚。先摆两个容易被忽略的事实。</p>
+<p>第一，OpenSpec 不是这个领域最大的项目。GitHub 上 <a target="_blank" rel="noopener" href="https://github.com/github/spec-kit">spec-kit</a> 今天是 123,903 个 Star，正好是 OpenSpec 的两倍。国内不少文章把 OpenSpec 说成”最主流的 SDD 框架”，这个说法不准确——它是<strong>最轻的那个</strong>，不是最大的那个。第二，两者的差距是可量化的。Hashrocket 做过一次同任务对比（从导航栏移除一个 Team 标签页），<a target="_blank" rel="noopener" href="https://hashrocket.com/blog/posts/openspec-vs-spec-kit-choosing-the-right-ai-driven-development-workflow-for-your-team">实测结果</a>是：同样走到规划阶段，OpenSpec 产出约 250 行、分布在 3 个文件里，spec-kit 产出约 800 行。安装阶段差距也类似，OpenSpec 是 npm 装完加 3 个 CLI 命令，spec-kit 要 Python 包管理器、8 个命令，还要先写一份 constitution（项目宪法）。</p>
+<p>那少掉的这 550 行是什么？是 spec-kit 的显式角色分离和阶段门禁。它强制你在进入下一阶段前完成上一阶段的产物，文档更啰嗦，但<strong>啰嗦本身在特定场景是功能</strong>：团队里有初级工程师、需要留下可追溯的决策记录、需要多人分工评审不同阶段——这些场景下，spec-kit 的”仪式感”就是它的价值。Hashrocket 那篇的结论也是这么给的：小团队的资深开发者选 OpenSpec（快、简洁），需要角色分离和详尽文档的团队选 spec-kit。</p>
+<p>我自己的选择框架更直接一点：</p>
+<table>
+<thead>
+<tr>
+<th>你的情况</th>
+<th>选择</th>
+<th>理由</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>个人开发者 &#x2F; 2-3 人小团队</td>
+<td>OpenSpec</td>
+<td>250 行的提案你会认真读完，800 行的你会直接划到底点同意</td>
+</tr>
+<tr>
+<td>老项目上增量加功能</td>
+<td>OpenSpec</td>
+<td>delta spec 天然匹配”只改一小块”的工作方式</td>
+</tr>
+<tr>
+<td>全新项目、要先定架构原则</td>
+<td>spec-kit</td>
+<td>constitution 这一层 OpenSpec 没有对应物</td>
+</tr>
+<tr>
+<td>团队有初级工程师需要流程约束</td>
+<td>spec-kit</td>
+<td>阶段门禁是给人用的护栏，不是给 AI 用的</td>
+</tr>
+<tr>
+<td>要跨多个仓库统一规格</td>
+<td>都不成熟</td>
+<td>OpenSpec 的 Stores 还是 very early beta，慎入</td>
+</tr>
+<tr>
+<td>只是想让 AI 别乱改文件</td>
+<td>都不用</td>
+<td>一个 <code>AGENTS.md</code> 加几条约束就够了</td>
+</tr>
+</tbody></table>
+<p>最后一行是认真的。如果你的痛点只是”AI 老是顺手改我没让它改的文件”，那不需要引入任何框架，写清楚项目约定就能解决八成问题。<strong>框架要解决的是跨会话、跨人、跨时间的对齐，不是单次对话的约束。</strong></p>
+<h2 id="什么时候该用-OpenSpec，什么时候是纯亏损"><a href="#什么时候该用-OpenSpec，什么时候是纯亏损" class="headerlink" title="什么时候该用 OpenSpec，什么时候是纯亏损"></a>什么时候该用 OpenSpec，什么时候是纯亏损</h2><p>把前面的分析收敛成一张可以直接用的表。这是我认为这篇文章里最值得截图保存的部分：</p>
+<table>
+<thead>
+<tr>
+<th>场景</th>
+<th>用不用</th>
+<th>关键判断</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>老项目加功能，怕碰坏现有逻辑</td>
+<td>✅ 用</td>
+<td>典型对齐问题，规格能提前暴露”它打算碰哪些文件”</td>
+</tr>
+<tr>
+<td>需求要跨好几天、多个会话完成</td>
+<td>✅ 用</td>
+<td><code>tasks.md</code> 的勾选状态就是断点，比翻聊天记录可靠</td>
+</tr>
+<tr>
+<td>团队 review 时想先看意图再看 diff</td>
+<td>✅ 用</td>
+<td>审 250 行提案 vs 审 2000 行 diff</td>
+</tr>
+<tr>
+<td>需求本身还很模糊，你自己没想清楚</td>
+<td>✅ 用 <code>/opsx:explore</code></td>
+<td>这个命令不产生任何文件，纯思考搭子，零负担</td>
+</tr>
+<tr>
+<td>改一个文件就能修的 bug</td>
+<td>❌ 别用</td>
+<td>走完流程的时间够你修三遍</td>
+</tr>
+<tr>
+<td>UI 美化、”做得更高级一点”类任务</td>
+<td>❌ 别用</td>
+<td>能力失败，规格无解，前面那个 2 小时的实验就是证据</td>
+</tr>
+<tr>
+<td>一次性脚本、验证想法的原型</td>
+<td>❌ 别用</td>
+<td>规格沉淀没有下游消费者</td>
+</tr>
+<tr>
+<td>预算有限只能用弱模型</td>
+<td>❌ 别用</td>
+<td>官方推荐 Opus 4.7 &#x2F; Codex 5.5，弱模型跑这套是负优化</td>
+</tr>
+<tr>
+<td>需求每天都在变的探索期项目</td>
+<td>⚠️ 慎用</td>
+<td>规格维护成本会超过收益，等稳定了再引入</td>
+</tr>
+</tbody></table>
+<p>有一个反例我想特别提醒。有人的用法是”小改动嫌麻烦就跳过流程，大改动才走 OpenSpec”，这听起来很务实，但恰恰漏掉了风险最高的一档：<strong>范围不清晰的小需求，才是 AI 幻觉最集中的地方。</strong> “顺手把这个字段加上”这种需求，你觉得是 5 分钟的事，AI 觉得是重构三个模块的事。真正该跳过的是范围明确的小改动（改文案、调参数），而不是所有小改动。</p>
+<h2 id="上手-OpenSpec：命令，以及-6-个会让你静默失败的坑"><a href="#上手-OpenSpec：命令，以及-6-个会让你静默失败的坑" class="headerlink" title="上手 OpenSpec：命令，以及 6 个会让你静默失败的坑"></a>上手 OpenSpec：命令，以及 6 个会让你静默失败的坑</h2><p>安装和初始化本身没什么可说的，Node 20.19.0 以上：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npm install -g @fission-ai/openspec@latest</span><br><span class="line"><span class="built_in">cd</span> your-project</span><br><span class="line">openspec init          <span class="comment"># 交互式选择你用的 AI 工具</span></span><br></pre></td></tr></table></figure>
+
+<p>然后在<strong>你的 AI 助手对话框里</strong>（不是终端）走流程：</p>
+<figure class="highlight text"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">/opsx:explore                    # 想不清楚就先聊，不产生文件</span><br><span class="line">/opsx:propose add-coupon-support # 生成 proposal / specs / design / tasks</span><br><span class="line">/opsx:apply                      # 照着 tasks.md 实现</span><br><span class="line">/opsx:archive                    # 归档，delta spec 合并进主规格库</span><br></pre></td></tr></table></figure>
+
+<p>默认 profile 只有 <code>explore</code> 和 <code>propose</code> 两个入口，其余动作由 AI 根据当前产物状态自己判断。想要 <code>/opsx:new</code>、<code>/opsx:continue</code>、<code>/opsx:ff</code>、<code>/opsx:verify</code> 这些细粒度命令，得用 <code>openspec config profile</code> 切到扩展 profile，再 <code>openspec update</code> 生效。</p>
+<div class="note info"><p><strong>新手最容易卡住的地方是命令打在哪。</strong> 官方为此专门开了一整页 <a target="_blank" rel="noopener" href="https://github.com/Fission-AI/OpenSpec/blob/main/docs/how-commands-work.md">How Commands Work</a>，开篇原话是：”If you ever type <code>/opsx:propose</code> into your terminal and nothing happens, this page is why.”</p>
+<ul>
+<li><code>openspec init</code>、<code>openspec list</code>、<code>openspec status</code> 是 <strong>CLI</strong>，打在终端里</li>
+<li><code>/opsx:*</code> 是 <strong>slash 命令</strong>，打在 AI 助手的对话框里</li>
+<li>写法还因工具而异：Claude Code 用冒号式 <code>/opsx:propose</code>，Cursor &#x2F; Windsurf &#x2F; GitHub Copilot 用短横式 <code>/opsx-propose</code>，CodeArts、Kimi CLI 走 skill 式 <code>/openspec-propose</code>。拿不准就在对话框里打个 <code>/</code>，看补全提示给的是哪种。</li>
+</ul>
+</div>
+
+<p>下面这 6 个坑是我从官方 CHANGELOG、troubleshooting 文档和 issue 里挖出来的，共同点是<strong>它们不会给你明显的报错</strong>，你以为一切正常，实际上东西没生效：</p>
+<div class="note warning"><p><strong>坑 1：不规范的三级标题会被静默跳过。</strong> 在 <code>## ADDED Requirements</code> 区块里，只有 <code>### Requirement:</code> 这个格式的标题才会被解析。你要是随手写了个 <code>### Documentation Requirements</code> 当分隔符，解析器直接忽略它管辖的内容。1.6.0 才加了 INFO 提示，而且 CHANGELOG 里明确写了这条提示<strong>在 <code>--strict</code> 下也不会让校验失败</strong>。</p>
+<p><strong>坑 2：SHALL &#x2F; MUST 必须写在正文行，不能只写在标题里。</strong> <code>### Requirement: 系统必须支持优惠券</code> 这样写，正文里没有 SHALL&#x2F;MUST 关键词，会被判定为不合规。正确写法是标题写名字，正文写 “The system SHALL …”。这是 issue #361 拖了很久才修的问题。</p>
+<p><strong>坑 3：Scenario 必须是四级标题 <code>####</code>。</strong> 写成 <code>###</code> 或者 bullet list，不会解析成场景，而 “requirement 没有场景” 是最常见的校验失败原因之一。</p>
+<p><strong>坑 4：配置文件必须叫 <code>openspec/config.yaml</code>，不能是 <code>.yml</code>。</strong> 官方 troubleshooting 把这个列为配置不生效的头号原因。</p>
+<p><strong>坑 5：1.6.0 之前，<code>openspec archive</code> 校验失败也返回 exit code 0。</strong> 如果你把它写进了 CI，脚本会以为归档成功了，实际上什么都没改。这个 bug 在 1.6.0（PR #1311）才修掉——所以如果要在 CI 里用，先确认版本。</p>
+<p><strong>坑 6：Codex 用户没有 <code>/opsx:*</code> 命令文件。</strong> Codex、Kimi CLI、CodeArts 等几个工具走的是 skill 机制，去 <code>.codex/skills/openspec-*</code> 下面找，别以为是 init 失败了。</p>
+</div>
+
+<p>还有一条不算坑但值得知道的：产物之间有依赖顺序，<strong>proposal 先行，它解锁 specs 和 design，两者齐备才解锁 tasks</strong>。看到 “No artifacts ready” 的时候，跑 <code>openspec status --change &lt;name&gt;</code> 就能看到卡在哪一环。</p>
+<h2 id="我的建议"><a href="#我的建议" class="headerlink" title="我的建议"></a>我的建议</h2><p>写到这里，我的判断应该已经很清楚了，收个尾。</p>
+<p><strong>OpenSpec 值得试，但要带着正确的预期去试。</strong> 它是一个把”你和 AI 对需求的共识”从聊天记录里搬到 git 里的工具，仅此而已。它不会提升 AI 的编码能力，不会自动整理你的老项目，也不是免费的——它要你付出最贵的模型、额外的 token 和审阅规格的时间。这些成本换来的是：跨会话不失忆、改老代码时能提前看清会波及哪些地方、团队 review 时看意图而不是看 diff。这笔交易在什么时候划算，上面那张决策表已经写清楚了。</p>
+<p>如果你要开始，我建议这么走：<strong>挑一个你本来这周就要做的、范围中等的真实需求</strong>——不要挑玩具任务，也不要挑重构级的大工程——用 <code>/opsx:explore</code> 起头，走完一个完整的 propose → apply → archive 循环，然后回头看 <code>openspec/specs/</code> 里留下了什么。如果那份文件让你觉得”三个月后我会庆幸它存在”，就继续用；如果你觉得那就是一堆没人会读的 Markdown，那就说明你的项目还不到需要它的阶段，扔掉不可惜。</p>
+<p>最后提醒一句：<strong>你真正该珍惜的资产是 <code>openspec/</code> 目录里那堆纯文本，不是 <code>/opsx:</code> 这套命令。</strong> 这个项目 10 个月出了 41 个版本，中间做过一次把全部命令删掉重来的大重构，跨仓库共享规格的 Stores 功能至今还标着 very early beta——我在<a href="/posts/10642.html">《AI墓地：1592个死掉的AI工具》</a>里统计过 AI 工具的存活率，这种迭代速度的项目该按”还在剧烈演化的实验品”对待，而不是按”基础设施”。所以别把团队的强制流程绑死在它的命令上；而带场景的 Markdown 规格，换任何 AI 工具都能直接读。绑定前者是风险，积累后者是资产。</p>
+<hr>
+<p><strong>参考资料</strong></p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/Fission-AI/OpenSpec">OpenSpec 官方仓库</a>｜<a target="_blank" rel="noopener" href="https://github.com/Fission-AI/OpenSpec/blob/main/CHANGELOG.md">CHANGELOG</a>｜<a target="_blank" rel="noopener" href="https://github.com/Fission-AI/OpenSpec/blob/main/docs/existing-projects.md">老项目接入指南</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/github/spec-kit">GitHub spec-kit</a></li>
+<li><a target="_blank" rel="noopener" href="https://hashrocket.com/blog/posts/openspec-vs-spec-kit-choosing-the-right-ai-driven-development-workflow-for-your-team">OpenSpec vs Spec Kit 同任务实测 - Hashrocket</a></li>
+<li><a target="_blank" rel="noopener" href="https://dev.to/incomplete_developer/openspec-spec-driven-development-failed-my-experiment-instructionsmd-was-simpler-and-faster-3a5d">OpenSpec 失败实验：Instructions.md 更简单也更快 - DEV Community</a></li>
+</ul>
+<p><em>文中 Star 数、下载量、版本号数据采集于 2026 年 7 月 26 日。</em></p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div>请我一杯咖啡吧！</div>
+  <button>
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/wechatpay.png" alt="热夏 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="/images/alipay.jpg" alt="热夏 支付宝">
+        <span>支付宝</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>热夏
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://www.lifeee.top/posts/20233.html" title="OpenSpec 值得用吗？规范驱动开发不会让 AI 写出更好的代码">https://www.lifeee.top/posts/20233.html</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="followme">
+  <span>欢迎关注我的其它发布渠道</span>
+
+  <div class="social-list">
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="/atom.xml">
+            <span class="icon">
+              <i class="fa fa-rss"></i>
+            </span>
+
+            <span class="label">RSS</span>
+          </a>
+      </div>
+  </div>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/AI%E7%BC%96%E7%A8%8B/" rel="tag"><i class="fa fa-tag"></i> AI编程</a>
+              <a href="/tags/%E5%B7%A5%E5%85%B7/" rel="tag"><i class="fa fa-tag"></i> 工具</a>
+              <a href="/tags/OpenSpec/" rel="tag"><i class="fa fa-tag"></i> OpenSpec</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/posts/5121.html" rel="prev" title="把任意素材，编辑成一篇值得分享的文章">
+                  <i class="fa fa-angle-left"></i> 把任意素材，编辑成一篇值得分享的文章
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments gitalk-container"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 2018 – 
+    <span itemprop="copyrightYear">2026</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">热夏</span>
+  </div>
+<div class="wordcount">
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-chart-line"></i>
+    </span>
+      <span>站点总字数：</span>
+    <span title="站点总字数">777k</span>
+  </span>
+  <span class="post-meta-item">
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+      <span>站点阅读时长 &asymp;</span>
+    <span title="站点阅读时长">11:46</span>
+  </span>
+</div>
+<div class="busuanzi-count">
+    <span class="post-meta-item" id="busuanzi_container_site_uv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+    </div>
+  </footer>
+
+  
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/next-theme-pjax/0.6.0/pjax.min.js" integrity="sha256-vxLn1tSKWD4dqbMRyv940UYw4sXgMtYcK6reefzZrao=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lozad.js/1.16.0/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script><script src="/js/pjax.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+  <script src="/js/third-party/pace.js"></script>
+
+
+  
+  <script data-pjax async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">false</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"none","mhchem":false,"js":{"url":"//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML"}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
+
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"upwon","repo":"upwon.github.io","client_id":"7e047047ecee7317452b","client_secret":"c60fbdf0eb19e7264e33ab780319e4d420a58fee","admin_user":"upwon","distraction_free_mode":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","language":null,"js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"438479e88e9a0f6be18ce99d409eda78"}</script>
+<script src="/js/third-party/comments/gitalk.js"></script>
+
+</body>
+</html>
