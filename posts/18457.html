@@ -30,21 +30,21 @@
 <meta property="og:site_name" content="热夏的博客">
 <meta property="og:description" content="本文主要对 5G NR 中的同步信号块 SSB 的结构以及时频位置进行了描述。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200718163554.jpg">
-<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200718094757.png">
-<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200718095429.png">
-<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200718104159.png">
-<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200722094041.png">
-<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200718114146.jpg">
-<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200718103811.png">
-<meta property="og:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200718114523.png">
+<meta property="og:image" content="https://pub-966d1efd049049bfa85251b22558d679.r2.dev/img/000732__20200718163554.jpg">
+<meta property="og:image" content="https://pub-966d1efd049049bfa85251b22558d679.r2.dev/img/000726__20200718094757.png">
+<meta property="og:image" content="https://pub-966d1efd049049bfa85251b22558d679.r2.dev/img/000727__20200718095429.png">
+<meta property="og:image" content="https://pub-966d1efd049049bfa85251b22558d679.r2.dev/img/000729__20200718104159.png">
+<meta property="og:image" content="https://pub-966d1efd049049bfa85251b22558d679.r2.dev/img/000776__20200722094041.png">
+<meta property="og:image" content="https://pub-966d1efd049049bfa85251b22558d679.r2.dev/img/000730__20200718114146.jpg">
+<meta property="og:image" content="https://pub-966d1efd049049bfa85251b22558d679.r2.dev/img/000728__20200718103811.png">
+<meta property="og:image" content="https://pub-966d1efd049049bfa85251b22558d679.r2.dev/img/000731__20200718114523.png">
 <meta property="article:published_time" content="2020-07-18T07:31:52.000Z">
-<meta property="article:modified_time" content="2026-03-08T07:46:57.142Z">
+<meta property="article:modified_time" content="2026-09-05T10:40:27.803Z">
 <meta property="article:author" content="热夏">
 <meta property="article:tag" content="通信">
 <meta property="article:tag" content="5G NR">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200718163554.jpg">
+<meta name="twitter:image" content="https://pub-966d1efd049049bfa85251b22558d679.r2.dev/img/000732__20200718163554.jpg">
 
 
 <link rel="canonical" href="https://www.lifeee.top/posts/18457.html">
@@ -259,7 +259,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2026-03-08 15:46:57" itemprop="dateModified" datetime="2026-03-08T15:46:57+08:00">2026-03-08</time>
+      <time title="修改时间：2026-09-05 18:40:27" itemprop="dateModified" datetime="2026-09-05T18:40:27+08:00">2026-09-05</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -302,7 +302,7 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200718163554.jpg"></p>
+    <div class="post-body" itemprop="articleBody"><p><img data-src="https://pub-966d1efd049049bfa85251b22558d679.r2.dev/img/000732__20200718163554.jpg"></p>
 <p>　　本文主要对 5G NR 中的同步信号块 SSB 的结构以及时频位置进行了描述。</p>
 <span id="more"></span>
 
@@ -318,10 +318,10 @@
 
 <p>　　在NR 定义了两类同步信号：<em>Primary Synchronization Signal 主同步信号</em> (PSS) 以及 Secondary <em>Synchronization Signal  辅同步信号</em>  (SSS). Synchronization Signal&#x2F;PBCH block (SSB) 由PSS、SSS和 PBCH组成。即：$SSB&#x3D;PSS+SSS+PBCH$ 。其中 PBCH 中又存放着 DMRS 。</p>
 <p>　　下图显示了 PSS，SSS，PBCH 和 PBCH DMR 在 SSB 区块的位置</p>
-<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200718094757.png" alt="图片来源：concepts-of-5g"></p>
+<p><img data-src="https://pub-966d1efd049049bfa85251b22558d679.r2.dev/img/000726__20200718094757.png" alt="图片来源：concepts-of-5g"></p>
 <h2 id="SSB时频结构"><a href="#SSB时频结构" class="headerlink" title="SSB时频结构"></a>SSB时频结构</h2><p>　　SSB的时频结构如下图所示</p>
-<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200718095429.png"></p>
-<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200718104159.png"></p>
+<p><img data-src="https://pub-966d1efd049049bfa85251b22558d679.r2.dev/img/000727__20200718095429.png"></p>
+<p><img data-src="https://pub-966d1efd049049bfa85251b22558d679.r2.dev/img/000729__20200718104159.png"></p>
 <ul>
 <li><p>PSS、SSS 和 PBCH 始终以连续的 OFDM 符号组合在一起。</p>
 </li>
@@ -352,7 +352,7 @@
 <br/>
 
 <h2 id="SSB频域位置概述"><a href="#SSB频域位置概述" class="headerlink" title="SSB频域位置概述"></a>SSB频域位置概述</h2><p>　　在频域中，一个 SS&#x2F;PBCH 块由240个相邻的子载波组成，子载波在 SS&#x2F;PBCH 块中按从0到239的顺序排列。下表给出了 PBCH 的 PSS、 SSS、 PBCH 和 DMRS 的位置。PBCH、 PBCH DMRS、 PSS 和 SSS 的位置参见38.211的表7.4.3.1-1 。下表中表示为“ Set to 0”的资源元素对应的复值符号被设置为零。 从下表中可以看到，PBCH DM-RS 的位置取决于PCI ($v &#x3D; N_{ID}^{cell } mod 4$) （小区ID PCI 由 UE 使用 PSS&#x2F;SSS 确定）</p>
-<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200722094041.png"></p>
+<p><img data-src="https://pub-966d1efd049049bfa85251b22558d679.r2.dev/img/000776__20200722094041.png"></p>
   <br/>
 
   <br/>
@@ -365,7 +365,7 @@
 </ul>
 <p>　　SSB是周期性发送的，其周期可以从5毫秒到160毫秒之间变化。手机在进行小区搜索时，不能在某一个频点上等待过长时间，因此默认按照20毫秒来进行。</p>
 <p>　　如果手机在某个频点上等待了20毫秒的时间，一直未发现SSB，则认为这个频点上不存在5G载波，然后转到同步栅格里面的下一个频点再次尝试。</p>
-<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200718114146.jpg"></p>
+<p><img data-src="https://pub-966d1efd049049bfa85251b22558d679.r2.dev/img/000730__20200718114146.jpg"></p>
 <blockquote>
 <p><strong>同步栅格</strong></p>
 <p>由于5G的系统带宽动辄100MHz，高频甚至能达到400MHz，远大于4G的系统带宽（最大20MHz），如果像4G一样把同步信号放在载波中心，手机按照100KHz的粒度来搜索的话，所需要的时间非常长，而且非常耗电，完全让人无法接受。</p>
@@ -478,7 +478,7 @@
 <p> 　　5G NR在系统架构中遵循一个重要设计理念就是系统参数设置相当灵活，在SSB中体现在子载波间隔（SCS，subcarrier spacing）可以与其他物理传输信道独立设置，但是否需要不同配置有待于实际组网环境下进一步验证。终端在开机搜网同步时，根据NR的工作频段可以确定SSB的子载波间隔以及SSB候选传输位置式样(A&#x2F;B&#x2F;C&#x2F;D&#x2F;E)，如果异频载波SSB的子载波间隔通过高层信令进行传递明确为30kHz时，SSB候选传输位置式样B可扩展适用于SCS定义为仅15kHz的FR1中NR工作频带。另外，当终端被配置为FR2频带内的载波聚合或者FR1频带内连续频率的载波聚合机制时，如果网络侧提供了载波聚合任何一个小区的SSB的子载波间隔信息，终端认为这一系列载波聚合小区的SSB子载波间隔一致。</p>
 <p>　　针对在半帧内传输的SSB候选位置式样ABCDE，终端可以通过解码PBCH载荷比特来确定当前传输SSB的具体索引位置，对于半帧包含4个SSB候选传输位置，通过2个低比特位（LSB）确定索引，而半帧包含8个SSB候选传输位置，则通过3个低比特位（LSB）确定索引，这两种情况下PBCH索引恰恰与SSB中DMRS的高德伪随机序列初始序列索引呈一一对应的关系，终端在确定2个低比特位或者3个低比特位时并不是直接通过解码PBCH传输比特获知，而是间接通过解码DMRS进行逻辑映射。半帧包含64个SSB候选传输位置，传输SSB中DMRS的索引按照3个低比特位循环映射（8个SSB循环），终端结合3个低比特位（LSB）与PBCH载荷的3个额外高比特位（MSB）共同确定SSB的传输索引。PBCH有效载荷共32比特，包含承载RRC内容23比特，这23比特中有6比特作为计算无线帧的高位6比特，除了这23比特之外，物理层额外与传输时刻相关4比特作为计算无线帧的的地位4比特， 1比特作为无线帧中的半帧标识，3比特作为确定SSB索引的高位3比特，剩余1比特协议没做规定，MAC层实体为了与传输字节对齐进行填补。</p>
 <p>　　作为示例，在SCS&#x3D;15 kHz且载波频率在3 GHz和6 GHz之间的情况下，SS突发集合内的候选SSB的时序在下图中示出。</p>
-<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200718103811.png"></p>
+<p><img data-src="https://pub-966d1efd049049bfa85251b22558d679.r2.dev/img/000728__20200718103811.png"></p>
 <br/>
 
   <br/>
@@ -498,7 +498,7 @@
 <p>对于3GHz~6GHz的频段，一个SS突发集里最多包含8个SSB，因此最多可扫描8个波束；</p>
 <p>对于高于6GHz的毫米波mmWave频段，一个SS突发集里最多包含64个SSB，因此最多可扫描64个波束。</p>
 </blockquote>
-<p><img data-src="https://lifeee-picture-bed.oss-cn-hangzhou.aliyuncs.com/image_bed/2020/20200718114523.png"></p>
+<p><img data-src="https://pub-966d1efd049049bfa85251b22558d679.r2.dev/img/000731__20200718114523.png"></p>
   <br/>
 
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>　　当UE开机后想要接入小区时，会进行小区搜索的操作。在NR中，小区搜索主要基于对下行同步信道及信号的检测来完成。终端通过小区搜索过程获得小区ID、频率同步（载波频率）、下行时间同步（包括无线帧定时、半帧定时，时隙定时及符号定时）。具体来看，整个小区搜索过程又包括主同步信号搜索、 辅同步信号检测及物理广播信道检测三部分。本文主要对同步信号块 SSB 的结构以及时频位置进行了描述。</p>
